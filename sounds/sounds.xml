@@ -3,47 +3,47 @@
     <actions>
         <action>
           <name>left</name>
-          <file>switch.wav</file>
+          <file>switch_fromashes.wav</file>
         </action>
         <action>
           <name>right</name>
-          <file>switch.wav</file>
+          <file>switch_fromashes.wav</file>
         </action>
         <action>
           <name>up</name>
-          <file>switch.wav</file>
+          <file>switch_fromashes.wav</file>
         </action>
         <action>
           <name>down</name>
-          <file>switch.wav</file>
+          <file>switch_fromashes.wav</file>
         </action>
         <action>
           <name>select</name>
-          <file>switch.wav</file>
+          <file>select.wav</file>
         </action>
         <action>
           <name>close</name>
-          <file>switch.wav</file>
+          <file>backselect.wav</file>
         </action>
         <action>
           <name>parentdir</name>
-          <file>switch.wav</file>
+          <file>gobackselect.wav</file>
         </action>
         <action>
           <name>previousmenu</name>
-          <file>switch.wav</file>
+          <file>backselect.wav</file>
         </action>
 		<action>
           <name>screenshot</name>
-          <file>switch.wav</file>
+          <file>switch_legacy.wav</file>
         </action>
     </actions>
 
     <windows>
         <window>
           <name>playercontrols</name>
-          <activate>switch.wav</activate>
-          <deactivate>switch.wav</deactivate>
+          <activate>select.wav</activate>
+          <deactivate>backselect.wav</deactivate>
         </window>
         <window>
           <name>home</name>
@@ -52,8 +52,8 @@
         </window>
         <window>
           <name>infodialog</name>
-          <activate>switch.wav</activate>
-          <deactivate>switch.wav</deactivate>
+          <activate>select.wav</activate>
+          <deactivate>backselect.wav</deactivate>
         </window>
     </windows>
 </sounds>
