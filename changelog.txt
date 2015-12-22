@@ -1,4 +1,4 @@
-[B][U]Arctic Zephyr for Emby Changelog[/U][/B]
+[B]Arctic Zephyr for Emby Changelog[/B]
 
 [B]3.0.00 - "From Ashes"[/B]
 Initial Release of "From Ashes" - "December Update"
