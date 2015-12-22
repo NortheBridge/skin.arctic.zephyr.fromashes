@@ -1,3 +1,14 @@
+[B][U]Arctic Zephyr for Emby Changelog[/U][/B]
+
+[B]3.0.00 - "From Ashes"[/B]
+Initial Release of "From Ashes" - "December Update"
+Built on Arctic Zephyr 1.98 for Emby for Kodi by badaas & im85288
+Jarvis Compatibility
+Adds the From Ashes "Audio Suite"
+
+
+[B]Arctic Zephyr Base Theme Changelog[/B]
+
 [B]1.2.4[/B]
 Updated language files from Transifex
 OSD clock finish time
