@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="120">
+    <include condition="!Player.PauseEnabled">OSDFocusStop</include>
+    <include condition="Player.PauseEnabled">OSDFocusPause</include>
+    <controls>
+
+        <control type="group">
+            <height>74</height>
+            <bottom>64</bottom>
+            <include>Animation.FadeIn</include>
+            <animation type="Hidden">
+                <effect type="slide" end="0,60" start="0" time="200"/>
+                <effect type="fade" end="0" start="100" time="150"/>
+            </animation>
+            <animation type="WindowClose">
+                <effect type="slide" end="0,60" start="0" time="200"/>
+                <effect type="fade" end="0" start="100" time="150"/>
+            </animation>
+
+            <control type="grouplist" id="101">
+                <top>64</top>
+                <width>100%</width>
+                <height>48</height>
+                <itemgap>16</itemgap>
+                <orientation>horizontal</orientation>
+                <align>center</align>
+                <onleft>101</onleft>
+                <onright>101</onright>
+                <include condition="!Skin.HasSetting(osd.usetheme)">OSDVideoControls</include>
+                <include condition="Skin.HasSetting(osd.usetheme)">OSDVideoControlsFlip</include>
+            </control>
+
+            <control type="grouplist" id="100">
+                <top>0</top>
+                <left>50</left>
+                <height>48</height>
+                <itemgap>-10</itemgap>
+                <orientation>horizontal</orientation>
+                <align>left</align>
+                <onleft>6</onleft>
+                <onright>500</onright>
+                <onup>101</onup>
+                <ondown>101</ondown>
+                <usecontrolcoords>true</usecontrolcoords>
+
+                <control type="button" id="1">
+                    <description>Repeat</description>
+                    <align>left</align>
+                    <label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
+                    <onclick>XBMC.PlayerControl(Repeat)</onclick>
+                    <include>DefOSDButtons</include>
+                </control>
+
+                <control type="button" id="2">
+                    <description>Lyrics</description>
+                    <align>left</align>
+                    <label>24013</label>
+                    <onclick>Close</onclick>
+                    <onclick>RunScript(script.cu.lrclyrics)</onclick>
+                    <include>DefOSDButtons</include>
+                </control>
+
+                <control type="button" id="3">
+                    <description>Playlist</description>
+                    <align>left</align>
+                    <label>559</label>
+                    <onclick>ActivateWindow(MusicPlaylist)</onclick>
+                    <include>DefOSDButtons</include>
+                </control>
+
+                <control type="button" id="8">
+                    <description>Visual Text</description>
+                    <width>220</width>
+                    <aligny>center</aligny>
+                    <align>left</align>
+                    <height>48</height>
+                    <font>Tiny</font>
+                    <disabledcolor>$VAR[OSDPanelWhite12]</disabledcolor>
+                    <textcolor>$VAR[Music2OSDPanelWhite30]</textcolor>
+                    <focusedcolor>$VAR[ColourHighlight]</focusedcolor>
+                    <texturefocus>noop</texturefocus>
+                    <label>Visual Text</label>
+                    <onclick>Skin.ToggleSetting(osd.showvisualtext)</onclick>
+                </control>
+
+                <control type="button" id="9">
+                    <description>Twitter</description>
+                    <width>160</width>
+                    <aligny>center</aligny>
+                    <align>left</align>
+                    <height>48</height>
+                    <font>Tiny</font>
+                    <disabledcolor>$VAR[OSDPanelWhite12]</disabledcolor>
+                    <textcolor>$VAR[Music3OSDPanelWhite30]</textcolor>
+                    <focusedcolor>$VAR[ColourHighlight]</focusedcolor>
+                    <texturefocus>noop</texturefocus>
+                    <label>Twitter</label>
+                    <onclick>Skin.ToggleSetting(osd.showtwitter)</onclick>
+                </control>
+            </control>
+
+            <control type="grouplist" id="102">
+                <top>0</top>
+                <right>50</right>
+                <height>48</height>
+                <itemgap>-10</itemgap>
+                <orientation>horizontal</orientation>
+                <align>right</align>
+                <onleft>9</onleft>
+                <onright>1</onright>
+                <onup>101</onup>
+                <ondown>101</ondown>
+                <usecontrolcoords>true</usecontrolcoords>
+
+                <control type="button" id="500">
+                    <description>Vis</description>
+                    <label>250</label>
+                    <align>right</align>
+                    <include>DefOSDButtons</include>
+                    <disabledcolor>PanelWhite12</disabledcolor>
+                </control>
+
+                <control type="button" id="5">
+                    <width>150</width>
+                    <description>Presets</description>
+                    <label>13388</label>
+                    <align>right</align>
+                    <onclick>ActivateWindow(122)</onclick>
+                    <include>DefOSDButtons</include>
+                    <disabledcolor>PanelWhite12</disabledcolor>
+                </control>
+
+                <control type="button" id="7" description="Show musc info always">
+                    <width>220</width>
+                    <aligny>center</aligny>
+                    <align>center</align>
+                    <height>48</height>
+                    <font>Tiny</font>
+                    <disabledcolor>$VAR[OSDPanelWhite12]</disabledcolor>
+                    <textcolor>$VAR[MusicOSDPanelWhite30]</textcolor>
+                    <focusedcolor>$VAR[ColourHighlight]</focusedcolor>
+                    <texturefocus>noop</texturefocus>
+                    <width>226</width>
+                    <align>right</align>
+                    <label>Show Info</label>
+                    <onclick>Skin.ToggleSetting(osd.showmusicinfo)</onclick>
+                </control>
+                <control type="button" id="6">
+                    <width>270</width>
+                    <align>right</align>
+                    <description>Random</description>
+                    <include>DefOSDButtons</include>
+                    <label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
+                    <onclick>XBMC.PlayerControl(Random)</onclick>
+                </control>
+            </control>
+        </control>
+
+
+    </controls>
+
+</window>

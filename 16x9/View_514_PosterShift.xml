@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+	<include name="ShiftPosterThumbs">
+		<control type="image">
+			<posx>-12</posx>
+			<posy>130</posy>
+			<width>340</width>
+			<height>490</height>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+			<texture diffuse="diffuse/listposter.png" background="true">$VAR[PosterImage]</texture>
+			<bordersize>20</bordersize>
+			<visible>!Skin.Hassetting(views.cases)</visible>
+		</control>
+		<control type="image">
+			<posx>-12</posx>
+			<posy>142</posy>
+			<width>356</width>
+			<height>477</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture background="true">$VAR[ShowcaseItem0Var]</texture>
+			<bordersize>20</bordersize>
+			<fadetime>0</fadetime>
+			<visible>Skin.Hassetting(views.cases) + !Skin.Hassetting(views.clearcases)</visible>
+		</control>
+		<control type="image">
+			<posx>-12</posx>
+			<posy>130</posy>
+			<width>340</width>
+			<height>490</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture background="true" diffuse="diffuse/listposter.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem0Var]</texture>
+			<bordersize>20</bordersize>
+			<fadetime>0</fadetime>
+			<visible>Skin.Hassetting(views.cases) + Skin.Hassetting(views.clearcases)</visible>
+		</control>
+		<control type="image">
+			<posx>-62</posx>
+			<posy>100</posy>
+			<width>390</width>
+			<height>540</height>
+			<texture background="true">boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
+			<aspectratio align="center" aligny="top">keep</aspectratio>
+			<bordersize>2</bordersize>
+			<visible>Skin.Hassetting(views.cases) + Skin.Hassetting(views.clearcases)</visible>
+		</control>
+		<control type="image">
+			<posx>-50</posx>
+			<posy>115</posy>
+			<width>398</width>
+			<height>515</height>
+			<texture background="true">boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
+			<aspectratio align="center" aligny="top">stretch</aspectratio>
+			<bordersize>2</bordersize>
+			<visible>Skin.Hassetting(views.cases) + Skin.Hassetting(views.colourcases)</visible>
+		</control>
+		<control type="image">
+			<posx>-49</posx>
+			<posy>115</posy>
+			<width>390</width>
+			<height>510</height>
+			<texture background="true">boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
+			<aspectratio align="center" aligny="top">stretch</aspectratio>
+			<bordersize>2</bordersize>
+			<visible>Skin.Hassetting(views.cases) + Skin.Hassetting(views.bddvdcases)</visible>
+		</control>
+		<control type="image">
+			<posx>8</posx>
+			<posy>601</posy>
+			<width>300</width>
+			<height>450</height>
+			<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
+			<texture flipy="true" diffuse="diffuse/listposter-ref.png" background="true">$VAR[PosterImage]</texture>
+			<animation effect="fade" start="100" end="30" time="160">Focus</animation>
+			<animation effect="fade" start="30" end="100" time="160">UnFocus</animation>
+		</control>
+		<control type="group">
+			<control type="image">
+				<right>5</right>
+				<top>149</top>
+				<width>32</width>
+				<height>32</height>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture>$VAR[PercentWatchedViews]</texture>
+			</control>
+		</control>
+	</include>
+	<include name="View_514_PosterShift">
+		<control type="group">
+			<visible>Control.IsVisible(514)</visible>
+			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+			<include>Animation.Common</include>
+			<control type="group">
+				<visible>!Window.IsActive(addoninformation)</visible>
+				<control type="fixedlist" id="514">
+					<posx>-120</posx>
+					<posy>240</posy>
+					<width>2100</width>
+					<height>750</height>
+					<onup condition="!Skin.HasSetting(global.kioskmode)">9000</onup>
+					<ondown>60</ondown>
+					<orientation>horizontal</orientation>
+					<viewtype label="31757">Poster Shift</viewtype>
+					<pagecontrol>60</pagecontrol>
+					<preloaditems>2</preloaditems>
+					<scrolltime tween="quadratic">200</scrolltime>
+					<focusposition>1</focusposition>
+					<visible>!container.content(episodes)</visible>
+					<itemlayout width="315" height="750">
+						<include>ShiftPosterThumbs</include>
+					</itemlayout>
+					<focusedlayout width="315" height="750">
+						<control type="group">
+							<control type="button">
+								<texturefocus>-</texturefocus>
+								<texturenofocus>-</texturenofocus>
+								<onfocus condition="Container.Content(movies)">ClearProperty(TVShowID,home)</onfocus>
+								<onfocus condition="Container.Content(tvshows)">SetProperty(TVShowID,$INFO[ListItem.DBID],home)</onfocus>
+							</control>
+							<animation effect="zoom" center="auto" start="100" end="130" time="160" tween="quadratic">Focus</animation>
+							<animation effect="zoom" center="auto" start="130" end="100" time="160" tween="quadratic">Unfocus</animation>
+							<control type="image">
+								<!--cdart image -->
+								<width>290</width>
+								<height>290</height>
+								<posy>20</posy>
+								<posx>15</posx>
+								<texture background="true">$INFO[ListItem.Art(discart)]</texture>
+								<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
+								<animation effect="slide" start="0,200" end="0" tween="cubic" easing="inout" time="1200" delay="800">Focus</animation>
+								<animation effect="fade" start="0" end="100" delay="800" time="800" pulse="false">Focus</animation>
+								<animation effect="rotate" end="-360" center="auto" time="12000" loop="true" reversible="false" condition="Skin.HasSetting(AnimateDiscArt)">Conditional</animation>
+								<visible>Skin.HasSetting(views.discart) + !IsEmpty(ListItem.Art(discart))</visible>
+							</control>
+							<control type="image">
+								<width>290</width>
+								<height>290</height>
+								<posy>20</posy>
+								<posx>15</posx>
+								<texture diffuse="cdart/cdart-mask.png">$INFO[ListItem.Art(poster)]</texture>
+								<aspectratio aligny="center">keep</aspectratio>
+								<visible>Skin.HasSetting(views.discart)</visible>
+								<animation effect="slide" start="0,200" end="0" tween="cubic" easing="inout" time="1200" delay="800">Focus</animation>
+								<animation effect="fade" start="0" end="100" delay="800" time="800" pulse="false">Focus</animation>
+								<visible>container.content(movies) + IsEmpty(ListItem.Art(discart))</visible>
+							</control>
+							<control type="image">
+								<width>290</width>
+								<height>290</height>
+								<posy>20</posy>
+								<posx>15</posx>
+								<texture>$VAR[FakeDiscArtOverlay]</texture>
+								<aspectratio aligny="center">keep</aspectratio>
+								<visible>Skin.HasSetting(views.discart)</visible>
+								<animation effect="slide" start="0,200" end="0" tween="cubic" easing="inout" time="1200" delay="800">Focus</animation>
+								<animation effect="fade" start="0" end="100" delay="800" time="800" pulse="false">Focus</animation>
+								<visible>container.content(movies) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster))</visible>
+							</control>
+							<control type="image">
+								<width>290</width>
+								<height>290</height>
+								<posy>20</posy>
+								<posx>15</posx>
+								<texture>$VAR[FakeDischandcolor]</texture>
+								<aspectratio aligny="center">keep</aspectratio>
+								<visible>Skin.HasSetting(views.discart)</visible>
+								<animation effect="slide" start="0,200" end="0" tween="cubic" easing="inout" time="1200" delay="800">Focus</animation>
+								<animation effect="fade" start="0" end="100" delay="800" time="800" pulse="false">Focus</animation>
+								<visible>container.content(movies) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster))</visible>
+							</control>
+							<control type="textbox">
+								<width>190</width>
+								<height>190</height>
+								<posy>70</posy>
+								<posx>65</posx>
+								<font>Hand_20</font>
+								<align>center</align>
+								<aligny>top</aligny>
+								<visible>Skin.HasSetting(views.discart)</visible>
+								<visible>container.content(movies) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + IsEmpty(ListItem.Art(clearlogo))</visible>
+								<label> $INFO[ListItem.Label]</label>
+								<textcolor>Black</textcolor>
+								<animation effect="slide" start="0,200" end="0" tween="cubic" easing="inout" time="1200" delay="800">Focus</animation>
+								<animation effect="fade" start="0" end="100" delay="800" time="800" pulse="false">Focus</animation>
+							</control>
+							<control type="group">
+								<visible>Skin.HasSetting(views.discart)</visible>
+								<visible>container.content(movies) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + !IsEmpty(ListItem.Art(clearlogo))</visible>
+								<animation effect="slide" start="0,200" end="0" tween="cubic" easing="inout" time="1200" delay="800">Focus</animation>
+								<animation effect="fade" start="0" end="100" delay="800" time="800" pulse="false">Focus</animation>
+								<control type="image">
+									<height>40</height>
+									<width>150</width>
+									<posy>60</posy>
+									<posx>85</posx>
+									<align>center</align>
+									<aligny>center</aligny>
+									<aspectratio aligny="bottom">keep</aspectratio>
+									<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
+								</control>
+							</control>
+							<include>ShiftPosterThumbs</include>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group">
+				<animation effect="fade" condition="!Control.HasFocus(60)" time="200" start="100" end="0">Conditional</animation>
+				<include>Furniture_Scrollbar_Horizontal</include>
+			</control>
+		</control>
+	</include>
+</includes>
