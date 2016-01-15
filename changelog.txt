@@ -1,5 +1,8 @@
 [B]Arctic Zephyr for Emby Changelog[/B]
 
+[B]3.0.01 - "From Ashes" (January Hotfix 1)[/B]
+Resolves Installation Failure Issue
+
 [B]3.0.00 - "From Ashes"[/B]
 Initial Release of "From Ashes" - "December Update"
 Built on Arctic Zephyr 1.98 for Emby for Kodi by badaas & im85288
