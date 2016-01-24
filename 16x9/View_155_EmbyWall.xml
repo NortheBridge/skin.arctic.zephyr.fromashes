@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
+<!-- Foundation commit check -->
 <includes>
 	<include name="View_155_Wall_Emby">
 		<control type="group">
@@ -7,12 +7,12 @@
 			<visible>Control.IsVisible(155)</visible>
 			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
 			<control type="panel" id="155">
-				<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)</visible>
+				<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes)</visible>
 				<top>180</top>
 				<right>0</right>
 				<width>1920</width>
 				<height>720</height>
-				<onleft condition="!Skin.HasSetting(global.kioskmode)">9000</onleft>
+				<onleft>60</onleft>
 				<onright>60</onright>
 				<onup>155</onup>
 				<ondown>155</ondown>
@@ -30,13 +30,14 @@
 						<texture diffuse="diffuse/wall.png" background="true">$VAR[PosterImage]</texture>
 						<animation effect="fade" start="25" end="25" condition="stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
 					</control>
-					<control type="image">
-						<centerright>16</centerright>
+					<control type="label">
+						<centerright>12</centerright>
 						<centertop>16</centertop>
 						<width>32</width>
 						<height>32</height>
-						<aspectratio aligny="top">keep</aspectratio>
-						<texture>$VAR[PercentWatchedViews]</texture>
+						<font>tinysymbol</font>
+						<label>$VAR[PercentWatchedLabel]</label>
+						<textcolor>$VAR[ColourHighlight2]</textcolor>
 						<visible>!stringcompare(ListItem.Label,..)</visible>
 						<visible>!Skin.HasSetting(views.155.showtick)</visible>
 					</control>
@@ -84,8 +85,8 @@
 							<right>-256</right>
 							<bottom>0</bottom>
 							<font>SmallBold</font>
-							<label>[B]$INFO[ListItem.Title][/B]</label>
-							<textcolor>Black100</textcolor>
+							<label>[B]$INFO[ListItem.TagLine][/B]</label>
+							<textcolor>Black300</textcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -105,22 +106,31 @@
 							<right>-256</right>
 							<bottom>0</bottom>
 							<font>SmallBold</font>
-							<label>[B]$INFO[ListItem.TvShowTitle][/B]</label>
+							<label>[B]$INFO[ListItem.Title][/B]</label>
 							<textcolor>Black300</textcolor>
-							<visible>Container.Content(episodes) + !IsEmpty(ListItem.TvShowTitle)</visible>
+							<scroll>true</scroll>
+							<visible>Container.Content(episodes) | Container.Content(seasons) | [Container.Content(movies) + IsEmpty(ListItem.TagLine)] | [!Container.Content(seasons) + !Container.Content(movies) + !Container.Content(episodes)]</visible>
 						</control>
 						<!-- Plot -->
 						<control type="textbox">
 							<left>266</left>
 							<top>42</top>
 							<right>-256</right>
-							<bottom>0</bottom>
+							<bottom>30</bottom>
 							<align>left</align>
 							<font>Small</font>
-							<autoscroll>true</autoscroll>
+							<scroll>true</scroll>
 							<textcolor>Black700</textcolor>
-							<label fallback="N/A">$INFO[ListItem.Year]$INFO[ListItem.Duration, - ,mins][CR][CR][I][B]$INFO[ListItem.TagLine][/I][/B]</label>
+							<label fallback="N/A">$INFO[ListItem.Year]$INFO[ListItem.Duration, - ,mins]$INFO[ListItem.Season, - S,,]$INFO[ListItem.Episode,/,,][CR][CR][I][B]$VAR[LabelPlotBoxLong][/I][/B]</label>
 							<include>DialogVideoInfoAnimation</include>
+						</control>
+						<control type="image">
+							<left>344</left>
+							<bottom>0</bottom>
+							<width>80</width>
+							<height>80</height>
+							<aspectratio scalediffuse="false">keep</aspectratio>
+							<texture colordiffuse="-" background="true">$VAR[Studio]</texture>
 						</control>
 					</control>
 					<control type="group">
@@ -131,8 +141,8 @@
 							<right>20</right>
 							<bottom>0</bottom>
 							<font>SmallBold</font>
-							<label>[B]$INFO[ListItem.Title][/B]</label>
-							<textcolor>Black100</textcolor>
+							<label>[B]$INFO[ListItem.TagLine][/B]</label>
+							<textcolor>Black300</textcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -152,31 +162,41 @@
 							<right>20</right>
 							<bottom>0</bottom>
 							<font>SmallBold</font>
-							<label>[B]$INFO[ListItem.TvShowTitle][/B]</label>
+							<label>[B]$INFO[ListItem.Title][/B]</label>
 							<textcolor>Black300</textcolor>
-							<visible>Container.Content(episodes) + !IsEmpty(ListItem.TvShowTitle)</visible>
+							<scroll>true</scroll>
+							<visible>Container.Content(episodes) | Container.Content(seasons) | [Container.Content(movies) + IsEmpty(ListItem.TagLine)] | [!Container.Content(seasons) + !Container.Content(movies) + !Container.Content(episodes)]</visible>
 						</control>
 						<!-- Plot -->
 						<control type="textbox">
 							<posx>-246</posx>
 							<top>42</top>
 							<right>20</right>
-							<bottom>0</bottom>
+							<bottom>30</bottom>
 							<align>left</align>
 							<font>Small</font>
-							<autoscroll>true</autoscroll>
+							<scroll>true</scroll>
 							<textcolor>Black700</textcolor>
-							<label fallback="N/A">$INFO[ListItem.Year]$INFO[ListItem.Duration, - ,mins][CR][CR][I][B]$INFO[ListItem.TagLine][/I][/B]</label>
+							<label fallback="N/A">$INFO[ListItem.Year]$INFO[ListItem.Duration, - ,mins]$INFO[ListItem.Season, - S,,]$INFO[ListItem.Episode,/,,][CR][CR][I][B]$VAR[LabelPlotBoxLong][/I][/B]</label>
 							<include>DialogVideoInfoAnimation</include>
 						</control>
+						<control type="image">
+							<left>-168</left>
+							<bottom>0</bottom>
+							<width>80</width>
+							<height>80</height>
+							<aspectratio scalediffuse="false">keep</aspectratio>
+							<texture colordiffuse="-" background="true">$VAR[Studio]</texture>
+						</control>
 					</control>
-					<control type="image">
-						<centerright>32</centerright>
-						<centertop>32</centertop>
+					<control type="label">
+						<centerright>16</centerright>
+						<centertop>24</centertop>
 						<width>32</width>
 						<height>32</height>
-						<aspectratio aligny="top">keep</aspectratio>
-						<texture>$VAR[PercentWatchedViews]</texture>
+						<font>tinysymbol</font>
+						<label>$VAR[PercentWatchedLabel]</label>
+						<textcolor>$VAR[ColourHighlight2]</textcolor>
 						<visible>!stringcompare(ListItem.Label,..)</visible>
 						<visible>!Skin.HasSetting(views.155.showtick)</visible>
 					</control>
@@ -211,14 +231,15 @@
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<texture diffuse="diffuse/wall.png" background="true">$VAR[PosterImage]</texture>
 					</control>
-					<control type="image">
-						<left>78</left>
-						<centerright>32</centerright>
-						<centertop>32</centertop>
+					<control type="label">
+						<left>88</left>
+						<centerright>16</centerright>
+						<centertop>24</centertop>
 						<width>32</width>
 						<height>32</height>
-						<aspectratio aligny="top">keep</aspectratio>
-						<texture>$VAR[PercentWatchedViews]</texture>
+						<font>tinysymbol</font>
+						<label>$VAR[PercentWatchedLabel]</label>
+						<textcolor>$VAR[ColourHighlight2]</textcolor>
 						<visible>!stringcompare(ListItem.Label,..)</visible>
 						<visible>!Skin.HasSetting(views.155.showtick)</visible>
 					</control>
@@ -253,8 +274,8 @@
 							<right>148</right>
 							<bottom>0</bottom>
 							<font>SmallBold</font>
-							<label>[B]$INFO[ListItem.Title][/B]</label>
-							<textcolor>Black100</textcolor>
+							<label>[B]$INFO[ListItem.TagLine][/B]</label>
+							<textcolor>Black300</textcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -274,22 +295,31 @@
 							<right>148</right>
 							<bottom>0</bottom>
 							<font>SmallBold</font>
-							<label>[B]$INFO[ListItem.TvShowTitle][/B]</label>
+							<label>[B]$INFO[ListItem.Title][/B]</label>
 							<textcolor>Black300</textcolor>
-							<visible>Container.Content(episodes) + !IsEmpty(ListItem.TvShowTitle)</visible>
+							<scroll>true</scroll>
+							<visible>Container.Content(episodes) | Container.Content(seasons) | [Container.Content(movies) + IsEmpty(ListItem.TagLine)] | [!Container.Content(seasons) + !Container.Content(movies) + !Container.Content(episodes)]</visible>
 						</control>
 						<!-- Plot -->
 						<control type="textbox">
 							<posx>-246</posx>
 							<top>42</top>
 							<right>148</right>
-							<bottom>0</bottom>
+							<bottom>30</bottom>
 							<align>left</align>
 							<font>Small</font>
-							<autoscroll>true</autoscroll>
+							<scroll>true</scroll>
 							<textcolor>Black700</textcolor>
-							<label fallback="N/A">$INFO[ListItem.Year]$INFO[ListItem.Duration, - ,mins][CR][CR][I][B]$INFO[ListItem.TagLine][/I][/B]</label>
+							<label fallback="N/A">$INFO[ListItem.Year]$INFO[ListItem.Duration, - ,mins]$INFO[ListItem.Season, - S,,]$INFO[ListItem.Episode,/,,][CR][CR][I][B]$VAR[LabelPlotBoxLong][/I][/B]</label>
 							<include>DialogVideoInfoAnimation</include>
+						</control>
+						<control type="image">
+							<left>-168</left>
+							<bottom>0</bottom>
+							<width>80</width>
+							<height>80</height>
+							<aspectratio scalediffuse="false">keep</aspectratio>
+							<texture colordiffuse="-" background="true">$VAR[Studio]</texture>
 						</control>
 					</control>
 				</focusedlayout>
@@ -308,13 +338,15 @@
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<texture diffuse="diffuse/wall.png" background="true">$VAR[PosterImage]</texture>
 					</control>
-					<control type="image">
-						<centerright>160</centerright>
-						<centertop>-148</centertop>
+					<control type="label">
+						<left>88</left>
+						<centerright>16</centerright>
+						<centertop>-156</centertop>
 						<width>32</width>
 						<height>32</height>
-						<aspectratio aligny="top">keep</aspectratio>
-						<texture>$VAR[PercentWatchedViews]</texture>
+						<font>tinysymbol</font>
+						<label>$VAR[PercentWatchedLabel]</label>
+						<textcolor>$VAR[ColourHighlight2]</textcolor>
 						<visible>!stringcompare(ListItem.Label,..)</visible>
 						<visible>!Skin.HasSetting(views.155.showtick)</visible>
 					</control>
@@ -351,8 +383,8 @@
 							<right>148</right>
 							<bottom>0</bottom>
 							<font>SmallBold</font>
-							<label>[B]$INFO[ListItem.Title][/B]</label>
-							<textcolor>Black100</textcolor>
+							<label>[B]$INFO[ListItem.TagLine][/B]</label>
+							<textcolor>Black300</textcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -372,22 +404,31 @@
 							<right>148</right>
 							<bottom>0</bottom>
 							<font>SmallBold</font>
-							<label>[B]$INFO[ListItem.TvShowTitle][/B]</label>
+							<label>[B]$INFO[ListItem.Title][/B]</label>
 							<textcolor>Black300</textcolor>
-							<visible>Container.Content(episodes) + !IsEmpty(ListItem.TvShowTitle)</visible>
+							<scroll>true</scroll>
+							<visible>Container.Content(episodes) | Container.Content(seasons) | [Container.Content(movies) + IsEmpty(ListItem.TagLine)] | [!Container.Content(seasons) + !Container.Content(movies) + !Container.Content(episodes)]</visible>
 						</control>
 						<!-- Plot -->
 						<control type="textbox">
 							<posx>-246</posx>
 							<top>42</top>
 							<right>148</right>
-							<bottom>0</bottom>
+							<bottom>210</bottom>
 							<align>left</align>
 							<font>Small</font>
-							<autoscroll>true</autoscroll>
+							<scroll>true</scroll>
 							<textcolor>Black700</textcolor>
-							<label fallback="N/A">$INFO[ListItem.Year]$INFO[ListItem.Duration, - ,mins][CR][CR][I][B]$INFO[ListItem.TagLine][/I][/B]</label>
+							<label fallback="N/A">$INFO[ListItem.Year]$INFO[ListItem.Duration, - ,mins]$INFO[ListItem.Season, - S,,]$INFO[ListItem.Episode,/,,][CR][CR][I][B]$VAR[LabelPlotBoxLong][/I][/B]</label>
 							<include>DialogVideoInfoAnimation</include>
+						</control>
+						<control type="image">
+							<left>-168</left>
+							<bottom>180</bottom>
+							<width>80</width>
+							<height>80</height>
+							<aspectratio scalediffuse="false">keep</aspectratio>
+							<texture colordiffuse="-" background="true">$VAR[Studio]</texture>
 						</control>
 					</control>
 				</focusedlayout>
@@ -436,8 +477,8 @@
 							<right>-256</right>
 							<bottom>0</bottom>
 							<font>SmallBold</font>
-							<label>[B]$INFO[ListItem.Title][/B]</label>
-							<textcolor>Black100</textcolor>
+							<label>[B]$INFO[ListItem.TagLine][/B]</label>
+							<textcolor>Black300</textcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -457,22 +498,31 @@
 							<right>-256</right>
 							<bottom>0</bottom>
 							<font>SmallBold</font>
-							<label>[B]$INFO[ListItem.TvShowTitle][/B]</label>
+							<label>[B]$INFO[ListItem.Title][/B]</label>
 							<textcolor>Black300</textcolor>
-							<visible>Container.Content(episodes) + !IsEmpty(ListItem.TvShowTitle)</visible>
+							<scroll>true</scroll>
+							<visible>Container.Content(episodes) | Container.Content(seasons) | [Container.Content(movies) + IsEmpty(ListItem.TagLine)] | [!Container.Content(seasons) + !Container.Content(movies) + !Container.Content(episodes)]</visible>
 						</control>
 						<!-- Plot -->
 						<control type="textbox">
 							<left>266</left>
 							<top>42</top>
 							<right>-256</right>
-							<bottom>0</bottom>
+							<bottom>210</bottom>
 							<align>left</align>
 							<font>Small</font>
-							<autoscroll>true</autoscroll>
+							<scroll>true</scroll>
 							<textcolor>Black700</textcolor>
-							<label fallback="N/A">$INFO[ListItem.Year]$INFO[ListItem.Duration, - ,mins][CR][CR][I][B]$INFO[ListItem.TagLine][/I][/B]</label>
+							<label fallback="N/A">$INFO[ListItem.Year]$INFO[ListItem.Duration, - ,mins]$INFO[ListItem.Season, - S,,]$INFO[ListItem.Episode,/,,][CR][CR][I][B]$VAR[LabelPlotBoxLong][/I][/B]</label>
 							<include>DialogVideoInfoAnimation</include>
+						</control>
+						<control type="image">
+							<left>344</left>
+							<bottom>180</bottom>
+							<width>80</width>
+							<height>80</height>
+							<aspectratio scalediffuse="false">keep</aspectratio>
+							<texture colordiffuse="-" background="true">$VAR[Studio]</texture>
 						</control>
 					</control>
 					<control type="group">
@@ -484,8 +534,8 @@
 							<right>20</right>
 							<bottom>0</bottom>
 							<font>SmallBold</font>
-							<label>[B]$INFO[ListItem.Title][/B]</label>
-							<textcolor>Black100</textcolor>
+							<label>[B]$INFO[ListItem.TagLine][/B]</label>
+							<textcolor>Black300</textcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -505,31 +555,42 @@
 							<right>20</right>
 							<bottom>0</bottom>
 							<font>SmallBold</font>
-							<label>[B]$INFO[ListItem.TvShowTitle][/B]</label>
+							<label>[B]$INFO[ListItem.Title][/B]</label>
 							<textcolor>Black300</textcolor>
-							<visible>Container.Content(episodes) + !IsEmpty(ListItem.TvShowTitle)</visible>
+							<scroll>true</scroll>
+							<visible>Container.Content(episodes) | Container.Content(seasons) | [Container.Content(movies) + IsEmpty(ListItem.TagLine)] | [!Container.Content(seasons) + !Container.Content(movies) + !Container.Content(episodes)]</visible>
 						</control>
 						<!-- Plot -->
 						<control type="textbox">
 							<posx>-246</posx>
 							<top>42</top>
 							<right>20</right>
-							<bottom>0</bottom>
+							<bottom>210</bottom>
 							<align>left</align>
 							<font>Small</font>
-							<autoscroll>true</autoscroll>
+							<scroll>true</scroll>
 							<textcolor>Black700</textcolor>
-							<label fallback="N/A">$INFO[ListItem.Year]$INFO[ListItem.Duration, - ,mins][CR][CR][I][B]$INFO[ListItem.TagLine][/I][/B]</label>
+							<label fallback="N/A">$INFO[ListItem.Year]$INFO[ListItem.Duration, - ,mins]$INFO[ListItem.Season, - S,,]$INFO[ListItem.Episode,/,,][CR][CR][I][B]$VAR[LabelPlotBoxLong][/I][/B]</label>
 							<include>DialogVideoInfoAnimation</include>
 						</control>
+						<control type="image">
+							<left>-168</left>
+							<bottom>180</bottom>
+							<width>80</width>
+							<height>80</height>
+							<aspectratio scalediffuse="false">keep</aspectratio>
+							<texture colordiffuse="-" background="true">$VAR[Studio]</texture>
+						</control>
 					</control>
-					<control type="image">
-						<centerright>32</centerright>
-						<centertop>-148</centertop>
+					<control type="label">
+						<left>216</left>
+						<centerright>16</centerright>
+						<centertop>-156</centertop>
 						<width>32</width>
 						<height>32</height>
-						<aspectratio aligny="top">keep</aspectratio>
-						<texture>$VAR[PercentWatchedViews]</texture>
+						<font>tinysymbol</font>
+						<label>$VAR[PercentWatchedLabel]</label>
+						<textcolor>$VAR[ColourHighlight2]</textcolor>
 						<visible>!stringcompare(ListItem.Label,..)</visible>
 						<visible>!Skin.HasSetting(views.155.showtick)</visible>
 					</control>
