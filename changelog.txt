@@ -1,5 +1,8 @@
 [B]Arctic Zephyr for Emby Changelog[/B]
 
+[B]3.1.01 (3.1.01_bsrelease01) - "From Ashes Bluestone Release 01 Hotfix #1"[/B]
+Fixed error in addon.xml
+
 [B]3.1.00 (3.1.00_bsrelease01) - "From Ashes Bluestone Release 01"[/B]
 Theme base brought up to 2.0.4 of Arctic Zephyr: Exploded (just before Eunique modifications started being made)
 Additional Enhancements from the upstream up to 2.0.12 will be slipstreamed in, in future AZ:FA releases
