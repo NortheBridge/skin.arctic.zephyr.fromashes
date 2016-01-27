@@ -47,6 +47,13 @@
                 <width>510</width>
                 <height>560</height>
                 <itemgap>0</itemgap>
+				
+			<control type="button" id="74656">
+                <description>About From Ashes</description>
+				<include>DefContextButton</include>
+				<label>About From Ashes</label>
+                <onclick>ActivateWindow(74657)</onclick>
+                </control>
 
                 <control type="button" id="3111">
                     <description>Exit XBMC button</description>
