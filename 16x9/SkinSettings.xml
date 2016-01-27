@@ -383,6 +383,14 @@
 						<visible>ControlGroup(9100).HasFocus(9104)</visible>
 						<visible>Skin.HasSetting(widgets.cases)</visible>
 					</control>
+					<control type="radiobutton" id="92417" description="Rounded music on widgets">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9104)</visible>
+						<include>DefSettingsButton</include>
+						<label>Round corners for music in widgets/visulisation</label>
+						<selected>Skin.HasSetting(widgets.music.rounded)</selected>
+						<onclick>Skin.ToggleSetting(widgets.music.rounded)</onclick>
+					</control>
 					<control type="radiobutton" id="9242" description="Classic Widget Auto show">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9104)</visible>
@@ -396,10 +404,10 @@
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9104)</visible>
 						<include>DefSettingsButton</include>
-						<label>31149</label>
+						<label>Replace widget with global fanart</label>
 						<selected>Skin.HasSetting(home.dontshowfanart)</selected>
-						<onclick condition="!Skin.HasSetting(home.dontshowfanart) + IsEmpty(Skin.String(home.slideshowpath))">Skin.SetPath(home.slideshowpath)</onclick>
 						<onclick>Skin.ToggleSetting(home.dontshowfanart)</onclick>
+						<visible>System.HasAddon(script.grab.fanart)</visible>
 					</control>
 					<control type="button" id="9246" description="Custom Widget 1">
 						<width>1310</width>
@@ -555,6 +563,14 @@
 						<label>31154</label>
 						<selected>!Skin.HasSetting(furniture.flags)</selected>
 						<onclick>Skin.ToggleSetting(furniture.flags)</onclick>
+					</control>
+					<control type="radiobutton" id="92631" description="Alternate Duration">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9106)</visible>
+						<include>DefSettingsButton</include>
+						<label>Use Default Duration</label>
+						<selected>Skin.HasSetting(furniture.alternate.duration)</selected>
+						<onclick>Skin.ToggleSetting(furniture.alternate.duration)</onclick>
 					</control>
 					<control type="button" id="9269" description="Country Rating">
 						<width>1310</width>
@@ -772,7 +788,7 @@
 					<control type="button" id="9282">
 						<width>1310</width>
 						<include>DefSettingsButton</include>
-						<onclick>RunScript(script.arctic.zephyr.helper,COLORPICKER,focuscolor.name)</onclick>
+						<onclick>RunScript(script.arctic.zephyr.helper.jarvis,COLORPICKER,focuscolor.name)</onclick>
 						<label> - Set main highlight colour</label>
 						<label2>[COLOR=$VAR[ColourHighlight]]$INFO[Skin.String(focuscolor.name)][/COLOR]</label2>
 						<visible>Skin.HasSetting(ColourHighlight)</visible>
@@ -798,7 +814,7 @@
 					<control type="button" id="9285">
 						<width>1310</width>
 						<include>DefSettingsButton</include>
-						<onclick>RunScript(script.arctic.zephyr.helper,COLORPICKER,focuscolor2.name)</onclick>
+						<onclick>RunScript(script.arctic.zephyr.helper.jarvis,COLORPICKER,focuscolor2.name)</onclick>
 						<label> - Set second highlight colour</label>
 						<label2>[COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(focuscolor2.name)][/COLOR]</label2>
 						<visible>Skin.HasSetting(ColourHighlight2)</visible>
@@ -824,7 +840,7 @@
 					<control type="button" id="9288">
 						<width>1310</width>
 						<include>DefSettingsButton</include>
-						<onclick>RunScript(script.arctic.zephyr.helper,COLORPICKER,selectedcolor.name)</onclick>
+						<onclick>RunScript(script.arctic.zephyr.helper.jarvis,COLORPICKER,selectedcolor.name)</onclick>
 						<label> - Set selected colour</label>
 						<label2>[COLOR=$VAR[ColourSelected]]$INFO[Skin.String(selectedcolor.name)][/COLOR]</label2>
 						<visible>Skin.HasSetting(ColourSelected)</visible>
@@ -842,7 +858,7 @@
 					<control type="button" id="9291" description="Enable or Disable views">
 						<width>1310</width>
 						<include>DefSettingsButton</include>
-						<onclick>RunScript(script.arctic.zephyr.helper,ENABLEVIEWS)</onclick>
+						<onclick>RunScript(script.arctic.zephyr.helper.jarvis,ENABLEVIEWS)</onclick>
 						<label>31769</label>
 						<visible>ControlGroup(9100).HasFocus(9109)</visible>
 					</control>
