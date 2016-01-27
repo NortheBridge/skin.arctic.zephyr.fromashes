@@ -1,7 +1,18 @@
 [B]Arctic Zephyr for Emby Changelog[/B]
 
-[B]3.0.01 - "From Ashes" (January Hotfix 1)[/B]
-Resolves Installation Failure Issue
+[B]3.1.00 (3.1.00_bsrelease01) - "From Ashes Bluestone Release 01"[/B]
+Theme base brought up to 2.0.4 of Arctic Zephyr: Exploded (just before Eunique modifications started being made)
+Additional Enhancements from the upstream up to 2.0.12 will be slipstreamed in, in future AZ:FA releases
+Resolution to Actor/Actress Listing
+Resolution for Inability to Select a "View" (i.e. Netflix View, Detailed View, etc.)
+Interface Enhancements
+"Power" Dialogue Now Contains "About From Ashes" (Known Issue: Bluestone Information Doesn't Appear Wheen Selected)
+Usability Enhancements
+Process to Remove Unused Textures Has Begun (Helps people with slow connections or low space)
+Additional Optimizations
+
+[B]3.0.01 - "From Ashes January Hotfix 1"[/B]
+Resolves Kodi Installation Issues
 
 [B]3.0.00 - "From Ashes"[/B]
 Initial Release of "From Ashes" - "December Update"
