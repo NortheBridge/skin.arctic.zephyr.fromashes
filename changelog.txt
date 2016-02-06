@@ -1,5 +1,12 @@
 [B]Arctic Zephyr for Emby Changelog[/B]
 
+[B]3.2.00 (3.2.00_bsrelease01) - "From Ashes Bluestone 3.2.0"[/B]
+Arctic Zephyr: From Ashes "February Update"
+Enhanced Font Experience for "Vertical" View (Contributor: papadcha [Emby Forums, Page 4])
+Enhanced and Fixed Color Selector (Contributor: minus0 [Kodi Forums, Page 1])
+Enhanced and Resolved View Selection Beyond Home Screen Depth for Video Library
+Added "Custom_Bluestone.xml" to 16x9 for Contributor Page (Known Issue: Page Not Available)
+
 [B]3.1.01 (3.1.01_bsrelease01) - "From Ashes Bluestone Release 01 Hotfix #1"[/B]
 Fixed error in addon.xml
 
