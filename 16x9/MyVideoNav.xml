@@ -76,7 +76,7 @@
 					<include>DefContextButton</include>
 					<align>left</align>
 					<label>View: $INFO[Container.Viewmode]</label>
-					<onclick>XBMC.RunScript(script.arctic.zephyr.helper.jarvis,SETVIEW)</onclick>
+					<onclick>RunScript(script.skin.helper.service,action=setview)</onclick>
 				</control>
 				<control type="button" id="3">
 					<description>Sort</description>
