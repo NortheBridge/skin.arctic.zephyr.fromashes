@@ -1621,7 +1621,7 @@
 							<aligny>center</aligny>
 							<height>100%</height>
 							<textcolor>$VAR[ColourHighlight]</textcolor>
-							<font>LargeBoldReg</font>
+							<font>LargeBoldMenu</font> <!--New Font Experience for "Media Center Classic View (Old Vertical)"-->
 							<label>$INFO[ListItem.Label]</label>
 							<visible>!Skin.HasSetting(home.showicons)</visible>
 						</control>
