@@ -64,6 +64,13 @@
 			<filename>RobotoCondensed-Bold.ttf</filename>
 			<size>48</size>
 		</font>
+		<!--Required for Dynamic Sizing In View: Media Center Classic Experience (Old Vertical)-->
+		<font>
+			<name>LargeBoldMenu</name>
+			<filename>RobotoCondensed-Bold.ttf</filename>
+			<size>74</size>
+		</font>
+		<!--End Required for Dynamic Sizing In View: Media Center Classic Experience (Old Vertical)-->
 		<font>
 			<name>Large</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
@@ -325,6 +332,13 @@
 			<filename>RobotoCondensed-Bold.ttf</filename>
 			<size>48</size>
 		</font>
+		<!--Required for Dynamic Sizing In View: Media Center Classic Experience (Old Vertical)-->
+		<font>
+			<name>LargeBoldMenu</name>
+			<filename>RobotoCondensed-Bold.ttf</filename>
+			<size>74</size>
+		</font>
+		<!--End Required for Dynamic Sizing In View: Media Center Classic Experience (Old Vertical)-->
 		<font>
 			<name>LargeBoldReg</name>
 			<filename>RobotoCondensed-Bold.ttf</filename>
@@ -594,6 +608,13 @@
 			<filename>rexlia-rg.ttf</filename>
 			<size>44</size>
 		</font>
+		<!--Required for Dynamic Sizing In View: Media Center Classic Experience (Old Vertical)-->
+		<font>
+			<name>LargeBoldMenu</name>
+			<filename>rexlia-rg.ttf</filename>
+			<size>74</size>
+		</font>
+		<!--End Required for Dynamic Sizing In View: Media Center Classic Experience (Old Vertical)-->
 		<font>
 			<name>LargeBoldReg</name>
 			<filename>rexlia-rg.ttf</filename>
@@ -728,6 +749,13 @@
 			<filename>plasmatic-regular.ttf</filename>
 			<size>48</size>
 		</font>
+		<!--Required for Dynamic Sizing In View: Media Center Classic Experience (Old Vertical)-->
+		<font>
+			<name>LargeBoldMenu</name>
+			<filename>plasmatic-regular.ttf</filename>
+			<size>74</size>
+		</font>
+		<!--End Required for Dynamic Sizing In View: Media Center Classic Experience (Old Vertical)-->
 		<font>
 			<name>LargeBoldReg</name>
 			<filename>plasmatic-regular.ttf</filename>
@@ -862,6 +890,13 @@
 			<filename>nk57-monospace-no-sb.ttf</filename>
 			<size>44</size>
 		</font>
+		<!--Required for Dynamic Sizing In View: Media Center Classic Experience (Old Vertical)-->
+		<font>
+			<name>LargeBoldMenu</name>
+			<filename>nk57-monospace-no-sb.ttf</filename>
+			<size>74</size>
+		</font>
+		<!--End Required for Dynamic Sizing In View: Media Center Classic Experience (Old Vertical)-->
 		<font>
 			<name>LargeBoldReg</name>
 			<filename>nk57-monospace-no-sb.ttf</filename>
@@ -996,6 +1031,13 @@
 			<filename>sui-generis-rg.ttf</filename>
 			<size>44</size>
 		</font>
+		<!--Required for Dynamic Sizing In View: Media Center Classic Experience (Old Vertical)-->
+		<font>
+			<name>LargeBoldMenu</name>
+			<filename>sui-generis-rg.ttf</filename>
+			<size>74</size>
+		</font>
+		<!--End Required for Dynamic Sizing In View: Media Center Classic Experience (Old Vertical)-->
 		<font>
 			<name>LargeBoldReg</name>
 			<filename>sui-generis-rg.ttf</filename>
