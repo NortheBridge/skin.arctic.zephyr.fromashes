@@ -55,6 +55,7 @@
 		<value condition="StringCompare(Container(300).ListItem.Property(widget),AiringTodayTvShows)">plugin://script.extendedinfo?info=airingtodaytvshows</value>
 		<value condition="[Skin.HasSetting(home.vertical) | !Skin.HasSetting(home.classicwidgets)] + substring(Container(300).ListItem.Property(widget),Albums)">$VAR[DefWidgetContentAlbums]</value>
 		<value condition="StringCompare(Container(300).ListItem.Property(widget),Weather) + !IsEmpty(Skin.String(weather.fanart))">$INFO[Skin.String(weather.fanart)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
+		<value condition="StringCompare(Container(300).ListItem.Property(widget),LiveTV)">pvr://channels/tv/All&amp;channels/</value>
 		<value condition="StringCompare(Container(300).ListItem.Property(widget),bbc.popular)">plugin://plugin.video.bbciplayer/?IPID&amp;description&amp;iconimage&amp;mode=10&amp;name=Most%20Popular&amp;url=http%3a%2f%2fwww.bbc.co.uk%2fiplayer%2fgroup%2fmost-popular</value>
 		<value condition="StringCompare(Container(300).ListItem.Property(widget),bbc.sport)">plugin://plugin.video.bbciplayer/?IPID&amp;description&amp;iconimage&amp;mode=8&amp;name=%5bCOLOR%20blue%5d%3e%3e%20Next%20Page%20%3e%3e%5b%2fCOLOR%5d&amp;url=http%3a%2f%2fwww.bbc.co.uk%2fiplayer%2fcategories%2fsport%2fall%3fsort%3ddateavailable%26</value>
 		<value condition="StringCompare(Container(300).ListItem.Property(widget),bbc.scifi)">plugin://plugin.video.bbciplayer/?IPID&amp;description&amp;iconimage&amp;mode=8&amp;name=Science&amp;url=http%3a%2f%2fwww.bbc.co.uk%2fiplayer%2fcategories%2fscience-and-nature%2fall%3fsort%3ddateavailable%26</value>
@@ -91,6 +92,170 @@
 		<value condition="StringCompare(Container(300).ListItem.Property(widget),RecentlyPlayedAlbums)">musicdb://recentlyplayedalbums/</value>
 		<value condition="StringCompare(Container(300).ListItem.Property(widget),Top100Albums)">musicdb://top100/albums/</value>
 	</variable>
+
+	<variable name="DefWidget1Content">
+		<value condition="Stringcompare(Skin.String(widget1),TrendingShows)">plugin://script.extendedinfo?info=trendingshows</value>
+		<value condition="Stringcompare(Skin.String(widget1),AiringShows)">plugin://script.extendedinfo?info=airingshows</value>
+		<value condition="Stringcompare(Skin.String(widget1),PremiereShows)">plugin://script.extendedinfo?info=premiereshows</value>
+		<value>plugin://script.extendedinfo?info=trendingshows</value>
+	</variable>
+
+	<variable name="DefWidget2Content">
+		<value condition="Stringcompare(Skin.String(widget2),TrendingMovies)">plugin://script.extendedinfo?info=trendingmovies</value>
+		<value condition="Stringcompare(Skin.String(widget2),InCinemas)">plugin://script.extendedinfo?info=incinemas</value>
+		<value condition="Stringcompare(Skin.String(widget2),Upcoming)">plugin://script.extendedinfo?info=upcoming</value>
+		<value condition="Stringcompare(Skin.String(widget2),PopularMovies)">plugin://script.extendedinfo?info=popularmovies</value>
+		<value condition="Stringcompare(Skin.String(widget2),TopRatedMovies)">plugin://script.extendedinfo?info=topratedmovies</value>
+		<value condition="Stringcompare(Skin.String(widget2),PopularTvShows)">plugin://script.extendedinfo?info=populartvshows</value>
+		<value condition="Stringcompare(Skin.String(widget2),TopRatedTvShows)">plugin://script.extendedinfo?info=topratedtvshows</value>
+		<value condition="Stringcompare(Skin.String(widget2),OnAirTvShows)">plugin://script.extendedinfo?info=onairtvshows</value>
+		<value condition="Stringcompare(Skin.String(widget2),AiringTodayTvShows)">plugin://script.extendedinfo?info=airingtodaytvshows</value>
+		<value condition="Stringcompare(Skin.String(widget2),Custom1)">$INFO[Skin.String(CustomWidget1)]</value>
+		<value condition="Stringcompare(Skin.String(widget2),Custom2)">$INFO[Skin.String(CustomWidget2)]</value>
+		<value condition="Stringcompare(Skin.String(widget2),Custom3)">$INFO[Skin.String(CustomWidget3)]</value>
+		<value condition="Stringcompare(Skin.String(widget2),Custom4)">$INFO[Skin.String(CustomWidget4)]</value>
+		<value condition="Stringcompare(Skin.String(widget2),Custom5)">$INFO[Skin.String(CustomWidget5)]</value>
+		<value condition="Stringcompare(Skin.String(widget2),Custom6)">$INFO[Skin.String(CustomWidget6)]</value>
+		<value condition="Stringcompare(Skin.String(widget2),Custom7)">$INFO[Skin.String(CustomWidget7)]</value>
+		<value condition="Stringcompare(Skin.String(widget2),Custom8)">$INFO[Skin.String(CustomWidget8)]</value>
+		<value condition="Stringcompare(Skin.String(widget2),Custom9)">$INFO[Skin.String(CustomWidget9)]</value>
+		<value condition="Stringcompare(Skin.String(widget2),Custom10)">$INFO[Skin.String(CustomWidget10)]</value>
+		<value>plugin://script.extendedinfo?info=trendingmovies</value>
+	</variable>
+
+	<variable name="DefWidget3Content">
+		<value condition="Stringcompare(Skin.String(widget3),TrendingMovies)">plugin://script.extendedinfo?info=trendingmovies</value>
+		<value condition="Stringcompare(Skin.String(widget3),InCinemas)">plugin://script.extendedinfo?info=incinemas</value>
+		<value condition="Stringcompare(Skin.String(widget3),Upcoming)">plugin://script.extendedinfo?info=upcoming</value>
+		<value condition="Stringcompare(Skin.String(widget3),PopularMovies)">plugin://script.extendedinfo?info=popularmovies</value>
+		<value condition="Stringcompare(Skin.String(widget3),TopRatedMovies)">plugin://script.extendedinfo?info=topratedmovies</value>
+		<value condition="Stringcompare(Skin.String(widget3),PopularTvShows)">plugin://script.extendedinfo?info=populartvshows</value>
+		<value condition="Stringcompare(Skin.String(widget3),TopRatedTvShows)">plugin://script.extendedinfo?info=topratedtvshows</value>
+		<value condition="Stringcompare(Skin.String(widget3),OnAirTvShows)">plugin://script.extendedinfo?info=onairtvshows</value>
+		<value condition="Stringcompare(Skin.String(widget3),AiringTodayTvShows)">plugin://script.extendedinfo?info=airingtodaytvshows</value>
+		<value>plugin://script.extendedinfo?info=popularmovies</value>
+	</variable>
+
+	<variable name="DefWidget4Content">
+		<value condition="Stringcompare(Skin.String(widget4),Engadget)">plugin://script.extendedinfo?info=youtubeusersearch&amp;&amp;id=Engadget</value>
+		<value condition="Stringcompare(Skin.String(widget4),Eurogamer)">plugin://script.extendedinfo?info=youtubeusersearch&amp;&amp;id=Eurogamer</value>
+		<value condition="Stringcompare(Skin.String(widget4),MobileTech)">plugin://script.extendedinfo?info=youtubeusersearch&amp;&amp;id=MobileTechReview</value>
+		<value condition="Stringcompare(Skin.String(widget4),Custom1)">$INFO[Skin.String(CustomWidget1)]</value>
+		<value condition="Stringcompare(Skin.String(widget4),Custom2)">$INFO[Skin.String(CustomWidget2)]</value>
+		<value condition="Stringcompare(Skin.String(widget4),Custom3)">$INFO[Skin.String(CustomWidget3)]</value>
+		<value condition="Stringcompare(Skin.String(widget4),Custom4)">$INFO[Skin.String(CustomWidget4)]</value>
+		<value condition="Stringcompare(Skin.String(widget4),Custom5)">$INFO[Skin.String(CustomWidget5)]</value>
+		<value condition="Stringcompare(Skin.String(widget4),Custom6)">$INFO[Skin.String(CustomWidget6)]</value>
+		<value condition="Stringcompare(Skin.String(widget4),Custom7)">$INFO[Skin.String(CustomWidget7)]</value>
+		<value condition="Stringcompare(Skin.String(widget4),Custom8)">$INFO[Skin.String(CustomWidget8)]</value>
+		<value condition="Stringcompare(Skin.String(widget4),Custom9)">$INFO[Skin.String(CustomWidget9)]</value>
+		<value condition="Stringcompare(Skin.String(widget4),Custom10)">$INFO[Skin.String(CustomWidget10)]</value>
+		<value>plugin://script.extendedinfo?info=youtubeusersearch&amp;&amp;id=Engadget</value>
+    </variable>
+
+	<variable name="DefWidget5Content">
+		<value condition="Stringcompare(Skin.String(widget5),LiveTV)">pvr://channels/tv/All&amp;channels/</value>
+		<value condition="Stringcompare(Skin.String(widget5),Recordings)">pvr://recordings/</value>
+		<value>pvr://channels/tv/All&amp;channels/</value>
+	</variable>
+
+	<variable name="DefWidget6Content">
+		<value condition="Stringcompare(Skin.String(widget6),RandomMovies)">plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
+		<value condition="Stringcompare(Skin.String(widget6),RecentMovies)">plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window.Property(recentmovies)]</value>
+		<value condition="Stringcompare(Skin.String(widget6),RecommendedMovies)">plugin://service.library.data.provider?type=recommendedmovies&amp;reload=$INFO[Window.Property(recommendedmovies)]</value>
+		<value condition="Stringcompare(Skin.String(widget6),Custom1)">$INFO[Skin.String(CustomWidget1)]</value>
+		<value condition="Stringcompare(Skin.String(widget6),Custom2)">$INFO[Skin.String(CustomWidget2)]</value>
+		<value condition="Stringcompare(Skin.String(widget6),Custom3)">$INFO[Skin.String(CustomWidget3)]</value>
+		<value condition="Stringcompare(Skin.String(widget6),Custom4)">$INFO[Skin.String(CustomWidget4)]</value>
+		<value condition="Stringcompare(Skin.String(widget6),Custom5)">$INFO[Skin.String(CustomWidget5)]</value>
+		<value condition="Stringcompare(Skin.String(widget6),Custom6)">$INFO[Skin.String(CustomWidget6)]</value>
+		<value condition="Stringcompare(Skin.String(widget6),Custom7)">$INFO[Skin.String(CustomWidget7)]</value>
+		<value condition="Stringcompare(Skin.String(widget6),Custom8)">$INFO[Skin.String(CustomWidget8)]</value>
+		<value condition="Stringcompare(Skin.String(widget6),Custom9)">$INFO[Skin.String(CustomWidget9)]</value>
+		<value condition="Stringcompare(Skin.String(widget6),Custom10)">$INFO[Skin.String(CustomWidget10)]</value>
+		<value>plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
+	</variable>
+
+	<variable name="DefWidget7Content">
+		<value condition="Stringcompare(Skin.String(widget7),RandomMovies)">plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
+		<value condition="Stringcompare(Skin.String(widget7),RecentMovies)">plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window.Property(recentmovies)]</value>
+		<value condition="Stringcompare(Skin.String(widget7),RecommendedMovies)">plugin://service.library.data.provider?type=recommendedmovies&amp;reload=$INFO[Window.Property(recommendedmovies)]</value>
+		<value>plugin://service.library.data.provider?type=recommendedmovies&amp;reload=$INFO[Window.Property(recommendedmovies)]</value>
+	</variable>
+
+	<variable name="DefWidget8Content">
+		<value condition="Stringcompare(Skin.String(widget8),RandomMovies)">plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
+		<value condition="Stringcompare(Skin.String(widget8),RecentMovies)">plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window.Property(recentmovies)]</value>
+		<value condition="Stringcompare(Skin.String(widget8),RecommendedMovies)">plugin://service.library.data.provider?type=recommendedmovies&amp;reload=$INFO[Window.Property(recommendedmovies)]</value>
+		<value>plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window.Property(recentmovies)]</value>
+	</variable>
+
+	<variable name="DefWidget9Content">
+		<value condition="Stringcompare(Skin.String(widget9),RandomEpisodes)">plugin://service.library.data.provider?type=randomepisodes&amp;reload=$INFO[Window.Property(randomepisodes)]</value>
+		<value condition="Stringcompare(Skin.String(widget9),RecentEpisodes)">plugin://service.library.data.provider?type=recentepisodes&amp;reload=$INFO[Window.Property(recentepisodes)]</value>
+		<value condition="Stringcompare(Skin.String(widget9),RecommendedEpisodes)">plugin://service.library.data.provider?type=recommendedepisodes&amp;reload=$INFO[Window.Property(recommendedepisodes)]</value>
+		<value condition="Stringcompare(Skin.String(widget9),Custom1)">$INFO[Skin.String(CustomWidget1)]</value>
+		<value condition="Stringcompare(Skin.String(widget9),Custom2)">$INFO[Skin.String(CustomWidget2)]</value>
+		<value condition="Stringcompare(Skin.String(widget9),Custom3)">$INFO[Skin.String(CustomWidget3)]</value>
+		<value condition="Stringcompare(Skin.String(widget9),Custom4)">$INFO[Skin.String(CustomWidget4)]</value>
+		<value condition="Stringcompare(Skin.String(widget9),Custom5)">$INFO[Skin.String(CustomWidget5)]</value>
+		<value condition="Stringcompare(Skin.String(widget9),Custom6)">$INFO[Skin.String(CustomWidget6)]</value>
+		<value condition="Stringcompare(Skin.String(widget9),Custom7)">$INFO[Skin.String(CustomWidget7)]</value>
+		<value condition="Stringcompare(Skin.String(widget9),Custom8)">$INFO[Skin.String(CustomWidget8)]</value>
+		<value condition="Stringcompare(Skin.String(widget9),Custom9)">$INFO[Skin.String(CustomWidget9)]</value>
+		<value condition="Stringcompare(Skin.String(widget9),Custom10)">$INFO[Skin.String(CustomWidget10)]</value>
+		<value>plugin://service.library.data.provider?type=randomepisodes&amp;reload=$INFO[Window.Property(randomepisodes)]</value>
+	</variable>
+
+	<variable name="DefWidget10Content">
+		<value condition="Stringcompare(Skin.String(widget10),RandomEpisodes)">plugin://service.library.data.provider?type=randomepisodes&amp;reload=$INFO[Window.Property(randomepisodes)]</value>
+		<value condition="Stringcompare(Skin.String(widget10),RecentEpisodes)">plugin://service.library.data.provider?type=recentepisodes&amp;reload=$INFO[Window.Property(recentepisodes)]</value>
+		<value condition="Stringcompare(Skin.String(widget10),RecommendedEpisodes)">plugin://service.library.data.provider?type=recommendedepisodes&amp;reload=$INFO[Window.Property(recommendedepisodes)]</value>
+		<value>plugin://service.library.data.provider?type=recommendedepisodes&amp;reload=$INFO[Window.Property(recommendedepisodes)]</value>
+	</variable>
+
+	<variable name="DefWidget11Content">
+		<value condition="Stringcompare(Skin.String(widget11),RandomEpisodes)">plugin://service.library.data.provider?type=randomepisodes&amp;reload=$INFO[Window.Property(randomepisodes)]</value>
+		<value condition="Stringcompare(Skin.String(widget11),RecentEpisodes)">plugin://service.library.data.provider?type=recentepisodes&amp;reload=$INFO[Window.Property(recentepisodes)]</value>
+		<value condition="Stringcompare(Skin.String(widget11),RecommendedEpisodes)">plugin://service.library.data.provider?type=recommendedepisodes&amp;reload=$INFO[Window.Property(recommendedepisodes)]</value>
+		<value>plugin://service.library.data.provider?type=recentepisodes&amp;reload=$INFO[Window.Property(recentepisodes)]</value>
+	</variable>
+
+	<variable name="DefWidget12Content">
+		<value condition="Stringcompare(Skin.String(widget12),RandomMusic)">plugin://service.library.data.provider?type=randomalbums&amp;reload=$INFO[Window.Property(randomalbums)]</value>
+		<value condition="Stringcompare(Skin.String(widget12),RecentMusic)">plugin://service.library.data.provider?type=recentalbums&amp;reload=$INFO[Window.Property(recentalbums)]</value>
+		<value condition="Stringcompare(Skin.String(widget12),RecommendedMusic)">plugin://service.library.data.provider?type=recommendedalbums&amp;reload=$INFO[Window.Property(recommendedalbums)]</value>
+		<value condition="Stringcompare(Skin.String(widget12),RecentPlayedMusic)">musicdb://recentlyplayedalbums/</value>
+		<value condition="Stringcompare(Skin.String(widget12),Top100Music)">musicdb://top100/albums/</value>
+		<value condition="Stringcompare(Skin.String(widget12),Custom1)">$INFO[Skin.String(CustomWidget1)]</value>
+		<value condition="Stringcompare(Skin.String(widget12),Custom2)">$INFO[Skin.String(CustomWidget2)]</value>
+		<value condition="Stringcompare(Skin.String(widget12),Custom3)">$INFO[Skin.String(CustomWidget3)]</value>
+		<value condition="Stringcompare(Skin.String(widget12),Custom4)">$INFO[Skin.String(CustomWidget4)]</value>
+		<value condition="Stringcompare(Skin.String(widget12),Custom5)">$INFO[Skin.String(CustomWidget5)]</value>
+		<value condition="Stringcompare(Skin.String(widget12),Custom6)">$INFO[Skin.String(CustomWidget6)]</value>
+		<value condition="Stringcompare(Skin.String(widget12),Custom7)">$INFO[Skin.String(CustomWidget7)]</value>
+		<value condition="Stringcompare(Skin.String(widget12),Custom8)">$INFO[Skin.String(CustomWidget8)]</value>
+		<value condition="Stringcompare(Skin.String(widget12),Custom9)">$INFO[Skin.String(CustomWidget9)]</value>
+		<value condition="Stringcompare(Skin.String(widget12),Custom10)">$INFO[Skin.String(CustomWidget10)]</value>
+		<value>plugin://service.library.data.provider?type=randomalbums&amp;reload=$INFO[Window.Property(randomalbums)]</value>
+	</variable>
+	<variable name="DefWidget13Content">
+		<value condition="Stringcompare(Skin.String(widget13),RecommendedMusic)">plugin://service.library.data.provider?type=recommendedalbums&amp;reload=$INFO[Window.Property(recommendedalbums)]</value>
+		<value condition="Stringcompare(Skin.String(widget13),RandomMusic)">plugin://service.library.data.provider?type=randomalbums&amp;reload=$INFO[Window.Property(randomalbums)]</value>
+		<value condition="Stringcompare(Skin.String(widget13),RecentMusic)">plugin://service.library.data.provider?type=recentalbums&amp;reload=$INFO[Window.Property(recentalbums)]</value>
+		<value condition="Stringcompare(Skin.String(widget13),RecentPlayedMusic)">musicdb://recentlyplayedalbums/</value>
+		<value condition="Stringcompare(Skin.String(widget13),Top100Music)">musicdb://top100/albums/</value>
+		<value>musicdb://recentlyplayedalbums/</value>
+	</variable>
+	<variable name="DefWidget14Content">
+		<value condition="Stringcompare(Skin.String(widget14),RecentMusic)">plugin://service.library.data.provider?type=recentalbums&amp;reload=$INFO[Window.Property(recentalbums)]</value>
+		<value condition="Stringcompare(Skin.String(widget14),RandomMusic)">plugin://service.library.data.provider?type=randomalbums&amp;reload=$INFO[Window.Property(randomalbums)]</value>
+		<value condition="Stringcompare(Skin.String(widget14),RecommendedMusic)">plugin://service.library.data.provider?type=recommendedalbums&amp;reload=$INFO[Window.Property(recommendedalbums)]</value>
+		<value condition="Stringcompare(Skin.String(widget14),RecentPlayedMusic)">musicdb://recentlyplayedalbums/</value>
+		<value condition="Stringcompare(Skin.String(widget14),Top100Music)">musicdb://top100/albums/</value>
+		<value>plugin://service.library.data.provider?type=recentalbums&amp;reload=$INFO[Window.Property(recentalbums)]</value>
+	</variable>
+
 	<include name="DefSideBrowserButton">
 		<radioposx>400</radioposx>
 		<width>100%</width>
@@ -459,11 +624,23 @@
 		<height>70</height>
 		<font>Tiny</font>
 		<textcolor>Black70</textcolor>
-		<textureradiofocus colordiffuse="Black70">buttons/radio-on.png</textureradiofocus>
+		<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/radio-on.png</textureradiofocus>
 		<textureradionofocus colordiffuse="Black30">buttons/radio-off.png</textureradionofocus>
 		<focusedcolor>$VAR[ColourSelected]</focusedcolor>
-		<alttexturefocus colordiffuse="$VAR[ColourHighlight]" border="16">common/white.png</alttexturefocus>
-		<texturefocus colordiffuse="$VAR[ColourHighlight]" border="16">common/white.png</texturefocus>
+		<alttexturefocus colordiffuse="Dark1" border="16">common/white.png</alttexturefocus>
+		<texturefocus colordiffuse="Dark1" border="16">common/white.png</texturefocus>
+	</include>
+	<include name="DefContextButton2">
+		<radioposx>400</radioposx>
+		<width>430</width>
+		<height>55</height>
+		<font>Mini</font>
+		<textcolor>Black70</textcolor>
+		<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/radio-on.png</textureradiofocus>
+		<textureradionofocus colordiffuse="Black30">buttons/radio-off.png</textureradionofocus>
+		<focusedcolor>$VAR[ColourSelected]</focusedcolor>
+		<alttexturefocus colordiffuse="Dark1" border="16">common/white.png</alttexturefocus>
+		<texturefocus colordiffuse="Dark1" border="16">common/white.png</texturefocus>
 	</include>
 	<include name="DefSettingsButton">
 		<align>left</align>
@@ -480,6 +657,22 @@
 		<texturefocus colordiffuse="$VAR[ColourHighlight]">common/white.png</texturefocus>
 		<alttexturefocus colordiffuse="$VAR[ColourHighlight]">common/white.png</alttexturefocus>
 	</include>
+	<include name="DefSettingsButton2">
+		<align>left</align>
+		<font>Small</font>
+		<textcolor>PanelWhite100</textcolor>
+		<disabledcolor>PanelWhite12</disabledcolor>
+		<height>70</height>
+		<textureup flipy="true" colordiffuse="PanelWhite30">buttons/spin-down.png</textureup>
+		<texturedown colordiffuse="PanelWhite30">buttons/spin-down.png</texturedown>
+		<textureupfocus flipy="true" colordiffuse="PanelWhite100">buttons/spin-down.png</textureupfocus>
+		<texturedownfocus colordiffuse="PanelWhite100">buttons/spin-down.png</texturedownfocus>
+		<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/radio-on.png</textureradiofocus>
+		<textureradionofocus colordiffuse="PanelWhite12">buttons/radio-off.png</textureradionofocus>
+		<texturefocus colordiffuse="Dark1">common/white.png</texturefocus>
+		<alttexturefocus colordiffuse="Dark1">common/white.png</alttexturefocus>
+		<alttexturenofocus colordiffuse="Light1">common/white.png</alttexturenofocus>
+	</include>
 	<include name="DefSettingsOKCancelButton">
 		<font>Button</font>
 		<texturenofocus colordiffuse="White12" border="16">common/white.png</texturenofocus>
@@ -492,7 +685,7 @@
 		<onleft>50</onleft>
 		<onright>50</onright>
 		<onback>50</onback>
-		<posx>8</posx>
+		<posx>18</posx>
 		<posy>16</posy>
 		<width>510</width>
 		<height>350</height>
@@ -653,27 +846,334 @@
 			<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
 		</control>
 	</include>
-	<include name="Def9000MusicSide">
-		<control type="button" id="2">
+	<include name="Def9000SideBladeLeft">
+		<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+		<include>Animation.SideSlide</include>
+		<control type="button">
+			<left>-12</left>
+			<top>-12</top>
+			<width>455</width>
+			<height>1104</height>
+			<texturefocus border="12">common/rounded-shadow8.png</texturefocus>
+			<texturenofocus border="12">common/rounded-shadow8.png</texturenofocus>
+			<colordiffuse>White100</colordiffuse>
+		</control>
+		<control type="image">
+			<description>LOGO</description>
+			<left>0</left>
+			<top>25</top>
+			<width>400</width>
+			<height>70</height>
+			<aspectratio>keep</aspectratio>
+			<texture>logo.png</texture>
+			<colordiffuse>$VAR[ColourHighlight]</colordiffuse>
+		</control>
+	</include>
+	<include name="Def9000MediaMenuTop">
+		<left>0</left>
+		<top>115</top>
+		<width>455</width>
+		<height>1080</height>
+		<onleft>9000</onleft>
+		<onright>ClearProperty(MediaMenu,Home)</onright>
+		<onright condition="![Window.IsVisible(tvguide) | Window.IsActive(SettingsCategory.xml)]">50</onright>
+		<onright condition="Window.IsVisible(tvguide)">10</onright>
+		<onright condition="Window.IsActive(SettingsCategory.xml)">3</onright>
+		<onup>9000</onup>
+		<ondown>9000</ondown>
+		<onback>ClearProperty(MediaMenu,Home)</onback>
+		<onback>50</onback>
+		<itemgap>0</itemgap>
+		<animation effect="slide" start="-440,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
+		<control type="label" id="200">
+			<height>42</height>
+			<textoffsetx>15</textoffsetx>
+			<font>Home</font>
+			<label>View Options</label>
+			<textcolor>$VAR[ColourHighlight]</textcolor>
+			<aligny>center</aligny>
+		</control>
+		<control type="button" id="9326">
 			<description>View</description>
-			<include>DefContextButton</include>
+			<include>DefContextButton2</include>
 			<align>left</align>
+			<label>View: $INFO[Container.Viewmode]</label>
+			<onclick>XBMC.RunScript(script.skin.helper.service,action=setview)</onclick>
 		</control>
 		<control type="button" id="3">
 			<description>Sort</description>
-			<include>DefContextButton</include>
+			<include>DefContextButton2</include>
 			<align>left</align>
 		</control>
 		<control type="togglebutton" id="4">
 			<description>Ascending</description>
-			<include>DefContextButton</include>
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>584</label>
+			<altlabel>585</altlabel>
+		</control>
+		<control type="radiobutton" id="9030" description="Plot Overlay">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>31255</label>
+			<selected>Skin.HasSetting(furniture.overlayinfo)</selected>
+			<onclick>Skin.ToggleSetting(furniture.overlayinfo)</onclick>
+		</control>
+		<control type="radiobutton" id="9001" description="Low List (50)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>31142</label>
+			<selected>Skin.HasSetting(50list.low)</selected>
+			<onclick>Skin.ToggleSetting(50list.low)</onclick>
+			<onclick>ReloadSkin()</onclick>
+			<visible>Control.IsVisible(50)</visible>
+		</control>
+		<control type="radiobutton" id="9009" description="Low List (50)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>31214</label>
+			<selected>Skin.HasSetting(50list.showplot)</selected>
+			<onclick>Skin.ToggleSetting(50list.showplot)</onclick>
+			<visible>Control.IsVisible(50) + !Skin.HasSetting(50list.low)</visible>
+		</control>
+		<control type="radiobutton" id="9002" description="No Wrap (53)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>31148</label>
+			<selected>!Skin.HasSetting(53poster.nowrap)</selected>
+			<onclick>Skin.ToggleSetting(53poster.nowrap)</onclick>
+			<onclick>ReloadSkin()</onclick>
+			<visible>Control.IsVisible(53)</visible>
+		</control>
+		<control type="radiobutton" id="9003" description="Info Wall (55)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>31147</label>
+			<selected>Skin.HasSetting(55wall.showinfo)</selected>
+			<onclick>Skin.Reset(55wall.showposter)</onclick>
+			<onclick>Skin.ToggleSetting(55wall.showinfo)</onclick>
+			<onclick>ReloadSkin()</onclick>
+			<visible>Control.IsVisible(55)</visible>
+		</control>
+		<control type="radiobutton" id="9004" description="Poster Wall (55)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>31185</label>
+			<selected>Skin.HasSetting(55wall.showposter)</selected>
+			<onclick>Skin.Reset(55wall.showinfo)</onclick>
+			<onclick>Skin.ToggleSetting(55wall.showposter)</onclick>
+			<onclick>ReloadSkin()</onclick>
+			<visible>Control.IsVisible(55)</visible>
+		</control>
+		<control type="radiobutton" id="9005" description="Info Media (56)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>31147</label>
+			<selected>Skin.HasSetting(56media.showinfo)</selected>
+			<onclick>Skin.ToggleSetting(56media.showinfo)</onclick>
+			<onclick>Skin.Reset(56media.low)</onclick>
+			<onclick>ReloadSkin()</onclick>
+			<visible>Control.IsVisible(56)</visible>
+		</control>
+		<control type="radiobutton" id="9006" description="Low List Media (56)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>31142</label>
+			<selected>Skin.HasSetting(56media.low)</selected>
+			<onclick>Skin.ToggleSetting(56media.low)</onclick>
+			<onclick>Skin.Reset(56media.showinfo)</onclick>
+			<onclick>ReloadSkin()</onclick>
+			<visible>Control.IsVisible(56)</visible>
+		</control>
+		<control type="radiobutton" id="9007" description="Low List (57)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>31142</label>
+			<selected>Skin.HasSetting(57list.low)</selected>
+			<onclick>Skin.ToggleSetting(57list.low)</onclick>
+			<onclick>ReloadSkin()</onclick>
+			<visible>Control.IsVisible(57)</visible>
+		</control>
+		<control type="radiobutton" id="9008" description="Big Wide Info (51)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>31147</label>
+			<selected>Skin.HasSetting(51bigwide.showinfo)</selected>
+			<onclick>Skin.ToggleSetting(51bigwide.showinfo)</onclick>
+			<onclick>Skin.Reset(51bigwide.showclassic)</onclick>
+			<onclick>ReloadSkin()</onclick>
+			<visible>Control.IsVisible(51)</visible>
+		</control>
+		<control type="radiobutton" id="9014" description="Big Wide Classic (51)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>31245</label>
+			<selected>Skin.HasSetting(51bigwide.showclassic)</selected>
+			<onclick>Skin.ToggleSetting(51bigwide.showclassic)</onclick>
+			<onclick>Skin.Reset(51bigwide.showinfo)</onclick>
+			<onclick>ReloadSkin()</onclick>
+			<visible>Control.IsVisible(51)</visible>
+		</control>
+		<control type="radiobutton" id="9011" description="Banner show poster (54)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>31147</label>
+			<selected>Skin.HasSetting(54banner.showinfo)</selected>
+			<onclick>Skin.ToggleSetting(54banner.showinfo)</onclick>
+			<visible>Control.IsVisible(54) + !Container.Content(seasons)</visible>
+		</control>
+		<control type="radiobutton" id="9012" description="Big List Double Pane (52)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>31235</label>
+			<selected>!Skin.HasSetting(52biglist.singlepane)</selected>
+			<onclick>Skin.ToggleSetting(52biglist.singlepane)</onclick>
+			<onclick>ReloadSkin()</onclick>
+			<visible>Control.IsVisible(52)</visible>
+		</control>
+		<control type="radiobutton" id="9016" description="Discart (513,514)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>Show DiscArt</label>
+			<selected>Skin.HasSetting(views.discart)</selected>
+			<onclick>Skin.ToggleSetting(views.discart)</onclick>
+			<visible>Control.IsVisible(513) | Control.IsVisible(514)</visible>
+		</control>
+		<control type="radiobutton" id="9017" description="Animate Discart (513,514)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label> - Rotate DiscArt</label>
+			<selected>Skin.HasSetting(AnimateDiscArt)</selected>
+			<onclick>Skin.ToggleSetting(AnimateDiscArt)</onclick>
+			<visible>Control.IsVisible(513) | Control.IsVisible(514)</visible>
+			<visible>Skin.HasSetting(views.discart)</visible>
+		</control>
+		<control type="radiobutton" id="9018" description="Cases (513,514,50,53,56)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>Use Cases</label>
+			<selected>Skin.HasSetting(views.cases)</selected>
+			<onclick>Skin.ToggleSetting(views.cases)</onclick>
+			<visible>Control.IsVisible(513) | Control.IsVisible(514) | Control.IsVisible(50) | Control.IsVisible(53) | Control.IsVisible(56)</visible>
+		</control>
+		<control type="radiobutton" id="9019" description="Clear Cases (513,514,50,53,56)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label> - Clear Cases</label>
+			<selected>Skin.HasSetting(views.clearcases)</selected>
+			<onclick>Skin.Reset(views.bddvdcases)</onclick>
+			<onclick>Skin.Reset(views.colourcases)</onclick>
+			<onclick>Skin.ToggleSetting(views.clearcases)</onclick>
+			<visible>Control.IsVisible(513) | Control.IsVisible(514) | Control.IsVisible(50) | Control.IsVisible(53) | Control.IsVisible(56)</visible>
+			<visible>Skin.HasSetting(views.cases)</visible>
+		</control>
+		<control type="radiobutton" id="9020" description="Colour Cases (513,514,50,53,56)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label> - Colour Cases</label>
+			<selected>Skin.HasSetting(views.colourcases)</selected>
+			<onclick>Skin.Reset(views.bddvdcases)</onclick>
+			<onclick>Skin.Reset(views.clearcases)</onclick>
+			<onclick>Skin.ToggleSetting(views.colourcases)</onclick>
+			<visible>Control.IsVisible(513) | Control.IsVisible(514) | Control.IsVisible(50) | Control.IsVisible(53) | Control.IsVisible(56)</visible>
+			<visible>Skin.HasSetting(views.cases)</visible>
+		</control>
+		<control type="radiobutton" id="9021" description="BD/DVD Cases (513,514,50,53,56)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label> - BD/DVD Cases</label>
+			<selected>Skin.HasSetting(views.bddvdcases)</selected>
+			<onclick>Skin.Reset(views.colourcases)</onclick>
+			<onclick>Skin.Reset(views.clearcases)</onclick>
+			<onclick>Skin.ToggleSetting(views.bddvdcases)</onclick>
+			<visible>Control.IsVisible(513) | Control.IsVisible(514) | Control.IsVisible(50) | Control.IsVisible(53) | Control.IsVisible(56)</visible>
+			<visible>Skin.HasSetting(views.cases)</visible>
+		</control>
+		<control type="radiobutton" id="9022" description="Title Overlay (515)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>Show title overlay</label>
+			<selected>Skin.HasSetting(views.titleoverlay)</selected>
+			<onclick>Skin.ToggleSetting(views.titleoverlay)</onclick>
+			<visible>Control.IsVisible(515)</visible>
+		</control>
+		<control type="radiobutton" id="9023" description="Prefer Fanart (500)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>Show Fanart Image</label>
+			<selected>Skin.HasSetting(views.500.showfanart)</selected>
+			<onclick>Skin.ToggleSetting(views.500.showfanart)</onclick>
+			<visible>Control.IsVisible(500)</visible>
+		</control>
+		<control type="radiobutton" id="9024" description="Prefer Fanart (51)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>Show Fanart Image</label>
+			<selected>Skin.HasSetting(views.51.showfanart)</selected>
+			<onclick>Skin.ToggleSetting(views.51.showfanart)</onclick>
+			<visible>Control.IsVisible(51)</visible>
+		</control>
+		<control type="radiobutton" id="9028" description="Show Tick (155)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>Hide Watched/Unwatched Indicator</label>
+			<selected>Skin.HasSetting(views.155.showtick)</selected>
+			<onclick>Skin.ToggleSetting(views.155.showtick)</onclick>
+			<visible>Control.IsVisible(155)</visible>
+		</control>
+		<control type="radiobutton" id="9029" description="Show Tick (156)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>Hide Watched/Unwatched Indicator</label>
+			<selected>Skin.HasSetting(views.156.showtick)</selected>
+			<onclick>Skin.ToggleSetting(views.156.showtick)</onclick>
+			<visible>Control.IsVisible(156)</visible>
+		</control>
+	</include>
+	<include name="Def9000MusicSide">
+		<left>0</left>
+		<top>115</top>
+		<width>455</width>
+		<height>1080</height>
+		<onleft>9000</onleft>
+		<onright>ClearProperty(MediaMenu,Home)</onright>
+		<onright condition="![Window.IsVisible(tvguide) | Window.IsActive(SettingsCategory.xml)]">50</onright>
+		<onright condition="Window.IsVisible(tvguide)">10</onright>
+		<onright condition="Window.IsActive(SettingsCategory.xml)">3</onright>
+		<onup>9000</onup>
+		<ondown>9000</ondown>
+		<onback>ClearProperty(MediaMenu,Home)</onback>
+		<onback>50</onback>
+		<itemgap>0</itemgap>
+		<animation effect="slide" start="-440,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
+		<control type="label" id="200">
+			<height>42</height>
+			<textoffsetx>15</textoffsetx>
+			<font>Home</font>
+			<label>View Options</label>
+			<textcolor>$VAR[ColourHighlight]</textcolor>
+			<aligny>center</aligny>
+		</control>
+		<control type="button" id="2">
+			<description>View</description>
+			<include>DefContextButton2</include>
+			<align>left</align>
+		</control>
+		<control type="button" id="3">
+			<description>Sort</description>
+			<include>DefContextButton2</include>
+			<align>left</align>
+		</control>
+		<control type="togglebutton" id="4">
+			<description>Ascending</description>
+			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>584</label>
 			<altlabel>585</altlabel>
 		</control>
 		<control type="button" id="5">
 			<description>Files</description>
-			<include>DefContextButton</include>
+			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>744</label>
 			<onclick>SetFocus(50)</onclick>
@@ -681,7 +1181,7 @@
 		</control>
 		<control type="button" id="7">
 			<description>Playlist</description>
-			<include>DefContextButton</include>
+			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>136</label>
 			<onclick>SetFocus(50)</onclick>
@@ -690,11 +1190,29 @@
 		</control>
 		<control type="button" id="9098">
 			<description>Now Playing</description>
-			<include>DefContextButton</include>
+			<include>DefContextButton2</include>
 			<label>13350</label>
 			<align>left</align>
 			<onclick>ActivateWindow(MusicPlaylist)</onclick>
 			<visible>IntegerGreaterThan(Playlist.Length(music),1)</visible>
+		</control>
+		<control type="radiobutton" id="9007" description="Low List (57)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>31142</label>
+			<selected>Skin.HasSetting(57list.low)</selected>
+			<onclick>Skin.ToggleSetting(57list.low)</onclick>
+			<onclick>ReloadSkin()</onclick>
+			<visible>Control.IsVisible(57)</visible>
+		</control>
+		<control type="radiobutton" id="9008" description="Big Wide Info (51)">
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>31147</label>
+			<selected>Skin.HasSetting(51bigwide.showinfo)</selected>
+			<onclick>Skin.ToggleSetting(51bigwide.showinfo)</onclick>
+			<onclick>ReloadSkin()</onclick>
+			<visible>Control.IsVisible(51)</visible>
 		</control>
 	</include>
 	<include name="DefDialogSelectManual6">
