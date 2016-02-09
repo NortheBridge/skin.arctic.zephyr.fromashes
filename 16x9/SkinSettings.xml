@@ -83,7 +83,7 @@
 						<include>DefSettingsButton</include>
 						<label>31745</label>
 					</control>
-					<!--<control type="togglebutton" id="9109" description="Views">
+					<control type="togglebutton" id="9109" description="Views">
 						<usealttexture>ControlGroup(9100).HasFocus(9109)</usealttexture>
 						<alttexturenofocus colordiffuse="$VAR[ColourHighlight]">common/white.png</alttexturenofocus>
 						<include>DefSettingsButton</include>
@@ -776,24 +776,16 @@
 						<onclick>RunScript(script.toolbox,info=importskinsettings)</onclick>
 					</control>
 					<!-- Colours -->
-					<control type="radiobutton" id="9281">
-						<width>1310</width>
-						<include>DefSettingsButton</include>
-						<selected>Skin.HasSetting(ColourHighlight)</selected>
-						<onclick>Skin.ToggleSetting(ColourHighlight)</onclick>
-						<onclick>ReloadSkin()</onclick>
-						<label>Change main highlight colour</label>
-						<visible>ControlGroup(9100).HasFocus(9108)</visible>
-					</control>
+					<!-- Main Color -->
 					<control type="button" id="9282">
 						<width>1310</width>
-						<include>DefSettingsButton</include>
-						<onclick>RunScript (script.skin.helper.service,action=colorpicker,skinstring=focuscolor.name)</onclick>
-						<label> - Set main highlight colour</label>
+						<label> - Main Highlight Colour</label>
 						<label2>[COLOR=$VAR[ColourHighlight]]$INFO[Skin.String(focuscolor.name)][/COLOR]</label2>
-						<visible>Skin.HasSetting(ColourHighlight)</visible>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=focuscolor.name)</onclick>
+						<include>DefSettingsButton</include>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
 					</control>
+					<!-- Reset Main Color -->
 					<control type="button" id="9283">
 						<width>1310</width>
 						<include>DefSettingsButton</include>
@@ -802,24 +794,16 @@
 						<visible>Skin.HasSetting(ColourHighlight)</visible>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
 					</control>
-					<control type="radiobutton" id="9284">
-						<width>1310</width>
-						<include>DefSettingsButton</include>
-						<selected>Skin.HasSetting(ColourHighlight2)</selected>
-						<onclick>Skin.ToggleSetting(ColourHighlight2)</onclick>
-						<onclick>ReloadSkin()</onclick>
-						<label>Change second highlight colour</label>
-						<visible>ControlGroup(9100).HasFocus(9108)</visible>
-					</control>
+					<!-- Second Color -->
 					<control type="button" id="9285">
 						<width>1310</width>
-						<include>DefSettingsButton</include>
-						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=focuscolor​2.name)</onclick>
-						<label> - Set second highlight colour</label>
+						<label> - Highlight Colour 2</label>
 						<label2>[COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(focuscolor2.name)][/COLOR]</label2>
-						<visible>Skin.HasSetting(ColourHighlight2)</visible>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=focuscolor2.name)</onclick>
+						<include>DefSettingsButton</include>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
 					</control>
+					<!-- Reset Secondary Color -->
 					<control type="button" id="9286">
 						<width>1310</width>
 						<include>DefSettingsButton</include>
@@ -828,24 +812,16 @@
 						<visible>Skin.HasSetting(ColourHighlight2)</visible>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
 					</control>
-					<control type="radiobutton" id="9287">
-						<width>1310</width>
-						<include>DefSettingsButton</include>
-						<selected>Skin.HasSetting(ColourSelected)</selected>
-						<onclick>Skin.ToggleSetting(ColourSelected)</onclick>
-						<onclick>ReloadSkin()</onclick>
-						<label>Change the selected colour</label>
-						<visible>ControlGroup(9100).HasFocus(9108)</visible>
-					</control>
+					<!-- Text Color -->
 					<control type="button" id="9288">
 						<width>1310</width>
-						<include>DefSettingsButton</include>
-						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=selectedco​lor.name)</onclick>
-						<label> - Set selected colour</label>
+						<label> - Selected Text Colour</label>
 						<label2>[COLOR=$VAR[ColourSelected]]$INFO[Skin.String(selectedcolor.name)][/COLOR]</label2>
-						<visible>Skin.HasSetting(ColourSelected)</visible>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=selectedcolor.name)</onclick>
+						<include>DefSettingsButton</include>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
 					</control>
+					<!-- Reset Text Color -->
 					<control type="button" id="9289">
 						<width>1310</width>
 						<include>DefSettingsButton</include>
