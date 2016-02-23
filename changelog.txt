@@ -1,15 +1,10 @@
 [B]Arctic Zephyr for Emby Changelog[/B]
 
-[B]3.2.10 (3.2.10_bsrelease01) - "From Ashes Bluestone 3.2.1"[/B]
-Arctic Zephyr: From Ashes "Spring Update"
-Fixed Errors In Changelog
-Replaced all instances of AZ Skin Helper with "regular" Skin Helper
-Blue Accents Niw Default ("From Ashes" Style)
-Orange Accents Now "Exploded" Style
-New Icon Suite
-Resolved Pink Text to Now Use Color Accents
-About From Ashes Page Implemented
-American Flag Now Used to Represent English Audio and Subtitles in Info Screen
+[B]3.2.02 (3.2.02_bsrelease01) - "From Ashes Bluestone 3.2.02"[/B]
+Arctic Zephyr: From Ashes "Hotfix 3.2.02"
+Resolves Installation Issue in Public Kodi Jarvis Release
+Removes "script.duration" legacy code
+Info Screen Length Now Handled By Skin Helper Service
 
 [B]3.2.01 (3.2.01_bsrelease01) - "From Ashes Bluestone 3.2.01"[/B]
 "It Will Never Be the Enterprise Without a .01 Release"
