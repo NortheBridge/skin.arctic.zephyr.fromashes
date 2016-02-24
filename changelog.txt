@@ -1,6 +1,12 @@
 [B]Arctic Zephyr for Emby Changelog[/B]
 
-[B]3.2.00 (3.2.01_bsrelease01) - "From Ashes Bluestone 3.2.0"[/B]
+[B]3.2.02 (3.2.02_bsrelease01) - "From Ashes Bluestone 3.2.02"[/B]
+Arctic Zephyr: From Ashes "Hotfix 3.2.02"
+Resolves Installation Issue in Public Kodi Jarvis Release
+Removes "script.duration" legacy code
+Info Screen Length Now Handled By Skin Helper Service
+
+[B]3.2.01 (3.2.01_bsrelease01) - "From Ashes Bluestone 3.2.01"[/B]
 "It Will Never Be the Enterprise Without a .01 Release"
 SkinSettings.xml space fixed (Contributor: papadcha [Emby Forums, Page 4])
 Enhanced Skin Settings (Contributor: minus0 [Kodi Forums, Page 1])
