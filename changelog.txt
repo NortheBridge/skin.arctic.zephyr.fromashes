@@ -2,7 +2,8 @@
 
 [B]3.2.03 (3.2.03_bsrelease01) - "From Ashes Bluestone 3.2.03"[/B]
 Arctic Zephyr: From Ashes "Hotfix 3.2.03"
-Fixes and Enhances Color Selector (Contributor: minus0 [Kodi Forums, Page 3])
+Fixed Installation Issue from Final Code Backport
+Enhances Color Selector [Currently Inoperable] (Contributor: minus0 [Kodi Forums, Page 3])
 Implements "ABout From Ashes" Page
 
 [B]3.2.02 (3.2.02_bsrelease01) - "From Ashes Bluestone 3.2.02"[/B]
