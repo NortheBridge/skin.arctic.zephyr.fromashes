@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <variable name="ColourHighlight">
+        <value condition="!IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
+        <value>Highlight</value>
+	</variable>
+	<variable name="ColourHighlight2">
+        <value condition="!IsEmpty(Skin.String(focuscolor2.name))">$INFO[Skin.String(focuscolor2.name)]</value>
+        <value>Highlight2</value>
+	</variable>
+	<variable name="ColourSelected">
+        <value condition="!IsEmpty(Skin.String(selectedcolor.name))">$INFO[Skin.String(selectedcolor.name)]</value>
+        <value>Selected</value>
+	</variable>
 	<variable name="DefSettingsOnRight">
 		<value condition="Window.IsVisible(AppearanceSettings)">ReplaceWindow(VideosSettings)</value>
 		<value condition="Window.IsVisible(VideosSettings)">ReplaceWindow(MusicSettings)</value>

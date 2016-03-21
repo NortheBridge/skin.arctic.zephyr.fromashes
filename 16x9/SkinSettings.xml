@@ -779,56 +779,53 @@
 					<!-- Main Color -->
 					<control type="button" id="9282">
 						<width>1310</width>
-						<label> - Main Highlight Colour</label>
-						<label2>[COLOR=$VAR[ColourHighlight]]$INFO[Skin.String(focuscolor.name)][/COLOR]</label2>
-						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=focuscolor.name)</onclick>
-						<include>DefSettingsButton</include>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label> - Main Highlight Colour</label>
+						<label2>[UPPERCASE][COLOR=$VAR[ColourHighlight]]$INFO[Skin.String(focuscolor.name)][/COLOR][/UPPERCASE]</label2>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=focuscolor.name)</onclick>
 					</control>
 					<!-- Reset Main Color -->
 					<control type="button" id="9283">
 						<width>1310</width>
-						<include>DefSettingsButton</include>
-						<onclick>Skin.SetString(focuscolor.name,Highlight)</onclick>
-						<label> - $LOCALIZE[409]</label>
-						<visible>Skin.HasSetting(ColourHighlight)</visible>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label> - $LOCALIZE[409]</label>
+						<onclick>Skin.SetString(focuscolor.name,Highlight)</onclick>
 					</control>
 					<!-- Second Color -->
 					<control type="button" id="9285">
 						<width>1310</width>
-						<label> - Highlight Colour 2</label>
-						<label2>[COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(focuscolor2.name)][/COLOR]</label2>
-						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=focuscolor2.name)</onclick>
-						<include>DefSettingsButton</include>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label> - Highlight Colour 2</label>
+						<label2>[UPPERCASE][COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(focuscolor2.name)][/COLOR][/UPPERCASE]</label2>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=focuscolor2.name)</onclick>
 					</control>
 					<!-- Reset Secondary Color -->
 					<control type="button" id="9286">
 						<width>1310</width>
-						<include>DefSettingsButton</include>
-						<onclick>Skin.SetString(focuscolor2.name,Highlight2)</onclick>
-						<label> - $LOCALIZE[409]</label>
-						<visible>Skin.HasSetting(ColourHighlight2)</visible>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label> - $LOCALIZE[409]</label>
+						<onclick>Skin.SetString(focuscolor2.name,Highlight2)</onclick>
 					</control>
 					<!-- Text Color -->
 					<control type="button" id="9288">
 						<width>1310</width>
-						<label> - Selected Text Colour</label>
-						<label2>[COLOR=$VAR[ColourSelected]]$INFO[Skin.String(selectedcolor.name)][/COLOR]</label2>
-						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=selectedcolor.name)</onclick>
-						<include>DefSettingsButton</include>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label> - Selected Text Colour</label>
+						<label2>[UPPERCASE][COLOR=$VAR[ColourSelected]]$INFO[Skin.String(selectedcolor.name)][/COLOR][/UPPERCASE]</label2>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=selectedcolor.name)</onclick>
 					</control>
 					<!-- Reset Text Color -->
 					<control type="button" id="9289">
 						<width>1310</width>
-						<include>DefSettingsButton</include>
-						<onclick>Skin.SetString(selectedcolor.name,Selected)</onclick>
-						<label> - $LOCALIZE[409]</label>
-						<visible>Skin.HasSetting(ColourSelected)</visible>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label> - $LOCALIZE[409]</label>
+						<onclick>Skin.SetString(selectedcolor.name,Selected)</onclick>
 					</control>
 					<!-- Views -->
 					<control type="button" id="9291" description="Enable or Disable views">

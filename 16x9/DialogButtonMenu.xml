@@ -52,7 +52,7 @@
                 <description>About From Ashes</description>
 				<include>DefContextButton</include>
 				<label>About From Ashes</label>
-                <onclick>ActivateWindow(74657)</onclick>
+                <onclick>ActivateWindow(3115)</onclick>
                 </control>
 
                 <control type="button" id="3111">
