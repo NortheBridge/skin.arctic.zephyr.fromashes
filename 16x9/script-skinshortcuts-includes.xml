@@ -300,11 +300,10 @@
 			<thumb />
 			<property name="labelID">15100</property>
 			<property name="defaultID">15100</property>
-			<visible>[Library.HasContent(Music)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),num-2)</visible>
 			<onclick>ActivateWindow(Music,MusicLibrary,return)</onclick>
 			<property name="path">ActivateWindow(Music,MusicLibrary,return)</property>
 			<property name="list">MusicLibrary</property>
-			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),num-2)</visible>
 			<property name="group">2</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -468,6 +467,7 @@
 			<label>$LOCALIZE[20342]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/film.png</icon>
+			<thumb />
 			<property name="labelID">20342</property>
 			<property name="defaultID">20342</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),movieshub)</visible>
@@ -483,6 +483,7 @@
 			<label>$LOCALIZE[31173]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/recentlyadded.png</icon>
+			<thumb />
 			<property name="labelID">31173</property>
 			<property name="defaultID">31173</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),movieshub)</visible>
@@ -498,6 +499,7 @@
 			<label>$LOCALIZE[31174]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/recent.png</icon>
+			<thumb />
 			<property name="labelID">31174</property>
 			<property name="defaultID">31174</property>
 			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/RecentMovies.xsp,return)</onclick>
@@ -512,6 +514,7 @@
 			<label>$LOCALIZE[31175]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/signpost.png</icon>
+			<thumb />
 			<property name="labelID">31175</property>
 			<property name="defaultID">31175</property>
 			<onclick>PlayMedia(special://skin/extras/playlists/RandomMovies.xsp)</onclick>
@@ -526,6 +529,7 @@
 			<label>$LOCALIZE[137]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/search.png</icon>
+			<thumb />
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
 			<onclick>RunScript(script.globalsearch,tvshows=true&amp;episodes=true&amp;movies=true)</onclick>
@@ -540,6 +544,7 @@
 			<label>$LOCALIZE[135]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/genre.png</icon>
+			<thumb />
 			<property name="labelID">135</property>
 			<property name="defaultID">135</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),movieshub)</visible>
@@ -555,6 +560,7 @@
 			<label>$LOCALIZE[20348]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/director.png</icon>
+			<thumb />
 			<property name="labelID">20348</property>
 			<property name="defaultID">20348</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),movieshub)</visible>
@@ -570,6 +576,7 @@
 			<label>$LOCALIZE[344]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/actor.png</icon>
+			<thumb />
 			<property name="labelID">344</property>
 			<property name="defaultID">344</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),movieshub)</visible>
@@ -585,6 +592,7 @@
 			<label>$LOCALIZE[20434]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/year.png</icon>
+			<thumb />
 			<property name="labelID">20434</property>
 			<property name="defaultID">20434</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),movieshub)</visible>
@@ -600,6 +608,7 @@
 			<label>$LOCALIZE[136]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/playlist.png</icon>
+			<thumb />
 			<property name="labelID">136</property>
 			<property name="defaultID">136</property>
 			<onclick>ActivateWindow(videos,special://videoplaylists/,return)</onclick>
@@ -614,6 +623,7 @@
 			<label>$LOCALIZE[1214]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb />
 			<property name="labelID">1214</property>
 			<property name="defaultID">1214</property>
 			<onclick>ActivateWindow(Videos,Files,return)</onclick>
@@ -628,6 +638,7 @@
 			<label>$LOCALIZE[24001]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/addons.png</icon>
+			<thumb />
 			<property name="labelID">24001</property>
 			<property name="defaultID">24001</property>
 			<onclick>ActivateWindow(videos,addons://sources/video/,return)</onclick>
@@ -642,6 +653,7 @@
 			<label>$LOCALIZE[653]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/update.png</icon>
+			<thumb />
 			<property name="labelID">653</property>
 			<property name="defaultID">653</property>
 			<onclick>UpdateLibrary(video)</onclick>
@@ -656,6 +668,7 @@
 			<label>$LOCALIZE[20343]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/tv.png</icon>
+			<thumb />
 			<property name="labelID">tvshows</property>
 			<property name="defaultID">tvshows</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),episodeshub)</visible>
@@ -671,6 +684,7 @@
 			<label>$LOCALIZE[31173]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/recentlyadded.png</icon>
+			<thumb />
 			<property name="labelID">31173</property>
 			<property name="defaultID">31173</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),episodeshub)</visible>
@@ -686,6 +700,7 @@
 			<label>$LOCALIZE[31174]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/recent.png</icon>
+			<thumb />
 			<property name="labelID">31174</property>
 			<property name="defaultID">31174</property>
 			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/RecentEpisodes.xsp,return)</onclick>
@@ -700,6 +715,7 @@
 			<label>$LOCALIZE[31175]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/signpost.png</icon>
+			<thumb />
 			<property name="labelID">31175</property>
 			<property name="defaultID">31175</property>
 			<onclick>PlayMedia(special://skin/extras/playlists/RandomEpisodes.xsp)</onclick>
@@ -714,6 +730,7 @@
 			<label>$LOCALIZE[137]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/search.png</icon>
+			<thumb />
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
 			<onclick>RunScript(script.globalsearch,tvshows=true&amp;episodes=true&amp;movies=true)</onclick>
@@ -728,6 +745,7 @@
 			<label>$LOCALIZE[135]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/genre.png</icon>
+			<thumb />
 			<property name="labelID">135</property>
 			<property name="defaultID">135</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),episodeshub)</visible>
@@ -743,6 +761,7 @@
 			<label>$LOCALIZE[20388]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/director.png</icon>
+			<thumb />
 			<property name="labelID">20388</property>
 			<property name="defaultID">20388</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),episodeshub)</visible>
@@ -758,6 +777,7 @@
 			<label>$LOCALIZE[344]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/actor.png</icon>
+			<thumb />
 			<property name="labelID">344</property>
 			<property name="defaultID">344</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),episodeshub)</visible>
@@ -773,6 +793,7 @@
 			<label>$LOCALIZE[652]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/year.png</icon>
+			<thumb />
 			<property name="labelID">652</property>
 			<property name="defaultID">652</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Container(300).ListItem.Property(submenuVisibility),episodeshub)</visible>
@@ -788,6 +809,7 @@
 			<label>$LOCALIZE[136]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/playlist.png</icon>
+			<thumb />
 			<property name="labelID">136</property>
 			<property name="defaultID">136</property>
 			<onclick>ActivateWindow(videos,special://videoplaylists/,return)</onclick>
@@ -802,6 +824,7 @@
 			<label>$LOCALIZE[1214]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb />
 			<property name="labelID">1214</property>
 			<property name="defaultID">1214</property>
 			<onclick>ActivateWindow(Videos,Files,return)</onclick>
@@ -816,6 +839,7 @@
 			<label>$LOCALIZE[24001]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/addons.png</icon>
+			<thumb />
 			<property name="labelID">24001</property>
 			<property name="defaultID">24001</property>
 			<onclick>ActivateWindow(videos,addons://sources/video/,return)</onclick>
@@ -830,6 +854,7 @@
 			<label>$LOCALIZE[653]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/update.png</icon>
+			<thumb />
 			<property name="labelID">653</property>
 			<property name="defaultID">653</property>
 			<onclick>UpdateLibrary(video)</onclick>
@@ -1092,7 +1117,6 @@
 			<thumb />
 			<property name="labelID">15100</property>
 			<property name="defaultID">15100</property>
-			<visible>Library.HasContent(Music)</visible>
 			<onclick>ActivateWindow(Music,MusicLibrary,return)</onclick>
 			<property name="path">ActivateWindow(Music,MusicLibrary,return)</property>
 			<property name="list">MusicLibrary</property>
@@ -1140,11 +1164,10 @@
 			<thumb />
 			<property name="labelID">15100</property>
 			<property name="defaultID">15100</property>
-			<visible>[Library.HasContent(Music)] + StringCompare(Window(10000).Property(submenuVisibility),num-2)</visible>
 			<onclick>ActivateWindow(Music,MusicLibrary,return)</onclick>
 			<property name="path">ActivateWindow(Music,MusicLibrary,return)</property>
 			<property name="list">MusicLibrary</property>
-			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),num-2)</visible>
 			<property name="group">2</property>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -1466,6 +1489,7 @@
 			<label>$LOCALIZE[20342]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/film.png</icon>
+			<thumb />
 			<property name="labelID">20342</property>
 			<property name="defaultID">20342</property>
 			<visible>Library.HasContent(Movies)</visible>
@@ -1481,6 +1505,7 @@
 			<label>$LOCALIZE[31173]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/recentlyadded.png</icon>
+			<thumb />
 			<property name="labelID">31173</property>
 			<property name="defaultID">31173</property>
 			<visible>Library.HasContent(Movies)</visible>
@@ -1496,6 +1521,7 @@
 			<label>$LOCALIZE[31174]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/recent.png</icon>
+			<thumb />
 			<property name="labelID">31174</property>
 			<property name="defaultID">31174</property>
 			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/RecentMovies.xsp,return)</onclick>
@@ -1510,6 +1536,7 @@
 			<label>$LOCALIZE[31175]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/signpost.png</icon>
+			<thumb />
 			<property name="labelID">31175</property>
 			<property name="defaultID">31175</property>
 			<onclick>PlayMedia(special://skin/extras/playlists/RandomMovies.xsp)</onclick>
@@ -1524,6 +1551,7 @@
 			<label>$LOCALIZE[137]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/search.png</icon>
+			<thumb />
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
 			<onclick>RunScript(script.globalsearch,tvshows=true&amp;episodes=true&amp;movies=true)</onclick>
@@ -1538,6 +1566,7 @@
 			<label>$LOCALIZE[135]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/genre.png</icon>
+			<thumb />
 			<property name="labelID">135</property>
 			<property name="defaultID">135</property>
 			<visible>Library.HasContent(Movies)</visible>
@@ -1553,6 +1582,7 @@
 			<label>$LOCALIZE[20348]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/director.png</icon>
+			<thumb />
 			<property name="labelID">20348</property>
 			<property name="defaultID">20348</property>
 			<visible>Library.HasContent(Movies)</visible>
@@ -1568,6 +1598,7 @@
 			<label>$LOCALIZE[344]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/actor.png</icon>
+			<thumb />
 			<property name="labelID">344</property>
 			<property name="defaultID">344</property>
 			<visible>Library.HasContent(Movies)</visible>
@@ -1583,6 +1614,7 @@
 			<label>$LOCALIZE[20434]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/year.png</icon>
+			<thumb />
 			<property name="labelID">20434</property>
 			<property name="defaultID">20434</property>
 			<visible>Library.HasContent(Movies)</visible>
@@ -1598,6 +1630,7 @@
 			<label>$LOCALIZE[136]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/playlist.png</icon>
+			<thumb />
 			<property name="labelID">136</property>
 			<property name="defaultID">136</property>
 			<onclick>ActivateWindow(videos,special://videoplaylists/,return)</onclick>
@@ -1612,6 +1645,7 @@
 			<label>$LOCALIZE[1214]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb />
 			<property name="labelID">1214</property>
 			<property name="defaultID">1214</property>
 			<onclick>ActivateWindow(Videos,Files,return)</onclick>
@@ -1626,6 +1660,7 @@
 			<label>$LOCALIZE[24001]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/addons.png</icon>
+			<thumb />
 			<property name="labelID">24001</property>
 			<property name="defaultID">24001</property>
 			<onclick>ActivateWindow(videos,addons://sources/video/,return)</onclick>
@@ -1640,6 +1675,7 @@
 			<label>$LOCALIZE[653]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/update.png</icon>
+			<thumb />
 			<property name="labelID">653</property>
 			<property name="defaultID">653</property>
 			<onclick>UpdateLibrary(video)</onclick>
@@ -1656,6 +1692,7 @@
 			<label>$LOCALIZE[20342]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/film.png</icon>
+			<thumb />
 			<property name="labelID">20342</property>
 			<property name="defaultID">20342</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Window(10000).Property(submenuVisibility),movieshub)</visible>
@@ -1671,6 +1708,7 @@
 			<label>$LOCALIZE[31173]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/recentlyadded.png</icon>
+			<thumb />
 			<property name="labelID">31173</property>
 			<property name="defaultID">31173</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Window(10000).Property(submenuVisibility),movieshub)</visible>
@@ -1686,6 +1724,7 @@
 			<label>$LOCALIZE[31174]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/recent.png</icon>
+			<thumb />
 			<property name="labelID">31174</property>
 			<property name="defaultID">31174</property>
 			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/RecentMovies.xsp,return)</onclick>
@@ -1700,6 +1739,7 @@
 			<label>$LOCALIZE[31175]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/signpost.png</icon>
+			<thumb />
 			<property name="labelID">31175</property>
 			<property name="defaultID">31175</property>
 			<onclick>PlayMedia(special://skin/extras/playlists/RandomMovies.xsp)</onclick>
@@ -1714,6 +1754,7 @@
 			<label>$LOCALIZE[137]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/search.png</icon>
+			<thumb />
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
 			<onclick>RunScript(script.globalsearch,tvshows=true&amp;episodes=true&amp;movies=true)</onclick>
@@ -1728,6 +1769,7 @@
 			<label>$LOCALIZE[135]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/genre.png</icon>
+			<thumb />
 			<property name="labelID">135</property>
 			<property name="defaultID">135</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Window(10000).Property(submenuVisibility),movieshub)</visible>
@@ -1743,6 +1785,7 @@
 			<label>$LOCALIZE[20348]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/director.png</icon>
+			<thumb />
 			<property name="labelID">20348</property>
 			<property name="defaultID">20348</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Window(10000).Property(submenuVisibility),movieshub)</visible>
@@ -1758,6 +1801,7 @@
 			<label>$LOCALIZE[344]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/actor.png</icon>
+			<thumb />
 			<property name="labelID">344</property>
 			<property name="defaultID">344</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Window(10000).Property(submenuVisibility),movieshub)</visible>
@@ -1773,6 +1817,7 @@
 			<label>$LOCALIZE[20434]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/year.png</icon>
+			<thumb />
 			<property name="labelID">20434</property>
 			<property name="defaultID">20434</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Window(10000).Property(submenuVisibility),movieshub)</visible>
@@ -1788,6 +1833,7 @@
 			<label>$LOCALIZE[136]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/playlist.png</icon>
+			<thumb />
 			<property name="labelID">136</property>
 			<property name="defaultID">136</property>
 			<onclick>ActivateWindow(videos,special://videoplaylists/,return)</onclick>
@@ -1802,6 +1848,7 @@
 			<label>$LOCALIZE[1214]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb />
 			<property name="labelID">1214</property>
 			<property name="defaultID">1214</property>
 			<onclick>ActivateWindow(Videos,Files,return)</onclick>
@@ -1816,6 +1863,7 @@
 			<label>$LOCALIZE[24001]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/addons.png</icon>
+			<thumb />
 			<property name="labelID">24001</property>
 			<property name="defaultID">24001</property>
 			<onclick>ActivateWindow(videos,addons://sources/video/,return)</onclick>
@@ -1830,6 +1878,7 @@
 			<label>$LOCALIZE[653]</label>
 			<label2>Movie Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/update.png</icon>
+			<thumb />
 			<property name="labelID">653</property>
 			<property name="defaultID">653</property>
 			<onclick>UpdateLibrary(video)</onclick>
@@ -1846,6 +1895,7 @@
 			<label>$LOCALIZE[20343]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/tv.png</icon>
+			<thumb />
 			<property name="labelID">tvshows</property>
 			<property name="defaultID">tvshows</property>
 			<visible>Library.HasContent(TVShows)</visible>
@@ -1861,6 +1911,7 @@
 			<label>$LOCALIZE[31173]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/recentlyadded.png</icon>
+			<thumb />
 			<property name="labelID">31173</property>
 			<property name="defaultID">31173</property>
 			<visible>Library.HasContent(TVShows)</visible>
@@ -1876,6 +1927,7 @@
 			<label>$LOCALIZE[31174]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/recent.png</icon>
+			<thumb />
 			<property name="labelID">31174</property>
 			<property name="defaultID">31174</property>
 			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/RecentEpisodes.xsp,return)</onclick>
@@ -1890,6 +1942,7 @@
 			<label>$LOCALIZE[31175]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/signpost.png</icon>
+			<thumb />
 			<property name="labelID">31175</property>
 			<property name="defaultID">31175</property>
 			<onclick>PlayMedia(special://skin/extras/playlists/RandomEpisodes.xsp)</onclick>
@@ -1904,6 +1957,7 @@
 			<label>$LOCALIZE[137]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/search.png</icon>
+			<thumb />
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
 			<onclick>RunScript(script.globalsearch,tvshows=true&amp;episodes=true&amp;movies=true)</onclick>
@@ -1918,6 +1972,7 @@
 			<label>$LOCALIZE[135]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/genre.png</icon>
+			<thumb />
 			<property name="labelID">135</property>
 			<property name="defaultID">135</property>
 			<visible>Library.HasContent(TVShows)</visible>
@@ -1933,6 +1988,7 @@
 			<label>$LOCALIZE[20388]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/director.png</icon>
+			<thumb />
 			<property name="labelID">20388</property>
 			<property name="defaultID">20388</property>
 			<visible>Library.HasContent(TVShows)</visible>
@@ -1948,6 +2004,7 @@
 			<label>$LOCALIZE[344]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/actor.png</icon>
+			<thumb />
 			<property name="labelID">344</property>
 			<property name="defaultID">344</property>
 			<visible>Library.HasContent(TVShows)</visible>
@@ -1963,6 +2020,7 @@
 			<label>$LOCALIZE[652]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/year.png</icon>
+			<thumb />
 			<property name="labelID">652</property>
 			<property name="defaultID">652</property>
 			<visible>Library.HasContent(TVShows)</visible>
@@ -1978,6 +2036,7 @@
 			<label>$LOCALIZE[136]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/playlist.png</icon>
+			<thumb />
 			<property name="labelID">136</property>
 			<property name="defaultID">136</property>
 			<onclick>ActivateWindow(videos,special://videoplaylists/,return)</onclick>
@@ -1992,6 +2051,7 @@
 			<label>$LOCALIZE[1214]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb />
 			<property name="labelID">1214</property>
 			<property name="defaultID">1214</property>
 			<onclick>ActivateWindow(Videos,Files,return)</onclick>
@@ -2006,6 +2066,7 @@
 			<label>$LOCALIZE[24001]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/addons.png</icon>
+			<thumb />
 			<property name="labelID">24001</property>
 			<property name="defaultID">24001</property>
 			<onclick>ActivateWindow(videos,addons://sources/video/,return)</onclick>
@@ -2020,6 +2081,7 @@
 			<label>$LOCALIZE[653]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/update.png</icon>
+			<thumb />
 			<property name="labelID">653</property>
 			<property name="defaultID">653</property>
 			<onclick>UpdateLibrary(video)</onclick>
@@ -2036,6 +2098,7 @@
 			<label>$LOCALIZE[20343]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/tv.png</icon>
+			<thumb />
 			<property name="labelID">tvshows</property>
 			<property name="defaultID">tvshows</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Window(10000).Property(submenuVisibility),episodeshub)</visible>
@@ -2051,6 +2114,7 @@
 			<label>$LOCALIZE[31173]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/recentlyadded.png</icon>
+			<thumb />
 			<property name="labelID">31173</property>
 			<property name="defaultID">31173</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Window(10000).Property(submenuVisibility),episodeshub)</visible>
@@ -2066,6 +2130,7 @@
 			<label>$LOCALIZE[31174]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/recent.png</icon>
+			<thumb />
 			<property name="labelID">31174</property>
 			<property name="defaultID">31174</property>
 			<onclick>ActivateWindow(Videos,special://skin/extras/playlists/RecentEpisodes.xsp,return)</onclick>
@@ -2080,6 +2145,7 @@
 			<label>$LOCALIZE[31175]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/signpost.png</icon>
+			<thumb />
 			<property name="labelID">31175</property>
 			<property name="defaultID">31175</property>
 			<onclick>PlayMedia(special://skin/extras/playlists/RandomEpisodes.xsp)</onclick>
@@ -2094,6 +2160,7 @@
 			<label>$LOCALIZE[137]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/search.png</icon>
+			<thumb />
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
 			<onclick>RunScript(script.globalsearch,tvshows=true&amp;episodes=true&amp;movies=true)</onclick>
@@ -2108,6 +2175,7 @@
 			<label>$LOCALIZE[135]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/genre.png</icon>
+			<thumb />
 			<property name="labelID">135</property>
 			<property name="defaultID">135</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Window(10000).Property(submenuVisibility),episodeshub)</visible>
@@ -2123,6 +2191,7 @@
 			<label>$LOCALIZE[20388]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/director.png</icon>
+			<thumb />
 			<property name="labelID">20388</property>
 			<property name="defaultID">20388</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Window(10000).Property(submenuVisibility),episodeshub)</visible>
@@ -2138,6 +2207,7 @@
 			<label>$LOCALIZE[344]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/actor.png</icon>
+			<thumb />
 			<property name="labelID">344</property>
 			<property name="defaultID">344</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Window(10000).Property(submenuVisibility),episodeshub)</visible>
@@ -2153,6 +2223,7 @@
 			<label>$LOCALIZE[652]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/year.png</icon>
+			<thumb />
 			<property name="labelID">652</property>
 			<property name="defaultID">652</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Window(10000).Property(submenuVisibility),episodeshub)</visible>
@@ -2168,6 +2239,7 @@
 			<label>$LOCALIZE[136]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/playlist.png</icon>
+			<thumb />
 			<property name="labelID">136</property>
 			<property name="defaultID">136</property>
 			<onclick>ActivateWindow(videos,special://videoplaylists/,return)</onclick>
@@ -2182,6 +2254,7 @@
 			<label>$LOCALIZE[1214]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb />
 			<property name="labelID">1214</property>
 			<property name="defaultID">1214</property>
 			<onclick>ActivateWindow(Videos,Files,return)</onclick>
@@ -2196,6 +2269,7 @@
 			<label>$LOCALIZE[24001]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/addons.png</icon>
+			<thumb />
 			<property name="labelID">24001</property>
 			<property name="defaultID">24001</property>
 			<onclick>ActivateWindow(videos,addons://sources/video/,return)</onclick>
@@ -2210,6 +2284,7 @@
 			<label>$LOCALIZE[653]</label>
 			<label2>Episode Hub Shortcut</label2>
 			<icon>special://skin/extras/icons/update.png</icon>
+			<thumb />
 			<property name="labelID">653</property>
 			<property name="defaultID">653</property>
 			<onclick>UpdateLibrary(video)</onclick>

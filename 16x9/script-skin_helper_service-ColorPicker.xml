@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window>
-	<defaultcontrol always="true">9000</defaultcontrol>
+<window type="dialog">
+	<defaultcontrol always="true">3110</defaultcontrol>
 	<controls>
 	<include>GlobalOverlay</include>
     	<control type="group">
-            <include>Animation_SlideIn</include>
-            <include>Animation_FadeOut</include>
+            <include>Animation_FadeIn.Slide</include>
+            <!--<include>Animation_FadeOut</include>-->
             <centerleft>50%</centerleft>
-            <centertop>50%</centertop>
+			<centertop>50%</centertop>
             <width>1382</width>
-	        <height>780</height>
+			<height>780</height>
 			<control type="image">
-            <top>-24</top>
+			<top>-24</top>
             <bottom>-24</bottom>
             <left>-24</left>
             <right>-24</right>
             <bordertexture border="24">common/shadow-24.png</bordertexture>
             <bordersize>24</bordersize>
-            <texture colordiffuse="Panel">common/white.png</texture>
-        </control>
-		<control type="image">
-            <top>10</top>
-            <left>40</left>
-            <width>80</width>
-            <height>80</height>
-            <texture colordiffuse="Dark2">special://skin/extras/icons/settings.png</texture>
-        </control>
-        <control type="label">
-            <left>110</left>
-            <right>side</right>
-            <top>20</top>
-            <height>60</height>
-            <aligny>center</aligny>
-            <align>left</align>
-            <label>$ADDON[script.skin.helper.service 32011]</label>
-        </control>
+            <texture colordiffuse="White100">common/white.png</texture>-->
+            </control>
+			
+		    <control type="image">
+                <top>10</top>
+                <left>40</left>
+                <width>80</width>
+                <height>80</height>
+                <texture colordiffuse="Dark2">special://skin/extras/icons/settings.png</texture>
+            </control>
+            <control type="label">
+                <left>110</left>
+                <right>side</right>
+                <top>20</top>
+                <height>60</height>
+                <aligny>center</aligny>
+                <align>left</align>
+                <label>$ADDON[script.skin.helper.service 32011]</label>
+            </control>
             
             <control type="group">
             <include>Animation_FadeIn</include>
@@ -56,7 +57,7 @@
                 <visible>Container(3110).HasNext</visible>
             </control>
         </control>
-         <!-- Palette Selection --> 
+        <!-- Palette Selection --> 
         <control type="button" id="3030">
             <width>480</width>
             <height>68</height>
@@ -65,8 +66,10 @@
             <align>center</align>
             <ondown>3110</ondown>
             <label>$ADDON[script.skin.helper.service 32141] : $INFO[Window.Property(palettename)]</label>
-            <include>DefSettingsButton</include>
-            <visible>!IsEmpty(Window.Property(palettename))</visible>
+			<visible>!IsEmpty(Window.Property(palettename))</visible>
+			<include>DefSettingsButton</include>
+            <texturenofocus colordiffuse="Panel" border="5">common/box.png</texturenofocus>
+	        <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
         </control>
 
 			<control type="panel" id="3110">
@@ -75,10 +78,10 @@
 				<width>1260</width>
 				<height>540</height>
 				<orientation>vertical</orientation>
-				<onleft>9000</onleft>
-				<onright>9000</onright>
+				<onleft>3110</onleft>
+				<onright>3110</onright>
 				<onup>3030</onup>
-				<ondown>9000</ondown>
+				<ondown>3010</ondown>
 				<preloaditems>4</preloaditems>
 				<itemlayout height="60" width="90">
 					<control type="image">
@@ -95,7 +98,7 @@
 						<control type="image">
 							<width>90</width>
 							<height>60</height>
-							<texture colordiffuse="ff272727" border="5">common/white.png</texture>
+							<texture colordiffuse="White" border="5">common/white.png</texture>
 						</control>
 						<control type="image">
 							<posx>4</posx>
@@ -108,24 +111,28 @@
 				</focusedlayout>
 			</control>			
 						
-			<control type="grouplist" id="9000">
+			<control type="grouplist">
 				<orientation>horizontal</orientation>
 				<itemgap>20</itemgap>
 				<left>65</left>
 				<top>673</top>
 				<width>1302</width>
-				<onleft>9000</onleft>
-                <onright>9000</onright>
                 <onup>3110</onup>
-                <orientation>horizontal</orientation>
+				
 				<!-- Edit Manual Button -->
 				<control type="button" id="3010">
+				    <onup>SetFocus(3110,112)</onup>
 					<align>left</align>
-					<label>$LOCALIZE[31640] :</label>
+					<ondown>SetFocus(3110,0)</ondown>
+					<onright>3011</onright>
+					<label>Color:</label>
 					<label2>$INFO[Window.Property(colorstring)]</label2>
-			        <width>285</width>
+					<font>Tiny</font>
+					<width>285</width>
 			        <height>68</height>
-			        <include>DefSettingsButton</include>
+					<include>DefSettingsButton</include>
+					<texturenofocus colordiffuse="Panel" border="5">common/box.png</texturenofocus>
+					<texturefocus colordiffuse="$VAR[ColorHighlight]">common/box.png</texturefocus>
 				</control>
 				
 				<!-- Save button -->
@@ -134,23 +141,36 @@
 			        <width>205</width>
 			        <height>68</height>
 			        <align>center</align>
-			       	<include>DefSettingsButton</include>
+					<include>DefSettingsButton</include>
+					<texturenofocus colordiffuse="Panel" border="5">common/box.png</texturenofocus>
+			        <texturefocus colordiffuse="$VAR[ColorHighlight]">common/box.png</texturefocus>
 				</control>
 				
 				<!-- Cancel Button -->
 				<control type="button" id="3090">
 					<onclick>Close</onclick>
-					<label>222</label>
+					<label>Cancel</label>
+					<font>Tiny</font>
 			     	<width>205</width>
 			        <height>68</height>
 			        <align>center</align>
 			        <include>DefSettingsButton</include>
+					<texturenofocus colordiffuse="Panel" border="5">common/box.png</texturenofocus>
+			        <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
 				</control>
 
 				<!-- None -->
 				<control type="button" id="3011">
+				    <width>205</width>
+					<height>68</height>
+					<onup>3110</onup>
+					<onleft>3010</onleft>
+					<ondown>SetFocus(3110)</ondown>
+					<label>$ADDON[script.skin.helper.service 32013]</label>
 					<visible>False</visible>
 					<include>DefSettingsButton</include>
+					<texturenofocus colordiffuse="Panel" border="5">common/box.png</texturenofocus>
+			        <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
 				</control>
 				
 				<control type="group" id="3020">
@@ -162,7 +182,7 @@
 						<width>130</width>
 						<left>0</left>
 						<align>left</align>
-						<label>$ADDON[script.skin.helper.service 32049] :</label>
+						<label>$ADDON[script.skin.helper.service 32049]:</label>
 					</control>
 					<control type="slider" id="3015">
 						<!-- Opacity Slider -->
@@ -183,27 +203,27 @@
 						<right>0</right>
 						<align>right</align>
 						<label>$INFO[Control.Getlabel(3015)]</label>
-					</control>						
-				</control>
-				
-				<!-- Color Preview Block -->
+					</control>
+				</control>	
+					<!-- Color Preview Block -->
 				<control type="group">
 			          	<top>673</top>
-			          	<left>61</left>
-			          <control type="image">
-                        			<width>68</width>
-                        			<height>68</height>
-                        			<texture colordiffuse="3e555555">common/white.png</texture>
-                    		</control>
-				<control type="image">
-				          <top>10</top>
-				          <left>10</left>
+			          	<left>61</left>	
+				    <control type="image">
+                 	<width>68</width>                   
+					<height>68</height>
+                    <texture colordiffuse="3e555555">common/white.png</texture>
+                </control>
+                <control type="image">
+				    <top>10</top>
+				    <left>10</left>
 					<width>48</width>
 					<height>48</height>
 					<texture colordiffuse="$INFO[Window.Property(colorstring)]">common/white.png</texture>
 				</control>
 				</control>
-			</control>			
-		</control>		
+			</control>		
+		</control>			
+						
 	</controls>
 </window>
