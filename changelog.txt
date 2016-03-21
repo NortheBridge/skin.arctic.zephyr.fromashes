@@ -1,10 +1,11 @@
 [B]Arctic Zephyr for Emby Changelog[/B]
 
 [B]3.2.03 (3.2.03_bsrelease01) - "From Ashes Bluestone 3.2.03"[/B]
-Arctic Zephyr: From Ashes "Hotfix 3.2.03"
-Fixed Installation Issue from Final Code Backport
-Enhances Color Selector [Currently Inoperable] (Contributor: minus0 [Kodi Forums, Page 3])
-Implements "ABout From Ashes" Page
+Arctic Zephyr: From Ashes "mid-March 2016 Update"
+Restores Requirement for "script.skin.info.service" as required for current legacy code
+Enhances Color Selector on all platforms (Contributor: minus0 [Kodi Forums, Page 5])
+Restores Color Selector on all platforms (Contributor: minus0 [Kodi Forums, Page 5])
+Essential Changes for Arctic Zephyr: From Ashes 3.2.04 release
 
 [B]3.2.02 (3.2.02_bsrelease01) - "From Ashes Bluestone 3.2.02"[/B]
 Arctic Zephyr: From Ashes "Hotfix 3.2.02"
