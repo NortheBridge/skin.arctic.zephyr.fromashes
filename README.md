@@ -19,6 +19,7 @@ Once the requirements are met, simply download and install the Arctic Zephyr: Fr
 You can report issues you experience here on GitHub by opening up an issue for the appropriate version or by reporting it on the Kodi and the Emby forums.
 
 Kodi Forums: http://forum.kodi.tv/showthread.php?tid=257970
+
 Emby forums: http://emby.media/community/index.php?/topic/29180-arctic-zephyr-from-ashes/
 
 ### Licensing
