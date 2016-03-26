@@ -1,5 +1,9 @@
 [B]Arctic Zephyr for Emby Changelog[/B]
 
+[B]3.2.04 (3.2.04_bsrelease01) - "From Ashes late-March 2016 Update"[/B]
+Implemented About From Ashes
+Minor Changes for Arctic Zephyr: From Ashes 3.2.05 (the 'WAF' Improvement release)
+
 [B]3.2.03 (3.2.03_bsrelease01) - "From Ashes Bluestone 3.2.03"[/B]
 Arctic Zephyr: From Ashes "mid-March 2016 Update"
 Restores Requirement for "script.skin.info.service" as required for current legacy code
