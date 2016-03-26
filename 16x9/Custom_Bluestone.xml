@@ -1,6 +1,262 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<!-- Bluestone Builds Determined By GitHub Commit ID First 7 Characters -->
+<!-- Versioning is x.y.zz (Major.Minor.Subversion) -->
+<!-- Build Commits Prefix are Determined by Codenames; Not Authors -->
+<!-- Current Prefix Namespaces: AZ:E - AZE@; AZ:FA - AZFA@; AZ:FA Bluestone - dormer@ -->
 <window id="3115">
 	<defaultcontrol always="true">100</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	
+	<!-- Controls Spacing -->
+<controls>
+	<control type="label">
+            <description>Skin_Title</description>
+            <width>100%</width>
+            <height>100%</height>
+            <align>center</align>
+            <aligny>top</aligny>
+            <label>Arctic Zephyr: [COLOR=$VAR[ColourHighlight]]From Ashes[/COLOR]</label>
+            <font>EpisodeNumber</font>
+            <textcolor>Dark1</textcolor>
+        </control>
+		<!-- Skin Info -->
+	<control type="label">
+			<description>Skin_Name</description>
+			<font>Tiny</font>
+			<align>left</align>
+			<posx>40</posx>
+			<posy>200</posy>
+			<width>750</width>
+			<height>60</height>
+			<label>Name: [COLOR=$VAR[ColourHighlight]]$INFO[System.AddonTitle(skin.arctic.zephyr.fromashes)][/COLOR]</label> <!-- Well, to be fair, the last version was called "Exploded: Game Over." I guess it wasn't -->
+		</control>
+	<control type="label">
+			<description>Version_Info</description>
+			<font>Tiny</font>
+			<align>left</align>
+			<posx>40</posx>
+			<posy>230</posy>
+			<width>750</width>
+			<height>60</height>
+			<label>Version: [COLOR=$VAR[ColourHighlight]]$INFO[System.AddonVersion(skin.arctic.zephyr.fromashes)][/COLOR]</label>
+		</control>
+		<!-- Follow Build Commits and Prefix Rules -->
+	<control type="label">
+			<description>Build_Info</description>
+			<font>Tiny</font>
+			<align>left</align>
+			<posx>40</posx>
+			<posy>290</posy>
+			<width>750</width>
+			<height>60</height>
+			<label>Build: [COLOR=$VAR[ColourHighlight]]dormer@a58b9d6[/COLOR]</label> <!-- Because Who Doesn't Like Margaery Tyrell or Game of Thrones on HBO? Wait, You Can Read This? Easter Eggs! -->
+		</control>
+		<!-- The Full Version is Determined By the Branch (i.e. x.y.zz_branchnameabbreviated) -->
+	<control type="label">
+			<description>FullVersion_Info</description>
+			<font>Tiny</font>
+			<align>left</align>
+			<posx>40</posx>
+			<posy>260</posy>
+			<width>750</width>
+			<height>60</height>
+			<label>Release: [COLOR=$VAR[ColourHighlight]]$INFO[System.AddonVersion(skin.arctic.zephyr.fromashes)]_bsrelease01[/COLOR]</label>
+		</control>
+	<control type="label">
+			<description>Branch_Info</description>
+			<font>Tiny</font>
+			<align>left</align>
+			<posx>40</posx>
+			<posy>320</posy>
+			<width>750</width>
+			<height>60</height>
+			<label>Branch Name: [COLOR=$VAR[ColourHighlight]]Bluestone[/COLOR]</label> <!-- Redstone, Bluestone... if you're reading this you are finding Easter Eggs I left in here on purpose -->
+		</control>
+		<!--Set "True" for Testing Releases and "False" for Full Rleases -->
+	<control type="label">
+			<description>Build_Debug</description>
+			<font>Tiny</font>
+			<align>left</align>
+			<posx>40</posx>
+			<posy>350</posy>
+			<width>750</width>
+			<height>60</height>
+			<label>Debug Build: [COLOR=$VAR[ColourHighlight]]False[/COLOR]</label>
+		</control>
+	<control type="label">
+			<description>Sys_Name</description>
+			<font>Tiny</font>
+			<align>left</align>
+			<posx>40</posx>
+			<posy>380</posy>
+			<width>750</width>
+			<height>60</height>
+			<label>System Name: [COLOR=$VAR[ColourHighlight]]$INFO[System.FriendlyName][/COLOR]</label>
+		</control>
+		<!-- Get Kodi Version -->
+	<control type="label">
+			<description>Kodi_Version</description>
+			<font>Tiny</font>
+			<align>left</align>
+			<posx>40</posx>
+			<posy>410</posy>
+			<width>750</width>
+			<height>60</height>
+			<label>Kodi Version: [COLOR=$VAR[ColourHighlight]]$INFO[System.BuildVersion][/COLOR]</label>
+		</control>
+		<!-- Right Information Foundation -->
+	<control type="label">
+			<description>AZE_Backport</description>
+			<font>Tiny</font>
+			<align>left</align>
+			<posx>1200</posx>
+			<posy>200</posy>
+			<width>750</width>
+			<height>60</height>
+			<label>Legacy Base: [COLOR=$VAR[ColourHighlight]]Arctic Zephyr: Exploded (AZE@15fbd5f)[/COLOR]</label>
+		</control>
+		<!-- Legacy Script Checks -->
+		<!-- You know, a lot of people say I am just like Blair Waldorf. Fail these checks and you might just find out... xoxo - Easter Eggs -->
+	<control type="label">
+			<description>Legacy_ScriptCheck1</description>
+			<font>Tiny</font>
+			<align>left</align>
+			<posx>1200</posx>
+			<posy>230</posy>
+			<width>750</width>
+			<height>60</height>
+			<label>Legacy Handler JIT01: [COLOR=$VAR[ColourHighlight]]$INFO[System.AddonTitle(script.skin.info.service)][/COLOR]</label>
+		</control>
+	<control type="label">
+			<description>Legacy_ScriptCheck1Ver</description>
+			<font>Tiny</font>
+			<align>left</align>
+			<posx>1200</posx>
+			<posy>260</posy>
+			<width>750</width>
+			<height>60</height>
+			<label>Legacy Handler JIT01: [COLOR=$VAR[ColourHighlight]]$INFO[System.AddonVersion(script.skin.info.service)][/COLOR]</label>
+		</control>
+	<control type="label">
+			<description>Legacy_ScriptCheck2</description>
+			<font>Tiny</font>
+			<align>left</align>
+			<posx>1200</posx>
+			<posy>290</posy>
+			<width>750</width>
+			<height>60</height>
+			<label>Legacy Handler JIT02: [COLOR=$VAR[ColourHighlight]]$INFO[System.AddonTitle(script.imdb250.view)][/COLOR]</label>
+		</control>
+	<control type="label">
+			<description>Legacy_ScriptCheck2Ver</description>
+			<font>Tiny</font>
+			<align>left</align>
+			<posx>1200</posx>
+			<posy>320</posy>
+			<width>750</width>
+			<height>60</height>
+			<label>Legacy Handler JIT02: [COLOR=$VAR[ColourHighlight]]$INFO[System.AddonVersion(script.imdb250.view)][/COLOR]</label>
+		</control>
+		<!-- End Legacy Script Checks -->
+		<!-- While others like to compare me to Person of Interest's Root... so yes, don't fail these checks. Could this be another Easter Egg Ms. Groves?-->
+		<!-- Well, She's always watching Herald -->
+		<!-- Start Audio Suite Check -->
+	<control type="label">
+			<description>AudioSuite_Info</description>
+			<font>Tiny</font>
+			<align>left</align>
+			<posx>1200</posx>
+			<posy>350</posy>
+			<width>750</width>
+			<height>60</height>
+			<label>Audio Suite: [COLOR=$VAR[ColourHighlight]]$INFO[System.AddonTitle(resource.uisounds.fromashes)] $INFO[System.AddonVersion(resource.uisounds.fromashes)][/COLOR]</label>
+		</control>
+		<!-- End Audio Suite Check -->
+		<!-- Get Platform -->
+	<control type="label">
+			<description>Platform</description>
+			<font>Tiny</font>
+			<align>left</align>
+			<posx>1200</posx>
+			<posy>380</posy>
+			<width>750</width>
+			<height>60</height>
+			<label>Platform: [COLOR=$VAR[ColourHighlight]]$INFO[System.KernelVersion][/COLOR]</label>
+		</control>
+		<!-- Curator -->
+	<control type="label">
+			<description>Curator</description>
+			<font>Tiny</font>
+			<align>left</align>
+			<posx>1200</posx>
+			<posy>410</posy>
+			<width>750</width>
+			<height>60</height>
+			<label>Curator: [COLOR=$VAR[ColourHighlight]]Guardian Hope[/COLOR]</label>
+		</control>
+		<!-- Additional Credits -->
+	<control type="label">
+			<description>Credits</description>
+			<font>Tiny</font>
+            <width>100%</width>
+            <height>100%</height>
+            <align>center</align>
+            <aligny>center</aligny>
+			<posy>10</posy>
+			<label>[COLOR=$VAR[ColourHighlight]]Special Thanks[/COLOR]</label>
+		</control>
+	<control type="label">
+			<description>AZCreator</description>
+			<font>Tiny</font>
+            <width>100%</width>
+            <height>100%</height>
+            <align>center</align>
+            <aligny>center</aligny>
+			<posy>40</posy>
+			<label>Based On "Arctic Zephyr" by [COLOR=$VAR[ColourHighlight]]Jurialmonkey[/COLOR]</label>
+		</control>	
+	<control type="label">
+			<description>AZECreator</description>
+			<font>Tiny</font>
+            <width>100%</width>
+            <height>100%</height>
+            <align>center</align>
+            <aligny>center</aligny>
+			<posy>70</posy>
+			<label>Based On "Arctic Zephyr: Exploded" by [COLOR=$VAR[ColourHighlight]]im85288 and badaas[/COLOR]</label>
+		</control>
+		<!--Super Special Thanks to minus0-->
+	<control type="label">
+			<description>QualityAssurance</description>
+			<font>Tiny</font>
+            <width>100%</width>
+            <height>100%</height>
+            <align>center</align>
+            <aligny>center</aligny>
+			<posy>100</posy>
+			<label>Android QA [COLOR=$VAR[ColourHighlight]]minus0[/COLOR]</label>
+		</control>
+			<!--Contributors-->
+	<control type="label">
+			<description>Contributors</description>
+			<font>Tiny</font>
+            <width>100%</width>
+            <height>100%</height>
+            <align>center</align>
+            <aligny>center</aligny>
+			<posy>130</posy>
+			<label>[COLOR=$VAR[ColourHighlight]]Contributors[/COLOR]</label>
+		</control>
+			<!--Never Tell Anyone I Counted By "10s" to get from 130 to 160 Here-->
+	<control type="label">
+			<description>ContributorNames</description>
+			<font>Tiny</font>
+            <width>100%</width>
+            <height>100%</height>
+            <align>center</align>
+            <aligny>center</aligny>
+			<posy>160</posy>
+			<label>[COLOR=$VAR[ColourHighlight]]minus0 (Kodi Forums),[/COLOR] papadcha (Emby Forums), [COLOR=$VAR[ColourHighlight]]Mike_Doc ("Madnox Skin" Features)[/COLOR]</label>
+		</control>				
+    </controls>
 </window>
