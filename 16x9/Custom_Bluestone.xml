@@ -7,5 +7,18 @@
 <window id="3115">
 	<defaultcontrol always="true">100</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	
+	<!-- Spacing -->
+<control type="label">
+            <description>Skin_Title</description>
+            <width>100%</width>
+            <height>100%</height>
+            <align>center</align>
+            <aligny>top</aligny>
+            <label>Arctic Zephyr: [COLOR=$VAR[ColourHighlight]]From Ashes[/COLOR]</label>
+            <font>EpisodeNumber</font>
+            <textcolor>Dark1</textcolor>
+            <animation effect="fade" start="100" end="0" time="500" tween="quadratic">WindowClose</animation>
+            <visible>IsEmpty(Skin.String(StartupPlaylist))</visible>
+        </control>
+    </controls>
 </window>
