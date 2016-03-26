@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<!-- Bluestone Builds Determined By GitHub Commit ID First 7 Characters -->
+<!-- Versioning is x.y.zz (Major.Minor.Subversion) -->
+<!-- Build Commits Prefix are Determined by Codenames; Not Authors -->
+<!-- Current Prefix Namespaces: AZ:E - AZE@; AZ:FA - AZFA@; AZ:FA Bluestone - dormer@ -->
 <window id="3115">
 	<defaultcontrol always="true">100</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
