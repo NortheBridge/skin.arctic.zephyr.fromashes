@@ -17,7 +17,7 @@
             <include>Animation.FadeOut</include>
             
             <centerleft>50%</centerleft>
-            <centertop>60%</centertop>
+            <centertop>45%</centertop>
             <height>522</height>
             <width>1530</width>
             <control type="image">
@@ -411,7 +411,7 @@
                         <ondown>32</ondown>
                     </control>
                 </control>
-                <control type="grouplist">
+                <control type="grouplist" id="1001">  <!-- Auto-Completion Change-->
                     <posy>340</posy>
                     <orientation>horizontal</orientation>
                     <itemgap>10</itemgap>
@@ -420,7 +420,7 @@
                         <width>370</width>
                         <label>20177</label>
                         <onup>307</onup>
-                        <ondown>309</ondown>
+                        <ondown>1000</ondown>  <!-- Auto-Completion Change-->
                         <include>DefKeyboardKeys</include>
                     </control>
                     
@@ -429,7 +429,7 @@
                         <width>655</width>
                         <label>20182</label>
                         <onup>160</onup>
-                        <ondown>100</ondown>
+                        <ondown>1000</ondown>  <!-- Auto-Completion Change-->
                         <include>DefKeyboardKeys</include>
                     </control>
                     <control type="button" id="8">
@@ -437,7 +437,7 @@
                         <width>275</width>
                         <label>20181</label>
                         <onup>169</onup>
-                        <ondown>109</ondown>
+                        <ondown>1000</ondown>  <!-- Auto-Completion Change-->
                         <include>DefKeyboardKeys</include>
                     </control>
                     <control type="button" id="305">
@@ -445,20 +445,80 @@
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
                         <onup>170</onup>
-                        <ondown>110</ondown>
+                        <ondown>1000</ondown>  <!-- Auto-Completion Change-->
                     </control>
                     <control type="button" id="306">
                         <label>&gt;</label>
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
                         <onup>171</onup>
-                        <ondown>111</ondown>
+                        <ondown>1000</ondown>  <!-- Auto-Completion Change-->
                     </control>
-                </control>
-            
+                </control>            
             </control>
-        </control>
-
+			
+<!--  Auto-Completion --Begin-->			
+            <control type="image">
+                <top>545</top>
+				<width>1570</width>
+				<height>178</height>
+				<bottom>-18</bottom>
+                <left>-18</left>
+				<right>-18</right>
+                <texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
+                <visible>IntegerGreaterThan(Container(1000).NumItems,0)</visible>
+            </control>
+            <control type="panel" id="1000">
+                <height>138</height>
+				<width>1550</width>
+                <top>568</top>
+                <left>10</left>
+				<right>0</right>
+			    <onleft>1000</onleft>
+			    <onright>1000</onright>
+                <onup>1001</onup>
+                <orientation>horizontal</orientation>
+				<scrolltime tween="sine" easing="out">200</scrolltime>
+                <itemlayout height="69" width="304">
+                    <control type="image">
+				        <posx>0</posx>
+					    <posy>0</posy>
+                        <width>294</width>
+                        <height>64</height>
+                        <texture border="5" colordiffuse="Black12">common/box.png</texture>
+                    </control>
+                    <control type="label">
+					    <posx>0</posx>
+					    <posy>0</posy>
+					    <width>294</width>
+					    <height>64</height>
+					    <align>center</align>
+                        <textcolor>Black70</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="69" width="304">
+			        <control type="image">
+					    <posx>0</posx>
+					    <posy>0</posy>
+					    <width>294</width>
+					    <height>64</height>
+					    <texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>
+				    </control>
+					<control type="label">
+					    <posx>0</posx>
+					    <posy>0</posy>
+					    <width>294</width>
+					    <height>64</height>
+					    <align>center</align>
+					    <textcolor>$VAR[ColourSelected]</textcolor>
+					    <label>$INFO[ListItem.Label]</label>
+				    </control>
+                </focusedlayout>
+                <content>plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=9</content>
+			</control>
+<!-- Auto-Completion --End-->
+			
+		</control>		
     </controls>
-
 </window>
