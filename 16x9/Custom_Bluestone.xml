@@ -4,6 +4,7 @@
 <!-- Versioning is x.y.zz (Major.Minor.Subversion) -->
 <!-- Build Commits Prefix are Determined by Codenames; Not Authors -->
 <!-- Current Prefix Namespaces: AZ:E - AZE@; AZ:FA - AZFA@; AZ:FA Bluestone - dormer@ -->
+<!-- Preview Build Prefix Namespace: AZ:FA 4.0 - danvers@ -->
 <window id="3115">
 	<defaultcontrol always="true">100</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
@@ -49,7 +50,7 @@
 			<posy>290</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Build: [COLOR=$VAR[ColourHighlight]]dormer@a58b9d6[/COLOR]</label> <!-- Because Who Doesn't Like Margaery Tyrell or Game of Thrones on HBO? Wait, You Can Read This? Easter Eggs! -->
+			<label>Build: [COLOR=$VAR[ColourHighlight]]dormer@b2ca2d8[/COLOR]</label> <!-- Because Who Doesn't Like Margaery Tyrell or Game of Thrones on HBO? Wait, You Can Read This? Easter Eggs! -->
 		</control>
 		<!-- The Full Version is Determined By the Branch (i.e. x.y.zz_branchnameabbreviated) -->
 	<control type="label">
@@ -81,7 +82,7 @@
 			<posy>350</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Debug Build: [COLOR=$VAR[ColourHighlight]]False[/COLOR]</label>
+			<label>Debug Build: [COLOR=$VAR[ColourHighlight]]True[/COLOR]</label>
 		</control>
 	<control type="label">
 			<description>Sys_Name</description>
