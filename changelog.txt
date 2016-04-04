@@ -7,7 +7,7 @@ Autocompletion Keyboard Support Added
 Removes Legacy Code "Script.Duration" References Completely
 GUI Change: English Language Now Defaults to American Flag
 GUI Change: Video Information Indicators Changed
-Info Banner ("Plot Overlay) Partially Implemented (Feature Currently Not Functional)
+Info Banner ("Plot Overlay") Partially Implemented (Feature Currently Not Functional)
 NOTICE: Due to GUI Changes, Skin Required Space May Temporarily Increase
 NOTICE: Due to Legacy Code Removal, Certain Functions May Not Operate Correctly
 
