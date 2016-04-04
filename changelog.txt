@@ -4,10 +4,12 @@
 Experimental Krypton Support ("Danvers" Build Line - Bluestone 2 - 3.9.00)
 Minor Improvements to the Skin's Code for Jarvis Support ("Dormer" Build Line - Bluestone 1 / "Danvers" Build Line - Bluestone 2")
 Autocompletion Keyboard Support Added
+Removes Legacy Code "Script.Duration" References Completely
 GUI Change: English Language Now Defaults to American Flag
 GUI Change: Video Information Indicators Changed
 Info Banner ("Plot Overlay) Partially Implemented (Feature Currently Not Functional)
 NOTICE: Due to GUI Changes, Skin Required Space May Temporarily Increase
+NOTICE: Due to Legacy Code Removal, Certain Functions May Not Operate Correctly
 
 [B]3.2.04 (3.2.04_bsrelease01) - "From Ashes late-March 2016 Update"[/B]
 Implemented About From Ashes
