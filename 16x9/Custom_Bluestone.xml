@@ -9,7 +9,13 @@
 	<defaultcontrol always="true">100</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<!-- Controls Spacing -->
+	
 <controls>
+	<!-- Background -->
+    <control type="image" description="Background">
+            <include>Dimensions_Fullscreen</include>
+            <texture colordiffuse="Background">common/bg.jpg</texture>
+        </control>
 	<control type="label">
             <description>Skin_Title</description>
             <width>100%</width>
