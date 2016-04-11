@@ -1,6 +1,6 @@
 [B]Arctic Zephyr for Emby Changelog[/B]
 
-[B]3.2.05 (3.2.05_bsrelease01) - "From Ashes early-April 2016 Update"[/B]
+[B]3.2.05 (3.2.05_bsrelease01) - "From Ashes Spring 2016 Update"[/B]
 Experimental Krypton Support ("Danvers" Build Line - Bluestone 2 - 4.0.00)
 Minor Improvements to the Skin's Code for Jarvis Support ("Dormer" Build Line - Bluestone 1 / "Danvers" Build Line - Bluestone 2")
 Auto-completion Keyboard Support Added
