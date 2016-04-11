@@ -1,10 +1,15 @@
 [B]Arctic Zephyr for Emby Changelog[/B]
 
 [B]3.2.05 (3.2.05_bsrelease01) - "From Ashes early-April 2016 Update"[/B]
-Experimental Krypton Support ("Danvers" Build Line - Bluestone 2 - 3.9.00)
+Experimental Krypton Support ("Danvers" Build Line - Bluestone 2 - 4.0.00)
 Minor Improvements to the Skin's Code for Jarvis Support ("Dormer" Build Line - Bluestone 1 / "Danvers" Build Line - Bluestone 2")
-Autocompletion Keyboard Support Added
+Auto-completion Keyboard Support Added
+Enhancement IMDB250 from Skin Helper Service
+Adds Rotten Tomatoes Ratings
+Additional Slipstream Updates from Arctic Zephyr: Exploded 2.0.12 Back-port
+Slipstream Updates from Upstream Arctic Zephyr Base Skin (Jurialmonkey)
 Removes Legacy Code "Script.Duration" References Completely
+Removes Legacy Code "IMDB250" References Completely (Replaced)
 GUI Change: English Language Now Defaults to American Flag
 GUI Change: Video Information Indicators Changed
 Info Banner ("Plot Overlay") Partially Implemented (Feature Currently Not Functional)
