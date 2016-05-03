@@ -30,17 +30,17 @@
 						<texture diffuse="diffuse/wall.png" background="true">$VAR[PosterImage]</texture>
 						<animation effect="fade" start="25" end="25" condition="stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
 					</control>
-					<control type="label">
-						<centerright>12</centerright>
-						<centertop>16</centertop>
-						<width>32</width>
-						<height>32</height>
-						<font>tinysymbol</font>
-						<label>$VAR[PercentWatchedLabel]</label>
-						<textcolor>$VAR[ColourHighlight2]</textcolor>
-						<visible>!stringcompare(ListItem.Label,..)</visible>
-						<visible>!Skin.HasSetting(views.156.showtick)</visible>
-					</control>
+                    <control type="label">
+                        <centerright>12</centerright>
+                        <centertop>16</centertop>
+                        <width>32</width>
+                        <height>32</height>
+                        <font>tinysymbol</font>
+                        <label>$VAR[PercentWatchedLabel]</label>
+                        <textcolor>$VAR[ColourHighlight2]</textcolor>
+                        <visible>!stringcompare(ListItem.Label,..)</visible>
+                        <visible>!Skin.HasSetting(views.156.showtick)</visible>
+                    </control>					
 				</itemlayout>
 				<focusedlayout condition="Container.Row(0) | Container.Row(1)" width="256" height="360">
 					<control type="button">
@@ -58,23 +58,23 @@
 						<texture diffuse="diffuse/wall.png" background="true">$VAR[PosterImage]</texture>
 						<animation effect="fade" start="25" end="25" condition="stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
 					</control>
-					<control type="label">
-						<right>124</right>
-						<centertop>16</centertop>
-						<width>32</width>
-						<height>32</height>
-						<font>tinysymbol</font>
-						<label>$VAR[PercentWatchedLabel]</label>
-						<textcolor>$VAR[ColourHighlight2]</textcolor>
-						<visible>!stringcompare(ListItem.Label,..)</visible>
-						<visible>!Skin.HasSetting(views.156.showtick)</visible>
-					</control>
+                    <control type="label">
+                        <centerright>124</centerright>
+                        <centertop>16</centertop>
+                        <width>32</width>
+                        <height>32</height>
+                        <font>tinysymbol</font>
+                        <label>$VAR[PercentWatchedLabel]</label>
+                        <textcolor>$VAR[ColourHighlight2]</textcolor>
+                        <visible>!stringcompare(ListItem.Label,..)</visible>
+                        <visible>!Skin.HasSetting(views.156.showtick)</visible>
+                    </control>					
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
 						<right>128</right>
 						<bottom>180</bottom>
-						<texture colordiffuse="$VAR[ColourHighlight]" border="20" flipy="true" flipx="true">common/selectcorner.png</texture>
+<!--Changed-->			<texture colordiffuse="$VAR[ViewsSelectHighlight]" border="20" flipy="true" flipx="true">common/selectcorner.png</texture>
 						<visible>!Container.Column(11) + !Container.Column(12) + !Container.Column(13) + !Container.Column(14)</visible>
 					</control>
 					<control type="image">
@@ -82,7 +82,7 @@
 						<top>0</top>
 						<right>128</right>
 						<bottom>180</bottom>
-						<texture colordiffuse="$VAR[ColourHighlight]" border="20" flipy="true" flipx="false">common/selectcorner.png</texture>
+<!--Changed-->			<texture colordiffuse="$VAR[ViewsSelectHighlight]" border="20" flipy="true" flipx="false">common/selectcorner.png</texture>
 						<visible>Container.Column(11) | Container.Column(12) | Container.Column(13) | Container.Column(14)</visible>
 					</control>
 					<control type="image">
@@ -292,7 +292,7 @@
 						<top>172</top>
 						<right>-384</right>
 						<bottom>-180</bottom>
-						<texture colordiffuse="$VAR[ColourHighlight]" border="20">common/selectcorner.png</texture>
+<!--Changed-->			<texture colordiffuse="$VAR[ViewsSelectHighlight]" border="20">common/selectcorner.png</texture>
 						<visible>!Container.Column(11) + !Container.Column(12) + !Container.Column(13) + !Container.Column(14)</visible>
 					</control>
 					<!--<control type="label">
@@ -311,7 +311,7 @@
 						<top>172</top>
 						<right>248</right>
 						<bottom>-180</bottom>
-						<texture colordiffuse="$VAR[ColourHighlight]" border="20" flipy="false" flipx="true">common/selectcorner.png</texture>
+						<texture colordiffuse="$VAR[ViewsSelectHighlight]" border="20" flipy="false" flipx="true">common/selectcorner.png</texture>
 						<visible>Container.Column(11) | Container.Column(12) | Container.Column(13) | Container.Column(14)</visible>
 					</control>
 				</focusedlayout>
@@ -331,23 +331,23 @@
 						<texture diffuse="diffuse/wall.png" background="true">$VAR[PosterImage]</texture>
 						<animation effect="fade" start="25" end="25" condition="stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
 					</control>
-					<control type="label">
-						<right>124</right>
-						<centertop>16</centertop>
-						<width>32</width>
-						<height>32</height>
-						<font>tinysymbol</font>
-						<label>$VAR[PercentWatchedLabel]</label>
-						<textcolor>$VAR[ColourHighlight2]</textcolor>
-						<visible>!stringcompare(ListItem.Label,..)</visible>
-						<visible>!Skin.HasSetting(views.156.showtick)</visible>
-					</control>
+                    <control type="label">
+                        <right>124</right>
+                        <centertop>16</centertop>
+                        <width>32</width>
+                        <height>32</height>
+                        <font>tinysymbol</font>
+                        <label>$VAR[PercentWatchedLabel]</label>
+                        <textcolor>$VAR[ColourHighlight2]</textcolor>
+                        <visible>!stringcompare(ListItem.Label,..)</visible>
+                        <visible>!Skin.HasSetting(views.156.showtick)</visible>
+                    </control>					
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
 						<right>128</right>
 						<bottom>180</bottom>
-						<texture colordiffuse="$VAR[ColourHighlight]" border="20" flipy="false" flipx="true">common/selectcorner.png</texture>
+<!--Changed-->			<texture colordiffuse="$VAR[ViewsSelectHighlight]" border="20" flipy="false" flipx="true">common/selectcorner.png</texture>
 						<visible>!Container.Column(11) + !Container.Column(12) + !Container.Column(13) + !Container.Column(14)</visible>
 					</control>
 					<control type="image">
@@ -355,7 +355,7 @@
 						<top>0</top>
 						<right>128</right>
 						<bottom>180</bottom>
-						<texture colordiffuse="$VAR[ColourHighlight]" border="20" flipy="false" flipx="false">common/selectcorner.png</texture>
+<!--Changed-->			<texture colordiffuse="$VAR[ViewsSelectHighlight]" border="20" flipy="false" flipx="false">common/selectcorner.png</texture>
 						<visible>Container.Column(11) | Container.Column(12) | Container.Column(13) | Container.Column(14)</visible>
 					</control>
 					<control type="image">
@@ -566,7 +566,7 @@
 						<top>-360</top>
 						<right>-384</right>
 						<bottom>352</bottom>
-						<texture colordiffuse="$VAR[ColourHighlight]" border="20" flipy="true" flipx="false">common/selectcorner.png</texture>
+<!--Changed-->			<texture colordiffuse="$VAR[ColourHighlight]" border="20" flipy="true" flipx="false">common/selectcorner.png</texture>
 						<visible>!Container.Column(11) + !Container.Column(12) + !Container.Column(13) + !Container.Column(14)</visible>
 					</control>
 					<!--<control type="label">
@@ -585,7 +585,7 @@
 						<top>-360</top>
 						<right>248</right>
 						<bottom>352</bottom>
-						<texture colordiffuse="$VAR[ColourHighlight]" border="20" flipy="true" flipx="true">common/selectcorner.png</texture>
+<!--Changed-->			<texture colordiffuse="$VAR[ColourHighlight]" border="20" flipy="true" flipx="true">common/selectcorner.png</texture>
 						<visible>Container.Column(11) | Container.Column(12) | Container.Column(13) | Container.Column(14)</visible>
 					</control>
 				</focusedlayout>

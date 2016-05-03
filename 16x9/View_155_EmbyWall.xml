@@ -30,17 +30,17 @@
 						<texture diffuse="diffuse/wall.png" background="true">$VAR[PosterImage]</texture>
 						<animation effect="fade" start="25" end="25" condition="stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
 					</control>
-					<control type="label">
-						<centerright>12</centerright>
-						<centertop>16</centertop>
-						<width>32</width>
-						<height>32</height>
-						<font>tinysymbol</font>
-						<label>$VAR[PercentWatchedLabel]</label>
-						<textcolor>$VAR[ColourHighlight2]</textcolor>
-						<visible>!stringcompare(ListItem.Label,..)</visible>
-						<visible>!Skin.HasSetting(views.155.showtick)</visible>
-					</control>
+                    <control type="label">
+                        <centerright>12</centerright>
+                        <centertop>16</centertop>
+                        <width>32</width>
+                        <height>32</height>
+                        <font>tinysymbol</font>
+                        <label>$VAR[PercentWatchedLabel]</label>
+                        <textcolor>$VAR[ColourHighlight2]</textcolor>
+                        <visible>!stringcompare(ListItem.Label,..)</visible>
+                        <visible>!Skin.HasSetting(views.155.showtick)</visible>
+                    </control>					
 				</itemlayout>
 				<focusedlayout condition="!Container.Column(14) + !Container.Row(3)" width="256" height="360">
 					<control type="button">
@@ -189,23 +189,23 @@
 							<texture colordiffuse="-" background="true">$VAR[Studio]</texture>
 						</control>
 					</control>
-					<control type="label">
-						<centerright>16</centerright>
-						<centertop>24</centertop>
-						<width>32</width>
-						<height>32</height>
-						<font>tinysymbol</font>
-						<label>$VAR[PercentWatchedLabel]</label>
-						<textcolor>$VAR[ColourHighlight2]</textcolor>
-						<visible>!stringcompare(ListItem.Label,..)</visible>
-						<visible>!Skin.HasSetting(views.155.showtick)</visible>
-					</control>
+                    <control type="label">
+                        <centerright>16</centerright>
+                        <centertop>24</centertop>
+                        <width>32</width>
+                        <height>32</height>
+                        <font>tinysymbol</font>
+                        <label>$VAR[PercentWatchedLabel]</label>
+                        <textcolor>$VAR[ColourHighlight2]</textcolor>
+                        <visible>!stringcompare(ListItem.Label,..)</visible>
+                        <visible>!Skin.HasSetting(views.155.showtick)</visible>
+                    </control>					
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
 						<right>0</right>
 						<bottom>0</bottom>
-						<texture colordiffuse="$VAR[ColourHighlight]" border="20">common/selectcorner.png</texture>
+						<texture colordiffuse="$VAR[ViewsSelectHighlight]" border="20">common/selectcorner.png</texture><!--Changed-->
 						<!--<animation type="Focus">
 							<effect type="zoom" start="90" end="100" time="150" tween="sine" easing="inout" center="auto" />
 							<effect type="fade" start="0" end="100" time="150" tween="sine" easing="in" />
@@ -231,24 +231,24 @@
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<texture diffuse="diffuse/wall.png" background="true">$VAR[PosterImage]</texture>
 					</control>
-					<control type="label">
-						<left>88</left>
-						<centerright>16</centerright>
-						<centertop>24</centertop>
-						<width>32</width>
-						<height>32</height>
-						<font>tinysymbol</font>
-						<label>$VAR[PercentWatchedLabel]</label>
-						<textcolor>$VAR[ColourHighlight2]</textcolor>
-						<visible>!stringcompare(ListItem.Label,..)</visible>
-						<visible>!Skin.HasSetting(views.155.showtick)</visible>
-					</control>
+                    <control type="label">
+					    <left>88</left>
+                        <centerright>16</centerright>
+                        <centertop>24</centertop>
+                        <width>32</width>
+                        <height>32</height>
+                        <font>tinysymbol</font>
+                        <label>$VAR[PercentWatchedLabel]</label>
+                        <textcolor>$VAR[ColourHighlight2]</textcolor>
+                        <visible>!stringcompare(ListItem.Label,..)</visible>
+                        <visible>!Skin.HasSetting(views.155.showtick)</visible>
+                    </control>					
 					<control type="image">
 						<left>-128</left>
 						<top>0</top>
 						<right>128</right>
 						<bottom>0</bottom>
-						<texture colordiffuse="$VAR[ColourHighlight]" border="20" flipy="false" flipx="true">common/selectcorner.png</texture>
+<!--Changed-->			<texture colordiffuse="$VAR[ViewsSelectHighlight]" border="20" flipy="false" flipx="true">common/selectcorner.png</texture><!--Changed-->
 						<!--<animation type="Focus">
 							<effect type="zoom" start="90" end="100" time="150" tween="sine" easing="inout" center="auto" />
 							<effect type="fade" start="0" end="100" time="150" tween="sine" easing="in" />
@@ -355,7 +355,7 @@
 						<top>-180</top>
 						<right>128</right>
 						<bottom>180</bottom>
-						<texture colordiffuse="$VAR[ColourHighlight]" border="20" flipy="true" flipx="true">common/selectcorner.png</texture>
+<!--Changed-->			<texture colordiffuse="$VAR[ViewsSelectHighlight]" border="20" flipy="true" flipx="true">common/selectcorner.png</texture><!--Changed-->
 						<!--<animation type="Focus">
 							<effect type="zoom" start="90" end="100" time="150" tween="sine" easing="inout" center="auto" />
 							<effect type="fade" start="0" end="100" time="150" tween="sine" easing="in" />
@@ -582,24 +582,24 @@
 							<texture colordiffuse="-" background="true">$VAR[Studio]</texture>
 						</control>
 					</control>
-					<control type="label">
-						<left>216</left>
-						<centerright>16</centerright>
-						<centertop>-156</centertop>
-						<width>32</width>
-						<height>32</height>
-						<font>tinysymbol</font>
-						<label>$VAR[PercentWatchedLabel]</label>
-						<textcolor>$VAR[ColourHighlight2]</textcolor>
-						<visible>!stringcompare(ListItem.Label,..)</visible>
-						<visible>!Skin.HasSetting(views.155.showtick)</visible>
-					</control>
+                    <control type="label">
+					    <left>216</left>
+                        <centerright>16</centerright>
+                        <centertop>-156</centertop>
+                        <width>32</width>
+                        <height>32</height>
+                        <font>tinysymbol</font>
+                        <label>$VAR[PercentWatchedLabel]</label>
+                        <textcolor>$VAR[ColourHighlight2]</textcolor>
+                        <visible>!stringcompare(ListItem.Label,..)</visible>
+                        <visible>!Skin.HasSetting(views.155.showtick)</visible>
+                    </control>					
 					<control type="image">
 						<left>0</left>
 						<top>-180</top>
 						<right>0</right>
 						<bottom>180</bottom>
-						<texture colordiffuse="$VAR[ColourHighlight]" border="20" flipy="true" flipx="false">common/selectcorner.png</texture>
+<!--Changed-->			<texture colordiffuse="$VAR[ViewsSelectHighlight]" border="20" flipy="true" flipx="false">common/selectcorner.png</texture><!--Changed-->
 						<!--<animation type="Focus">
 							<effect type="zoom" start="90" end="100" time="150" tween="sine" easing="inout" center="auto" />
 							<effect type="fade" start="0" end="100" time="150" tween="sine" easing="in" />

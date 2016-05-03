@@ -62,7 +62,7 @@
 				<control type="image">
 					<width>PosterW</width>
 					<height>PosterH</height>
-					<texture border="5" colordiffuse="FF181818">common/box.png</texture>
+<!--Changed-->		<texture border="5" colordiffuse="$VAR[ViewsSelectHighlight]>common/box.png</texture>
 					<visible>!Skin.Hassetting(views.cases)</visible>
 				</control>
 				<control type="image">
@@ -216,7 +216,7 @@
 				<control type="image">
 					<width>PosterW</width>
 					<height>PosterH</height>
-					<texture border="5" colordiffuse="FF181818">common/box.png</texture>
+<!--Changed-->		<texture border="5" colordiffuse="$VAR[ViewsSelectHighlight]">common/box.png</texture>
 					<visible>!Skin.Hassetting(views.cases)</visible>
 				</control>
 				<control type="image">
@@ -429,7 +429,7 @@
 				<control type="image">
 					<width>PosterW</width>
 					<height>PosterH</height>
-					<texture border="5" colordiffuse="FF181818">common/box.png</texture>
+<!--Changed-->		<texture border="5" colordiffuse="$VAR[ViewsSelectHighlight]">common/box.png</texture>
 					<visible>!Skin.Hassetting(views.cases)</visible>
 				</control>
 				<control type="image">
@@ -539,7 +539,7 @@
 		<control type="image">
 			<width>100%</width>
 			<height>100%</height>
-			<texture border="8" colordiffuse="Dark1">common/box.png</texture>
+			<texture border="8" colordiffuse="$VAR[ViewsSelectHighlight]">common/box.png</texture><!--Changed-->
 		</control>
 		<control type="label">
 			<posx>30</posx>
@@ -558,9 +558,9 @@
 			<height>32</height>
 			<font>symbolview</font>
 			<label>$VAR[PercentWatchedLabel]</label>
-			<textcolor>$VAR[ColourHighlight2]</textcolor>
-			<visible>!stringcompare(ListItem.Label,..)</visible>
-		</control>
+            <textcolor>$VAR[ColourHighlight2]</textcolor>
+            <visible>!stringcompare(ListItem.Label,..)</visible>
+        </control>		
 		<control type="label">
 			<right>70</right>
 			<width>500</width>
@@ -591,8 +591,8 @@
 			<height>32</height>
 			<font>symbolview</font>
 			<label>$VAR[PercentWatchedLabel]</label>
-			<textcolor>$VAR[ColourHighlight2]</textcolor>
-			<visible>!stringcompare(ListItem.Label,..)</visible>
+            <textcolor>$VAR[ColourHighlight2]</textcolor>
+            <visible>!stringcompare(ListItem.Label,..)</visible>
 		</control>
 		<control type="label">
 			<right>70</right>

@@ -12,7 +12,7 @@
 				<top>0</top>
 				<height>240</height>
 				<aspectratio aligny="top">scale</aspectratio>
-				<texture colordiffuse="Background">common/bg.jpg</texture>
+				<texture colordiffuse="$VAR[HomeHeaderBGColour]">common/bg.jpg</texture>
 				<animation effect="fade" start="100" end="75" time="200" condition="true">Conditional</animation>
 			</control>
 			<control type="image" description="FanartOverlay">
@@ -266,7 +266,7 @@
 				<top>0</top>
 				<bottom>0</bottom>
 				<width>660</width>
-				<texture border="16" colordiffuse="Background">common/rounded-shadow8.png</texture>
+				<texture border="16" colordiffuse="$VAR[WidgetBackgroundColour]">common/rounded-shadow8.png</texture>
 				<animation effect="fade" start="100" end="90" condition="true">Conditional</animation>
 			</control>
 			<control type="image">
@@ -324,7 +324,7 @@
 				<top>0</top>
 				<height>100</height>
 				<aspectratio aligny="top">scale</aspectratio>
-				<texture colordiffuse="Background">common/bg.jpg</texture>
+				<texture colordiffuse="$VAR[HomeHeaderBGColour]">common/bg.jpg</texture>
 				<animation effect="fade" start="100" end="75" time="200" condition="true">Conditional</animation>
 			</control>
 			<control type="image" description="FanartOverlay">
@@ -332,7 +332,7 @@
 				<height>100</height>
 				<top>0</top>
 				<aspectratio aligny="bottom">scale</aspectratio>
-				<texture colordiffuse="FloorFade">common/floor.png</texture>
+				<texture colordiffuse="$VAR[HomeFloorBGColour]">common/floor.png</texture>
 			</control>
 			<control type="image" description="Shadow">
 				<width>100%</width>
@@ -435,7 +435,7 @@
 				<width>450</width>
 				<height>117</height>
 				<animation effect="fade" start="100" end="90" condition="true">Conditional</animation>
-				<texture border="16" colordiffuse="Background">common/rounded-shadow8.png</texture>
+<!--Changed-->	<texture border="16" colordiffuse="$VAR[SpinnerBackgroundColour]">common/rounded-shadow8.png</texture>
 			</control>
 			<control type="image">
 				<description>Busy animation</description>
@@ -443,7 +443,7 @@
 				<posy>30</posy>
 				<width>48</width>
 				<height>48</height>
-				<texture colordiffuse="$VAR[ColourHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
+<!--Changed-->	<texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="label">
@@ -542,7 +542,7 @@
 					<right>10</right>
 					<height>324</height>
 					<animation effect="fade" start="100" end="90" time="200" condition="true">Conditional</animation>
-					<texture border="5" colordiffuse="Background">common/box.png</texture>
+<!--Changed-->		<texture border="5" colordiffuse="$VAR[WidgetBackgroundColour]">common/box.png</texture>
 				</control>
 				<control type="image">
 					<left>5</left>
@@ -639,7 +639,7 @@
 					<right>10</right>
 					<height>324</height>
 					<animation effect="fade" start="100" end="90" time="200" condition="true">Conditional</animation>
-					<texture border="5" colordiffuse="Background">common/box.png</texture>
+<!--Changed-->		<texture border="5" colordiffuse="$VAR[WidgetBackgroundColour]">common/box.png</texture>
 				</control>
 				<control type="image">
 					<left>5</left>
@@ -720,7 +720,7 @@
 				<height>220</height>
 				<bottom>0</bottom>
 				<aspectratio aligny="bottom">scale</aspectratio>
-				<texture colordiffuse="FloorFade">common/floor.png</texture>
+<!--Changed-->	<texture colordiffuse="$VAR[HomeFloorBGColour]">common/floor.png</texture>
 			</control>
 			<control type="image" description="Shadow">
 				<width>100%</width>
@@ -951,7 +951,7 @@
 						<centerleft>50%</centerleft>
 						<width>16</width>
 						<height>16</height>
-						<texture colordiffuse="Dark3" flipy="true">common/arrow-small.png</texture>
+<!--Changed-->			<texture colordiffuse="$VAR[ColourHighlight]" flipy="true">common/arrow-small.png</texture>
 						<animation effect="fade" end="100" start="0" delay="300" time="400" reversible="false">Focus</animation>
 					</control>
 				</focusedlayout>
@@ -984,7 +984,7 @@
 						<height>900</height>
 						<bottom>-680</bottom>
 						<aspectratio aligny="bottom">scale</aspectratio>
-						<texture colordiffuse="FloorFade">common/floor.png</texture>
+<!--Changed-->			<texture colordiffuse="$VAR[HomeFloorBGColour]">common/floor.png</texture>
 					</control>
 					<control type="image" description="Shadow">
 						<width>100%</width>
@@ -1031,7 +1031,7 @@
 								<bottom>10</bottom>
 								<top>10</top>
 								<aspectratio scalediffuse="false">scale</aspectratio>
-								<texture diffuse="diffuse/wall.png" fallback="DefaultAddonNone.png" background="true">$VAR[PosterImage]</texture>
+<!--Changed-->					<texture diffuse="$VAR[WidgetBackgroundColour]" fallback="DefaultAddonNone.png" background="true">$VAR[PosterImage]</texture>
 							</control>
 						</itemlayout>
 						<focusedlayout width="178" height="257">
@@ -1238,7 +1238,7 @@
 							<posy>30</posy>
 							<width>48</width>
 							<height>48</height>
-							<texture colordiffuse="$VAR[ColourHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
+<!--Changed-->				<texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 
@@ -1427,7 +1427,7 @@
 				<centertop>40%</centertop>
 				<texture colordiffuse="Dark3">$INFO[ListItem.Icon]</texture>
 				<visible>substring(ListItem.Icon,icons)</visible>
-			</control>
+			</control>-->
 			<control type="label">
 				<align>center</align>
 				<aligny>top</aligny>
@@ -1444,8 +1444,9 @@
 				<width>128</width>
 				<height>128</height>
 				<centerleft>50%</centerleft>
-				<centertop>40%</centertop>
+				<centertop>40%</centertop>								
 				<texture colordiffuse="Dark1">$INFO[ListItem.Icon]</texture>
+				<textcolor>Dark2</textcolor>
 				<visible>substring(ListItem.Icon,icons)</visible>
 			</control>
 			<control type="label">
@@ -1473,7 +1474,7 @@
 				<centerleft>50%</centerleft>
 				<width>16</width>
 				<height>16</height>
-				<texture colordiffuse="Dark3">common/arrow-small.png</texture>
+<!--Changed-->	<texture colordiffuse="$VAR[ColourHighlight]">common/arrow-small.png</texture>
 				<visible>Control.HasFocus(300)</visible>
 				<visible>IntegerGreaterThan(Container(302).NumItems,0)</visible>
 				<animation effect="fade" end="100" start="0" delay="300" time="400" reversible="false">Focus</animation>
@@ -1713,7 +1714,7 @@
 						<posy>30</posy>
 						<width>48</width>
 						<height>48</height>
-						<texture colordiffuse="$VAR[ColourHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
+<!--Changed-->			<texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">

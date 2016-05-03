@@ -775,8 +775,8 @@
 						<label>Import skin settings</label>
 						<onclick>RunScript(script.toolbox,info=importskinsettings)</onclick>
 					</control>
-					<!-- Colours -->
-					<!-- Main Color -->
+<!-- Colours -->
+<!-- Main Color -->
 					<control type="button" id="9282">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
@@ -785,16 +785,16 @@
 						<label2>[UPPERCASE][COLOR=$VAR[ColourHighlight]]$INFO[Skin.String(focuscolor.name)][/COLOR][/UPPERCASE]</label2>
 						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=focuscolor.name)</onclick>
 					</control>
-					<!-- Reset Main Color -->
-					<control type="button" id="9283">
+<!-- Reset Main Color -->
+					<control type="button" id="92821">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
 						<include>DefSettingsButton</include>
 						<label> - $LOCALIZE[409]</label>
-						<onclick>Skin.SetString(focuscolor.name,Highlight)</onclick>
+						<onclick>Skin.SetString(focuscolor.name,FFEE7B0A)</onclick>
 					</control>
-					<!-- Second Color -->
-					<control type="button" id="9285">
+<!-- Second Color -->
+					<control type="button" id="92822">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
 						<include>DefSettingsButton</include>
@@ -802,16 +802,16 @@
 						<label2>[UPPERCASE][COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(focuscolor2.name)][/COLOR][/UPPERCASE]</label2>
 						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=focuscolor2.name)</onclick>
 					</control>
-					<!-- Reset Secondary Color -->
-					<control type="button" id="9286">
+<!-- Reset Secondary Color -->
+					<control type="button" id="92823">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
 						<include>DefSettingsButton</include>
 						<label> - $LOCALIZE[409]</label>
-						<onclick>Skin.SetString(focuscolor2.name,Highlight2)</onclick>
+						<onclick>Skin.SetString(focuscolor2.name,FFF507B9)</onclick>
 					</control>
-					<!-- Text Color -->
-					<control type="button" id="9288">
+<!-- Text Color -->
+					<control type="button" id="92824">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
 						<include>DefSettingsButton</include>
@@ -819,14 +819,117 @@
 						<label2>[UPPERCASE][COLOR=$VAR[ColourSelected]]$INFO[Skin.String(selectedcolor.name)][/COLOR][/UPPERCASE]</label2>
 						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=selectedcolor.name)</onclick>
 					</control>
-					<!-- Reset Text Color -->
-					<control type="button" id="9289">
+<!-- Reset Text Color -->
+					<control type="button" id="92825">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
 						<include>DefSettingsButton</include>
 						<label> - $LOCALIZE[409]</label>
-						<onclick>Skin.SetString(selectedcolor.name,Selected)</onclick>
+						<onclick>Skin.SetString(selectedcolor.name,FFEDEDED)</onclick>
 					</control>
+<!-- BusySpinner Colour -->					
+					<control type="button" id="92826">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label> - Spinner Highlight Colour</label>
+						<label2>[UPPERCASE][COLOR=$VAR[SpinnerHighlight]]$INFO[Skin.String(spinnercolor.name)][/COLOR][/UPPERCASE]</label2>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=spinnercolor.name)</onclick>
+					</control>
+<!--Reset Busy Spinner Colour -->					
+					<control type="button" id="92827">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label> - $LOCALIZE[409]</label>
+						<onclick>Skin.SetString(spinnercolor.name,FFEE7B0A)</onclick>
+					</control>
+<!-- Busy Spinner Background Colour -->					
+					<control type="button" id="92828">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label> - Spinner Background Colour</label>
+						<label2>[UPPERCASE][COLOR=$VAR[SpinnerBackgroundColour]]$INFO[Skin.String(spinnerbgcolor.name)][/COLOR][/UPPERCASE]</label2>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=spinnerbgcolor.name)</onclick>
+					</control>
+<!-- Reset Busy Spinner Background -->					
+					<control type="button" id="92829">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label> - $LOCALIZE[409]</label>
+						<onclick>Skin.SetString(spinnerbgcolor.name,FF333333)</onclick>
+					</control>
+<!-- Widget Background Colour -->					
+					<control type="button" id="9283">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label> - Widget Background Colour</label>
+						<label2>[UPPERCASE][COLOR=$VAR[WidgetBackgroundColour]]$INFO[Skin.String(widgetbackgroundcolor.name)][/COLOR][/UPPERCASE]</label2>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=widgetbackgroundcolor.name)</onclick>
+					</control>
+<!-- Reset Widget Background -->					
+					<control type="button" id="92831">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label> - $LOCALIZE[409]</label>
+						<onclick>Skin.SetString(widgetbackgroundcolor.name,FF181818)</onclick>
+					</control>
+<!-- "Views" Select Highlight Colour -->		
+					<control type="button" id="92832">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label> - Highlight Select Colour for ALL "Views"</label>
+						<label2>[UPPERCASE][COLOR=$VAR[ViewsSelectHighlight]]$INFO[Skin.String(viewsselectcolor.name)][/COLOR][/UPPERCASE]</label2>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=viewsselectcolor.name)</onclick>
+					</control>
+<!-- Reset "Views" Colour -->	
+					<control type="button" id="92833">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label> - $LOCALIZE[409]</label>
+						<onclick>Skin.SetString(viewsselectcolor.name,FFCCCCCC)</onclick>
+					</control>
+<!-- Home Header Colour -->					
+					<control type="button" id="92834">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label> - Home Header Background Colour</label>
+						<label2>[UPPERCASE][COLOR=$VAR[HomeHeaderBGColour]]$INFO[Skin.String(headerbackgroundcolor.name)][/COLOR][/UPPERCASE]</label2>-->
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=headerbackgroundcolor.name)</onclick>
+					</control>
+<!-- Reset Home Header Background Colour -->	
+					<control type="button" id="92835">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label> - $LOCALIZE[409]</label>
+						<onclick>Skin.SetString(headerbackgroundcolor.name,FF181818)</onclick>
+					</control>
+<!-- Home Footer Colour -->					
+					<control type="button" id="92836">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label> - Home Floor Background Colour</label>
+						<label2>[UPPERCASE][COLOR=$VAR[HomeFloorBGColour]]$INFO[Skin.String(homefloorbgcolor.name)][/COLOR][/UPPERCASE]</label2>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=homefloorbgcolor.name)</onclick>
+					</control>
+<!-- Reset Home Footer Background Colour -->	
+					<control type="button" id="92837">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label> - $LOCALIZE[409]</label>
+						<onclick>Skin.SetString(homefloorbgcolor.name,8F181818)</onclick>
+					</control>
+					
 					<!-- Views -->
 					<control type="button" id="9291" description="Enable or Disable views">
 						<width>1310</width>

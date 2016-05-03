@@ -136,16 +136,16 @@
 						<label>$VAR[LabelYear,, • ]$VAR[LabelDuration]$INFO[ListItem.Rating, • ]</label>
 						<visible>Container.Content(movies) | Container.Content(episodes)</visible>
 					</control>
-					<control type="label">
-						<centerright>12</centerright>
-						<centertop>12</centertop>
-						<width>32</width>
-						<height>32</height>
-						<font>symbolview</font>
-						<label>$VAR[PercentWatchedLabel]</label>
-						<textcolor>$VAR[ColourHighlight2]</textcolor>
-						<visible>!stringcompare(ListItem.Label,..)</visible>
-					</control>
+                    <control type="label">
+                        <centerright>12</centerright>
+                        <centertop>12</centertop>
+                        <width>32</width>
+                        <height>32</height>
+                        <font>symbolview</font>
+                        <label>$VAR[PercentWatchedLabel]</label>
+                        <textcolor>$VAR[ColourHighlight]</textcolor>
+                        <visible>!stringcompare(ListItem.Label,..)</visible>
+					</control>				
 				</control>
 			</control>
 			<include>Furniture_Scrollbar_Horizontal</include>
@@ -214,9 +214,9 @@
 						<font>symbolview</font>
 						<label>$VAR[PercentWatchedLabel]</label>
 						<textcolor>$VAR[ColourHighlight2]</textcolor>
-						<visible>!stringcompare(ListItem.Label,..)</visible>
+                        <visible>!stringcompare(ListItem.Label,..)</visible>
 						<animation effect="slide" start="0" end="64" time="0" condition="Container.Content(Seasons)">Conditional</animation>
-					</control>
+					</control>				
 					<control type="label">
 						<right>30</right>
 						<width>500</width>
@@ -630,9 +630,9 @@
 						<font>symbolview</font>
 						<label>$VAR[PercentWatchedLabel]</label>
 						<textcolor>$VAR[ColourHighlight2]</textcolor>
-						<visible>!stringcompare(ListItem.Label,..)</visible>
+                        <visible>!stringcompare(ListItem.Label,..)</visible>
 						<animation effect="slide" start="0" end="64" time="0" condition="Container.Content(Seasons)">Conditional</animation>
-					</control>
+					</control>				
 					<control type="label">
 						<right>30</right>
 						<width>500</width>

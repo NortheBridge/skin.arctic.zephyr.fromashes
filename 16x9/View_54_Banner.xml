@@ -102,8 +102,8 @@
 								<label>$VAR[PercentWatchedLabel]</label>
 								<textcolor>$VAR[ColourHighlight2]</textcolor>
 								<animation effect="slide" start="0" end="50" condition="IntegerGreaterThan(ListItem.Episode,99)">Conditional</animation>
-								<visible>!stringcompare(ListItem.Label,..)</visible>
-							</control>
+					            <visible>!stringcompare(ListItem.Label,..)</visible>
+							</control>						
 							<control type="label">
 								<top>85</top>
 								<left>685</left>
@@ -228,7 +228,7 @@
 							<top>10</top>
 							<right>110</right>
 							<bottom>10</bottom>
-							<texture colordiffuse="Dark1" border="5">common/box.png</texture>
+<!--Changed-->   			<texture colordiffuse="$VAR[ViewsSelectHighlight]" border="5">common/box.png</texture><!--Changed from "Dark1"-->
 						</control>
 						<control type="image">
 							<left>110</left>
@@ -244,10 +244,10 @@
 							<width>32</width>
 							<height>32</height>
 							<font>symbolview</font>
-							<label>$VAR[PercentWatchedLabel]</label>
-							<textcolor>$VAR[ColourHighlight2]</textcolor>
-							<visible>!stringcompare(ListItem.Label,..)</visible>
-						</control>
+							<label>$VAR[PercentWatchedLabel]</label>						
+                            <textcolor>$VAR[ColourHighlight2]</textcolor>
+                            <visible>!stringcompare(ListItem.Label,..)</visible>-->
+						</control>					
 						<control type="label">
 							<left>337</left>
 							<right>174</right>
@@ -316,7 +316,7 @@
 							<top>24</top>
 							<width>1240</width>
 							<height>270</height>
-							<texture border="8" colordiffuse="Dark1">common/box.png</texture>
+							<texture border="8" colordiffuse="$VAR[ViewsSelectHighlight]">common/box.png</texture><!--Changed from "Dark1"-->
 						</control>
 						<control type="image">
 							<left>24</left>
@@ -354,10 +354,10 @@
 							<width>32</width>
 							<height>32</height>
 							<font>symbolview</font>
-							<label>$VAR[PercentWatchedLabel]</label>
-							<textcolor>$VAR[ColourHighlight2]</textcolor>
-							<visible>!stringcompare(ListItem.Label,..)</visible>
-						</control>
+							<label>$VAR[PercentWatchedLabel]</label>						
+                            <textcolor>$VAR[ColourHighlight2]</textcolor>
+                            <visible>!stringcompare(ListItem.Label,..)</visible>
+						</control>					
 						<control type="label">
 							<centerbottom>48</centerbottom>
 							<left>44</left>
@@ -398,7 +398,7 @@
 								<top>24</top>
 								<right>24</right>
 								<height>270</height>
-								<texture border="8" colordiffuse="Dark1">common/box.png</texture>
+<!--Changed-->					<texture border="8" colordiffuse="$VAR[ViewsSelectHighlight]">common/box.png</texture><!--Changed from "Dark1"-->
 							</control>
 							<control type="image">
 								<left>24</left>
@@ -444,6 +444,17 @@
 								<animation effect="slide" start="0" end="50" condition="IntegerGreaterThan(ListItem.Episode,99)">Conditional</animation>
 								<visible>!stringcompare(ListItem.Label,..)</visible>
 							</control>
+						    <control type="label">
+							    <left>647</left>
+								<centertop>105</centertop>
+							    <width>32</width>
+							    <height>32</height>
+							    <font>symbolview</font>
+							    <label>$VAR[PercentWatchedLabel]</label>						
+                                <textcolor>$VAR[ColourHighlight2]</textcolor>
+							    <animation effect="slide" start="0" end="50" condition="IntegerGreaterThan(ListItem.Episode,99)">Conditional</animation>
+                                <visible>!stringcompare(ListItem.Label,..)</visible>
+						    </control>							
 							<control type="label">
 								<top>85</top>
 								<left>685</left>
@@ -485,7 +496,7 @@
 								<top>24</top>
 								<right>24</right>
 								<height>270</height>
-								<texture border="8" colordiffuse="Dark1">common/box.png</texture>
+<!--Changed-->					<texture border="8" colordiffuse="$VAR[ViewsSelectHighlight]">common/box.png</texture><!--Changed from "Dark1"-->
 							</control>
 							<control type="image">
 								<left>24</left>
@@ -547,7 +558,7 @@
 								<top>24</top>
 								<right>24</right>
 								<height>270</height>
-								<texture border="8" colordiffuse="Dark1">common/box.png</texture>
+<!--Changed-->					<texture border="8" colordiffuse="$VAR[ViewsSelectHighlight]">common/box.png</texture><!--Changed from "Dark1"-->
 							</control>
 							<control type="image">
 								<left>24</left>

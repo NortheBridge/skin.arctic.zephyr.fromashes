@@ -50,16 +50,16 @@
 							<visible>!stringcompare(ListItem.Label,..)</visible>
 							<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 							<control type="image">
-							<control type="label">
-								<left>379</left>
-								<centertop>32</centertop>
-								<width>32</width>
-								<height>32</height>
-								<font>symbolview</font>
-								<label>$VAR[PercentWatchedLabel]</label>
-								<textcolor>$VAR[ColourHighlight2]</textcolor>
-								<visible>!stringcompare(ListItem.Label,..)</visible>
-							</control>
+						    <control type="label">
+							    <left>379</left>
+							    <centertop>32</centertop>
+							    <width>32</width>
+							    <height>32</height>
+							    <font>symbolview</font>
+							    <label>$VAR[PercentWatchedLabel]</label>
+                                <textcolor>$VAR[ColourHighlight2]</textcolor>
+                                <visible>!stringcompare(ListItem.Label,..)</visible>
+                            </control>							
 						</control>
 						<control type="image">
 							<left>-24</left>
@@ -91,7 +91,7 @@
 						<control type="image">
 							<width>PosterW</width>
 							<height>PosterW</height>
-							<texture border="5" colordiffuse="Dark1">common/box.png</texture>
+<!--Changed-->				<texture border="5" colordiffuse="$VAR[ViewsSelectHighlight]">common/box.png</texture><!--Changed-->
 						</control>
 						<control type="image">
 							<width>PosterW</width>
@@ -103,16 +103,16 @@
 						<control type="group">
 							<visible>!stringcompare(ListItem.Label,..)</visible>
 							<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-							<control type="label">
-								<left>379</left>
-								<centertop>32</centertop>
-								<width>32</width>
-								<height>32</height>
-								<font>symbolview</font>
-								<label>$VAR[PercentWatchedLabel]</label>
-								<textcolor>$VAR[ColourHighlight2]</textcolor>
-								<visible>!stringcompare(ListItem.Label,..)</visible>
-							</control>
+						    <control type="label">
+							    <left>379</left>
+							    <centertop>32</centertop>
+							    <width>32</width>
+							    <height>32</height>
+							    <font>symbolview</font>
+							    <label>$VAR[PercentWatchedLabel]</label>
+                                <textcolor>$VAR[ColourHighlight2]</textcolor>
+                                <visible>!stringcompare(ListItem.Label,..)</visible>
+                            </control>							
 						</control>
 						<control type="image">
 							<left>-24</left>
