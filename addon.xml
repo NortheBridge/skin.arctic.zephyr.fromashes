@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
     id="skin.arctic.zephyr.fromashes"
-    version="3.2.05"
+    version="3.2.10"
     name="Arctic Zephyr: From Ashes"
     provider-name="jurialmunkey - im85288 - badaas - Guardian Hope (on behalf of NortheBridge)">
     <requires>
@@ -25,7 +25,6 @@
         <import addon="resource.images.moviegenreicons.coloured" version="0.0.6"/>
         <import addon="resource.images.musicgenreicons.text" version="0.0.7"/>
         <import addon="resource.images.recordlabels.white" version="0.0.6"/>
-		<import addon="plugin.program.autocompletion" version="1.0.1"/>
 		<import addon="resource.uisounds.fromashes" version="3.0.01"/>
     </requires>
     <extension point="xbmc.gui.skin" effectslowdown="1.00" debugging="false">
