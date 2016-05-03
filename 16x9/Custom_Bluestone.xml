@@ -56,7 +56,7 @@
 			<posy>290</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Build: [COLOR=$VAR[ColourHighlight]]dormer@b2ca2d8[/COLOR]</label> <!-- Because Who Doesn't Like Margaery Tyrell or Game of Thrones on HBO? Wait, You Can Read This? Easter Eggs! -->
+			<label>Build: [COLOR=$VAR[ColourHighlight]]dormer@b2ca2d8[/COLOR]</label> <!-- Because Who Doesn't Like Margery Tyrell or Game of Thrones on HBO? Wait, You Can Read This? Easter Eggs! -->
 		</control>
 		<!-- The Full Version is Determined By the Branch (i.e. x.y.zz_branchnameabbreviated) -->
 	<control type="label">
@@ -230,7 +230,7 @@
             <align>center</align>
             <aligny>center</aligny>
 			<posy>70</posy>
-			<label>Based On "Arctic Zephyr: Exploded" by [COLOR=$VAR[ColourHighlight]]im85288[/COLOR] and [COLOR=$VAR[ColourHighlight]]badaas[/COLOR]</label>
+			<label>Based On "Arctic Zephyr: Exploded" by [COLOR=$VAR[ColourHighlight]]im85288 and badaas[/COLOR]</label>
 		</control>
 		<!--Super Special Thanks to minus0-->
 	<control type="label">
@@ -241,7 +241,7 @@
             <align>center</align>
             <aligny>center</aligny>
 			<posy>100</posy>
-			<label>General Contributions and Android QA [COLOR=$VAR[ColourHighlight]]minus0[/COLOR]</label>
+			<label>Executive Contributor [COLOR=$VAR[ColourHighlight]]minus0[/COLOR]</label>
 		</control>
 			<!--Contributors-->
 	<control type="label">

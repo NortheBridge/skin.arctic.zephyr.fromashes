@@ -8,7 +8,7 @@
 	<onload condition="System.HasAddon(script.grab.fanart)">RunScript(script.grab.fanart,mode=random,refresh=10)</onload>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=300&amp;group=mainmenu|movieshub|episodeshub)</onload>
 	<!-- Info Banner -->
-	<onload condition="!Skin.HasSetting(startup.init)">Skin.SetString(SkinHelper.ShowInfoAtPlaybackStart, 8)</onload>
+	<onload>Skin.SetString(SkinHelper.ShowInfoAtPlaybackStart, 8)</onload>
 	<!-- Info Banner -->
 	<controls>
 		<include condition="!Skin.HasSetting(home.netflix)">GlobalBackground</include>
