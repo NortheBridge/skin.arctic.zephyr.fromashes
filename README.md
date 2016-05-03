@@ -1,4 +1,4 @@
-# skin.arctic.zephyr.from.ashes
+# skin.arctic.zephyr.fromashes
 The Arctic Zephyr: From Ashes Skin for Emby for Kodi is a streamlined, clean, and minamalistic skin modidification for Kodi Jarvis which provides a unique and easy to use user experience based on the Arctic Zephyr base skin created by Jurialmonkey. Arctic Zephyr: From Ashes has had a long legacy and is the next evolution from "Arctic Zephyr: Exploded."
 
 ## Installation Instructions

@@ -123,8 +123,8 @@
 			<font>symbolview</font>
 			<label>$VAR[PercentWatchedLabel]</label>
 			<textcolor>$VAR[ColourHighlight2]</textcolor>
-			<visible>!stringcompare(ListItem.Label,..)</visible>
-		</control>
+            <visible>!stringcompare(ListItem.Label,..)</visible>                       
+		</control>	
 	</include>
 	<include name="View_52_BigList_FocusLayout">
 		<control type="button">
@@ -137,7 +137,7 @@
 			<left>0</left>
 			<right>10</right>
 			<height>120</height>
-			<texture border="5" colordiffuse="Dark1">common/box.png</texture>
+			<texture border="5" colordiffuse="$VAR[ViewsSelectHighlight]">common/box.png</texture><!--Changed from Dark1-->
 		</control>
 		<control type="image">
 			<left>10</left>
@@ -186,7 +186,7 @@
 			<font>symbolview</font>
 			<label>$VAR[PercentWatchedLabel]</label>
 			<textcolor>$VAR[ColourHighlight2]</textcolor>
-			<visible>!stringcompare(ListItem.Label,..)</visible>
+            <visible>!stringcompare(ListItem.Label,..)</visible>                        
 		</control>
 	</include>
 </includes>

@@ -45,7 +45,7 @@
 				<posy>0</posy>
 				<width>450</width>
 				<height>108</height>
-				<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
+<!--Changed-->	<texture border="16" colordiffuse="$VAR[SpinnerBackgroundColour]">common/rounded-shadow8.png</texture>
 			</control>
 			<control type="image">
 				<description>Busy animation</description>
@@ -53,7 +53,7 @@
 				<posy>30</posy>
 				<width>48</width>
 				<height>48</height>
-				<texture colordiffuse="$VAR[ColourHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
+<!--Changed-->	<texture colordiffuse="$VAR[Spinnerlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="label">

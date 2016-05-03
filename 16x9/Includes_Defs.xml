@@ -12,6 +12,30 @@
         <value condition="!IsEmpty(Skin.String(selectedcolor.name))">$INFO[Skin.String(selectedcolor.name)]</value>
         <value>Selected</value>
 	</variable>
+	<variable name="SpinnerHighlight">  <!--Added-->
+        <value condition="!IsEmpty(Skin.String(spinnercolor.name))">$INFO[Skin.String(spinnercolor.name)]</value>
+        <value>Highlight</value>
+	</variable>
+	<variable name="SpinnerBackgroundColour">  <!--Added-->
+        <value condition="!IsEmpty(Skin.String(spinnerbgcolor.name))">$INFO[Skin.String(spinnerbgcolor.name)]</value>
+        <value>White100</value>
+	</variable>
+		<variable name="ViewsSelectHighlight">  <!--Added-->
+        <value condition="!IsEmpty(Skin.String(viewsselectcolor.name))">$INFO[Skin.String(viewsselectcolor.name)]</value>
+        <value>Dark1</value>
+	</variable>
+		<variable name="WidgetBackgroundColour">  <!--Added-->
+        <value condition="!IsEmpty(Skin.String(widgetbackgroundcolor.name))">$INFO[Skin.String(widgetbackgroundcolor.name)]</value>
+        <value>Background</value>
+	</variable>
+	<variable name="HomeHeaderBGColour">  <!--Added-->
+        <value condition="!IsEmpty(Skin.String(headerbackgroundcolor.name))">$INFO[Skin.String(headerbackgroundcolor.name)]</value>
+        <value>Background</value>
+	</variable>
+	<variable name="HomeFloorBGColour">  <!--Added-->
+        <value condition="!IsEmpty(Skin.String(homefloorbgcolor.name))">$INFO[Skin.String(homefloorbgcolor.name)]</value>
+        <value>FloorFade</value>
+	</variable>
 	<variable name="DefSettingsOnRight">
 		<value condition="Window.IsVisible(AppearanceSettings)">ReplaceWindow(VideosSettings)</value>
 		<value condition="Window.IsVisible(VideosSettings)">ReplaceWindow(MusicSettings)</value>

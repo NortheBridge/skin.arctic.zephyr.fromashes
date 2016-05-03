@@ -246,7 +246,7 @@
 				<top>0</top>
 				<height>100</height>
 				<aspectratio aligny="top">scale</aspectratio>
-				<texture colordiffuse="Background">common/bg.jpg</texture>
+<!--Changed-->	<texture colordiffuse="$VAR[HomeHeaderBGColour]">common/bg.jpg</texture>
 				<animation effect="fade" start="100" end="75" time="200" condition="true">Conditional</animation>
 				<visible>ControlGroup(770).HasFocus()</visible>
 			</control>
@@ -373,7 +373,7 @@
 						<height>32</height>
 						<font>symbolview</font>
 						<label>$VAR[PercentWatchedLabel]</label>
-						<textcolor>$VAR[ColourHighlight2]</textcolor>
+						<textcolor>$VAR[$VAR[ColourHighlight2]]</textcolor>
 						<visible>!stringcompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="image">

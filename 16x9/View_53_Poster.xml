@@ -42,7 +42,7 @@
 				<control type="image">
 					<width>PosterW</width>
 					<height>PosterH</height>
-					<texture border="5" colordiffuse="Dark1">common/box.png</texture>
+             		<texture border="5" colordiffuse="Dark1">common/box.png</texture>
 					<visible>!Skin.Hassetting(views.cases)</visible>
 				</control>
 				<control type="image">
@@ -102,8 +102,8 @@
 						<font>symbolview</font>
 						<label>$VAR[PercentWatchedLabel]</label>
 						<textcolor>$VAR[ColourHighlight2]</textcolor>
-						<visible>!stringcompare(ListItem.Label,..)</visible>
-					</control>
+                        <visible>!stringcompare(ListItem.Label,..)</visible>
+					</control>			
 				</control>
 				<control type="image">
 					<left>-24</left>
@@ -146,7 +146,7 @@
 				<control type="image">
 					<width>PosterW</width>
 					<height>PosterH</height>
-					<texture border="5" colordiffuse="Dark1">common/box.png</texture>
+<!--Changed-->		<texture border="5" colordiffuse="$VAR[ViewsSelectHighlight]">common/box.png</texture>
 					<visible>!Skin.Hassetting(views.cases)</visible>
 				</control>
 				<control type="image">
@@ -206,8 +206,8 @@
 						<font>symbolview</font>
 						<label>$VAR[PercentWatchedLabel]</label>
 						<textcolor>$VAR[ColourHighlight2]</textcolor>
-						<visible>!stringcompare(ListItem.Label,..)</visible>
-					</control>
+                        <visible>!stringcompare(ListItem.Label,..)</visible>
+					</control>			
 				</control>
 				<control type="image">
 					<left>-24</left>

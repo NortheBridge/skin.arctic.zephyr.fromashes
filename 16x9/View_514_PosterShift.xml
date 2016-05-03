@@ -82,8 +82,8 @@
 				<font>symbolview</font>
 				<label>$VAR[PercentWatchedLabel]</label>
 				<textcolor>$VAR[ColourHighlight2]</textcolor>
-				<visible>!stringcompare(ListItem.Label,..)</visible>
-			</control>
+                <visible>!stringcompare(ListItem.Label,..)</visible>				
+			</control>			
 		</control>
 	</include>
 	<include name="View_514_PosterShift">
