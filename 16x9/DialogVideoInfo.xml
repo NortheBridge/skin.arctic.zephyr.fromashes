@@ -2207,7 +2207,8 @@
                     <autoscroll>false</autoscroll>
                     <textcolor>Black700</textcolor>
                     <label>$VAR[Plot]</label>
-                </control>
+				</control>
+
                 <!-- Arrow down -->
                 <control type="image">
                     <left>942</left>
