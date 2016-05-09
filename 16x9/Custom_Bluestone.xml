@@ -142,7 +142,7 @@
 			<posy>260</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Legacy Handler JIT01: [COLOR=$VAR[ColourHighlight]]$INFO[System.AddonVersion(script.skin.info.service)][/COLOR]</label>
+			<label>Legacy Handler JIT01: [COLOR=$VAR[ColourHighlight]]Please Remove[/COLOR]</label>
 		</control>
 	<control type="label">
 			<description>Legacy_ScriptCheck2</description>
@@ -162,7 +162,7 @@
 			<posy>320</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Legacy Handler JIT02: [COLOR=$VAR[ColourHighlight]]$INFO[System.AddonVersion(script.imdb250.view)][/COLOR]</label>
+			<label>Legacy Handler JIT02: [COLOR=$VAR[ColourHighlight]]Please Remove[/COLOR]</label>
 		</control>
 		<!-- End Legacy Script Checks -->
 		<!-- While others like to compare me to Person of Interest's Root... so yes, don't fail these checks. Could this be another Easter Egg Ms. Groves?-->
