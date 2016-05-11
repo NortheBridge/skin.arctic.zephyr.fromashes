@@ -109,14 +109,14 @@
                         </control>
                         <control type="label">
                             <centerright>110</centerright>
-                            <centertop>35</centertop>
+						    <centertop>35</centertop>
                             <width>32</width>
                             <height>32</height>
                             <font>symbolview</font>
                             <label>$VAR[PercentWatchedLabel9500]</label>
                             <textcolor>$VAR[ColourHighlight2]</textcolor>
                             <visible>!stringcompare(ListItem.Label,..)</visible>
-                        </control>
+                        </control>						
                         <control type="label">
                             <right>30</right>
                             <width>500</width>
@@ -232,9 +232,9 @@
                 <width>8</width>
                 <onleft>9501</onleft>
                 <onright>9501</onright>
-                <texturesliderbackground border="4" colordiffuse="Dark4">scrollbar/scrollv.png</texturesliderbackground>
-                <texturesliderbar border="4" colordiffuse="Dark3">scrollbar/scrollv.png</texturesliderbar>
-                <texturesliderbarfocus border="4" colordiffuse="Dark2">scrollbar/scrollv.png</texturesliderbarfocus>
+<!--Changed-->  <texturesliderbackground border="4" colordiffuse="$VAR[ScrollbarBGColour]">scrollbar/scrollv.png</texturesliderbackground>
+<!--Changed-->  <texturesliderbar border="4" colordiffuse="$VAR[ScrollbarUnFocusedColour]">scrollbar/scrollv.png</texturesliderbar>
+<!--Changed-->  <texturesliderbarfocus border="4" colordiffuse="$VAR[ScrollbarFocusedColour]">scrollbar/scrollv.png</texturesliderbarfocus>
                 <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
             </control>
         </control>

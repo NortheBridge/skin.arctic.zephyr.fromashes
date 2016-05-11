@@ -205,7 +205,7 @@
 							<align>left</align>
 							<font>Small</font>
 							<scroll>true</scroll>
-							<textcolor>Black700</textcolor>
+<!--Changed-->				<textcolor>$VAR[ViewsDetailsHighlightTextColour]</textcolor><!--Black700-->
 							<label fallback="N/A">$INFO[ListItem.Year]$INFO[ListItem.Duration, - ,mins]$INFO[ListItem.Season, - S,,]$INFO[ListItem.Episode,/,,][CR][CR][I][B]$VAR[LabelPlotBoxLong][/I][/B]</label>
 							<include>DialogVideoInfoAnimation</include>
 						</control>
@@ -263,7 +263,7 @@
 							<align>left</align>
 							<font>Small</font>
 							<scroll>true</scroll>
-							<textcolor>Black700</textcolor>
+<!--Changed-->				<textcolor>$VAR[ViewsDetailsHighlightTextColour]</textcolor><!--Black700-->
 							<label fallback="N/A">$INFO[ListItem.Year]$INFO[ListItem.Duration, - ,mins]$INFO[ListItem.Season, - S,,]$INFO[ListItem.Episode,/,,][CR][CR][I][B]$VAR[LabelPlotBoxLong][/I][/B]</label>
 							<include>DialogVideoInfoAnimation</include>
 						</control>
@@ -479,7 +479,7 @@
 							<align>left</align>
 							<font>Small</font>
 							<scroll>true</scroll>
-							<textcolor>Black700</textcolor>
+<!--Changed-->				<textcolor>$VAR[ViewsDetailsHighlightTextColour]</textcolor><!--Black700-->
 							<label fallback="N/A">$INFO[ListItem.Year]$INFO[ListItem.Duration, - ,mins]$INFO[ListItem.Season, - S,,]$INFO[ListItem.Episode,/,,][CR][CR][I][B]$VAR[LabelPlotBoxLong][/I][/B]</label>
 							<include>DialogVideoInfoAnimation</include>
 						</control>
@@ -537,7 +537,7 @@
 							<align>left</align>
 							<font>Small</font>
 							<scroll>true</scroll>
-							<textcolor>Black700</textcolor>
+<!--Changed-->				<textcolor>$VAR[ViewsDetailsHighlightTextColour]</textcolor><!--Black700-->
 							<label fallback="N/A">$INFO[ListItem.Year]$INFO[ListItem.Duration, - ,mins]$INFO[ListItem.Season, - S,,]$INFO[ListItem.Episode,/,,][CR][CR][I][B]$VAR[LabelPlotBoxLong][/I][/B]</label>
 							<include>DialogVideoInfoAnimation</include>
 						</control>

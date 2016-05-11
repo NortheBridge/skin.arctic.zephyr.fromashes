@@ -89,16 +89,37 @@
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture diffuse="diffuse/pvrinfo.png" background="true">$VAR[PosterImage]</texture>
 					</control>
-					<control type="label">
+                    <control type="label">
+                        <centerright>32</centerright>
+                        <centertop>35</centertop>
+                        <width>32</width>
+                        <height>32</height>
+                        <font>symbolview</font>
+                        <label>$VAR[PercentWatchedLabel]</label>
+                        <textcolor>$VAR[UnWatchedHighlightColor]</textcolor><!--Changed for Color Customization-->
+                        <!--<visible>!stringcompare(ListItem.Label,..)</visible>-->
+<!--Added-->			<visible>!stringcompare(ListItem.Label,..) + stringcompare(ListItem.Overlay,OverlayUnwatched.png) + [!Skin.HasSetting(furniture.hidenew) | Skin.HasSetting(furniture.unwatched)] + !ListItem.IsResumable</visible>
+                    </control>
+<!--Added-->		<control type="label">
 						<centerright>32</centerright>
 						<centertop>35</centertop>
 						<width>32</width>
 						<height>32</height>
 						<font>symbolview</font>
 						<label>$VAR[PercentWatchedLabel]</label>
-						<textcolor>$VAR[ColourHighlight2]</textcolor>
-						<visible>!stringcompare(ListItem.Label,..)</visible>
+						<textcolor>$VAR[InProgressHighlightColor]</textcolor>
+						<visible>!stringcompare(ListItem.Label,..) + ListItem.IsPlaying</visible>
 					</control>
+<!--Added-->		<control type="label">
+						<centerright>32</centerright>
+						<centertop>35</centertop>
+						<width>32</width>
+						<height>32</height>
+						<font>symbolview</font>
+						<label>$VAR[PercentWatchedLabel]</label>
+						<textcolor>$VAR[WatchedHighlightColor]</textcolor>
+						<visible>!stringcompare(ListItem.Label,..) + stringcompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(furniture.unwatched)</visible>
+					</control>					
 					<control type="label">
 						<font>TinyBold</font>
 						<left>15</left>
@@ -152,15 +173,36 @@
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture diffuse="diffuse/pvrinfo.png" background="true">$VAR[PosterImage]</texture>
 					</control>
-					<control type="label">
+                    <control type="label">
+                        <centerright>32</centerright>
+                        <centertop>35</centertop>
+                        <width>32</width>
+                        <height>32</height>
+                        <font>symbolview</font>
+                        <label>$VAR[PercentWatchedLabel]</label>
+                        <textcolor>$VAR[UnWatchedHighlightColor]</textcolor><!--Changed for Color Customization-->
+                        <!--<visible>!stringcompare(ListItem.Label,..)</visible>-->
+<!--Added-->			<visible>!stringcompare(ListItem.Label,..) + stringcompare(ListItem.Overlay,OverlayUnwatched.png) + [!Skin.HasSetting(furniture.hidenew) | Skin.HasSetting(furniture.unwatched)] + !ListItem.IsResumable</visible>
+                    </control>
+<!--Added-->		<control type="label">
 						<centerright>32</centerright>
 						<centertop>35</centertop>
 						<width>32</width>
 						<height>32</height>
 						<font>symbolview</font>
 						<label>$VAR[PercentWatchedLabel]</label>
-						<textcolor>$VAR[ColourHighlight2]</textcolor>
-						<visible>!stringcompare(ListItem.Label,..)</visible>
+						<textcolor>$VAR[InProgressHighlightColor]</textcolor>
+						<visible>!stringcompare(ListItem.Label,..) + ListItem.IsPlaying</visible>
+					</control>
+<!--Added-->		<control type="label">
+						<centerright>32</centerright>
+						<centertop>35</centertop>
+						<width>32</width>
+						<height>32</height>
+						<font>symbolview</font>
+						<label>$VAR[PercentWatchedLabel]</label>
+						<textcolor>$VAR[WatchedHighlightColor]</textcolor>
+						<visible>!stringcompare(ListItem.Label,..) + stringcompare(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(furniture.unwatched)</visible>
 					</control>
 					<control type="image">
 						<left>3</left>
@@ -223,9 +265,9 @@
 				<width>8</width>
 				<onleft>500</onleft>
 				<onright condition="!Skin.HasSetting(global.kioskmode)">9000</onright>
-				<texturesliderbackground border="4" colordiffuse="Dark4">scrollbar/scrollv.png</texturesliderbackground>
-				<texturesliderbar border="4" colordiffuse="Dark3">scrollbar/scrollv.png</texturesliderbar>
-				<texturesliderbarfocus border="4" colordiffuse="Dark2">scrollbar/scrollv.png</texturesliderbarfocus>
+<!--Changed-->	<texturesliderbackground border="4" colordiffuse="$VAR[ScrollbarBGColour]">scrollbar/scrollv.png</texturesliderbackground>
+<!--Changed-->	<texturesliderbar border="4" colordiffuse="$VAR[ScrollbarUnFocusedColour]">scrollbar/scrollv.png</texturesliderbar>
+<!--Changed-->	<texturesliderbarfocus border="4" colordiffuse="$VAR[ScrollbarFocusedColour]">scrollbar/scrollv.png</texturesliderbarfocus>
 				<animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 		</control>

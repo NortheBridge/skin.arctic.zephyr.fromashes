@@ -391,10 +391,10 @@
                     <height>4</height>
                     <info>ListItem.PercentPlayed</info>
                     <overlaytexture>-</overlaytexture>
-                    <texturebg colordiffuse="2f5f5f5f">osd/progress-bg.png</texturebg>
+<!--Changed-->      <texturebg colordiffuse="$VAR[OSDProgressBarBGColour]">osd/progress-bg.png</texturebg>
                     <lefttexture colordiffuse="$INFO[Window(home).Property(VideoInfo.ImageColor)]">osd/progress-end.png</lefttexture>
                     <midtexture colordiffuse="$INFO[Window(home).Property(VideoInfo.ImageColor)]">osd/progress-end.png</midtexture>
-                    <righttexture colordiffuse="PanelWhite70">osd/progress-end.png</righttexture>
+<!--Changed-->      <righttexture colordiffuse="$VAR[OSDProgressBarCacheEndColour]">osd/progress-end.png</righttexture>
                     <visible>ListItem.IsResumable</visible>
                 </control>
                 <control type="image">
@@ -2234,7 +2234,7 @@
                     <showonepage>false</showonepage>
                     <orientation>vertical</orientation>
                     <visible allowhiddenfocus="true">Control.HasFocus(4000)</visible>
-                    <texturesliderbarfocus border="3">scrollbar/scrollv.png</texturesliderbarfocus>
+<!--Changed-->      <texturesliderbarfocus border="3" colordiffuse="$VAR[ScrollbarFocusedColour]">scrollbar/scrollv.png</texturesliderbarfocus>
                     <animation condition="System.IdleTime(1)" effect="fade" end="0" start="100" time="200">Conditional</animation>
                 </control>
             </control>
