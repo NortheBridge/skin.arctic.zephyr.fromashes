@@ -454,7 +454,7 @@
 				<height>48</height>
 				<align>left</align>
 				<label>$LOCALIZE[31138]...</label>
-				<textcolor>Dark1</textcolor>
+				<textcolor>Black70</textcolor>
 			</control>
 		</control>
 	</include>
@@ -582,8 +582,8 @@
 					<aligny>center</aligny>
 					<height>80</height>
 					<font>MediumBold</font>
-<!--Changed-->		<textcolor>$VAR[WidgetTitleColour]</textcolor>
-<!--Changed-->		<selectedcolor>$VAR[WidgetTitleColour]</selectedcolor>
+					<textcolor>Dark1</textcolor>
+					<selectedcolor>Dark1</selectedcolor>
 					<label>$VAR[WidgetTitle]</label>
 				</control>
 				<control type="textbox">
@@ -594,8 +594,8 @@
 					<font>Tiny</font>
 					<align>justify</align>
 					<autoscroll>false</autoscroll>
-<!--Changed-->		<textcolor>$VAR[WidgetPlotColour]</textcolor>
-<!--Changed-->		<selectedcolor>$VAR[WidgetPlotColour]</selectedcolor>
+					<textcolor>Dark2</textcolor>
+					<selectedcolor>Dark2</selectedcolor>
 					<shadowcolor>noop</shadowcolor>
 					<label>$VAR[WidgetPlot]</label>
 				</control>
@@ -606,8 +606,8 @@
 					<bottom>324</bottom>
 					<align>right</align>
 					<autoscroll>false</autoscroll>
-<!--Changed-->		<textcolor>$VAR[WidgetSubLabelColour]</textcolor>
-<!--Changed-->		<selectedcolor>$VAR[WidgetSubLabelColour]</selectedcolor>
+					<textcolor>Dark1</textcolor>
+					<selectedcolor>Dark1</selectedcolor>
 					<label>$VAR[WidgetSubLabel]</label>
 					<font>Flag</font>
 				</control>
@@ -668,8 +668,8 @@
 					<aligny>center</aligny>
 					<height>80</height>
 					<font>MediumBold</font>
-<!--Changed-->		<textcolor>$VAR[WidgetTitleColour]</textcolor>
-<!--Changed-->		<selectedcolor>$VAR[WidgetTitleColour]</selectedcolor>
+					<textcolor>Dark1</textcolor>
+					<selectedcolor>Dark1</selectedcolor>
 					<label>$VAR[WidgetTitle]</label>
 				</control>
 				<control type="textbox">
@@ -680,8 +680,8 @@
 					<font>Tiny</font>
 					<align>justify</align>
 					<autoscroll>false</autoscroll>
-<!--Changed-->		<textcolor>$VAR[WidgetPlotColour]</textcolor>
-<!--Changed-->		<selectedcolor>$VAR[WidgetPLotColour]</selectedcolor>
+					<textcolor>Dark2</textcolor>
+					<selectedcolor>Dark2</selectedcolor>
 					<shadowcolor>noop</shadowcolor>
 					<label>$VAR[WidgetPlot]</label>
 				</control>
@@ -692,8 +692,8 @@
 					<bottom>324</bottom>
 					<align>right</align>
 					<autoscroll>false</autoscroll>
-<!--Changed-->		<textcolor>$VAR[WidgetSubLabelColour]</textcolor>
-<!--Changed-->		<selectedcolor>$VAR[WidgetSubLabelColour]</selectedcolor>
+					<textcolor>Dark1</textcolor>
+					<selectedcolor>Dark1</selectedcolor>
 					<label>$VAR[WidgetSubLabel]</label>
 					<font>Flag</font>
 				</control>
@@ -1231,7 +1231,8 @@
 						<height>117</height>
 						<visible>Container(301).IsUpdating</visible>
 						<animation effect="fade" start="0" end="100" delay="1000" time="200" reversible="false">Visible</animation>
-                        <control type="image">
+
+<!--Added-->            <control type="image">
 				            <description>background image</description>
 				            <posx>0</posx>
 				            <posy>0</posy>
@@ -1239,7 +1240,7 @@
 				            <height>117</height>
 				            <animation effect="fade" start="100" end="90" condition="true">Conditional</animation>
 <!--Changed-->	            <texture border="16" colordiffuse="$VAR[SpinnerBackgroundColour]">common/rounded-shadow8.png</texture>
-			            </control>
+			            </control>						
 						<control type="image">
 							<description>Busy animation</description>
 							<posx>30</posx>
@@ -1258,7 +1259,7 @@
 							<height>48</height>
 							<align>left</align>
 							<label>$LOCALIZE[31138]...</label>
-							<textcolor>Dark1</textcolor>
+							<textcolor>Black70</textcolor>
 						</control>
 
 					</control>
@@ -1291,8 +1292,8 @@
 							<aligny>center</aligny>
 							<height>80</height>
 							<font>MediumBold</font>
-<!--Changed-->				<textcolor>$VAR[WidgetTitleColour]</textcolor>
-<!--Changed-->				<selectedcolor>$VAR[WidgetTitleColour]</selectedcolor>
+							<textcolor>Dark1</textcolor>
+							<selectedcolor>Dark1</selectedcolor>
 							<label>$VAR[WidgetTitle]</label>
 						</control>
 						<control type="textbox">
@@ -1303,8 +1304,8 @@
 							<font>Tiny</font>
 							<align>justify</align>
 							<autoscroll>false</autoscroll>
-<!--Changed-->				<textcolor>$VAR[WidgetPlotColour]</textcolor>
-<!--Changed-->				<selectedcolor>$VAR[WidgetPlotColour]</selectedcolor>
+							<textcolor>Dark2</textcolor>
+							<selectedcolor>Dark2</selectedcolor>
 							<shadowcolor>noop</shadowcolor>
 							<label>$VAR[WidgetPlot]</label>
 						</control>
@@ -1315,8 +1316,8 @@
 							<height>40</height>
 							<align>right</align>
 							<autoscroll>false</autoscroll>
-<!--Changed-->				<textcolor>$VAR[WidgetSubLabelColour]</textcolor>
-<!--Changed-->				<selectedcolor>$VAR[WidgetSubLabelColour]</selectedcolor>
+							<textcolor>Dark2</textcolor>
+							<selectedcolor>Dark2</selectedcolor>
 							<label>$VAR[WidgetSubLabel]</label>
 							<font>Flag</font>
 						</control>
@@ -1453,7 +1454,7 @@
 				<height>128</height>
 				<centerleft>50%</centerleft>
 				<centertop>40%</centertop>								
-<!--Changed-->  <texture colordiffuse="$VAR[ColourHighlight]">$INFO[ListItem.Icon]</texture>
+				<texture colordiffuse="Dark1">$INFO[ListItem.Icon]</texture>
 				<textcolor>Dark2</textcolor>
 				<visible>substring(ListItem.Icon,icons)</visible>
 			</control>
@@ -1716,7 +1717,8 @@
 					<visible>Container(301).IsUpdating | [!Weather.IsFetched + StringCompare(Container(300).ListItem.Property(widget),Weather)]</visible>
 					<include>Animation.FadeIn</include>
 					<include>Animation.FadeOut</include>
-					<control type="image">
+					
+<!--Added-->        <control type="image">
 				        <description>background image</description>
 				        <posx>0</posx>
 				        <posy>0</posy>
@@ -1724,7 +1726,7 @@
 				        <height>117</height>
 				        <animation effect="fade" start="100" end="90" condition="true">Conditional</animation>
 <!--Changed-->	        <texture border="16" colordiffuse="$VAR[SpinnerBackgroundColour]">common/rounded-shadow8.png</texture>
-			        </control>
+			        </control>					
 					<control type="image">
 						<description>Busy animation</description>
 						<posx>30</posx>
@@ -1742,7 +1744,7 @@
 						<height>48</height>
 						<align>left</align>
 						<label>$LOCALIZE[31138]...</label>
-						<textcolor>Dark1</textcolor>
+						<textcolor>Black70</textcolor>
 					</control>
 				</control>
 				<control type="group">
@@ -1757,7 +1759,7 @@
 						<width>1322</width>
 						<top>256</top>
 						<align>left</align>
-						<textcolor>Dark2</textcolor><!--Dark2-->
+						<textcolor>Dark2</textcolor>
 						<label>$VAR[WidgetLabel]</label>
 						<include>Animation.FadeIn</include>
 						<include>Animation.FadeOut</include>
@@ -1909,8 +1911,7 @@
 							<font>SmallBold</font>
 							<width>100%</width>
 							<align>left</align>
-<!--Changed-->				<textcolor>$VAR[WidgetTitleColour]</textcolor>
-<!--Added-->                <selectedcolor>$VAR[WidgetTitleColour]</selectedcolor>
+							<textcolor>Dark1</textcolor>
 							<label>$VAR[WidgetTitle]</label>
 						</control>
 						<control type="textbox">
@@ -1918,16 +1919,14 @@
 							<width>100%</width>
 							<height>127</height>
 							<align>left</align>
-<!--Changed-->				<textcolor>$VAR[WidgetPlotColour]</textcolor>
-<!--Added-->                <selectedcolor>$VAR[WidgetPlotColour]</selectedcolor>
+							<textcolor>Dark2</textcolor>
 							<label>$VAR[WidgetPlot]</label>
 						</control>
 						<control type="label">
 							<font>Tiny</font>
 							<width>100%</width>
 							<align>left</align>
-<!--Changed-->				<textcolor>$VAR[WidgetSubLabelColour]</textcolor>
-<!--Added-->                <selectedcolor>$VAR[WidgetSubLabelColour]</selectedcolor>
+							<textcolor>Dark2</textcolor>
 							<label>$VAR[WidgetSubLabel]</label>
 						</control>
 					</control>
@@ -2586,10 +2585,10 @@
 								<height>4</height>
 								<info>ListItem.PercentPlayed</info>
 								<overlaytexture>-</overlaytexture>
-<!--Changed-->	                <texturebg colordiffuse="$VAR[OSDProgressBarBGColour]">osd/progress-bg.png</texturebg>
-<!--Changed-->					<lefttexture colordiffuse="$VAR[OSDProgressBarCacheColour]">osd/progress-end.png</lefttexture>
-<!--Changed-->					<midtexture colordiffuse="$VAR[OSDProgressBarCacheColour]">osd/progress-end.png</midtexture>
-<!--Changed-->					<righttexture colordiffuse="$VAR[OSDProgressBarCacheEndColour]">osd/progress-end.png</righttexture>
+								<texturebg colordiffuse="2f5f5f5f">osd/progress-bg.png</texturebg>
+								<lefttexture colordiffuse="$VAR[ColourHighlight2]">osd/progress-end.png</lefttexture>
+								<midtexture colordiffuse="$VAR[ColourHighlight2]">osd/progress-end.png</midtexture>
+								<righttexture colordiffuse="PanelWhite70">osd/progress-end.png</righttexture>
 								<visible>ListItem.IsResumable</visible>
 							</control>
 						</itemlayout>
@@ -2712,10 +2711,10 @@
 								<height>4</height>
 								<info>ListItem.PercentPlayed</info>
 								<overlaytexture>-</overlaytexture>
-<!--Changed-->					<texturebg colordiffuse="$VAR[OSDProgressBarBGColour]">osd/progress-bg.png</texturebg>
-<!--Changed-->					<lefttexture colordiffuse="$VAR[OSDProgressBarCacheColour]">osd/progress-end.png</lefttexture>
-<!--Changed-->					<midtexture colordiffuse="$VAR[OSDProgressBarCacheColour]">osd/progress-end.png</midtexture>
-<!--Changed-->					<righttexture colordiffuse="$VAR[OSDProgressBarCacheEndColour]">osd/progress-end.png</righttexture>
+								<texturebg colordiffuse="2f5f5f5f">osd/progress-bg.png</texturebg>
+								<lefttexture colordiffuse="$VAR[ColourHighlight2]">osd/progress-end.png</lefttexture>
+								<midtexture colordiffuse="$VAR[ColourHighlight2]">osd/progress-end.png</midtexture>
+								<righttexture colordiffuse="PanelWhite70">osd/progress-end.png</righttexture>
 								<visible>ListItem.IsResumable</visible>
 							</control>
 							<control type="image">

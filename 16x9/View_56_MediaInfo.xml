@@ -62,7 +62,7 @@
 				<control type="image">
 					<width>PosterW</width>
 					<height>PosterH</height>
-<!--Changed-->		<texture border="5" colordiffuse="$VAR[ViewsSelectHighlight]>common/box.png</texture>
+<!--Changed-->		<texture border="5" colordiffuse="$VAR[ViewsSelectHighlight]">common/box.png</texture>
 					<visible>!Skin.Hassetting(views.cases)</visible>
 				</control>
 				<control type="image">
