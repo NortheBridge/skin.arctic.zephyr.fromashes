@@ -433,7 +433,7 @@
                     <texturenofocus colordiffuse="White70" border="5">common/box.png</texturenofocus>
                     <texturefocus colordiffuse="$INFO[Window(home).Property(VideoInfo.ImageColor)]" border="5">common/box.png</texturefocus>
                     <onup>9000</onup>
-                    <ondown>7001</ondown>
+                    <ondown>7002</ondown>
                     <onleft>Close</onleft>
                     <onright>9000</onright>
                     <onfocus>ClearProperty(Similar,home)</onfocus>
@@ -442,13 +442,31 @@
                     <textcolor>Black700</textcolor>
                     <include>DefDialogInfoButtons</include>
                 </control>
-                <control id="7001" type="button">
+				<!-- Rotten Tomatoes -->
+                <control id="7002" type="button">
                     <top>557</top>
                     <width>320</width>
                     <height>53</height>
                     <texturenofocus colordiffuse="White70" border="5">common/box.png</texturenofocus>
                     <texturefocus colordiffuse="$INFO[Window(home).Property(VideoInfo.ImageColor)]" border="5">common/box.png</texturefocus>
-                    <onup>7000</onup>
+                    <onup>9000</onup>
+                    <ondown>7001</ondown>
+                    <onleft>Close</onleft>
+                    <onright>9000</onright>
+                    <onfocus>ClearProperty(Similar,home) + !Control.HasFocus(71)</onfocus>
+                    <label>Rotten Tomatoes</label>
+                    <font>SmallBold</font>
+                    <textcolor>Black700</textcolor>
+                    <include>DefDialogInfoButtons</include>
+                </control>
+				<!-- Rotten Tomatoes Ratings Button End -->
+                <control id="7001" type="button">
+                    <top>619</top>
+                    <width>320</width>
+                    <height>53</height>
+                    <texturenofocus colordiffuse="White70" border="5">common/box.png</texturenofocus>
+                    <texturefocus colordiffuse="$INFO[Window(home).Property(VideoInfo.ImageColor)]" border="5">common/box.png</texturefocus>
+                    <onup>7002</onup>
                     <ondown condition="!IsEmpty(Container(5000).ListItem.Label)">5000</ondown>
                     <onleft>Close</onleft>
                     <onright condition="!IsEmpty(Container(5000).ListItem.Label)">5000</onright>
