@@ -677,28 +677,34 @@
 						<width>1310</width>
 						<include>DefSettingsButton</include>
 						<label>Blur Level</label>
-						<label2 fallback="10">$VAR[VideoInfoBlurLevel]</label2>
-						<onclick>SetProperty(Dialog.NumItems,10)</onclick>
-						<onclick>SetProperty(Dialog.1.Label,2)</onclick>
-						<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(VideoInfoBlur,2))</onclick>
-						<onclick>SetProperty(Dialog.2.Label,4)</onclick>
-						<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(VideoInfoBlur,4))</onclick>
-						<onclick>SetProperty(Dialog.3.Label,6)</onclick>
-						<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(VideoInfoBlur,6))</onclick>
-						<onclick>SetProperty(Dialog.4.Label,8)</onclick>
-						<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString(VideoInfoBlur,8))</onclick>
-						<onclick>SetProperty(Dialog.5.Label,10 - Default)</onclick>
-						<onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString(VideoInfoBlur,10))</onclick>
-						<onclick>SetProperty(Dialog.6.Label,12)</onclick>
-						<onclick>SetProperty(Dialog.6.BuiltIn,Skin.SetString(VideoInfoBlur,12))</onclick>
-						<onclick>SetProperty(Dialog.7.Label,14)</onclick>
-						<onclick>SetProperty(Dialog.7.BuiltIn,Skin.SetString(VideoInfoBlur,14))</onclick>
-						<onclick>SetProperty(Dialog.8.Label,16)</onclick>
-						<onclick>SetProperty(Dialog.8.BuiltIn,Skin.SetString(VideoInfoBlur,16))</onclick>
-						<onclick>SetProperty(Dialog.9.Label,18)</onclick>
-						<onclick>SetProperty(Dialog.9.BuiltIn,Skin.SetString(VideoInfoBlur,18))</onclick>
-						<onclick>SetProperty(Dialog.10.Label,20)</onclick>
-						<onclick>SetProperty(Dialog.10.BuiltIn,Skin.SetString(VideoInfoBlur,20))</onclick>
+						<label2 fallback="2">$VAR[VideoInfoBlurLevel]</label2>
+						<onclick>SetProperty(Dialog.NumItems,13)</onclick>
+						<onclick>SetProperty(Dialog.1.Label,100)</onclick>
+						<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(VideoInfoBlur,100))</onclick>
+						<onclick>SetProperty(Dialog.2.Label,2)</onclick>
+						<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(VideoInfoBlur,2))</onclick>
+						<onclick>SetProperty(Dialog.3.Label,4)</onclick>
+						<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(VideoInfoBlur,4))</onclick>
+						<onclick>SetProperty(Dialog.4.Label,6)</onclick>
+						<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString(VideoInfoBlur,6))</onclick>
+						<onclick>SetProperty(Dialog.5.Label,8)</onclick>
+						<onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString(VideoInfoBlur,8))</onclick>
+						<onclick>SetProperty(Dialog.6.Label,10 - Default)</onclick>
+						<onclick>SetProperty(Dialog.6.BuiltIn,Skin.SetString(VideoInfoBlur,10))</onclick>
+						<onclick>SetProperty(Dialog.7.Label,12)</onclick>
+						<onclick>SetProperty(Dialog.7.BuiltIn,Skin.SetString(VideoInfoBlur,12))</onclick>
+						<onclick>SetProperty(Dialog.8.Label,14)</onclick>
+						<onclick>SetProperty(Dialog.8.BuiltIn,Skin.SetString(VideoInfoBlur,14))</onclick>
+						<onclick>SetProperty(Dialog.9.Label,16)</onclick>
+						<onclick>SetProperty(Dialog.9.BuiltIn,Skin.SetString(VideoInfoBlur,16))</onclick>
+						<onclick>SetProperty(Dialog.10.Label,18)</onclick>
+						<onclick>SetProperty(Dialog.10.BuiltIn,Skin.SetString(VideoInfoBlur,18))</onclick>
+						<onclick>SetProperty(Dialog.11.Label,20)</onclick>
+						<onclick>SetProperty(Dialog.11.BuiltIn,Skin.SetString(VideoInfoBlur,20))</onclick>
+						<onclick>SetProperty(Dialog.12.Label,30)</onclick>
+						<onclick>SetProperty(Dialog.12.BuiltIn,Skin.SetString(VideoInfoBlur,30))</onclick>
+						<onclick>SetProperty(Dialog.13.Label,50)</onclick>
+						<onclick>SetProperty(Dialog.13.BuiltIn,Skin.SetString(VideoInfoBlur,50))</onclick>
 						<onclick>RunScript(script.toolbox,info=selectdialog,header=Select Blur Level)</onclick>
 						<visible>ControlGroup(9100).HasFocus(9106)</visible>
 					</control>
@@ -775,163 +781,465 @@
 						<label>Import skin settings</label>
 						<onclick>RunScript(script.toolbox,info=importskinsettings)</onclick>
 					</control>
-<!-- Colours -->
-<!-- Main Color -->
+<!-- Colours Section-->
+    <!-- Main Colour Heading -->
+					<control type="label" id="9281">
+                        <!--Seperator-->
+                        <width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <height>70</height>
+						<font>MediumBold</font>
+						<label> Main Colour Options</label>
+					</control>
+					<control type="radiobutton" id="92811">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[ColourHighlight]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[ColourHighlight]">common/circle.png</textureradionofocus>
+						<include>DefSettingsButton</include>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=focuscolor.name)</onclick>
+						<label> - Main Highlight Colour</label>
+					</control>
+    <!-- Reset Main Color -->
+					<control type="button" id="92812">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(focuscolor.name)</onclick>
+					</control>
+    <!-- Second Color -->
+					<control type="radiobutton" id="92813">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[ColourHighlight2]">common/circle.png</textureradionofocus>
+						<include>DefSettingsButton</include>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=focuscolor2.name)</onclick>
+						<label> - Highlight Colour 2</label>
+					</control>
+    <!-- Reset Secondary Color -->
+					<control type="button" id="92814">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(focuscolor2.name)</onclick>
+					</control>
+    <!-- Text Color -->
+					<control type="radiobutton" id="92815">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[ColourSelected]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[ColourSelected]">common/circle.png</textureradionofocus>
+						<include>DefSettingsButton</include>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=selectedcolor.name)</onclick>
+						<label> - Selected Main Text Colour</label>
+					</control>
+    <!-- Reset Text Color -->
+					<control type="button" id="92816">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(selectedcolor.name)</onclick>
+					</control>
+    <!-- BusySpinner Colour -->
+					<control type="radiobutton" id="92817">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[SpinnerHighlight]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[SpinnerHighlight]">common/circle.png</textureradionofocus>
+						<include>DefSettingsButton</include>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=spinnercolor.name)</onclick>
+						<label> - Spinner Highlight Colour</label>
+					</control>					
+    <!--Reset Busy Spinner Colour -->					
+					<control type="button" id="92818">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(spinnercolor.name)</onclick>
+					</control>
+    <!-- Busy Spinner Background Colour -->
+					<control type="radiobutton" id="92819">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[SpinnerBackgroundColour]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[SpinnerBackgroundColour]">common/circle.png</textureradionofocus>
+						<include>DefSettingsButton</include>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=spinnerbgcolor.name)</onclick>
+						<label> - Spinner Background Colour</label>
+					</control>					
+    <!-- Reset Busy Spinner Background -->					
 					<control type="button" id="9282">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
 						<include>DefSettingsButton</include>
-						<label> - Main Highlight Colour</label>
-						<label2>[UPPERCASE][COLOR=$VAR[ColourHighlight]]$INFO[Skin.String(focuscolor.name)][/COLOR][/UPPERCASE]</label2>
-						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=focuscolor.name)</onclick>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(spinnerbgcolor.name)</onclick>
 					</control>
-<!-- Reset Main Color -->
-					<control type="button" id="92821">
+					
+<!-- Home Section -->					
+<!-- Home Colour Heading -->					
+					<control type="label" id="92826">
+                        <!--Seperator-->
+                        <width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <height>70</height>
+						<font>MediumBold</font>
+						<label> Home Colour Options</label>
+					</control>
+<!-- Widget Background Colour -->
+					<control type="radiobutton" id="92827">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[WidgetBackgroundColour]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[WidgetBackgroundColour]">common/circle.png</textureradionofocus>
 						<include>DefSettingsButton</include>
-						<label> - $LOCALIZE[409]</label>
-						<onclick>Skin.SetString(focuscolor.name,FFEE7B0A)</onclick>
-					</control>
-<!-- Second Color -->
-					<control type="button" id="92822">
-						<width>1310</width>
-						<visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<include>DefSettingsButton</include>
-						<label> - Highlight Colour 2</label>
-						<label2>[UPPERCASE][COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(focuscolor2.name)][/COLOR][/UPPERCASE]</label2>
-						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=focuscolor2.name)</onclick>
-					</control>
-<!-- Reset Secondary Color -->
-					<control type="button" id="92823">
-						<width>1310</width>
-						<visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<include>DefSettingsButton</include>
-						<label> - $LOCALIZE[409]</label>
-						<onclick>Skin.SetString(focuscolor2.name,FFF507B9)</onclick>
-					</control>
-<!-- Text Color -->
-					<control type="button" id="92824">
-						<width>1310</width>
-						<visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<include>DefSettingsButton</include>
-						<label> - Selected Text Colour</label>
-						<label2>[UPPERCASE][COLOR=$VAR[ColourSelected]]$INFO[Skin.String(selectedcolor.name)][/COLOR][/UPPERCASE]</label2>
-						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=selectedcolor.name)</onclick>
-					</control>
-<!-- Reset Text Color -->
-					<control type="button" id="92825">
-						<width>1310</width>
-						<visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<include>DefSettingsButton</include>
-						<label> - $LOCALIZE[409]</label>
-						<onclick>Skin.SetString(selectedcolor.name,FFEDEDED)</onclick>
-					</control>
-<!-- BusySpinner Colour -->					
-					<control type="button" id="92826">
-						<width>1310</width>
-						<visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<include>DefSettingsButton</include>
-						<label> - Spinner Highlight Colour</label>
-						<label2>[UPPERCASE][COLOR=$VAR[SpinnerHighlight]]$INFO[Skin.String(spinnercolor.name)][/COLOR][/UPPERCASE]</label2>
-						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=spinnercolor.name)</onclick>
-					</control>
-<!--Reset Busy Spinner Colour -->					
-					<control type="button" id="92827">
-						<width>1310</width>
-						<visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<include>DefSettingsButton</include>
-						<label> - $LOCALIZE[409]</label>
-						<onclick>Skin.SetString(spinnercolor.name,FFEE7B0A)</onclick>
-					</control>
-<!-- Busy Spinner Background Colour -->					
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=widgetbackgroundcolor.name)</onclick>
+						<label> - Widget Background Colour</label>
+					</control>					
+<!-- Reset Widget Background -->					
 					<control type="button" id="92828">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
 						<include>DefSettingsButton</include>
-						<label> - Spinner Background Colour</label>
-						<label2>[UPPERCASE][COLOR=$VAR[SpinnerBackgroundColour]]$INFO[Skin.String(spinnerbgcolor.name)][/COLOR][/UPPERCASE]</label2>
-						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=spinnerbgcolor.name)</onclick>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(widgetbackgroundcolor.name)</onclick>
 					</control>
-<!-- Reset Busy Spinner Background -->					
-					<control type="button" id="92829">
+<!-- Widget Title Colour -->
+					<control type="radiobutton" id="9283">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[WidgetTitleColour]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[WidgetTitleColour]">common/circle.png</textureradionofocus>
 						<include>DefSettingsButton</include>
-						<label> - $LOCALIZE[409]</label>
-						<onclick>Skin.SetString(spinnerbgcolor.name,FF333333)</onclick>
-					</control>
-<!-- Widget Background Colour -->					
-					<control type="button" id="9283">
-						<width>1310</width>
-						<visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<include>DefSettingsButton</include>
-						<label> - Widget Background Colour</label>
-						<label2>[UPPERCASE][COLOR=$VAR[WidgetBackgroundColour]]$INFO[Skin.String(widgetbackgroundcolor.name)][/COLOR][/UPPERCASE]</label2>
-						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=widgetbackgroundcolor.name)</onclick>
-					</control>
-<!-- Reset Widget Background -->					
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=widgettitlecolor.name)</onclick>
+						<label> - Widget Title Colour</label>
+					</control>					
+<!-- Reset Widget Title -->					
 					<control type="button" id="92831">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
 						<include>DefSettingsButton</include>
-						<label> - $LOCALIZE[409]</label>
-						<onclick>Skin.SetString(widgetbackgroundcolor.name,FF181818)</onclick>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(widgettitlecolor.name)</onclick>
 					</control>
-<!-- "Views" Select Highlight Colour -->		
-					<control type="button" id="92832">
+<!-- Widget Plot Colour -->
+					<control type="radiobutton" id="92832">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[WidgetPlotColour]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[WidgetPlotColour]">common/circle.png</textureradionofocus>
 						<include>DefSettingsButton</include>
-						<label> - Highlight Select Colour for ALL "Views"</label>
-						<label2>[UPPERCASE][COLOR=$VAR[ViewsSelectHighlight]]$INFO[Skin.String(viewsselectcolor.name)][/COLOR][/UPPERCASE]</label2>
-						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=viewsselectcolor.name)</onclick>
-					</control>
-<!-- Reset "Views" Colour -->	
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=widgetplotcolor.name)</onclick>
+						<label> - Widget Plot Colour</label>
+					</control>					
+<!-- Reset Widget Plot -->					
 					<control type="button" id="92833">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
 						<include>DefSettingsButton</include>
-						<label> - $LOCALIZE[409]</label>
-						<onclick>Skin.SetString(viewsselectcolor.name,FFCCCCCC)</onclick>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(widgetplotcolor.name)</onclick>
 					</control>
-<!-- Home Header Colour -->					
-					<control type="button" id="92834">
+<!-- Widget SubLabel Colour -->
+					<control type="radiobutton" id="92834">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[WidgetSubLabelColour]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[WidgetSubLabelColour]">common/circle.png</textureradionofocus>
 						<include>DefSettingsButton</include>
-						<label> - Home Header Background Colour</label>
-						<label2>[UPPERCASE][COLOR=$VAR[HomeHeaderBGColour]]$INFO[Skin.String(headerbackgroundcolor.name)][/COLOR][/UPPERCASE]</label2>-->
-						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=headerbackgroundcolor.name)</onclick>
-					</control>
-<!-- Reset Home Header Background Colour -->	
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=widgetsublabelcolor.name)</onclick>
+						<label> - Widget SubLabel Colour</label>
+					</control>					
+<!-- Reset Widget SubLabel -->					
 					<control type="button" id="92835">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
 						<include>DefSettingsButton</include>
-						<label> - $LOCALIZE[409]</label>
-						<onclick>Skin.SetString(headerbackgroundcolor.name,FF181818)</onclick>
-					</control>
-<!-- Home Footer Colour -->					
-					<control type="button" id="92836">
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(widgetsublabelcolor.name)</onclick>
+					</control>					
+<!-- Home Header Colour -->
+					<control type="radiobutton" id="92836">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[HomeHeaderBGColour]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[HomeHeaderBGColour]">common/circle.png</textureradionofocus>
 						<include>DefSettingsButton</include>
-						<label> - Home Floor Background Colour</label>
-						<label2>[UPPERCASE][COLOR=$VAR[HomeFloorBGColour]]$INFO[Skin.String(homefloorbgcolor.name)][/COLOR][/UPPERCASE]</label2>
-						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=homefloorbgcolor.name)</onclick>
-					</control>
-<!-- Reset Home Footer Background Colour -->	
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=headerbackgroundcolor.name)</onclick>
+						<label> - Home Header Background Colour</label>
+					</control>					
+<!-- Reset Home Header Background Colour -->	
 					<control type="button" id="92837">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
 						<include>DefSettingsButton</include>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(headerbackgroundcolor.name)</onclick>
+					</control>
+<!-- Home Footer Colour -->
+					<control type="radiobutton" id="92838">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[HomeFloorBGColour]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[HomeFloorBGColour]">common/circle.png</textureradionofocus>
+						<include>DefSettingsButton</include>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=homefloorbgcolor.name)</onclick>
+						<label> - Home Floor Background Colour</label>
+					</control>					
+<!-- Reset Home Footer Background Colour -->	
+					<control type="button" id="92839">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(homefloorbgcolor.name)</onclick>
+					</control>				
+					
+<!-- Library Section -->					
+<!-- Library Colour Heading -->					
+					<control type="label" id="9284">
+                        <!--Seperator-->
+                        <width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <height>70</height>
+						<font>MediumBold</font>
+						<label> Library Colour Options</label>
+					</control>
+<!-- "Views" Select Highlight Colour -->
+					<control type="radiobutton" id="92841">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[ViewsSelectHighlight]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[ViewsSelectHighlight]">common/circle.png</textureradionofocus>
+						<include>DefSettingsButton</include>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=viewsselectcolor.name)</onclick>
+						<label> - Highlight Select Colour for ALL "Views"</label>
+					</control>		
+<!-- Reset "Views" Colour -->	
+					<control type="button" id="92842">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(viewsselectcolor.name)</onclick>
+					</control>
+<!--  View Details Highlight Text Colour -->
+					<control type="radiobutton" id="92849">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[ViewsDetailsHighlightTextColour]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[ViewsDetailsHighlightTextColour]">common/circle.png</textureradionofocus>
+						<include>DefSettingsButton</include>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=viewdetailshighlighttextcolor.name)</onclick>
+						<label> - View Details Highlight Text Colour"</label>
+					</control>		
+<!-- Reset View Details Text Highlight Colour -->	
+					<control type="button" id="928491">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(viewdetailshighlighttextcolor.name)</onclick>
+					</control>					
+<!-- Scrollbar Background Colour -->
+					<control type="radiobutton" id="92843">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[ScrollbarBGColour]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[ScrollbarBGColour]">common/circle.png</textureradionofocus>
+						<include>DefSettingsButton</include>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=scrollbarbgcolor.name)</onclick>
+						<label> - Scrollbar Background Colour</label>
+					</control>					
+<!-- Reset Scrollbar Background Colour -->
+					<control type="button" id="92844">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
 						<label> - $LOCALIZE[409]</label>
-						<onclick>Skin.SetString(homefloorbgcolor.name,8F181818)</onclick>
+						<onclick>Skin.Reset(scrollbarbgcolor.name)</onclick>
+					</control>
+<!-- Scrollbar UnFocused Colour -->
+					<control type="radiobutton" id="92845">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[ScrollbarUnFocusedColour]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[ScrollbarUnFocusedColour]">common/circle.png</textureradionofocus>
+						<include>DefSettingsButton</include>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=scrollbarunfocused.color.name)</onclick>
+						<label> - Scrollbar UnFocused Colour</label>
+					</control>					
+<!-- Reset Scrollbar UnFocused Colour -->
+					<control type="button" id="92846">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(scrollbarunfocusedcolor.name)</onclick>
+					</control>
+<!-- Scrollbar Focused Colour -->
+					<control type="radiobutton" id="92847">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[ScrollbarFocusedColour]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[ScrollbarFocusedColour]">common/circle.png</textureradionofocus>
+						<include>DefSettingsButton</include>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=scrollbarfocusedcolor.name)</onclick>
+						<label> - Scrollbar Focused Colour</label>
+					</control>					
+<!-- Reset Scrollbar Focused Colour -->
+					<control type="button" id="92848">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(scrollbarfocusedcolor.name)</onclick>
+					</control>
+<!-- SideBlade Panel Colour -->					
+					<control type="radiobutton" id="9285">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[SideBladePanelColour]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[SideBladePanelColour]">common/circle.png</textureradionofocus>
+						<include>DefSettingsButton</include>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=sidebladepanelcolor.name)</onclick>
+						<label> - SideBlade Panel Colour</label>
+					</control>
+<!-- Reset SideBlade Panel Colour -->					
+					<control type="button" id="92851">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(sidebladepanelcolor.name)</onclick>
+					</control>
+<!-- SideBlade Text Colour -->					
+					<control type="radiobutton" id="92852">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[SideBladeTextColour]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[SideBladeTextColour]">common/circle.png</textureradionofocus>
+						<include>DefSettingsButton</include>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=sidebladetextcolor.name)</onclick>
+						<label> - SideBlade Text Colour</label>
+					</control>
+<!-- Reset SideBlade Text Colour -->					
+					<control type="button" id="92853">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(sidebladetextcolor.name)</onclick>
 					</control>
 					
+<!-- OSD Section -->					
+<!-- OSD Colour Heading -->					
+					<control type="label" id="92854">
+                        <!--Seperator-->
+                        <width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <height>70</height>						
+						<font>MediumBold</font>
+						<label> OSD Colour Options</label>
+					</control>
+<!--OSD Buttons Colour -->					
+					<control type="radiobutton" id="92855">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[OSDButtonsColour]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[OSDButtonsColour]">common/circle.png</textureradionofocus>
+						<include>DefSettingsButton</include>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=osdbuttonscolor.name)</onclick>
+						<label> - OSD Buttons Colour</label>
+					</control>
+<!-- Reset OSD Buttons Colour -->					
+					<control type="button" id="92856">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(osdbuttonscolor.name)</onclick>
+					</control>					
+<!--OSD Buttons Focus Colour -->					
+					<control type="radiobutton" id="92857">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[OSDButtonsFocusColour]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[OSDButtonsFocusColour]">common/circle.png</textureradionofocus>
+						<include>DefSettingsButton</include>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=osdbuttonsfocuscolor.name)</onclick>
+						<label> - OSD Buttons Focus Colour</label>
+					</control>
+<!-- Reset OSD Buttons Focus Colour -->					
+					<control type="button" id="92858">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(osdbuttonsfocuscolor.name)</onclick>
+					</control>
+<!--OSD ProgressBar Cache Colour -->					
+					<control type="radiobutton" id="9286">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[OSDProgressBarCacheColour]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[OSDProgressBarCacheColour]">common/circle.png</textureradionofocus>
+						<include>DefSettingsButton</include>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=osdprogressbarcachecolor.name)</onclick>
+						<label> - OSD ProgressBar Cache Colour</label>
+					</control>					
+<!-- Reset OSD ProgressBar Cache Colour -->					
+					<control type="button" id="92861">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(osdprogressbarcachecolor.name)</onclick>
+					</control>
+<!--OSD ProgressBar Cache End Colour -->					
+					<control type="radiobutton" id="92862">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[OSDProgressBarCacheEndColour]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[OSDProgressBarCacheEndColour]">common/circle.png</textureradionofocus>
+						<include>DefSettingsButton</include>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=osdprogressbarcacheendcolor.name)</onclick>
+						<label> - OSD ProgressBar Cache End Colour</label>
+					</control>
+<!-- Reset OSD ProgressBar Cache End Colour -->					
+					<control type="button" id="92863">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(osdprogressbarcacheendcolor.name)</onclick>
+					</control>					
+<!--OSD ProgressBar Background Colour -->					
+					<control type="radiobutton" id="92864">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<textureradiofocus colordiffuse="$VAR[OSDProgressBarBGColour]">common/circle.png</textureradiofocus>
+						<textureradionofocus colordiffuse="$VAR[OSDProgressBarBGColour]">common/circle.png</textureradionofocus>
+						<include>DefSettingsButton</include>
+						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=osdprogressbarbgcolor.name)</onclick>
+						<label> - OSD ProgressBar Background Colour</label>
+					</control>
+<!-- Reset OSD ProgressBar Background Colour -->					
+					<control type="button" id="92865">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<include>DefSettingsButton</include>
+						<label>   $LOCALIZE[409]</label>
+						<onclick>Skin.Reset(osdprogressbarbgcolor.name)</onclick>
+					</control>					
+					
 					<!-- Views -->
-					<control type="button" id="9291" description="Enable or Disable views">
+					<control type="button" id="9298" description="Enable or Disable views">
 						<width>1310</width>
 						<include>DefSettingsButton</include>
 						<onclick>RunScript(script.skin.helper.service,action=enableviews)</onclick>
@@ -939,6 +1247,7 @@
 						<visible>ControlGroup(9100).HasFocus(9109)</visible>
 					</control>
 				</control>
+				
 				<!-- Lines -->
 				<control type="image">
 					<top>10</top>
@@ -990,7 +1299,7 @@
 					<label>19055</label>
 				</control>
 			</control>
-		</control>
-		<include>Def9000SettingsMenu</include>
+		</control>		
+		<include>Def9000SettingsMenu</include>		
 	</controls>
 </window>

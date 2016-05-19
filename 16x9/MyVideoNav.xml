@@ -4,7 +4,7 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<menucontrol>9000</menucontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>50,550,54,53,51,55,56,57,155,156,157,58,59,52,500,514,513,515</views>
+	<views>50,550,54,53,51,55,56,57,155,156,58,59,52,500,514,513,515</views>
 	<onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onload condition="System.HasAddon(script.duration)">RunScript(script.duration,backend=True)</onload>
 	<controls>
@@ -29,7 +29,8 @@
 		<include condition="Skin.HasSetting(57list.low)">View_57_ExtraInfo_LowList</include>
 		<include>View_155_Wall_Emby</include>
 		<include>View_156_Wall_Kodi</include>
-		<include>View_157_Wall_Move</include>
+<!--Changed--  --View no longer used-->		
+		<!--<include>View_157_Wall_Move</include>-->
 		<include>View_58_Cards</include>
 		<include>View_59_BannerPlex</include>
 		<include>View_500_Thumbnails</include>
@@ -41,7 +42,8 @@
 		<include>Furniture_Clock</include>
 		<include>Furniture_Flags</include>
 		<include>Furniture_Logo</include>
-		<include>Furniture_OverlayInfo</include>
+<!--Changed --Include not used -->		
+		<!--<include>Furniture_OverlayInfo</include>-->
 		<control type="group">
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>

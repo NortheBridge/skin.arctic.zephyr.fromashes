@@ -9,9 +9,12 @@
 			<width>8</width>
 			<onleft>50</onleft>
 			<onright condition="!Skin.HasSetting(global.kioskmode)">9000</onright>
-			<texturesliderbackground border="4" colordiffuse="Dark4">scrollbar/scrollv.png</texturesliderbackground>
-			<texturesliderbar border="4" colordiffuse="$VAR[ColourHighlight]">scrollbar/scrollv.png</texturesliderbar>
-			<texturesliderbarfocus border="4" colordiffuse="$VAR[ColourHighlight]">scrollbar/scrollv.png</texturesliderbarfocus>
+			<!--Changed-->
+         	<texturesliderbackground border="4" colordiffuse="$VAR[ScrollbarBGColour]">scrollbar/scrollv.png</texturesliderbackground> 
+			<!--Changed-->
+			<texturesliderbar border="4" colordiffuse="$VAR[ScrollbarUnFocusedColour]">scrollbar/scrollv.png</texturesliderbar>
+			<!--Changed-->
+			<texturesliderbarfocus border="4" colordiffuse="$VAR[ScrollbarFocusedColour]">scrollbar/scrollv.png</texturesliderbarfocus>
 			<animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			<animation effect="slide" end="100,0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 		</control>
@@ -26,9 +29,12 @@
 			<height>8</height>
 			<onup>50</onup>
 			<ondown condition="!Skin.HasSetting(global.kioskmode)">9000</ondown>
-			<texturesliderbackground border="4" colordiffuse="Dark4">scrollbar/scrollv.png</texturesliderbackground>
-			<texturesliderbar border="4" colordiffuse="$VAR[ColourHighlight]">scrollbar/scrollv.png</texturesliderbar>
-			<texturesliderbarfocus border="4" colordiffuse="$VAR[ColourHighlight]">scrollbar/scrollv.png</texturesliderbarfocus>
+			<!--Changed-->
+			<texturesliderbackground border="4" colordiffuse="$VAR[ScrollbarBGColour]">scrollbar/scrollv.png</texturesliderbackground>
+			<!--Changed-->
+			<texturesliderbar border="4" colordiffuse="$VAR[ScrollbarUnFocusedColour]">scrollbar/scrollv.png</texturesliderbar>
+			<!--Changed-->
+			<texturesliderbarfocus border="4" colordiffuse="$VAR[ScrollbarFocusedColour]">scrollbar/scrollv.png</texturesliderbarfocus>
 			<animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 		</control>
 	</include>
@@ -1396,6 +1402,80 @@
 			</control>
 		</control>
 	</include>
+	
+	<!-- Restore Furniture_OverlayInfo-->
+	<include name="Furniture_OverlayInfo">
+
+        <control type="button" id ="9601">
+            <width>1</width>
+            <height>1</height>
+            <visible allowhiddenfocus="true">false</visible>
+            <onback>50</onback>
+            <onup>50</onup>
+            <ondown>50</ondown>
+            <onleft>50</onleft>
+            <onright>50</onright>
+        </control>
+
+        <control type="group">
+            <visible>[System.IdleTime(3) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible>
+            <visible>![Window.IsVisible(script-skinshortcuts.xml) | Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogProgress.xml) | Window.IsVisible(DialogYesNo.xml) | Window.IsVisible(DialogOK.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()]</visible>
+            <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
+            <visible>!Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
+            <visible>[!IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]] | !IsEmpty(ListItem.Plot)</visible>
+            <include>Animation.FadeIn</include>
+            <control type="image" description="Background">
+                <include>Dimensions_Fullscreen</include>
+                <texture colordiffuse="Background">common/bg.jpg</texture>
+                <animation effect="fade" start="100" end="95" condition="true">Conditional</animation>
+            </control>
+            <control type="image" description="clearlogo">
+                <visible>Skin.HasSetting(furniture.logo)</visible>
+                <centertop>120</centertop>
+                <centerleft>50%</centerleft>
+                <width>400</width>
+                <height>100</height>
+                <aspectratio align="center">keep</aspectratio>
+                <texture background="true">$VAR[ClearLogoTopVar]</texture>
+            </control>
+        </control>
+
+        <control type="group">
+            <left>SidePad</left>
+            <right>SidePad</right>
+            <top>PosterPad</top>
+            <height>650</height>
+            <visible>[System.IdleTime(3) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible>
+            <visible>![Window.IsVisible(script-skinshortcuts.xml) | Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogProgress.xml) | Window.IsVisible(DialogYesNo.xml) | Window.IsVisible(DialogOK.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()]</visible>
+            <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
+            <visible>!Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
+            <visible>[!IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]] | !IsEmpty(ListItem.Plot)</visible>
+            <include>Animation.FadeIn.Slide</include>
+
+            <control type="label">
+                <description>header label</description>
+                <left>60</left>
+                <right>60</right>
+                <posy>60</posy>
+                <font>EpisodeNumber</font>
+                <textcolor>Dark1</textcolor>
+                <height>45</height>
+                <label>$VAR[LabelOverlayTitle]</label>
+            </control>
+
+            <control type="textbox">
+                <description>textarea</description>
+                <left>60</left>
+                <right>60</right>
+                <top>150</top>
+                <bottom>0</bottom>
+                <align>justify</align>
+                <font>Medium</font>
+                <textcolor>Dark1</textcolor>
+                <label>$VAR[LabelOverlayPlot]</label>
+            </control>
+        </control>
+    </include>
 
 	<include name="Furniture_Home_Flags">
 		<control type="grouplist">

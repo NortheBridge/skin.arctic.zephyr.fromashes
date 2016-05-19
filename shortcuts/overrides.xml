@@ -69,7 +69,7 @@
     <shortcut label="31192" type="MovieHub" grouping="common" icon="special://skin/extras/icons/film.png">ActivateWindow(1101)</shortcut>
     <shortcut label="31212" type="themoviedb.org episodes" grouping="common" icon="special://skin/extras/icons/director.png">ActivateWindow(1105)</shortcut>
     <shortcut label="31208" type="themoviedb.org movies" grouping="common" icon="special://skin/extras/icons/director.png">ActivateWindow(1104)</shortcut>
-    <shortcut label="Top250" type="top250" grouping="common" icon="special://skin/extras/icons/top250.png"> RunScript(script.imdb250.view)</shortcut>
+    <shortcut label="Top250" type="top250" grouping="common" icon="special://skin/extras/icons/top250.png">RunScript(script.skin.helper.service,action=showinfo;INFO[Window(Home).Property(SkinHelper.IMDB.Top250)]</shortcut>
     <shortcut label="Oscars" type="oscars" grouping="common" icon="special://skin/extras/icons/oscars.png"> RunScript(script.oscars.view)</shortcut>
     
     <!-- Override Actions Because Im A Dummy Who Doesnt Know The Correct Window IDs To Use -->
@@ -218,6 +218,7 @@
     <thumbnail label="map.png">special://skin/extras/icons/map.png</thumbnail>
     <thumbnail label="musicvideo.png">special://skin/extras/icons/musicvideo.png</thumbnail>
     <thumbnail label="mute.png">special://skin/extras/icons/mute.png</thumbnail>
+	<thumbnail label="netflix.png">special://skin/extras/icons/netflix.png</thumbnail>
     <thumbnail label="network.png">special://skin/extras/icons/network.png</thumbnail>
     <thumbnail label="octo.png">special://skin/extras/icons/octo.png</thumbnail>
     <thumbnail label="pictures.png">special://skin/extras/icons/pictures.png</thumbnail>
@@ -324,7 +325,6 @@
     <thumbnail label="map.png">special://skin/extras/icons/map.png</thumbnail>
     <thumbnail label="musicvideo.png">special://skin/extras/icons/musicvideo.png</thumbnail>
     <thumbnail label="mute.png">special://skin/extras/icons/mute.png</thumbnail>
-    <thumbnail label="netflix.png">special://skin/extras/icons/netflix.png</thumbnail>
     <thumbnail label="network.png">special://skin/extras/icons/network.png</thumbnail>
     <thumbnail label="newspaper.png">special://skin/extras/icons/newspaper.png</thumbnail>
     <thumbnail label="nfl.png">special://skin/extras/icons/nfl.png</thumbnail>

@@ -63,7 +63,16 @@
                 <visible>Container(9500).IsUpdating</visible>
                 <include>Animation.FadeIn</include>
                 <include>Animation.FadeOut</include>
-          
+				
+<!--Added-->    <control type="image">
+				    <description>background image</description>
+				    <posx>0</posx>
+				    <posy>0</posy>
+				    <width>450</width>
+				    <height>117</height>
+				    <animation effect="fade" start="100" end="90" condition="true">Conditional</animation>
+<!--Changed-->	    <texture border="16" colordiffuse="$VAR[SpinnerBackgroundColour]">common/rounded-shadow8.png</texture>
+			    </control>          
                 <control type="image">
                     <description>Busy animation</description>
                     <posx>30</posx>
@@ -82,7 +91,7 @@
                     <height>48</height>
                     <align>left</align>
                     <label>$LOCALIZE[31138]...</label>
-                    <textcolor>Dark1</textcolor>
+                    <textcolor>Black70</textcolor>
                 </control>
 
             </control>

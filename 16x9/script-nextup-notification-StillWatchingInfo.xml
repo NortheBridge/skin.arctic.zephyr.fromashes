@@ -151,10 +151,10 @@
 					<bottom>10</bottom>
 					<height>8</height>
 					<info>Player.ProgressCache</info>
-					<texturebg colordiffuse="00ffffff">osd/progress-bg.png</texturebg>
-					<lefttexture colordiffuse="$VAR[ColourHighlight2]">osd/progress-end.png</lefttexture>
-					<midtexture colordiffuse="$VAR[ColourHighlight2]">osd/progress-end.png</midtexture>
-					<righttexture colordiffuse="$VAR[ColourHighlight2]">osd/progress-end.png</righttexture>
+<!--Changed-->	    <texturebg colordiffuse="$VAR[OSDProgressBarBGColour]">osd/progress-bg.png</texturebg>
+<!--Changed-->		<lefttexture colordiffuse="$VAR[OSDProgressBarCacheColour]">osd/progress-end.png</lefttexture>
+<!--Changed-->		<midtexture colordiffuse="$VAR[OSDProgressBarCacheColour]">osd/progress-end.png</midtexture>
+<!--Changed-->		<righttexture colordiffuse="$VAR[OSDProgressBarCacheEndColour]">osd/progress-end.png</righttexture>
 				</control>
 				<control type="progress" id="23">
 					<description>Progress Bar</description>

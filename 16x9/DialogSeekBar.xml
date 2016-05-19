@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
-<window id="115">
+<window id="115"> 
+    
     <defaultcontrol always="true">901</defaultcontrol>
     <visible>Window.IsActive(fullscreenvideo) + !Window.IsActive(script.pseudotv.TVOverlay.xml) + !Window.IsActive(script.pseudotv.live.TVOverlay.xml)</visible>
     <visible>Window.IsActive(fullscreenvideo) + !Window.IsActive(script.pseudotv.TVOverlay.xml) + !Window.IsActive(script.pseudotv.live.TVOverlay.xml)</visible>
-    <visible>Window.IsActive(fullscreenvideo) + !Window.IsActive(script.pseudotv.TVOverlay.xml) + !Window.IsActive(script.pseudotv.live.TVOverlay.xml)</visible>
+    <visible>Window.IsActive(fullscreenvideo) + !Window.IsActive(script.pseudotv.TVOverlay.xml) + !Window.IsActive(script.pseudotv.live.TVOverlay.xml)</visible>-->
     <allowoverlay>no</allowoverlay>
-    <visible>[VideoPlayer.IsFullscreen] + [Window.IsVisible(videoosd) | Window.IsVisible(fullscreeninfo) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | !IsEmpty(Window(home).Property(osdshowinfo))]</visible>
+	<visible>[VideoPlayer.IsFullscreen] + [Window.IsVisible(videoosd) | Window.IsVisible(fullscreeninfo) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | !IsEmpty(Window(home).Property(osdshowinfo))]</visible>
     <zorder>0</zorder>
     <controls>
-        <control type="group">
-            <animation effect="slide" start="0" end="0,-74" time="150" condition="Window.IsVisible(videoosd)">Conditional</animation>
-            <control type="group">
-                <animation effect="slide" start="0" end="0,-190" time="150" condition="Window.IsVisible(fullscreeninfo) | Player.ShowInfo | !IsEmpty(Window(home).Property(osdshowinfo)) | [Player.Paused + Skin.HasSetting(osd.showinfoonpause)]">Conditional</animation>
+	    <control type="group">		    
+		    <animation effect="slide" start="0" end="0,-74" time="150" condition="Window.IsVisible(videoosd)">Conditional</animation>
+	        <control type="group">		    
+		        <animation effect="slide" start="0" end="0,-190" time="150" condition="Window.IsVisible(fullscreeninfo) | Player.ShowInfo | !IsEmpty(Window(home).Property(osdshowinfo)) | [Player.Paused + Skin.HasSetting(osd.showinfoonpause)]">Conditional</animation>
                 <animation effect="slide" start="0" end="0,110" time="150" condition="!Window.IsVisible(fullscreeninfo) + !Player.Seeking + !Player.DisplayAfterSeek + !Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.ShowInfo + IsEmpty(Window(home).Property(osdshowinfo))">Conditional</animation>
                 <animation effect="slide" start="0,110" end="0" time="150">Visible</animation>
-                <animation effect="slide" start="0,110" end="0" time="150">WindowOpen</animation>
+                <animation effect="slide" start="0,110" end="0" time="150">WindowOpen</animation>					
                 <control type="image">
                     <right>0</right>
                     <bottom>110</bottom>
@@ -37,7 +38,7 @@
                     <animation effect="fade" start="100" end="90" condition="Skin.HasSetting(osd.usetheme)">Conditional</animation>
                     <include>Animation.FadeOut</include>
                 </control>
-            </control>
+            </control>   
             <control type="group">
                 <top>300r</top>
                 <bottom>0</bottom>
@@ -50,8 +51,7 @@
                     <right>SidePad</right>
                     <top>20</top>
                     <bottom>20</bottom>
-                    <control type="image">
-                       
+                    <control type="image">                   
                         <left>-70</left>
 						<top>-226</top>
 						<width>334</width>
@@ -92,7 +92,7 @@
                 <visible>!Player.Paused | !Skin.HasSetting(osd.showinfoonpause)</visible>
                 <visible>!Window.IsVisible(fullscreeninfo) + !Player.ShowInfo + IsEmpty(Window(home).Property(osdshowinfo))</visible>
                 <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
-                <animation effect="fade" start="0" end="100" delay="150" time="150">Visible</animation>
+				<animation effect="fade" start="0" end="100" delay="150" time="150">Visible</animation>
                 <animation effect="fade" start="0" end="100" delay="150" time="150">WindowOpen</animation>
                 <top>110r</top>
                 <bottom>0</bottom>
@@ -128,10 +128,10 @@
                         <bottom>10</bottom>
                         <height>8</height>
                         <info>Player.CacheLevel</info>
-                        <texturebg colordiffuse="00ffffff">osd/progress-bg.png</texturebg>
-                        <lefttexture colordiffuse="$VAR[ColourHighlight]">osd/progress-end.png</lefttexture>
-                        <midtexture colordiffuse="$VAR[ColourHighlight2]">osd/progress-end.png</midtexture>
-                        <righttexture colordiffuse="$VAR[ColourHighlight2]">osd/progress-end.png</righttexture>
+<!--Changed-->          <texturebg colordiffuse="$VAR[OSDProgressBarBGColour]">osd/progress-bg.png</texturebg> <!--Changed-->
+<!--Changed-->          <lefttexture colordiffuse="$VAR[OSDProgressBarCacheColour]">osd/progress-end.png</lefttexture> <!--Changed-->
+<!--Changed-->          <midtexture colordiffuse="$VAR[OSDProgressBarCacheColour]">osd/progress-end.png</midtexture> <!--Changed-->
+<!--Changed-->          <righttexture colordiffuse="$VAR[OSDProgressBarCacheEndColour]">osd/progress-end.png</righttexture> <!--Changed-->
                         <visible>Player.Seeking</visible>
                     </control>
                     <control type="progress" description="cache">
@@ -141,10 +141,10 @@
                         <height>8</height>
                         <info>Player.ProgressCache</info>
                         <reveal>true</reveal>
-                        <texturebg colordiffuse="00ffffff">osd/progress-bg.png</texturebg>
-                        <lefttexture colordiffuse="$VAR[ColourHighlight2]">osd/progress-end.png</lefttexture>
-                        <midtexture colordiffuse="$VAR[ColourHighlight2]">osd/progress-end.png</midtexture>
-                        <righttexture colordiffuse="$VAR[ColourHighlight2]">osd/progress-end.png</righttexture>
+<!--Changed-->          <texturebg colordiffuse="$VAR[OSDProgressBarBGColour]">osd/progress-bg.png</texturebg> <!--Changed-->
+<!--Changed-->          <lefttexture colordiffuse="$VAR[OSDProgressBarCacheColour]">osd/progress-end.png</lefttexture> <!--Changed-->
+<!--Changed-->          <midtexture colordiffuse="$VAR[OSDProgressBarCacheColour]">osd/progress-end.png</midtexture> <!--Changed-->
+<!--Changed-->          <righttexture colordiffuse="$VAR[OSDProgressBarCacheEndColour]">osd/progress-end.png</righttexture> <!--Changed-->
                     </control>
                     <control type="progress" id="23">
                         <description>Progress Bar</description>
@@ -165,7 +165,7 @@
             </control>
         
         </control>
-        <!-- Clock -->
+		<!-- Clock -->
         <include>Furniture_OSDClock</include>
     </controls>
 

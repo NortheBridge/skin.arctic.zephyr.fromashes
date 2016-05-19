@@ -266,7 +266,7 @@
 				<control type="textbox">
 					<font>Tiny</font>
 					<label>$VAR[LabelPlotBox]</label>
-					<textcolor>Dark2</textcolor>
+<!--Changed-->		<textcolor>$VAR[ViewsDetailsHighlightTextColour]</textcolor>
 					<height>68</height>
 					<align>justify</align>
 				</control>
