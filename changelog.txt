@@ -1,21 +1,22 @@
-[B]Arctic Zephyr for Emby Changelog[/B]
+[B]Arctic Zephyr: From Ashes Changelog[/B]
 
-[B]3.2.10 (3.2.10_bsrelease01) - "From Ashes Spring 2016 Update"[/B]
+[B]3.2.10 (3.2.10_bsrelease01) / 4.0.00 (4.0.00_bsrelease02) - "From Ashes Spring 2016 Update"[/B]
 Experimental Krypton Support ("Danvers" Build Line - Bluestone 2 - 4.0.00)
 Minor Improvements to the Skin's Code for Jarvis Support ("Dormer" Build Line - Bluestone 1 / "Danvers" Build Line - Bluestone 2")
 Auto-completion Keyboard Support Added
-Enhancements to Color Selector
+Enhancements to Color Selector (courtesy of minus0)
 Enhancement IMDB250 from Skin Helper Service
-Adds Rotten Tomatoes Ratings
+Adds Rotten Tomatoes Ratings to Video Info (Feature Disabled)
 Additional Slipstream Updates from Arctic Zephyr: Exploded 2.0.12 Back-port
 Slipstream Updates from Upstream Arctic Zephyr Base Skin (Jurialmonkey)
 Removes Legacy Code "Script.Duration" References Completely
 Removes Legacy Code "IMDB250" References Completely (Replaced)
-GUI Change: English Language Now Defaults to American Flag
+GUI Change: English Language Now Defaults to American Flag (Except Subtitles)
 GUI Change: Video Information Indicators Changed
 Info Banner ("Plot Overlay") Partially Implemented (Feature Currently Not Functional)
 NOTICE: Due to GUI Changes, Skin Required Space May Temporarily Increase
 NOTICE: Due to Legacy Code Removal, Certain Functions May Not Operate Correctly
+NOTICE: Rotten Tomatoes for Views Will Be Added In 3.2.11 (Feature Disabled Currently)
 
 [B]3.2.04 (3.2.04_bsrelease01) - "From Ashes late-March 2016 Update"[/B]
 Implemented About From Ashes
