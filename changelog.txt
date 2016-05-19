@@ -16,11 +16,11 @@ GUI Change: Video Information Indicators Changed
 Info Banner ("Plot Overlay") Partially Implemented (Feature Currently Not Functional)
 NOTICE: Due to GUI Changes, Skin Required Space May Temporarily Increase
 NOTICE: Due to Legacy Code Removal, Certain Functions May Not Operate Correctly
-NOTICE: Rotten Tomatoes for Views Will Be Added In 3.2.11 (Feature Disabled Currently)
+NOTICE: Rotten Tomatoes for Views Will Be Added In 3.2.11/4.0.01 (Feature Disabled Currently)
 
 [B]3.2.04 (3.2.04_bsrelease01) - "From Ashes late-March 2016 Update"[/B]
 Implemented About From Ashes
-Minor Changes for Arctic Zephyr: From Ashes 3.2.05 (the 'WAF' Improvement release)
+Minor Changes for Arctic Zephyr: From Ashes 3.2.05 (the Spring 2016 release)
 
 [B]3.2.03 (3.2.03_bsrelease01) - "From Ashes Bluestone 3.2.03"[/B]
 Arctic Zephyr: From Ashes "mid-March 2016 Update"

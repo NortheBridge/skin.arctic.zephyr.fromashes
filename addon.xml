@@ -25,19 +25,20 @@
         <import addon="resource.images.recordlabels.white" version="0.0.6"/>
 		<import addon="resource.uisounds.fromashes" version="3.0.01"/>
     </requires>
-    <extension point="xbmc.gui.skin" effectslowdown="1.00" debugging="false">
+    <extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1.00" debugging="false">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="16x9"/>
+		<res width="1920" height="1200" aspect="16:10" default="false" folder="16x9"/>
 	</extension>
     <extension point="xbmc.addon.metadata">
         <summary lang="de">Klar, minimalistisch, elegant, einfach, leicht</summary>
         <summary lang="en">Clean, minimal, elegant, simple, light.</summary>
-        <description lang="de">Arktische Zephyr: Aus Asche ist die vierte Iteration der arktischen Haut ursprünglich von Jurialmunkey und später durch im85288 und Badaas geändert. Jetzt kuratiert von Guardian Hoffnung, weiterhin konzentriert sich darauf, einfache, saubere und minimalistisch, mit einer leichten Drehung Arktis.</description>
-        <description lang="en">Arctic Zephyr: From Ashes is the fourth iteration of the Arctic skin originally created by jurialmunkey and later modified by im85288 and badaas. Now curated by Guardian Hope, Arctic continues to focuses on being simple, clean and minimalistic with a light spin.</description>
+        <description lang="de">Arktische Zephyr: Aus der Asche ist die zweite Generation des die "Arctic Zephyr: explodierte" Haut von im85288 und Badaas erstellt basierend auf die dritte Iteration der arktischen Haut ursprünglich von Jurialmunkey. Jetzt kuratiert von Guardian Hoffnung weiterhin Arktis konzentriert sich darauf, einfach, sauber und minimalistisch mit einer leichten Drehung.</description>
+        <description lang="en">Arctic Zephyr: From Ashes is the second generation of the "Arctic Zephyr: Exploded" skin created by im85288 and badaas based on the third iteration of the Arctic skin originally created by jurialmunkey. Now curated by Guardian Hope, Arctic continues to focuses on being simple, clean and minimalistic with a light spin.</description>
         <platform>all</platform>
 		<license>GPL v3.0</license>
 		<forum>http://forum.kodi.tv/showthread.php?tid=257970</forum>
 		<website>https://northebridge.com/systems/oss/emby/fromashestheme</website>
-		<email>contact@northebridge.com</email>
+		<email>azfakodi@northebridge.com</email>
 		<source>https://github.com/NortheBridge/skin.arctic.zephyr.fromashes</source>
     </extension>
 </addon>

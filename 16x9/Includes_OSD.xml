@@ -533,7 +533,7 @@
 					<label>$INFO[System.Time(hh:mm)]</label>
 				</control>
 				<control type="image">
-					<left>235</left>
+					<left>210</left>
 					<centertop>50%</centertop>
 					<width>48</width>
 					<height>48</height>
