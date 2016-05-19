@@ -56,7 +56,7 @@
 			<posy>290</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Build: [COLOR=$VAR[ColourHighlight]]dormer@877bf7d[/COLOR]</label> <!-- Because Who Doesn't Like Margery Tyrell or Game of Thrones on HBO? Wait, You Can Read This? Easter Eggs! -->
+			<label>Build: [COLOR=$VAR[ColourHighlight]]danvers@278ef17[/COLOR]</label> <!-- Because Who Doesn't Like Margery Tyrell or Game of Thrones on HBO? Wait, You Can Read This? Easter Eggs! -->
 		</control>
 		<!-- The Full Version is Determined By the Branch (i.e. x.y.zz_branchnameabbreviated) -->
 	<control type="label">
@@ -67,7 +67,7 @@
 			<posy>260</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Release: [COLOR=$VAR[ColourHighlight]]$INFO[System.AddonVersion(skin.arctic.zephyr.fromashes)]_bsrelease01[/COLOR]</label>
+			<label>Release: [COLOR=$VAR[ColourHighlight]]$INFO[System.AddonVersion(skin.arctic.zephyr.fromashes)]_bsrelease02[/COLOR]</label>
 		</control>
 	<control type="label">
 			<description>Branch_Info</description>
@@ -77,7 +77,7 @@
 			<posy>320</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Branch Name: [COLOR=$VAR[ColourHighlight]]Bluestone[/COLOR]</label> <!-- Redstone, Bluestone... if you're reading this you are finding Easter Eggs I left in here on purpose -->
+			<label>Branch Name: [COLOR=$VAR[ColourHighlight]]Bluestone 2 (Danvers)[/COLOR]</label> <!-- Redstone, Bluestone... if you're reading this you are finding Easter Eggs I left in here on purpose -->
 		</control>
 		<!--Set "True" for Testing Releases and "False" for Full Rleases -->
 	<control type="label">
