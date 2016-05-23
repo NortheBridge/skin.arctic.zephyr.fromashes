@@ -453,7 +453,7 @@
                     <ondown>7001</ondown>
                     <onleft>Close</onleft>
                     <onright>9000</onright>
-                    <onfocus>ClearProperty(Similar,home) + !Control.HasFocus(71)</onfocus>
+                    <onfocus>ClearProperty(Similar,home)</onfocus>
                     <label>Rotten Tomatoes</label>
                     <font>SmallBold</font>
                     <textcolor>Black700</textcolor>
@@ -1365,7 +1365,7 @@
                     <orientation>horizontal</orientation>
                     <defaultcontrol always="true">0</defaultcontrol>
                     <scrolltime easing="inout" tween="sine">300</scrolltime>
-                    <visible>IsEmpty(Window(home).Property(Similar))</visible>
+                    <visible>IsEmpty(Window(home).Property(Similar)) + !Control.HasFocus(7002)</visible>
                     <animation condition="Window.IsVisible(1103)" reversible="false" type="Conditional">
                         <effect easing="out" end="-20,0" start="0,0" time="60" tween="sine" type="slide"/>
                         <effect delay="80" easing="out" end="20,0" start="0,0" time="120" tween="sine" type="slide"/>
@@ -1539,10 +1539,12 @@
                 <control type="group">
                     <left>1030</left>
                     <top>-319</top>
-                    <visible>IsEmpty(Window(home).Property(Similar)) + !Control.HasFocus(50) + !IsEmpty(Container(50).ListItem.Label)</visible>
+                    <visible>IsEmpty(Window(home).Property(Similar)) + !Control.HasFocus(50) + !IsEmpty(Container(50).ListItem.Label) + !Control.HasFocus(7002)</visible>
                     <animation center="480,1022" condition="!Control.HasFocus(50)" easing="inout" effect="zoom" end="81" start="100" time="300" tween="sine">Conditional</animation>
                     <animation center="150,288" condition="true" effect="zoom" end="85" start="85">Conditional
                     </animation>
+					<animation delay="300" effect="fade" end="100" start="0" time="300">Visible</animation>
+					<animation effect="fade" end="0" start="100" time="300">Hidden</animation>
                     <control type="group">
                         <visible>!IsEmpty(Container(50).ListItemNoWrap(1).Label)</visible>
                         <control type="image">
@@ -1964,6 +1966,8 @@
                     <animation center="480,1022" condition="!Control.HasFocus(5000)" easing="inout" effect="zoom" end="81" start="100" time="300" tween="sine">Conditional</animation>
                     <animation center="150,288" condition="true" effect="zoom" end="85" start="85">Conditional
                     </animation>
+					<animation delay="300" effect="fade" end="100" start="0" time="300">Visible</animation>
+					<animation effect="fade" end="0" start="100" time="300">Hidden</animation>
                     <control type="group">
                         <visible>!IsEmpty(Container(5000).ListItemNoWrap(1).Label)</visible>
                         <control type="image">
@@ -2260,24 +2264,14 @@
 		<!-- Rotten Tomatoes Integration, Used With Permission of Hustler1337 -->
 		<!-- Script Commented Out Until Fix Can Be Made; Breaks "Similar Titles" Function and does not change screen with button -->
 		
-				<!------- TOMATO BLOCK -------->
-		<!-- Comment Out Begin
+		<!------- TOMATO BLOCK -------->
+		
 		<control type="group">
 			<description>Tomato Block</description>
 			<left>540</left>
 			<right>SidePad</right>
-			<top>PosterPad</top>
-			<visible>Control.HasFocus(71)</visible>
-			
-			<animation type="Visible">
-				<effect type="slide" start="2000,0" end="0,0" tween="back" easing="out" time="1800" delay="600"/>
-				<effect type="fade" start="0" end="100" time="3500" reversible="true"/>
-			</animation>
-			
-			<animation type="Hidden">
-				<effect type="slide" start="0,0" end="1500,0" tween="back" easing="inout" time="1200" delay="0"/>
-				<effect type="fade" start="100" end="0" time="3500" reversible="true"/>
-			</animation>
+			<top>600</top>
+			<visible>Control.HasFocus(7002)</visible>
 			
 			
 			<control type="grouplist"> #START First Column#
@@ -2387,7 +2381,7 @@
 					</control>
 				</control>
 			</control># END Second Column #
-			
+			<!-- Removed, uncomment if you wish to add
 			<control type="group">
 				<top>380</top>
 				<right>10</right>
@@ -2436,6 +2430,7 @@
 					<label>$INFO[ListItem.CastAndRole]</label>
 				</control>
 			</control>
+			---->
 			
 			<control type="image">
 				<description>Rotten logo 59% or less</description>
