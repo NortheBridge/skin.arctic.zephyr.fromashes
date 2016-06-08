@@ -11,9 +11,9 @@
 	<onload condition="!Skin.HasSetting(startup.init)">Skin.SetBool(startup.init)</onload> <!-- Regular Spooler -->
 	<onload condition="!Skin.HasSetting(startup.init)">Skin.SetBool(SkinHelper.EnableAddonsLookups)</onload> <!-- Spooler for Addons -->
 	<!-- Skin Helper Service Functions Spooler -->
-	<!-- Info Banner -->
+	<!-- Info Banner 
 	<onload condition="!Skin.HasSetting(startup.init)">Skin.SetString(SkinHelper.ShowInfoAtPlaybackStart, 8)</onload>
-	<!-- Info Banner -->
+	Info Banner -->
 	<onload condition="!Skin.HasSetting(startup.init)">Skin.SetBool(Window(Home).Property(SkinHelper.ListItemDuration))</onload>
 	<controls>
 		<include condition="!Skin.HasSetting(home.netflix)">GlobalBackground</include>
