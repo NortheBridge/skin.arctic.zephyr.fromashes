@@ -1,97 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <variable name="ColourHighlight">
+<!-- 1st Generation Color Enhancements -->
+<!-- ###Begin### -->
+    <variable name="ColourHighlight">  
         <value condition="!IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
         <value>Highlight</value>
 	</variable>
-	<variable name="ColourHighlight2">
+	<variable name="ColourHighlight2">  
         <value condition="!IsEmpty(Skin.String(focuscolor2.name))">$INFO[Skin.String(focuscolor2.name)]</value>
         <value>Highlight2</value>
 	</variable>
-	<variable name="ColourSelected">
+	<variable name="ColourSelected">  
         <value condition="!IsEmpty(Skin.String(selectedcolor.name))">$INFO[Skin.String(selectedcolor.name)]</value>
         <value>Selected</value>
 	</variable>
-	<variable name="SpinnerHighlight">  <!--Added-->
+<!-- ###End### -->
+	
+<!-- 2nd Generation Color Enhancements -->
+<!-- ###Begin### -->		
+	<variable name="SpinnerHighlight">  
         <value condition="!IsEmpty(Skin.String(spinnercolor.name))">$INFO[Skin.String(spinnercolor.name)]</value>
         <value>Highlight</value>
 	</variable>
-	<variable name="SpinnerBackgroundColour">  <!--Added-->
+<!--############# Updated to new Busy Spinner Background Not Needed ############-->	
+	<!--<variable name="SpinnerBackgroundColour">  
         <value condition="!IsEmpty(Skin.String(spinnerbgcolor.name))">$INFO[Skin.String(spinnerbgcolor.name)]</value>
         <value>White100</value>
-	</variable>
-		<variable name="ViewsSelectHighlight">  <!--Added-->
+	</variable>-->	
+	<variable name="ViewsSelectHighlight">  
         <value condition="!IsEmpty(Skin.String(viewsselectcolor.name))">$INFO[Skin.String(viewsselectcolor.name)]</value>
         <value>Dark1</value>
-	</variable>
-		<variable name="ViewsDetailsHighlightTextColour">  <!--Added-->
-        <value condition="!IsEmpty(Skin.String(viewdetailshighlighttextcolor.name))">$INFO[Skin.String(viewdetailshighlighttextcolor.name)]</value>
-        <value>Light1</value>	
-	</variable>
-		<variable name="WidgetBackgroundColour">  <!--Added-->
+	</variable>	
+	<variable name="WidgetBackgroundColour">  
         <value condition="!IsEmpty(Skin.String(widgetbackgroundcolor.name))">$INFO[Skin.String(widgetbackgroundcolor.name)]</value>
         <value>Background</value>
-	</variable>
-		<variable name="WidgetTitleColour">  <!--Added-->
-        <value condition="!IsEmpty(Skin.String(widgetTitlecolor.name))">$INFO[Skin.String(widgettitlecolor.name)]</value>
-        <value>Dark1</value>
-	</variable>
-		<variable name="WidgetPlotColour">  <!--Added-->
-        <value condition="!IsEmpty(Skin.String(widgetplotcolor.name))">$INFO[Skin.String(widgetplotcolor.name)]</value>
-        <value>Dark2</value>
-	</variable>
-		<variable name="WidgetSubLabelColour">  <!--Added-->
-        <value condition="!IsEmpty(Skin.String(widgetsublabelcolor.name))">$INFO[Skin.String(widgetsublabelcolor.name)]</value>
-        <value>Dark1</value>
 	</variable>	
-	<variable name="HomeHeaderBGColour">  <!--Added-->
+	<variable name="HomeHeaderBGColour">  
         <value condition="!IsEmpty(Skin.String(headerbackgroundcolor.name))">$INFO[Skin.String(headerbackgroundcolor.name)]</value>
         <value>Background</value>
-	</variable>
-	<variable name="HomeFloorBGColour">  <!--Added-->
+	</variable>	
+	<variable name="HomeFloorBGColour">  
         <value condition="!IsEmpty(Skin.String(homefloorbgcolor.name))">$INFO[Skin.String(homefloorbgcolor.name)]</value>
         <value>FloorFade</value>
 	</variable>
-	<variable name="ScrollbarBGColour">  <!--Added-->
-        <value condition="!IsEmpty(Skin.String(scrollbarbgcolorname))">$INFO[Skin.String(scrollbarbgcolor.name)]</value>
-        <value>Dark4</value>
-	</variable>
-    <variable name="ScrollbarUnFocusedColour">  <!--Added-->
-        <value condition="!IsEmpty(Skin.String(scrollbarunfocusedcolor.name))">$INFO[Skin.String(scrollbarunfocusedcolor.name)]</value>
-        <value>Dark3</value>
-	</variable>
-	<variable name="ScrollbarFocusedColour">  <!--Added-->
-        <value condition="!IsEmpty(Skin.String(scrollbarfocusedcolor.name))">$INFO[Skin.String(scrollbarfocusedcolor.name)]</value>
-        <value>Dark2</value>
-	</variable>
-	<variable name="SideBladePanelColour">  <!--Added-->
+	<variable name="SideBladePanelColour">  
         <value condition="!IsEmpty(Skin.String(sidebladepanelcolor.name))">$INFO[Skin.String(sidebladepanelcolor.name)]</value>
         <value>White100</value>
 	</variable>
-	<variable name="SideBladeTextColour">  <!--Added-->
+	<variable name="SideBladeTextColour">  
         <value condition="!IsEmpty(Skin.String(sidebladetextcolor.name))">$INFO[Skin.String(sidebladetextcolor.name)]</value>
         <value>Black70</value>
 	</variable>
-	<variable name="OSDButtonsColour">  <!--Added-->
+<!-- ###End### -->	
+	
+<!-- 3rd Generation Color Enhancements -->
+<!-- ###Begin### -->			
+	<variable name="WidgetTitleColour">  
+        <value condition="!IsEmpty(Skin.String(widgetTitlecolor.name))">$INFO[Skin.String(widgettitlecolor.name)]</value>
+        <value>Dark1</value>
+	</variable>
+	<variable name="WidgetPlotColour">  
+        <value condition="!IsEmpty(Skin.String(widgetplotcolor.name))">$INFO[Skin.String(widgetplotcolor.name)]</value>
+        <value>Dark2</value>
+	</variable>
+	<variable name="WidgetSubLabelColour">  
+        <value condition="!IsEmpty(Skin.String(widgetsublabelcolor.name))">$INFO[Skin.String(widgetsublabelcolor.name)]</value>
+        <value>Dark1</value>
+	</variable>	
+	<variable name="HomeHeaderBGColour">  
+        <value condition="!IsEmpty(Skin.String(headerbackgroundcolor.name))">$INFO[Skin.String(headerbackgroundcolor.name)]</value>
+        <value>Background</value>	
+	</variable>
+	<variable name="ViewsDetailsHighlightTextColour">  
+        <value condition="!IsEmpty(Skin.String(viewdetailshighlighttextcolor.name))">$INFO[Skin.String(viewdetailshighlighttextcolor.name)]</value>
+        <value>Light1</value>	
+	</variable>
+	<variable name="ScrollbarBGColour">  
+        <value condition="!IsEmpty(Skin.String(scrollbarbgcolorname))">$INFO[Skin.String(scrollbarbgcolor.name)]</value>
+        <value>Dark4</value>
+	</variable>
+    <variable name="ScrollbarUnFocusedColour">  
+        <value condition="!IsEmpty(Skin.String(scrollbarunfocusedcolor.name))">$INFO[Skin.String(scrollbarunfocusedcolor.name)]</value>
+        <value>Dark3</value>
+	</variable>
+	<variable name="ScrollbarFocusedColour">  
+        <value condition="!IsEmpty(Skin.String(scrollbarfocusedcolor.name))">$INFO[Skin.String(scrollbarfocusedcolor.name)]</value>
+        <value>Dark2</value>
+	</variable>
+	<variable name="OSDButtonsColour">  
         <value condition="!IsEmpty(Skin.String(osdbuttonscolor.name))">$INFO[Skin.String(osdbuttonscolor.name)]</value>
         <value>Dark1</value>
 	</variable>
-	<variable name="OSDButtonsFocusColour">  <!--Added-->
+	<variable name="OSDButtonsFocusColour">  
         <value condition="!IsEmpty(Skin.String(osdbuttonsfocuscolor.name))">$INFO[Skin.String(osdbuttonsfocuscolor.name)]</value>
         <value>Highlight</value>
 	</variable>	
-	<variable name="OSDProgressBarCacheColour">  <!--Added-->
+	<variable name="OSDProgressBarCacheColour">  
         <value condition="!IsEmpty(Skin.String(osdprogressbarcachecolor.name))">$INFO[Skin.String(osdprogressbarcachecolor.name)]</value>
         <value>Highlight2</value>
 	</variable>
-	<variable name="OSDProgressBarBGColour">  <!--Added-->
+	<variable name="OSDProgressBarBGColour">  
         <value condition="!IsEmpty(Skin.String(osdprogressbarbgcolor.name))">$INFO[Skin.String(osdprogressbarbgcolor.name)]</value>
         <value>2f5f5f5f</value>
 	</variable>	
-	<variable name="OSDProgressBarCacheEndColour">  <!--Added-->
+	<variable name="OSDProgressBarCacheEndColour">  
         <value condition="!IsEmpty(Skin.String(osdprogressbarcacheendcolor.name))">$INFO[Skin.String(osdprogressbarcacheendcolor.name)]</value>
         <value>PanelWhite70</value>
+	</variable>
+<!-- ###End### -->	
+	
+<!-- 4th Generation Color Enhancements -->
+<!-- ###Begin### -->	
+    <variable name="DialogMenuBackgroundColour">  
+        <value condition="!IsEmpty(Skin.String(dialogmenubgcolor.name))">$INFO[Skin.String(dialogmenubgcolor.name)]</value>
+        <value>White100</value>	
+	</variable>
+	<variable name="DialogMenuTextColour">  
+        <value condition="!IsEmpty(Skin.String(dialogmenutextcolor.name))">$INFO[Skin.String(dialogmenutextcolor.name)]</value>
+        <value>Black70</value>	
+	</variable>
+	<variable name="DialogMenuDisabledColour">  
+        <value condition="!IsEmpty(Skin.String(dialogdisabledcolor.name))">$INFO[Skin.String(dialogdisabledcolor.name)]</value>
+        <value>Black12</value>	
+	</variable>
+	<variable name="DialogButtonHighlightColour">  
+        <value condition="!IsEmpty(Skin.String(dialogbuttoncolor.name))">$INFO[Skin.String(dialogbuttoncolor.name)]</value>
+        <value>Highlight</value><!--Dark1-->	
+	</variable>
+	<!--<variable name="DialogButtonTextColour">  
+        <value condition="!IsEmpty(Skin.String(dialogbuttontextcolor.name))">$INFO[Skin.String(dialogbuttontextcolor.name)]</value>
+        <value>Black70</value>	
+	</variable>-->
+	<variable name="HubsMenuHighlightColour">  
+        <value condition="!IsEmpty(Skin.String(hubsmenucolor.name))">$INFO[Skin.String(hubsmenucolor.name)]</value>
+        <value>Dark1</value>	
+	</variable>
+	<variable name="HubsMenuTextHighlightColour">  
+        <value condition="!IsEmpty(Skin.String(hubsmenutextcolor.name))">$INFO[Skin.String(hubsmenutextcolor.name)]</value>
+        <value>Light1</value>	
+	</variable>
+	<variable name="HubsWidgetBordorColour">  
+        <value condition="!IsEmpty(Skin.String(hubswidgetbordercolor.name))">$INFO[Skin.String(hubswidgetbordercolor.name)]</value>
+        <value>Dark1</value>	
+	</variable>
+	<variable name="HubsWidgetSublabelColour">  
+        <value condition="!IsEmpty(Skin.String(hubswidgetsublabelcolor.name))">$INFO[Skin.String(hubswidgetsublabelcolor.name)]</value>
+        <value>PanelWhite70</value>	
+	</variable>
+	<variable name="SideBladeHighlightColour">  
+        <value condition="!IsEmpty(Skin.String(sidebladehighlightcolor.name))">$INFO[Skin.String(sidebladehighlightcolor.name)]</value>
+        <value>Dark1</value>	
 	</variable>	
+	
 	<variable name="DefSettingsOnRight">
 		<value condition="Window.IsVisible(AppearanceSettings)">ReplaceWindow(VideosSettings)</value>
 		<value condition="Window.IsVisible(VideosSettings)">ReplaceWindow(MusicSettings)</value>
@@ -589,18 +649,27 @@
 		<value condition="StringCompare(Window(home).Property(netflixwidget),AiringTodayTvShows)">plugin://script.extendedinfo?info=airingtodaytvshows</value>
 		<value>plugin://script.extendedinfo?info=airingtodaytvshows</value>
 	</variable>
+	
 	<include name="DefDialogButtons">
 		<width>300</width>
 		<font>Button</font>
-		<textcolor>Black70</textcolor>
-		<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+<!-- 4th GEN Colour Modification -->		
+		<textcolor>$VAR[DialogMenuTextColour]</textcolor>
+		<texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>
+		<!--<textcolor>Black70</textcolor>
+		<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>-->
 	</include>
+	
 	<include name="DefDialogInfoButtons">
 		<width>300</width>
 		<font>Button</font>
-		<textcolor>Black70</textcolor>
-		<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+<!-- 4th GEN Colour Modification -->		
+		<textcolor>$VAR[DialogMenuTextColour]</textcolor>
+		<texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>
+		<!--<textcolor>Black70</textcolor>
+		<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>-->
 	</include>
+	
 	<include name="DefDialogInfoPanel">
 		<include>Animation.FadeIn.Slide</include>
 		<include>Animation.FadeOut</include>
@@ -613,7 +682,9 @@
 			<right>-8</right>
 			<top>-8</top>
 			<bottom>-8</bottom>
-			<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
+<!-- 4th GEN Colour Modification -->			
+			<texture border="16" colordiffuse="$VAR[DialogMenuBackgroundColour]">common/rounded-shadow8.png</texture>
+			<!--<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>-->
 		</control>
 	</include>
 	<include name="DefDialogInfoPanelFanart">
@@ -639,7 +710,9 @@
 		<posy>18</posy>
 		<font>MediumBold</font>
 		<align>left</align>
-		<textcolor>Black70</textcolor>
+<!-- 4th GEN Colour Modification -->		
+		<textcolor>$VAR[DialogMenuTextColour]</textcolor>
+		<!--<textcolor>Black70</textcolor>-->
 		<textureradiofocus colordiffuse="Black70">buttons/radio-on.png</textureradiofocus>
 		<textureradionofocus colordiffuse="Black30">buttons/radio-off.png</textureradionofocus>
 	</include>
@@ -650,6 +723,8 @@
 		<width>990</width>
 		<align>center</align>
 		<font>MediumBold</font>
+<!-- 4th GEN Colour Modification -->		
+		<!--<textcolor>$VAR[DialogMenuTextColour]</textcolor>-->
 		<textcolor>Black70</textcolor>
 	</include>
 	<include name="DefDialogBackground">
@@ -661,8 +736,9 @@
 		<control type="image">
 			<width>1080</width>
 			<height>900</height>
-			<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
-		</control>
+			<!--<texture border="16" colordiffuse="$VAR[DialogMenuBackgroundColour]">common/rounded-shadow8.png</texture>-->
+			<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>-->
+		</control>		
 	</include>
 	<include name="DefDialogOK">
 		<centerleft>50%</centerleft>
@@ -695,9 +771,13 @@
 		<width>600</width>
 		<height>66</height>
 		<align>left</align>
-		<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+<!-- 4th GEN Colour Modification -->		
+		<texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>
+		<!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>-->
 		<radioposx>540</radioposx>
-		<textcolor>Black70</textcolor>
+<!-- 4th GEN Colour Modification -->		
+		<textcolor>$VAR[DialogMenuDisabledColour]</textcolor>
+		<!--<textcolor>Black70</textcolor>-->
 	</include>
 	<include name="DefKeyboardKeys">
 		<width>85</width>
@@ -714,25 +794,29 @@
 		<radioposx>400</radioposx>
 		<width>430</width>
 		<height>70</height>
-		<font>Tiny</font>
+		<font>Tiny</font>  
 		<textcolor>Black70</textcolor>
 		<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/radio-on.png</textureradiofocus>
 		<textureradionofocus colordiffuse="Black30">buttons/radio-off.png</textureradionofocus>
-		<focusedcolor>$VAR[ColourSelected]</focusedcolor>
-		<alttexturefocus colordiffuse="Dark1" border="16">common/white.png</alttexturefocus>
-		<texturefocus colordiffuse="Dark1" border="16">common/white.png</texturefocus>
+		<focusedcolor>$VAR[ColourSelected]</focusedcolor>  
+		<alttexturefocus colordiffuse="$VAR[ColourHighlight]" border="16">common/white.png</alttexturefocus><!-- old Dark1-->
+		<texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="16">common/white.png</texturefocus>  <!--Changed for color enhancement-->				
+		<!--<alttexturefocus colordiffuse="Dark1" border="16">common/white.png</alttexturefocus>
+		<texturefocus colordiffuse="Dark1" border="16">common/white.png</texturefocus>-->
 	</include>
 	<include name="DefContextButton2">
 		<radioposx>400</radioposx>
 		<width>430</width>
 		<height>55</height>
 		<font>Mini</font>
-		<textcolor>$VAR[SideBladeTextColour]</textcolor>  <!--Changed-->
+		<textcolor>$VAR[SideBladeTextColour]</textcolor>  <!--Changed for color enhancement-->
 		<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/radio-on.png</textureradiofocus>
 		<textureradionofocus colordiffuse="Black30">buttons/radio-off.png</textureradionofocus>
-		<focusedcolor>$VAR[ColourSelected]</focusedcolor>
+		<focusedcolor>$VAR[ColourSelected]</focusedcolor>		
 		<alttexturefocus colordiffuse="Dark1" border="16">common/white.png</alttexturefocus>
-		<texturefocus colordiffuse="Dark1" border="16">common/white.png</texturefocus>
+<!-- 4th GEN Colour Modification -->		
+		<texturefocus colordiffuse="$VAR[SideBladeHighlightColour]" border="16">common/white.png</texturefocus>
+		<!--<texturefocus colordiffuse="Dark1" border="16">common/white.png</texturefocus>-->
 	</include>
 	<include name="DefSettingsButton">
 		<align>left</align>
@@ -765,6 +849,15 @@
 		<alttexturefocus colordiffuse="Dark1">common/white.png</alttexturefocus>
 		<alttexturenofocus colordiffuse="Light1">common/white.png</alttexturenofocus>
 	</include>
+<!-- Modification ---  Stars Dialog Button -->	
+	<!--<include name="ButtonStars">
+	    <top>10</top>
+	    <left>170</left>
+	    <width>525</width>
+	    <height>40</height>
+	    <aspectratio align="center" aligny="center">keep</aspectratio>
+	    <animation effect="zoom" start="100,100" end="100,0" center="auto" time="150">Hidden</animation>
+	</include>-->
 	<include name="DefSettingsOKCancelButton">
 		<font>Button</font>
 		<texturenofocus colordiffuse="White12" border="16">common/white.png</texturenofocus>
@@ -948,7 +1041,7 @@
 			<height>1104</height>
 			<texturefocus border="12">common/rounded-shadow8.png</texturefocus>
 			<texturenofocus border="12">common/rounded-shadow8.png</texturenofocus>
-			<colordiffuse>$VAR[SideBladePanelColour]</colordiffuse> <!--Changed-->
+			<colordiffuse>$VAR[SideBladePanelColour]</colordiffuse> <!--Changed-- Color Enhancements-->
 		</control>
 		<control type="image">
 			<description>LOGO</description>
