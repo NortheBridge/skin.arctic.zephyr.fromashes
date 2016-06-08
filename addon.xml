@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
     id="skin.arctic.zephyr.fromashes"
-    version="3.2.10"
+    version="3.2.11"
     name="Arctic Zephyr: From Ashes"
     provider-name="jurialmunkey - im85288 - badaas - Guardian Hope (on behalf of NortheBridge)">
     <requires>
@@ -36,9 +36,9 @@
         <description lang="en">Arctic Zephyr: From Ashes is the second generation of the "Arctic Zephyr: Exploded" skin created by im85288 and badaas based on the third iteration of the Arctic skin originally created by jurialmunkey. Now curated by Guardian Hope, Arctic continues to focuses on being simple, clean and minimalistic with a light spin.</description>
         <platform>all</platform>
 		<license>GPL v3.0</license>
-		<forum>http://forum.kodi.tv/showthread.php?tid=257970</forum>
+		<forum></forum>
 		<website>https://northebridge.com/systems/oss/emby/fromashestheme</website>
-		<email>azfakodi@northebridge.com</email>
+		<email>contact@northebridge.com</email>
 		<source>https://github.com/NortheBridge/skin.arctic.zephyr.fromashes</source>
     </extension>
 </addon>
