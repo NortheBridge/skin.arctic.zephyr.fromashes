@@ -1,5 +1,18 @@
 [B]Arctic Zephyr: From Ashes Changelog[/B]
 
+[B]3.2.10 (3.2.11_bsrelease01) / 4.0.01 (4.0.01_bsrelease02) - "From Ashes Spring 2016 Update Rollup"[/B]
+Experimental Krypton Support ("Danvers" Build Line - Bluestone 2 - 4.0.01)
+Resolves Critical Issue with Textures
+Resolves Additional Code Errors
+Adds ".danvers" to namespace of Krypton Preview Release
+Danvers Released Label is now "Anniversary Edition"
+Disables Info Banner Function
+Info Banner ("Plot Overlay") Partially Implemented (Feature Currently Not Functional)
+NOTICE: Due to GUI Changes, Skin Required Space May Temporarily Increase or Use Temporary Textures
+NOTICE: Due to Legacy Code Removal, Certain Functions May Not Operate Correctly
+NOTICE: Rotten Tomatoes for Views Will Be Added In 3.2.11/4.0.01 (Feature Disabled Currently)
+NOTICE: Due to Info Banner, You May Experience a "Black Glitch" at Video Playback Start
+
 [B]3.2.10 (3.2.10_bsrelease01) / 4.0.00 (4.0.00_bsrelease02) - "From Ashes Spring 2016 Update"[/B]
 Experimental Krypton Support ("Danvers" Build Line - Bluestone 2 - 4.0.00)
 Minor Improvements to the Skin's Code for Jarvis Support ("Dormer" Build Line - Bluestone 1 / "Danvers" Build Line - Bluestone 2")
