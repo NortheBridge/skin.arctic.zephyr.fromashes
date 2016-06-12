@@ -1,6 +1,5 @@
 <window>
 	<defaultcontrol>30</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
 	<defaultcontrol always="true">9101</defaultcontrol>
 	<controls>
 		<include>GlobalBackground</include>

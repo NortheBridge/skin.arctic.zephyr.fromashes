@@ -4,7 +4,6 @@
     <onload condition="!IsEmpty(ListItem.TvShowTitle)">SetProperty("TvTunesSupported", "TvShows")</onload>
     <onload condition="IsEmpty(ListItem.TvShowTitle)">SetProperty("TvTunesSupported", "Movies")</onload>
     <defaultcontrol always="true">51</defaultcontrol>
-    <allowoverlay>yes</allowoverlay>
     <controls>
         <include>GlobalBackground</include>
         <control type="group">

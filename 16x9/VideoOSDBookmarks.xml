@@ -2,7 +2,6 @@
 <!-- Foundation -->
 <window id="125">
     <defaultcontrol always="true">2</defaultcontrol>
-    <allowoverlay>yes</allowoverlay>
 
     <controls>
         <include>GlobalOverlay</include>

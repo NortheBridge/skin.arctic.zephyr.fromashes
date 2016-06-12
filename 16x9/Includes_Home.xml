@@ -10,14 +10,14 @@
 			<control type="image" description="TopBG">
 				<width>100%</width>
 				<top>0</top>
-				<height>240</height>
+				<height>170</height>
 				<aspectratio aligny="top">scale</aspectratio>
 				<texture colordiffuse="$VAR[HomeHeaderBGColour]">common/bg.jpg</texture><!--replaced "Background" -->
 				<animation effect="fade" start="100" end="75" time="200" condition="true">Conditional</animation>
 			</control>
 			<control type="image" description="FanartOverlay">
 				<width>100%</width>
-				<height>240</height>
+				<height>170</height>
 				<top>0</top>
 				<aspectratio aligny="bottom">scale</aspectratio>
 				<texture colordiffuse="FloorFade">common/floor.png</texture>
@@ -25,7 +25,7 @@
 			<control type="image" description="Shadow">
 				<width>100%</width>
 				<height>16</height>
-				<top>240</top>
+				<top>170</top>
 				<texture flipy="false">common/shadow16B.png</texture>
 			</control>
 			<include>Furniture_Header</include>
@@ -749,7 +749,7 @@
 			<animation effect="slide" end="0" start="0,250" time="150">WindowOpen</animation>
 			<control type="image" description="BottomBG">
 				<width>100%</width>
-				<height>220</height>
+				<height>135</height>
 				<bottom>0</bottom>
 				<aspectratio aligny="bottom">scale</aspectratio>
 				<texture colordiffuse="Background">common/bg.jpg</texture>
@@ -757,7 +757,7 @@
 			</control>
 			<control type="image" description="FanartOverlay">
 				<width>100%</width>
-				<height>220</height>
+				<height>135</height>
 				<bottom>0</bottom>
 				<aspectratio aligny="bottom">scale</aspectratio>
 		<!-- replaced "FloorFade" with 	"$VAR[HomeFloorBGColour]" -->	
@@ -766,7 +766,7 @@
 			<control type="image" description="Shadow">
 				<width>100%</width>
 				<height>16</height>
-				<bottom>220</bottom>
+				<bottom>135</bottom>
 				<texture flipy="true">common/shadow16B.png</texture>
 			</control>
 			<include>Furniture_Clock</include>
