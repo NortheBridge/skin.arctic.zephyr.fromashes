@@ -14,9 +14,7 @@ Emby Beta Repository (RECOMENDED) - http://www.mb3admin.com/downloads/addons/xbm
 Once the requirements are met, simply download and install the Arctic Zephyr: From Ashes skin. There are currently three release channels available:
 
 ###### NortheBridge's Enterprise CDN: https://northebridge.com/systems/oss/embykodi/fromashes
-
 ###### Emby Repository
-
 ###### GitHub (for Advanced Users)
 
 Information about the "Release Channels" are available on the Wiki and as well as in the Kodi and Emby forums. Please read the official threads.
