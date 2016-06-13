@@ -9,7 +9,7 @@ Kodi Krypton (v17) - https://kodi.tv/download/
 
 Emby Beta Repository (RECOMENDED) - http://www.mb3admin.com/downloads/addons/xbmb3c/kodi-beta-repo/repository.beta.emby.kodi-1.0.5.zip
 
-# If you do not install the Emby Repository, you will need tot install "Script.Duration" from http://www.mb3admin.com/downloads/addons/xbmb3c/kodi-beta-repo/script.duration/script.duration-0.2.2.zip in order to see duration of movies and TV Shows in a "friendly" format (i.e. hh:nn versus mmm runtime).
+#### If you do not install the Emby Repository, you will need tot install "Script.Duration" from http://www.mb3admin.com/downloads/addons/xbmb3c/kodi-beta-repo/script.duration/script.duration-0.2.2.zip in order to see duration of movies and TV Shows in a "friendly" format (i.e. hh:nn versus mmm runtime).
 
 Once the requirements are met, simply download and install the Arctic Zephyr: From Ashes skin. There are currently three release channels available:
 
