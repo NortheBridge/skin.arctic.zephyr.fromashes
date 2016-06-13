@@ -964,6 +964,7 @@
                         <texturefocus colordiffuse="$INFO[Window(home).Property(VideoInfo.ImageColor)]" border="5">common/box.png</texturefocus>
                         <texturenofocus colordiffuse="White70" border="5">common/box.png</texturenofocus>
                     </control>
+					<!-- Refresh Button -->
                     <control id="6" type="button">
                         <width>222</width>
                         <height>116</height>
@@ -974,7 +975,7 @@
                         <label></label>
                         <textcolor>Black700</textcolor>
                         <visible>Control.IsEnabled(6)</visible>
-                        <visible>Container.Content(episodes)</visible>
+                        <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
                         <texturefocus colordiffuse="$INFO[Window(home).Property(VideoInfo.ImageColor)]" border="5">common/box.png</texturefocus>
                         <texturenofocus colordiffuse="White70" border="5">common/box.png</texturenofocus>
                     </control>
@@ -1101,7 +1102,7 @@
                         <textcolor>White70</textcolor>
                         <textoffsetx>0</textoffsetx>
                         <visible>Control.IsEnabled(6)</visible>
-                        <visible>Container.Content(episodes)</visible>
+                        <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
                         <font>EPGTimeline</font>
                         <label>184</label>
                         <animation condition="Control.HasFocus(6)" effect="fade" end="100" start="0" time="10">Conditional</animation>
