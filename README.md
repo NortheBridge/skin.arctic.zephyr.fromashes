@@ -15,9 +15,9 @@ Once the requirements are met, simply download and install the Arctic Zephyr: Fr
 
 ###### NortheBridge's Enterprise CDN: https://northebridge.com/systems/oss/embykodi/fromashes
 
-Emby Repository
+###### Emby Repository
 
-GitHub (for Advanced Users)
+###### GitHub (for Advanced Users)
 
 Information about the "Release Channels" are available on the Wiki and as well as in the Kodi and Emby forums. Please read the official threads.
 
