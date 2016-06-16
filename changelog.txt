@@ -10,7 +10,6 @@ The "Summer 2016 Update" to Arctic Zephyr: From Ashes will conclude the "General
 "About From Ashes" has been updated with new credits which were missing in the "Spring 2016 Update"
 Info Banner Code Has Been Completely Commented Out for Dormer and Danver Releases
 Rotten Tomatoes Has Been Added to the Video Information Screen
-Rotten Tomatoes Has Been Added to the "Views"
 Fixes to Broken Code Lines During 3rd Gen Color Enhancement Implementation
 Danvers ONLY: Adds "DialogConfirm.xml"
 New Textures Have Been Added
@@ -30,8 +29,6 @@ Fixed File Browser not displaying Folder and File Icons properly
 Changed "script.toolbox" to "script.skinhelper" for Backup and Restore in Skin Settings.
 Added new Color Themes Category in Skin Settings, With Ability to Create and Manage Custom Themes
 Added Ability to Select Day/Night Themes
-Anniversary View Foundation Added (Currently Disabled)
-WARNING: Raspberry-Pi Owners Have Reported boot loops from "Kernel Panics" after using Arctic Zephyr: From Ashes. This can be fixed by manually editing the config file to restore Confluence. There is currently no known resolution to this bug. If you have a system log file, please provide it so that the user experience on the Raspberry-Pi may be fixed.
 
 [B]3.2.12 (3.2.12_bsrelease01) - "From Ashes Spring 2016 Update Rollup Patch Level 2 (PL2)"[/B]
 JARVIS ONLY UPDATE
