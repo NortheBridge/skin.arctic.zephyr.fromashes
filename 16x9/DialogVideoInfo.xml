@@ -2440,7 +2440,7 @@
 				<height>50</height>
 				<aspectratio align="left">keep</aspectratio>
 				<visible>!IntegerGreaterThan(Window(Home).Property(SkinHelper.RottenTomatoesMeter), 59)</visible>
-				<texture>http://d3biamo577v4eu.cloudfront.net/static/images/trademark/rotten.png</texture>
+				<texture>rt_textures/rotten.png</texture>
 			</control>
 			<control type="image">
 				<description>Tomato logo Between 60-74% only</description>
@@ -2449,7 +2449,7 @@
 				<height>50</height>
 				<aspectratio align="left">keep</aspectratio>
 				<visible>IntegerGreaterThan(Window(Home).Property(SkinHelper.RottenTomatoesMeter), 59) + !IntegerGreaterThan(Window(Home).Property(SkinHelper.RottenTomatoesRating), 75)</visible>
-				<texture>http://d3biamo577v4eu.cloudfront.net/static/images/trademark/fresh.png</texture>
+				<texture>rt_textures/fresh.png</texture>
 			</control>
 			<control type="image">
 				<description>Certified Fresh logo 75%+ only</description>
@@ -2458,7 +2458,7 @@
 				<height>50</height>
 				<aspectratio align="left">keep</aspectratio>
 				<visible>IntegerGreaterThan(Window(Home).Property(SkinHelper.RottenTomatoesMeter), 75)</visible>
-				<texture>http://d3biamo577v4eu.cloudfront.net/static/images/icons/cf-lg.png</texture>
+				<texture>rt_textures/cf-lg.png</texture>
 			</control>
 			
 			<control type="image">
@@ -2468,7 +2468,7 @@
 				<height>50</height>
 				<aspectratio align="left">keep</aspectratio>
 				<visible>IntegerGreaterThan(Window(Home).Property(SkinHelper.RottenTomatoesAudienceMeter), 59)</visible>
-				<texture>http://d3biamo577v4eu.cloudfront.net/static/images/trademark/popcorn.png</texture>
+				<texture>rt_textures/popcorn.png</texture>
 			</control>
 			<control type="image">
 				<description>Popcorn - Rotten Logo</description>
@@ -2478,7 +2478,7 @@
 				<width max="55">auto</width>
 				<aspectratio align="left">keep</aspectratio>
 				<visible>!IntegerGreaterThan(Window(Home).Property(SkinHelper.RottenTomatoesAudienceMeter), 59)</visible>
-				<texture>http://d3biamo577v4eu.cloudfront.net/static/images/trademark/spilt.png</texture>
+				<texture>rt_textures/spilt.png</texture>
 			</control>
 			
 		</control>
