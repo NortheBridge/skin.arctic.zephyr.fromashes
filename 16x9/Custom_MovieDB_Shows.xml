@@ -72,17 +72,20 @@
                 <width>450</width>
                 <height>117</height>
                 <visible>Container(9500).IsUpdating</visible>
+<!--############# Updated to new Busy Spinner ############-->				
+				<visible>!Window.IsVisible(DialogProgress.xml)</visible>
+			    <visible>!Window.IsVisible(DialogBusy.xml)</visible>				
                 <include>Animation.FadeIn</include>
                 <include>Animation.FadeOut</include>
 				
-<!--Added-->    <control type="image">
+                <!--<control type="image">
 				    <description>background image</description>
 				    <posx>0</posx>
 				    <posy>0</posy>
 				    <width>450</width>
 				    <height>117</height>
 				    <animation effect="fade" start="100" end="90" condition="true">Conditional</animation>
-<!--Changed-->	    <texture border="16" colordiffuse="$VAR[SpinnerBackgroundColour]">common/rounded-shadow8.png</texture>
+	                <texture border="16" colordiffuse="$VAR[SpinnerBackgroundColour]">common/rounded-shadow8.png</texture>
 			    </control>          
                 <control type="image">
                     <description>Busy animation</description>
@@ -90,10 +93,9 @@
                     <posy>30</posy>
                     <width>48</width>
                     <height>48</height>
-<!--Changed-->      <texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
+                    <texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
                     <aspectratio>keep</aspectratio>
                 </control>
-
                 <control type="label">
                     <description>Busy label</description>
                     <posx>105</posx>
@@ -103,7 +105,7 @@
                     <align>left</align>
                     <label>$LOCALIZE[31138]...</label>
                     <textcolor>Black70</textcolor>
-                </control>
+                </control>-->
 
             </control>
             <control type="list" id="9500">

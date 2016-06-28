@@ -3,7 +3,6 @@
 <window id="6">
 	<defaultcontrol always="true">50</defaultcontrol>
 	<menucontrol>9000</menucontrol>
-	<allowoverlay>yes</allowoverlay>
 	<views>50,550,54,53,51,55,56,57,155,156,58,59,52,500,514,513,515</views>
 	<onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onload condition="System.HasAddon(script.duration)">RunScript(script.duration,backend=True)</onload>
@@ -79,7 +78,8 @@
 				</control>
 				<control type="edit" id="19">
 					<label>587</label>
-					<description>Filter (hidden)</description>
+					<!--<description>Filter (hidden)</description>-->
+					<description>Filter</description>
 					<include>DefContextButton2</include>
 					<visible>!Container.CanFilterAdvanced</visible>
 				</control>
@@ -139,17 +139,43 @@
 		<control type="group">
 			<visible>!Window.IsVisible(DialogProgress.xml)</visible>
 			<visible>!Window.IsVisible(DialogBusy.xml)</visible>
-			<posx>735</posx>
-			<posy>486</posy>
+			<!--<posx>735</posx>
+			<posy>486</posy>-->
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
-			<control type="image">
+			
+<!--############# Updated to new Busy Spinner ############-->
+			<include>GlobalSpinnerOverlay</include>
+			<include>GlobalOverlay</include>
+            <control type="image">
+                <description>Busy animation</description>
+                <centerleft>50%</centerleft>
+                <centertop>47%</centertop>
+                <width>100</width>
+                <height>100</height>
+                <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
+                <texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">dialog/loading-spinner.png</texture>
+                <aspectratio>keep</aspectratio>
+            </control>
+<!--############# Updated to new Busy Spinner ############-->
+            <control type="label">
+                <description>Busy label</description>
+                <centerleft>50%</centerleft>
+                <centertop>53%</centertop>
+                <width>720</width>
+                <height>108</height>
+                <aligny>center</aligny>
+                <align>center</align>
+                <label>$LOCALIZE[20186]...</label>
+                <textcolor>ffededed</textcolor>
+            </control>
+			<!--<control type="image">
 				<description>background image</description>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>450</width>
 				<height>108</height>
-<!--Changed-->	<texture border="16" colordiffuse="$VAR[SpinnerBackgroundColour]">common/rounded-shadow8.png</texture>
+             	<texture border="16" colordiffuse="$VAR[SpinnerBackgroundColour]">common/rounded-shadow8.png</texture>
 			</control>
 			<control type="image">
 				<description>Busy animation</description>
@@ -157,7 +183,7 @@
 				<posy>30</posy>
 				<width>48</width>
 				<height>48</height>
-<!--Changed-->	<texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
+	            <texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="label">
@@ -169,7 +195,7 @@
 				<align>left</align>
 				<label>$LOCALIZE[20186]...</label>
 				<textcolor>Black70</textcolor>
-			</control>
+			</control>-->
 			<visible>stringcompare(Container.NumItems,0)</visible>
 		</control>
 	</controls>

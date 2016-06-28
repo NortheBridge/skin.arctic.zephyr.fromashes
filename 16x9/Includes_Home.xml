@@ -10,14 +10,14 @@
 			<control type="image" description="TopBG">
 				<width>100%</width>
 				<top>0</top>
-				<height>240</height>
+				<height>170</height>
 				<aspectratio aligny="top">scale</aspectratio>
-				<texture colordiffuse="$VAR[HomeHeaderBGColour]">common/bg.jpg</texture>
+				<texture colordiffuse="$VAR[HomeHeaderBGColour]">common/bg.jpg</texture><!--replaced "Background" -->
 				<animation effect="fade" start="100" end="75" time="200" condition="true">Conditional</animation>
 			</control>
 			<control type="image" description="FanartOverlay">
 				<width>100%</width>
-				<height>240</height>
+				<height>170</height>
 				<top>0</top>
 				<aspectratio aligny="bottom">scale</aspectratio>
 				<texture colordiffuse="FloorFade">common/floor.png</texture>
@@ -25,7 +25,7 @@
 			<control type="image" description="Shadow">
 				<width>100%</width>
 				<height>16</height>
-				<top>240</top>
+				<top>170</top>
 				<texture flipy="false">common/shadow16B.png</texture>
 			</control>
 			<include>Furniture_Header</include>
@@ -266,7 +266,7 @@
 				<top>0</top>
 				<bottom>0</bottom>
 				<width>660</width>
-				<texture border="16" colordiffuse="$VAR[WidgetBackgroundColour]">common/rounded-shadow8.png</texture>
+				<texture border="16" colordiffuse="$VAR[WidgetBackgroundColour]">common/rounded-shadow8.png</texture><!--replaced "Background" -->
 				<animation effect="fade" start="100" end="90" condition="true">Conditional</animation>
 			</control>
 			<control type="image">
@@ -324,6 +324,7 @@
 				<top>0</top>
 				<height>100</height>
 				<aspectratio aligny="top">scale</aspectratio>
+			<!--replaced "Background" -->	
 				<texture colordiffuse="$VAR[HomeHeaderBGColour]">common/bg.jpg</texture>
 				<animation effect="fade" start="100" end="75" time="200" condition="true">Conditional</animation>
 			</control>
@@ -332,6 +333,7 @@
 				<height>100</height>
 				<top>0</top>
 				<aspectratio aligny="bottom">scale</aspectratio>
+			<!--replaced "Background" -->	
 				<texture colordiffuse="$VAR[HomeFloorBGColour]">common/floor.png</texture>
 			</control>
 			<control type="image" description="Shadow">
@@ -421,21 +423,59 @@
 	<include name="HomeWidgetUpdating">
 		<!-- Container Updating -->
 		<control type="group">
-			<left>40</left>
+			<!--<left>40</left>
 			<bottom>250</bottom>
 			<width>450</width>
-			<height>117</height>
+			<height>117</height>-->
+<!--############# Updated to new Busy Spinner ############-->			
 			<visible>Container(301).IsUpdating</visible>
+			<visible>!Window.IsVisible(DialogProgress.xml)</visible>
+			<visible>!Skin.HasSetting(hide.busydialog)</visible>
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
-			<control type="image">
+			<!--<include>GlobalSpinnerOverlay</include>-->
+			<include>GlobalSpinnerOverlay</include>
+			<include>GlobalOverlay</include>
+			<!--<control type="image">
+                <description>Backgrond</description>
+                <centerleft>50%</centerleft>
+                <centertop>47%</centertop>
+                <width>100</width>
+                <height>100</height>
+                <texture border="16" colordiffuse="$VAR[SpinnerBackgroundColour]">dialog/loading-back.png</texture>
+                <aspectratio>keep</aspectratio>
+            </control>-->
+<!--############# Updated to new Busy Spinner ############-->
+            <control type="image">
+                <description>Busy animation</description>
+                <centerleft>50%</centerleft>
+                <centertop>47%</centertop>
+                <width>100</width>
+                <height>100</height>
+                <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
+                <texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">dialog/loading-spinner.png</texture>
+                <aspectratio>keep</aspectratio>
+            </control>
+<!--############# Updated to new Busy Spinner ############-->
+            <control type="label">
+                <description>Busy label</description>
+                <centerleft>50%</centerleft>
+                <centertop>53%</centertop>
+                <width>720</width>
+                <height>108</height>
+                <aligny>center</aligny>
+                <align>center</align>
+                <label>$LOCALIZE[20186]...</label>
+                <textcolor>ffededed</textcolor>
+            </control>
+			<!--<control type="image">
 				<description>background image</description>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>450</width>
 				<height>117</height>
 				<animation effect="fade" start="100" end="90" condition="true">Conditional</animation>
-<!--Changed-->	<texture border="16" colordiffuse="$VAR[SpinnerBackgroundColour]">common/rounded-shadow8.png</texture>
+            	<texture border="16" colordiffuse="$VAR[SpinnerBackgroundColour]">common/rounded-shadow8.png</texture>
 			</control>
 			<control type="image">
 				<description>Busy animation</description>
@@ -443,7 +483,7 @@
 				<posy>30</posy>
 				<width>48</width>
 				<height>48</height>
-<!--Changed-->	<texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
+            	<texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="label">
@@ -455,7 +495,7 @@
 				<align>left</align>
 				<label>$LOCALIZE[31138]...</label>
 				<textcolor>Black70</textcolor>
-			</control>
+			</control>-->
 		</control>
 	</include>
 	<include name="HomeWidgetInfo">
@@ -582,8 +622,8 @@
 					<aligny>center</aligny>
 					<height>80</height>
 					<font>MediumBold</font>
-					<textcolor>Dark1</textcolor>
-					<selectedcolor>Dark1</selectedcolor>
+					<textcolor>$VAR[WidgetTitleColour]</textcolor><!--replaced "Dark1" -->
+					<selectedcolor>$VAR[WidgetTitleColour]</selectedcolor><!--replaced "Dark1" -->
 					<label>$VAR[WidgetTitle]</label>
 				</control>
 				<control type="textbox">
@@ -594,8 +634,8 @@
 					<font>Tiny</font>
 					<align>justify</align>
 					<autoscroll>false</autoscroll>
-					<textcolor>Dark2</textcolor>
-					<selectedcolor>Dark2</selectedcolor>
+					<textcolor>$VAR[WidgetPlotColour]</textcolor><!--replaced "Dark2" -->
+					<selectedcolor>$VAR[WidgetPlotColour]</selectedcolor><!--replaced "Dark2" -->
 					<shadowcolor>noop</shadowcolor>
 					<label>$VAR[WidgetPlot]</label>
 				</control>
@@ -606,8 +646,8 @@
 					<bottom>324</bottom>
 					<align>right</align>
 					<autoscroll>false</autoscroll>
-					<textcolor>Dark1</textcolor>
-					<selectedcolor>Dark1</selectedcolor>
+					<textcolor>$VAR[WidgetSubLabelColour]</textcolor><!--replaced "Dark1" -->
+					<selectedcolor>$VAR[WidgetSubLabelColour]</selectedcolor><!--replaced "Dark1" -->
 					<label>$VAR[WidgetSubLabel]</label>
 					<font>Flag</font>
 				</control>
@@ -668,8 +708,8 @@
 					<aligny>center</aligny>
 					<height>80</height>
 					<font>MediumBold</font>
-					<textcolor>Dark1</textcolor>
-					<selectedcolor>Dark1</selectedcolor>
+					<textcolor>$VAR[WidgetTitleColour]</textcolor><!--replaced "Dark1" -->
+					<selectedcolor>$VAR[WidgetTitleColour]</selectedcolor><!--replaced "Dark1" -->
 					<label>$VAR[WidgetTitle]</label>
 				</control>
 				<control type="textbox">
@@ -680,8 +720,8 @@
 					<font>Tiny</font>
 					<align>justify</align>
 					<autoscroll>false</autoscroll>
-					<textcolor>Dark2</textcolor>
-					<selectedcolor>Dark2</selectedcolor>
+					<textcolor>$VAR[WidgetPlotColour]</textcolor><!--replaced "Dark2" -->
+					<selectedcolor>$VAR[WidgetPlotColour]</selectedcolor><!--replaced "Dark2" -->
 					<shadowcolor>noop</shadowcolor>
 					<label>$VAR[WidgetPlot]</label>
 				</control>
@@ -692,8 +732,8 @@
 					<bottom>324</bottom>
 					<align>right</align>
 					<autoscroll>false</autoscroll>
-					<textcolor>Dark1</textcolor>
-					<selectedcolor>Dark1</selectedcolor>
+					<textcolor>$VAR[WidgetSubLabelColour]</textcolor><!--replaced "Dark1" -->
+					<selectedcolor>$VAR[WidgetSubLabelColour]</selectedcolor><!--replaced "Dark1" -->
 					<label>$VAR[WidgetSubLabel]</label>
 					<font>Flag</font>
 				</control>
@@ -709,7 +749,7 @@
 			<animation effect="slide" end="0" start="0,250" time="150">WindowOpen</animation>
 			<control type="image" description="BottomBG">
 				<width>100%</width>
-				<height>220</height>
+				<height>135</height>
 				<bottom>0</bottom>
 				<aspectratio aligny="bottom">scale</aspectratio>
 				<texture colordiffuse="Background">common/bg.jpg</texture>
@@ -717,15 +757,16 @@
 			</control>
 			<control type="image" description="FanartOverlay">
 				<width>100%</width>
-				<height>220</height>
+				<height>135</height>
 				<bottom>0</bottom>
 				<aspectratio aligny="bottom">scale</aspectratio>
-<!--Changed-->	<texture colordiffuse="$VAR[HomeFloorBGColour]">common/floor.png</texture>
+		<!-- replaced "FloorFade" with 	"$VAR[HomeFloorBGColour]" -->	
+	            <texture colordiffuse="$VAR[HomeFloorBGColour]">common/floor.png</texture>
 			</control>
 			<control type="image" description="Shadow">
 				<width>100%</width>
 				<height>16</height>
-				<bottom>220</bottom>
+				<bottom>135</bottom>
 				<texture flipy="true">common/shadow16B.png</texture>
 			</control>
 			<include>Furniture_Clock</include>
@@ -735,7 +776,8 @@
 				<left>32</left>
 				<width>16</width>
 				<height>16</height>
-				<texture colordiffuse="Dark2" flipx="true">common/arrow-small-right.png</texture>
+		<!-- replaced "Dark2" with 	"$VAR[ColourHighlight]" -->		
+				<texture colordiffuse="$VAR[ColourHighlight]" flipx="true">common/arrow-small-right.png</texture>
 			</control>
 			<control type="image">
 				<visible>IntegerGreaterThan(Container(300).NumItems,6)</visible>
@@ -744,7 +786,8 @@
 				<right>470</right>
 				<width>16</width>
 				<height>16</height>
-				<texture colordiffuse="Dark2" flipx="false">common/arrow-small-right.png</texture>
+		<!-- replaced "Dark2" with 	"$VAR[ColourHighlight]" -->		
+				<texture colordiffuse="$VAR[ColourHighlight]" flipx="false">common/arrow-small-right.png</texture>
 			</control>
 			<control type="image">
 				<visible>IntegerGreaterThan(Container(300).NumItems,6)</visible>
@@ -753,7 +796,8 @@
 				<right>32</right>
 				<width>16</width>
 				<height>16</height>
-				<texture colordiffuse="Dark2" flipx="false">common/arrow-small-right.png</texture>
+		<!-- replaced "Dark2" with 	"$VAR[ColourHighlight]" -->		
+				<texture colordiffuse="$VAR[ColourHighlight]" flipx="false">common/arrow-small-right.png</texture>
 			</control>
 			<control type="list" id="300">
 				<include>Animation.FadeIn.Delay</include>
@@ -871,7 +915,7 @@
 					<control type="image">
 						<width>100%</width>
 						<height>100%</height>
-						<texture colordiffuse="$VAR[ColourHighlight]">common/white.png</texture>
+						<texture colordiffuse="$VAR[ColourHighlight]">common/white.png</texture>				
 					</control>
 					<control type="label">
 						<align>center</align>
@@ -951,7 +995,8 @@
 						<centerleft>50%</centerleft>
 						<width>16</width>
 						<height>16</height>
-<!--Changed-->			<texture colordiffuse="$VAR[ColourHighlight]" flipy="true">common/arrow-small.png</texture>
+				<!-- replaced "Dark2" with 	"$VAR[ColourHighlight]" -->		
+			            <texture colordiffuse="$VAR[ColourHighlight]" flipy="true">common/arrow-small.png</texture>
 						<animation effect="fade" end="100" start="0" delay="300" time="400" reversible="false">Focus</animation>
 					</control>
 				</focusedlayout>
@@ -984,7 +1029,8 @@
 						<height>900</height>
 						<bottom>-680</bottom>
 						<aspectratio aligny="bottom">scale</aspectratio>
-<!--Changed-->			<texture colordiffuse="$VAR[HomeFloorBGColour]">common/floor.png</texture>
+				<!-- replaced "FloorFade"  with "$VAR[HomeFloorBGColour]" -->		
+			            <texture colordiffuse="$VAR[HomeFloorBGColour]">common/floor.png</texture>
 					</control>
 					<control type="image" description="Shadow">
 						<width>100%</width>
@@ -1031,7 +1077,8 @@
 								<bottom>10</bottom>
 								<top>10</top>
 								<aspectratio scalediffuse="false">scale</aspectratio>
-<!--Changed-->					<texture diffuse="$VAR[WidgetBackgroundColour]" fallback="DefaultAddonNone.png" background="true">$VAR[PosterImage]</texture>
+						<!-- replaced "Background" with "$VAR[WidgetBackgroundColour]" -->		
+					            <texture diffuse="$VAR[WidgetBackgroundColour]" fallback="DefaultAddonNone.png" background="true">$VAR[PosterImage]</texture>
 							</control>
 						</itemlayout>
 						<focusedlayout width="178" height="257">
@@ -1225,21 +1272,52 @@
 
 					<!-- Container Updating -->
 					<control type="group" id="9201">
-						<centerleft>50%</centerleft>
+						<!--<centerleft>50%</centerleft>
 						<centertop>50%</centertop>
 						<width>450</width>
-						<height>117</height>
+						<height>117</height>-->
+						
+<!--############# Updated to new Busy Spinner ############-->						
 						<visible>Container(301).IsUpdating</visible>
-						<animation effect="fade" start="0" end="100" delay="1000" time="200" reversible="false">Visible</animation>
-
-<!--Added-->            <control type="image">
+						<visible>!Window.IsVisible(DialogProgress.xml)</visible>
+			            <visible>!Skin.HasSetting(hide.busydialog)</visible>
+			            <include>Animation.FadeIn</include>
+			            <include>Animation.FadeOut</include>
+			            <include>GlobalOverlay</include>
+			            <include>GlobalOverlay</include>
+<!--############# Updated to new Busy Spinner ############-->
+                       <control type="image">
+                           <description>Busy animation</description>
+                           <centerleft>50%</centerleft>
+                           <centertop>47%</centertop>
+                           <width>100</width>
+                           <height>100</height>
+                           <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
+                           <texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">dialog/loading-spinner.png</texture>
+                           <aspectratio>keep</aspectratio>
+                        </control>
+<!--############# Updated to new Busy Spinner ############-->
+                        <control type="label">
+                            <description>Busy label</description>
+                            <centerleft>50%</centerleft>
+                            <centertop>53%</centertop>
+                            <width>720</width>
+                            <height>108</height>
+                            <aligny>center</aligny>
+                            <align>center</align>
+                            <label>$LOCALIZE[20186]...</label>
+                            <textcolor>ffededed</textcolor>
+                        </control>						
+						
+						<!--<animation effect="fade" start="0" end="100" delay="1000" time="200" reversible="false">Visible</animation>
+                        <control type="image">
 				            <description>background image</description>
 				            <posx>0</posx>
 				            <posy>0</posy>
 				            <width>450</width>
 				            <height>117</height>
 				            <animation effect="fade" start="100" end="90" condition="true">Conditional</animation>
-<!--Changed-->	            <texture border="16" colordiffuse="$VAR[SpinnerBackgroundColour]">common/rounded-shadow8.png</texture>
+	                        <texture border="16" colordiffuse="$VAR[SpinnerBackgroundColour]">common/rounded-shadow8.png</texture>
 			            </control>						
 						<control type="image">
 							<description>Busy animation</description>
@@ -1247,10 +1325,9 @@
 							<posy>30</posy>
 							<width>48</width>
 							<height>48</height>
-<!--Changed-->				<texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
+				            <texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
-
 						<control type="label">
 							<description>Busy label</description>
 							<posx>105</posx>
@@ -1260,7 +1337,7 @@
 							<align>left</align>
 							<label>$LOCALIZE[31138]...</label>
 							<textcolor>Black70</textcolor>
-						</control>
+						</control>-->
 
 					</control>
 				</control>
@@ -1292,8 +1369,8 @@
 							<aligny>center</aligny>
 							<height>80</height>
 							<font>MediumBold</font>
-							<textcolor>Dark1</textcolor>
-							<selectedcolor>Dark1</selectedcolor>
+							<textcolor>$VAR[WidgetTitleColour]</textcolor><!--replaced "Dark2"-->
+							<selectedcolor>$VAR[WidgetTitleColour]</selectedcolor><!--replaced "Dark2"-->
 							<label>$VAR[WidgetTitle]</label>
 						</control>
 						<control type="textbox">
@@ -1304,8 +1381,8 @@
 							<font>Tiny</font>
 							<align>justify</align>
 							<autoscroll>false</autoscroll>
-							<textcolor>Dark2</textcolor>
-							<selectedcolor>Dark2</selectedcolor>
+							<textcolor>$VAR[WidgetPlotColour]</textcolor><!--replaced "Dark2"-->
+							<selectedcolor>$VAR[WidgetPlotColour]</selectedcolor><!--replaced "Dark2"-->
 							<shadowcolor>noop</shadowcolor>
 							<label>$VAR[WidgetPlot]</label>
 						</control>
@@ -1316,8 +1393,8 @@
 							<height>40</height>
 							<align>right</align>
 							<autoscroll>false</autoscroll>
-							<textcolor>Dark2</textcolor>
-							<selectedcolor>Dark2</selectedcolor>
+							<textcolor>$VAR[WidgetSubLabelColour]</textcolor><!--replaced "Dark2"-->
+							<selectedcolor>$VAR[WidgetSubLabelColour]</selectedcolor><!--replaced "Dark2"-->
 							<label>$VAR[WidgetSubLabel]</label>
 							<font>Flag</font>
 						</control>
@@ -1416,7 +1493,7 @@
 				<centerleft>50%</centerleft>
 				<width>16</width>
 				<height>16</height>
-				<texture colordiffuse="Dark3">common/arrow-small.png</texture>
+				<texture colordiffuse="$VAR[ColourHighlight]">common/arrow-small.png</texture><!--replaced "Dark3" -->
 				<visible>Control.HasFocus(300)</visible>
 				<visible>IntegerGreaterThan(Container(302).NumItems,0)</visible>
 				<animation effect="fade" end="100" start="0" delay="300" time="400" reversible="false">Focus</animation>
@@ -1454,7 +1531,7 @@
 				<height>128</height>
 				<centerleft>50%</centerleft>
 				<centertop>40%</centertop>								
-				<texture colordiffuse="Dark1">$INFO[ListItem.Icon]</texture>
+				<texture colordiffuse="$VAR[ColourHighlight]">$INFO[ListItem.Icon]</texture><!-- replaced "Dark1" -->
 				<textcolor>Dark2</textcolor>
 				<visible>substring(ListItem.Icon,icons)</visible>
 			</control>
@@ -1483,7 +1560,7 @@
 				<centerleft>50%</centerleft>
 				<width>16</width>
 				<height>16</height>
-<!--Changed-->	<texture colordiffuse="$VAR[ColourHighlight]">common/arrow-small.png</texture>
+	            <texture colordiffuse="$VAR[ColourHighlight]">common/arrow-small.png</texture><!--replaced "Dark2" -->
 				<visible>Control.HasFocus(300)</visible>
 				<visible>IntegerGreaterThan(Container(302).NumItems,0)</visible>
 				<animation effect="fade" end="100" start="0" delay="300" time="400" reversible="false">Focus</animation>
@@ -1710,22 +1787,50 @@
 			<control type="group">
 				<!-- Container Updating -->
 				<control type="group">
-					<centerleft>60%</centerleft>
+					<!--<centerleft>60%</centerleft>
 					<centertop>45%</centertop>
 					<width>450</width>
-					<height>117</height>
+					<height>117</height>-->
+<!--############# Updated to new Busy Spinner ############-->					
 					<visible>Container(301).IsUpdating | [!Weather.IsFetched + StringCompare(Container(300).ListItem.Property(widget),Weather)]</visible>
+					<visible>!Window.IsVisible(DialogProgress.xml)</visible>
+			        <visible>!Skin.HasSetting(hide.busydialog)</visible>
 					<include>Animation.FadeIn</include>
 					<include>Animation.FadeOut</include>
+					<include>GlobalOverlay</include>
+			        <include>GlobalOverlay</include>
+<!--############# Updated to new Busy Spinner ############-->
+                    <control type="image">
+                        <description>Busy animation</description>
+                        <centerleft>50%</centerleft>
+                        <centertop>47%</centertop>
+                        <width>100</width>
+                        <height>100</height>
+                        <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
+                        <texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">dialog/loading-spinner.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+<!--############# Updated to new Busy Spinner ############-->
+                    <control type="label">
+                        <description>Busy label</description>
+                        <centerleft>50%</centerleft>
+                        <centertop>53%</centertop>
+                        <width>720</width>
+                        <height>108</height>
+                        <aligny>center</aligny>
+                        <align>center</align>
+                       <label>$LOCALIZE[20186]...</label>
+                       <textcolor>ffededed</textcolor>
+                    </control>
 					
-<!--Added-->        <control type="image">
+                    <!--<control type="image">
 				        <description>background image</description>
 				        <posx>0</posx>
 				        <posy>0</posy>
 				        <width>450</width>
 				        <height>117</height>
 				        <animation effect="fade" start="100" end="90" condition="true">Conditional</animation>
-<!--Changed-->	        <texture border="16" colordiffuse="$VAR[SpinnerBackgroundColour]">common/rounded-shadow8.png</texture>
+	                    <texture border="16" colordiffuse="$VAR[SpinnerBackgroundColour]">common/rounded-shadow8.png</texture>
 			        </control>					
 					<control type="image">
 						<description>Busy animation</description>
@@ -1733,7 +1838,7 @@
 						<posy>30</posy>
 						<width>48</width>
 						<height>48</height>
-<!--Changed-->			<texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
+			            <texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
@@ -1745,7 +1850,7 @@
 						<align>left</align>
 						<label>$LOCALIZE[31138]...</label>
 						<textcolor>Black70</textcolor>
-					</control>
+					</control>-->
 				</control>
 				<control type="group">
 					<animation effect="fade" start="100" end="0" time="0" delay="0" reversible="false" condition="![[!IsEmpty(Container(300).ListItem.Property(widget)) | [IsEmpty(Container(300).ListItem.Property(widget)) + [IsEmpty(Container(300).ListItem.Property(Background)) + [!Skin.HasSetting(home.dontshowfanart)]]]]] | !IntegerGreaterThan(Container(301).NumItems,0) | Container(301).IsUpdating | [!Weather.IsFetched + StringCompare(Container(300).ListItem.Property(widget),Weather)]">Conditional</animation>
@@ -1911,7 +2016,8 @@
 							<font>SmallBold</font>
 							<width>100%</width>
 							<align>left</align>
-							<textcolor>Dark1</textcolor>
+					<!-- replaced "Dark1" with "$VAR[WidgetTitleColour]" -->		
+							<textcolor>$VAR[WidgetTitleColour]</textcolor>
 							<label>$VAR[WidgetTitle]</label>
 						</control>
 						<control type="textbox">
@@ -1919,14 +2025,16 @@
 							<width>100%</width>
 							<height>127</height>
 							<align>left</align>
-							<textcolor>Dark2</textcolor>
+					<!-- replaced "Dark2" with "$VAR[WidgetPlotColour]" -->		
+							<textcolor>$VAR[WidgetPlotColour]</textcolor>
 							<label>$VAR[WidgetPlot]</label>
 						</control>
 						<control type="label">
 							<font>Tiny</font>
 							<width>100%</width>
 							<align>left</align>
-							<textcolor>Dark2</textcolor>
+					<!-- replaced "Dark2" with "$VAR[WidgetSubLabelColour]" -->		
+							<textcolor>$VAR[WidgetSubLabelColour]</textcolor>
 							<label>$VAR[WidgetSubLabel]</label>
 						</control>
 					</control>
