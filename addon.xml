@@ -31,8 +31,8 @@
     <extension point="xbmc.addon.metadata">
         <summary lang="de">Klar, minimalistisch, elegant, einfach, leicht</summary>
         <summary lang="en">Clean, minimal, elegant, simple, light.</summary>
-        <description lang="de">Arktische Zephyr: Aus der Asche ist die zweite Generation des die "Arctic Zephyr: explodierte" Haut von im85288 und Badaas erstellt basierend auf die dritte Iteration der arktischen Haut ursprünglich von Jurialmunkey. Jetzt kuratiert von Guardian Hoffnung weiterhin Arktis konzentriert sich darauf, einfach, sauber und minimalistisch mit einer leichten Drehung.</description>
-        <description lang="en">Arctic Zephyr: From Ashes is the second generation of the "Arctic Zephyr: Exploded" skin created by im85288 and badaas based on the third iteration of the Arctic skin originally created by jurialmunkey. Now curated by Guardian Hope, Arctic continues to focuses on being simple, clean and minimalistic with a light spin.</description>
+        <description lang="de">(KODI KRYPTON PREVIEW ONLY) Arktische Zephyr: Aus der Asche ist die zweite Generation des die "Arctic Zephyr: explodierte" Haut von im85288 und Badaas erstellt basierend auf die dritte Iteration der arktischen Haut ursprünglich von Jurialmunkey. Jetzt kuratiert von Guardian Hoffnung weiterhin Arktis konzentriert sich darauf, einfach, sauber und minimalistisch mit einer leichten Drehung.</description>
+        <description lang="en">(KODI KRYPTON PREVIEW ONLY) Arctic Zephyr: From Ashes is the second generation of the "Arctic Zephyr: Exploded" skin created by im85288 and badaas based on the third iteration of the Arctic skin originally created by jurialmunkey. Now curated by Guardian Hope, Arctic continues to focuses on being simple, clean and minimalistic with a light spin.</description>
         <platform>all</platform>
 		<license>GPL v3.0</license>
 		<forum></forum>
