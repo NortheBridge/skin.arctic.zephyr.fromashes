@@ -17,7 +17,7 @@
                 <left>-8</left>
                 <right>-8</right>
 <!-- 4th GEN Colour Modification -->				
-				<texture border="16" colordiffuse="$VAR[DialogMenuBackgroundColour]">common/rounded-shadow8.png</texture>
+				<texture border="16" colordiffuse="$VAR[DialogPanelColour]">common/rounded-shadow8.png</texture>
                 <!--<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>-->
             </control>
 
@@ -29,7 +29,7 @@
                 <font>SmallBold</font>
                 <align>left</align>
 <!-- 4th GEN Colour Modification -->				
-                <textcolor>$VAR[DialogMenuTextColour]</textcolor>
+                <textcolor>$VAR[DialogTextColour]</textcolor>
 				<!--<textcolor>Black70</textcolor>-->
             </control>
             
@@ -75,7 +75,7 @@
                         <width>100%</width>
                         <height>66</height>
 <!-- 4th GEN Colour Modification -->						
-						<texture border="5" colordiffuse="$VAR[DialogButtonHighlightColour]">common/box.png</texture>
+						<texture border="5" colordiffuse="$VAR[DialogButtonFocusColour]">common/box.png</texture>
                         <!--<texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>-->
                         <visible>Control.HasFocus(211)</visible>
                     </control>
@@ -225,7 +225,7 @@
                 <control type="button" id="308" description="Reset">
                     <width>100%</width>
                     <height>66</height>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                    <texturenofocus colordiffuse="SelectedOrange" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
                     <visible>!stringcompare(Window.Property(groupname),mainmenu)</visible>
                 </control>

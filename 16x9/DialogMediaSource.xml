@@ -38,7 +38,7 @@
                         <right>30</right>
                         <font>SmallBold</font>
 <!-- 4th GEN Colour Modification -->						
-                        <textcolor>$VAR[DialogMenuTextColour]</textcolor>
+                        <textcolor>$VAR[DialogTextColour]</textcolor>
                         <!--<textcolor>Black70</textcolor>-->
                         <height>66</height>
                         <aligny>center</aligny>
@@ -49,7 +49,7 @@
                         <left>30</left>
                         <right>30</right>
 <!-- 4th GEN Colour Modification -->						
-                        <textcolor>$VAR[DialogMenuTextColour]</textcolor>
+                        <textcolor>$VAR[DialogTextColour]</textcolor>
                         <!--<textcolor>Black70</textcolor>-->
                         <align>right</align>
                         <height>66</height>
@@ -64,7 +64,7 @@
                         <right>0</right>
                         <height>66</height>
 <!-- 4th GEN Colour Modification -->						
-						<texture border="5" colordiffuse="$VAR[DialogButtonHighlightColour]">common/white.png</texture>
+						<texture border="5" colordiffuse="$VAR[DialogButtonFocusColour]">common/white.png</texture>
                         <!--<texture border="5" colordiffuse="$VAR[ColourHighlight]">common/white.png</texture>-->
                         <animation effect="fade" start="100" end="50" condition="!Control.HasFocus(10)">Conditional</animation>
                     </control>
@@ -76,7 +76,7 @@
                         <font>SmallBold</font>
                         <aligny>center</aligny>
 <!-- 4th GEN Colour Modification -->						
-                        <textcolor>$VAR[DialogMenuTextColour]</textcolor>
+                        <textcolor>$VAR[DialogTextColour]</textcolor>
 						<!--<textcolor>Black70</textcolor>-->
                         <info>ListItem.Label</info>
                     </control>
@@ -88,7 +88,7 @@
                         <height>66</height>
                         <aligny>center</aligny>
 <!-- 4th GEN Colour Modification -->						
-                        <textcolor>$VAR[DialogMenuTextColour]</textcolor>
+                        <textcolor>$VAR[DialogTextColour]</textcolor>
 						<!--<textcolor>Black70</textcolor>-->
                         <info>ListItem.Label2</info>
                     </control>
@@ -157,8 +157,8 @@
                 <onright>19</onright>
                 <ondown>10</ondown>
 <!-- 4th GEN Colour Modification -->				
-                <texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>
-                <texturenofocus colordiffuse="$VAR[DialogMenuDisabledColour]" border="5">common/box.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
 				<!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
                 <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
 				<include>DefDialogButtons</include>
@@ -175,8 +175,8 @@
                 <onright>20</onright>
                 <ondown>10</ondown>
 <!-- 4th GEN Colour Modification -->				
-                <texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>-->
-                <texturenofocus colordiffuse="$VAR[DialogMenuDisabledColour]" border="5">common/box.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>-->
+                <texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
 				<!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
                 <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
 				<include>DefDialogButtons</include>

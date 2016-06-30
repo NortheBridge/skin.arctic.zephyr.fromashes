@@ -49,6 +49,7 @@
 		<top>360</top>
 		<width>1920</width>
 		<height>440</height>
+		<colordiffuse>Black</colordiffuse>
 	</include>
 	<include name="Dimensions_Fullscreen">
 		<posx>0</posx>
@@ -88,13 +89,27 @@
 		<shadowcolor>Black</shadowcolor>
 		<align>right</align>
 	</include>
+	
+<!--- Modification Addition-----Skin Settings----------------------------------->	
+	<include name="SkinSettingsTopBar">
+	    <control type="image">
+			<include>Animation.FadeIn</include>
+			<!--<left>72</left>
+			<right>72</right>-->
+			<top>0</top>
+			<height>100</height>
+		    <width>100%</width>
+		    <texture border="1" colordiffuse="Panel">common/white.png</texture>				
+	    </control>
+	</include>	
+	
 <!-- Added for new Busy Spinner Background Overlay -->	
 	<include name="GlobalSpinnerOverlay">
 		<control type="image">
 			<include>Animation.FadeIn</include>
 			<include condition="!Window.IsVisible(DialogBusy.xml)">Animation.FadeOut</include>
 			<include>Dimensions_Spinner_Halfscreen</include>			
-			<texture border="2">common/black-back.png</texture>
+			<texture border="5">common/black-back.png</texture>
 		</control>
 	</include>	
 	<include name="GlobalOverlay">
@@ -103,7 +118,7 @@
 			<include condition="!Window.IsVisible(DialogButtonMenu.xml)">Animation.FadeOut</include>
 			<include>Dimensions_Fullscreen</include>
 			<texture border="2">common/black-back.png</texture>
-		</control>
+		</control>	
 	</include>
 	<variable name="GlobalFanart">
 		<value condition="Window.IsActive(script-globalsearch-infodialog.xml) | Window.IsActive(script-globalsearch-main.xml)">$VAR[GlobalSearchArtInfo]</value>

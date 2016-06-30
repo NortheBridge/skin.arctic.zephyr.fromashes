@@ -150,8 +150,8 @@
                     <description>Search</description>
                     <label>137</label>
 <!-- 4th GEN Colour Modification -->					
-					<texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>
-                    <texturenofocus colordiffuse="$VAR[DialogMenuDisabledColour]" border="5">common/box.png</texturenofocus>
+					<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
                     <!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
                     <include>DefDialogButtons</include>
@@ -160,8 +160,8 @@
                     <description>Cancel</description>
                     <label>$LOCALIZE[222]</label>
 <!-- 4th GEN Colour Modification -->					
-                    <texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>
-                    <texturenofocus colordiffuse="$VAR[DialogMenuDisabledColour]" border="5">common/box.png</texturenofocus>
+                    <texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
                     <!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
                     <include>DefDialogButtons</include>
@@ -170,8 +170,8 @@
                     <description>Defaults</description>
                     <label>$LOCALIZE[409]</label>
 <!-- 4th GEN Colour Modification -->					
-                    <texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>
-                    <texturenofocus colordiffuse="$VAR[DialogMenuDisabledColour]" border="5">common/box.png</texturenofocus>
+                    <texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
                     <!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
                     <include>DefDialogButtons</include>

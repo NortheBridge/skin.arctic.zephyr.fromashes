@@ -55,7 +55,7 @@
                             <width>100%</width>
                             <height>66</height>
 <!-- 4th GEN Colour Modification -->							
-							<texture border="5" colordiffuse="$VAR[DialogButtonHighlightColour]">common/box.png</texture>
+							<texture border="5" colordiffuse="$VAR[DialogButtonFocusColour]">common/box.png</texture>
                             <!--<texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>-->
                         </control>
 

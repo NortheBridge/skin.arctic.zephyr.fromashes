@@ -2,6 +2,7 @@
 <!-- Foundation -->
 <window id="123">
     <defaultcontrol always="true">5</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
     <controls>
         <control type="group">
             <animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
@@ -39,7 +40,7 @@
                 <description>Default Button</description>
                 <align>left</align>
 <!-- 4th GEN Colour Modification -->				
-				<texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="8">common/box.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[DialogButtonFOColour]" border="8">common/box.png</texturefocus>
                 <!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="8">common/box.png</texturefocus>-->
             </control>
 
@@ -48,7 +49,7 @@
                 <align>left</align>
                 <radioposx>1230</radioposx>
 <!-- 4th GEN Colour Modification -->				
-                <texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="8">common/box.png</texturefocus>
+                <texturefocus colordiffuse="$VAR[DialogButtonFOColour]" border="8">common/box.png</texturefocus>
                 <!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="8">common/box.png</texturefocus>-->
             </control>
 
@@ -57,14 +58,14 @@
                 <align>left</align>
                 <reverse>yes</reverse>
 <!-- 4th GEN Colour Modification -->				
-                <texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="8">common/box.png</texturefocus>
+                <texturefocus colordiffuse="$VAR[DialogButtonFOColour]" border="8">common/box.png</texturefocus>
                 <!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="8">common/box.png</texturefocus>-->
             </control>
 
             <control type="sliderex" id="13">
                 <description>Default Slider</description>
 <!-- 4th GEN Colour Modification -->				
-                <texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="8">common/box.png</texturefocus>
+                <texturefocus colordiffuse="$VAR[DialogButtonFOColour]" border="8">common/box.png</texturefocus>
                 <!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="8">common/box.png</texturefocus>-->
             </control>
 

@@ -41,16 +41,16 @@
                     <reverse>yes</reverse>
                     <label>1008</label>
 <!-- 4th GEN Colour Modification -->					
-					<textcolor>$VAR[DialogMenuTextColour]</textcolor>
-					<texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="8">common/box.png</texturefocus>
+					<textcolor>$VAR[DialogTextColour]</textcolor>
+					<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="8">common/box.png</texturefocus>
                     <!--<textcolor>Black70</textcolor>
                     <texturefocus colordiffuse="$VAR[ColourHighlight]" border="8">common/box.png</texturefocus>-->
                 </control>
                 <control type="edit" id="11">
                     <align>left</align>
 <!-- 4th GEN Colour Modification -->					
-                    <textcolor>$VAR[DialogMenuTextColour]</textcolor>
-					<texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="8">common/box.png</texturefocus>
+                    <textcolor>$VAR[DialogTextColour]</textcolor>
+					<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="8">common/box.png</texturefocus>
                     <!--<textcolor>Black70</textcolor>
                     <texturefocus colordiffuse="$VAR[ColourHighlight]" border="8">common/box.png</texturefocus>-->
                 </control>
@@ -58,8 +58,8 @@
                     <align>left</align>
                     <label>1024</label>
 <!-- 4th GEN Colour Modification -->					
-                    <textcolor>$VAR[DialogMenuTextColour]</textcolor>
-					<texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="8">common/box.png</texturefocus>
+                    <textcolor>$VAR[DialogTextColour]</textcolor>
+					<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="8">common/box.png</texturefocus>
                     <!--<textcolor>Black70</textcolor>
                     <texturefocus colordiffuse="$VAR[ColourHighlight]" border="8">common/box.png</texturefocus>-->
                 </control>
@@ -67,8 +67,8 @@
                     <align>left</align>
                     <label>1013</label>
 <!-- 4th GEN Colour Modification -->					
-                    <textcolor>$VAR[DialogMenuTextColour]</textcolor>
-					<texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="8">common/box.png</texturefocus>
+                    <textcolor>$VAR[DialogTextColour]</textcolor>
+					<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="8">common/box.png</texturefocus>
                     <!--<textcolor>Black70</textcolor>
                     <texturefocus colordiffuse="$VAR[ColourHighlight]" border="8">common/box.png</texturefocus>-->
                 </control>
@@ -76,8 +76,8 @@
                     <align>left</align>
                     <label>1014</label>
 <!-- 4th GEN Colour Modification -->					
-                    <textcolor>$VAR[DialogMenuTextColour]</textcolor>
-					<texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="8">common/box.png</texturefocus>
+                    <textcolor>$VAR[DialogTextColour]</textcolor>
+					<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="8">common/box.png</texturefocus>
                     <!--<textcolor>Black70</textcolor>
                     <texturefocus colordiffuse="$VAR[ColourHighlight]" border="8">common/box.png</texturefocus>-->
                 </control>
@@ -85,16 +85,16 @@
                     <align>left</align>
                     <label>15052</label>
 <!-- 4th GEN Colour Modification -->					
-                    <textcolor>$VAR[DialogMenuTextColour]</textcolor>
-					<texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="8">common/box.png</texturefocus>
+                    <textcolor>$VAR[DialogTextColour]</textcolor>
+					<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="8">common/box.png</texturefocus>
                     <!--<textcolor>Black70</textcolor>
                     <texturefocus colordiffuse="$VAR[ColourHighlight]" border="8">common/box.png</texturefocus>-->
                 </control>
                 <control type="edit" id="16">
                     <align>left</align>
 <!-- 4th GEN Colour Modification -->					
-                    <textcolor>$VAR[DialogMenuTextColour]</textcolor>
-					<texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="8">common/box.png</texturefocus>
+                    <textcolor>$VAR[DialogTextColour]</textcolor>
+					<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="8">common/box.png</texturefocus>
                     <!--<textcolor>Black70</textcolor>
                     <texturefocus colordiffuse="$VAR[ColourHighlight]" border="8">common/box.png</texturefocus>-->
                 </control>
@@ -112,8 +112,8 @@
                 <ondown>9100</ondown>
                 <font>Button</font>
 <!-- 4th GEN Colour Modification -->				
-				<texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>
-                <texturenofocus colordiffuse="$VAR[DialogMenuDisabledColour]" border="5">common/box.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
                 <!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
                 <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
             </control>
@@ -129,8 +129,8 @@
                 <ondown>9100</ondown>
                 <font>Button</font>
 <!-- 4th GEN Colour Modification -->				
-                <texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>
-                <texturenofocus colordiffuse="$VAR[DialogMenuDisabledColour]" border="5">common/box.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
                 <!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
                 <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
             </control>

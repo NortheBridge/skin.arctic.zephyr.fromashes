@@ -2,6 +2,7 @@
 <!-- Foundation -->
 <window id="126">
     <defaultcontrol always="true">450</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
     <controls>
 
         <include>GlobalOverlay</include>
@@ -157,7 +158,7 @@
                         <control type="image">
                             <width>696</width>
                             <height>135</height>
-                            <texture border="5" colordiffuse="$VAR[DialogButtonHighlightColour]">common/white.png</texture><!--replaced "$VAR[ColourHighlight]" -->
+                            <texture border="5" colordiffuse="$VAR[DialogButtonFocusColour]">common/white.png</texture><!--replaced "$VAR[ColourHighlight]" -->
                         </control>
                         <control type="image">
                             <posx>32</posx>

@@ -143,8 +143,8 @@
                     <width>450</width>
                     <height>68</height>
 <!-- 4th GEN Colour Modification -->					
-					<texturenofocus colordiffuse="$VAR[DialogMenuDisabledColour]" border="5">common/box.png</texturenofocus>
-                    <texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
+                    <texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
                     <!--<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>-->
                     <include>DefDialogButtons</include>>

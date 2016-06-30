@@ -4,6 +4,7 @@
     <onload condition="!IsEmpty(ListItem.TvShowTitle)">SetProperty("TvTunesSupported", "TvShows")</onload>
     <onload condition="IsEmpty(ListItem.TvShowTitle)">SetProperty("TvTunesSupported", "Movies")</onload>
     <defaultcontrol always="true">51</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
     <controls>
         <include>GlobalBackground</include>
         <control type="group">
@@ -56,7 +57,7 @@
                         <width>100%</width>
                         <height>100%</height>
 <!-- 4th GEN Colour Modification -->						
-						<texture border="8" colordiffuse="$VAR[DialogButtonHighlightColour]">common/box.png</texture>
+						<texture border="8" colordiffuse="$VAR[DialogButtonFocusColour]">common/box.png</texture>
                         <!--<texture border="8" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>-->
                     </control>
                     <control type="label">

@@ -2,6 +2,7 @@
 <!-- Foundation -->
 <window id="131">
     <defaultcontrol always="true">5</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
 
     <controls>
 
@@ -54,8 +55,8 @@
                 <ondown>5</ondown>
                 <font>Button</font>
 <!-- 4th GEN Colour Modification -->				
-				<texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>
-                <texturenofocus colordiffuse="$VAR[DialogMenuDisabledColour]" border="5">common/box.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
                 <!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
                 <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
             </control>
@@ -71,8 +72,8 @@
                 <ondown>5</ondown>
                 <font>Button</font>
 <!-- 4th GEN Colour Modification -->				
-                <texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>
-                <texturenofocus colordiffuse="$VAR[DialogMenuDisabledColour]" border="5">common/box.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
                 <!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
                 <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
             </control>
@@ -87,7 +88,7 @@
             <height>70</height>
             <description>Default Button</description>
 <!-- 4th GEN Colour Modification -->			
-			<texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
             <!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>-->
         </control>
 
@@ -105,7 +106,7 @@
             <description>Default Radio Button</description>
             <radioposx>807</radioposx>
 <!-- 4th GEN Colour Modification -->			
-            <texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>
+            <texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
             <!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>-->      
         </control>
 
@@ -115,7 +116,7 @@
             <height>70</height>
             <description>Default Spin Control</description>
 <!-- 4th GEN Colour Modification -->			
-            <texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>
+            <texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
             <!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>-->
         </control>
     </controls>
