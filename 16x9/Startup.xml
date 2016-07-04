@@ -35,7 +35,7 @@
             <height>100%</height>
             <align>center</align>
             <aligny>top</aligny>
-            <label>[COLOR=$VAR[ColourHighlight]]Danvers[/COLOR] Preview (4.0.20)</label>
+            <label>[COLOR=$VAR[ColourHighlight]]Danvers[/COLOR] Preview (4.0.20-Alpha1)</label>
             <font>Tiny</font>
             <textcolor>Dark1</textcolor>
             <animation effect="fade" start="100" end="0" time="500" tween="quadratic">WindowClose</animation>
