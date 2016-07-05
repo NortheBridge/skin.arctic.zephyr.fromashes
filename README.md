@@ -3,6 +3,7 @@ The Arctic Zephyr: From Ashes Skin designed for Emby and Kodi is a streamlined, 
 
 ## Quick Start
 ![Shields IO Kodi 17](https://img.shields.io/badge/Kodi-17-blue.svg) ![Shields IO AZFA Branch](https://img.shields.io/badge/Arctic%20Zephyr%3A%20From%20Ashes-Danvers%20(4.0.20--alpha)-blue.svg) ![Shields IO Branch Status](https://img.shields.io/badge/Danvers%20Preview-Alpha%201-red.svg)
+
 Starting with the release of Arctic Zephyr: From Ashes (Danvers Preview), NortheBridge now provides a central location to help you quickly get started with and take advantage of the many features Arctic Zephyr: From Ashes has to offer. All information is available on the "Arctic Zephyr: From Ashes Quick Start" site.
 
 NortheBridge's From Ashes Waypoint Quick Start Site: https://waypoint.northebridge.com/fromashes
