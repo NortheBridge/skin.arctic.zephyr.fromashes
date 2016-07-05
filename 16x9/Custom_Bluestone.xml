@@ -3,7 +3,7 @@
 <!-- Builds Determined By GitHub Commit ID First 7 Characters -->
 <!-- Versioning is x.y.zz (Major.Minor.Subversion) -->
 <!-- Build Commits Prefix are Determined by Codenames; Not Authors -->
-<!-- Current Prefix Namespaces: AZ:E - AZE@; AZ:FA - AZFA@; AZ:FA - dormer@ -->
+<!-- Current Prefix Namespaces: AZ:E - AZE@; AZ:FA (Jarvis) - dormer@; AZ:FA (Krypton) - danvers@ -->
 <!-- Preview Build Prefix Namespace: AZ:FA 4.0 - danvers@ -->
 <window id="3115">
 	<defaultcontrol always="true">100</defaultcontrol>
@@ -88,7 +88,7 @@
 			<posy>350</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Debug Build: [COLOR=$VAR[ColourHighlight]]True[/COLOR]</label>
+			<label>Debug Build: [COLOR=$VAR[ColourHighlight]]Alpha 1 Preview[/COLOR]</label>
 		</control>
 	<control type="label">
 			<description>Sys_Name</description>
@@ -155,7 +155,7 @@
 			<label>Emby Server: [COLOR=$VAR[ColourHighlight]]$INFO[System.AddonTitle(plugin.video.emby)][/COLOR]</label>
 		</control>
 	<control type="label">
-			<description>Legacy_ScriptCheck2Ver</description>
+			<description>Emby_ServerCheckVer2</description>
 			<font>Tiny</font>
 			<align>left</align>
 			<posx>1200</posx>
@@ -164,7 +164,7 @@
 			<height>60</height>
 			<label>Emby Plugin: [COLOR=$VAR[ColourHighlight]]$INFO[System.AddonVersion(plugin.video.emby)][/COLOR]</label>
 		</control>
-		<!-- End Legacy Script Checks -->
+		<!-- End Compatibility Checks -->
 		<!-- While others like to compare me to Person of Interest's Root... so yes, don't fail these checks. Could this be another Easter Egg Ms. Groves?-->
 		<!-- Well, She's always watching Herald -->
 		<!-- Start Audio Suite Check -->
@@ -190,16 +190,16 @@
 			<height>60</height>
 			<label>Platform: [COLOR=$VAR[ColourHighlight]]$INFO[System.KernelVersion][/COLOR]</label>
 		</control>
-		<!-- Curator -->
+		<!-- Publisher -->
 	<control type="label">
-			<description>Curator</description>
+			<description>Publisher</description>
 			<font>Tiny</font>
 			<align>left</align>
 			<posx>1200</posx>
 			<posy>410</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Curator: [COLOR=$VAR[ColourHighlight]]Guardian Hope[/COLOR]</label>
+			<label>Publisher: [COLOR=$VAR[ColourHighlight]]NortheBridge[/COLOR]</label>
 		</control>
 		<!-- Additional Credits -->
 	<control type="label">
@@ -210,8 +210,18 @@
             <align>center</align>
             <aligny>center</aligny>
 			<posy>10</posy>
-			<label>[COLOR=$VAR[ColourHighlight]]Special Thanks (Needs Updating Reminder)[/COLOR]</label>
+			<label>[COLOR=$VAR[ColourHighlight]]Special Thanks[/COLOR]</label>
 		</control>
+	<control type="label">
+			<description>Curator</description>
+			<font>Tiny</font>
+            <width>100%</width>
+            <height>100%</height>
+            <align>center</align>
+            <aligny>center</aligny>
+			<posy>40</posy>
+			<label>Curator of "Arctic Zephyr: From Ashes" by [COLOR=$VAR[ColourHighlight]]Guardian Hope[/COLOR]</label>
+		</control>	
 	<control type="label">
 			<description>AZCreator</description>
 			<font>Tiny</font>
@@ -219,7 +229,7 @@
             <height>100%</height>
             <align>center</align>
             <aligny>center</aligny>
-			<posy>40</posy>
+			<posy>70</posy>
 			<label>Based On "Arctic Zephyr" by [COLOR=$VAR[ColourHighlight]]Jurialmonkey[/COLOR]</label>
 		</control>	
 	<control type="label">
@@ -229,7 +239,7 @@
             <height>100%</height>
             <align>center</align>
             <aligny>center</aligny>
-			<posy>70</posy>
+			<posy>100</posy>
 			<label>Based On "Arctic Zephyr: Exploded" by [COLOR=$VAR[ColourHighlight]]im85288 and badaas[/COLOR]</label>
 		</control>
 		<!--Super Special Thanks to minus0-->
@@ -240,7 +250,7 @@
             <height>100%</height>
             <align>center</align>
             <aligny>center</aligny>
-			<posy>100</posy>
+			<posy>130</posy>
 			<label>Executive Contributor [COLOR=$VAR[ColourHighlight]]minus0[/COLOR]</label>
 		</control>
 			<!--Contributors-->
@@ -251,7 +261,7 @@
             <height>100%</height>
             <align>center</align>
             <aligny>center</aligny>
-			<posy>130</posy>
+			<posy>160</posy>
 			<label>[COLOR=$VAR[ColourHighlight]]Contributors[/COLOR]</label>
 		</control>
 			<!--Never Tell Anyone I Counted By "10s" to get from 130 to 160 Here-->
@@ -262,8 +272,8 @@
             <height>100%</height>
             <align>center</align>
             <aligny>center</aligny>
-			<posy>160</posy>
-			<label>[COLOR=$VAR[ColourHighlight]]minus0 (Kodi Forums),[/COLOR] papadcha (Emby Forums), [COLOR=$VAR[ColourHighlight]]Mike_Doc ("Madnox Skin" Features)[/COLOR]</label>
+			<posy>190</posy>
+			<label>[COLOR=$VAR[ColourHighlight]]minus0 (Kodi Forums),[/COLOR] papadcha (Emby Forums), [COLOR=$VAR[ColourHighlight]]Mike_Doc ("Madnox Skin" Features)[/COLOR], schimi2k ("Resolution Icons Pack 2.0," Misc. UX Look and Feel)</label>
 		</control>				
     </controls>
 </window>
