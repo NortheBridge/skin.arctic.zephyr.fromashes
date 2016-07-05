@@ -3,7 +3,7 @@
     id="skin.arctic.zephyr.fromashes"
     version="3.2.20"
     name="Arctic Zephyr: From Ashes"
-    provider-name="jurialmunkey - im85288 - badaas - Guardian Hope (on behalf of NortheBridge)">
+    provider-name="NortheBridge">
     <requires>
         <import addon="xbmc.gui" version="5.10.0"/>
         <import addon="script.skinshortcuts" version="1.0.8"/>
