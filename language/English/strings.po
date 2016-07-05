@@ -772,3 +772,19 @@ msgstr ""
 msgctxt "#31780"
 msgid "Configure background opacity"
 msgstr ""
+
+msgctxt "#31781"
+msgid "Stars"
+msgstr "Stars"
+
+msgctxt "#31782"
+msgid "Colour Themes"
+msgstr "Colour Themes"
+
+msgctxt "#31783"
+msgid "Views"
+msgstr "Views"
+
+msgctxt "#31784"
+msgid "Backup/Restore"
+msgstr "Backup/Restore"

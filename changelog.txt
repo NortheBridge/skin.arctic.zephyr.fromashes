@@ -1,5 +1,40 @@
 [B]Arctic Zephyr: From Ashes Changelog[/B]
 
+[B]Arctic Zephyr: From Ashes "Summer 2016 Update" - Released June 18, 2016[/B]
+Dormer: 3.2.20 (3.2.20_dormer) / Danvers: 4.0.20-alpha1 (4.0.20_danvers)
+
+ARCTIC ZEPHYR: FROM ASHES ANNIVERSARY EDITION (DANVERS) IS IN EARLY PREVIEW AND FUNCTIONALITY IS NOT A GUARANTEE. FEEDBACK ON THE DANVERS RELEASES WILL ALLOW FOR A BETTER TRANSITION FROM JARVIS (KODI 16) TO KRYPTON (KODI 17).
+
+The "Summer 2016 Update" to Arctic Zephyr: From Ashes will conclude the "General Availability" status of the Dormer - Jarvis (Kodi 16) line of From Ashes. The Dormer (3.x) line will transition to Long Term Support (LTS) status and receive only bugfixes. As of this release, the "Danvers" line (4.x) will enter "Preview Availability." You may continue using the Dormer - Jarvis line until you are ready to update to Kodi 17 Krypton.
+
+"About From Ashes" has been updated with new credits which were missing in the "Spring 2016 Update"
+Info Banner Code Has Been Completely Commented Out for Dormer and Danver Releases
+Rotten Tomatoes Has Been Added to the Video Information Screen
+Fixes to Broken Code Lines During 3rd Gen Color Enhancement Implementation
+Danvers ONLY: Adds "DialogConfirm.xml"
+New Textures Have Been Added
+Unused Textures Have Been Removed
+4th Generation Color Enhancer Has Been Added
+Ability to change Dialog Menu Background
+Ability to change Dialog Menu Text
+Ability to change Dialog Disabled Text
+Ability to change Dialog Buttons Highlight
+Ability to change Hubs Menu Highlight
+Ability to change Hubs Text Color Highlight
+Ability to change Hubs Widget Highlight Border
+Ability to change Hubs Widget Sublabel
+Ability to change Side Blade Menu Highlight Color
+Implemented new Busy Spinner into all applicable windows
+Fixed File Browser not displaying Folder and File Icons properly
+Changed "script.toolbox" to "script.skinhelper" for Backup and Restore in Skin Settings.
+Added new Color Themes Category in Skin Settings, With Ability to Create and Manage Custom Themes
+Added Ability to Select Day/Night Themes
+
+[B]3.2.12 (3.2.12_bsrelease01) - "From Ashes Spring 2016 Update Rollup Patch Level 2 (PL2)"[/B]
+JARVIS ONLY UPDATE
+Fixed Refresh Button
+Fixed False Debug Setting in "About From Ashes"
+
 [B]3.2.10 (3.2.11_bsrelease01) / 4.0.01 (4.0.01_bsrelease02) - "From Ashes Spring 2016 Update Rollup"[/B]
 Experimental Krypton Support ("Danvers" Build Line - Bluestone 2 - 4.0.01)
 Resolves Critical Issue with Textures

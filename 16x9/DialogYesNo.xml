@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
+<!-- Legacy Window
 <window id="100">
     <defaultcontrol always="true">10</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
@@ -45,3 +46,5 @@
     </controls>
 
 </window>
+
+End Legacy Window-->

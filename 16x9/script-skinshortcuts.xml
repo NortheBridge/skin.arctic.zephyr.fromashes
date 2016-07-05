@@ -16,7 +16,9 @@
                 <bottom>-8</bottom>
                 <left>-8</left>
                 <right>-8</right>
-                <texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
+<!-- 4th GEN Colour Modification -->				
+				<texture border="16" colordiffuse="$VAR[DialogPanelColour]">common/rounded-shadow8.png</texture>
+                <!--<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>-->
             </control>
 
             <control type="label" id="500">
@@ -26,7 +28,9 @@
                 <right>22</right>
                 <font>SmallBold</font>
                 <align>left</align>
-                <textcolor>Black70</textcolor>
+<!-- 4th GEN Colour Modification -->				
+                <textcolor>$VAR[DialogTextColour]</textcolor>
+				<!--<textcolor>Black70</textcolor>-->
             </control>
             
             <!-- Left List: Current Shortcuts -->
@@ -61,15 +65,18 @@
                         <texture colordiffuse="Black30">$INFO[ListItem.Icon]</texture>
                         <visible>substring(ListItem.Icon,icons)</visible>
                         <visible>Skin.HasSetting(home.showicons) | stringcompare(Window.Property(groupname),movieshub) | stringcompare(Window.Property(groupname),episodeshub)</visible>
-                    </control>
+                    </control>					
                 </itemlayout>
+				
                 <focusedlayout width="600" height="69">
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>100%</width>
                         <height>66</height>
-                        <texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>
+<!-- 4th GEN Colour Modification -->						
+						<texture border="5" colordiffuse="$VAR[DialogButtonFocusColour]">common/box.png</texture>
+                        <!--<texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>-->
                         <visible>Control.HasFocus(211)</visible>
                     </control>
                     <control type="image">
@@ -77,21 +84,27 @@
                         <posy>0</posy>
                         <width>100%</width>
                         <height>66</height>
-                        <texture border="5" colordiffuse="PanelBlack30">common/box.png</texture>
+<!-- 4th GEN Colour Modification -->						
+						<texture border="5" colordiffuse="55000000">common/box.png</texture>-->
+                        <!--<texture border="5" colordiffuse="PanelBlack30">common/box.png</texture>-->
                         <visible>!Control.HasFocus(211)</visible>
-                    </control>
+                    </control>-->
                     <control type="label">
                         <left>30</left>
                         <right>30</right>
                         <info>ListItem.Label</info>
-                        <textcolor>$VAR[ColourSelected]</textcolor>
+<!-- 4th GEN Colour Modification -->						
+						<textcolor>Black70</textcolor>
+                        <!--<textcolor>$VAR[ColourSelected]</textcolor>-->
                     </control>
                     <control type="image">
                         <right>0</right>
                         <top>0</top>
                         <width>66</width>
                         <height>66</height>
-                        <texture colordiffuse="$VAR[ColourSelected]">$INFO[ListItem.Icon]</texture>
+<!-- 4th GEN Colour Modification -->						
+						<texture colordiffuse="Black70">$INFO[ListItem.Icon]</texture>
+                        <!--<texture colordiffuse="$VAR[ColourSelected]">$INFO[ListItem.Icon]</texture>-->
                         <visible>substring(ListItem.Icon,icons)</visible>
                         <visible>Skin.HasSetting(home.showicons) | stringcompare(Window.Property(groupname),movieshub) | stringcompare(Window.Property(groupname),episodeshub)</visible>
                     </control>
@@ -212,7 +225,7 @@
                 <control type="button" id="308" description="Reset">
                     <width>100%</width>
                     <height>66</height>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                    <texturenofocus colordiffuse="SelectedOrange" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
                     <visible>!stringcompare(Window.Property(groupname),mainmenu)</visible>
                 </control>

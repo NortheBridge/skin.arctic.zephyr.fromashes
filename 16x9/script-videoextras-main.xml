@@ -56,7 +56,9 @@
                     <control type="image">                                
                         <width>100%</width>
                         <height>100%</height>
-                        <texture border="8" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>
+<!-- 4th GEN Colour Modification -->						
+						<texture border="8" colordiffuse="$VAR[DialogButtonFocusColour]">common/box.png</texture>
+                        <!--<texture border="8" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>-->
                     </control>
                     <control type="label">
                         <posx>30</posx>
@@ -90,9 +92,13 @@
                 <onright>51</onright>
                 <ondown>60</ondown>
                 <onup>60</onup>
-                <texturesliderbackground colordiffuse="Black12">common/white.png</texturesliderbackground>
+<!-- 3rd GEN Colour Modification -->				
+				<texturesliderbackground colordiffuse="$VAR[ScrollbarBGColour]">common/white.png</texturesliderbackground>
+                <texturesliderbarfocus colordiffuse="$VAR[ScrollbarFocusedColour]">common/white.png</texturesliderbarfocus>
+                <texturesliderbar colordiffuse="$VAR[ScrollbarUnFocusedColour]">common/white.png</texturesliderbar>
+                <!--<texturesliderbackground colordiffuse="Black12">common/white.png</texturesliderbackground>
                 <texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/white.png</texturesliderbarfocus>
-                <texturesliderbar colordiffuse="PanelWhite12">common/white.png</texturesliderbar>
+                <texturesliderbar colordiffuse="PanelWhite12">common/white.png</texturesliderbar>-->
             </control>
         </control>
     </controls>

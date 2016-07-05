@@ -76,7 +76,9 @@
 							<control type="image">
 								<width>100%</width>
 								<height>96</height>
-								<texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>
+<!-- 4th GEN Colour Modification -->								
+								<texture border="5" colordiffuse="$VAR[DialogButtonFocusColour]">common/box.png</texture>
+								<!--<texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>-->
 							</control>
 							<control type="image">
 								<posx>10</posx>
@@ -209,22 +211,31 @@
 				<control type="button" id="4">
 					<description>OK</description>
 					<label>186</label>
-					<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-					<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+<!-- 4th GEN Colour Modification -->					
+					<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
+					<!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+					<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
 					<include>DefDialogButtons</include>
 				</control>
 				<control type="button" id="5">
 					<description>Apply</description>
 					<label>$LOCALIZE[118]</label>
-					<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-					<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+<!-- 4th GEN Colour Modification -->					
+					<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
+					<!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+					<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
 					<include>DefDialogButtons</include>
 				</control>
 				<control type="button" id="6">
 					<description>Cancel</description>
 					<label>$LOCALIZE[117]</label>
-					<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-					<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+<!-- 4th GEN Colour Modification -->					
+					<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
+					<!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+					<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
 					<include>DefDialogButtons</include>
 				</control>
 			</control>

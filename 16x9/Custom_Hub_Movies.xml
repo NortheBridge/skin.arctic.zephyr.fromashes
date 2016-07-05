@@ -82,8 +82,8 @@
                             <font>Small</font>
                             <aligny>center</aligny>
                             <height>64</height>
-                            <textcolor>PanelWhite70</textcolor>
-                            <selectedcolor>PanelWhite70</selectedcolor>
+                            <textcolor>$VAR[HubsWidgetSublabelColour]</textcolor><!-- replaced PanelWhite70-->
+                            <selectedcolor>$VAR[HubsWidgetSublabelColour]</selectedcolor><!-- replaced PanelWhite70-->
                             <label>$INFO[Container(9500).ListItem.Year]</label>
                         </control>
                         <control type="label">
@@ -92,8 +92,8 @@
                             <aligny>center</aligny>
                             <height>64</height>
                             <font>SmallBold</font>
-                            <textcolor>PanelWhite70</textcolor>
-                            <selectedcolor>PanelWhite70</selectedcolor>
+                            <textcolor>$VAR[HubsWidgetSublabelColour]</textcolor><!-- replaced PanelWhite70-->
+                            <selectedcolor>$VAR[HubsWidgetSublabelColour]</selectedcolor><!-- replaced PanelWhite70-->
                             <label>$INFO[Container(9500).ListItem.Label]</label>
                         </control>
                         <control type="label">
@@ -103,8 +103,8 @@
                             <height>64</height>
                             <align>right</align>
                             <font>Small</font>
-                            <textcolor>PanelWhite70</textcolor>
-                            <selectedcolor>PanelWhite70</selectedcolor>
+                            <textcolor>$VAR[HubsWidgetSublabelColour]</textcolor><!-- replaced PanelWhite70-->
+                            <selectedcolor>$VAR[HubsWidgetSublabelColour]</selectedcolor><!-- replaced PanelWhite70-->
                             <label>$INFO[Container(9500).ListItem.Duration,, $LOCALIZE[31102]]</label>
                         </control>
                         <control type="label">
@@ -124,8 +124,8 @@
                             <height>64</height>
                             <align>right</align>
                             <font>Small</font>
-                            <textcolor>PanelWhite70</textcolor>
-                            <selectedcolor>PanelWhite70</selectedcolor>
+                            <textcolor>$VAR[HubsWidgetSublabelColour]</textcolor><!-- replaced PanelWhite70-->
+                            <selectedcolor>$VAR[HubsWidgetSublabelColour]</selectedcolor><!-- replaced PanelWhite70-->
                             <label>$INFO[Container(9500).ListItem.Rating]</label>
                         </control>
                     </control>
@@ -134,7 +134,7 @@
                         <width>1126</width>
                         <top>-2</top>
                         <height>644</height>
-                        <texture colordiffuse="Dark1" border="20">common/selectbox.png</texture>
+                        <texture colordiffuse="$VAR[HubsWidgetBordorColour]" border="20">common/selectbox.png</texture><!-- replaced Dark1-->
                         <visible>Control.HasFocus(9500)</visible>
                     </control>
                 </control>
@@ -180,14 +180,14 @@
                                 <control type="image">
                                     <width>100%</width>
                                     <height>100%</height>
-                                    <texture border="15" colordiffuse="Dark1">common/box.png</texture>
+                                    <texture border="15" colordiffuse="$VAR[HubsMenuHighlightColour]">common/box.png</texture><!-- replaced Dark1-->
                                 </control>
                                 <control type="image">
                                     <right>0</right>
                                     <top>0</top>
                                     <bottom>0</bottom>
                                     <width>80</width>
-                                    <texture colordiffuse="Light1">$INFO[ListItem.Icon]</texture>
+                                    <texture colordiffuse="$VAR[HubsMenuTextHighlightColour]">$INFO[ListItem.Icon]</texture><!-- replaced Light1-->
                                     <visible>substring(ListItem.Icon,special://skin/extras/icons/)</visible>
                                 </control>
                                 <control type="label">
@@ -206,7 +206,7 @@
                                     <top>0</top>
                                     <bottom>0</bottom>
                                     <width>80</width>
-                                    <texture colordiffuse="Dark1">$INFO[ListItem.Icon]</texture>
+                                    <texture colordiffuse="$VAR[HubsMenuHighlightColour]">$INFO[ListItem.Icon]</texture><!-- replaced Dark1-->
                                     <visible>substring(ListItem.Icon,special://skin/extras/icons/)</visible>
                                 </control>
                                 <control type="label">
@@ -214,7 +214,7 @@
                                     <right>80</right>
                                     <height>100%</height>
                                     <font>SmallBold</font>
-                                    <textcolor>Dark2</textcolor>
+                                    <textcolor>$VAR[HubsMenuHighlightColour]</textcolor><!-- replaced Dark2-->
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                             </control>

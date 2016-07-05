@@ -108,7 +108,9 @@
                     <control type="image">
                         <height>66</height>
                         <width>100%</width>
-                        <texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>
+<!-- 4th GEN Colour Modification -->						
+						<texture border="5" colordiffuse="$VAR[DialogButtonHighlightColour]">common/box.png</texture>
+                        <!--<texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>-->
                     </control>
                     <control type="image">
                         <posx>11</posx>
@@ -209,8 +211,11 @@
                 <align>left</align>
                 <textcolor>Black30</textcolor>
                 <focusedcolor>White100</focusedcolor>
-                <texturefocus border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texturefocus>
-                <texturenofocus border="5" colordiffuse="Black12">common/box.png</texturenofocus>
+<!-- 4th GEN Colour Modification -->				
+				<texturefocus border="5" colordiffuse="$VAR[DialogButtonHighlightColour]">common/box.png</texturefocus>
+                <texturenofocus border="5" colordiffuse="$VAR[DialogMenuDisabledColour]">common/box.png</texturenofocus>
+                <!--<texturefocus border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texturefocus>
+                <texturenofocus border="5" colordiffuse="Black12">common/box.png</texturenofocus>-->
             </control>
             
             <!-- Providers -->
@@ -248,13 +253,17 @@
                     <control type="image">
                         <height>66</height>
                         <width>100%</width>
-                        <texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>
+<!-- 4th GEN Colour Modification -->						
+						<texture border="5" colordiffuse="$VAR[DialogButtonHighlightColour]">common/box.png</texture>
+                        <!--<texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>-->
                         <visible>Control.HasFocus(150)</visible>
                     </control>
                     <control type="image">
                         <height>69</height>
                         <width>100%</width>
-                        <texture border="5" colordiffuse="Black12">common/box.png</texture>
+<!-- 4th GEN Colour Modification -->						
+						<texture border="5" colordiffuse="$VAR[DialogMenuDisabledColour]">common/box.png</texture>
+                        <!--<texture border="5" colordiffuse="Black12">common/box.png</texture>-->
                         <visible>!Control.HasFocus(150)</visible>
                     </control>
                     <control type="label">
@@ -276,16 +285,9 @@
                         <textcolor>White100</textcolor>
                         <selectedcolor>$VAR[ColourHighlight2]</selectedcolor>
                         <visible>Control.HasFocus(150)</visible>
-                    </control>
-                    
+                    </control>                    
                 </focusedlayout>
-            </control>
-            
-            
-            
-                
-            
-            
+            </control>                                                                       
         </control>
     </controls>
 </window>

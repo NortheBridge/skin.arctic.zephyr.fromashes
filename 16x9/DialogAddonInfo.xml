@@ -47,7 +47,7 @@
                     <height>60</height>
                     <font>Tiny</font>
                     <aligny>top</aligny>
-                    <label>$INFO[ListItem.Property(Addon.Name)]</label>
+                    <label>$INFO[ListItem.AddonName]</label>
                 </control>
                 
                 <!-- Summary -->
@@ -63,7 +63,7 @@
                     <height>60</height>
                     <font>Tiny</font>
                     <aligny>top</aligny>
-                    <label>$INFO[ListItem.Property(Addon.Summary)]</label>
+                    <label>$INFO[ListItem.AddonSummary]</label>
                 </control>
                 
                 <!-- Creator -->
@@ -79,7 +79,7 @@
                     <height>60</height>
                     <font>Tiny</font>
                     <aligny>top</aligny>
-                    <label>$INFO[ListItem.Property(Addon.Creator)]</label>
+                    <label>$INFO[ListItem.AddonCreator]</label>
                 </control>
                 
                 <!-- Version -->
@@ -95,7 +95,7 @@
                     <height>60</height>
                     <font>Tiny</font>
                     <aligny>top</aligny>
-                    <label>$INFO[ListItem.Property(Addon.Version)]</label>
+                    <label>$INFO[ListItem.AddonVersion]</label>
                 </control>
                 
                 <!-- Type -->
@@ -111,7 +111,7 @@
                     <height>60</height>
                     <font>Tiny</font>
                     <aligny>top</aligny>
-                    <label>$INFO[ListItem.Property(Addon.Type)]</label>
+                    <label>$INFO[ListItem.AddonType]</label>
                 </control>
                 
                 <!-- Description -->
@@ -126,7 +126,7 @@
                     <width>100%</width>
                     <height>190</height>
                     <font>Tiny</font>
-                    <label>$INFO[ListItem.Property(Addon.Description)]</label>
+                    <label>$INFO[ListItem.AddonDescription]</label>
                     <align>justify</align>
                 </control>
             </control>

@@ -16,13 +16,15 @@
 				<posy>-30</posy>
 				<width>960</width>
 				<height>544</height>
-				<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
+				<texture border="16" colordiffuse="$VAR[DialogPanelColour]">common/rounded-shadow8.png</texture>
+				<!--<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>-->
 			</control>
 			<control type="label">
 				<description>Heading</description>
 				<centerleft>50%</centerleft>
 				<width>885</width>
 				<font>MediumBold</font>
+				<textcolor>$VAR[DialogTextColour]</textcolor>
 				<align>center</align>
 				<label>31222</label>
 			</control>
@@ -32,6 +34,7 @@
 				<right>15</right>
 				<posy>108</posy>
 				<height>300</height>
+				<textcolor>$VAR[DialogTextColour]</textcolor>
 				<label>$INFO[Container.FolderPath,$LOCALIZE[31221][CR][I],[/I]]</label>
 			</control>
 			<control type="button" id="9501">
@@ -47,8 +50,10 @@
 				<font>Button</font>
 				<onclick>Skin.SetString(CustomWidget1,$INFO[Container.FolderPath])</onclick>
 				<onclick>Close</onclick>
-				<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-				<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
+				<!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
 			</control>
 			<control type="button" id="9502">
 				<description>Custom 2</description>
@@ -63,8 +68,10 @@
 				<font>Button</font>
 				<onclick>Skin.SetString(CustomWidget2,$INFO[Container.FolderPath])</onclick>
 				<onclick>Close</onclick>
-				<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-				<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
+				<!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
 			</control>
 			<control type="button" id="9503">
 				<description>Custom 3</description>
@@ -79,8 +86,10 @@
 				<font>Button</font>
 				<onclick>Skin.SetString(CustomWidget3,$INFO[Container.FolderPath])</onclick>
 				<onclick>Close</onclick>
-				<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-				<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
+				<!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
 			</control>
 			<control type="button" id="9504">
 				<description>Custom 4</description>
@@ -95,8 +104,10 @@
 				<font>Button</font>
 				<onclick>Skin.SetString(CustomWidget4,$INFO[Container.FolderPath])</onclick>
 				<onclick>Close</onclick>
-				<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-				<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
+				<!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
 			</control>
 			<control type="button" id="9505">
 				<description>Custom 5</description>
@@ -111,8 +122,10 @@
 				<font>Button</font>
 				<onclick>Skin.SetString(CustomWidget5,$INFO[Container.FolderPath])</onclick>
 				<onclick>Close</onclick>
-				<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-				<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
+				<!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
 			</control>
 			
 			<control type="button" id="9506">
@@ -128,8 +141,10 @@
 				<font>Button</font>
 				<onclick>Skin.SetString(CustomWidget6,$INFO[Container.FolderPath])</onclick>
 				<onclick>Close</onclick>
-				<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-				<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
+				<!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
 			</control>
 			<control type="button" id="9507">
 				<description>Custom 7</description>
@@ -144,8 +159,10 @@
 				<font>Button</font>
 				<onclick>Skin.SetString(CustomWidget7,$INFO[Container.FolderPath])</onclick>
 				<onclick>Close</onclick>
-				<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-				<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
+				<!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
 			</control>
 			<control type="button" id="9508">
 				<description>Custom 8</description>
@@ -160,8 +177,10 @@
 				<font>Button</font>
 				<onclick>Skin.SetString(CustomWidget8,$INFO[Container.FolderPath])</onclick>
 				<onclick>Close</onclick>
-				<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-				<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
+				<!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
 			</control>
 			<control type="button" id="9509">
 				<description>Custom 9</description>
@@ -176,8 +195,10 @@
 				<font>Button</font>
 				<onclick>Skin.SetString(CustomWidget9,$INFO[Container.FolderPath])</onclick>
 				<onclick>Close</onclick>
-				<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-				<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
+				<!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
 			</control>
 			<control type="button" id="9510">
 				<description>Custom 10</description>
@@ -192,8 +213,10 @@
 				<font>Button</font>
 				<onclick>Skin.SetString(CustomWidget10,$INFO[Container.FolderPath])</onclick>
 				<onclick>Close</onclick>
-				<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-				<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[DialogTextColour]" border="5">common/box.png</texturenofocus>
+				<!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
 			</control>
 		</control>
 	</controls>

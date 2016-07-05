@@ -37,19 +37,16 @@
                 <ondown>450</ondown>
 
                 <itemlayout height="69" width="870">
-
                     <control type="image">
                         <width>870</width>
                         <height>66</height>
                         <texture border="5" colordiffuse="Black12">common/box.png</texture>
                     </control>
-
                     <control type="label">
                         <posx>30</posx>
                         <width>405</width>
                         <info>ListItem.Label</info>
                     </control>
-
                     <control type="label">
                         <right>30</right>
                         <width>405</width>
@@ -57,24 +54,22 @@
                         <font>Tiny</font>
                         <info>ListItem.Label2</info>
                     </control>
-
                 </itemlayout>
 
-                <focusedlayout height="69" width="870">
-
+                <focusedlayout height="69" width="870">			
                     <control type="image">
                         <width>870</width>
                         <height>66</height>
-                        <texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>
+<!-- 4th GEN Colour Modification -->						
+						<texture border="5" colordiffuse="$VAR[DialogButtonFocusColour]">common/box.png</texture>
+                        <!--<texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>-->
                     </control>
-
                     <control type="label">
                         <posx>30</posx>
                         <width>405</width>
                         <textcolor>$VAR[ColourSelected]</textcolor>
                         <info>ListItem.Label</info>
                     </control>
-
                     <control type="label">
                         <right>30</right>
                         <width>405</width>
@@ -83,7 +78,6 @@
                         <textcolor>$VAR[ColourSelected]</textcolor>
                         <info>ListItem.Label2</info>
                     </control>
-
                 </focusedlayout>
 
             </control>
