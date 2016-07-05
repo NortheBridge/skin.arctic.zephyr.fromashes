@@ -31,7 +31,6 @@
                 <ondown>2</ondown>
 
                 <itemlayout height="69" width="670">
-
                     <control type="label">
                         <left>30</left>
                         <right>30</right>
@@ -40,13 +39,13 @@
                     </control>
 
                 </itemlayout>
-
                 <focusedlayout height="69" width="670">
-
                     <control type="image">
                         <width>100%</width>
                         <height>66</height>
-                        <texture colordiffuse="$VAR[ColourHighlight]" border="8">common/box.png</texture>
+<!-- 4th GEN Colour Modification -->						
+						<texture colordiffuse="$VAR[DialogButtonFocusColour]" border="8">common/box.png</texture>
+                        <!--<texture colordiffuse="$VAR[ColourHighlight]" border="8">common/box.png</texture>-->
                     </control>
 
                     <control type="label">
@@ -55,7 +54,6 @@
                         <textcolor>White100</textcolor>
                         <info>ListItem.Label</info>
                     </control>
-
                 </focusedlayout>
 
             </control>

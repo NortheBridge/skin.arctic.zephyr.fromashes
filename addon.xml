@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-    id="skin.arctic.zephyr.fromashes"
-    version="3.2.11"
-    name="Arctic Zephyr: From Ashes"
-    provider-name="jurialmunkey - im85288 - badaas - Guardian Hope (on behalf of NortheBridge)">
+    id="skin.arctic.zephyr.fromashes.danvers"
+<<<<<<< HEAD
+    version="4.0.20-alpha1"
+    name="Arctic Zephyr: From Ashes (Danvers Preview)"
+    provider-name="NortheBridge">
     <requires>
-        <import addon="xbmc.gui" version="5.10.0"/>
+        <import addon="xbmc.gui" version="5.12.0"/>
         <import addon="script.skinshortcuts" version="1.0.8"/>
 		<import addon="service.library.data.provider" version="0.1.5"/>
 		<import addon="script.grab.fanart" version="0.14.1"/>
@@ -27,18 +28,19 @@
     </requires>
     <extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1.00" debugging="false">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="16x9"/>
-		<res width="1920" height="1200" aspect="16:10" default="false" folder="16x9"/>
 	</extension>
     <extension point="xbmc.addon.metadata">
+		<news>Welcome to the Arctic Zephyr: From Ashes Danvers Preview for Kodi 17 Krypton. To see what's new visit https://northebridge.com/systems/oss/emby/fromashestheme/whatsnew
+		- You're running Arctic Zephyr: From Ashes Danvers Preview (4.0.20 Alpha 1)</news>
         <summary lang="de">Klar, minimalistisch, elegant, einfach, leicht</summary>
         <summary lang="en">Clean, minimal, elegant, simple, light.</summary>
-        <description lang="de">Arktische Zephyr: Aus der Asche ist die zweite Generation des die "Arctic Zephyr: explodierte" Haut von im85288 und Badaas erstellt basierend auf die dritte Iteration der arktischen Haut ursprünglich von Jurialmunkey. Jetzt kuratiert von Guardian Hoffnung weiterhin Arktis konzentriert sich darauf, einfach, sauber und minimalistisch mit einer leichten Drehung.</description>
-        <description lang="en">Arctic Zephyr: From Ashes is the second generation of the "Arctic Zephyr: Exploded" skin created by im85288 and badaas based on the third iteration of the Arctic skin originally created by jurialmunkey. Now curated by Guardian Hope, Arctic continues to focuses on being simple, clean and minimalistic with a light spin.</description>
+        <description lang="de">(KODI KRYPTON PREVIEW ONLY) Arktische Zephyr: Aus der Asche ist die zweite Generation des die "Arctic Zephyr: explodierte" Haut von im85288 und Badaas erstellt basierend auf die dritte Iteration der arktischen Haut ursprünglich von Jurialmunkey. Jetzt kuratiert von Guardian Hoffnung weiterhin Arktis konzentriert sich darauf, einfach, sauber und minimalistisch mit einer leichten Drehung.</description>
+        <description lang="en">(KODI KRYPTON PREVIEW ONLY) Arctic Zephyr: From Ashes is the second generation of the "Arctic Zephyr: Exploded" skin created by im85288 and badaas based on the third iteration of the Arctic skin originally created by jurialmunkey. Now curated by Guardian Hope, Arctic continues to focuses on being simple, clean and minimalistic with a light spin.</description>
         <platform>all</platform>
 		<license>GPL v3.0</license>
-		<forum></forum>
+		<forum>http://forum.kodi.tv/showthread.php?tid=257970</forum>
 		<website>https://northebridge.com/systems/oss/emby/fromashestheme</website>
-		<email>contact@northebridge.com</email>
+		<email>fromashesproject@northebridge.com</email>
 		<source>https://github.com/NortheBridge/skin.arctic.zephyr.fromashes</source>
     </extension>
 </addon>

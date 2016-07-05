@@ -2,7 +2,6 @@
 <!-- Foundation -->
 <window id="125">
     <defaultcontrol always="true">2</defaultcontrol>
-    <allowoverlay>yes</allowoverlay>
 
     <controls>
         <include>GlobalOverlay</include>
@@ -35,13 +34,14 @@
                 <orientation>horizontal</orientation>
 
                 <itemlayout height="300" width="360">
-
                     <control type="image">
                         <left>10</left>
                         <right>10</right>
                         <top>10</top>
                         <bottom>60</bottom>
-                        <texture border="5" colordiffuse="Black12">common/box.png</texture>
+<!-- 4th GEN Colour Modification -->						
+						<texture border="5" colordiffuse="$VAR[DialogMenuDisabledColour]">common/box.png</texture>
+                        <!--<texture border="5" colordiffuse="Black12">common/box.png</texture>-->
                     </control>
 
                     <control type="image">
@@ -64,15 +64,15 @@
                     </control>
 
                 </itemlayout>
-
                 <focusedlayout height="300" width="360">
-
                     <control type="image">
                         <left>10</left>
                         <right>10</right>
                         <top>10</top>
                         <bottom>60</bottom>
-                        <texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>
+<!-- 4th GEN Colour Modification -->						
+						<texture border="5" colordiffuse="$VAR[DialogButtonHighlightColour]">common/box.png</texture>
+                        <!--<texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>-->
                     </control>
 
                     <control type="image">
@@ -93,11 +93,9 @@
                         <font>Tiny</font>
                         <label>$INFO[ListItem.Label]$INFO[ListItem.Label2, (,)]</label>
                     </control>
-
                 </focusedlayout>
 
             </control>
-
             <control type="grouplist" id="9000">
                 <centerleft>50%</centerleft>
                 <bottom>30</bottom>
@@ -115,8 +113,11 @@
                     <description>Create Bookmark button</description>
                     <label>294</label>
                     <width>330</width>
-                    <texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+<!-- 4th GEN Colour Modification -->					
+					<texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[DialogMenuDisabledColour]" border="5">common/box.png</texturenofocus>
+                    <!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
                     <include>DefDialogButtons</include>
                 </control>
 
@@ -124,8 +125,11 @@
                     <description>Clear Bookmark button</description>
                     <label>296</label>
                     <width>330</width>
-                    <texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+<!-- 4th GEN Colour Modification -->					
+                    <texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[DialogMenuDisabledColour]" border="5">common/box.png</texturenofocus>
+                    <!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
                     <include>DefDialogButtons</include>
                 </control>
 
@@ -133,16 +137,16 @@
                     <description>Clear Bookmark button</description>
                     <label>20406</label>
                     <width>330</width>
-                    <texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+<!-- 4th GEN Colour Modification -->					
+                    <texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[DialogMenuDisabledColour]" border="5">common/box.png</texturenofocus>
+                    <!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
                     <include>DefDialogButtons</include>
                     <visible>videoplayer.content(episodes)</visible>
                 </control>
-
+				
             </control>
-
         </control>
-
     </controls>
-
 </window>

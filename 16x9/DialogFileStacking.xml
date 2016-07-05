@@ -47,7 +47,6 @@
                     </control>
 
                 </itemlayout>
-
                 <focusedlayout height="69" width="670">
                     <control type="group">
                         
@@ -55,7 +54,9 @@
                         <control type="image">
                             <width>100%</width>
                             <height>66</height>
-                            <texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>
+<!-- 4th GEN Colour Modification -->							
+							<texture border="5" colordiffuse="$VAR[DialogButtonFocusColour]">common/box.png</texture>
+                            <!--<texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>-->
                         </control>
 
                         <control type="label">
@@ -90,11 +91,9 @@
                             <info>ListItem.Label2</info>
                         </control>
                     </control>
-
                 </focusedlayout>
 
             </control>
-
 
         </control>
 

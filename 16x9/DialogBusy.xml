@@ -11,7 +11,9 @@
 			<visible>!Skin.HasSetting(hide.busydialog)</visible>
             <include>Animation.FadeIn</include>
             <include>Animation.FadeOut</include>
-            <include>GlobalOverlay</include>
+<!-- Modification to Busy Spinner --->			
+			<include>GlobalSpinnerOverlay</include>
+            <!--<include>GlobalOverlay</include>-->
 			<include>GlobalOverlay</include>
 
                 <control type="image">
