@@ -10,9 +10,8 @@
 
         <control type="group">
             <include>DefDialogBackground</include>
-            
             <control type="label" id="2">
-                <include>DefDialogHeader</include>
+                <include>DefDialogHeader</include>				
                 <label>1026</label>
             </control>
             
@@ -20,10 +19,9 @@
                 <posx>705</posx>
                 <top>120</top>
                 <height>483</height>
-                <width>1</width>
-                <texture colordiffuse="Black12">common/white.png</texture>
-            </control>
-
+                <width>1</width>	    
+				<texture colordiffuse="Black12">common/white.png</texture>
+            </control>	
             <control type="list" id="10">
                 <posx>8</posx>
                 <posy>120</posy>
@@ -39,7 +37,9 @@
                         <left>30</left>
                         <right>30</right>
                         <font>SmallBold</font>
-                        <textcolor>Black70</textcolor>
+<!-- 4th GEN Colour Modification -->						
+                        <textcolor>$VAR[DialogMenuTextColour]</textcolor>
+                        <!--<textcolor>Black70</textcolor>-->
                         <height>66</height>
                         <aligny>center</aligny>
                         <info>ListItem.Label</info>
@@ -48,7 +48,9 @@
                     <control type="label">
                         <left>30</left>
                         <right>30</right>
-                        <textcolor>Black70</textcolor>
+<!-- 4th GEN Colour Modification -->						
+                        <textcolor>$VAR[DialogMenuTextColour]</textcolor>
+                        <!--<textcolor>Black70</textcolor>-->
                         <align>right</align>
                         <height>66</height>
                         <aligny>center</aligny>
@@ -56,14 +58,14 @@
                     </control>
 
                 </itemlayout>
-
                 <focusedlayout height="69" width="1064">
-
                     <control type="image">
                         <left>0</left>
                         <right>0</right>
                         <height>66</height>
-                        <texture border="5" colordiffuse="$VAR[ColourHighlight]">common/white.png</texture>
+<!-- 4th GEN Colour Modification -->						
+						<texture border="5" colordiffuse="$VAR[DialogButtonHighlightColour]">common/white.png</texture>
+                        <!--<texture border="5" colordiffuse="$VAR[ColourHighlight]">common/white.png</texture>-->
                         <animation effect="fade" start="100" end="50" condition="!Control.HasFocus(10)">Conditional</animation>
                     </control>
 
@@ -73,7 +75,9 @@
                         <height>66</height>
                         <font>SmallBold</font>
                         <aligny>center</aligny>
-                        <textcolor>$VAR[ColourSelected]</textcolor>
+<!-- 4th GEN Colour Modification -->						
+                        <textcolor>$VAR[DialogMenuTextColour]</textcolor>
+						<!--<textcolor>Black70</textcolor>-->
                         <info>ListItem.Label</info>
                     </control>
 
@@ -83,14 +87,14 @@
                         <align>right</align>
                         <height>66</height>
                         <aligny>center</aligny>
-                        <textcolor>$VAR[ColourSelected]</textcolor>
+<!-- 4th GEN Colour Modification -->						
+                        <textcolor>$VAR[DialogMenuTextColour]</textcolor>
+						<!--<textcolor>Black70</textcolor>-->
                         <info>ListItem.Label2</info>
                     </control>
-
                 </focusedlayout>
-
-            </control>
-
+				
+            </control>			
             <control type="grouplist" id="9000">
                 <posx>738</posx>
                 <posy>120</posy>
@@ -98,10 +102,9 @@
                 <orientation>vertical</orientation>
                 <onleft>10</onleft>
                 <onright>10</onright>
-
                 <control type="button" id="11">
                     <description>Browse</description>
-                    <include>DefDialogButtons</include>
+                    <include>DefDialogButtons</include>					
                     <label>1024</label>
                 </control>
 
@@ -139,7 +142,7 @@
                 <onleft>12</onleft>
                 <onright>18</onright>
                 <ondown>19</ondown>
-                <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>				
                 <include>DefDialogButtons</include>
             </control>
 
@@ -153,9 +156,12 @@
                 <onleft>20</onleft>
                 <onright>19</onright>
                 <ondown>10</ondown>
-                <texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-                <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
-                <include>DefDialogButtons</include>
+<!-- 4th GEN Colour Modification -->				
+                <texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[DialogMenuDisabledColour]" border="5">common/box.png</texturenofocus>
+				<!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+                <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
+				<include>DefDialogButtons</include>
             </control>
 
             <control type="button" id="19">
@@ -168,9 +174,12 @@
                 <onleft>18</onleft>
                 <onright>20</onright>
                 <ondown>10</ondown>
-                <texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-                <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
-                <include>DefDialogButtons</include>
+<!-- 4th GEN Colour Modification -->				
+                <texturefocus colordiffuse="$VAR[DialogButtonHighlightColour]" border="5">common/box.png</texturefocus>-->
+                <texturenofocus colordiffuse="$VAR[DialogMenuDisabledColour]" border="5">common/box.png</texturenofocus>
+				<!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+                <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>-->
+				<include>DefDialogButtons</include>
             </control>
 
         </control>

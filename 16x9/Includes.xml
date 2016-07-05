@@ -43,6 +43,13 @@
 		<texturenofocus>-</texturenofocus>
 		<texturefocus>-</texturefocus>
 	</include>
+<!-- Added for New Busy Spinner Background Overlay -->	
+	<include name="Dimensions_Spinner_Halfscreen">
+	    <posx>0</posx>
+		<top>360</top>
+		<width>1920</width>
+		<height>440</height>
+	</include>
 	<include name="Dimensions_Fullscreen">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -81,6 +88,15 @@
 		<shadowcolor>Black</shadowcolor>
 		<align>right</align>
 	</include>
+<!-- Added for new Busy Spinner Background Overlay -->	
+	<include name="GlobalSpinnerOverlay">
+		<control type="image">
+			<include>Animation.FadeIn</include>
+			<include condition="!Window.IsVisible(DialogBusy.xml)">Animation.FadeOut</include>
+			<include>Dimensions_Spinner_Halfscreen</include>			
+			<texture border="2">common/black-back.png</texture>
+		</control>
+	</include>	
 	<include name="GlobalOverlay">
 		<control type="image">
 			<include>Animation.FadeIn</include>

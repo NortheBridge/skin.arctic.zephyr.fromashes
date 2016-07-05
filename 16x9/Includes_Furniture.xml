@@ -1149,15 +1149,44 @@
 					<visible>!Skin.HasSetting(hide.busydialog) | !Window.IsVisible(DialogBusy.xml)</visible>
 					<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
 				</control>
+<!--############# Updated to new Busy Spinner ############-->				
 				<control type="image">
+                    <description>Busy animation</description>
+                    <centerleft>50%</centerleft>
+                    <centertop>47%</centertop>
+                    <width>100</width>
+                    <height>100</height>
+                    <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
+                    <texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">dialog/loading-spinner.png</texture>
+					<visible>Skin.HasSetting(hide.busydialog) + Window.IsVisible(DialogBusy.xml)</visible>
+					<include>GlobalOverlay</include>
+			        <include>GlobalOverlay</include>
+                    <aspectratio>keep</aspectratio>
+                </control>
+<!--############# Updated to new Busy Spinner ############-->
+                <control type="label">
+                    <description>Busy label</description>
+                    <centerleft>50%</centerleft>
+                    <centertop>53%</centertop>
+                    <width>720</width>
+                    <height>108</height>
+                    <aligny>center</aligny>
+                    <align>center</align>
+                    <label>$LOCALIZE[20186]...</label>
+                    <textcolor>ffededed</textcolor>
+					<visible>Skin.HasSetting(hide.busydialog) + Window.IsVisible(DialogBusy.xml)</visible>
+					<include>GlobalOverlay</include>
+			        <include>GlobalOverlay</include>
+                </control>
+				<!--<control type="image">
 					<centertop>40</centertop>
 					<centerleft>40</centerleft>
 					<width>48</width>
 					<height>48</height>
-<!--Changed-->		<texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
+		            <texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
 					<visible>Skin.HasSetting(hide.busydialog) + Window.IsVisible(DialogBusy.xml)</visible>
 					<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
-				</control>
+				</control>-->
 			</control>
 			<control type="group">
 				<control type="label">
@@ -1217,15 +1246,44 @@
 					<visible>!Skin.HasSetting(hide.busydialog) | !Window.IsVisible(DialogBusy.xml)</visible>
 					<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
 				</control>
+<!--############# Updated to new Busy Spinner ############-->				
 				<control type="image">
+                    <description>Busy animation</description>
+                    <centerleft>50%</centerleft>
+                    <centertop>47%</centertop>
+                    <width>100</width>
+                    <height>100</height>
+                    <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
+                    <texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">dialog/loading-spinner.png</texture>
+					<visible>Skin.HasSetting(hide.busydialog) + Window.IsVisible(DialogBusy.xml)</visible>
+					<include>GlobalOverlay</include>
+			        <include>GlobalOverlay</include>
+                    <aspectratio>keep</aspectratio>
+                </control>
+<!--############# Updated to new Busy Spinner ############-->
+                <control type="label">
+                    <description>Busy label</description>
+                    <centerleft>50%</centerleft>
+                    <centertop>53%</centertop>
+                    <width>720</width>
+                    <height>108</height>
+                    <aligny>center</aligny>
+                    <align>center</align>
+                    <label>$LOCALIZE[20186]...</label>
+                    <textcolor>ffededed</textcolor>
+					<visible>Skin.HasSetting(hide.busydialog) + Window.IsVisible(DialogBusy.xml)</visible>
+					<include>GlobalOverlay</include>
+			        <include>GlobalOverlay</include>
+                </control>				
+				<!--<control type="image">
 					<centertop>40</centertop>
 					<centerleft>40</centerleft>
 					<width>48</width>
 					<height>48</height>
-<!--Changed-->		<texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
+		            <texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
 					<visible>Skin.HasSetting(hide.busydialog) + Window.IsVisible(DialogBusy.xml)</visible>
 					<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
-				</control>
+				</control>-->
 			</control>
 			<control type="group">
 				<control type="label">
