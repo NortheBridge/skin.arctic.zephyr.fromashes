@@ -35,9 +35,9 @@
         <description lang="en">Arctic Zephyr: From Ashes is the second generation of the "Arctic Zephyr: Exploded" skin created by im85288 and badaas based on the third iteration of the Arctic skin originally created by jurialmunkey. Now curated by Guardian Hope, Arctic continues to focuses on being simple, clean and minimalistic with a light spin.</description>
         <platform>all</platform>
 		<license>GPL v3.0</license>
-		<forum></forum>
+		<forum>http://forum.kodi.tv/showthread.php?tid=257970</forum>
 		<website>https://northebridge.com/systems/oss/emby/fromashestheme</website>
-		<email>contact@northebridge.com</email>
+		<email>fromashesproject@northebridge.com</email>
 		<source>https://github.com/NortheBridge/skin.arctic.zephyr.fromashes</source>
     </extension>
 </addon>
