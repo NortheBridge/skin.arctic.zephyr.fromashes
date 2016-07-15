@@ -16,9 +16,7 @@
                 <bottom>-8</bottom>
                 <left>-8</left>
                 <right>-8</right>
-<!-- 4th GEN Colour Modification -->				
-				<texture border="16" colordiffuse="$VAR[DialogMenuBackgroundColour]">common/rounded-shadow8.png</texture>
-                <!--<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>-->
+                <texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
             </control>
 
             <control type="label" id="500">

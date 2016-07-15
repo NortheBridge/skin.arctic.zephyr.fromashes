@@ -110,6 +110,7 @@
 					<orientation>vertical</orientation>
 					<!-- Home -->
 					<control type="button" id="9214" description="Home Style">
+					    <onup>9220</onup>
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9101)</visible>
 						<include>DefSettingsButton</include>
@@ -174,7 +175,8 @@
 						<selected>Skin.HasSetting(home.submenu2)</selected>
 						<onclick>Skin.ToggleSetting(home.submenu2)</onclick>
 					</control>
-					<control type="button" id="9214" description="Set Slideshow Path">
+					<control type="button" id="9220" description="Set Slideshow Path">
+					    <ondown>9214</ondown>
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9101)</visible>
 						<include>DefSettingsButton</include>
@@ -273,46 +275,7 @@
 						<selected>Skin.HasSetting(global.showvisualisation)</selected>
 						<onclick>Skin.ToggleSetting(global.showvisualisation)</onclick>
 					</control>
-					<!-- OSD -->
-<!--Added-->			<control type="radiobutton" id="13052">
-					    <width>1310</width>
-						<visible>ControlGroup(9100).HasFocus(9103)</visible>
-                        <description>enable info on osd</description>
-                        <include>DefSettingsButton</include>
-                        <label>enable info on osd</label>
-                        <onclick>Skin.ToggleSetting(EnableOSDInfo)</onclick>
-                        <selected>Skin.HasSetting(EnableOSDInfo)</selected>
-                    </control>
-					<control type="radiobutton" id="31701">
-					    <width>1310</width>
-						<visible>ControlGroup(9100).HasFocus(9103)</visible>
-                        <description>enable large info on osd</description>
-                        <textoffsetx>100</textoffsetx>
-                        <include>DefSettingsButton</include>
-                        <label>enable large info on osd</label>
-                        <onclick>Skin.ToggleSetting(EnableOSDInfoLarge)</onclick>
-                        <selected>Skin.HasSetting(EnableOSDInfoLarge)</selected>
-                        <visible>Skin.HasSetting(EnableOSDInfo)</visible>
-                    </control>
-					<control type="button" id="13054">
-                        <width>1310</width>
-						<visible>ControlGroup(9100).HasFocus(9103)</visible>
-						<include>DefSettingsButton</include>
-                        <label>Show info at playback start</label>
-                        <label2>$INFO[skin.string(SkinHelper.ShowInfoAtPlaybackStart)] $LOCALIZE[31231]</label2>
-                        <visible>!Skin.HasSetting(LowPerformanceMode)</visible>		
-                        <onclick>Skin.SetNumeric(SkinHelper.ShowInfoAtPlaybackStart)</onclick>
-                    </control>
-					<control type="radiobutton" id="5160">
-					    <width>1310</width>
-						<visible>ControlGroup(9100).HasFocus(9103)</visible>
-                        <description>Low performance systems</description>
-                        <include>DefSettingsButton</include>
-                        <label>Low performance systems</label>
-                        <onclick>Skin.ToggleSetting(LowPerformanceMode)</onclick>
-                        <onclick>Skin.SetString(SkinHelper.ShowInfoAtPlaybackStart,0)</onclick>
-                        <selected>Skin.HasSetting(LowPerformanceMode)</selected>
-                    </control>
+					<!-- OSD -->>
 					<control type="radiobutton" id="9235" description="Show Fanart">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9103)</visible>
@@ -944,26 +907,7 @@
 						<font>MediumSmallBold</font>
 						<textcolor>FFFFFFFF</textcolor>
 						<label>    Dialog Menus Options</label>
-					</control>
-					
-    <!-- Dialog Menu Background Color -->
-					<control type="radiobutton" id="92822">
-						<width>1310</width>
-						<visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<textureradiofocus colordiffuse="$VAR[DialogMenuBackgroundColour]">common/circle.png</textureradiofocus>
-						<textureradionofocus colordiffuse="$VAR[DialogMenuBackgroundColour]">common/circle.png</textureradionofocus>
-						<include>DefSettingsButton</include>
-						<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=dialogmenubgcolor.name)</onclick>
-						<label> - Dialog Menu Background Colour</label>
 					</control>					
-    <!-- Reset Dialog Menu Background -->					
-					<control type="button" id="92823">
-						<width>1310</width>
-						<visible>ControlGroup(9100).HasFocus(9108)</visible>				
-						<include>DefSettingsButton</include>
-						<label>   $LOCALIZE[409]</label>
-						<onclick>Skin.Reset(dialogmenubgcolor.name)</onclick>
-					</control>
     <!-- Dialog Menu Text Highlight Color -->
 					<control type="radiobutton" id="92824">
 						<width>1310</width>
@@ -1399,19 +1343,7 @@
 						<label>   $LOCALIZE[409]</label>
 						<onclick>Skin.Reset(sidebladetextcolor.name)</onclick>
 					</control>
-					
-					<!--<control type="togglebutton" id="928531">
-				        <width>1310</width>
-				        <visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<include>DefSettingsButton</include>
-						<label> - Stars Rating Colour</label>
-						<onclick>Skin.ToggleSetting(disablestarratingcolors)</onclick>
-			            <selected>Skin.HasSetting(disablestarratingcolors)</selected>
-					    <onclick>ActivateWindow(1169)</onclick>						
-			        </control>-->
-										
-															
-					
+																														
 <!-- ###OSD Section### -->					
 <!-- OSD Colour Heading -->					
 					<control type="label" id="92854">
