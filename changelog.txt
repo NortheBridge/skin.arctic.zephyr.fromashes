@@ -1,5 +1,11 @@
 [B]Arctic Zephyr: From Ashes Changelog[/B]
 
+[B]Arctic Zephyr: From Ashes "Summer 2016 Update Rollup Patch Level 1 (PL1)" - Released July 17, 2016[/B]
+Dormer: 3.2.21 (3.2.20_dormer) / Danvers: No Danvers Variant
+Resolved Color Selection Issues for 4th Generation Color Enhancer
+Resolve Home Screen Fanart Slideshow Issues Introduced in 3.2.20
+Code for Rebase of Danvers Branch (4.0.20-alpha1)
+
 [B]Arctic Zephyr: From Ashes "Summer 2016 Update" - Released June 18, 2016[/B]
 Dormer: 3.2.20 (3.2.20_dormer) / Danvers: 4.0.20-alpha1 (4.0.20_danvers)
 
