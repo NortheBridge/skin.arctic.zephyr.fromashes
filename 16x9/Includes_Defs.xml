@@ -111,10 +111,6 @@
 	
 <!-- 4th Generation Color Enhancements -->
 <!-- ###Begin### -->	
-    <variable name="DialogMenuBackgroundColour">  
-        <value condition="!IsEmpty(Skin.String(dialogmenubgcolor.name))">$INFO[Skin.String(dialogmenubgcolor.name)]</value>
-        <value>White100</value>	
-	</variable>
 	<variable name="DialogMenuTextColour">  
         <value condition="!IsEmpty(Skin.String(dialogmenutextcolor.name))">$INFO[Skin.String(dialogmenutextcolor.name)]</value>
         <value>Black70</value>	
@@ -682,9 +678,7 @@
 			<right>-8</right>
 			<top>-8</top>
 			<bottom>-8</bottom>
-<!-- 4th GEN Colour Modification -->			
-			<texture border="16" colordiffuse="$VAR[DialogMenuBackgroundColour]">common/rounded-shadow8.png</texture>
-			<!--<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>-->
+			<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
 		</control>
 	</include>
 	<include name="DefDialogInfoPanelFanart">
@@ -723,8 +717,6 @@
 		<width>990</width>
 		<align>center</align>
 		<font>MediumBold</font>
-<!-- 4th GEN Colour Modification -->		
-		<!--<textcolor>$VAR[DialogMenuTextColour]</textcolor>-->
 		<textcolor>Black70</textcolor>
 	</include>
 	<include name="DefDialogBackground">
@@ -736,7 +728,6 @@
 		<control type="image">
 			<width>1080</width>
 			<height>900</height>
-			<!--<texture border="16" colordiffuse="$VAR[DialogMenuBackgroundColour]">common/rounded-shadow8.png</texture>-->
 			<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>-->
 		</control>		
 	</include>
