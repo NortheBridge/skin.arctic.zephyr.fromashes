@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <includes>
-	<include name="View_56_MediaInfo">
+	<include content="View_56_MediaInfo">
 		<description>List View (id=56)</description>
 		<control type="group">
 			<include>Animation.Common</include>
@@ -155,7 +155,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="View_56_MediaInfo2">
+	<include content="View_56_MediaInfo2">
 		<description>List View (id=56)</description>
 		<control type="group">
 			<include>Animation.Common</include>
@@ -355,7 +355,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="View_56_MediaInfo3">
+	<include content="View_56_MediaInfo3">
 		<description>List View (id=56)</description>
 		<control type="group">
 			<include>Animation.Common</include>
@@ -529,7 +529,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="56focuslayout">
+	<include content="56focuslayout">
 		<control type="button">
 			<texturefocus>-</texturefocus>
 			<texturenofocus>-</texturenofocus>
@@ -573,7 +573,7 @@
 			<label>$INFO[ListItem.Label2]</label>
 		</control>
 	</include>
-	<include name="56itemlayout">
+	<include content="56itemlayout">
 		<control type="label">
 			<posx>30</posx>
 			<width max="560">auto</width>
