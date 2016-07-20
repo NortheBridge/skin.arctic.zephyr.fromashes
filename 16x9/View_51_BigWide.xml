@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <includes>
-	<include name="View_51_BigWide_Info">
+	<include content="View_51_BigWide_Info">
 		<description>List View (id=51)</description>
 		<control type="group">
 			<include>Animation.Common</include>
@@ -151,7 +151,7 @@
 			<include>Furniture_Scrollbar_Horizontal</include>
 		</control>
 	</include>
-	<include name="View_51_BigWide_Classic">
+	<include content="View_51_BigWide_Classic">
 		<description>List View (id=51)</description>
 		<control type="group">
 			<include>Animation.Common</include>
@@ -234,7 +234,7 @@
 			<include>Furniture_Scrollbar_Horizontal</include>
 		</control>
 	</include>
-	<include name="View_51_BigWide">
+	<include content="View_51_BigWide">
 		<description>List View (id=51)</description>
 		<control type="group">
 			<include>Animation.Common</include>
@@ -650,7 +650,7 @@
 			<include>Furniture_Scrollbar_Horizontal</include>
 		</control>
 	</include>
-	<include name="BigWideContent">
+	<include content="BigWideContent">
 		<top>PosterPad</top>
 		<left>SidePad</left>
 		<right>SidePad</right>

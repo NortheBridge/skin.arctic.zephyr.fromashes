@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
-	<include name="ShiftPosterThumbs">
+	<include content="ShiftPosterThumbs">
 		<control type="image">
 			<posx>-12</posx>
 			<posy>130</posy>
@@ -86,7 +86,7 @@
 			</control>			
 		</control>
 	</include>
-	<include name="View_514_PosterShift">
+	<include content="View_514_PosterShift">
 		<control type="group">
 			<visible>Control.IsVisible(514)</visible>
 			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>

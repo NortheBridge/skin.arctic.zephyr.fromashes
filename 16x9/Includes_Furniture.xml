@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="Furniture_Scrollbar">
+	<include content="Furniture_Scrollbar">
 		<control type="scrollbar" id="60">
 			<onback>50</onback>
 			<centerright>60</centerright>
@@ -19,7 +19,7 @@
 			<animation effect="slide" end="100,0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 		</control>
 	</include>
-	<include name="Furniture_Scrollbar_Horizontal">
+	<include content="Furniture_Scrollbar_Horizontal">
 		<control type="scrollbar" id="60">
 			<onback>50</onback>
 			<left>SidePad</left>
@@ -39,14 +39,14 @@
 		</control>
 	</include>	
 							
-	<include name="Furniture_ButtonBack">
+	<include content="Furniture_ButtonBack">
 		<width>64</width>
 		<height>64</height>
 		<animation type="Focus" reversible="false">
 			<effect type="zoom" start="75" end="100" center="auto" time="200" />
 		</animation>
 	</include>
-	<include name="Furniture_ButtonBack_Circle">
+	<include content="Furniture_ButtonBack_Circle">
 		<width>64</width>
 		<height>64</height>
 		<texture colordiffuse="Dark1">common/circle.png</texture>
@@ -164,7 +164,7 @@
 		<value condition="StringCompare(Player.StarRating,rating1.png)">star10</value>
 		<value>star0</value>
 	</variable>
-	<include name="Furniture_Flags">
+	<include content="Furniture_Flags">
 		<control type="grouplist">
 			<visible>!Skin.HasSetting(furniture.flags)</visible>
 			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) + !Window.IsVisible(script-ExtendedInfo Script-YoutubeList.xml)</visible>
@@ -624,7 +624,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="Furniture_Hub_Flags">
+	<include content="Furniture_Hub_Flags">
 		<control type="grouplist">
 			<visible>!Skin.HasSetting(furniture.flags)</visible>
 			<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)</visible>
@@ -793,7 +793,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="Furniture_Logo">
+	<include content="Furniture_Logo">
 		<control type="group">
 			<visible>Skin.HasSetting(furniture.logo)</visible>
 			<visible>!Player.HasMedia</visible>
@@ -1106,7 +1106,7 @@
 		<value condition="IsEmpty(Pvr.BackendChannels)">[COLOR=$VAR[ColourHighlight]]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342] • [COLOR=$VAR[ColourHighlight]]$INFO[Window(home).Property(TVShows.Count)][/COLOR] $LOCALIZE[20343] • [COLOR=$VAR[ColourHighlight]]$INFO[Window(home).Property(Music.AlbumsCount)][/COLOR] $LOCALIZE[132]</value>
 		<value>[COLOR=$VAR[ColourHighlight]]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342] • [COLOR=$VAR[ColourHighlight]]$INFO[Window(home).Property(TVShows.Count)][/COLOR] $LOCALIZE[20343] • [COLOR=$VAR[ColourHighlight]]$INFO[Window(home).Property(Music.AlbumsCount)][/COLOR] $LOCALIZE[132] • [COLOR=$VAR[ColourHighlight]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
 	</variable>
-	<include name="Furniture_Header">
+	<include content="Furniture_Header">
 		<control type="grouplist">
 			<top>SidePad</top>
 			<left>SidePad</left>
@@ -1209,7 +1209,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="ExtendedFurniture_Header">
+	<include content="ExtendedFurniture_Header">
 		<control type="grouplist">
 			<top>3</top>
 			<left>90</left>
@@ -1308,7 +1308,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="Furniture_Clock">
+	<include content="Furniture_Clock">
 		<control type="group">
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
@@ -1359,7 +1359,7 @@
 		</control>
 	</include>
 <!----  Modification Added --------- SkinSettings -------------------------------------------->	
-	<include name="Furniture_SkinSetting_Clock">
+	<include content="Furniture_SkinSetting_Clock">
 		<control type="group">
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
@@ -1410,7 +1410,7 @@
 		</control>
 	</include>
 <!--- Modification ----- Added -----SkinSettings-------------------------------------------------------->	
-	<include name="Furniture_SkinSetting_Header">
+	<include content="Furniture_SkinSetting_Header">
 		<control type="grouplist">
 			<!--<top>SidePad</top>-->
 			<left>SidePad</left>
@@ -1489,7 +1489,7 @@
 	
 	
 	
-	<include name="Furniture_NowPlaying">
+	<include content="Furniture_NowPlaying">
 		<control type="grouplist">
 			<visible>!Skin.HasSetting(furniture.nowplaying)</visible>
 			<visible>!Window.IsVisible(DialogVolumeBar.xml)</visible>
@@ -1598,7 +1598,7 @@
 	</include>
 	
 	<!-- Restore Furniture_OverlayInfo-->
-	<include name="Furniture_OverlayInfo">
+	<include content="Furniture_OverlayInfo">
 
         <control type="button" id ="9601">
             <width>1</width>
@@ -1671,7 +1671,7 @@
         </control>
     </include>
 
-	<include name="Furniture_Home_Flags">
+	<include content="Furniture_Home_Flags">
 		<control type="grouplist">
 			<visible>!Skin.HasSetting(furniture.flags)</visible>
 			<visible>Control.HasFocus(301)</visible>

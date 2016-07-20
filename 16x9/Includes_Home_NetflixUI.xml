@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- Home Buttons -->
-	<include name="HomeNetflix">
+	<include content="HomeNetflix">
 		<control type="group">
 			<visible>!Window.IsActive(favourites)</visible>
 			<control type="button" id="300">

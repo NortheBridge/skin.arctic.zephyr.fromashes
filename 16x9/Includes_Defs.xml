@@ -404,7 +404,7 @@
 		<value>plugin://service.library.data.provider?type=recentalbums&amp;reload=$INFO[Window.Property(recentalbums)]</value>
 	</variable>
 
-	<include name="DefSideBrowserButton">
+	<include content="DefSideBrowserButton">
 		<radioposx>400</radioposx>
 		<width>100%</width>
 		<height>64</height>
@@ -414,7 +414,7 @@
 		<alttexturefocus colordiffuse="$VAR[ColourHighlight]" border="16">common/box.png</alttexturefocus>
 		<texturefocus colordiffuse="$VAR[ColourHighlight]" border="16">common/box.png</texturefocus>
 	</include>
-	<include name="DefNextAiredWidget">
+	<include content="DefNextAiredWidget">
 		<item id="1">
 			<onclick>ActivateWindow(Videos,$INFO[Window.Property(NextAired.1.Library)],return)</onclick>
 			<property name="Fanart">$INFO[Window.Property(NextAired.1.Art(fanart))]</property>
@@ -516,7 +516,7 @@
 			<visible>StringCompare(Container(300).ListItem.Property(widget),NextAired) + !IsEmpty(Window.Property(NextAired.10.Label))</visible>
 		</item>
 	</include>
-	<include name="DefFavouritesWidget">
+	<include content="DefFavouritesWidget">
 		<item id="11" description="AutoFavourite">
 			<visible>StringCompare(Container(300).ListItem.Property(widget),Favourites) + !IsEmpty(Window(Home).Property(favourite.1.path))</visible>
 			<label>$INFO[Window(Home).Property(favourite.1.name)]</label>
@@ -567,7 +567,7 @@
 			<onclick>$INFO[Window(Home).Property(favourite.7.path)]</onclick>
 		</item>
 	</include>
-	<include name="DefWeatherMaps">
+	<include content="DefWeatherMaps">
 		<item id="1">
 			<label>$INFO[Window(weather).Property(Map.1.Heading)]</label>
 			<label2>$INFO[Window(weather).Property(Map.1.Legend)]</label2>
@@ -609,7 +609,7 @@
 			<visible>Weather.IsFetched + !IsEmpty(Window(weather).Property(Map.5.Area)) + !IsEmpty(Window(weather).Property(Map.IsFetched))</visible>
 		</item>
 	</include>
-	<include name="DefWidgetSelector">
+	<include content="DefWidgetSelector">
 		<align>center</align>
 		<aligny>center</aligny>
 		<width>293</width>
@@ -622,7 +622,7 @@
 		<font>WidgetSelector</font>
 		<texturefocus>noop</texturefocus>
 	</include>
-	<include name="DefNetflixWidgetSelector">
+	<include content="DefNetflixWidgetSelector">
 		<align>center</align>
 		<aligny>center</aligny>
 		<width>293</width>
@@ -646,7 +646,7 @@
 		<value>plugin://script.extendedinfo?info=airingtodaytvshows</value>
 	</variable>
 	
-	<include name="DefDialogButtons">
+	<include content="DefDialogButtons">
 		<width>300</width>
 		<font>Button</font>
 <!-- 4th GEN Colour Modification -->		
@@ -656,7 +656,7 @@
 		<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>-->
 	</include>
 	
-	<include name="DefDialogInfoButtons">
+	<include content="DefDialogInfoButtons">
 		<width>300</width>
 		<font>Button</font>
 <!-- 4th GEN Colour Modification -->		
@@ -666,7 +666,7 @@
 		<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>-->
 	</include>
 	
-	<include name="DefDialogInfoPanel">
+	<include content="DefDialogInfoPanel">
 		<include>Animation.FadeIn.Slide</include>
 		<include>Animation.FadeOut</include>
 		<centerleft>50%</centerleft>
@@ -681,7 +681,7 @@
 			<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
 		</control>
 	</include>
-	<include name="DefDialogInfoPanelFanart">
+	<include content="DefDialogInfoPanelFanart">
 		<include>Animation.FadeIn.Slide</include>
 		<include>Animation.FadeOut</include>
 		<centerleft>50%</centerleft>
@@ -698,7 +698,7 @@
 			<texture>$INFO[ListItem.Art(fanart)]</texture>
 		</control>
 	</include>
-	<include name="DefDialogInfoHeader">
+	<include content="DefDialogInfoHeader">
 		<left>30</left>
 		<right>320</right>
 		<posy>18</posy>
@@ -710,7 +710,7 @@
 		<textureradiofocus colordiffuse="Black70">buttons/radio-on.png</textureradiofocus>
 		<textureradionofocus colordiffuse="Black30">buttons/radio-off.png</textureradionofocus>
 	</include>
-	<include name="DefDialogHeader">
+	<include content="DefDialogHeader">
 		<description>header label</description>
 		<centerleft>50%</centerleft>
 		<posy>15</posy>
@@ -719,7 +719,7 @@
 		<font>MediumBold</font>
 		<textcolor>Black70</textcolor>
 	</include>
-	<include name="DefDialogBackground">
+	<include content="DefDialogBackground">
 		<include>Animation.ZoomIn</include>
 		<centerleft>50%</centerleft>
 		<centertop>50%</centertop>
@@ -731,7 +731,7 @@
 			<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>-->
 		</control>		
 	</include>
-	<include name="DefDialogOK">
+	<include content="DefDialogOK">
 		<centerleft>50%</centerleft>
 		<posy>360</posy>
 		<width>900</width>
@@ -758,7 +758,7 @@
 			<height>300</height>
 		</control>
 	</include>
-	<include name="DefPVRDialogButton">
+	<include content="DefPVRDialogButton">
 		<width>600</width>
 		<height>66</height>
 		<align>left</align>
@@ -770,7 +770,7 @@
 		<textcolor>$VAR[DialogMenuDisabledColour]</textcolor>
 		<!--<textcolor>Black70</textcolor>-->
 	</include>
-	<include name="DefKeyboardKeys">
+	<include content="DefKeyboardKeys">
 		<width>85</width>
 		<height>75</height>
 		<texturenofocus border="5" colordiffuse="Black12">common/box.png</texturenofocus>
@@ -781,7 +781,7 @@
 		<radioposx>320</radioposx>
 		<radioposy>22</radioposy>
 	</include>
-	<include name="DefContextButton">
+	<include content="DefContextButton">
 		<radioposx>400</radioposx>
 		<width>430</width>
 		<height>70</height>
@@ -795,7 +795,7 @@
 		<!--<alttexturefocus colordiffuse="Dark1" border="16">common/white.png</alttexturefocus>
 		<texturefocus colordiffuse="Dark1" border="16">common/white.png</texturefocus>-->
 	</include>
-	<include name="DefContextButton2">
+	<include content="DefContextButton2">
 		<radioposx>400</radioposx>
 		<width>430</width>
 		<height>55</height>
@@ -809,7 +809,7 @@
 		<texturefocus colordiffuse="$VAR[SideBladeHighlightColour]" border="16">common/white.png</texturefocus>
 		<!--<texturefocus colordiffuse="Dark1" border="16">common/white.png</texturefocus>-->
 	</include>
-	<include name="DefSettingsButton">
+	<include content="DefSettingsButton">
 		<align>left</align>
 		<font>Small</font>
 		<textcolor>PanelWhite100</textcolor>
@@ -824,7 +824,7 @@
 		<texturefocus colordiffuse="$VAR[ColourHighlight]">common/white.png</texturefocus>
 		<alttexturefocus colordiffuse="$VAR[ColourHighlight]">common/white.png</alttexturefocus>
 	</include>
-	<include name="DefSettingsButton2">
+	<include content="DefSettingsButton2">
 		<align>left</align>
 		<font>Small</font>
 		<textcolor>PanelWhite100</textcolor>
@@ -841,7 +841,7 @@
 		<alttexturenofocus colordiffuse="Light1">common/white.png</alttexturenofocus>
 	</include>
 <!-- Modification ---  Stars Dialog Button -->	
-	<!--<include name="ButtonStars">
+	<!--<include content="ButtonStars">
 	    <top>10</top>
 	    <left>170</left>
 	    <width>525</width>
@@ -849,14 +849,14 @@
 	    <aspectratio align="center" aligny="center">keep</aspectratio>
 	    <animation effect="zoom" start="100,100" end="100,0" center="auto" time="150">Hidden</animation>
 	</include>-->
-	<include name="DefSettingsOKCancelButton">
+	<include content="DefSettingsOKCancelButton">
 		<font>Button</font>
 		<texturenofocus colordiffuse="White12" border="16">common/white.png</texturenofocus>
 		<texturefocus colordiffuse="$VAR[ColourHighlight]" border="16">common/white.png</texturefocus>
 		<height>66</height>
 		<width>270</width>
 	</include>
-	<include name="Def9000GroupList">
+	<include content="Def9000GroupList">
 		<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
 		<onleft>50</onleft>
 		<onright>50</onright>
@@ -867,7 +867,7 @@
 		<height>350</height>
 		<itemgap>0</itemgap>
 	</include>
-	<include name="Def9000SettingsMenu">
+	<include content="Def9000SettingsMenu">
 		<control type="group">
 			<visible>ControlGroup(9000).HasFocus()</visible>
 			<include>GlobalOverlay</include>
@@ -969,7 +969,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="Def9000Arrows">
+	<include content="Def9000Arrows">
 		<control type="group">
 			<control type="image">
 				<description>arrow image</description>
@@ -989,7 +989,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="Def9000Background">
+	<include content="Def9000Background">
 		<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
 		<include>Animation.ZoomIn</include>
 		<include>Animation.FadeOut</include>
@@ -1006,7 +1006,7 @@
 			<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
 		</control>
 	</include>
-	<include name="Def9000Background2">
+	<include content="Def9000Background2">
 		<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus() | Control.HasFocus(7000) | Control.HasFocus(6000)</visible>
 		<include>Animation.ZoomIn</include>
 		<include>Animation.FadeOut</include>
@@ -1022,7 +1022,7 @@
 			<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
 		</control>
 	</include>
-	<include name="Def9000SideBladeLeft">
+	<include content="Def9000SideBladeLeft">
 		<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
 		<include>Animation.SideSlide</include>
 		<control type="button">
@@ -1045,7 +1045,7 @@
 			<colordiffuse>$VAR[ColourHighlight]</colordiffuse>
 		</control>
 	</include>
-	<include name="Def9000MediaMenuTop">
+	<include content="Def9000MediaMenuTop">
 		<left>0</left>
 		<top>115</top>
 		<width>455</width>
@@ -1306,7 +1306,7 @@
 			<visible>Control.IsVisible(156)</visible>
 		</control>
 	</include>
-	<include name="Def9000MusicSide">
+	<include content="Def9000MusicSide">
 		<left>0</left>
 		<top>115</top>
 		<width>455</width>
@@ -1391,7 +1391,7 @@
 			<visible>Control.IsVisible(51)</visible>
 		</control>
 	</include>
-	<include name="DefDialogSelectManual6">
+	<include content="DefDialogSelectManual6">
 		<posx>738</posx>
 		<posy>120</posy>
 		<width>300</width>
@@ -1406,7 +1406,7 @@
 		<textcolor>Black70</textcolor>
 		<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
 	</include>
-	<include name="DefDialogSelectManual3">
+	<include content="DefDialogSelectManual3">
 		<description>Manual</description>
 		<right>18</right>
 		<posy>18</posy>
@@ -1423,18 +1423,18 @@
 		<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
 		<texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
 	</include>
-	<include name="DefVideoInfoCastWithDirector">
+	<include content="DefVideoInfoCastWithDirector">
 		<top>171</top>
 		<height>639</height>
 	</include>
-	<include name="DefVideoInfoCastWithoutDirector">
+	<include content="DefVideoInfoCastWithoutDirector">
 		<top>100</top>
 		<height>710</height>
 	</include>
-	<include name="DefHomeRight520">
+	<include content="DefHomeRight520">
 		<right>520</right>
 	</include>
-	<include name="DefHomeRightSidePad">
+	<include content="DefHomeRightSidePad">
 		<right>SidePad</right>
 	</include>
 	<variable name="DefTVHubWidget">
@@ -1467,7 +1467,7 @@
 		<value condition="stringcompare(Window(1105).Property(content),3)">plugin://script.extendedinfo?info=onairtvshows</value>
 		<value>plugin://script.extendedinfo?info=airingtodaytvshows</value>
 	</variable>
-	<include name="DefInfoButtons">
+	<include content="DefInfoButtons">
 		<font>Button</font>
 		<textcolor>Dark2</textcolor>
 		<width>313</width>
@@ -1478,7 +1478,7 @@
 		<alttexturenofocus colordiffuse="Dark4" border="5">common/box.png</alttexturenofocus>
 		<alttexturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</alttexturefocus>
 	</include>
-	<include name="KodiFlixButtonsValues">
+	<include content="KodiFlixButtonsValues">
 		<height>35</height>
 		<width>901</width>
 		<textoffsetx>15</textoffsetx>
@@ -1489,7 +1489,7 @@
 		<onclick>noop</onclick>
 	</include>
 
-	<include name="YoutubeItemLayout">
+	<include content="YoutubeItemLayout">
 		<control type="group">
 			<posx>75</posx>
 			<control type="image">
@@ -1543,7 +1543,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="YoutubeFocusedLayout">
+	<include content="YoutubeFocusedLayout">
 		<control type="group">
 			<posx>75</posx>
 			<animation type="Focus">

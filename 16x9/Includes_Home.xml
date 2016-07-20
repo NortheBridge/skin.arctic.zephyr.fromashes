@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="HomeHeader">
+	<include content="HomeHeader">
 		<!-- Header -->
 		<control type="group">
 			<visible>Skin.HasSetting(home.showheader)</visible>
@@ -37,7 +37,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="HomeNowPlaying">
+	<include content="HomeNowPlaying">
 		<!-- Next Recording -->
 		<control type="group">
 			<right>72</right>
@@ -134,7 +134,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="HomeNextRecording">
+	<include content="HomeNextRecording">
 		<!-- Currently Recording -->
 		<control type="group">
 			<right>72</right>
@@ -244,7 +244,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="HomeWeatherWidget">
+	<include content="HomeWeatherWidget">
 		<!-- Weather Widget -->
 		<control type="group">
 			<animation effect="slide" start="0" end="0,200" time="150" condition="Skin.HasSetting(home.showheader)">Conditional</animation>
@@ -312,7 +312,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="HomeWidgetSelector">
+	<include content="HomeWidgetSelector">
 		<!-- Widget Selector -->
 		<control type="group">
 			<visible>![Window.IsVisible(home) + Skin.HasSetting(home.dontshowfanart) + IsEmpty(Container(300).ListItem.Property(widget))] + IsEmpty(Container(300).ListItem.Property(Background))</visible>
@@ -420,7 +420,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="HomeWidgetUpdating">
+	<include content="HomeWidgetUpdating">
 		<!-- Container Updating -->
 		<control type="group">
 			<!--<left>40</left>
@@ -498,7 +498,7 @@
 			</control>-->
 		</control>
 	</include>
-	<include name="HomeWidgetInfo">
+	<include content="HomeWidgetInfo">
 		<!-- Widget Info -->
 		<control type="group">
 			<animation type="WindowClose">
@@ -741,7 +741,7 @@
 			<include>HomeWidgetUpdating</include>
 		</control>
 	</include>
-	<include name="HomeRow">
+	<include content="HomeRow">
 		<!-- Home Row -->
 		<control type="group">
 			<animation effect="slide" start="0" end="0,250" time="150" condition="!Skin.HasSetting(home.classicwidgets) + [Control.HasFocus(301) | ControlGroup(303).HasFocus()]">Conditional</animation>
@@ -817,7 +817,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="HomeSubMenu">
+	<include content="HomeSubMenu">
 		<!-- Sub Menu -->
 		<control type="group">
 			<animation type="Conditional" condition="Control.HasFocus(302)" reversible="false">
@@ -934,7 +934,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="HomeSubMenu2">
+	<include content="HomeSubMenu2">
 		<control type="group">
 			<animation type="Conditional" condition="Control.HasFocus(302)" reversible="false">
 				<effect type="slide" start="0,24" end="0" time="100" delay="200" />
@@ -1006,7 +1006,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="HomeClassicWidgets">
+	<include content="HomeClassicWidgets">
 		<control type="group">
 			<animation effect="slide" start="0" end="0,800" time="200">WindowClose</animation>
 			<animation effect="slide" end="0" start="0,550" time="200">WindowOpen</animation>
@@ -1448,7 +1448,7 @@
 			<include>Furniture_Clock</include>
 		</control>
 	</include>
-	<include name="HomeContentNoIcon">
+	<include content="HomeContentNoIcon">
 		<top>948</top>
 		<animation effect="fade" start="100" end="0" time="150" reversible="false" condition="Control.HasFocus(302) + Skin.HasSetting(home.submenu2)">Conditional</animation>
 		<animation type="Conditional" condition="!Control.HasFocus(302) + Skin.HasSetting(home.submenu2)" reversible="false">
@@ -1503,7 +1503,7 @@
 			<include>skinshortcuts-mainmenu</include>
 		</content>
 	</include>
-	<include name="HomeContentIcon">
+	<include content="HomeContentIcon">
 		<top>848</top>
 		<itemlayout width="220" height="220">
 			<control type="image">
@@ -1570,7 +1570,7 @@
 			<include>skinshortcuts-mainmenu</include>
 		</content>
 	</include>
-	<include name="HomeBackgroundPlaylist">
+	<include content="HomeBackgroundPlaylist">
 		<control type="list" id="9988">
 			<description>hidden container for playlist background</description>
 			<posx>-20</posx>
@@ -1590,7 +1590,7 @@
 			<content>$INFO[Container(300).ListItem.Property(backgroundPlaylist)]</content>
 		</control>
 	</include>
-	<include name="HomeVerticalMenu">
+	<include content="HomeVerticalMenu">
 		<!-- Furniture -->
 		<include condition="Skin.HasSetting(home.showheader)">Furniture_Header</include>
 		<include>Furniture_NowPlaying</include>
