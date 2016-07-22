@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include content="Furniture_Scrollbar">
+	<include name="Furniture_Scrollbar">
 		<control type="scrollbar" id="60">
 			<onback>50</onback>
 			<centerright>60</centerright>
@@ -19,7 +19,7 @@
 			<animation effect="slide" end="100,0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 		</control>
 	</include>
-	<include content="Furniture_Scrollbar_Horizontal">
+	<include name="Furniture_Scrollbar_Horizontal">
 		<control type="scrollbar" id="60">
 			<onback>50</onback>
 			<left>SidePad</left>
@@ -39,20 +39,22 @@
 		</control>
 	</include>	
 							
-	<include content="Furniture_ButtonBack">
+	<include name="Furniture_ButtonBack">
 		<width>64</width>
 		<height>64</height>
 		<animation type="Focus" reversible="false">
 			<effect type="zoom" start="75" end="100" center="auto" time="200" />
 		</animation>
 	</include>
-	<include content="Furniture_ButtonBack_Circle">
+	<include name="Furniture_ButtonBack_Circle">
 		<width>64</width>
 		<height>64</height>
 		<texture colordiffuse="Dark1">common/circle.png</texture>
 	</include>
+	
+<!-- Replaced by new Star Ratings -->	
 	<!-- Flags -->
-	<variable name="Flagstar1">
+	<!--<variable name="Flagstar1">
 		<value condition="IntegerGreaterThan(ListItem.Rating,1)">star10</value>
 		<value condition="IntegerGreaterThan(ListItem.Rating,0)">star5</value>
 		<value>star0</value>
@@ -75,9 +77,9 @@
 	<variable name="Flagstar5">
 		<value condition="IntegerGreaterThan(ListItem.Rating,9)">star10</value>
 		<value condition="IntegerGreaterThan(ListItem.Rating,8)">star5</value>
-		<value>star0</value>
-	</variable>
-	<variable name="HubFlagstar1">
+		<value>star0</value>-->	
+	
+	<!--<variable name="HubFlagstar1">
 		<value condition="IntegerGreaterThan(Container(9500).ListItem.Rating,1)">star10</value>
 		<value condition="IntegerGreaterThan(Container(9500).ListItem.Rating,0)">star5</value>
 		<value>star0</value>
@@ -101,7 +103,9 @@
 		<value condition="IntegerGreaterThan(Container(9500).ListItem.Rating,9)">star10</value>
 		<value condition="IntegerGreaterThan(Container(9500).ListItem.Rating,8)">star5</value>
 		<value>star0</value>
-	</variable>
+	</variable>-->
+	
+	
 	<!-- MusicFlags -->
 	<variable name="MusicFlagstar5">
 		<value condition="StringCompare(ListItem.StarRating,rating5.png)">star10</value>
@@ -164,7 +168,7 @@
 		<value condition="StringCompare(Player.StarRating,rating1.png)">star10</value>
 		<value>star0</value>
 	</variable>
-	<include content="Furniture_Flags">
+	<include name="Furniture_Flags">
 		<control type="grouplist">
 			<visible>!Skin.HasSetting(furniture.flags)</visible>
 			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) + !Window.IsVisible(script-ExtendedInfo Script-YoutubeList.xml)</visible>
@@ -217,97 +221,33 @@
 					<visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
 				</control>
 			</control>
+<!-- Modification for  ------ New Star Ratings ------#####BEGIN#####-->			
 			<control type="image">
-				<width>64</width>
-				<height>64</height>
+				<width>150</width>
+				<height>30</height>
 				<centertop>50%</centertop>
-				<texture colordiffuse="Dark1">flags/$VAR[Flagstar1].png</texture>
+				<texture fallback="$VAR[StarsFolder,,0.png]">$VAR[StarsFolder]$INFO[ListItem.Rating,,.png]</texture>
+				<aspectratio align="left" aligny="center">scale</aspectratio>
+				<colordiffuse>Dark1</colordiffuse>
 				<visible>!Skin.HasSetting(furniture.flags.colour)</visible>
 			</control>
 			<control type="image">
-				<width>64</width>
-				<height>64</height>
-				<centertop>50%</centertop>
-				<texture colordiffuse="$VAR[ColourHighlight]">flags/$VAR[Flagstar1].png</texture>
+				<width>150</width>
+				<height>30</height>				
+				<centertop>50%</centertop>				
+				<texture fallback="$VAR[StarsFolder,,0.png]">$VAR[StarsFolder]$INFO[ListItem.Rating,,.png]</texture>
+				<aspectratio align="left" aligny="center">scale</aspectratio>
+				<colordiffuse>$VAR[StarRatingColour]</colordiffuse>
 				<visible>Skin.HasSetting(furniture.flags.colour)</visible>
 			</control>
-			<control type="image">
-				<posx>-48</posx>
-				<width>64</width>
-				<height>64</height>
-				<centertop>50%</centertop>
-				<texture colordiffuse="Dark1">flags/$VAR[Flagstar2].png</texture>
-				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
-				<visible>!Skin.HasSetting(furniture.flags.colour)</visible>
-			</control>
-			<control type="image">
-				<posx>-48</posx>
-				<width>64</width>
-				<height>64</height>
-				<centertop>50%</centertop>
-				<texture colordiffuse="$VAR[ColourHighlight]">flags/$VAR[Flagstar2].png</texture>
-				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
-				<visible>Skin.HasSetting(furniture.flags.colour)</visible>
-			</control>
-			<control type="image">
-				<posx>-48</posx>
-				<width>64</width>
-				<height>64</height>
-				<centertop>50%</centertop>
-				<texture colordiffuse="Dark1">flags/$VAR[Flagstar3].png</texture>
-				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
-				<visible>!Skin.HasSetting(furniture.flags.colour)</visible>
-			</control>
-			<control type="image">
-				<posx>-48</posx>
-				<width>64</width>
-				<height>64</height>
-				<centertop>50%</centertop>
-				<texture colordiffuse="$VAR[ColourHighlight]">flags/$VAR[Flagstar3].png</texture>
-				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
-				<visible>Skin.HasSetting(furniture.flags.colour)</visible>
-			</control>
-			<control type="image">
-				<posx>-48</posx>
-				<width>64</width>
-				<height>64</height>
-				<centertop>50%</centertop>
-				<texture colordiffuse="Dark1">flags/$VAR[Flagstar4].png</texture>
-				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
-				<visible>!Skin.HasSetting(furniture.flags.colour)</visible>
-			</control>
-			<control type="image">
-				<posx>-48</posx>
-				<width>64</width>
-				<height>64</height>
-				<centertop>50%</centertop>
-				<texture colordiffuse="$VAR[ColourHighlight]">flags/$VAR[Flagstar4].png</texture>
-				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
-				<visible>Skin.HasSetting(furniture.flags.colour)</visible>
-			</control>
-			<control type="image">
-				<posx>-48</posx>
-				<width>64</width>
-				<height>64</height>
-				<centertop>50%</centertop>
-				<texture colordiffuse="Dark1">flags/$VAR[Flagstar5].png</texture>
-				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
-				<visible>!Skin.HasSetting(furniture.flags.colour)</visible>
-			</control>
-			<control type="image">
-				<posx>-48</posx>
-				<width>64</width>
-				<height>64</height>
-				<centertop>50%</centertop>
-				<texture colordiffuse="$VAR[ColourHighlight]">flags/$VAR[Flagstar5].png</texture>
-				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
-				<visible>Skin.HasSetting(furniture.flags.colour)</visible>
-			</control>
+<!-- Modification for  ------ New Star Ratings ------#####END#####-->
+					
 			<control type="label">
-				<left>-16</left>
+				<left>5</left>  <!-- Modified for new Stars Ratings -->
+				<!--<left>-16</left>-->
 				<width min="48">auto</width>
 				<centertop>50%</centertop>
-				<height>64</height>
+				<height>70</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Rating]</label>
@@ -624,7 +564,7 @@
 			</control>
 		</control>
 	</include>
-	<include content="Furniture_Hub_Flags">
+	<include name="Furniture_Hub_Flags">
 		<control type="grouplist">
 			<visible>!Skin.HasSetting(furniture.flags)</visible>
 			<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)</visible>
@@ -793,7 +733,7 @@
 			</control>
 		</control>
 	</include>
-	<include content="Furniture_Logo">
+	<include name="Furniture_Logo">
 		<control type="group">
 			<visible>Skin.HasSetting(furniture.logo)</visible>
 			<visible>!Player.HasMedia</visible>
@@ -1106,7 +1046,7 @@
 		<value condition="IsEmpty(Pvr.BackendChannels)">[COLOR=$VAR[ColourHighlight]]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342] • [COLOR=$VAR[ColourHighlight]]$INFO[Window(home).Property(TVShows.Count)][/COLOR] $LOCALIZE[20343] • [COLOR=$VAR[ColourHighlight]]$INFO[Window(home).Property(Music.AlbumsCount)][/COLOR] $LOCALIZE[132]</value>
 		<value>[COLOR=$VAR[ColourHighlight]]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342] • [COLOR=$VAR[ColourHighlight]]$INFO[Window(home).Property(TVShows.Count)][/COLOR] $LOCALIZE[20343] • [COLOR=$VAR[ColourHighlight]]$INFO[Window(home).Property(Music.AlbumsCount)][/COLOR] $LOCALIZE[132] • [COLOR=$VAR[ColourHighlight]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
 	</variable>
-	<include content="Furniture_Header">
+	<include name="Furniture_Header">
 		<control type="grouplist">
 			<top>SidePad</top>
 			<left>SidePad</left>
@@ -1209,7 +1149,7 @@
 			</control>
 		</control>
 	</include>
-	<include content="ExtendedFurniture_Header">
+	<include name="ExtendedFurniture_Header">
 		<control type="grouplist">
 			<top>3</top>
 			<left>90</left>
@@ -1308,7 +1248,7 @@
 			</control>
 		</control>
 	</include>
-	<include content="Furniture_Clock">
+	<include name="Furniture_Clock">
 		<control type="group">
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
@@ -1359,7 +1299,7 @@
 		</control>
 	</include>
 <!----  Modification Added --------- SkinSettings -------------------------------------------->	
-	<include content="Furniture_SkinSetting_Clock">
+	<include name="Furniture_SkinSetting_Clock">
 		<control type="group">
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
@@ -1409,8 +1349,9 @@
 			</control>-->
 		</control>
 	</include>
+	
 <!--- Modification ----- Added -----SkinSettings-------------------------------------------------------->	
-	<include content="Furniture_SkinSetting_Header">
+	<include name="Furniture_SkinSetting_Header">
 		<control type="grouplist">
 			<!--<top>SidePad</top>-->
 			<left>SidePad</left>
@@ -1489,7 +1430,7 @@
 	
 	
 	
-	<include content="Furniture_NowPlaying">
+	<include name="Furniture_NowPlaying">
 		<control type="grouplist">
 			<visible>!Skin.HasSetting(furniture.nowplaying)</visible>
 			<visible>!Window.IsVisible(DialogVolumeBar.xml)</visible>
@@ -1598,7 +1539,7 @@
 	</include>
 	
 	<!-- Restore Furniture_OverlayInfo-->
-	<include content="Furniture_OverlayInfo">
+	<include name="Furniture_OverlayInfo">
 
         <control type="button" id ="9601">
             <width>1</width>
@@ -1671,7 +1612,7 @@
         </control>
     </include>
 
-	<include content="Furniture_Home_Flags">
+	<include name="Furniture_Home_Flags">
 		<control type="grouplist">
 			<visible>!Skin.HasSetting(furniture.flags)</visible>
 			<visible>Control.HasFocus(301)</visible>
@@ -1716,6 +1657,54 @@
 					<visible>Skin.HasSetting(furniture.flags.colour)</visible>
 				</control>
 			</control>
+			
+<!-- Modification for  ------ New Star Ratings ------#####BEGIN#####-->			
+			<control type="image">
+				<width>150</width>
+				<height>30</height>
+				<centertop>50%</centertop>
+				<texture fallback="$VAR[StarsFolder,,0.png]">$VAR[StarsFolder]$INFO[Container(301).ListItem.Rating,,.png]</texture>
+				<aspectratio align="left" aligny="center">scale</aspectratio>
+				<colordiffuse>Dark1</colordiffuse>
+				<visible>!Skin.HasSetting(furniture.flags.colour)</visible>
+				<visible>!StringCompare(Container(300).ListItem.Property(widget),Weather)</visible>
+			</control>
+			<control type="image">
+				<width>150</width>
+				<height>30</height>
+				<centertop>50%</centertop>
+				<texture fallback="$VAR[StarsFolder,,0.png]">$VAR[StarsFolder]$INFO[Container(301).ListItem.Rating,,.png]</texture>
+				<aspectratio align="left" aligny="center">scale</aspectratio>
+				<colordiffuse>$VAR[HomeStarRatingColour]</colordiffuse>
+				<visible>Skin.HasSetting(furniture.flags.colour)</visible>
+				<visible>!StringCompare(Container(300).ListItem.Property(widget),Weather)</visible>
+			</control>
+<!-- Modification for  ------ New Star Ratings ------#####END#####-->
+			
+			<!--<control type="image">
+				<posx>-48</posx>
+				<width>64</width>
+				<height>30</height>
+				<centertop>50%</centertop>
+				<texture fallback="$VAR[StarsFolder,,0.png]">$VAR[StarsFolder]$INFO[ListItem.Rating,,.png]</texture>
+				<aspectratio align="left" aligny="center">scale</aspectratio>
+				<colordiffuse>Dark1</colordiffuse>
+				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
+				<visible>!Skin.HasSetting(furniture.flags.colour)</visible>
+				<visible>!StringCompare(Container(300).ListItem.Property(widget),Weather)</visible>
+			</control>
+			<control type="image">
+				<posx>-48</posx>
+				<width>64</width>
+				<height>30</height>
+				<centertop>50%</centertop>
+				<texture fallback="$VAR[StarsFolder,,0.png]">$VAR[StarsFolder]$INFO[ListItem.Rating,,.png]</texture>
+				<aspectratio align="left" aligny="center">scale</aspectratio>
+				<colordiffuse>$VAR[StarRatingColour]</colordiffuse>
+				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
+				<visible>Skin.HasSetting(furniture.flags.colour)</visible>
+				<visible>!StringCompare(Container(300).ListItem.Property(widget),Weather)</visible>
+			</control>
 			<control type="image">
 				<width>64</width>
 				<height>64</height>
@@ -1738,7 +1727,8 @@
 				<height>64</height>
 				<centertop>50%</centertop>
 				<texture colordiffuse="Dark1">flags/$VAR[HomeFlagstar2].png</texture>
-				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
+				<visible>Skin.HasSetting(furniture.numericrating)</visible>
+
 				<visible>!Skin.HasSetting(furniture.flags.colour)</visible>
 				<visible>!StringCompare(Container(300).ListItem.Property(widget),Weather)</visible>
 			</control>
@@ -1748,7 +1738,8 @@
 				<height>64</height>
 				<centertop>50%</centertop>
 				<texture colordiffuse="$VAR[ColourHighlight]">flags/$VAR[HomeFlagstar2].png</texture>
-				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
+				<visible>Skin.HasSetting(furniture.numericrating)</visible>
+
 				<visible>Skin.HasSetting(furniture.flags.colour)</visible>
 				<visible>!StringCompare(Container(300).ListItem.Property(widget),Weather)</visible>
 			</control>
@@ -1811,9 +1802,10 @@
 				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
 				<visible>Skin.HasSetting(furniture.flags.colour)</visible>
 				<visible>!StringCompare(Container(300).ListItem.Property(widget),Weather)</visible>
-			</control>
+			</control>-->
 			<control type="label">
-				<left>-16</left>
+			    <left>5</left>  <!-- Modified for ne Stra Ratings -->
+				<!--<left>-16</left>-->
 				<width min="48">auto</width>
 				<centertop>50%</centertop>
 				<height>64</height>
@@ -2030,7 +2022,9 @@
 		</control>
 	</include>
 	
-	<variable name="HomeFlagstar1">
+
+<!-- Replaced by new Star Ratings -->	
+	<!--<variable name="HomeFlagstar1">
 		<value condition="IntegerGreaterThan(Container(301).ListItem.Rating,1)">star10</value>
 		<value condition="IntegerGreaterThan(Container(301).ListItem.Rating,0)">star5</value>
 		<value>star0</value>
@@ -2054,5 +2048,5 @@
 		<value condition="IntegerGreaterThan(Container(301).ListItem.Rating,9)">star10</value>
 		<value condition="IntegerGreaterThan(Container(301).ListItem.Rating,8)">star5</value>
 		<value>star0</value>
-	</variable>
+	</variable>-->
 </includes>

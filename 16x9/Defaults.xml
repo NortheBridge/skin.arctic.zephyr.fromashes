@@ -61,16 +61,16 @@
         <aligny>center</aligny>
         <font>Small</font>
         <textoffsetx>30</textoffsetx>
-        <textcolor>Black70</textcolor>
+		<textcolor>Black70</textcolor>
         <focusedcolor>$VAR[ColourSelected]</focusedcolor>
         <disabledcolor>Black30</disabledcolor>
         <selectedcolor>$VAR[ColourHighlight2]</selectedcolor>
         <texturefocus colordiffuse="White12">common/white.png</texturefocus>
         <texturenofocus>noop</texturenofocus>
-        <pulseonselect>false</pulseonselect>
+        <pulseonselect>false</pulseonselect>>
     </default>
-
-    <default type="togglebutton">
+	
+	<default type="togglebutton">
         <height>66</height>
         <align>center</align>
         <aligny>center</aligny>
@@ -96,18 +96,25 @@
         <radiowidth>32</radiowidth>
         <radioheight>32</radioheight>
         <textoffsetx>30</textoffsetx>
-        <textcolor>Black70</textcolor>
+		<textcolor>$VAR[ButtonTextColor]</textcolor>
+        <focusedcolor>$VAR[ButtonFocusTextColour]</focusedcolor>
+        <disabledcolor>$VAR[DisabledTextColour]</disabledcolor>
+        <textureradiofocus>buttons/on.png</textureradiofocus>
+        <textureradionofocus>buttons/off.png</textureradionofocus>
+        <textureradioondisabled colordiffuse="Black12">buttons/on.png</textureradioondisabled>
+        <textureradiooffdisabled colordiffuse="Black12">buttons/off.png</textureradiooffdisabled>
+        <!--<textcolor>Black70</textcolor>
         <focusedcolor>$VAR[ColourSelected]</focusedcolor>
         <disabledcolor>Black30</disabledcolor>
         <selectedcolor>$VAR[ColourHighlight2]</selectedcolor>
         <texturefocus colordiffuse="White12">common/white.png</texturefocus>
         <texturenofocus>noop</texturenofocus>
         <textureradiofocus colordiffuse="Black70">buttons/radio-on.png</textureradiofocus>
-        <textureradionofocus colordiffuse="Black30">buttons/radio-off.png</textureradionofocus>
-        <textureradioondisabled colordiffuse="Black12">buttons/radio-on.png</textureradioondisabled>
-        <textureradioofdisabled colordiffuse="Black12">buttons/radio-off.png</textureradioofdisabled>
+        <textureradionofocus colordiffuse="Black30">buttons/radio-off.png</textureradionofocus>-->
         <textoffsetx>30</textoffsetx>
         <pulseonselect>false</pulseonselect>
+		<texturefocus colordiffuse="$VAR[ButtonFocusColor]" border="20">common/box.png</texturefocus>
+        <texturenofocus colordiffuse="$VAR[ButtonColor]" border="20">common/box.png</texturenofocus>
     </default>
 
     <default type="spincontrolex">

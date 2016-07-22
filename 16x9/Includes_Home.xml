@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include content="HomeHeader">
+	<include name="HomeHeader">
 		<!-- Header -->
 		<control type="group">
 			<visible>Skin.HasSetting(home.showheader)</visible>
@@ -37,7 +37,7 @@
 			</control>
 		</control>
 	</include>
-	<include content="HomeNowPlaying">
+	<include name="HomeNowPlaying">
 		<!-- Next Recording -->
 		<control type="group">
 			<right>72</right>
@@ -134,7 +134,7 @@
 			</control>
 		</control>
 	</include>
-	<include content="HomeNextRecording">
+	<include name="HomeNextRecording">
 		<!-- Currently Recording -->
 		<control type="group">
 			<right>72</right>
@@ -244,7 +244,7 @@
 			</control>
 		</control>
 	</include>
-	<include content="HomeWeatherWidget">
+	<include name="HomeWeatherWidget">
 		<!-- Weather Widget -->
 		<control type="group">
 			<animation effect="slide" start="0" end="0,200" time="150" condition="Skin.HasSetting(home.showheader)">Conditional</animation>
@@ -312,7 +312,7 @@
 			</control>
 		</control>
 	</include>
-	<include content="HomeWidgetSelector">
+	<include name="HomeWidgetSelector">
 		<!-- Widget Selector -->
 		<control type="group">
 			<visible>![Window.IsVisible(home) + Skin.HasSetting(home.dontshowfanart) + IsEmpty(Container(300).ListItem.Property(widget))] + IsEmpty(Container(300).ListItem.Property(Background))</visible>
@@ -420,7 +420,7 @@
 			</control>
 		</control>
 	</include>
-	<include content="HomeWidgetUpdating">
+	<include name="HomeWidgetUpdating">
 		<!-- Container Updating -->
 		<control type="group">
 			<!--<left>40</left>
@@ -498,7 +498,7 @@
 			</control>-->
 		</control>
 	</include>
-	<include content="HomeWidgetInfo">
+	<include name="HomeWidgetInfo">
 		<!-- Widget Info -->
 		<control type="group">
 			<animation type="WindowClose">
@@ -741,7 +741,7 @@
 			<include>HomeWidgetUpdating</include>
 		</control>
 	</include>
-	<include content="HomeRow">
+	<include name="HomeRow">
 		<!-- Home Row -->
 		<control type="group">
 			<animation effect="slide" start="0" end="0,250" time="150" condition="!Skin.HasSetting(home.classicwidgets) + [Control.HasFocus(301) | ControlGroup(303).HasFocus()]">Conditional</animation>
@@ -817,7 +817,7 @@
 			</control>
 		</control>
 	</include>
-	<include content="HomeSubMenu">
+	<include name="HomeSubMenu">
 		<!-- Sub Menu -->
 		<control type="group">
 			<animation type="Conditional" condition="Control.HasFocus(302)" reversible="false">
@@ -934,7 +934,7 @@
 			</control>
 		</control>
 	</include>
-	<include content="HomeSubMenu2">
+	<include name="HomeSubMenu2">
 		<control type="group">
 			<animation type="Conditional" condition="Control.HasFocus(302)" reversible="false">
 				<effect type="slide" start="0,24" end="0" time="100" delay="200" />
@@ -1006,7 +1006,7 @@
 			</control>
 		</control>
 	</include>
-	<include content="HomeClassicWidgets">
+	<include name="HomeClassicWidgets">
 		<control type="group">
 			<animation effect="slide" start="0" end="0,800" time="200">WindowClose</animation>
 			<animation effect="slide" end="0" start="0,550" time="200">WindowOpen</animation>
@@ -1448,7 +1448,7 @@
 			<include>Furniture_Clock</include>
 		</control>
 	</include>
-	<include content="HomeContentNoIcon">
+	<include name="HomeContentNoIcon">
 		<top>948</top>
 		<animation effect="fade" start="100" end="0" time="150" reversible="false" condition="Control.HasFocus(302) + Skin.HasSetting(home.submenu2)">Conditional</animation>
 		<animation type="Conditional" condition="!Control.HasFocus(302) + Skin.HasSetting(home.submenu2)" reversible="false">
@@ -1503,10 +1503,12 @@
 			<include>skinshortcuts-mainmenu</include>
 		</content>
 	</include>
-	<include content="HomeContentIcon">
-		<top>848</top>
-		<itemlayout width="220" height="220">
-			<control type="image">
+	<include name="HomeContentIcon">
+		<top>828</top>
+		<itemlayout width="220" height="180">
+	<!--##########	Lines commented out for AZ:FA Alpha --NO ICONS-- ##########-->		
+		<!--<itemlayout width="220" height="220">
+			<!--<control type="image">
 				<width>128</width>
 				<height>128</height>
 				<centerleft>50%</centerleft>
@@ -1525,16 +1527,18 @@
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 		</itemlayout>
-		<focusedlayout width="220" height="220">
-			<control type="image">
+		<focusedlayout width="220" height="190">
+	<!--##########	Lines commented out for AZ:FA Alpha --NO ICONS-- ##########-->
+		<!--<focusedlayout width="220" height="220">-->
+			<!--<control type="image">
 				<width>128</width>
 				<height>128</height>
 				<centerleft>50%</centerleft>
 				<centertop>40%</centertop>								
 				<texture colordiffuse="$VAR[ColourHighlight]">$INFO[ListItem.Icon]</texture><!-- replaced "Dark1" -->
-				<textcolor>Dark2</textcolor>
+				<!--<textcolor>Dark2</textcolor>
 				<visible>substring(ListItem.Icon,icons)</visible>
-			</control>
+			</control>-->
 			<control type="label">
 				<align>center</align>
 				<aligny>top</aligny>
@@ -1570,7 +1574,7 @@
 			<include>skinshortcuts-mainmenu</include>
 		</content>
 	</include>
-	<include content="HomeBackgroundPlaylist">
+	<include name="HomeBackgroundPlaylist">
 		<control type="list" id="9988">
 			<description>hidden container for playlist background</description>
 			<posx>-20</posx>
@@ -1590,7 +1594,7 @@
 			<content>$INFO[Container(300).ListItem.Property(backgroundPlaylist)]</content>
 		</control>
 	</include>
-	<include content="HomeVerticalMenu">
+	<include name="HomeVerticalMenu">
 		<!-- Furniture -->
 		<include condition="Skin.HasSetting(home.showheader)">Furniture_Header</include>
 		<include>Furniture_NowPlaying</include>
