@@ -39,21 +39,21 @@
 				<control type="button" id="2">
 					<description>View</description>
 					<width>740</width>
-					<texturenofocus colordiffuse="Dark3" border="20">common/box.png</texturenofocus>
+					<!--<texturenofocus colordiffuse="Dark3" border="20">common/box.png</texturenofocus>-->
 					<include>DefSkinSettingMenuButton</include>
 					<align>left</align>
 				</control>
 				<control type="button" id="3">
 					<description>Sort</description>
 					<width>740</width>
-					<texturenofocus colordiffuse="Dark3" border="20">common/box.png</texturenofocus>
+					<!--<texturenofocus colordiffuse="Dark3" border="20">common/box.png</texturenofocus>-->
 					<include>DefSkinSettingMenuButton</include>
 					<align>left</align>
 				</control>
 				<control type="togglebutton" id="4">
 					<description>Ascending/Descending</description>
 					<width>740</width>
-					<texturenofocus colordiffuse="Dark3" border="20">common/box.png</texturenofocus>
+					<!--<texturenofocus colordiffuse="Dark3" border="20">common/box.png</texturenofocus>-->
 					<include>DefSkinSettingMenuButton</include>
 					<label>584</label>
 					<align>left</align>
@@ -62,7 +62,7 @@
 				<control type="button" id="9">
 					<description>Check for updates</description>
 					<width>740</width>
-					<texturenofocus colordiffuse="Dark3" border="20">common/box.png</texturenofocus>
+					<!--<texturenofocus colordiffuse="Dark3" border="20">common/box.png</texturenofocus>-->
 					<include>DefSkinSettingMenuButton</include>
 					<align>left</align>
 					<label>24034</label>

@@ -7,13 +7,13 @@
     <controls>
 
         <control type="group">
-            <visible>!Window.IsVisible(DialogProgress.xml)</visible>
+            <visible>!Window.IsVisible(DialogConfirm.xml)</visible>
 			<visible>!Skin.HasSetting(hide.busydialog)</visible>
             <include>Animation.FadeIn</include>
             <include>Animation.FadeOut</include>
 <!-- Modification to Busy Spinner --->			
 			<include>GlobalSpinnerOverlay</include>
-            <!--<include>GlobalOverlay</include>-->
+            <include>GlobalOverlay</include>
 			<include>GlobalOverlay</include>
 
                 <control type="image">
