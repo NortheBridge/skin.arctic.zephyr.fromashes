@@ -237,11 +237,11 @@ msgid "Show now playing info"
 msgstr ""
 
 msgctxt "#31156"
-msgid "[B]Configure Appearance Settings[/B][CR][CR] •     Change the skin[CR] •     Set language and region[CR] •     Change file listing options[CR] •     Set up a screensaver"
+msgid "[B]Configure Interface Settings[/B][CR][CR] •     Skin[CR] •     Region[CR] •     Control[CR] •     Screensaver[CR] •     Master Lock[CR]"
 msgstr ""
 
 msgctxt "#31157"
-msgid "[B]Configure Video Settings[/B][CR][CR] •     Manage your video library[CR] •     Set video playback options[CR] •     Change video listing options[CR] •     Set subtitle fonts"
+msgid "[B]Configure Library Settings[/B][CR][CR] •     Display[CR] •     Navigation[CR] •     Media Database[CR]"
 msgstr ""
 
 msgctxt "#31158"
@@ -249,7 +249,7 @@ msgid "[B]Configure Music Settings[/B][CR][CR] •     Manage your music library
 msgstr ""
 
 msgctxt "#31159"
-msgid "[B]Configure Picture Settings[/B][CR][CR] •     Set picture listing options[CR] •     Configure slideshows"
+msgid "[B]Configure Player Settings[/B][CR][CR] •     Playback Actions[CR] •     How Content is Played[CR]"
 msgstr ""
 
 msgctxt "#31160"
@@ -593,7 +593,7 @@ msgid "Home menu style"
 msgstr ""
 
 msgctxt "#31248"
-msgid "Normal"
+msgid "Default-Horizontal"
 msgstr ""
 
 msgctxt "#31249"
