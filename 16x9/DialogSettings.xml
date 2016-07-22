@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<!-- Krypton Window; Replaces:
+* DialogAudioDSPSettings.xml
+* DialogContentSettings.xml
+* DialogPeripheralSettings.xml
+* DialogPVRTimerSettings.xml
+* LockSettings.xml
+* ProfileSettings.xml
+* VideoOSDSettings.xml -->
+<!--Disabled -->
