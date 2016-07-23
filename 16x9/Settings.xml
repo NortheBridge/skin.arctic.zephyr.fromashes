@@ -161,13 +161,6 @@
                 </focusedlayout>
             <!--Settings-->        
 				<content>
-				    <item id="1">
-                        <description>Appearance</description>
-                        <label>480</label>
-                        <label2>31156</label2>
-                        <onclick>activatewindow(AppearanceSettings)</onclick>
-                        <property name="image">special://skin/media/default/DefaultAddonSkin.png</property>
-                    </item>
 				    <item id="2">
 					    <description>Skin Settings</description>
 					    <label>20077</label>
@@ -175,6 +168,13 @@
 					    <onclick>activatewindow(SkinSettings)</onclick>
                         <property name="image">special://skin/media/default/DefaultAddonProgram.png</property>
 				    </item>
+				    <item id="1">
+                        <description>Appearance</description>
+                        <label>14206</label>
+                        <label2>31156</label2>
+                        <onclick>activatewindow(InterfaceSettings)</onclick>
+                        <property name="image">special://skin/media/default/DefaultAddonSkin.png</property>
+                    </item>
                     <item id="3">
                         <description>Addons</description>
                         <label>24001</label>
@@ -183,18 +183,18 @@
                         <property name="image">special://skin/media/default/DefaultAddon.png</property>
                     </item>         
                     <item id="4">
-                        <description>Video</description>
-                        <label>3</label>
+                        <description>Library</description>
+                        <label>14202</label>
                         <label2>31157</label2>
-                        <onclick>activatewindow(VideosSettings)</onclick>
-                        <property name="image">special://skin/media/default/DefaultAddonVideo.png</property>
+                        <onclick>activatewindow(LibrarySettings)</onclick>
+                        <property name="image">special://skin/media/default/DefaultAddonMusicVideoInfo.png</property>
                     </item>
 				    <item id="5">
-                        <description>Music</description>
-                        <label>2</label>
+                        <description>Player</description>
+                        <label>14200</label>
                         <label2>31158</label2>
-                        <onclick>activatewindow(MusicSettings)</onclick>
-                        <property name="image">special://skin/media/default/DefaultAddonMusic.png</property>
+                        <onclick>activatewindow(PlayerSettings)</onclick>
+                        <property name="image">special://skin/media/default/DefaultPlaylist.png</property>
                     </item>
 				    <item id="6">
                         <description>Live TV</description>
@@ -204,41 +204,27 @@
                         <property name="image">special://skin/media/default/DefaultAddonPVRClient.png</property>
                     </item>
 				    <item id="7">
-                        <description>Pictures</description>
-                        <label>1</label>
-                        <label2>31159</label2>
-                        <onclick>activateWindow(PicturesSettings)</onclick>
-                        <property name="image">special://skin/media/default/DefaultAddonPicture.png</property>
-                    </item>
-				    <item id="8">
-                        <description>Weather</description>
-                        <label>8</label>
-                        <label2>31160</label2>
-                        <onclick>activatewindow(WeatherSettings)</onclick>
-                        <property name="image">special://skin/media/default/DefaultAddonWeather.png</property>
-                    </item>
-                    <item id="9">
-                        <description>Network</description>
-                        <label>705</label>
+                        <description>Services</description>
+                        <label>14036</label>
                         <label2>31164</label2>
-                        <onclick>activatewindow(NetworkSettings)</onclick>
+                        <onclick>activateWindow(servicesettings)</onclick>
                         <property name="image">special://skin/media/default/DefaultAddonWebSkin.png</property>
                     </item>
-                    <item id="10">
+				    <item id="8">
                         <description>System</description>
                         <label>13000</label>
                         <label2>31161</label2>
                         <onclick>activatewindow(SystemSettings)</onclick>
                         <property name="image">special://skin/media/default/DefaultAddonService.png</property>
                     </item>
-                    <item id="11">
+                    <item id="9">
                         <description>System Info</description>
                         <label>130</label>
                         <label2>31167</label2>
                         <onclick>activatewindow(7)</onclick>
                         <property name="image">special://skin/media/default/DefaultAddonSubtitles.png</property>
                     </item>
-                    <item id="12">
+                    <item id="10">
 					   <description>Profiles</description>
 					   <label>13200</label>
                        <label2>31165</label2>
