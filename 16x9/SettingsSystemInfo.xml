@@ -9,239 +9,313 @@
 		<include>Furniture_NowPlaying</include>
 		<include>Furniture_Header</include>
 		<control type="group">
-			<include>Animation.Common</include>
-			<left>72</left>
-			<right>72</right>
-			<top>208</top>
-			<height>656</height>
+		    <animation type="WindowOpen">
+			    <effect type="slide" start="1200" end="0" time="250" tween="cubic" easing="inout" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="0" end="1200" time="250" tween="cubic" easing="inout" />
+			</animation>
+	<!-- Right Panel Foreground -->		
 			<control type="image">
-				<width>100%</width>
-				<height>100%</height>
-				<texture border="16" colordiffuse="Panel">common/rounded-shadow8.png</texture>
-			</control>
-			<control type="group">
-				<left>8</left>
-				<right>8</right>
-				<top>8</top>
-				<bottom>8</bottom>
-				<!-- Lines -->
-				<control type="image">
-					<top>10</top>
-					<left>450</left>
-					<width>1</width>
-					<bottom>10</bottom>
-					<colordiffuse>Black12</colordiffuse>
-					<texture>common/white.png</texture>
-				</control>
-				<control type="label">
-					<left>30</left>
+                <posx>594</posx>
+                <posy>203</posy>
+                <width>1230</width>
+                <height>712</height>
+				<texture colordiffuse="Panel" border="12">dialog/frame-fo.png</texture>
+            </control>
+	<!-- Left Panel Foreground-->		
+			<control type="image">
+                <posx>85</posx>
+                <posy>203</posy>
+                <width>450</width>
+                <height>712</height>
+				<texture colordiffuse="FF090A0A" border="12">dialog/frame_fo.png</texture>
+            </control>
+    <!-- Left Panel Background -->	
+		    <control type="image">
+                <posx>75</posx>
+                <posy>190</posy>
+                <width>479</width>
+                <height>740</height>
+                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
+            </control>		
+	<!-- Right Panel Background -->	
+		    <control type="image">
+                <posx>580</posx>
+                <posy>190</posy>
+                <width>1259</width>
+                <height>740</height>
+                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
+            </control>
+
+			<control type="label">
 					<width>390</width>
-					<posy>18</posy>
+					<posx>130</posx>
+                    <posy>205</posy>
 					<font>MediumBold</font>
 					<label>5</label>
 					<textcolor>PanelWhite100</textcolor>
-				</control>
-				<control type="label">
-					<left>30</left>
-					<right>30</right>
-					<posy>77</posy>
+			</control>
+			<control type="label">
+					<posx>130</posx>
+                    <posy>255</posy>
 					<height>30</height>
 					<font>Tiny</font>
 					<label>$INFO[System.FriendlyName]</label>
 					<textcolor>PanelWhite70</textcolor>
 					<scroll>true</scroll>
-				</control>
-				<control type="label" description="Header">
-					<left>480</left>
+			</control>
+			<control type="label" description="Header">
+					<left>1180</left>
 					<width>390</width>
-					<posy>18</posy>
+					<posy>205</posy>
 					<font>MediumBold</font>
 					<label>130</label>
 					<textcolor>PanelWhite100</textcolor>
-				</control>
-				<control type="label" id="52" description="XBMC Build Version">
-					<left>480</left>
-					<right>30</right>
-					<posy>77</posy>
+			</control>
+			<control type="label" id="52" description="XBMC Build Version">
+					<left>1180</left>
+					<posy>255</posy>
 					<height>30</height>
 					<font>Tiny</font>
 					<height>40</height>
 					<textcolor>PanelWhite70</textcolor>
 					<scroll>true</scroll>
-				</control>
+			</control>									
+		</control>
+
+		<control type="group">
+			<posx>590</posx>
+            <posy>180</posy>
+            <width>540</width>
+            <height>775</height>					
+			<control type="image">
+				<left>10</left>
+				<width>520</width>
+				<top>8</top>
+				<height>725</height>
+				<texture background="true">default/DefaultAddonService.png</texture>
+				<visible>ControlGroup(9101).HasFocus(95)</visible>
+			</control>
+			<control type="image">
+				<left>10</left>
+				<width>520</width>
+				<top>8</top>
+				<height>725</height>
+				<texture background="true">default/DefaultHardDisk.png</texture>
+				<visible>ControlGroup(9101).HasFocus(94)</visible>
+			</control>
+			<control type="image">
+				<left>10</left>
+				<width>520</width>
+				<top>8</top>
+				<height>725</height>
+				<texture background="true">default/DefaultNetwork.png</texture>
+				<visible>ControlGroup(9101).HasFocus(96)</visible>
+			</control>
+			<control type="image">
+				<left>10</left>
+				<width>520</width>
+				<top>8</top>
+				<height>725</height>
+				<texture background="true">default/DefaultNextAired.png</texture>
+				<visible>ControlGroup(9101).HasFocus(97)</visible>
+			</control>
+			<control type="image">
+				<left>10</left>
+				<width>520</width>
+				<top>8</top>
+				<height>725</height>
+				<texture background="true">default/DefaultDVDEmpty.png</texture>
+				<visible>ControlGroup(9101).HasFocus(98)</visible>
+			</control>
+			<control type="image">
+				<left>10</left>
+				<width>520</width>
+				<top>8</top>
+				<height>725</height>
+				<texture background="true">default/DefaultAddonPVRClient.png</texture>
+				<visible>ControlGroup(9101).HasFocus(99)</visible>
+			</control>
+		</control>		
 				<!-- Left Group -->
-				<control type="grouplist" id="9101">
-					<width>450</width>
-					<top>140</top>
-					<bottom>0</bottom>
-					<itemgap>0</itemgap>
-					<onleft>9000</onleft>
-					<onright>9000</onright>
-					<onup>9101</onup>
-					<ondown>9101</ondown>
-					<control type="button" id="95">
-						<description>General</description>
-						<include>DefSettingsButton</include>
-						<label>20037</label>
-					</control>
-					<control type="button" id="94">
-						<description>Storage</description>
-						<include>DefSettingsButton</include>
-						<label>13277</label>
-					</control>
-					<control type="button" id="96">
-						<description>Network</description>
-						<include>DefSettingsButton</include>
-						<label>13279</label>
-					</control>
-					<control type="button" id="97">
-						<description>Video</description>
-						<include>DefSettingsButton</include>
-						<label>13280</label>
-					</control>
-					<control type="button" id="98">
-						<description>Hardware</description>
-						<include>DefSettingsButton</include>
-						<label>13281</label>
-					</control>
-					<control type="button" id="99">
-						<description>Live TV</description>
-						<include>DefSettingsButton</include>
-						<label>19012</label>
-					</control>
-				</control>
-				<control type="grouplist">
-					<left>480</left>
-					<top>140</top>
-					<bottom>0</bottom>
-					<right>30</right>
-					<itemgap>0</itemgap>
-					<usecontrolcoords>true</usecontrolcoords>
-					<control type="label">
-						<description>CPU Text</description>
-						<font>Tiny</font>
-						<posy>-60</posy>
-						<posx>750</posx>
-						<align>right</align>
-						<width>600</width>
-						<height>60</height>
-						<label>$LOCALIZE[13271]</label>
-						<include>DefSettingsButton</include>
-					</control>
-					<control type="label">
-						<description>CPU Text</description>
-						<font>Tiny</font>
-						<posy>-60</posy>
-						<align>right</align>
-						<width>750</width>
-						<height>60</height>
-						<label>$INFO[System.CPUUsage]</label>
-						<include>DefSettingsButton</include>
-					</control>
-					<control type="progress" id="22">
-						<description>CPU BAR</description>
-						<font>Tiny</font>
-						<height>10</height>
-						<width>750</width>
-						<info>System.CPUUsage</info>
-						<include>DefSettingsButton</include>
-					</control>
-					<control type="label">
-						<description>Memory Text</description>
-						<posy>-70</posy>
-						<posx>800</posx>
-						<font>Tiny</font>
-						<height>60</height>
-						<label>$LOCALIZE[31104]:</label>
-						<include>DefSettingsButton</include>
-					</control>
-					<control type="label">
-						<description>Memory Text</description>
-						<posy>-60</posy>
-						<align>right</align>
-						<posx>800</posx>
-						<font>Tiny</font>
-						<height>60</height>
-						<label>$INFO[system.memory(used.percent)]</label>
-						<include>DefSettingsButton</include>
-					</control>
-					<control type="progress" id="24">
-						<description>Memory BAR</description>
-						<font>Tiny</font>
-						<posx>800</posx>
-						<height>10</height>
-						<info>system.memory(used)</info>
-						<include>DefSettingsButton</include>
-					</control>
-					<control type="label" id="25">
-						<description>Spacer</description>
-						<font>-</font>
-						<font>Tiny</font>
-						<height>25</height>
-					</control>
-					<control type="label" id="2">
-						<description>Label 2</description>
-						<font>Tiny</font>
-						<height>40</height>
-						<include>DefSettingsButton</include>
-					</control>
-					<control type="label" id="3">
-						<description>Label 3</description>
-						<font>Tiny</font>
-						<height>40</height>
-						<include>DefSettingsButton</include>
-					</control>
-					<control type="label" id="4">
-						<description>Label 4</description>
-						<font>Tiny</font>
-						<height>40</height>
-						<include>DefSettingsButton</include>
-					</control>
-					<control type="label" id="5">
-						<description>Label 5</description>
-						<font>Tiny</font>
-						<height>40</height>
-						<include>DefSettingsButton</include>
-					</control>
-					<control type="label" id="6">
-						<description>Label 6</description>
-						<font>Tiny</font>
-						<height>40</height>
-						<include>DefSettingsButton</include>
-					</control>
-					<control type="label" id="7">
-						<description>Label 7</description>
-						<font>Tiny</font>
-						<height>40</height>
-						<include>DefSettingsButton</include>
-					</control>
-					<control type="label" id="8">
-						<description>Label 8</description>
-						<font>Tiny</font>
-						<height>40</height>
-						<include>DefSettingsButton</include>
-					</control>
-					<control type="label" id="9">
-						<description>Label 9</description>
-						<font>Tiny</font>
-						<height>40</height>
-						<include>DefSettingsButton</include>
-					</control>
-					<control type="label" id="10">
-						<description>Label 10</description>
-						<font>Tiny</font>
-						<height>40</height>
-						<include>DefSettingsButton</include>
-					</control>
-					<control type="label" id="11">
-						<description>Label 11</description>
-						<font>Tiny</font>
-						<height>40</height>
-						<include>DefSettingsButton</include>
-					</control>
-				</control>
+		<control type="group">
+			<posx>130</posx>
+            <posy>210</posy>
+            <width>480</width>
+            <height>700</height>	
+			<control type="grouplist" id="9101">
+				<width>450</width>
+				<top>140</top>
+				<bottom>0</bottom>
+				<itemgap>4</itemgap>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9101</onup>
+				<ondown>9101</ondown>
+			<control type="button" id="95">
+				<description>General</description>
+				<include>DefSkinSettingMenuButton</include>
+				<label>20037</label>
+			</control>
+			<control type="button" id="94">
+				<description>Storage</description>
+				<include>DefSkinSettingMenuButton</include>
+				<label>13277</label>
+			</control>
+			<control type="button" id="96">
+				<description>Network</description>
+				<include>DefSkinSettingMenuButton</include>
+				<label>13279</label>
+			</control>
+			<control type="button" id="97">
+				<description>Video</description>
+				<include>DefSkinSettingMenuButton</include>
+				<label>13280</label>
+			</control>
+			<control type="button" id="98">
+				<description>Hardware</description>
+				<include>DefSkinSettingMenuButton</include>
+				<label>13281</label>
+			</control>
+			<control type="button" id="99">
+				<description>Live TV</description>
+				<include>DefSkinSettingMenuButton</include>
+				<label>19012</label>
 			</control>
 		</control>
-		<include>Def9000SettingsMenu</include>
+		
+		<control type="grouplist">
+			<left>1050</left>
+			<top>100</top>
+			<itemgap>0</itemgap>
+			<!--<usecontrolcoords>true</usecontrolcoords>-->
+			<control type="label">
+				<description>CPU Text</description>
+				<font>Tiny</font>
+				<left>1080</left>
+				<posx>230</posx>
+				<width>200</width>
+				<height>60</height>
+				<label>$LOCALIZE[13271]  $INFO[System.CPUUsage]</label>
+				<include>DefSettingsButton</include>
+			</control>
+			<!--<control type="label">
+				<description>CPU Text</description>
+				<font>Tiny</font>
+				<posy>-60</posy>
+				<align>right</align>
+				<width>350</width>
+				<height>60</height>
+				<label>$INFO[System.CPUUsage]</label>
+				<include>DefSettingsButton</include>
+			</control>-->
+			<control type="progress" id="22">
+				<description>CPU BAR</description>
+				<include>DefSkinSettingMenuButton</include>
+				<font>Tiny</font>
+				<height>10</height>
+				<width>450</width>
+				<info>System.CPUUsage</info>
+				<colordiffuse>$VAR[ColourHighlight]</colordiffuse>
+			</control>
+			<control type="label">
+				<description>Memory Text</description>
+				<left>1050</left>
+				<posx>400</posx>
+				<font>Tiny</font>
+				<height>60</height>
+				<label>$LOCALIZE[31104]:  $INFO[system.memory(used.percent)]</label>
+				<include>DefSettingsButton</include>
+			</control>
+			<!--<control type="label">
+				<description>Memory Text</description>
+				<!--<posy>0</posy>
+				<align>right</align>
+				<posx>400</posx>
+				<font>Tiny</font>
+				<height>60</height>
+				<label>$INFO[system.memory(used.percent)]</label>
+				<include>DefSettingsButton</include>
+			</control>-->
+			<control type="progress" id="24">
+				<description>Memory BAR</description>
+				<include>DefSkinSettingMenuButton</include>
+				<left>1050</left>
+				<font>Tiny</font>
+				<width>450</width>
+				<height>40</height>
+				<info>system.memory(used)</info>
+				<colordiffuse>$VAR[ColourHighlight]</colordiffuse>
+			</control>
+			<control type="label" id="25">
+				<description>Spacer</description>
+				<font>-</font>
+				<font>Tiny</font>
+				<height>25</height>
+			</control>
+			<control type="label" id="2">
+				<description>Label 2</description>
+				<font>Tiny</font>
+				<height>40</height>
+				<include>DefSettingsButton</include>
+			</control>
+			<control type="label" id="3">
+				<description>Label 3</description>
+				<font>Tiny</font>
+				<height>40</height>
+				<include>DefSettingsButton</include>
+			</control>
+			<control type="label" id="4">
+				<description>Label 4</description>
+				<font>Tiny</font>
+				<height>40</height>
+				<include>DefSettingsButton</include>
+			</control>
+			<control type="label" id="5">
+				<description>Label 5</description>
+				<font>Tiny</font>
+				<height>40</height>
+				<include>DefSettingsButton</include>
+			</control>
+			<control type="label" id="6">
+				<description>Label 6</description>
+				<font>Tiny</font>
+				<height>40</height>
+				<include>DefSettingsButton</include>
+			</control>
+			<control type="label" id="7">
+				<description>Label 7</description>
+				<font>Tiny</font>
+				<height>40</height>
+				<include>DefSettingsButton</include>
+			</control>
+			<control type="label" id="8">
+				<description>Label 8</description>
+				<font>Tiny</font>
+				<height>40</height>
+				<include>DefSettingsButton</include>
+			</control>
+			<control type="label" id="9">
+				<description>Label 9</description>
+				<font>Tiny</font>
+				<height>40</height>
+				<include>DefSettingsButton</include>
+			</control>
+			<control type="label" id="10">
+				<description>Label 10</description>
+				<font>Tiny</font>
+				<height>40</height>
+				<include>DefSettingsButton</include>
+			</control>
+			<control type="label" id="11">
+				<description>Label 11</description>
+				<font>Tiny</font>
+				<height>40</height>
+				<include>DefSettingsButton</include>
+			</control>
+		</control>
+    </control>
+	    <include>Def9000SettingsMenu</include>
 	</controls>
 </window>

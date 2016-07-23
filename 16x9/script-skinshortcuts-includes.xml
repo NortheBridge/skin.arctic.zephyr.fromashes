@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <includes>
-	<include name="skinshortcuts-mainmenu">
+	<include content="skinshortcuts-mainmenu">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>Animation</label>
@@ -168,7 +168,7 @@
 		</item>
 	</include>
 	<include />
-	<include name="skinshortcuts-submenu">
+	<include content="skinshortcuts-submenu">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>Animated Shows</label>
@@ -869,7 +869,7 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-animation">
+	<include content="skinshortcuts-group-animation">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>Animated Shows</label>
@@ -903,7 +903,7 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-alt-animation">
+	<include content="skinshortcuts-group-alt-animation">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>Animated Shows</label>
@@ -937,19 +937,19 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-netflix">
+	<include content="skinshortcuts-group-netflix">
 		<description>No items</description>
 	</include>
-	<include name="skinshortcuts-group-alt-netflix">
+	<include content="skinshortcuts-group-alt-netflix">
 		<description>No items</description>
 	</include>
-	<include name="skinshortcuts-group-movies">
+	<include content="skinshortcuts-group-movies">
 		<description>No items</description>
 	</include>
-	<include name="skinshortcuts-group-alt-movies">
+	<include content="skinshortcuts-group-alt-movies">
 		<description>No items</description>
 	</include>
-	<include name="skinshortcuts-group-tvshows">
+	<include content="skinshortcuts-group-tvshows">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[20387]</label>
@@ -1031,7 +1031,7 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-alt-tvshows">
+	<include content="skinshortcuts-group-alt-tvshows">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[20387]</label>
@@ -1113,7 +1113,7 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-num-2">
+	<include content="skinshortcuts-group-num-2">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[744]</label>
@@ -1160,7 +1160,7 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-alt-num-2">
+	<include content="skinshortcuts-group-alt-num-2">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[744]</label>
@@ -1207,7 +1207,7 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-num-31103">
+	<include content="skinshortcuts-group-num-31103">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[22020]</label>
@@ -1273,7 +1273,7 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-alt-num-31103">
+	<include content="skinshortcuts-group-alt-num-31103">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[22020]</label>
@@ -1339,7 +1339,7 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-num-1">
+	<include content="skinshortcuts-group-num-1">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[1039]</label>
@@ -1356,7 +1356,7 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-alt-num-1">
+	<include content="skinshortcuts-group-alt-num-1">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[1039]</label>
@@ -1373,13 +1373,13 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-num-0">
+	<include content="skinshortcuts-group-num-0">
 		<description>No items</description>
 	</include>
-	<include name="skinshortcuts-group-alt-num-0">
+	<include content="skinshortcuts-group-alt-num-0">
 		<description>No items</description>
 	</include>
-	<include name="skinshortcuts-group-settings">
+	<include content="skinshortcuts-group-settings">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[7]</label>
@@ -1442,7 +1442,7 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-alt-settings">
+	<include content="skinshortcuts-group-alt-settings">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[7]</label>
@@ -1505,13 +1505,13 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-num-33060">
+	<include content="skinshortcuts-group-num-33060">
 		<description>No items</description>
 	</include>
-	<include name="skinshortcuts-group-alt-num-33060">
+	<include content="skinshortcuts-group-alt-num-33060">
 		<description>No items</description>
 	</include>
-	<include name="skinshortcuts-group-movieshub">
+	<include content="skinshortcuts-group-movieshub">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[20342]</label>
@@ -1714,7 +1714,7 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-alt-movieshub">
+	<include content="skinshortcuts-group-alt-movieshub">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[20342]</label>
@@ -1917,7 +1917,7 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-episodeshub">
+	<include content="skinshortcuts-group-episodeshub">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[20343]</label>
@@ -2120,7 +2120,7 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-alt-episodeshub">
+	<include content="skinshortcuts-group-alt-episodeshub">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[20343]</label>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
-	<include name="View_520_Gallery">
+	<include content="View_520_Gallery">
 		<control type="group">
 			<visible>Control.IsVisible(520)</visible>
 			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>

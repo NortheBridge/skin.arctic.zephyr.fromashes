@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
-	<include name="View_513_PosterRow">
+	<include content="View_513_PosterRow">
 		<control type="group">
 			<visible>Control.IsVisible(513)</visible>
 			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>

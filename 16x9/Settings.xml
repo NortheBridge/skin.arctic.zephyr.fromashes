@@ -2,219 +2,240 @@
 <!-- Foundation -->
 <window id="4">
     <defaultcontrol always="true">9100</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
     <controls>
         <include>GlobalBackground</include>
         <include>Furniture_Header</include>
         <include>Furniture_Clock</include>
         <include>Furniture_NowPlaying</include>
         <control type="group">
-            <left>SidePad</left>
-            <width>1760</width>
-            <top>PosterPad</top>
-            <height>652</height>
-            <include>Animation.Common</include>
-            <control type="image">
-                <width>100%</width>
-                <height>100%</height>
-                <texture border="5" colordiffuse="Panel">common/box.png</texture>
+			<animation type="WindowOpen">
+			    <effect type="slide" start="1200" end="0" time="250" tween="cubic" easing="inout" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="0" end="1200" time="250" tween="cubic" easing="inout" />
+			</animation>
+	<!-- Right Panel -->		
+			<control type="image">
+                <posx>594</posx>
+                <posy>203</posy>
+                <width>1230</width>
+                <height>712</height>
+				<texture colordiffuse="Panel" border="12">dialog/frame-fo.png</texture>
             </control>
-            <control type="group">
-                <top>10</top>
-                <bottom>10</bottom>
-                <right>10</right>
-                <left>1160</left>
-                <control type="image">
-                    <visible>false</visible>
-                    <width>100%</width>
-                    <height>100%</height>
-                    <texture border="5" colordiffuse="PanelWhite12">common/box.png</texture>
-                </control>
+	<!-- Left Panel -->		
+			<control type="image">
+                <posx>85</posx>
+                <posy>203</posy>
+                <width>450</width>
+                <height>712</height>
+				<texture colordiffuse="FF090A0A" border="12">dialog/frame_fo.png</texture>
+            </control>
+    <!-- Left Panel Borders -->	
+		    <control type="image">
+                <posx>75</posx>
+                <posy>190</posy>
+                <width>479</width>
+                <height>740</height>
+                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture><!-- replaced Dark1-->
+            </control>		
+	<!-- Right Panel Borders -->	
+		    <control type="image">
+                <posx>580</posx>
+                <posy>190</posy>
+                <width>1259</width>
+                <height>740</height>
+                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
+            </control>
+			
+		<!--Pictures (Icons)-->	
+			<control type="group">
+			    <posx>600</posx>
+                <posy>190</posy>
+                <width>1100</width>
+                <height>775</height>					
+				<control type="image">
+					<left>35</left>
+					<width>570</width>
+					<top>8</top>
+					<height>725</height>
+					<texture background="true">$INFO[Container(9100).ListItem.Property(image)]</texture>
+				</control>
+		<!--Icon Label-->		
+				<control type="label">
+					<left>25</left>
+					<width>550</width>
+					<top>20</top>
+					<height>60</height>
+					<font>MediumSmallBold</font>
+					<textcolor>PanelWhite100</textcolor>
+					<label>$INFO[Container(9100).ListItem.Label]</label>
+				</control>
+            </control>
+			
+			<control type="group">
+			    <posy>190</posy>
+				<right>100</right>
+				<width>600</width>
+                <height>740</height>
+			
+		<!--Info TextBox-->
                 <control type="textbox">
-                    <top>30</top>
+                    <top>40</top>
                     <bottom>30</bottom>
-                    <right>30</right>
-                    <left>30</left>
+                    <right>20</right>
+					<left>50</left>
                     <align>left</align>
                     <font>Tiny</font>
                     <textcolor>PanelWhite100</textcolor>
                     <label>$INFO[Container(9100).ListItem.Label2]</label>
                 </control>
-            </control>
-            <control type="group" description="lines">
+			</control>
+			
+		<!--Up/Down Arrows-->	
+			<control type="group">
                 <control type="image">
-                    <left>575</left>
-                    <width>1</width>
-                    <top>11</top>
-                    <bottom>11</bottom>
-                    <texture colordiffuse="Black12">common/white.png</texture>
-                </control>
-                <control type="image">
-                    <left>1150</left>
-                    <top>11</top>
-                    <bottom>11</bottom>
-                    <width>1</width>
-                    <texture colordiffuse="Black12">common/white.png</texture>
-                </control>
-                <!--<control type="image">
-                    <left>10</left>
-                    <top>10</top>
-                    <right>10</right>
-                    <height>1</height>
-                    <texture colordiffuse="Black12">common/white.png</texture>
-                </control>
-                <control type="image">
-                    <left>10</left>
-                    <bottom>10</bottom>
-                    <right>10</right>
-                    <height>1</height>
-                    <texture colordiffuse="Black12">common/white.png</texture>
-                </control>-->
-               
-            </control>
-            <control type="Panel" id="9100">
-                <left>0</left>
-                <width>1150</width>
-                <top>10</top>
-                <height>642</height>
-                <orientation>horizontal</orientation>
-                <itemlayout width="575" height="107">
-                    <!--<control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <right>10</right>
-                        <bottom>10</bottom>
-                        <texture border="5" colordiffuse="PanelWhite12">common/box.png</texture>
-                    </control>-->
-                    <control type="label">
-                        <top>0</top>
-                        <height>97</height>
-                        <aligny>center</aligny>
-                        <right>30</right>
-                        <left>130</left>
-                        <align>left</align>
-                        <font>SmallBold</font>
-                        <textcolor>PanelWhite100</textcolor>
-                        <label>$INFO[ListItem.Label]</label>
-                    </control>
+				    <description>arrow image</description>
+				    <posy>235</posy>
+				    <posx>100</posx>
+				    <width>20</width>
+				    <height>25</height>
+				    <texture colordiffuse="Dark1" flipy="true">common/arrow-small.png</texture>
+				    <visible>Container(9100).HasPrevious</visible>
+			    </control>
+			    <control type="image">
+				    <description>arrow image</description>
+				    <posy>848</posy>
+				    <posx>100</posx>
+				    <width>20</width>
+				    <height>25</height>
+				    <texture colordiffuse="Dark1" flipy="false">common/arrow-small.png</texture>
+				    <visible>Container(9100).HasNext</visible>
+			    </control>
+			</control>
+			
+		<!-- Settings Buttons -->
+			<control type="list" id="9100">
+				<posx>135</posx>
+                <posy>225</posy>
+                <width>480</width>
+                <height>660</height>
+				<onup>9100</onup>
+				<ondown>9100</ondown>
+                <viewtype label="List">list</viewtype>                
+				<itemlayout width="420" height="66">
+		<!--Button No Focus-->		
                     <control type="image">
-                        <left>10</left>
-                        <width>96</width>
-                        <height>96</height>
-                        <texture colordiffuse="PanelWhite100">$INFO[ListItem.Icon]</texture>
+                        <width>375</width>
+                        <height>60</height>
+					    <texture colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texture>
                     </control>
-                
+		<!--Label No Focus-->			
+                    <control type="label">
+                       <height>60</height>
+                       <posx>40</posx>
+                       <width>375</width>
+                       <align>left</align>
+                       <font>Button</font>
+                       <textcolor>$VAR[ButtonTextColour]</textcolor>
+                       <label>$INFO[ListItem.Label]</label>
+                    </control>
                 </itemlayout>
-                <focusedlayout width="575" height="107">
+                <focusedlayout width="420" height="66">
+		<!--Button Focus-->		
                     <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <right>0</right>
-                        <bottom>10</bottom>
-                        <texture border="5" colordiffuse="$VAR[ColourHighlight]">common/white.png</texture>
+                        <width>375</width>
+                        <height>60</height>                       
+						<texture colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texture>
                     </control>
+		<!--Label Focus-->			
                     <control type="label">
-                        <top>0</top>
-                        <height>97</height>
-                        <aligny>center</aligny>
-                        <right>30</right>
-                        <left>130</left>
+                        <height>60</height>
+                        <posx>40</posx>
+                        <width>375</width>
                         <align>left</align>
-                        <font>SmallBold</font>
-                        <textcolor>$VAR[ColourSelected]</textcolor>
+                        <font>Button</font>
+                        <textcolor>$VAR[ButtonFocusTextColour]</textcolor>
                         <label>$INFO[ListItem.Label]</label>
-                    </control>
-                    <control type="image">
-                        <left>10</left>
-                        <width>96</width>
-                        <height>96</height>
-                        <texture colordiffuse="$VAR[ColourSelected]">$INFO[ListItem.Icon]</texture>
                     </control>
                 </focusedlayout>
-                <content>
-                    <item id="1">
-                        <label>480</label>
+            <!--Settings-->        
+				<content>
+				    <item id="2">
+					    <description>Skin Settings</description>
+					    <label>20077</label>
+                        <label2>31166</label2>
+					    <onclick>activatewindow(SkinSettings)</onclick>
+                        <property name="image">special://skin/media/default/DefaultAddonProgram.png</property>
+				    </item>
+				    <item id="1">
+                        <description>Appearance</description>
+                        <label>14206</label>
                         <label2>31156</label2>
-                        <icon>special://skin/extras/icons/eye.png</icon>
-                        <onclick>activatewindow(AppearanceSettings)</onclick>
-                    </item>
-                    
-                    <item id="2">
-                        <label>3</label>
-                        <label2>31157</label2>
-                        <icon>special://skin/extras/icons/film.png</icon>
-                        <onclick>activatewindow(VideosSettings)</onclick>
+                        <onclick>activatewindow(InterfaceSettings)</onclick>
+                        <property name="image">special://skin/media/default/DefaultAddonSkin.png</property>
                     </item>
                     <item id="3">
-                        <label>2</label>
-                        <label2>31158</label2>
-                        <icon>special://skin/extras/icons/songs.png</icon>
-                        <onclick>activatewindow(MusicSettings)</onclick>
-                    </item>
-                    
-                    
-                    <item id="5">
-                        <label>1</label>
-                        <label2>31159</label2>
-                        <icon>special://skin/extras/icons/pictures.png</icon>
-                        <onclick>activatewindow(PicturesSettings)</onclick>
-                    </item>
-                    <item id="6">
-                        <label>8</label>
-                        <label2>31160</label2>
-                        <icon>special://skin/extras/icons/sun.png</icon>
-                        <onclick>activatewindow(WeatherSettings)</onclick>
-                    </item>
-                    
-                    <item id="12">
-                        <label>20077</label>
-                        <label2>31166</label2>
-                        <icon>special://skin/extras/icons/year.png</icon>
-                        <onclick>activatewindow(SkinSettings)</onclick>
-                    </item>
-                    <item id="8">
-                        <label>13000</label>
-                        <label2>31161</label2>
-                        <icon>special://skin/extras/icons/configure.png</icon>
-                        <onclick>activatewindow(SystemSettings)</onclick>
-                    </item>
-                    <item id="7">
-                        <label>705</label>
-                        <label2>31164</label2>
-                        <icon>special://skin/extras/icons/network.png</icon>
-                        <onclick>activatewindow(NetworkSettings)</onclick>
-                    </item>
-                    
-                    <item id="9">
-                        <label>13200</label>
-                        <label2>31165</label2>
-                        <icon>special://skin/extras/icons/actor.png</icon>
-                        <onclick>activatewindow(Profiles)</onclick>
-                    </item>
-                    <item id="4">
+                        <description>Addons</description>
                         <label>24001</label>
                         <label2>31162</label2>
-                        <icon>special://skin/extras/icons/addons.png</icon>
                         <onclick>activatewindow(AddonBrowser)</onclick>
+                        <property name="image">special://skin/media/default/DefaultAddon.png</property>
+                    </item>         
+                    <item id="4">
+                        <description>Library</description>
+                        <label>14202</label>
+                        <label2>31157</label2>
+                        <onclick>activatewindow(LibrarySettings)</onclick>
+                        <property name="image">special://skin/media/default/DefaultAddonMusicVideoInfo.png</property>
                     </item>
-                    
-                    <item id="10">
-                        <label>130</label>
-                        <label2>31167</label2>
-                        <icon>special://skin/extras/icons/sysinfo.png</icon>
-                        <onclick>activatewindow(7)</onclick>
+				    <item id="5">
+                        <description>Player</description>
+                        <label>14200</label>
+                        <label2>31158</label2>
+                        <onclick>activatewindow(PlayerSettings)</onclick>
+                        <property name="image">special://skin/media/default/DefaultPlaylist.png</property>
                     </item>
-                    <item id="11">
+				    <item id="6">
+                        <description>Live TV</description>
                         <label>19191</label>
                         <label2>31163</label2>
-                        <icon>special://skin/extras/icons/livetv.png</icon>
                         <onclick>activatewindow(pvrsettings)</onclick>
+                        <property name="image">special://skin/media/default/DefaultAddonPVRClient.png</property>
                     </item>
-                    
-                    
+				    <item id="7">
+                        <description>Services</description>
+                        <label>14036</label>
+                        <label2>31164</label2>
+                        <onclick>activateWindow(servicesettings)</onclick>
+                        <property name="image">special://skin/media/default/DefaultAddonWebSkin.png</property>
+                    </item>
+				    <item id="8">
+                        <description>System</description>
+                        <label>13000</label>
+                        <label2>31161</label2>
+                        <onclick>activatewindow(SystemSettings)</onclick>
+                        <property name="image">special://skin/media/default/DefaultAddonService.png</property>
+                    </item>
+                    <item id="9">
+                        <description>System Info</description>
+                        <label>130</label>
+                        <label2>31167</label2>
+                        <onclick>activatewindow(7)</onclick>
+                        <property name="image">special://skin/media/default/DefaultAddonSubtitles.png</property>
+                    </item>
+                    <item id="10">
+					   <description>Profiles</description>
+					   <label>13200</label>
+                       <label2>31165</label2>
+					   <onclick>activatewindow(Profiles)</onclick>
+                       <property name="image">special://skin/media/default/DefaultUser.png</property>
+				    </item>
                 </content>
-            </control>
-            
+				
+			</control>	
         </control>
     </controls>
+</window>		
+				
 
-</window>

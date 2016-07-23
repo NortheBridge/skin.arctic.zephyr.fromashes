@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation commit check -->
 <includes>
-	<include name="View_156_Wall_Kodi">
+	<include content="View_156_Wall_Kodi">
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(156)</visible>
@@ -593,5 +593,5 @@
 			<include>Furniture_Scrollbar</include>
 		</control>
 	</include>
-	<include name="View_55_Wall_Fanout"/>
+	<include content="View_55_Wall_Fanout"/>
 </includes>

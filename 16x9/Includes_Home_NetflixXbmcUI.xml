@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- Home Buttons -->
-	<include name="HomeNetflixXbmc">
+	<include content="HomeNetflixXbmc">
 		<control type="group">
 			<control type="button" id="300">
 				<onfocus>SetFocus(776)</onfocus>

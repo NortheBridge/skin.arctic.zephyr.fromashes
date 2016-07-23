@@ -37,7 +37,7 @@
 	            <label>Palettes :</label>
 	            <label2>$INFO[Window.Property(palettename)]</label2>
 	            <visible>!IsEmpty(Window.Property(palettename))</visible>
-				<include>DefDialogButtons</include>
+				<include>DefSkinSettingMenuButton</include>
 				<texturenofocus colordiffuse="Panel" border="5">common/box.png</texturenofocus>
 				<texturefocus colordiffuse="FF1976D2" border="5">common/box.png</texturefocus>
 	        </control>
@@ -86,9 +86,7 @@
 	            <aligny>center</aligny>
 				<label>Color :    $INFO[Window.Property(colorstring)]</label>
 	            <font>Button</font>
-				<include>DefDialogButtons</include>
-				<texturenofocus colordiffuse="Panel" border="5">common/box.png</texturenofocus>
-				<texturefocus colordiffuse="FF1976D2" border="5">common/box.png</texturefocus>
+				<include>DefSkinSettingMenuButton</include>
 	        </control>
 		<!-- Color Preview Box -->	
 			<control type="image">
@@ -126,17 +124,18 @@
 	                <left>45</left>
 	                <width>260</width>
 	                <height>35</height>
+					<onup>3110</onup>
 	                <!--<align>left</align>-->
 					<font>Button</font>
-					<label>$ADDON[script.skin.helper.service 32049] $INFO[Control.Getlabel(3015)]</label>
+					<label>$ADDON[script.skin.helper.service 32049] $INFO[Control.Getlabel(3015)]</label>-->
 	            </control>
 	            <control type="slider" id="3015">
 	                <left>280</left>
+					<onup>3011</onup>
+	                <ondown>3011</ondown>
 	                <width>150</width>
 					<height>30</height>
-	                <onup>3010</onup>
-	                <ondown>3011</ondown>
-					<colordiffuse>White</colordiffuse>
+					<onclick>SetFocus(3012)</onclick>
 	            </control>	
 	        </control>
  
@@ -155,12 +154,9 @@
 	                <ondown>3030</ondown>
 	                <onleft>3010</onleft>
 	                <align>center</align>
-	                <!--<aligny>center</aligny>-->
 	                <font>Button</font>
 	                <label>190</label>
-					<include>DefDialogButtons</include>
-					<texturenofocus colordiffuse="Panel" border="5">common/box.png</texturenofocus>
-					<texturefocus colordiffuse="FF1976D2" border="5">common/box.png</texturefocus>
+					<include>DefSkinSettingMenuButton</include>
 	            </control>
 	<!-- Cancel Button -->
 	            <control type="button" id="3011">
@@ -173,9 +169,7 @@
 	                <!--<aligny>center</aligny>-->
 	                <font>Button</font>
 	                <label>222</label>
-					<include>DefDialogButtons</include>
-					<texturenofocus colordiffuse="Panel" border="5">common/box.png</texturenofocus>
-				    <texturefocus colordiffuse="FF1976D2" border="20">common/box.png</texturefocus>								        
+					<include>DefSkinSettingMenuButton</include>							        
 	            </control>
 	        </control>
 	<!-- Scroll Bar -->		
@@ -186,11 +180,9 @@
                     <width>10</width>
                     <onleft>3110</onleft>
                     <onright>3110</onright>
-					<texturesliderbackground border="5" colordiffuse="FFC4CACC">scrollbar/scrollv.png</texturesliderbackground>
-					<texturesliderbar border="5" colordiffuse="Dark2">scrollbar/scrollv.png</texturesliderbar>
-                    <!--<texturesliderbackground border="5" colordiffuse="$VAR[ScrollbarBGColour]">scrollbar/scrollv.png</texturesliderbackground>
-                    <texturesliderbar border="5" colordiffuse="$VAR[ScrollbarUnFocusedColour]">scrollbar/scrollv.png</texturesliderbar>-->
-                    <texturesliderbarfocus border="5" colordiffuse="FF1976D2ss">scrollbar/scrollv.png</texturesliderbarfocus>
+					<texturesliderbackground border="5" colordiffuse="$VAR[ScrollbarBGColour]">scrollbar/scrollv.png</texturesliderbackground>
+					<texturesliderbar border="5" colordiffuse="$VAR[ScrollbarUnFocusedColour]">scrollbar/scrollv.png</texturesliderbar>
+                    <texturesliderbarfocus border="5" colordiffuse="$VAR[ScrollbarFocusedColour]">scrollbar/scrollv.png</texturesliderbarfocus>
                     <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
             </control>	
 																				    	    					

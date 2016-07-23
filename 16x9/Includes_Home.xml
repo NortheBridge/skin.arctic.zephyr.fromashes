@@ -1504,9 +1504,11 @@
 		</content>
 	</include>
 	<include name="HomeContentIcon">
-		<top>848</top>
-		<itemlayout width="220" height="220">
-			<control type="image">
+		<top>828</top>
+		<itemlayout width="220" height="180">
+	<!--##########	Lines commented out for AZ:FA Alpha --NO ICONS-- ##########-->		
+		<!--<itemlayout width="220" height="220">
+			<!--<control type="image">
 				<width>128</width>
 				<height>128</height>
 				<centerleft>50%</centerleft>
@@ -1525,16 +1527,18 @@
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 		</itemlayout>
-		<focusedlayout width="220" height="220">
-			<control type="image">
+		<focusedlayout width="220" height="190">
+	<!--##########	Lines commented out for AZ:FA Alpha --NO ICONS-- ##########-->
+		<!--<focusedlayout width="220" height="220">-->
+			<!--<control type="image">
 				<width>128</width>
 				<height>128</height>
 				<centerleft>50%</centerleft>
 				<centertop>40%</centertop>								
 				<texture colordiffuse="$VAR[ColourHighlight]">$INFO[ListItem.Icon]</texture><!-- replaced "Dark1" -->
-				<textcolor>Dark2</textcolor>
+				<!--<textcolor>Dark2</textcolor>
 				<visible>substring(ListItem.Icon,icons)</visible>
-			</control>
+			</control>-->
 			<control type="label">
 				<align>center</align>
 				<aligny>top</aligny>

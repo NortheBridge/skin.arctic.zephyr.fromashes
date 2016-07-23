@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <includes>
-	<include name="View_55_Wall_Poster">
+	<include content="View_55_Wall_Poster">
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(55)</visible>
@@ -127,7 +127,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="View_55_Wall_Info">
+	<include content="View_55_Wall_Info">
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(55)</visible>
@@ -290,7 +290,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="View_55_Wall">
+	<include content="View_55_Wall">
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(55)</visible>

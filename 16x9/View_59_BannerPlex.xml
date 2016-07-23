@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <includes>
-	<include name="View_59_BannerPlex">
+	<include content="View_59_BannerPlex">
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(59)</visible>
