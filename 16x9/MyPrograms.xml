@@ -21,26 +21,48 @@
             <include>GlobalOverlay</include>
         </control>
         <control type="group">
-            <height>242</height>
+            <!--<height>242</height>-->
             <include>Def9000Background</include>
+			<control type="label" id="20">
+                <description>Header Label</description>
+                <posx>-65</posx>
+                <posy>31</posy>
+                <align>center</align>
+                <font>SmallBold</font>
+                <width>680</width>
+                <label>My Programs SubMenu</label>
+            </control>
+			<control type="image">
+                <posx>30</posx>
+                <posy>30</posy>
+                <width>70</width>
+                <height>70</height>
+                <texture fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
+                <aspectratio align="center" aligny="bottom">keep</aspectratio>
+            </control>
             <control type="grouplist" id="9000">
-                <include>Def9000GroupList</include>
-                
+			    <left>30</left>
+				<top>130</top>
+                <!--<include>Def9000GroupList</include>-->
+                <itemgap>4</itemgap>
                 <control type="button" id="2">
                     <description>View</description>
-                    <include>DefContextButton</include>
+                    <width>447</width>
+					<include>DefSkinSettingMenuButton</include>
                     <align>left</align>
                 </control>
 
                 <control type="button" id="3">
                     <description>Sort</description>
-                    <include>DefContextButton</include>
+					<width>447</width>
+					<include>DefSkinSettingMenuButton</include>
                     <align>left</align>
                 </control>
 
                 <control type="togglebutton" id="4">
                     <description>Ascending</description>
-                    <include>DefContextButton</include>
+					<width>447</width>
+					<include>DefSkinSettingMenuButton</include>
                     <align>left</align>
                     <label>584</label>
                     <altlabel>585</altlabel>

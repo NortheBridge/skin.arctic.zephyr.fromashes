@@ -9,12 +9,8 @@
 		<include>Furniture_NowPlaying</include>
 		<include>Furniture_Header</include>
 		<control type="group">
-		    <animation type="WindowOpen">
-			    <effect type="slide" start="1200" end="0" time="250" tween="cubic" easing="inout" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="slide" start="0" end="1200" time="250" tween="cubic" easing="inout" />
-			</animation>
+		    <include>Animation.Common</include>
+
 	<!-- Right Panel Foreground -->		
 			<control type="image">
                 <posx>594</posx>
@@ -58,7 +54,7 @@
 			</control>
 			<control type="label">
 					<posx>130</posx>
-                    <posy>255</posy>
+                    <posy>260</posy>
 					<height>30</height>
 					<font>Tiny</font>
 					<label>$INFO[System.FriendlyName]</label>
@@ -66,7 +62,7 @@
 					<scroll>true</scroll>
 			</control>
 			<control type="label" description="Header">
-					<left>1180</left>
+					<left>1175</left>
 					<width>390</width>
 					<posy>205</posy>
 					<font>MediumBold</font>
@@ -74,8 +70,8 @@
 					<textcolor>PanelWhite100</textcolor>
 			</control>
 			<control type="label" id="52" description="XBMC Build Version">
-					<left>1180</left>
-					<posy>255</posy>
+					<left>1175</left>
+					<posy>265</posy>
 					<height>30</height>
 					<font>Tiny</font>
 					<height>40</height>
@@ -187,7 +183,7 @@
 		
 		<control type="grouplist">
 			<left>1050</left>
-			<top>100</top>
+			<top>98</top>
 			<itemgap>0</itemgap>
 			<!--<usecontrolcoords>true</usecontrolcoords>-->
 			<control type="label">
@@ -212,12 +208,12 @@
 			</control>-->
 			<control type="progress" id="22">
 				<description>CPU BAR</description>
-				<include>DefSkinSettingMenuButton</include>
 				<font>Tiny</font>
-				<height>10</height>
+				<height>30</height>
 				<width>450</width>
 				<info>System.CPUUsage</info>
 				<colordiffuse>$VAR[ColourHighlight]</colordiffuse>
+				<include>DefSettingsButton</include>
 			</control>
 			<control type="label">
 				<description>Memory Text</description>
@@ -240,78 +236,88 @@
 			</control>-->
 			<control type="progress" id="24">
 				<description>Memory BAR</description>
-				<include>DefSkinSettingMenuButton</include>
 				<left>1050</left>
 				<font>Tiny</font>
 				<width>450</width>
-				<height>40</height>
+				<height>30</height>
 				<info>system.memory(used)</info>
 				<colordiffuse>$VAR[ColourHighlight]</colordiffuse>
+				<include>DefSettingsButton</include>
 			</control>
 			<control type="label" id="25">
 				<description>Spacer</description>
 				<font>-</font>
 				<font>Tiny</font>
-				<height>25</height>
+				<height>20</height>
 			</control>
 			<control type="label" id="2">
 				<description>Label 2</description>
 				<font>Tiny</font>
 				<height>40</height>
+				<width>600</width>
 				<include>DefSettingsButton</include>
 			</control>
 			<control type="label" id="3">
 				<description>Label 3</description>
 				<font>Tiny</font>
 				<height>40</height>
+				<width>600</width>
 				<include>DefSettingsButton</include>
 			</control>
 			<control type="label" id="4">
 				<description>Label 4</description>
 				<font>Tiny</font>
 				<height>40</height>
+				<width>600</width>
 				<include>DefSettingsButton</include>
 			</control>
 			<control type="label" id="5">
 				<description>Label 5</description>
 				<font>Tiny</font>
 				<height>40</height>
+				<width>600</width>
 				<include>DefSettingsButton</include>
 			</control>
 			<control type="label" id="6">
 				<description>Label 6</description>
 				<font>Tiny</font>
 				<height>40</height>
+				<width>600</width>
 				<include>DefSettingsButton</include>
 			</control>
 			<control type="label" id="7">
 				<description>Label 7</description>
 				<font>Tiny</font>
 				<height>40</height>
+				<width>600</width>
 				<include>DefSettingsButton</include>
 			</control>
 			<control type="label" id="8">
 				<description>Label 8</description>
 				<font>Tiny</font>
 				<height>40</height>
+				<width>600</width>
 				<include>DefSettingsButton</include>
 			</control>
 			<control type="label" id="9">
 				<description>Label 9</description>
 				<font>Tiny</font>
 				<height>40</height>
+				<width>600</width>
 				<include>DefSettingsButton</include>
 			</control>
 			<control type="label" id="10">
 				<description>Label 10</description>
 				<font>Tiny</font>
 				<height>40</height>
+				<width>600</width>
 				<include>DefSettingsButton</include>
 			</control>
 			<control type="label" id="11">
 				<description>Label 11</description>
 				<font>Tiny</font>
 				<height>40</height>
+				<width>600</width>
 				<include>DefSettingsButton</include>
 			</control>
 		</control>

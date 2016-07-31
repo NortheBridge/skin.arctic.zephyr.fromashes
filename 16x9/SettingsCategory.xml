@@ -11,12 +11,8 @@
         <include>Furniture_Header</include>
         <include>Furniture_NowPlaying</include>
         <control type="group">
-		    <animation type="WindowOpen">
-			    <effect type="slide" start="1200" end="0" time="250" tween="cubic" easing="inout" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="slide" start="0" end="1200" time="250" tween="cubic" easing="inout" />
-			</animation>
+		    <include>Animation.Common</include>
+
 	<!-- Right Panel Foreground -->		
 			<control type="image">
                 <posx>594</posx>

@@ -9,12 +9,8 @@
 		<include>Furniture_SkinSetting_Clock</include>
 		<control type="group">
 			<visible>!Window.IsVisible(yesnodialog) + !Window.IsActive(filebrowser)</visible>
-			<animation type="WindowOpen">
-			    <effect type="slide" start="1200" end="0" time="250" tween="cubic" easing="inout" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="slide" start="0" end="1200" time="250" tween="cubic" easing="inout" />
-			</animation>
+			<include>Animation.Common</include>
+
 	<!-- Right Panel Background -->		
 			<control type="image">
                 <posx>595</posx>
@@ -103,11 +99,11 @@
 						<include>DefSkinSettingMenuButton</include>
 						<label>31169</label>
 					</control>			
-					<control type="togglebutton" id="9111" description="Stars">
+					<!--<control type="togglebutton" id="9111" description="Stars">
 					    <onright>9900</onright>
 						<include>DefSkinSettingMenuButton</include>
 						<label>31781</label>
-					</control>
+					</control>-->
 					<control type="togglebutton" id="9108" description="Colours">
 					    <onright>10000</onright>
 						<include>DefSkinSettingMenuButton</include>

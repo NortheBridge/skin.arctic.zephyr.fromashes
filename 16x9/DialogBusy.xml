@@ -14,39 +14,44 @@
 <!-- Modification to Busy Spinner --->			
 			<include>GlobalSpinnerOverlay</include>
             <include>GlobalOverlay</include>
-			<include>GlobalOverlay</include>
-
                 <control type="image">
-                <description>Backgrond</description>
-                <centerleft>50%</centerleft>
-                <centertop>47%</centertop>
-                <width>100</width>
-                <height>100</height>
-<!--Changed-->  <texture border="16" colordiffuse="$VAR[SpinnerBackgroundColour]">dialog/loading-back.png</texture>
-                <aspectratio>keep</aspectratio>
+                    <posx>0</posx>
+		            <top>355</top>
+		            <width>1920</width>
+		            <height>450</height>
+                    <texture colordiffuse="Panel" border="16">buttons/dialoge_shadow.png</texture>
+                </control>
+                <control type="image">
+                    <description>Backgrond</description>
+                    <centerleft>50%</centerleft>
+                    <centertop>47%</centertop>
+                    <width>120</width>
+                    <height>120</height>
+<!--Changed-->      <texture border="16" colordiffuse="Dark1">dialog/loading-back.png</texture>
+                    <aspectratio>keep</aspectratio>
                 </control>
 
                 <control type="image">
-                <description>Busy animation</description>
-                <centerleft>50%</centerleft>
-                <centertop>47%</centertop>
-                <width>100</width>
-                <height>100</height>
-                <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
-<!--Changed-->  <texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">dialog/loading-spinner.png</texture>
-                <aspectratio>keep</aspectratio>
+                    <description>Busy animation</description>
+                    <centerleft>50%</centerleft>
+                    <centertop>47%</centertop>
+                    <width>140</width>
+                    <height>140</height>
+                    <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
+<!--Changed-->      <texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">dialog/loading-spinner.png</texture>
+                    <aspectratio>keep</aspectratio>
                 </control>
 
                 <control type="label">
-                <description>Busy label</description>
-                <centerleft>50%</centerleft>
-                <centertop>53%</centertop>
-                <width>720</width>
-                <height>108</height>
-                <aligny>center</aligny>
-                <align>center</align>
-                <label>$LOCALIZE[20186]...</label>
-                <textcolor>ffededed</textcolor>
+                   <description>Busy label</description>
+                   <centerleft>50%</centerleft>
+                   <centertop>54%</centertop>
+                   <width>720</width>
+                   <height>155</height>
+                   <aligny>center</aligny>
+                   <align>center</align>
+                   <label>$LOCALIZE[20186]...</label>
+                   <textcolor>ffededed</textcolor>
                 </control>
 
             </control>

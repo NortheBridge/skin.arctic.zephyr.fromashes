@@ -57,8 +57,10 @@
             
                 <control type="label">
                     <description>Header Label</description>
+					<width>510</width>
                     <include>DefDialogInfoHeader</include>
                     <label>$INFO[ListItem.Label]</label>
+					<scroll>true</scroll>
                 </control>
             
                 <control type="grouplist">
@@ -78,7 +80,7 @@
                     </control>
                     <control type="label">
                         <width>100%</width>
-                        <height>60</height>
+                        <height>58</height>
                         <font>Tiny</font>
                         <aligny>top</aligny>
                         <label>$INFO[ListItem.AddonName]</label>
@@ -94,7 +96,7 @@
                     </control>
                     <control type="label">
                         <width>100%</width>
-                        <height>60</height>
+                        <height>58</height>
                         <font>Tiny</font>
                         <aligny>top</aligny>
                         <label fallback="19055">$INFO[ListItem.AddonSummary]</label>
@@ -110,7 +112,7 @@
                     </control>
                     <control type="label">
                         <width>100%</width>
-                        <height>60</height>
+                        <height>58</height>
                         <font>Tiny</font>
                         <aligny>top</aligny>
                         <label fallback="19055">$INFO[ListItem.AddonCreator]</label>
@@ -126,7 +128,7 @@
                     </control>
                     <control type="label">
                         <width>100%</width>
-                        <height>60</height>
+                        <height>58</height>
                         <font>Tiny</font>
                         <aligny>top</aligny>
                         <label fallback="19055">$INFO[ListItem.AddonVersion]</label>
@@ -142,7 +144,7 @@
                     </control>
                     <control type="label">
                         <width>100%</width>
-                        <height>60</height>
+                        <height>58</height>
                         <font>Tiny</font>
                         <aligny>top</aligny>
                         <label fallback="19055">$INFO[ListItem.AddonType]</label>
