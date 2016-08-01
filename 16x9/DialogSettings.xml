@@ -80,6 +80,8 @@
             <control type="button" id="7">
                 <description>Default Button</description>
                 <align>left</align>
+				<width>500</width>
+				<include>DefSkinSettingMenuButton</include>
                 <texturefocus colordiffuse="$VAR[ColorHighlight]" border="8">common/box.png</texturefocus>
             </control>
 

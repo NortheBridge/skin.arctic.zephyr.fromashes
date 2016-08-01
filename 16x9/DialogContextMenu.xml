@@ -14,28 +14,82 @@
         <control type="group">
             <include>Animation.ZoomIn</include>
             <include>Animation.FadeOut</include>
-            <top>200</top>
+            <top>180</top>
             <centerleft>50%</centerleft>
-            <width>466</width>
-            <control type="image" id="999">
+            <width>600</width>
+			<control type="image">
+			    <description>background image</description>
+			    <posx>5</posx>
+			    <posy>5</posy>
+			    <width>590</width>
+                <height>670</height>
+			    <!--<texture>buttons/dialogbutton-fo.png</texture>
+			    <color>Black</color>-->
+			    <texture border="5" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
+            </control>
+		    <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>600</width>
+                <height>680</height>
+                <texture colordiffuse="Panel" border="16">dialog/frame_Landscape-fo.png</texture>
+            </control>
+		    <control type="image">
+                <posx>23</posx>
+                <posy>20</posy>
+                <width>553</width>
+                <height>90</height>
+                <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+            </control>
+			<control type="label">
+                <description>Header Label</description>
+                <centerleft>50%</centerleft>
+                <width>525</width>
+                <align>center</align>
+                <label>Context SubMenu</label>
+                <posy>33</posy>
+				<posx>30</posx>
+                <font>SmallBold</font>
+            </control>
+			<control type="image">
+				<description>arrow image</description>
+				<centerleft>50%</centerleft>
+				<posy>119</posy>
+				<width>16</width>
+				<height>16</height>
+				<texture colordiffuse="Dark2" flipy="true">common/arrow-small.png</texture>
+			</control>
+			<control type="image">
+				<description>arrow image</description>
+				<centerleft>50%</centerleft>
+				<posy>645</posy>
+				<width>16</width>
+				<height>16</height>
+				<texture colordiffuse="Dark2" flipy="false">common/arrow-small.png</texture>
+			</control>
+            <!--<control type="image" id="999">
                 <description>background image</description>
                 <posx>0</posx>
                 <posy>-16</posy>
                 <width>466</width>
                 <height>871</height>
                 <texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
-            </control>
+            </control>-->
 
             <control type="grouplist" id="996">
                 <description>grouplist for context buttons</description>
-                <posx>8</posx>
-                <posy>0</posy>
-                <width>510</width>
-                <height max="839">auto</height>
-                <itemgap>0</itemgap>
+                <posx>38</posx>
+                <posy>142</posy>
+                <width>540</width>
+                <height max="634">auto</height>
+                <itemgap>4</itemgap>
                 <control type="button" id="1000">
                     <description>Buttons</description>
-                    <include>DefContextButton</include>
+					<width>525</width>
+					<height>58</height>
+					<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
+				    <texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
+                    <include>DefContextButton2</include>
                 </control>
             </control>
         </control>

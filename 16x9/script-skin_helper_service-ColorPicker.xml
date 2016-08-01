@@ -26,34 +26,34 @@
 				<texture colordiffuse="Black" border="15">common/rounded-shadow8.png</texture>
 	        </control>
 		    <control type="button" id="3030">
-	            <left>18</left>
-	            <top>130</top>
-	            <width>440</width>
+	            <left>21</left>
+	            <top>138</top>
+	            <width>438</width>
 	            <height>50</height>
 	            <onup>3010</onup>
 	            <ondown>3110</ondown>
 	            <onleft>Close</onleft>
+				<textoffsetx>15</textoffsetx>
 	            <align>left</align>
 	            <label>Palettes :</label>
 	            <label2>$INFO[Window.Property(palettename)]</label2>
+				<texturenofocus colordiffuse="$VAR[ButtonColour]" border="5">common/box.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="5">common/box.png</texturefocus>
 	            <visible>!IsEmpty(Window.Property(palettename))</visible>
-				<include>DefSkinSettingMenuButton</include>
-				<texturenofocus colordiffuse="Panel" border="5">common/box.png</texturenofocus>
-				<texturefocus colordiffuse="FF1976D2" border="5">common/box.png</texturefocus>
 	        </control>
 <!-- Colours Panel -->			
 			<control type="panel" id="3110">
 	            <viewtype label="panel">icons</viewtype>
 	            <left>60</left>
-	            <top>205</top>
+	            <top>230</top>
 	            <width>380</width>
-	            <height>540</height>
+	            <height>500</height>
 	            <onup>3030</onup>
 	            <ondown>3010</ondown>	
 	            <onright>3110</onright>
 	            <onleft>60</onleft>
 	            <orientation>vertical</orientation>
-	            <preloaditems>4</preloaditems>
+	            <preloaditems>3</preloaditems>
 	            <pagecontrol>60</pagecontrol>
 	            <itemlayout height="42.1" width="42.1">
 	                 <control type="image">
@@ -68,8 +68,8 @@
 	                    <width>40</width>
 	                    <height>40</height>
 	                    <texture>$INFO[ListItem.Icon]</texture>
-	                    <bordertexture colordiffuse="Grey" border="-2">diffuse/pvrinfo.png</bordertexture>
-	                    <animation effect="zoom" center="auto" start="100" end="200" time="200" easing="inout" tween="sine">Focus</animation>
+	                    <bordertexture colordiffuse="$VAR[ButtonFocusColour]" border="-2">common/white.png</bordertexture>
+	                    <animation effect="zoom" center="auto" start="-100" end="180" time="200" easing="inout" tween="sine">Focus</animation>
 	                </control>
 	            </focusedlayout>
 	        </control>
@@ -81,7 +81,7 @@
 	            <height>50</height>
 	            <onup>3110</onup>	
 	            <ondown>3015</ondown>
-	            <onleft>Close</onleft>
+	            <onright>Close</onright>
 	            <align>center</align>
 	            <aligny>center</aligny>
 				<label>Color :    $INFO[Window.Property(colorstring)]</label>
@@ -107,35 +107,37 @@
 	        </control>
 		<!-- Transparency Group -->	
 			<control type="group" id="3020">
-	            <left>0</left>
+	            <left>5</left>
 	            <top>835</top>
 	            <width>300</width>
 	            <height>60</height>
 	            <control type="image">
+	                <width>440</width>
+	                <height>30</height>
+					<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="5">common/box.png</texturefocus>-->
+	                <visible>Control.HasFocus(3015)</visible>
+	            </control>
+				<control type="image">
 	                <width>450</width>
 	                <height>30</height>
-	                <texturenofocus colordiffuse="Panel" border="5">common/box.png</texturenofocus>
-			        <texturefocus colordiffuse="FF1976D2" border="5">common/box.png</texturefocus>-->
-					<!--<texturenofocus colordiffuse="black" border="5">common/box.png</texturenofocus>-->
-	                <visible>Control.HasFocus(3015)</visible>
+					<texturefocus colordiffuse="$VAR[ButtonColour]" border="5">common/box.png</texturefocus>-->
+	                <visible>!Control.HasFocus(3015)</visible>
 	            </control>
 	<!-- Transparency Level -->				
 				<control type="label" id="3017">
 	                <left>45</left>
 	                <width>260</width>
 	                <height>35</height>
-					<onup>3110</onup>
 	                <!--<align>left</align>-->
 					<font>Button</font>
 					<label>$ADDON[script.skin.helper.service 32049] $INFO[Control.Getlabel(3015)]</label>-->
 	            </control>
 	            <control type="slider" id="3015">
 	                <left>280</left>
-					<onup>3011</onup>
-	                <ondown>3011</ondown>
-	                <width>150</width>
+					<width>150</width>
 					<height>30</height>
-					<onclick>SetFocus(3012)</onclick>
+					<onup>3010</onup>
+	                <ondown>3012</ondown>
 	            </control>	
 	        </control>
  
@@ -166,19 +168,19 @@
 	                <ondown>3030</ondown>
 	                <onleft>3010</onleft>
 	                <align>center</align>
-	                <!--<aligny>center</aligny>-->
 	                <font>Button</font>
 	                <label>222</label>
 					<include>DefSkinSettingMenuButton</include>							        
 	            </control>
 	        </control>
+
 	<!-- Scroll Bar -->		
 			<control type="scrollbar" id="60">
                     <left>20</left>
-                    <posy>206</posy>
-                    <height>538</height>
+                    <posy>225</posy>
+                    <height>505</height>
                     <width>10</width>
-                    <onleft>3110</onleft>
+                    <onleft>noop</onleft>
                     <onright>3110</onright>
 					<texturesliderbackground border="5" colordiffuse="$VAR[ScrollbarBGColour]">scrollbar/scrollv.png</texturesliderbackground>
 					<texturesliderbar border="5" colordiffuse="$VAR[ScrollbarUnFocusedColour]">scrollbar/scrollv.png</texturesliderbar>

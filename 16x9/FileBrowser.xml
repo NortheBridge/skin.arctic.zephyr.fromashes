@@ -3,247 +3,389 @@
 <window id="126">
     <defaultcontrol always="true">450</defaultcontrol>
     <controls>
-
+        <allowoverlay>no</allowoverlay>
         <include>GlobalOverlay</include>
-
+        <include>GlobalOverlay</include>
         <control type="group">
 		    <include>Animation.ZoomIn</include>
 		    <include>Animation.FadeOut</include>
-		    <top>195</top>
-		    <centerleft>50%</centerleft>
-		    <height>700</height>
-		    <width>1000</width>
+			<visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(locksettings)</visible>
+		    
 		    <control type="image">
 			    <description>background image</description>
-			    <posx>5</posx>
-			    <posy>5</posy>
-			    <width>990</width>
-                <height>692</height>
-			    <!--<texture>buttons/dialogbutton-fo.png</texture>
-			    <color>Black</color>-->
+			    <posx>445</posx>
+			    <posy>180</posy>
+			    <width>1090</width>
+                <height>720</height>
 			    <texture border="5" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
             </control>
 		    <control type="image">
-                <posx>0</posx>
-                <posy>0</posy>
-                <width>1000</width>
-                <height>700</height>
+                <posx>440</posx>
+                <posy>175</posy>
+                <width>1100</width>
+                <height>730</height>
                 <texture colordiffuse="Panel" border="16">dialog/frame_Landscape-fo.png</texture>
             </control>
 		    <control type="image">
-                <posx>33</posx>
-                <posy>20</posy>
-                <width>930</width>
+                <posx>478</posx>
+                <posy>215</posy>
+                <width>1020</width>
                 <height>90</height>
                 <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
             </control>
            
             <control type="label" id="411">
                 <description>Heading</description>
-                <centerleft>50%</centerleft>
-                <posy>30</posy>
-                <width>940</width>
+                <posx>501</posx>
+                <posy>225</posy>
+                <width>975</width>
                 <align>center</align>
                 <font>MediumBold</font>            			
                 <label>1023</label>
             </control>
-            <control type="label" id="412">
+            <!--<control type="label" id="412">
                 <description>Path</description>
-                <posx>45</posx>
-				<posy>500</posy>
+                <posx>500</posx>
+				<posy>20</posy>
                 <height>60</height>
-                <!--<aligny>left</aligny>-->
-                <width>550</width>
+                <width>650</width>
                 <haspath>true</haspath>
                 <font>Tiny</font>
                 <textcolor>Black70</textcolor>
-            </control>
+            </control>-->
 			
 
             <control type="list" id="450">
-                <posx>22</posx>
-                <posy>150</posy>
-                <width>560</width>
-                <height>310</height>
+                <posx>480</posx>
+                <posy>320</posy>
+                <width>580</width>
+                <height>420</height>
                 <onleft>9000</onleft>
-                <onright>9000</onright>
+                <onright>60</onright>
                 <onup>450</onup>
                 <ondown>450</ondown>
-                <itemlayout height="64">
-                    <control type="image">
+				<pagecontrol>60</pagecontrol>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+                <itemlayout height="60">
+                    <!--<control type="image">
                         <posx>20</posx>
                         <posy>5</posy>
                         <width>60</width>
                         <height>50</height>
                         <aspectratio scalediffuse="false">scale</aspectratio>
                         <texture diffuse="diffuse/dialogselect.png" fallback="DefaultAddonNone.png">$INFO[ListItem.ActualIcon,default/]</texture>
-                        <visible>!Skin.HasSetting(global.hidecirles) + !substring(ListItem.Path,spinners)</visible>-->
+                        <visible>!Skin.HasSetting(global.hidecirles) + !substring(ListItem.Path,spinners)</visible>
+                    </control>-->
+                    <control type="image">
+                        <posx>5</posx>
+                        <posy>0</posy>
+                        <width>60</width>
+                        <height>60</height>
+						<texture>$INFO[ListItem.ActualIcon,default/]</texture>
+		                <aspectratio>keep</aspectratio>
+                        <visible>IsEmpty(ListItem.Thumb)</visible>
+                        <!--<texture fallback="DefaultAddonNone.png">$INFO[ListItem.ActualIcon,default/]</texture>
+                        <visible>Skin.HasSetting(global.hidecirles) + !substring(ListItem.Path,spinners)</visible>-->
                     </control>
                     <control type="image">
-                        <posx>20</posx>
+                        <posx>0</posx>
                         <posy>5</posy>
                         <width>60</width>
                         <height>50</height>
-                        <aspectratio scalediffuse="false">keep</aspectratio>
-                        <texture fallback="DefaultAddonNone.png">$INFO[ListItem.ActualIcon,default/]</texture>
-                        <visible>Skin.HasSetting(global.hidecirles) + !substring(ListItem.Path,spinners)</visible>
-                    </control>
-                    <control type="image">
-                        <posx>20</posx>
-                        <posy>5</posy>
-                        <width>60</width>
-                        <height>50</height>
-                        <aspectratio scalediffuse="false">center</aspectratio>
-						<texture fallback="DefaultAddonNone.png">$INFO[Listitem.FileNameAndPath]</texture>
-                        <visible>substring(ListItem.Path,spinners)</visible>
+						<!--<texture fallback="DefaultAddonNone.png">$INFO[Listitem.FileNameAndPath]</texture>
+                        <visible>substring(ListItem.Path,spinners)</visible>-->
+						<texture>$INFO[ListItem.Thumb]</texture>
+					    <aspectratio>keep</aspectratio>
+                        <visible>!IsEmpty(ListItem.Thumb)</visible>
                     </control>
 
                     <control type="label">
-                        <posy>-18</posy>
-                        <posx>110</posx>
+                        <posy>0</posy>
+                        <posx>80</posx>
                         <width>580</width>
                         <height>60</height>
 						<align>left</align>
+                        <aligny>center</aligny>
                         <font>SmallBold</font>
                         <textcolor>Black70</textcolor>
-                        <selectedcolor>Black70</selectedcolor>
-						<texture border="20" colordiffuse="$VAR[ButtonColour]">common/box.png</texture>
+						<focusedcolor>$VAR[ButtonFocusTextColor]</focusedcolor>
+                        <disabledcolor>$VAR[DisabledTextColour]</disabledcolor>
+						<!--<texture border="20" colordiffuse="$VAR[ButtonColour]">common/box.png</texture>-->
                         <info>ListItem.Label</info>
-                        <animation effect="slide" end="0,18" condition="IsEmpty(ListItem.Property(Addon.Summary))">Conditional</animation>
+						<scroll>false</scroll>
+                        <!--<animation effect="slide" end="0,18" condition="IsEmpty(ListItem.Property(Addon.Summary))">Conditional</animation>-->
                     </control>
-                    <control type="label">
+                    <!--<control type="label">
                         <posx>110</posx>
                         <posy>18</posy>
-                        <width>580</width>
+                        <width>620</width>
                         <height>60</height>
                         <font>Mini</font>
                         <textcolor>Black70</textcolor>
-                        <selectedcolor>Black70</selectedcolor>
 						<texture border="20" colordiffuse="$VAR[ButtonColour]">common/box.png</texture>
                         <label>$INFO[ListItem.Property(Addon.Summary)]</label>
-                    </control>
+                    </control>-->
 
                 </itemlayout>
-                <focusedlayout height="64">
+                <focusedlayout height="60">
                     <control type="group">
                         <visible>!Control.HasFocus(450)</visible>
-                        <control type="image">
+                        <!--<control type="image">
                             <posx>20</posx>
                             <posy>5</posy>
                             <width>60</width>
                             <height>50</height>
                             <aspectratio scalediffuse="false">scale</aspectratio>							
-                            <texture diffuse="diffuse/dialogselect.png" fallback="DefaultAddonNone.png">$INFO[ListItem.ActualIcon,default/]</texture>
-                            <visible>!Skin.HasSetting(global.hidecirles) + !substring(ListItem.Path,spinners)</visible>-->
+                            <texture diffuse="common/circle-shadow.png" fallback="DefaultAddonNone.png">$INFO[ListItem.ActualIcon,default/]</texture>
+                            <visible>!Skin.HasSetting(global.hidecirles) + !substring(ListItem.Path,spinners)</visible>
+                        </control>-->
+                        <control type="image">
+                            <posx>5</posx>
+                            <posy>0</posy>
+                            <width>60</width>
+                            <height>60</height>
+							<texture fallback="DefaultAddonNone.png">$INFO[ListItem.ActualIcon,default/]</texture>
+	                        <aspectratio>keep</aspectratio>						
+							<visible>IsEmpty(ListItem.Thumb)</visible>
+                            <!--<visible>Skin.HasSetting(global.hidecirles) + !substring(ListItem.Path,spinners)</visible>-->
                         </control>
                         <control type="image">
-                            <posx>20</posx>
+                            <posx>0</posx>
                             <posy>5</posy>
                             <width>60</width>
                             <height>50</height>
-                            <aspectratio scalediffuse="false">keep</aspectratio>
-							<texture fallback="DefaultAddonNone.png">$INFO[ListItem.ActualIcon,default/]</texture>                           						
-                            <visible>Skin.HasSetting(global.hidecirles) + !substring(ListItem.Path,spinners)</visible>-->
-                        </control>
-                        <control type="image">
-                            <posx>20</posx>
-                            <posy>5</posy>
-                            <width>60</width>
-                            <height>50</height>
-                            <aspectratio scalediffuse="false">center</aspectratio>
-							<texture fallback="DefaultAddonNone.png">$INFO[Listitem.FileNameAndPath]</texture>                           
-                            <visible>substring(ListItem.Path,spinners)</visible>
+							<texture>$INFO[ListItem.Thumb]</texture>
+                            <aspectratio>keep</aspectratio>
+                            <visible>!IsEmpty(ListItem.Thumb)</visible>
+							<!--<texture fallback="DefaultAddonNone.png">$INFO[Listitem.FileNameAndPath]</texture>                           
+                            <visible>substring(ListItem.Path,spinners)</visible>-->
                         </control>
                         <control type="label">
-                            <posy>-18</posy>
-                            <posx>170</posx>
+                            <posy>0</posy>
+                            <posx>80</posx>
                             <width>580</width>
                             <height>60</height>
 							<align>left</align>
+							<aligny>center</aligny>
                             <font>SmallBold</font>
-                            <textcolor>Black70</textcolor>
+                            <textcolor>$VAR[ButtonFocusTextColour]</textcolor>
+							<focusedcolor>$VAR[ButtonFocusTextColor]</focusedcolor>
+                            <disabledcolor>$VAR[DisabledTextColour]</disabledcolor>
                             <info>ListItem.Label</info>
-                            <animation effect="slide" end="0,18" condition="IsEmpty(ListItem.Label2)">Conditional</animation>-->
+							<scroll>true</scroll>
+                            <!--<animation effect="slide" end="0,18" condition="IsEmpty(ListItem.Label2)">Conditional</animation>-->
                         </control>
-                        <control type="label">
-                            <posx>170</posx>
+                        <!--<control type="label">
+                            <posx>110</posx>
                             <posy>18</posy>
-                            <width>580</width>
+                            <width>620</width>
                             <height>60</height>
                             <font>Mini</font>
-                            <textcolor>Black70</textcolor>
+                            <textcolor>$VAR[ButtonFocusTextColour]</textcolor>
                             <label>$INFO[ListItem.Label2]</label>
-                        </control>
+                        </control>-->
                     </control>
 					
                     <control type="group">
                         <visible>Control.HasFocus(450)</visible>
-                        <control type="image">
-                            <width>580</width>
-                            <height>64</height>
-                            <texture border="20" colordiffuse="$VAR[ButtonFocusColour]">common/box.png</texture><!--replaced "$VAR[ColourHighlight]" -->
+						<control type="image">
+                            <width>650</width>
+                            <height>60</height>
+                            <texture border="20" colordiffuse="$VAR[ButtonFocusColour]">common/box.png</texture>
                         </control>
-                        <control type="image">
+                        <!--<control type="image">
                             <posx>20</posx>
                             <posy>5</posy>
                             <width>60</width>
-                            <height>55</height>
+                            <height>60</height>
+							<texture>$INFO[ListItem.ActualIcon,default/]</texture>
                             <aspectratio scalediffuse="false">scale</aspectratio>
-                            <texture diffuse="diffuse/dialogselect.png" fallback="DefaultAddonNone.png">$INFO[ListItem.ActualIcon,default/]</texture>
+							<visible>!IsEmpty(ListItem.Thumb)</visible>
+                            <!--<texture diffuse="common/circle-shadow.png" fallback="DefaultAddonNone.png">$INFO[ListItem.ActualIcon,default/]</texture>
                             <visible>!Skin.HasSetting(global.hidecirles) + !substring(ListItem.Path,spinners)</visible>
+                        </control>-->
+                        <control type="image">
+                            <posx>5</posx>
+                            <posy>0</posy>
+                            <width>60</width>
+                            <height>60</height>
+							<texture fallback="DefaultAddonNone.png">$INFO[ListItem.ActualIcon,default/]</texture>
+                            <aspectratio>keep</aspectratio>
+							<visible>IsEmpty(ListItem.Thumb)</visible>
+                            <!--<visible>Skin.HasSetting(global.hidecirles) + !substring(ListItem.Path,spinners)</visible>-->
                         </control>
                         <control type="image">
-                            <posx>20</posx>
+                            <posx>0</posx>
                             <posy>5</posy>
                             <width>60</width>
-                            <height>55</height>
-                            <aspectratio scalediffuse="false">keep</aspectratio>							
-                            <texture fallback="DefaultAddonNone.png">$INFO[ListItem.ActualIcon,default/]</texture>
-                            <visible>Skin.HasSetting(global.hidecirles) + !substring(ListItem.Path,spinners)</visible>
-                        </control>
-                        <control type="image">
-                            <posx>20</posx>
-                            <posy>5</posy>
-                            <width>60</width>
-                            <height>55</height>
-                            <aspectratio scalediffuse="false">center</aspectratio>
-                            <texture fallback="DefaultAddonNone.png">$INFO[Listitem.FileNameAndPath]</texture>
-                            <visible>substring(ListItem.Path,spinners)</visible>
+                            <height>50</height>
+							<texture>$INFO[ListItem.Thumb]</texture>
+                            <aspectratio>keep</aspectratio>
+							<visible>!IsEmpty(ListItem.Thumb)</visible>
+                            <!--<texture fallback="DefaultAddonNone.png">$INFO[Listitem.FileNameAndPath]</texture>
+                            <visible>substring(ListItem.Path,spinners)</visible>-->
                         </control>
 
                         <control type="label">
-                            <posy>-18</posy>
-                            <posx>170</posx>
+                            <posy>0</posy>
+                            <posx>80</posx>
                             <width>580</width>
                             <height>60</height>
 							<align>left</align>
+							<aligny>center</aligny>
                             <font>SmallBold</font>
-                            <textcolor>$VAR[ColourSelected]</textcolor>
-                            <selectedcolor>$VAR[ColourSelected]</selectedcolor>
+                            <textcolor>$VAR[ButtonFocusTextColour]</textcolor>
+                            <selectedcolor>$VAR[ButtonFocusTextColour]</selectedcolor>
                             <info>ListItem.Label</info>
-                            <animation effect="slide" end="0,18" condition="IsEmpty(ListItem.Label2)">Conditional</animation>-->
+							<scroll>true</scroll>
+                            <!--<animation effect="slide" end="0,18" condition="IsEmpty(ListItem.Label2)">Conditional</animation>-->
                         </control>
-                        <control type="label">
-                            <left>170</left>
+                        <!--<control type="label">
+                            <left>110</left>
                             <posy>18</posy>
-                            <width>580</width>
+                            <width>650</width>
                             <height>60</height>
                             <font>Mini</font>
-                            <textcolor>$VAR[ColourSelected]</textcolor>
+                            <textcolor>$VAR[ButtonFocusTextColour]</textcolor>
                             <selectedcolor>$VAR[ColourSelected]</selectedcolor>
                             <label>$INFO[ListItem.Label2]</label>
-                        </control>
+                        </control>-->
                     </control>
-
                 </focusedlayout>
             </control>
+			
+			<control type="list" id="451">
+                <posx>478</posx>
+                <posy>320</posy>
+                <width>580</width>
+                <height>420</height>
+                <onleft>9000</onleft>
+				<onright>60</onright>
+                <onup>451</onup>
+                <ondown>9000</ondown>
+				<pagecontrol>60</pagecontrol>
+                <scrolltime>0</scrolltime>
+                <itemlayout height="60">
+				    <control type="image">
+                        <posx>5</posx>
+                        <posy>0</posy>
+                        <width>60</width>
+                        <height>60</height>
+						<texture>$INFO[ListItem.ActualIcon,default/]</texture>
+						<aspectratio>keep</aspectratio>
+                        <visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>	
+				    <control type="image">
+                        <posx>0</posx>
+                        <posy>5</posy>
+                        <width>60</width>
+                        <height>50</height>
+						<texture>$INFO[ListItem.Thumb]</texture>
+						<aspectratio>keep</aspectratio>
+                        <visible>!IsEmpty(ListItem.Thumb)</visible>
+                    </control>
+				    <control type="label">
+                        <posy>5</posy>
+                        <posx>80</posx>
+                        <width>580</width>
+                        <height>60</height>
+						<align>left</align>
+                        <aligny>center</aligny>
+                        <font>SmallBold</font>
+                        <textcolor>Black70</textcolor>
+						<focusedcolor>$VAR[ButtonFocusTextColor]</focusedcolor>
+                        <disabledcolor>$VAR[DisabledTextColour]</disabledcolor>
+                        <info>ListItem.Label</info>
+						<scroll>false</scroll>
+                    </control>
+	            </itemlayout>
+                <focusedlayout height="60">
+                    <control type="group">
+                        <visible>!Control.HasFocus(451)</visible>
+						<control type="image">
+                            <posx>5</posx>
+                            <posy>0</posy>
+                            <width>60</width>
+                            <height>60</height>
+						    <texture>$INFO[ListItem.ActualIcon,default/]</texture>
+							<aspectratio>keep</aspectratio>
+                            <visible>IsEmpty(ListItem.Thumb)</visible>
+					    </control>	
+				        <control type="image">
+                            <posx>0</posx>
+                            <posy>5</posy>
+                            <width>60</width>
+                            <height>50</height>
+ 						    <texture>$INFO[ListItem.Thumb]</texture>
+							<aspectratio>keep</aspectratio>
+                            <visible>!IsEmpty(ListItem.Thumb)</visible>
+                        </control>
+				        <control type="label">
+                            <posy>0</posy>
+                            <posx>80</posx>
+                            <width>580</width>
+                            <height>60</height>
+						    <align>left</align>
+                            <aligny>center</aligny>
+                            <font>SmallBold</font>
+                            <textcolor>Black70</textcolor>
+						    <focusedcolor>$VAR[ButtonFocusTextColor]</focusedcolor>
+                            <disabledcolor>$VAR[DisabledTextColour]</disabledcolor>
+                            <info>ListItem.Label</info>
+						    <scroll>false</scroll>
+							<animation effect="slide" end="-50" time="0" condition="IsEmpty(ListItem.Icon)">Conditional</animation>
+						</control>
+                    </control>
+					<control type="group">
+                        <visible>Control.HasFocus(451)</visible>		
+						<control type="image">
+                            <width>650</width>
+                            <height>60</height>
+                            <texture border="20" colordiffuse="$VAR[ButtonFocusColour]">common/box.png</texture>
+                        </control>	
+						<control type="image">
+                            <posx>5</posx>
+                            <posy>0</posy>
+                            <width>60</width>
+                            <height>60</height>
+							<texture fallback="DefaultAddonNone.png">$INFO[ListItem.ActualIcon,default/]</texture>
+                            <aspectratio>keep</aspectratio>
+							<visible>IsEmpty(ListItem.Thumb)</visible>
+                        </control>	
+						<control type="image">
+                            <posx>0</posx>
+                            <posy>5</posy>
+                            <width>60</width>
+                            <height>50</height>
+							<texture>$INFO[ListItem.Thumb]</texture>
+                            <aspectratio>keep</aspectratio>
+							<visible>!IsEmpty(ListItem.Thumb)</visible>
+                        </control>	
+						<control type="label">
+                            <posy>0</posy>
+                            <posx>80</posx>
+                            <width>580</width>
+                            <height>60</height>
+							<align>left</align>
+							<aligny>center</aligny>
+                            <font>SmallBold</font>
+                            <textcolor>$VAR[ButtonFocusTextColour]</textcolor>
+                            <selectedcolor>$VAR[ButtonFocusTextColour]</selectedcolor>
+                            <info>ListItem.Label</info>
+							<scroll>true</scroll>
+                            <animation effect="slide" end="-50" time="0" condition="IsEmpty(ListItem.Icon)">Conditional</animation>
+                        </control>
+					</control>
+                </focusedlayout>
+            </control>
+
+			
             <control type="grouplist" id="9000">
-                <posx>100</posx>
-                <posy>620</posy>
+                <posx>590</posx>
+                <posy>810</posy>
                 <itemgap>20</itemgap>
                 <orientation>horizontal</orientation>
                 <onup>450</onup>
-                <ondown>450</ondown>
 
                 <control type="button" id="413">
                     <description>Ok</description>
@@ -281,20 +423,42 @@
 
             <control type="image">
                 <description>Large Icon Image</description>
-                <posx>580</posx>
-                <posy>65</posy>
-                <width>500</width>
-                <height>800</height>
-				<texture>$INFO[Container(450).ListItem.ActualIcon,default/]</texture>
+                <posx>1171</posx>
+                <posy>308</posy>
+                <width>315</width>
+                <height>470</height>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<!--<texture>$INFO[Container(450).ListItem.ActualIcon,default/]</texture>
                 <!--<texture fallback="DefaultAddonNone.png">$INFO[Container(450).ListItem.Icon]</texture>-->
-                <aspectratio align="center" aligny="top">keep</aspectratio>
+                <aspectratio>keep</aspectratio>
+            </control>
+			<control type="image">
+				<posx>1125</posx>
+				<posy>320</posy>
+				<height>445</height>
+				<width>2</width>
+				<texture colordiffuse="Black">common/white.png</texture>
+			</control>
+			
+			<control type="scrollbar" id="60">
+                <posy>340</posy>
+                <posx>1090</posx>
+                <height>400</height>
+		        <onleft>450</onleft>
+				<onleft>451</onleft>
+				<onright>noop</onright>
+				<showonepage>false</showonepage>
+                <texturesliderbackground border="4" colordiffuse="$VAR[ScrollbarBGColour]">scrollbar/scrollv.png</texturesliderbackground>
+                <texturesliderbar border="4" colordiffuse="$VAR[ScrollbarUnFocusedColour]">scrollbar/scrollv.png</texturesliderbar>
+                <texturesliderbarfocus border="4" colordiffuse="$VAR[ScrollbarFocusedColour]">scrollbar/scrollv.png</texturesliderbarfocus>
+                <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
             </control>
             		<!--Up/Down Arrows-->	
 
-            <control type="image">
+            <!--<control type="image">
 				    <description>arrow image</description>
-				    <posy>125</posy>
-				    <posx>260</posx>
+				    <posy>320</posy>
+				    <posx>1065</posx>
 				    <width>20</width>
 				    <height>25</height>
 				    <texture colordiffuse="Dark1" flipy="true">common/arrow-small.png</texture>
@@ -302,8 +466,8 @@
 			</control>
 			<control type="image">
 				    <description>arrow image</description>
-				    <posy>480</posy>
-				    <posx>260</posx>
+				    <posy>700</posy>
+				    <posx>1065</posx>
 				    <width>20</width>
 				    <height>25</height>
 				    <texture colordiffuse="Dark1" flipy="false">common/arrow-small.png</texture>

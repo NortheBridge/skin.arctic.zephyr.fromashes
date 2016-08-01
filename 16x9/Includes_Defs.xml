@@ -30,11 +30,7 @@
 	<variable name="ViewsSelectHighlight">  
         <value condition="!IsEmpty(Skin.String(viewsselectcolor.name))">$INFO[Skin.String(viewsselectcolor.name)]</value>
         <value>Dark1</value>
-	</variable>	
-	<variable name="WidgetPanelColour">  
-        <value condition="!IsEmpty(Skin.String(widgetpanelcolor.name))">$INFO[Skin.String(widgetpanelcolor.name)]</value>
-        <value>Background</value>
-	</variable>	
+	</variable>		
 	<variable name="HomeHeaderBGColour">  
         <value condition="!IsEmpty(Skin.String(headerbackgroundcolor.name))">$INFO[Skin.String(headerbackgroundcolor.name)]</value>
         <value>Background</value>
@@ -55,7 +51,7 @@
 	
 <!-- 3rd Generation Color Enhancements -->
 <!-- ###Begin### -->
-	<variable name="WidgetPanelColour">  <!--Added-->
+	<variable name="WidgetPanelColour">  
         <value condition="!IsEmpty(Skin.String(widgetpanelcolor.name))">$INFO[Skin.String(widgetpanelcolor.name)]</value>
         <value>Background</value>
 	</variable>		
@@ -129,11 +125,11 @@
 	</variable>-->
 	<variable name="ButtonColour">  
         <value condition="!IsEmpty(Skin.String(buttoncolor.name))">$INFO[Skin.String(buttoncolor.name)]</value>
-        <value>Black12</value>	
+        <value>FF5D5D5D</value>	
 	</variable>
 	<variable name="ButtonFocusColour">  
         <value condition="!IsEmpty(Skin.String(buttonfocuscolor.name))">$INFO[Skin.String(buttonfocuscolor.name)]</value>
-        <value>Highlight</value><!--Dark1-->	
+        <value>FF325CFE</value><!--Dark1-->	
 	</variable>
 	<variable name="ButtonTextColour">  
         <value condition="!IsEmpty(Skin.String(buttontextcolor.name))">$INFO[Skin.String(buttontextcolor.name)]</value>
@@ -763,8 +759,10 @@
 		<width>300</width>
 		<font>Button</font>
 <!-- 4th GEN Colour Modification -->		
-		<textcolor>$VAR[ButtonTextColour]</textcolor>
-		<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="5">common/box.png</texturefocus>
+		<selectedcolor>$VAR[ButtonFocusTextColour]</selectedcolor>
+        <textcolor>$VAR[ButtonTextColour]</textcolor>
+		<focusedcolor>$VAR[ButtonFocusTextColour]</focusedcolor>
+		<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
 		<!--<textcolor>Black70</textcolor>
 		<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>-->
 	</include>
@@ -787,46 +785,15 @@
 		<width>1320</width>
 		<height>840</height>
 		<control type="image">
-			<left>-8</left>
-			<right>-8</right>
-			<top>-8</top>
-			<bottom>-8</bottom>
-<!-- 4th GEN Colour Modification 			
-			<texture border="16" colordiffuse="$VAR[DialogPanelColour]">common/rounded-shadow8.png</texture>-->
-			<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
+			<left>-24</left>
+            <right>-24</right>
+            <top>-24</top>
+            <bottom>-24</bottom>
+            <bordertexture border="32">common/shadow-24.png</bordertexture>
+            <bordersize>24</bordersize>
+            <texture colordiffuse="White100" border="16">common/box.png</texture>
 		</control>
-			<!-- Right Panel Foreground -->		
-		<!--<control type="image">
-            <posx>594</posx>
-            <posy>203</posy>
-            <width>1230</width>
-            <height>712</height>
-			<texture colordiffuse="Panel" border="12">dialog/frame-fo.png</texture>
-            </control>
-	<!-- Left Panel Foreground-->		
-		<!--<control type="image">
-                <posx>85</posx>
-                <posy>203</posy>
-                <width>450</width>
-                <height>712</height>
-				<texture colordiffuse="FF090A0A" border="12">dialog/frame_fo.png</texture>
-        </control>
-    <!-- Left Panel Background -->	
-		<!--<control type="image">
-                <posx>75</posx>
-                <posy>190</posy>
-                <width>479</width>
-                <height>740</height>
-                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
-        </control>		
-	<!-- Right Panel Background -->	
-		<!--<control type="image">
-                <posx>580</posx>
-                <posy>190</posy>
-                <width>1259</width>
-                <height>740</height>
-                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
-        </control>-->
+
 	</include>
 	<include name="DefDialogInfoPanelFanart">
 		<include>Animation.FadeIn.Slide</include>
@@ -859,8 +826,8 @@
 	<include name="DefDialogHeader">
 		<description>header label</description>
 		<centerleft>50%</centerleft>
-		<posy>15</posy>
-		<width>990</width>
+		<posy>40</posy>
+		<width>1115</width>
 		<align>center</align>
 		<font>MediumBold</font>
 <!-- 4th GEN Colour Modification -->		
@@ -871,14 +838,38 @@
 		<include>Animation.ZoomIn</include>
 		<centerleft>50%</centerleft>
 		<centertop>50%</centertop>
-		<height>900</height>
-		<width>1080</width>
+		<height>800</height>
+		<width>1180</width>
 		<control type="image">
+			<description>background image</description>
+			<posx>5</posx>
+			<posy>5</posy>
+			<width>1170</width>
+            <height>790</height>
+			<!--<texture>buttons/dialogbutton-fo.png</texture>
+			<color>Black</color>-->
+			<texture border="5" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
+        </control>
+		<control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1180</width>
+            <height>800</height>
+            <texture colordiffuse="Panel" border="16">dialog/frame_Landscape-fo.png</texture>
+        </control>
+		<control type="image">
+            <posx>33</posx>
+            <posy>29</posy>
+            <width>1115</width>
+            <height>90</height>
+            <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+        </control>
+		<!--<control type="image">
 			<width>1080</width>
 			<height>900</height>
-			<!--<texture border="16" colordiffuse="$VAR[DialogPanelColour]">common/rounded-shadow8.png</texture>-->
-			<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>-->
-		</control>		
+			<!--<texture border="16" colordiffuse="$VAR[DialogPanelColour]">common/rounded-shadow8.png</texture>
+			<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
+		</control>-->		
 	</include>
 	<include name="DefDialogOK">
 		<centerleft>50%</centerleft>
@@ -1092,41 +1083,51 @@
             <textcolor>Black70</textcolor>
 		</control>-->
     </include>
+	
 	<include name="Def9000GroupList">
 		<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
 		<onleft>50</onleft>
 		<onright>50</onright>
-		<onback>50</onback>
-		
+		<onback>50</onback>		
 		<posx>18</posx>
 		<posy>16</posy>
 		<width>430</width><!--301-->
 		<height>350</height>
-		<itemgap>0</itemgap>-->
+		<itemgap>0</itemgap>
 	</include>
+	
 	<include name="Def9000SettingsMenu">
 		<control type="group">
 			<visible>ControlGroup(9000).HasFocus()</visible>
 			<include>GlobalOverlay</include>
 		</control>
 		<control type="group">
-			<height>732</height>
+			<height>462</height>
 			<include>Def9000Background</include>
+			<control type="label">
+				<description>Heading</description>
+                <posx>48</posx>
+                <posy>30</posy>
+                <width>400</width>
+                <align>center</align>
+                <font>SmallBold</font>
+				<label>Settings SubMenu</label>
+			</control>	
 			<control type="image">
 				<description>arrow image</description>
 				<centerleft>50%</centerleft>
-				<posy>-16</posy>
+				<posy>116</posy>
 				<width>16</width>
 				<height>16</height>
-				<texture colordiffuse="White70" flipy="true">common/arrow-small.png</texture>
+				<texture colordiffuse="Dark2" flipy="true">common/arrow-small.png</texture>
 			</control>
 			<control type="image">
 				<description>arrow image</description>
 				<centerleft>50%</centerleft>
-				<posy>732</posy>
+				<posy>520</posy>
 				<width>16</width>
 				<height>16</height>
-				<texture colordiffuse="White70" flipy="false">common/arrow-small.png</texture>
+				<texture colordiffuse="Dark2" flipy="false">common/arrow-small.png</texture>
 			</control>
 			<control type="grouplist" id="9000">
 				<onleft condition="Window.IsVisible(SettingsCategory.xml)">3</onleft>
@@ -1135,53 +1136,80 @@
 				<onright condition="!Window.IsVisible(SettingsCategory.xml)">9101</onright>
 				<onback condition="Window.IsVisible(SettingsCategory.xml)">3</onback>
 				<onback condition="!Window.IsVisible(SettingsCategory.xml)">9101</onback>
-				<height>700</height>
+				<posy>150</posy>
+				<posx>36</posx>
+				<height>350</height>
+				<itemgap>4</itemgap>
 				<include>Def9000GroupList</include>
 				<control type="button" id="9001">
 					<onclick>ReplaceWindow(AppearanceSettings)</onclick>
 					<onclick>SetFocus(3)</onclick>
+					<height>55</height>
+					<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
 					<include>DefContextButton</include>
 					<label>480</label>
 				</control>
 				<control type="button" id="9002">
 					<onclick>ReplaceWindow(VideosSettings)</onclick>
 					<onclick>SetFocus(3)</onclick>
+					<height>55</height>
+					<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
 					<include>DefContextButton</include>
 					<label>3</label>
 				</control>
 				<control type="button" id="9003">
 					<onclick>ReplaceWindow(MusicSettings)</onclick>
 					<onclick>SetFocus(3)</onclick>
+					<height>55</height>
+					<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
 					<include>DefContextButton</include>
 					<label>2</label>
 				</control>
 				<control type="button" id="9004">
 					<onclick>ReplaceWindow(AddonBrowser)</onclick>
 					<onclick>SetFocus(3)</onclick>
+					<height>55</height>
+					<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
 					<include>DefContextButton</include>
 					<label>24001</label>
 				</control>
 				<control type="button" id="9005">
 					<onclick>ReplaceWindow(PicturesSettings)</onclick>
 					<onclick>SetFocus(3)</onclick>
+					<height>55</height>
+					<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
 					<include>DefContextButton</include>
 					<label>1</label>
 				</control>
 				<control type="button" id="9006">
 					<onclick>ReplaceWindow(WeatherSettings)</onclick>
 					<onclick>SetFocus(3)</onclick>
+					<height>55</height>
+					<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
 					<include>DefContextButton</include>
 					<label>8</label>
 				</control>
 				<control type="button" id="9007">
 					<onclick>ReplaceWindow(NetworkSettings)</onclick>
 					<onclick>SetFocus(3)</onclick>
+					<height>55</height>
+					<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
 					<include>DefContextButton</include>
 					<label>705</label>
 				</control>
 				<control type="button" id="9008">
 					<onclick>ReplaceWindow(SystemSettings)</onclick>
 					<onclick>SetFocus(3)</onclick>
+					<height>55</height>
+					<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
 					<include>DefContextButton</include>
 					<label>13000</label>
 				</control>
@@ -1189,17 +1217,26 @@
 				<control type="button" id="9010">
 					<onclick>ReplaceWindow(PVRSettings)</onclick>
 					<onclick>SetFocus(3)</onclick>
+					<height>55</height>
+					<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
 					<include>DefContextButton</include>
 					<label>19191</label>
 				</control>
 				<control type="button" id="9011">
 					<onclick>ReplaceWindow(7)</onclick>
 					<onclick>SetFocus(3)</onclick>
+					<height>55</height>
+					<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
 					<include>DefContextButton</include>
 					<label>130</label>
 				</control>
 				<control type="button" id="9012">
 					<onclick>ReplaceWindow(SkinSettings)</onclick>
+					<height>55</height>
+					<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
 					<include>DefContextButton</include>
 					<label>20077</label>
 				</control>
@@ -1232,16 +1269,32 @@
 		<include>Animation.FadeOut</include>
 		<top>184</top>
 		<centerleft>50%</centerleft>
-		<height>382</height>
-		<width>466</width>
+		<height>560</height>
+		<width>506</width>
 		<control type="image">
 			<description>background image</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>466</width>
-			<height>100%</height>
-			<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
-		</control>
+			<posx>5</posx>
+			<posy>5</posy>
+			<width>496</width>
+            <height>550</height>
+			<!--<texture>buttons/dialogbutton-fo.png</texture>
+			<color>Black</color>-->
+			<texture border="5" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
+        </control>
+		<control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>506</width>
+            <height>560</height>
+            <texture colordiffuse="Panel" border="16">dialog/frame_Landscape-fo.png</texture>
+        </control>
+		<control type="image">
+            <posx>21</posx>
+            <posy>20</posy>
+            <width>461</width>
+            <height>90</height>
+            <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+        </control>
 	</include>
 	<include name="Def9000Background2">
 		<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus() | Control.HasFocus(7000) | Control.HasFocus(6000)</visible>
@@ -1252,12 +1305,34 @@
 		<width>466</width>
 		<control type="image">
 			<description>background image</description>
+			<posx>5</posx>
+			<posy>5</posy>
+			<width>1070</width>
+            <height>456</height>
+			<texture border="5" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
+        </control>
+		<control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1080</width>
+            <height>466</height>
+            <texture colordiffuse="Panel" border="16">dialog/frame_Landscape-fo.png</texture>
+        </control>
+		<control type="image">
+            <posx>22</posx>
+            <posy>20</posy>
+            <width>1035</width>
+            <height>90</height>
+            <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+        </control>
+		<!--<control type="image">
+			<description>background image</description>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>466</width>
 			<height>100%</height>
 			<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
-		</control>
+		</control>-->
 	</include>
 	<include name="Def9000Background3">
 		<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
@@ -1359,6 +1434,7 @@
 			<altlabel>585</altlabel>
 		</control>
 		<control type="radiobutton" id="9030" description="Plot Overlay">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>31255</label>
@@ -1366,6 +1442,7 @@
 			<onclick>Skin.ToggleSetting(furniture.overlayinfo)</onclick>
 		</control>
 		<control type="radiobutton" id="9001" description="Low List (50)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>31142</label>
@@ -1375,6 +1452,7 @@
 			<visible>Control.IsVisible(50)</visible>
 		</control>
 		<control type="radiobutton" id="9009" description="Low List (50)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>31214</label>
@@ -1383,6 +1461,7 @@
 			<visible>Control.IsVisible(50) + !Skin.HasSetting(50list.low)</visible>
 		</control>
 		<control type="radiobutton" id="9002" description="No Wrap (53)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>31148</label>
@@ -1392,6 +1471,7 @@
 			<visible>Control.IsVisible(53)</visible>
 		</control>
 		<control type="radiobutton" id="9003" description="Info Wall (55)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>31147</label>
@@ -1402,6 +1482,7 @@
 			<visible>Control.IsVisible(55)</visible>
 		</control>
 		<control type="radiobutton" id="9004" description="Poster Wall (55)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>31185</label>
@@ -1412,6 +1493,7 @@
 			<visible>Control.IsVisible(55)</visible>
 		</control>
 		<control type="radiobutton" id="9005" description="Info Media (56)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>31147</label>
@@ -1422,6 +1504,7 @@
 			<visible>Control.IsVisible(56)</visible>
 		</control>
 		<control type="radiobutton" id="9006" description="Low List Media (56)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>31142</label>
@@ -1432,6 +1515,7 @@
 			<visible>Control.IsVisible(56)</visible>
 		</control>
 		<control type="radiobutton" id="9007" description="Low List (57)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>31142</label>
@@ -1441,6 +1525,7 @@
 			<visible>Control.IsVisible(57)</visible>
 		</control>
 		<control type="radiobutton" id="9008" description="Big Wide Info (51)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>31147</label>
@@ -1451,6 +1536,7 @@
 			<visible>Control.IsVisible(51)</visible>
 		</control>
 		<control type="radiobutton" id="9014" description="Big Wide Classic (51)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>31245</label>
@@ -1461,6 +1547,7 @@
 			<visible>Control.IsVisible(51)</visible>
 		</control>
 		<control type="radiobutton" id="9011" description="Banner show poster (54)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>31147</label>
@@ -1469,6 +1556,7 @@
 			<visible>Control.IsVisible(54) + !Container.Content(seasons)</visible>
 		</control>
 		<control type="radiobutton" id="9012" description="Big List Double Pane (52)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>31235</label>
@@ -1478,6 +1566,7 @@
 			<visible>Control.IsVisible(52)</visible>
 		</control>
 		<control type="radiobutton" id="9016" description="Discart (513,514)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>Show DiscArt</label>
@@ -1486,6 +1575,7 @@
 			<visible>Control.IsVisible(513) | Control.IsVisible(514)</visible>
 		</control>
 		<control type="radiobutton" id="9017" description="Animate Discart (513,514)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label> - Rotate DiscArt</label>
@@ -1495,6 +1585,7 @@
 			<visible>Skin.HasSetting(views.discart)</visible>
 		</control>
 		<control type="radiobutton" id="9018" description="Cases (513,514,50,53,56)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>Use Cases</label>
@@ -1503,6 +1594,7 @@
 			<visible>Control.IsVisible(513) | Control.IsVisible(514) | Control.IsVisible(50) | Control.IsVisible(53) | Control.IsVisible(56)</visible>
 		</control>
 		<control type="radiobutton" id="9019" description="Clear Cases (513,514,50,53,56)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label> - Clear Cases</label>
@@ -1514,6 +1606,7 @@
 			<visible>Skin.HasSetting(views.cases)</visible>
 		</control>
 		<control type="radiobutton" id="9020" description="Colour Cases (513,514,50,53,56)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label> - Colour Cases</label>
@@ -1525,6 +1618,7 @@
 			<visible>Skin.HasSetting(views.cases)</visible>
 		</control>
 		<control type="radiobutton" id="9021" description="BD/DVD Cases (513,514,50,53,56)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label> - BD/DVD Cases</label>
@@ -1536,6 +1630,7 @@
 			<visible>Skin.HasSetting(views.cases)</visible>
 		</control>
 		<control type="radiobutton" id="9022" description="Title Overlay (515)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>Show title overlay</label>
@@ -1544,6 +1639,7 @@
 			<visible>Control.IsVisible(515)</visible>
 		</control>
 		<control type="radiobutton" id="9023" description="Prefer Fanart (500)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>Show Fanart Image</label>
@@ -1552,6 +1648,7 @@
 			<visible>Control.IsVisible(500)</visible>
 		</control>
 		<control type="radiobutton" id="9024" description="Prefer Fanart (51)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>Show Fanart Image</label>
@@ -1560,6 +1657,7 @@
 			<visible>Control.IsVisible(51)</visible>
 		</control>
 		<control type="radiobutton" id="9028" description="Show Tick (155)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>Hide Watched/Unwatched Indicator</label>
@@ -1568,6 +1666,7 @@
 			<visible>Control.IsVisible(155)</visible>
 		</control>
 		<control type="radiobutton" id="9029" description="Show Tick (156)">
+		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>Hide Watched/Unwatched Indicator</label>
@@ -1741,7 +1840,7 @@
 		<font>Button</font>
 		<textcolor>Dark2</textcolor>
 		<width>313</width>
-		<height>68</height>
+		<height>60</height>
 		<onfocus>ClearProperty(content)</onfocus>
 		<texturenofocus colordiffuse="Dark4" border="5">common/box.png</texturenofocus>
 		<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
