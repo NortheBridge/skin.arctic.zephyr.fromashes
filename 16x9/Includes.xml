@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
+<!-- Updated for Kodi Krypton Marker -->
 <includes>
 	<include file="Defaults.xml" />
 	<!-- Views -->
@@ -34,7 +35,7 @@
 	<include file="Includes_Home_NetflixXbmcUI.xml" />
 	<!-- Skin Shortcuts -->
 	<include file="script-skinshortcuts-includes.xml" />
-	<include name="HiddenButton">
+	<include content="HiddenButton">
 		<posx>-20</posx>
 		<posy>-20</posy>
 		<width>1</width>
@@ -44,34 +45,34 @@
 		<texturefocus>-</texturefocus>
 	</include>
 <!-- Added for New Busy Spinner Background Overlay -->	
-	<include name="Dimensions_Spinner_Halfscreen">
+	<include content="Dimensions_Spinner_Halfscreen">
 	    <posx>0</posx>
 		<top>360</top>
 		<width>1920</width>
 		<height>440</height>
 		<colordiffuse>Black</colordiffuse>
 	</include>
-	<include name="Dimensions_Fullscreen">
+	<include content="Dimensions_Fullscreen">
 		<posx>0</posx>
 		<posy>0</posy>
 		<width>1920</width>
 		<height>1080</height>
 	</include>
-	<include name="WindowID">
+	<include content="WindowID">
 		<width>780</width>
 		<height>21</height>
 		<textcolor>Blue</textcolor>
 		<shadowcolor>Black</shadowcolor>
 		<align>left</align>
 	</include>
-	<include name="DialogID">
+	<include content="DialogID">
 		<width>780</width>
 		<height>21</height>
 		<textcolor>Green</textcolor>
 		<shadowcolor>Black</shadowcolor>
 		<align>left</align>
 	</include>
-	<include name="PathID">
+	<include content="PathID">
 		<posx>15r</posx>
 		<posy>15</posy>
 		<width>780</width>
@@ -80,7 +81,7 @@
 		<shadowcolor>Black</shadowcolor>
 		<align>right</align>
 	</include>
-	<include name="ControlID">
+	<include content="ControlID">
 		<posx>15r</posx>
 		<posy>48</posy>
 		<width>780</width>
@@ -91,7 +92,7 @@
 	</include>
 	
 <!--- Modification Addition-----Skin Settings----------------------------------->	
-	<include name="SkinSettingsTopBar">
+	<include content="SkinSettingsTopBar">
 	    <control type="image">
 			<include>Animation.FadeIn</include>
 			<!--<left>72</left>
@@ -104,7 +105,7 @@
 	</include>	
 	
 <!-- Added for new Busy Spinner Background Overlay -->	
-	<include name="GlobalSpinnerOverlay">
+	<include content="GlobalSpinnerOverlay">
 		<control type="image">
 			<include>Animation.FadeIn</include>
 			<include condition="!Window.IsVisible(DialogBusy.xml)">Animation.FadeOut</include>
@@ -112,7 +113,7 @@
 			<texture border="5">common/black-back.png</texture>
 		</control>
 	</include>	
-	<include name="GlobalOverlay">
+	<include content="GlobalOverlay">
 		<control type="image">
 			<include>Animation.FadeIn</include>
 			<include condition="!Window.IsVisible(DialogButtonMenu.xml)">Animation.FadeOut</include>
@@ -143,7 +144,7 @@
 		<value condition="!IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
 		<value>common/null.png</value>
 	</variable>
-	<include name="GlobalVideoWindow">
+	<include content="GlobalVideoWindow">
 		<control type="image" description="Background">
 			<include>Dimensions_Fullscreen</include>
 			<texture colordiffuse="Background">common/bg.jpg</texture>
@@ -158,7 +159,7 @@
 			<include>Dimensions_Fullscreen</include>
 		</control>
 	</include>
-	<include name="GlobalVisualisation">
+	<include content="GlobalVisualisation">
 		<control type="group">
 			<visible>Player.HasAudio + Skin.HasSetting(global.showvisualisation)</visible>
 			<control type="visualisation">
@@ -181,10 +182,10 @@
 			</control>
 		</control>
 	</include>
-	<include name="GlobalBackgroundFade">
+	<include content="GlobalBackgroundFade">
 		<colordiffuse>$VAR[FanartFadeLabel]</colordiffuse>
 	</include>
-	<include name="GlobalBackground">
+	<include content="GlobalBackground">
 		<include>GlobalVideoWindow</include>
 		<include>GlobalVisualisation</include>
 		<control type="image" description="Background">
@@ -232,7 +233,7 @@
 			<visible>Control.HasFocus(515)</visible>
 		</control>
 	</include>
-	<include name="NetflixBackground">
+	<include content="NetflixBackground">
 		<include>GlobalVideoWindow</include>
 		<include>GlobalVisualisation</include>
 		<control type="image">
@@ -261,7 +262,7 @@
 			<texture>backgrounds/black_content2.png</texture>
 		</control>
 	</include>
-	<include name="NetflixXbmcBackground">
+	<include content="NetflixXbmcBackground">
 		<include>GlobalVideoWindow</include>
 		<include>GlobalVisualisation</include>
 		<control type="image">
@@ -291,7 +292,7 @@
 		</control>
 	</include>
 	<!-- No textures -->
-	<include name="NoTextures">
+	<include content="NoTextures">
 		<texturefocus>-</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<alttexturenofocus>-</alttexturenofocus>
@@ -306,7 +307,7 @@
 		<texturedownfocus>-</texturedownfocus>
 	</include>
 	<!-- BBFC Ratings -->
-	<include name="lib_Rating_BBFC">
+	<include content="lib_Rating_BBFC">
 		<control type="image">
 			<centertop>50%</centertop>
 			<width>118</width>
@@ -397,7 +398,7 @@
 			<visible>Container.Content(movies) + !IsEmpty(ListItem.Mpaa) + SubString(ListItem.Mpaa,u) + Skin.HasSetting(furniture.flags.colour)</visible>
 		</control>
 	</include>
-	<include name="lib_Rating_BBFC_home">
+	<include content="lib_Rating_BBFC_home">
 		<control type="image">
 			<centertop>50%</centertop>
 			<width>118</width>
@@ -489,7 +490,7 @@
 		</control>
 	</include>
 	<!-- FSK Ratings -->
-	<include name="lib_Rating_FSK">
+	<include content="lib_Rating_FSK">
 		<control type="image">
 			<centertop>50%</centertop>
 			<width>118</width>
@@ -566,7 +567,7 @@
 			<visible>Container.Content(movies) + !IsEmpty(ListItem.Mpaa) + SubString(ListItem.Mpaa,18) + Skin.HasSetting(furniture.flags.colour)</visible>
 		</control>
 	</include>
-	<include name="lib_Rating_FSK_home">
+	<include content="lib_Rating_FSK_home">
 		<control type="image">
 			<centertop>50%</centertop>
 			<width>118</width>
@@ -644,7 +645,7 @@
 		</control>
 	</include>
 	<!-- Dutch Ratings -->
-	<include name="lib_Rating_NL">
+	<include content="lib_Rating_NL">
 		<control type="image">
 			<centertop>50%</centertop>
 			<width>50</width>
@@ -695,7 +696,7 @@
 			<visible>Container.Content(movies) + !IsEmpty(ListItem.Mpaa) + SubString(ListItem.mpaa,Nl-mg6)</visible>
 		</control>
 	</include>
-	<include name="lib_Rating_NL_home">
+	<include content="lib_Rating_NL_home">
 		<control type="image">
 			<centertop>50%</centertop>
 			<width>50</width>
@@ -747,7 +748,7 @@
 		</control>
 	</include>
 	<!-- MPAA Ratings -->
-	<include name="lib_Rating_MPAA">
+	<include content="lib_Rating_MPAA">
 		<control type="image">
 			<centertop>50%</centertop>
 			<width>118</width>
@@ -839,7 +840,7 @@
 			<visible>Container.Content(movies) + !IsEmpty(ListItem.Mpaa) + [SubString(ListItem.mpaa,US:G) | SubString(ListItem.mpaa,USA:G) | SubString(ListItem.mpaa,Rated G) | StringCompare(ListItem.Mpaa,G)] + Skin.HasSetting(furniture.flags.colour)</visible>
 		</control>
 	</include>
-	<include name="lib_Rating_MPAA_home">
+	<include content="lib_Rating_MPAA_home">
 		<control type="image">
 			<centertop>50%</centertop>
 			<width>118</width>
@@ -932,7 +933,7 @@
 		</control>
 	</include>
 	<!-- MPAA Ratings -->
-	<include name="lib_Rating_MPAA_small">
+	<include content="lib_Rating_MPAA_small">
 		<control type="image">
 			<centertop>50%</centertop>
 			<width>118</width>
@@ -1031,7 +1032,7 @@
 		</control>
 	</include>
 	<!-- TV Ratings -->
-	<include name="lib_Rating_TV">
+	<include content="lib_Rating_TV">
 		<control type="image">
 			<centertop>50%</centertop>
 			<width>118</width>
@@ -1123,7 +1124,7 @@
 			<visible>[Container.Content(episode) | Container.Content(episodes) | Container.Content(tvshow) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(season)] + !IsEmpty(ListItem.Mpaa) + SubString(ListItem.Mpaa,y7) + Skin.HasSetting(furniture.flags.colour)</visible>
 		</control>
 	</include>
-	<include name="lib_Rating_TV_home">
+	<include content="lib_Rating_TV_home">
 		<control type="image">
 			<centertop>50%</centertop>
 			<width>58</width>
@@ -1215,7 +1216,7 @@
 			<visible>substring(Container(301).ListItem.mpaa,TV-Y7) + Skin.HasSetting(furniture.flags.colour)</visible>
 		</control>
 	</include>
-	<include name="LanguageFlags">
+	<include content="LanguageFlags">
 		<control type="image">
 			<width>32</width>
 			<height>32</height>
@@ -1289,7 +1290,7 @@
 			<texture>$INFO[Window(movieinformation).Property(AudioLanguage.12),flags/language/,.png]</texture>
 		</control>
 	</include>
-	<include name="LanguageFlagsExtraInfo">
+	<include content="LanguageFlagsExtraInfo">
 		<control type="image">
 			<width>32</width>
 			<height>32</height>
@@ -1363,7 +1364,7 @@
 			<texture>$INFO[Window.Property(movie.AudioLanguage.12),flags/language/,.png]</texture>
 		</control>
 	</include>
-	<include name="SubtitleFlags">
+	<include content="SubtitleFlags">
 		<control type="image">
 			<width>32</width>
 			<height>32</height>
@@ -1437,7 +1438,7 @@
 			<texture>$INFO[Window(movieinformation).Property(SubtitleLanguage.12),flags/language/,.png]</texture>
 		</control>
 	</include>
-	<include name="SubtitleFlagsExtraInfo">
+	<include content="SubtitleFlagsExtraInfo">
 		<control type="image">
 			<width>32</width>
 			<height>32</height>

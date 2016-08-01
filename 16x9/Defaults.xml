@@ -102,10 +102,10 @@
         <selectedcolor>$VAR[ColourHighlight2]</selectedcolor>
         <texturefocus colordiffuse="White12">common/white.png</texturefocus>
         <texturenofocus>noop</texturenofocus>
-        <textureradiofocus colordiffuse="Black70">buttons/radio-on.png</textureradiofocus>
-        <textureradionofocus colordiffuse="Black30">buttons/radio-off.png</textureradionofocus>
-        <textureradioondisabled colordiffuse="Black12">buttons/radio-on.png</textureradioondisabled>
-        <textureradioofdisabled colordiffuse="Black12">buttons/radio-off.png</textureradioofdisabled>
+        <textureradiofocus colordiffuse="Black70">buttons/on.png</textureradiofocus>
+        <textureradionofocus colordiffuse="Black30">buttons/off.png</textureradionofocus>
+        <textureradioondisabled colordiffuse="Black12">buttons/on.png</textureradioondisabled>
+        <textureradioofdisabled colordiffuse="Black12">buttons/off.png</textureradioofdisabled>
         <textoffsetx>30</textoffsetx>
         <pulseonselect>false</pulseonselect>
     </default>
@@ -171,6 +171,7 @@
     <default type="slider">
         <width>360</width>
         <height>23</height>
+		<orientation>horizontal</orientation>
         <texturefocus>-</texturefocus>
         <texturenofocus>-</texturenofocus>
         <texturesliderbar>other_textures/OSD/slider_bg_2.png</texturesliderbar>
@@ -196,12 +197,12 @@
     </default>
 
     <default type="scrollbar">
-        <width>8</width>
+        <width>10</width>
         <texturesliderbackground colordiffuse="White12">common/white.png</texturesliderbackground>
         <texturesliderbar colordiffuse="White30">common/white.png</texturesliderbar>
         <texturesliderbarfocus colordiffuse="$VAR[ColourHighlight]">common/white.png</texturesliderbarfocus>
-        <textureslidernib>noop</textureslidernib>
-        <textureslidernibfocus>noop</textureslidernibfocus>
+        <textureslidernib colordiffuse="White30" border="5">common/white.png</textureslidernib>
+        <textureslidernibfocus colordiffuse="$VAR[ColourHighlight]" border="5">common/white.png</textureslidernibfocus>
         <showonepage>false</showonepage>
         <orientation>vertical</orientation>
     </default>

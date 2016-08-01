@@ -266,7 +266,7 @@
 				<top>0</top>
 				<bottom>0</bottom>
 				<width>660</width>
-				<texture border="16" colordiffuse="$VAR[WidgetBackgroundColour]">common/rounded-shadow8.png</texture><!--replaced "Background" -->
+				<texture border="16" colordiffuse="$VAR[WidgetPanelColour]">common/rounded-shadow8.png</texture><!--replaced "Background" -->
 				<animation effect="fade" start="100" end="90" condition="true">Conditional</animation>
 			</control>
 			<control type="image">
@@ -582,7 +582,7 @@
 					<right>10</right>
 					<height>324</height>
 					<animation effect="fade" start="100" end="90" time="200" condition="true">Conditional</animation>
-<!--Changed-->		<texture border="5" colordiffuse="$VAR[WidgetBackgroundColour]">common/box.png</texture>
+<!--Changed-->		<texture border="5" colordiffuse="$VAR[WidgetPanelColour]">common/box.png</texture>
 				</control>
 				<control type="image">
 					<left>5</left>
@@ -679,7 +679,7 @@
 					<right>10</right>
 					<height>324</height>
 					<animation effect="fade" start="100" end="90" time="200" condition="true">Conditional</animation>
-<!--Changed-->		<texture border="5" colordiffuse="$VAR[WidgetBackgroundColour]">common/box.png</texture>
+<!--Changed-->		<texture border="5" colordiffuse="$VAR[WidgetPanelColour]">common/box.png</texture>
 				</control>
 				<control type="image">
 					<left>5</left>
@@ -1077,8 +1077,8 @@
 								<bottom>10</bottom>
 								<top>10</top>
 								<aspectratio scalediffuse="false">scale</aspectratio>
-						<!-- replaced "Background" with "$VAR[WidgetBackgroundColour]" -->		
-					            <texture diffuse="$VAR[WidgetBackgroundColour]" fallback="DefaultAddonNone.png" background="true">$VAR[PosterImage]</texture>
+						<!-- replaced "Background" with "$VAR[WidgetPanelColour]" -->		
+					            <texture diffuse="$VAR[WidgetPanelColour]" fallback="DefaultAddonNone.png" background="true">$VAR[PosterImage]</texture>
 							</control>
 						</itemlayout>
 						<focusedlayout width="178" height="257">

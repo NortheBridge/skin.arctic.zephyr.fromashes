@@ -2,140 +2,174 @@
 <!-- Foundation -->
 <window id="12">
     <defaultcontrol always="true">3</defaultcontrol>
+    <!--<allowoverlay>yes</allowoverlay>-->
+	<onunload condition="!Skin.HasSetting(startup.init)">Skin.SetBool(osd.usetheme)</onunload>
+	<onunload condition="!Skin.HasSetting(startup.init)">Skin.SetBool(startup.init)</onunload>
     <controls>
-
         <include>GlobalBackground</include>
         <include>Furniture_Clock</include>
         <include>Furniture_Header</include>
         <include>Furniture_NowPlaying</include>
         <control type="group">
-            <include>Animation.Common</include>
-            <left>72</left>
-            <right>72</right>
-            <top>208</top>
-            <height>656</height>
-            
-            <control type="image">
-                <width>100%</width>
-                <height>100%</height>
-                <texture border="16" colordiffuse="Panel">common/rounded-shadow8.png</texture>
+		    <include>Animation.Common</include>
+
+	<!-- Right Panel Foreground -->		
+			<control type="image">
+                <posx>594</posx>
+                <posy>203</posy>
+                <width>1230</width>
+                <height>712</height>
+				<texture colordiffuse="Panel" border="12">dialog/frame-fo.png</texture>
+            </control>
+	<!-- Left Panel Foreground-->		
+			<control type="image">
+                <posx>85</posx>
+                <posy>203</posy>
+                <width>450</width>
+                <height>712</height>
+				<texture colordiffuse="PanelBlack30" border="12">dialog/frame_fo.png</texture>
+            </control>
+    <!-- Left Panel Background -->	
+		    <control type="image">
+                <posx>75</posx>
+                <posy>190</posy>
+                <width>479</width>
+                <height>740</height>
+                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>>
+            </control>		
+	<!-- Right Panel Background -->	
+		    <control type="image">
+                <posx>580</posx>
+                <posy>190</posy>
+                <width>1259</width>
+                <height>740</height>
+                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
+            </control>
+		
+		<!--Description Header and Text -->
+		    <control type="label">
+                <left>625</left>
+                <width>390</width>
+                <posy>70</posy>
+                <font>MediumBold</font>
+                <label>$VAR[Label_SettingsHeader]</label>
+                <textcolor>PanelWhite100</textcolor>
+            </control>
+            <control type="label" id="6">
+                <left>625</left>
+                <right>30</right>
+                <posy>138</posy>
+				<width>1180</width>
+                <height>30</height>
+                <font>Tiny</font>
+                <textcolor>PanelWhite70</textcolor>
+                <scroll>true</scroll>
             </control>
             
+		<!-- Right Group Settings Buttons -->	
             <control type="group">
-                <left>8</left>
-                <right>8</right>
-                <top>8</top>
-                <bottom>8</bottom>
-                <!-- Right Group -->
+				<posx>600</posx>
+                <posy>225</posy>
+                <width>1080</width>
+                <height>755</height>
                 <control type="grouplist" id="5">
                     <description>Control Area</description>
-                    <left>450</left>
-                    <right>0</right>
-                    <top>140</top>
-                    <bottom>10</bottom>
-                    <itemgap>0</itemgap>
+                    <left>30</left>
+                    <width>1140</width>
+                    <height>685</height>
+                    <itemgap>3</itemgap>
                     <onleft>3</onleft>
-                    <onright>9000</onright>
+                    <onright>60</onright>
                     <onup>5</onup>
                     <ondown>5</ondown>
+					<pagecontrol>60</pagecontrol>
                     <orientation>vertical</orientation>
                 </control>
-                
+            </control>
+
+		<!-- Left Group Menu Buttons -->
+			<control type="group">
+				<posx>130</posx>
+                <posy>210</posy>
+                <width>480</width>
+                <height>700</height>
                 <!-- Left Group -->
                 <control type="grouplist" id="3">
                     <description>Button Area</description>
-                    <width>450</width>
-                    <top>140</top>
-                    <bottom>0</bottom>
-                    <itemgap>0</itemgap>
+                    <width>400</width>
+					<top>20</top>
+					<bottom>20</bottom>
+					<left>10</left>
+					<itemgap>5</itemgap>
                     <onleft>9000</onleft>
                     <onright>5</onright>
                     <onup>20</onup>
                     <ondown>3</ondown>
                     <orientation>vertical</orientation>
                 </control>
-                
-                <!-- Lines -->
-                <control type="image">
-                    <top>10</top>
-                    <left>450</left>
-                    <width>1</width>
-                    <bottom>10</bottom>
-                    <colordiffuse>Black12</colordiffuse>
-                    <texture>common/white.png</texture>
-                </control>
-         
-                
-                <!-- Header -->
-                <control type="label">
-                    <left>30</left>
-                    <width>390</width>
-                    <posy>18</posy>
-                    <font>MediumBold</font>
-                    <label>5</label>
-                    <textcolor>PanelWhite100</textcolor>
-                </control>
-                <control type="button" id="20">
-                    <left>30</left>
-                    <right>30</right>
-                    <posy>77</posy>
-                    <height>30</height>
+		<!-- Settings Level -->		
+				<control type="button" id="20">
+                    <left>10</left>
+                    <posy>600</posy>
+					<focusedcolor>$VAR[ColourHighlight2]</focusedcolor>
+					<include>DefSkinSettingMenuButton</include>
                     <font>Tiny</font>
-                    <textcolor>PanelWhite70</textcolor>
-                    <scroll>true</scroll>
-                    <align>left</align>
-                    <textoffsetx>0</textoffsetx>
-                    <texturenofocus>noop</texturenofocus>
-                    <texturefocus>noop</texturefocus>
-                    <focusedcolor>$VAR[ColourHighlight2]</focusedcolor>
                     <ondown>3</ondown>
                     <onleft>9000</onleft>
                     <onright>5</onright>
                     <onup>3</onup>
                     <onclick>SettingsLevelChange</onclick>
                 </control>
-                <control type="label">
-                    <left>480</left>
+				<control type="label">
+                    <left>10</left>
                     <width>390</width>
-                    <posy>18</posy>
-                    <font>MediumBold</font>
-                    <label>$VAR[Label_SettingsHeader]</label>
+                    <posy>545</posy>
+                    <font>SmallBold</font>
+                    <label>Setting level</label>
                     <textcolor>PanelWhite100</textcolor>
-                </control>
-                <control type="label" id="6">
-                    <left>480</left>
-                    <right>30</right>
-                    <posy>77</posy>
-                    <height>30</height>
-                    <font>Tiny</font>
-                    <textcolor>PanelWhite70</textcolor>
-                    <scroll>true</scroll>
-                </control>
+                </control> 
             </control>
         </control>
         
         <include>Def9000SettingsMenu</include>
-        
+    <!-- Various Control Buttons -->    
         <control type="button" id="7">
             <description>Default Button</description>
-            <include>DefSettingsButton</include>
+			<onright>60</onright>
+            <include>DefSkinSettingButton</include>
         </control>
 
         <control type="radiobutton" id="8">
             <description>Default Radio Button</description>
-            <include>DefSettingsButton</include>
+			<onright>60</onright>
+			<radiowidth>45</radiowidth>
+            <radioheight>35</radioheight>
+            <radioposx>1055</radioposx>
+            <radioposy>center</radioposy>
+            <include>DefSkinSettingRadioButton</include>
         </control>
 
         <control type="spincontrolex" id="9">
             <description>Default Spin Control</description>
-            <include>DefSettingsButton</include>
+            <include>DefSkinSettingButton</include>
         </control>
 
         <control type="togglebutton" id="10">
             <description>Default Category Button</description>
-            <include>DefSettingsButton</include>
+            <include>DefSkinSettingMenuButton</include>
         </control>
-
+		
+		<control type="scrollbar" id="60">
+            <centerright>125</centerright>
+            <posy>235</posy>
+            <height>660</height>
+            <width>12</width>
+            <onleft>5</onleft>
+            <onright>60</onright>
+            <texturesliderbackground border="4" colordiffuse="$VAR[ScrollbarBGColour]">scrollbar/scrollv.png</texturesliderbackground>
+            <texturesliderbar border="4" colordiffuse="$VAR[ScrollbarUnFocusedColour]">scrollbar/scrollv.png</texturesliderbar>
+            <texturesliderbarfocus border="4" colordiffuse="$VAR[ScrollbarFocusedColour]">scrollbar/scrollv.png</texturesliderbarfocus>
+            <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+        </control>
     </controls>
-
 </window>

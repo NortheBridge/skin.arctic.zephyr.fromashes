@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="PVRSideBlade">
+	<include content="PVRSideBlade">
 		<control type="group">
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
@@ -138,7 +138,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="PVRInfoPanel">
+	<include content="PVRInfoPanel">
 		<control type="group">
 			<left>70</left>
 			<width>645</width>
@@ -214,7 +214,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="PVRView_50">
+	<include content="PVRView_50">
 		<control type="group">
 			<visible>Control.IsVisible(50)</visible>
 			<include>Animation.Common</include>
@@ -670,7 +670,7 @@
 			<include>PVRInfoPanel</include>
 		</control>
 	</include>
-	<include name="PVRView_51">
+	<include content="PVRView_51">
 		<control type="group">
 			<visible>Control.IsVisible(51)</visible>
 			<include>Animation.Common</include>
@@ -989,7 +989,7 @@
 			<include>Furniture_Scrollbar</include>
 		</control>
 	</include>
-	<include name="EpgWideWidthVar">
+	<include content="EpgWideWidthVar">
 		<channellayout height="70" width="505">
 			<control type="image">
 				<posx>0</posx>
@@ -1086,7 +1086,7 @@
 			</control>
 		</focusedchannellayout>
 	</include>
-	<include name="EpgSmallWidthVar">
+	<include content="EpgSmallWidthVar">
 		<channellayout height="70" width="200">
 			<control type="image">
 				<posx>0</posx>
@@ -1146,7 +1146,7 @@
 		<value condition="!IntegerGreaterThan(ListItem.ChannelNumber,99)">$NUMBER[0]</value>
 	</variable>
 
-	<include name="PVRView_52">
+	<include content="PVRView_52">
 		<control type="group">
 			<visible>Control.IsVisible(52)</visible>
 			<include>Animation.Common</include>

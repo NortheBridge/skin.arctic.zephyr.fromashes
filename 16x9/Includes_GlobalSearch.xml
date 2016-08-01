@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include name="GlobalSearchGroup">
+    <include content="GlobalSearchGroup">
         <left>0</left>
         <right>0</right>
         <height>270</height>
     </include>
-    <include name="GlobalSearchLabel">
+    <include content="GlobalSearchLabel">
         <left>30</left>
         <height>40</height>
         <aligny>center</aligny>
@@ -13,14 +13,14 @@
         <textcolor>Black70</textcolor>
         <align>left</align>
     </include>
-    <include name="GlobalSearchLeftArrow">
+    <include content="GlobalSearchLeftArrow">
         <centertop>150</centertop>
         <centerleft>15</centerleft>
         <width>16</width>
         <height>16</height>
         <texture colordiffuse="Black70" flipx="true">common/arrow-small-right.png</texture>
     </include>
-    <include name="GlobalSearchRightArrow">
+    <include content="GlobalSearchRightArrow">
         <centertop>150</centertop>
         <centerright>15</centerright>
         <width>16</width>
@@ -49,7 +49,7 @@
         <value condition="Control.HasFocus(211) + !IsEmpty(Container(211).ListItem.Property(Fanart))">$INFO[Container(211).ListItem.Property(Fanart)]</value>
         <value>$INFO[Container(100).ListItem.Thumb]</value>
     </variable>
-    <include name="GlobalSearchListItem">
+    <include content="GlobalSearchListItem">
         <control type="image">
             <left>0</left>
             <right>10</right>
@@ -76,7 +76,7 @@
             <label>$INFO[ListItem.Label]</label>
         </control>
     </include>
-    <include name="GlobalSearchListFocus">
+    <include content="GlobalSearchListFocus">
         <control type="image">
             <left>0</left>
             <right>10</right>
@@ -103,7 +103,7 @@
             <label>$INFO[ListItem.Label]</label>
         </control>
     </include>
-    <include name="GlobalSearchList">
+    <include content="GlobalSearchList">
         <posy>50</posy>
         <left>30</left>
         <height>220</height>

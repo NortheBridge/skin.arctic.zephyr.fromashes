@@ -86,6 +86,7 @@
 				<control type="radiobutton" id="98">
 					<visible>Container.CanFilterAdvanced</visible>
 					<description>Filter</description>
+					<radioposx>380</radioposx>
 					<include>DefContextButton2</include>
 					<label>587</label>
 					<align>left</align>

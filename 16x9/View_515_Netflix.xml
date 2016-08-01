@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <includes>
-	<include name="View_515_Netflix">
+	<include content="View_515_Netflix">
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(515)</visible>

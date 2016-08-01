@@ -292,7 +292,7 @@
 		<value condition="SubString(ListItem.Filename,hdtv)">hdtv.png</value>
 		<value>$INFO[ListItem.VideoResolution]p.png</value>
 	</variable>
-	<include name="Furniture_FlagUpright">
+	<include content="Furniture_FlagUpright">
 		<width>2</width>
 		<height>71</height>
 		<texture>info/tripanel/upright.png</texture>
