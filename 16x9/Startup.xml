@@ -35,7 +35,7 @@
             <height>50%</height>
             <align>center</align>
             <top>30</top>
-            <label>[COLOR=$VAR[ColourHighlight]]Danvers[/COLOR] Preview (4.0.20-Alpha1)</label>
+            <label>[COLOR=$VAR[ColourHighlight]]Danvers[/COLOR] Preview ($INFO[System.AddonVersion(skin.arctic.zephyr.fromashes.danvers)])</label>
             <font>Tiny</font>
             <textcolor>Dark1</textcolor>
             <animation effect="fade" start="100" end="0" time="500" tween="quadratic">WindowClose</animation>
