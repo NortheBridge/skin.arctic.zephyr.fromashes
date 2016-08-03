@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation commit check -->
 <includes>
-	<include content="View_155_Wall_Emby">
+	<include name="View_155_Wall_Emby">
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(155)</visible>
@@ -614,5 +614,5 @@
 			<include>Furniture_Scrollbar</include>
 			<!--<control type="group" description="Poster"><visible>!IsEmpty(ListItem.Icon)</visible><left>70</left><width>448</width><top>206</top><height>660</height><control type="image"><width>100%</width><height>100%</height><texture border="10">common/nofocus-shadow10.png</texture></control><control type="image"><left>10</left><top>10</top><right>10</right><bottom>10</bottom><texture border="10" colordiffuse="Panel">common/box.png</texture></control><control type="image"><left>10</left><top>10</top><right>10</right><bottom>10</bottom><fadetime>300</fadetime><aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio><texture diffuse="diffuse/listposter.png" background="true">$VAR[PosterImage]</texture></control></control>--></control>
 	</include>
-	<include content="View_55_Wall_Fanout"/>
+	<include name="View_55_Wall_Fanout"/>
 </includes>

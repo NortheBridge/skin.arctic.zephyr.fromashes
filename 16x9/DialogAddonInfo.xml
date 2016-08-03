@@ -2,7 +2,7 @@
 <!-- Foundation -->
 <window id="146">
     <defaultcontrol always="true">9000</defaultcontrol>
-    <!--<allowoverlay>no</allowoverlay>-->
+    <allowoverlay>no</allowoverlay>
 
     <controls>
         <include>GlobalOverlay</include>
@@ -14,19 +14,19 @@
             <control type="group">
     <!-- Right Panel -->		
 			    <control type="image">
-                    <posx>594</posx>
-                    <posy>203</posy>
-                    <width>1230</width>
-                    <height>712</height>
-				    <texture colordiffuse="Panel" border="12">dialog/frame-fo.png</texture>
+                    <posx>592</posx>
+                    <posy>201</posy>
+                    <width>1234</width>
+                    <height>716</height>
+				    <texture colordiffuse="Panel" border="5">buttons/dialoge_inner.png</texture>
                 </control>
 	<!-- Left Panel -->		
 			    <control type="image">
                     <posx>85</posx>
-                    <posy>203</posy>
-                    <width>450</width>
-                    <height>712</height>
-				    <texture colordiffuse="FF090A0A" border="12">dialog/frame_fo.png</texture>
+                    <posy>201</posy>
+                    <width>460</width>
+                    <height>716</height>
+				    <texture colordiffuse="FF090A0A" border="5">buttons/dialoge_inner.png</texture>
                 </control>
     <!-- Left Panel Borders -->	
 		        <control type="image">
@@ -34,7 +34,7 @@
                     <posy>190</posy>
                     <width>479</width>
                     <height>740</height>
-                    <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
+                    <texture colordiffuse="Panel" border="16">dialog/frame_Landscape-fo.png</texture>
                 </control>		
 	<!-- Right Panel Borders -->	
 		        <control type="image">
@@ -47,7 +47,7 @@
 
            
                 <control type="image">
-                    <posx>605</posx>
+                    <posx>620</posx>
                     <posy>280</posy>
                     <width>500</width>
                     <height>610</height>
@@ -57,10 +57,9 @@
             
                 <control type="label">
                     <description>Header Label</description>
-					<width>510</width>
+					<posx>620</posx>
                     <include>DefDialogInfoHeader</include>
                     <label>$INFO[ListItem.Label]</label>
-					<scroll>true</scroll>
                 </control>
             
                 <control type="grouplist">
@@ -80,7 +79,7 @@
                     </control>
                     <control type="label">
                         <width>100%</width>
-                        <height>58</height>
+                        <height>60</height>
                         <font>Tiny</font>
                         <aligny>top</aligny>
                         <label>$INFO[ListItem.AddonName]</label>
@@ -96,7 +95,7 @@
                     </control>
                     <control type="label">
                         <width>100%</width>
-                        <height>58</height>
+                        <height>60</height>
                         <font>Tiny</font>
                         <aligny>top</aligny>
                         <label fallback="19055">$INFO[ListItem.AddonSummary]</label>
@@ -112,7 +111,7 @@
                     </control>
                     <control type="label">
                         <width>100%</width>
-                        <height>58</height>
+                        <height>60</height>
                         <font>Tiny</font>
                         <aligny>top</aligny>
                         <label fallback="19055">$INFO[ListItem.AddonCreator]</label>
@@ -128,7 +127,7 @@
                     </control>
                     <control type="label">
                         <width>100%</width>
-                        <height>58</height>
+                        <height>60</height>
                         <font>Tiny</font>
                         <aligny>top</aligny>
                         <label fallback="19055">$INFO[ListItem.AddonVersion]</label>
@@ -144,7 +143,7 @@
                     </control>
                     <control type="label">
                         <width>100%</width>
-                        <height>58</height>
+                        <height>60</height>
                         <font>Tiny</font>
                         <aligny>top</aligny>
                         <label fallback="19055">$INFO[ListItem.AddonType]</label>

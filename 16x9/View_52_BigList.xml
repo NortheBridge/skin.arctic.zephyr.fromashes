@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <includes>
-	<include content="View_52_BigList">
+	<include name="View_52_BigList">
 		<include>View_52_BigList_SinglePane</include>
 	</include>
-	<include content="View_52_BigList_SinglePane">
+	<include name="View_52_BigList_SinglePane">
 		<description>List View (id=52)</description>
 		<control type="group">
 			<include>Animation.Common</include>
@@ -37,7 +37,7 @@
 			</control>
 		</control>
 	</include>
-	<include content="View_52_BigList_DoublePane">
+	<include name="View_52_BigList_DoublePane">
 		<description>List View (id=52)</description>
 		<control type="group">
 			<include>Animation.Common</include>
@@ -75,7 +75,7 @@
 			</control>
 		</control>
 	</include>
-	<include content="View_52_BigList_ItemLayout">
+	<include name="View_52_BigList_ItemLayout">
 		<control type="image">
 			<left>10</left>
 			<top>10</top>
@@ -126,7 +126,7 @@
             <visible>!stringcompare(ListItem.Label,..)</visible>                       
 		</control>	
 	</include>
-	<include content="View_52_BigList_FocusLayout">
+	<include name="View_52_BigList_FocusLayout">
 		<control type="button">
 			<texturefocus>-</texturefocus>
 			<texturenofocus>-</texturenofocus>

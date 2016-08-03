@@ -1114,10 +1114,10 @@
 						<include>DefSkinSettingButton</include>
 	                    <label>Style of the stars</label>
 	                    <label2>$INFO[Skin.String(ratingstarsfolder)]</label2>
-	                    <!--<onclick condition="StringCompare(skin.string(ratingstarsfolder),default)">Skin.SetString(ratingstarsfolder,sloped)</onclick>
-			            <onclick condition="StringCompare(skin.string(ratingstarsfolder),sloped)">Skin.SetString(ratingstarsfolder,italic)</onclick>
+	                    <onclick condition="StringCompare(skin.string(ratingstarsfolder),default)">Skin.SetString(ratingstarsfolder,sloped)</onclick>
+			            <!--<onclick condition="StringCompare(skin.string(ratingstarsfolder),sloped)">Skin.SetString(ratingstarsfolder,italic)</onclick>-->
 				        <onclick condition="StringCompare(skin.string(ratingstarsfolder),italic)">Skin.SetString(ratingstarsfolder,bar)</onclick>
-			            <onclick condition="StringCompare(skin.string(ratingstarsfolder),bar)">Skin.SetString(ratingstarsfolder,strip)</onclick>-->
+			            <!--<onclick condition="StringCompare(skin.string(ratingstarsfolder),bar)">Skin.SetString(ratingstarsfolder,strip)</onclick>-->
 			            <onclick condition="StringCompare(skin.string(ratingstarsfolder),strip)">Skin.SetString(ratingstarsfolder,default)</onclick>
 				        <onclick condition="IsEmpty(Skin.String(ratingstarsfolder))">Skin.SetString(ratingstarsfolder,default)</onclick>	
 	                </control>-->
@@ -4357,8 +4357,8 @@
 					<bottom>20</bottom>
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
-					<onup>12000</onup>
-					<ondown>12000</ondown>
+					<onup>12002</onup>
+					<ondown>12034</ondown>
 					<onright>60</onright>
 					<pagecontrol>60</pagecontrol>
 					<orientation>vertical</orientation>
@@ -4381,13 +4381,148 @@
 				    </control>					
 			<!-- Views Settings -->		
 					<control type="button" id="12002" description="Enable or Disable views">
+                        <ondown>12010</ondown>
 						<include>DefSkinSettingButton</include>
 						<onclick>RunScript(script.skin.helper.service,action=enableviews)</onclick>
 						<label>31769</label>
 						<visible>ControlGroup(9100).HasFocus(9109)</visible>
-					</control>					
+					</control>	
+					<control type="label" id="12003">
+		<!-- Seperator Heading -->			
+					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
+						<font>MediumSmallBold</font>
+                        <label>Force Views Settings</label>
+                        <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
+                    </control>
+		<!-- Heading Line Seperator -->			
+					<control type="image" id="12004">
+					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
+					    <left>480</left>
+					    <width>1260</width>
+					    <height>2</height>
+					    <colordiffuse>FF1976D2</colordiffuse>
+					    <texture>common/white.png</texture>
+				    </control>
+			<!-- Force Views Settings -->		
+    			    <control type="radiobutton" id="12010" description="Enable or Disable Force Views">
+					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
+						<include>DefSkinSettingRadioButton</include>
+				        <label>Enable Forced Views</label>
+				        <selected>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</selected>						
+				        <onclick>Skin.ToggleSetting(SkinHelper.ForcedViews.Enabled)</onclick>
+			        </control>
+					<control type="button" id="12012" description="Force Movies">
+					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
+					    <include>DefSkinSettingButton</include>
+						<label>   - $LOCALIZE[31790]</label>
+						<label2>[COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(SkinHelper.ForcedViews.movies.label)]$INFO[Skin.String(SkinHelper.ForcedViews.movies), (,)][/COLOR]</label2>
+				        <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=movies)</onclick>
+				        <visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>			
+			        </control>
+					<control type="button" id="12014" description="Force TVShows">
+					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
+					    <include>DefSkinSettingButton</include>
+						<label>   - $LOCALIZE[31791]</label>
+						<label2>[COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(SkinHelper.ForcedViews.tvshows.label)]$INFO[Skin.String(SkinHelper.ForcedViews.tvshows), (,)][/COLOR]</label2>
+				        <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=tvshows)</onclick>
+				        <visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>			
+			        </control>
+					<control type="button" id="12016" description="Force Seasons">
+					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
+					    <include>DefSkinSettingButton</include>
+						<label>   - $LOCALIZE[31792]</label>
+						<label2>[COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(SkinHelper.ForcedViews.seasons.label)]$INFO[Skin.String(SkinHelper.ForcedViews.seasons), (,)][/COLOR]</label2>
+				        <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=seasons)</onclick>
+				        <visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>			
+			        </control>
+					<control type="button" id="12018" description="Force Episodes">
+					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
+					    <include>DefSkinSettingButton</include>
+						<label>   - $LOCALIZE[31793]</label>
+						<label2>[COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(SkinHelper.ForcedViews.episodes.label)]$INFO[Skin.String(SkinHelper.ForcedViews.episodes), (,)][/COLOR]</label2>
+				        <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=episodes)</onclick>
+				        <visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>			
+			        </control>
+					<control type="button" id="12020" description="Force Movie Sets">
+					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
+					    <include>DefSkinSettingButton</include>
+						<label>   - $LOCALIZE[31794]</label>
+						<label2>[COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(SkinHelper.ForcedViews.sets.label)]$INFO[Skin.String(SkinHelper.ForcedViews.sets), (,)][/COLOR]</label2>
+				        <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=sets)</onclick>
+				        <visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>			
+			        </control>
+					<control type="button" id="12022" description="Force Movies Inside Sets">
+					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
+					    <include>DefSkinSettingButton</include>
+						<label>   - $LOCALIZE[31795]</label>
+						<label2>[COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(SkinHelper.ForcedViews.setmovies.label)]$INFO[Skin.String(SkinHelper.ForcedViews.setmovies), (,)][/COLOR]</label2>
+				        <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=setmovies)</onclick>
+				        <visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>			
+			        </control>
+					<control type="button" id="12024" description="Force Programs">
+					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
+					    <include>DefSkinSettingButton</include>
+						<label>   - $LOCALIZE[31796]</label>
+						<label2>[COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(SkinHelper.ForcedViews.programs.label)]$INFO[Skin.String(SkinHelper.ForcedViews.programs), (,)][/COLOR]</label2>
+				        <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=programs)</onclick>
+				        <visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>			
+			        </control>
+					<control type="button" id="12026" description="Force Files">
+					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
+					    <include>DefSkinSettingButton</include>
+						<label>   - $LOCALIZE[31797]</label>
+						<label2>[COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(SkinHelper.ForcedViews.files.label)]$INFO[Skin.String(SkinHelper.ForcedViews.files), (,)][/COLOR]</label2>
+				        <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=files)</onclick>
+				        <visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>			
+			        </control>
+					<control type="button" id="12028" description="Force Music Artists">
+					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
+					    <include>DefSkinSettingButton</include>
+						<label>   - $LOCALIZE[31798]</label>
+						<label2>[COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(SkinHelper.ForcedViews.artists.label)]$INFO[Skin.String(SkinHelper.ForcedViews.artists), (,)][/COLOR]</label2>
+				        <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=artists)</onclick>
+				        <visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>			
+			        </control>
+					<control type="button" id="12030" description="Force Music Songs">
+					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
+					    <include>DefSkinSettingButton</include>
+						<label>   - $LOCALIZE[31799]</label>
+						<label2>[COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(SkinHelper.ForcedViews.songs.label)]$INFO[Skin.String(SkinHelper.ForcedViews.songs), (,)][/COLOR]</label2>
+				        <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=songs)</onclick>
+				        <visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>			
+			        </control>
+					<control type="button" id="12032" description="Force Music Albums">
+					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
+					    <include>DefSkinSettingButton</include>
+						<label>   - $LOCALIZE[31800]</label>
+						<label2>[COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(SkinHelper.ForcedViews.albums.label)]$INFO[Skin.String(SkinHelper.ForcedViews.albums), (,)][/COLOR]</label2>
+				        <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=albums)</onclick>
+				        <visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>			
+			        </control>
+					<control type="button" id="12034" description="Force Pictures">
+					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
+					    <include>DefSkinSettingButton</include>
+						<label>   - $LOCALIZE[31801]</label>
+						<label2>[COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(SkinHelper.ForcedViews.pictures.label)]$INFO[Skin.String(SkinHelper.ForcedViews.pictures), (,)][/COLOR]</label2>
+				        <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=pictures)</onclick>
+				        <visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>			
+			        </control>
 				</control>
-				
+		    <!-- Scrollbar for Views Settings Control Area -->		
+				<control type="scrollbar" id="60">
+				    <visible>ControlGroup(9100).HasFocus(9109)</visible>
+                    <onback>12000</onback>
+                    <centerright>93</centerright>
+                    <posy>140</posy>
+                    <height>PosterH</height>
+                    <width>12</width>
+                    <onleft>12000</onleft>
+                    <onright>9100</onright>
+                    <texturesliderbackground border="4" colordiffuse="$VAR[ScrollbarBGColour]">scrollbar/scrollv.png</texturesliderbackground>
+                    <texturesliderbar border="4" colordiffuse="$VAR[ScrollbarUnFocusedColour]">scrollbar/scrollv.png</texturesliderbar>
+                    <texturesliderbarfocus border="4" colordiffuse="$VAR[ScrollbarFocusedColour]">scrollbar/scrollv.png</texturesliderbarfocus>
+                    <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+                </control>				
 <!-- ##### Backup/Restore Section ##### -->					
 				<control type="grouplist" id="14000">
 					<description>Control Area</description>

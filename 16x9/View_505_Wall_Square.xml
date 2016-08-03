@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <includes>
-	<include content="View_505_506_Wall">
+	<include name="View_505_506_Wall">
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(505)</visible>
