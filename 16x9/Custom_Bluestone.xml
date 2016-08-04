@@ -55,7 +55,7 @@
 			<posy>290</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Build: [COLOR=$VAR[ColourHighlight]]danvers@e1c17e5[/COLOR]</label> <!-- Say Hello to the Girl of Steel! Wait, You Can Read This? Easter Eggs! -->
+			<label>Build: [COLOR=$VAR[ColourHighlight]]danvers@f52c1be[/COLOR]</label> <!-- Say Hello to the Girl of Steel! Wait, You Can Read This? Easter Eggs! -->
 		</control>
 		<!-- The Full Version is Determined By the Branch (i.e. x.y.zz_branchnameabbreviated) -->
 		<!-- Goodbye to Bluestone; Now "Dormer" and "Danvers" -->
@@ -88,7 +88,7 @@
 			<posy>350</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Debug Build: [COLOR=$VAR[ColourHighlight]]Alpha 1 Preview[/COLOR]</label>
+			<label>Debug Build: [COLOR=$VAR[ColourHighlight]]Alpha 2 Preview[/COLOR]</label>
 		</control>
 	<control type="label">
 			<description>Sys_Name</description>
@@ -213,15 +213,26 @@
 			<label>[COLOR=$VAR[ColourHighlight]]Special Thanks[/COLOR]</label>
 		</control>
 	<control type="label">
-			<description>Curator</description>
+			<description>Author</description>
 			<font>Tiny</font>
             <width>100%</width>
             <height>100%</height>
             <align>center</align>
             <aligny>center</aligny>
 			<posy>40</posy>
-			<label>Curator of "Arctic Zephyr: From Ashes" by [COLOR=$VAR[ColourHighlight]]Guardian Hope[/COLOR]</label>
-		</control>	
+			<label>Author of "Arctic Zephyr: From Ashes:" [COLOR=$VAR[ColourHighlight]]Guardian Hope[/COLOR]</label>
+		</control>
+		<!--Super Special Thanks to minus0-->
+	<control type="label">
+			<description>CoAuthor</description>
+			<font>Tiny</font>
+            <width>100%</width>
+            <height>100%</height>
+            <align>center</align>
+            <aligny>center</aligny>
+			<posy>70</posy>
+			<label>Co-Author: [COLOR=$VAR[ColourHighlight]]minus0[/COLOR]</label>
+		</control>		
 	<control type="label">
 			<description>AZCreator</description>
 			<font>Tiny</font>
@@ -229,7 +240,7 @@
             <height>100%</height>
             <align>center</align>
             <aligny>center</aligny>
-			<posy>70</posy>
+			<posy>100</posy>
 			<label>Based On "Arctic Zephyr" by [COLOR=$VAR[ColourHighlight]]Jurialmonkey[/COLOR]</label>
 		</control>	
 	<control type="label">
@@ -239,19 +250,8 @@
             <height>100%</height>
             <align>center</align>
             <aligny>center</aligny>
-			<posy>100</posy>
-			<label>Based On "Arctic Zephyr: Exploded" by [COLOR=$VAR[ColourHighlight]]im85288 and badaas[/COLOR]</label>
-		</control>
-		<!--Super Special Thanks to minus0-->
-	<control type="label">
-			<description>QualityAssurance</description>
-			<font>Tiny</font>
-            <width>100%</width>
-            <height>100%</height>
-            <align>center</align>
-            <aligny>center</aligny>
 			<posy>130</posy>
-			<label>Executive Contributor [COLOR=$VAR[ColourHighlight]]minus0[/COLOR]</label>
+			<label>Based On "Arctic Zephyr: Exploded" by [COLOR=$VAR[ColourHighlight]]im85288 and badaas[/COLOR]</label>
 		</control>
 			<!--Contributors-->
 	<control type="label">

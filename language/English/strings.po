@@ -775,16 +775,72 @@ msgstr ""
 
 msgctxt "#31781"
 msgid "Stars"
-msgstr "Stars"
+msgstr ""
 
 msgctxt "#31782"
 msgid "Colour Themes"
-msgstr "Colour Themes"
+msgstr ""
 
 msgctxt "#31783"
 msgid "Views"
-msgstr "Views"
+msgstr ""
 
 msgctxt "#31784"
 msgid "Backup/Restore"
-msgstr "Backup/Restore"
+msgstr ""
+
+msgctxt "#31790"
+msgid "For Movies:"
+msgstr ""
+
+msgctxt "#31791"
+msgid "For TV Shows:"
+msgstr ""
+
+msgctxt "#31792"
+msgid "For Seasons:"
+msgstr ""
+
+msgctxt "#31793"
+msgid "For Episodes:"
+msgstr ""
+
+msgctxt "#31794"
+msgid "For Movie Sets:"
+msgstr ""
+
+msgctxt "#31795"
+msgid "For Movies Inside Sets:"
+msgstr ""
+
+msgctxt "#31796"
+msgid "For Programs"
+msgstr ""
+
+msgctxt "#31797"
+msgid "For Files"
+msgstr ""
+
+msgctxt "#31798"
+msgid "For Music Artists"
+msgstr ""
+
+msgctxt "#31799"
+msgid "For Music Songs"
+msgstr ""
+
+msgctxt "#31800"
+msgid "For Music Albums"
+msgstr ""
+
+msgctxt "#31801"
+msgid "For Pictures"
+msgstr ""
+
+
+
+
+
+
+
+
