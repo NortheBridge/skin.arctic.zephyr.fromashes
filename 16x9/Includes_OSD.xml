@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include content="OSDFocusStop">
+	<include name="OSDFocusStop">
 		<defaultcontrol always="true">15</defaultcontrol>
 	</include>
-	<include content="OSDFocusPause">
+	<include name="OSDFocusPause">
 		<defaultcontrol always="true">14</defaultcontrol>
 	</include>
-	<include content="OSDInfoContent">
+	<include name="OSDInfoContent">
 		<right>0</right>
 		<control type="image">
 			<right>0</right>
@@ -140,7 +140,7 @@
 			<visible>true</visible>
 		</control>
 	</include>
-	<include content="DefOSDButtons">
+	<include name="DefOSDButtons">
 		<aligny>center</aligny>
 		<align>center</align>
 		<height>48</height>
@@ -151,7 +151,7 @@
 		<texturefocus>noop</texturefocus>
 		<width>226</width>
 	</include>
-	<include content="DefOSDUpDown">
+	<include name="DefOSDUpDown">
 		<onup condition="IsEmpty(Window(home).Property(osdshowinfo)) + !Window.IsVisible(MusicOSD.xml)">SetProperty(osdshowinfo,1,home)</onup>
 		<onup condition="!IsEmpty(Window(home).Property(osdshowinfo)) + !Window.IsVisible(MusicOSD.xml)">ClearProperty(osdshowinfo,home)</onup>
 		<ondown condition="IsEmpty(Window(home).Property(osdshowinfo)) + !Window.IsVisible(MusicOSD.xml)">SetProperty(osdshowinfo,1,home)</ondown>
@@ -159,7 +159,7 @@
 		<onup condition="Window.IsVisible(MusicOSD.xml)">3</onup>
 		<ondown condition="Window.IsVisible(MusicOSD.xml)">3</ondown>
 	</include>
-	<include content="OSDVideosRight">
+	<include name="OSDVideosRight">
 		<control type="button" id="5">
 			<description>3D Mode</description>
 			<align>right</align>
@@ -177,7 +177,7 @@
 			<onclick>ActivateWindow(125)</onclick>
 		</control>
 	</include>
-	<include content="OSDPVRRight">
+	<include name="OSDPVRRight">
 		<control type="button" id="4">
 			<description>CHANNELS</description>
 			<align>right</align>
@@ -200,7 +200,7 @@
 			<onclick>ActivateWindow(tvguide,,return)</onclick>
 		</control>
 	</include>
-	<include content="OSDDVDMenu">
+	<include name="OSDDVDMenu">
 		<control type="button" id="4">
 			<description>DVD Menu</description>
 			<label>$LOCALIZE[31116]</label>
@@ -211,7 +211,7 @@
 			<disabledcolor>White12</disabledcolor>
 		</control>
 	</include>
-	<include content="OSDExtraInfoTV">
+	<include name="OSDExtraInfoTV">
 		<control type="button" id="4">
 			<description>Info</description>
 			<label>31147</label>
@@ -222,7 +222,7 @@
 			<disabledcolor>White12</disabledcolor>
 		</control>
 	</include>
-	<include content="OSDExtraInfoMOVIES">
+	<include name="OSDExtraInfoMOVIES">
 		<control type="button" id="4">
 			<description>Info</description>
 			<label>31147</label>
@@ -268,7 +268,7 @@
 		<value condition="[Skin.HasSetting(osd.usetheme)] | [!Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation)]">Dark1</value>
 		<value>PanelWhite100</value>
 	</variable>
-	<include content="OSDVideoControls">
+	<include name="OSDVideoControls">
 		<control type="togglebutton" id="9003">
 			<description>Record</description>
 			<width>48</width>
@@ -373,7 +373,7 @@
 			<visible>System.HasMediadvd</visible>
 		</control>
 	</include>
-	<include content="OSDVideoControlsFlip">
+	<include name="OSDVideoControlsFlip">
 		<control type="togglebutton" id="9003">
 			<description>Record</description>
 			<width>48</width>
@@ -478,7 +478,7 @@
 			<visible>System.HasMediadvd</visible>
 		</control>
 	</include>
-	<include content="Furniture_OSDClock">
+	<include name="Furniture_OSDClock">
 		<control type="group">
 			<visible>Window.IsVisible(DialogVideoInfo.xml) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(fullscreeninfo) | Window.IsVisible(videoosd)</visible>
 			<visible>!Window.IsVisible(DialogKaiToast.xml)</visible>

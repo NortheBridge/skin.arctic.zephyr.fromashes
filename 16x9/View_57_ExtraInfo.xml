@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <includes>
-    <include content="View_57_ExtraInfo">
+    <include name="View_57_ExtraInfo">
         <description>List View (id=57)</description>
         <control type="group">
             <include>Animation.Common</include>
@@ -43,7 +43,7 @@
             <include>57Info</include>
         </control>
     </include>
-    <include content="View_57_ExtraInfo_LowList">
+    <include name="View_57_ExtraInfo_LowList">
         <description>List View (id=57)</description>
         <control type="group">
             <include>Animation.Common</include>
@@ -98,7 +98,7 @@
             <include>57Info</include>
         </control>
     </include>
-    <include content="57Info">
+    <include name="57Info">
         <control type="group">
             <left>70</left>
             <width>587</width>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <includes>
-	<include content="View_50_List">
+	<include name="View_50_List">
 		<description>List View (id=50)</description>
 		<control type="group">
 			<include>Animation.Common</include>
@@ -70,7 +70,7 @@
 			<include>View_50_SidePoster</include>
 		</control>
 	</include>
-	<include content="View_50_LowList">
+	<include name="View_50_LowList">
 		<description>List View (id=50)</description>
 		<control type="group">
 			<include>Animation.Common</include>
@@ -124,7 +124,7 @@
 			<include>View_50_SidePoster</include>
 		</control>
 	</include>
-	<include content="View_50_SidePoster">
+	<include name="View_50_SidePoster">
 		<control type="group" description="Poster">
 			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
 			<left>SidePad</left>
@@ -210,7 +210,7 @@
 			</control>
 		</control>
 	</include>
-	<include content="View_50_SidePoster_Square">
+	<include name="View_50_SidePoster_Square">
 		<control type="group" description="Poster">
 			<left>SidePad</left>
 			<top>PosterPad</top>
@@ -252,7 +252,7 @@
 			</control>
 		</control>
 	</include>
-	<include content="View_50_List_Square">
+	<include name="View_50_List_Square">
 		<description>List View (id=50)</description>
 		<control type="group">
 			<include>Animation.Common</include>
@@ -290,7 +290,7 @@
 			<include>View_50_SidePoster_Square</include>
 		</control>
 	</include>
-	<include content="View_550_List">
+	<include name="View_550_List">
 		<description>List View (id=550)</description>
 		<control type="group">
 			<include>Animation.Common</include>
@@ -367,7 +367,7 @@
 			</control>
 		</control>
 	</include>
-	<include content="50focuslayout">
+	<include name="50focuslayout">
 		<control type="button">
 			<texturefocus>-</texturefocus>
 			<texturenofocus>-</texturenofocus>
@@ -450,7 +450,7 @@
 			<visible>!Container.Content(seasons)</visible>
 		</control>
 	</include>
-	<include content="50itemlayout">
+	<include name="50itemlayout">
 		<control type="label">
 			<posx>30</posx>
 			<width>200</width>
@@ -523,7 +523,7 @@
 			<visible>!Container.Content(seasons)</visible>
 		</control>
 	</include>
-	<include content="50itemlayout_square">
+	<include name="50itemlayout_square">
 		<control type="image">
 			<left>25</left>
 			<centertop>32</centertop>
@@ -567,7 +567,7 @@
 			<label>$INFO[ListItem.Label2]</label>
 		</control>
 	</include>
-	<include content="50focuslayout_square">
+	<include name="50focuslayout_square">
 		<control type="image">
 			<width>100%</width>
 			<height>100%</height>

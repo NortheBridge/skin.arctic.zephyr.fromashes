@@ -3,6 +3,9 @@
 <window>
     <defaultcontrol always="true">9315</defaultcontrol>
     <onload>SetProperty(SkinInitStarted,1,home)</onload>
+	
+	<!-- Danvers Preview Notice -->
+	<onload>RunScript(script.skin.helper.service,action=dialogok,header=[Danvers Preview],message=[Welcome to the Arctic Zephyr: From Ashes Danvers Preview for Krypton. Please remember that this is a work in progress and some features may not be functioning correctly. Please let us know of your experience on the Kodi or Emby forums.])</onload>
     <controls>
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
@@ -35,7 +38,7 @@
             <height>50%</height>
             <align>center</align>
             <top>30</top>
-            <label>[COLOR=$VAR[ColourHighlight]]Danvers[/COLOR] Preview (4.0.20-Alpha1)</label>
+            <label>[COLOR=$VAR[ColourHighlight]]Danvers[/COLOR] Preview ($INFO[System.AddonVersion(skin.arctic.zephyr.fromashes.danvers)])</label>
             <font>Tiny</font>
             <textcolor>Dark1</textcolor>
             <animation effect="fade" start="100" end="0" time="500" tween="quadratic">WindowClose</animation>

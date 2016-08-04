@@ -16,10 +16,17 @@
             <include>GlobalOverlay</include>
                 <control type="image">
                     <posx>0</posx>
-		            <top>355</top>
+		            <top>358</top>
 		            <width>1920</width>
-		            <height>450</height>
-                    <texture colordiffuse="Panel" border="16">buttons/dialoge_shadow.png</texture>
+		            <height>3</height>
+                    <texture colordiffuse="Panel" border="5">common/topbar_left.png</texture>
+                </control>
+				<control type="image">
+                    <posx>0</posx>
+		            <top>798</top>
+		            <width>1920</width>
+		            <height>3</height>
+                    <texture colordiffuse="Panel" border="5">common/topbar_right.png</texture>
                 </control>
                 <control type="image">
                     <description>Backgrond</description>

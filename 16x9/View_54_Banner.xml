@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <includes>
-	<include content="View_54_Banner">
+	<include name="View_54_Banner">
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(54)</visible>

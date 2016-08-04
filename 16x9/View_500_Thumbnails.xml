@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <includes>
-	<include content="View_500_Thumbnails">
+	<include name="View_500_Thumbnails">
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(500)</visible>
