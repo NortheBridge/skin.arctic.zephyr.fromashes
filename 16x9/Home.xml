@@ -15,7 +15,6 @@
 	<onload condition="!Skin.HasSetting(startup.init)">Skin.SetString(SkinHelper.ShowInfoAtPlaybackStart, 8)</onload>
 	Info Banner -->
 	<onload condition="!Skin.HasSetting(startup.init)">Skin.SetBool(Window(Home).Property(SkinHelper.ListItemDuration))</onload>
-	
 	<controls>
 		<include condition="!Skin.HasSetting(home.netflix)">GlobalBackground</include>
 		<include condition="Skin.HasSetting(home.vertical)">HomeVerticalMenu</include>

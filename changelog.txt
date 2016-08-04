@@ -1,11 +1,39 @@
 [B]Arctic Zephyr: From Ashes Changelog[/B]
 
+[B]Arctic Zephyr: From Ashes Danvers "Alpha 2 Preview Update" - Released August 3, 2016[/B]
+Danvers: 4.2.20-alpha2 (4.2.20-alpha2_danvers)
+
+ARCTIC ZEPHYR: FROM ASHES ANNIVERSARY EDITION (CODENAMED "DANVERS") IS PRE-RELEASE SOFTWARE DESIGNED FOR A PRE-RELEASE VERSION OF KODI.
+THERE IS NO GUARNTEE THAT ALL FEATURES WILL WORK. PLEASE LET US KNOW OF ANY ISSUES YOU RUN INTO. THIS SKIN IS NOW AVAILABLE IN THE 
+NORTHEBRIDGE BY DESIGN(R) REPOSITORY, EMBY BETA REPOSITORY, GITHUB, OR VIA DIRECT ZIP FILE DOWNLOAD ONLY.
+
+[B]Arctic Zephyr: From Ashes Danvers "Summer 2016 Update" - Released August 1, 2016[/B]
+Danvers: 4.2.20-alpha1 (4.2.20-alpha1_danvers)
+
+ARCTIC ZEPHYR: FROM ASHES ANNIVERSARY EDITION (CODENAMED "DANVERS") IS PRE-RELEASE SOFTWARE DESIGNED FOR A PRE-RELEASE VERSION OF KODI.
+THERE IS NO GUARNTEE THAT ALL FEATURES WILL WORK. PLEASE LET US KNOW OF ANY ISSUES YOU RUN INTO. THIS SKIN IS NOW AVAILABLE IN THE 
+NORTHEBRIDGE BY DESIGN(R) REPOSITORY, EMBY BETA REPOSITORY, GITHUB, OR VIA DIRECT ZIP FILE DOWNLOAD ONLY.
+
+Reverted redefined include contexts in "Includes.xml"
+Reverted redefined include contexts in "Includes_*.xml,"
+Updated Textures
+Fixed Startup Splash to use Kodi's addon version call rather than 4.0.20
+Updated "About From Ashes" to label @minus0 as "Co-Author" and updated Plugin Information calls
+
+[B]Arctic Zephyr: From Ashes "Summer 2016 Update Rollup Patch Level 2 (PL2)" - Released July 17, 2016[/B]
+Dormer: 3.2.22 (3.2.22_dormer) / Danvers: No Danvers Variant
+Disabled Home Screen Icons (Will Return in Danvers Preview)
+
+[B]Arctic Zephyr: From Ashes "Summer 2016 Update Rollup Patch Level 1 (PL1)" - Released July 17, 2016[/B]
+Dormer: 3.2.21 (3.2.21_dormer) / Danvers: No Danvers Variant
+Resolved Color Selection Issues for 4th Generation Color Enhancer
+Resolve Home Screen Fanart Slideshow Issues Introduced in 3.2.20
+Code for Rebase of Danvers Branch (4.0.20-alpha1)
+
 [B]Arctic Zephyr: From Ashes "Summer 2016 Update" - Released June 18, 2016[/B]
-Dormer: 3.2.20 (3.2.20_dormer) / Danvers: 4.0.20-alpha1 (4.0.20_danvers)
+Dormer: 3.2.20 (3.2.20_dormer) / Danvers: No Danvers Variant
 
-ARCTIC ZEPHYR: FROM ASHES ANNIVERSARY EDITION (DANVERS) IS IN EARLY PREVIEW AND FUNCTIONALITY IS NOT A GUARANTEE. FEEDBACK ON THE DANVERS RELEASES WILL ALLOW FOR A BETTER TRANSITION FROM JARVIS (KODI 16) TO KRYPTON (KODI 17).
-
-The "Summer 2016 Update" to Arctic Zephyr: From Ashes will conclude the "General Availability" status of the Dormer - Jarvis (Kodi 16) line of From Ashes. The Dormer (3.x) line will transition to Long Term Support (LTS) status and receive only bugfixes. As of this release, the "Danvers" line (4.x) will enter "Preview Availability." You may continue using the Dormer - Jarvis line until you are ready to update to Kodi 17 Krypton.
+The "Summer 2016 Update" to Arctic Zephyr: From Ashes concludes the "General Availability" status of the Dormer - Jarvis (Kodi 16) line of From Ashes. The Dormer (3.x) line will transition to Long Term Support (LTS) status and receive only bugfixes. As of this release, the "Danvers" line (4.x) will enter "Preview Availability." You may continue using the Dormer - Jarvis line until you are ready to update to Kodi 17 Krypton.
 
 "About From Ashes" has been updated with new credits which were missing in the "Spring 2016 Update"
 Info Banner Code Has Been Completely Commented Out for Dormer and Danver Releases

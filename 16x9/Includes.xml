@@ -51,7 +51,6 @@
 		<width>1920</width>
 		<height>440</height>
 	</include>
-	
 	<include name="Dimensions_Fullscreen">
 		<posx>0</posx>
 		<posy>0</posy>
