@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <includes>
-	<include content="View_503_Poster_Square">
+	<include name="View_503_Poster_Square">
 		<description>List View (id=503)</description>
 		<control type="group">
 			<include>Animation.Common</include>

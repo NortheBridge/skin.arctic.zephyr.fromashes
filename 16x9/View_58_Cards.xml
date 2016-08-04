@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <includes>
-	<include content="View_58_Cards">
+	<include name="View_58_Cards">
 		<description>List View (id=58)</description>
 		<control type="group">
 			<include>Animation.Common</include>

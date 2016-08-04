@@ -43,8 +43,9 @@
             <control type="grouplist" id="9000">
 			    <left>30</left>
 				<top>130</top>
-                <!--<include>Def9000GroupList</include>-->
-                <itemgap>4</itemgap>
+				<width>447</width>
+				<itemgap>4</itemgap>
+                <include>Def9000GroupList</include>
                 <control type="button" id="2">
                     <description>View</description>
                     <width>447</width>

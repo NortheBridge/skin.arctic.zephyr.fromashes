@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
-<!-- Updated for Kodi Krypton Marker -->
 <includes>
 	<include file="Defaults.xml" />
 	<!-- Views -->
@@ -44,13 +43,13 @@
 		<texturenofocus>-</texturenofocus>
 		<texturefocus>-</texturefocus>
 	</include>
+	
 <!-- Added for New Busy Spinner Background Overlay -->	
 	<include name="Dimensions_Spinner_Halfscreen">
-	    <posx>0</posx>
+		<posx>0</posx>
 		<top>360</top>
 		<width>1920</width>
 		<height>440</height>
-		<colordiffuse>Black</colordiffuse>
 	</include>
 	<include name="Dimensions_Fullscreen">
 		<posx>0</posx>
@@ -109,8 +108,8 @@
 		<control type="image">
 			<include>Animation.FadeIn</include>
 			<include condition="!Window.IsVisible(DialogBusy.xml)">Animation.FadeOut</include>
-			<include>Dimensions_Spinner_Halfscreen</include>			
-			<texture border="5">common/black-back.png</texture>
+			<include>Dimensions_Spinner_Halfscreen</include>
+			<texture colordiffuse="FF0C0D0D">diffuse/lovefilmthumb.png</texture>
 		</control>
 	</include>	
 	<include name="GlobalOverlay">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <includes>
-	<include content="53Content">
+	<include name="53Content">
 		<height>1080</height>
 		<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(seasons)</visible>
 		<posy>96</posy>
@@ -220,17 +220,17 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include content="53Wrap">
+	<include name="53Wrap">
 		<control type="wraplist" id="53">
 			<include>53Content</include>
 		</control>
 	</include>
-	<include content="53Fixed">
+	<include name="53Fixed">
 		<control type="fixedlist" id="53">
 			<include>53Content</include>
 		</control>
 	</include>
-	<include content="View_53_Poster">
+	<include name="View_53_Poster">
 		<description>List View (id=53)</description>
 		<control type="group">
 			<include>Animation.Common</include>
