@@ -7,6 +7,13 @@ ARCTIC ZEPHYR: FROM ASHES ANNIVERSARY EDITION (CODENAMED "DANVERS") IS PRE-RELEA
 THERE IS NO GUARNTEE THAT ALL FEATURES WILL WORK. PLEASE LET US KNOW OF ANY ISSUES YOU RUN INTO. THIS SKIN IS NOW AVAILABLE IN THE 
 NORTHEBRIDGE BY DESIGN(R) REPOSITORY, EMBY BETA REPOSITORY, GITHUB, OR VIA DIRECT ZIP FILE DOWNLOAD ONLY.
 
+Fixed Krypton Runtime Issues
+Updated Skin Textures With New Krypton Textures
+Reverted Redefined Contexts for Includes Contexts
+Fixed Startup Splash to Use Kodi's Addon Version Call Rather than "4.0.20"
+Fixed the "Danvers Preview" Prompt to Only Display On Kodi Startup
+Updated "About From Ashes" to label @minus0 as "Co-Author" and updated Plugin Information calls
+
 [B]Arctic Zephyr: From Ashes Danvers "Summer 2016 Update" - Released August 1, 2016[/B]
 Danvers: 4.2.20-alpha1 (4.2.20-alpha1_danvers)
 
@@ -14,15 +21,30 @@ ARCTIC ZEPHYR: FROM ASHES ANNIVERSARY EDITION (CODENAMED "DANVERS") IS PRE-RELEA
 THERE IS NO GUARNTEE THAT ALL FEATURES WILL WORK. PLEASE LET US KNOW OF ANY ISSUES YOU RUN INTO. THIS SKIN IS NOW AVAILABLE IN THE 
 NORTHEBRIDGE BY DESIGN(R) REPOSITORY, EMBY BETA REPOSITORY, GITHUB, OR VIA DIRECT ZIP FILE DOWNLOAD ONLY.
 
-Reverted redefined include contexts in "Includes.xml"
-Reverted redefined include contexts in "Includes_*.xml,"
-Updated Textures
-Fixed Startup Splash to use Kodi's addon version call rather than 4.0.20
-Updated "About From Ashes" to label @minus0 as "Co-Author" and updated Plugin Information calls
-
-[B]Arctic Zephyr: From Ashes "Summer 2016 Update Rollup Patch Level 2 (PL2)" - Released July 17, 2016[/B]
-Dormer: 3.2.22 (3.2.22_dormer) / Danvers: No Danvers Variant
-Disabled Home Screen Icons (Will Return in Danvers Preview)
+Initial Krypton Release
+Based on the Dormer 3.2.21 Release
+"About From Ashes" has been updated with new credits which were missing in the "Spring 2016 Update"
+Info Banner Code Has Been Completely Commented Out for Dormer and Danver Releases
+Rotten Tomatoes Has Been Added to the Video Information Screen
+Fixes to Broken Code Lines During 3rd Gen Color Enhancement Implementation
+Danvers ONLY: Adds "DialogConfirm.xml"
+New Textures Have Been Added
+Unused Textures Have Been Removed
+4th Generation Color Enhancer Has Been Added
+Ability to change Dialog Menu Background
+Ability to change Dialog Menu Text
+Ability to change Dialog Disabled Text
+Ability to change Dialog Buttons Highlight
+Ability to change Hubs Menu Highlight
+Ability to change Hubs Text Color Highlight
+Ability to change Hubs Widget Highlight Border
+Ability to change Hubs Widget Sublabel
+Ability to change Side Blade Menu Highlight Color
+Implemented new Busy Spinner into all applicable windows
+Fixed File Browser not displaying Folder and File Icons properly
+Changed "script.toolbox" to "script.skinhelper" for Backup and Restore in Skin Settings.
+Added new Color Themes Category in Skin Settings, With Ability to Create and Manage Custom Themes
+Added Ability to Select Day/Night Themes
 
 [B]Arctic Zephyr: From Ashes "Summer 2016 Update Rollup Patch Level 1 (PL1)" - Released July 17, 2016[/B]
 Dormer: 3.2.21 (3.2.21_dormer) / Danvers: No Danvers Variant
