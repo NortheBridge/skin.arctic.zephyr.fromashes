@@ -179,10 +179,10 @@
                         <property name="image">special://skin/media/default/DefaultAddon.png</property>
                     </item>         
                     <item id="4">
-                        <description>Library</description>
-                        <label>14202</label>
+                        <description>Media</description>
+                        <label>14211</label>
                         <label2>31157</label2>
-                        <onclick>activatewindow(LibrarySettings)</onclick>
+                        <onclick>activatewindow(MediaSettings)</onclick>
                         <property name="image">special://skin/media/default/DefaultAddonMusicVideoInfo.png</property>
                     </item>
 				    <item id="5">
