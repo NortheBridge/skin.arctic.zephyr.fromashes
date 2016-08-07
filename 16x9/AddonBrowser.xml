@@ -35,6 +35,7 @@
 			<control type="grouplist" id="9000">
 			    <left>30</left>
 				<top>130</top>
+				<height>600</height>
                 <width>740</width>
                 <itemgap>4</itemgap>				
 				<include>Def9000GroupList</include>
