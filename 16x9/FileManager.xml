@@ -12,51 +12,108 @@
         
         <control type="group">
             <include>Animation.Common</include>
+	<!--Left Panel Group-->		
             <control type="group">
                 <description>Left panel</description>
-                <left>SidePad</left>
+                <!--<left>SidePad</left>
                 <top>PosterPad</top>
                 <height>640</height>
-                <width>870</width>
-                <control type="image">
+                <width>870</width>-->
+				<posx>85</posx>
+				<posy>190</posy>
+				<height>700</height>
+				<width>860</width>
+	    <!--Left Panel Background-->			
+				<control type="image">
+                    <posx>10</posx>
+                    <posy>10</posy>
+                    <width>840</width>
+                    <height>680</height>
+				    <texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
+                </control>
+        <!--Left Panel Border-->				
+				<control type="image">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>860</width>
+                    <height>700</height>
+                    <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
+                </control>
+	    <!--Left Panel Header Box Frame-->			
+				<control type="image">
+                    <posx>27</posx>
+                    <posy>28</posy>
+                    <width>805</width>
+                    <height>90</height>
+                    <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+                </control>
+                <!--<control type="image">
                     <width>100%</width>
                     <height>100%</height>
                     <texture border="5" colordiffuse="Panel">common/box.png</texture>
-                </control>
-
+                </control>-->
+        <!--Left Panel Header Label-->
                 <control type="label" id="101">
                     <description>Header Label</description>
-                    <top>5</top>
-                    <left>30</left>
-                    <right>30</right>
+                    <posy>38</posy>
+                    <posx>45</posx>
                     <align>left</align>
                     <font>TinyBold</font>
                     <textcolor>PanelWhite70</textcolor>
                 </control>
+		<!--Left Panel Scroolbar-->		
+				<control type="scrollbar" id="60">
+                    <posx>810</posx>
+					<posy>140</posy>
+                    <height>520</height>
+                    <onup>60</onup>
+                    <ondown>60</ondown>
+                    <onleft>20</onleft>
+                    <onright>21</onright>
+                    <texturesliderbackground border="4" colordiffuse="$VAR[ScrollbarBGColour]">scrollbar/scrollv.png</texturesliderbackground>
+                    <texturesliderbar border="4" colordiffuse="$VAR[ScrollbarUnFocusedColour]">scrollbar/scrollv.png</texturesliderbar>
+                    <texturesliderbarfocus border="4" colordiffuse="$VAR[ScrollbarFocusedColour]">scrollbar/scrollv.png</texturesliderbarfocus>
+                    <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+                </control>
 
+        <!--Left Panel List-->
                 <control type="list" id="20">
                     <description>Left File List</description>
-                    <left>15</left>
-                    <bottom>15</bottom>
-                    <right>15</right>
-                    <height>552</height>
+                    <posx>15</posx>
+                    <posy>124</posy>
+                    <height>562</height>
                     <onleft>21</onleft>
-                    <onright>21</onright>
+                    <onright>60</onright>
                     <onup>20</onup>
                     <ondown>20</ondown>
-
-                    <itemlayout height="69" width="840">
-
-                        
-
+                    <pagecontrol>60</pagecontrol>
+                    <itemlayout height="69" width="770">
+                        <control type="image">
+                            <posx>5</posx>
+                            <posy>3</posy>
+                            <width>60</width>
+                            <height>60</height>
+						    <texture>$INFO[ListItem.ActualIcon,default/]</texture>
+		                    <aspectratio>keep</aspectratio>
+                            <visible>IsEmpty(ListItem.Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <posx>3</posx>
+                            <posy>5</posy>
+                            <width>60</width>
+                            <height>50</height>
+						    <texture>$INFO[ListItem.ActualIcon,default/]</texture>
+					        <aspectratio>keep</aspectratio>
+                            <visible>!IsEmpty(ListItem.Thumb)</visible>
+                        </control>                        
                         <control type="label">
-                            <posx>30</posx>
+                            <posx>66</posx>
                             <width>720</width>
                             <align>left</align>
+							<font>Tiny</font>
                             <textcolor>PanelWhite70</textcolor>
                             <info>ListItem.Label</info>
                         </control>
-
                         <control type="label">
                             <right>30</right>
                             <width>150</width>
@@ -65,96 +122,149 @@
                             <textcolor>PanelWhite70</textcolor>
                             <info>ListItem.Label2</info>
                         </control>
-
                     </itemlayout>
 
-                    <focusedlayout height="69" width="840">
-
+                    <focusedlayout height="69" width="770">
                         <control type="image">
                             <width>100%</width>
                             <height>66</height>
-                            <texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>
+                            <texture border="20" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>
                             <animation effect="fade" start="100" end="50" condition="!Control.HasFocus(20)">Conditional</animation>
                         </control>
-
+                        <control type="image">
+                            <posx>5</posx>
+                            <posy>3</posy>
+                            <width>60</width>
+                            <height>60</height>
+						    <texture>$INFO[ListItem.ActualIcon,default/]</texture>
+		                    <aspectratio>keep</aspectratio>
+                            <visible>IsEmpty(ListItem.Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <posx>3</posx>
+                            <posy>5</posy>
+                            <width>60</width>
+                            <height>50</height>
+						    <texture>$INFO[ListItem.ActualIcon,default/]</texture>
+					        <aspectratio>keep</aspectratio>
+                            <visible>!IsEmpty(ListItem.Thumb)</visible>
+                        </control>
                         <control type="label">
-                            <posx>30</posx>
+                            <posx>66</posx>
                             <width>720</width>
                             <align>left</align>
                             <textcolor>$VAR[ColourSelected]</textcolor>
+							<font>Tiny</font>
                             <info>ListItem.Label</info>
                         </control>
-
                         <control type="label">
                             <right>30</right>
-                            <width>720</width>
+                            <width>150</width>
                             <align>right</align>
                             <textcolor>$VAR[ColourSelected]</textcolor>
                             <font>Tiny</font>
                             <info>ListItem.Label2</info>
                         </control>
-
                     </focusedlayout>
-
                 </control>
-
+        <!--Left Panel Object Count-->
                 <control type="label" id="12">
                     <description>Header Label</description>
                     <posx>23</posx>
-                    <posy>882</posy>
+                    <posy>700</posy>
                     <width>480</width>
                     <align>left</align>
                     <label>-</label>
                 </control>
-
             </control>
             
+	<!--Right Panel Group-->		
             <control type="group">
                 <description>Right panel</description>
-                <right>SidePad</right>
+				<posx>965</posx>
+				<posy>190</posy>
+				<height>700</height>
+				<width>860</width>
+		<!-- Right Panel Background -->		
+				<control type="image">
+                    <posx>10</posx>
+                    <posy>10</posy>
+                    <width>840</width>
+                    <height>680</height>
+				    <texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
+                </control>
+        <!--Right Panel Border-->				
+				<control type="image">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>860</width>
+                    <height>700</height>
+                    <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
+                </control>
+		<!--Right Panel Header Box Frame-->		
+				<control type="image">
+                    <posx>27</posx>
+                    <posy>28</posy>
+                    <width>805</width>
+                    <height>90</height>
+                    <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+                </control>
+                <!--<right>SidePad</right>
                 <top>PosterPad</top>
                 <height>640</height>
-                <width>870</width>
-            
+                <width>870</width>            
                 <control type="image">
                     <width>100%</width>
                     <height>100%</height>
                     <texture border="5" colordiffuse="Panel">common/box.png</texture>
-                </control>
-
+                </control>-->
+        <!--Right Panel Header Label-->
                 <control type="label" id="102">
                     <description>Header Label</description>
-                    <top>5</top>
-                    <left>30</left>
-                    <right>30</right>
+                    <posy>38</posy>
+                    <posx>45</posx>
                     <align>left</align>
                     <font>TinyBold</font>
                     <textcolor>PanelWhite70</textcolor>
                 </control>
-
+        <!--Right Panel List-->
                 <control type="list" id="21">
                     <description>Left File List</description>
-                    <left>15</left>
-                    <bottom>15</bottom>
-                    <right>15</right>
-                    <height>552</height>
+                    <posx>15</posx>
+                    <posy>124</posy>
+                    <height>562</height>
                     <onleft>20</onleft>
-                    <onright>20</onright>
+                    <onright>61</onright>
                     <onup>21</onup>
                     <ondown>21</ondown>
-
-                    <itemlayout height="69" width="840">
-
-                        
-
+                    <pagecontrol>61</pagecontrol>
+                    <itemlayout height="69" width="770">
+                        <control type="image">
+                            <posx>5</posx>
+                            <posy>3</posy>
+                            <width>60</width>
+                            <height>60</height>
+						    <texture>$INFO[ListItem.ActualIcon,default/]</texture>
+		                    <aspectratio>keep</aspectratio>
+                            <visible>IsEmpty(ListItem.Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <posx>3</posx>
+                            <posy>5</posy>
+                            <width>60</width>
+                            <height>50</height>
+						    <texture>$INFO[ListItem.ActualIcon,default/]</texture>
+					        <aspectratio>keep</aspectratio>
+                            <visible>!IsEmpty(ListItem.Thumb)</visible>
+                        </control>                     
                         <control type="label">
-                            <posx>30</posx>
+                            <posx>66</posx>
                             <width>720</width>
                             <align>left</align>
                             <textcolor>PanelWhite70</textcolor>
+							<font>Tiny</font>
                             <info>ListItem.Label</info>
                         </control>
-
                         <control type="label">
                             <right>30</right>
                             <width>150</width>
@@ -163,23 +273,39 @@
                             <textcolor>PanelWhite70</textcolor>
                             <info>ListItem.Label2</info>
                         </control>
-
                     </itemlayout>
 
-                    <focusedlayout height="69" width="840">
-
+                    <focusedlayout height="69" width="770">
                         <control type="image">
                             <width>100%</width>
                             <height>66</height>
                             <texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>
                             <animation effect="fade" start="100" end="50" condition="!Control.HasFocus(21)">Conditional</animation>
                         </control>
-
+                        <control type="image">
+                            <posx>5</posx>
+                            <posy>3</posy>
+                            <width>60</width>
+                            <height>60</height>
+						    <texture>$INFO[ListItem.ActualIcon,default/]</texture>
+		                    <aspectratio>keep</aspectratio>
+                            <visible>IsEmpty(ListItem.Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <posx>3</posx>
+                            <posy>5</posy>
+                            <width>60</width>
+                            <height>50</height>
+						    <texture>$INFO[ListItem.ActualIcon,default/]</texture>
+					        <aspectratio>keep</aspectratio>
+                            <visible>!IsEmpty(ListItem.Thumb)</visible>
+                        </control> 
                         <control type="label">
-                            <posx>30</posx>
+                            <posx>66</posx>
                             <width>720</width>
                             <align>left</align>
                             <textcolor>$VAR[ColourSelected]</textcolor>
+							<font>Tiny</font>
                             <info>ListItem.Label</info>
                         </control>
 
@@ -191,15 +317,27 @@
                             <font>Tiny</font>
                             <info>ListItem.Label2</info>
                         </control>
-
                     </focusedlayout>
-
                 </control>
-
-                <control type="label" id="22">
+		<!--Right Panel Scroolbar-->		
+                <control type="scrollbar" id="61">
+                    <posx>810</posx>
+					<posy>140</posy>
+                    <height>520</height>
+                    <onup>61</onup>
+                    <ondown>61</ondown>
+                    <onleft>21</onleft>
+                    <onright>20</onright>
+                    <texturesliderbackground border="4" colordiffuse="$VAR[ScrollbarBGColour]">scrollbar/scrollv.png</texturesliderbackground>
+                    <texturesliderbar border="4" colordiffuse="$VAR[ScrollbarUnFocusedColour]">scrollbar/scrollv.png</texturesliderbar>
+                    <texturesliderbarfocus border="4" colordiffuse="$VAR[ScrollbarFocusedColour]">scrollbar/scrollv.png</texturesliderbarfocus>
+                    <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
+                </control>
+		<!--Right Panel Object Count-->		
+                <control type="label" id="13">
                     <description>Header Label</description>
                     <posx>23</posx>
-                    <posy>882</posy>
+                    <posy>700</posy>
                     <width>480</width>
                     <align>left</align>
                     <label>-</label>

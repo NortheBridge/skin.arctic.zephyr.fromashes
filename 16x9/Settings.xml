@@ -55,7 +55,7 @@
 					<width>570</width>
 					<top>8</top>
 					<height>725</height>
-					<texture background="true">$INFO[Container(9100).ListItem.Property(image)]</texture>
+					<texture background="true">$INFO[Container(9100).ListItem.ActualIcon,default/]</texture>
 				</control>
 		<!--Icon Label-->		
 				<control type="label">
@@ -162,70 +162,74 @@
 					    <label>20077</label>
                         <label2>31166</label2>
 					    <onclick>activatewindow(SkinSettings)</onclick>
-                        <property name="image">special://skin/media/default/DefaultAddonProgram.png</property>
+                        <icon>DefaultAddonProgram.png</icon>
 				    </item>
 				    <item id="1">
                         <description>Appearance</description>
                         <label>14206</label>
                         <label2>31156</label2>
                         <onclick>activatewindow(InterfaceSettings)</onclick>
-                        <property name="image">special://skin/media/default/DefaultAddonSkin.png</property>
+                        <icon>DefaultAddonSkin.png</icon>
                     </item>
                     <item id="3">
                         <description>Addons</description>
                         <label>24001</label>
                         <label2>31162</label2>
                         <onclick>activatewindow(AddonBrowser)</onclick>
-                        <property name="image">special://skin/media/default/DefaultAddon.png</property>
+                        <icon>DefaultAddon.png</icon>
                     </item>         
                     <item id="4">
                         <description>Media</description>
                         <label>14211</label>
                         <label2>31157</label2>
                         <onclick>activatewindow(MediaSettings)</onclick>
+<<<<<<< HEAD
                         <property name="image">special://skin/media/default/DefaultAddonMusicVideoInfo.png</property>
+=======
+                        <icon>DefaultAddonMusicVideoInfo.png</icon>
+>>>>>>> 718a87d43f43ee6fcaafca15b3bbcd9d2192d13a
                     </item>
 				    <item id="5">
                         <description>Player</description>
                         <label>14200</label>
                         <label2>31158</label2>
                         <onclick>activatewindow(PlayerSettings)</onclick>
-                        <property name="image">special://skin/media/default/DefaultPlaylist.png</property>
+                        <icon>DefaultPlaylist.png</icon>
                     </item>
 				    <item id="6">
                         <description>Live TV</description>
                         <label>19191</label>
                         <label2>31163</label2>
                         <onclick>activatewindow(pvrsettings)</onclick>
-                        <property name="image">special://skin/media/default/DefaultAddonPVRClient.png</property>
+                        <icon>DefaultAddonPVRClient.png</icon>
                     </item>
 				    <item id="7">
                         <description>Services</description>
                         <label>14036</label>
                         <label2>31164</label2>
                         <onclick>activateWindow(servicesettings)</onclick>
-                        <property name="image">special://skin/media/default/DefaultAddonWebSkin.png</property>
+                        <icon>DefaultAddonWebSkin.png</icon>
                     </item>
 				    <item id="8">
                         <description>System</description>
                         <label>13000</label>
                         <label2>31161</label2>
                         <onclick>activatewindow(SystemSettings)</onclick>
-                        <property name="image">special://skin/media/default/DefaultAddonService.png</property>
+                        <icon>DefaultAddonService.png</icon>
                     </item>
                     <item id="9">
                         <description>System Info</description>
                         <label>130</label>
                         <label2>31167</label2>
                         <onclick>activatewindow(7)</onclick>
-                        <property name="image">special://skin/media/default/DefaultAddonSubtitles.png</property>
+                        <icon>DefaultAddonSubtitles.png</icon>
                     </item>
                     <item id="10">
 					   <description>Profiles</description>
 					   <label>13200</label>
                        <label2>31165</label2>
 					   <onclick>activatewindow(Profiles)</onclick>
-                       <property name="image">special://skin/media/default/DefaultUser.png</property>
+                       <icon>DefaultUser.png</icon>
 				    </item>
                 </content>
 				
