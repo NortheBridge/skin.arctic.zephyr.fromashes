@@ -2,7 +2,7 @@
 The Arctic Zephyr: From Ashes Skin designed for Emby and Kodi is a streamlined, clean, and minamalistic skin modidification for Kodi Krypton which provides a unique and easy to use user experience based on the Arctic Zephyr base skin created by Jurialmonkey. Arctic Zephyr: From Ashes has had a long legacy and is the next evolution of "Arctic Zephyr: Exploded."
 
 ## Quick Start
-![Shields IO Kodi 17](https://img.shields.io/badge/Kodi-17-blue.svg) ![Shields IO AZFA Branch](https://img.shields.io/badge/Arctic%20Zephyr%3A%20From%20Ashes-Danvers%20(4.0.20--alpha)-blue.svg) ![Shields IO Branch Status](https://img.shields.io/badge/Danvers%20Preview-Alpha%202-red.svg)
+![Shields IO Kodi 17](https://img.shields.io/badge/Kodi-17-blue.svg) ![Shields IO AZFA Branch](https://img.shields.io/badge/Arctic%20Zephyr%3A%20From%20Ashes-Danvers%20(4.0.20--alpha)-blue.svg) ![Shields IO Branch Status](https://img.shields.io/badge/Danvers%20Preview-Alpha%203-red.svg)
 
 Starting with the release of Arctic Zephyr: From Ashes (Danvers Preview), NortheBridge now provides a central location to help you quickly get started with and take advantage of the many features Arctic Zephyr: From Ashes has to offer. All information is available on the "Arctic Zephyr: From Ashes Official Website:"
 https://northebridge.com/systems/oss/kodi/fromashes
