@@ -2,7 +2,6 @@
 <!-- Foundation -->
 <window id="4">
     <defaultcontrol always="true">9100</defaultcontrol>
-    <allowoverlay>yes</allowoverlay>
     <controls>
         <include>GlobalBackground</include>
         <include>Furniture_Header</include>
@@ -13,19 +12,19 @@
 
 	<!-- Right Panel -->		
 			<control type="image">
-                <posx>594</posx>
-                <posy>203</posy>
-                <width>1230</width>
-                <height>712</height>
-				<texture colordiffuse="Panel" border="12">dialog/frame-fo.png</texture>
+                <posx>591</posx>
+                <posy>201</posy>
+                <width>1236</width>
+                <height>718</height>
+				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
             </control>
 	<!-- Left Panel -->		
 			<control type="image">
-                <posx>85</posx>
-                <posy>203</posy>
-                <width>450</width>
-                <height>712</height>
-				<texture colordiffuse="FF090A0A" border="12">dialog/frame_fo.png</texture>
+                <posx>84</posx>
+                <posy>201</posy>
+                <width>461</width>
+                <height>718</height>
+				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
             </control>
     <!-- Left Panel Borders -->	
 		    <control type="image">
@@ -43,7 +42,7 @@
                 <height>740</height>
                 <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
             </control>
-			
+
 		<!--Pictures (Icons)-->	
 			<control type="group">
 			    <posx>600</posx>
@@ -112,7 +111,7 @@
 			
 		<!-- Settings Buttons -->
 			<control type="list" id="9100">
-				<posx>135</posx>
+				<posx>128</posx>
                 <posy>225</posy>
                 <width>480</width>
                 <height>660</height>
@@ -183,11 +182,7 @@
                         <label>14211</label>
                         <label2>31157</label2>
                         <onclick>activatewindow(MediaSettings)</onclick>
-<<<<<<< HEAD
-                        <property name="image">special://skin/media/default/DefaultAddonMusicVideoInfo.png</property>
-=======
                         <icon>DefaultAddonMusicVideoInfo.png</icon>
->>>>>>> 718a87d43f43ee6fcaafca15b3bbcd9d2192d13a
                     </item>
 				    <item id="5">
                         <description>Player</description>
