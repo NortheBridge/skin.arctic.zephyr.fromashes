@@ -1,5 +1,17 @@
 [B]Arctic Zephyr: From Ashes Changelog[/B]
 
+[B]Arctic Zephyr: From Ashes Danvers "Alpha 4 Preview Update" - Released August 21, 2016[/B]
+Danvers: 4.2.20-alpha4 (4.2.20-alpha4_danvers)
+
+THIS IS A CUMULATIVE UPDATE TO ARCTIC ZEPHYR: FROM ASHES DANVERS PREVIEW (ALPHA 3). Cumaltive Updates contain all the fixes from the release
+it directly supersedes plus any required fixes to address critical issues from the directly superseded release.
+
+ARCTIC ZEPHYR: FROM ASHES ANNIVERSARY EDITION (CODENAMED "DANVERS") IS PRE-RELEASE SOFTWARE DESIGNED FOR A PRE-RELEASE VERSION OF KODI.
+THERE IS NO GUARNTEE THAT ALL FEATURES WILL WORK. PLEASE LET US KNOW OF ANY ISSUES YOU RUN INTO. THIS SKIN IS NOW AVAILABLE IN THE 
+NORTHEBRIDGE BY DESIGN(R) REPOSITORY, EMBY BETA REPOSITORY, GITHUB, OR VIA DIRECT ZIP FILE DOWNLOAD ONLY.
+
+Resolved Settings Window Not Displaying
+
 [B]Arctic Zephyr: From Ashes Danvers "Alpha 3 Preview Update" - Released August 21, 2016[/B]
 Danvers: 4.2.20-alpha3 (4.2.20-alpha3_danvers)
 

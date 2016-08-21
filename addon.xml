@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
     id="skin.arctic.zephyr.fromashes.danvers"
-    version="4.2.20-alpha3"
+    version="4.2.20-alpha4"
     name="Arctic Zephyr: From Ashes (Danvers Preview)"
     provider-name="NortheBridge">
     <requires>
@@ -33,7 +33,7 @@
         <summary lang="en">Clean, minimal, elegant, simple, light.</summary>
         <description lang="de">Arktische Zephyr: Aus der Asche ist die zweite Generation des die "Arctic Zephyr: explodierte" Haut von im85288 und Badaas erstellt basierend auf die dritte Iteration der arktischen Haut ursprünglich von Jurialmunkey. Jetzt kuratiert von NortheBridge mit Co-Autoren Guardian Hoffnung und minus0 weiterhin Arktis konzentriert sich darauf, einfach, sauber und minimalistisch mit einer leichten Drehung.</description>
         <description lang="en">Arctic Zephyr: From Ashes is the second generation of the "Arctic Zephyr: Exploded" skin created by im85288 and badaas based on the third iteration of the Arctic skin originally created by jurialmunkey. Now curated by NortheBridge with co-authors Guardian Hope and minus0, Arctic continues to focuses on being simple, clean and minimalistic with a light spin.</description>
-        <disclaimer>Arctic Zephyr: From Ashes (Danvers Preview) is compatible with Kodi 17 Krypton only. (Danvers Preview Alpha 3)</disclaimer>
+        <disclaimer>Arctic Zephyr: From Ashes (Danvers Preview) is compatible with Kodi 17 Krypton only. (Danvers Preview Alpha 4)</disclaimer>
 		<platform>all</platform>
 		<license>GPL v3.0</license>
 		<forum>http://forum.kodi.tv/showthread.php?tid=257970</forum>
