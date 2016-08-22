@@ -19,6 +19,7 @@
 				<preloaditems>2</preloaditems>
 				<pagecontrol>60</pagecontrol>
 				<viewtype label="536">list</viewtype>
+				<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),505) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
 				<scrolltime tween="quadratic">400</scrolltime>
 				<itemlayout height="337" width="222">
 					<control type="image">
@@ -173,6 +174,7 @@
 				<preloaditems>2</preloaditems>
 				<pagecontrol>60</pagecontrol>
 				<viewtype label="536">list</viewtype>
+				<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),506) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
 				<scrolltime tween="quadratic">400</scrolltime>
 				<itemlayout height="220" width="224">
 					<control type="image">
@@ -278,6 +280,7 @@
 				<preloaditems>2</preloaditems>
 				<pagecontrol>60</pagecontrol>
 				<viewtype label="536">list</viewtype>
+				<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),507) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
 				<scrolltime tween="quadratic">400</scrolltime>
 				<itemlayout height="337" width="222">
 					<control type="image">

@@ -14,19 +14,19 @@
             <control type="group">
     <!-- Right Panel -->		
 			    <control type="image">
-                    <posx>592</posx>
-                    <posy>201</posy>
-                    <width>1234</width>
-                    <height>716</height>
-				    <texture colordiffuse="Panel" border="5">buttons/dialoge_inner.png</texture>
+                    <posx>590</posx>
+                    <posy>200</posy>
+                    <width>1239</width>
+                    <height>720</height>
+				    <texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
                 </control>
 	<!-- Left Panel -->		
 			    <control type="image">
-                    <posx>85</posx>
-                    <posy>201</posy>
-                    <width>460</width>
-                    <height>716</height>
-				    <texture colordiffuse="FF090A0A" border="5">buttons/dialoge_inner.png</texture>
+                    <posx>84</posx>
+                    <posy>200</posy>
+                    <width>462</width>
+                    <height>720</height>
+				    <texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
                 </control>
     <!-- Left Panel Borders -->	
 		        <control type="image">
@@ -34,7 +34,7 @@
                     <posy>190</posy>
                     <width>479</width>
                     <height>740</height>
-                    <texture colordiffuse="Panel" border="16">dialog/frame_Landscape-fo.png</texture>
+                    <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
                 </control>		
 	<!-- Right Panel Borders -->	
 		        <control type="image">
@@ -44,28 +44,30 @@
                     <height>740</height>
                     <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
                 </control>
-
            
                 <control type="image">
                     <posx>620</posx>
                     <posy>280</posy>
                     <width>500</width>
                     <height>610</height>
-                    <aspectratio scalediffuse="false">scale</aspectratio>
-                    <texture diffuse="diffuse/pvrinfo.png" fallback="pvr/background.jpg">$INFO[ListItem.Art(fanart)]</texture>
+                    <aspectratio scalediffuse="true">stretch</aspectratio>
+					<texture diffuse="diffuse/pvrinfo.png" fallback="pvr/background.jpg" backgroung="true">$VAR[PosterImage]</texture>
+                    <!--<texture diffuse="diffuse/pvrinfo.png" fallback="pvr/background.jpg">$INFO[ListItem.Art(icon)]</texture>-->
                 </control>
             
-                <control type="label">
+                <control type="fadelabel">
                     <description>Header Label</description>
 					<posx>620</posx>
+					<width>500</width>
                     <include>DefDialogInfoHeader</include>
+					<autoscroll>true</autoscroll>
                     <label>$INFO[ListItem.Label]</label>
                 </control>
             
                 <control type="grouplist">
                     <left>1150</left>
                     <posy>225</posy>
-				    <width>600</width>
+				    <width>640</width>
                     <orientation>vertical</orientation>
                     <usecontrolcoords>true</usecontrolcoords>
                 
@@ -79,26 +81,10 @@
                     </control>
                     <control type="label">
                         <width>100%</width>
-                        <height>60</height>
+                        <height>55</height>
                         <font>Tiny</font>
                         <aligny>top</aligny>
                         <label>$INFO[ListItem.AddonName]</label>
-                    </control>
-                
-                <!-- Summary -->
-                    <control type="label">
-                        <width>100%</width>
-                        <height>25</height>
-                        <font>SmallBold</font>
-                        <label>20037</label>
-                        <aligny>center</aligny>
-                    </control>
-                    <control type="label">
-                        <width>100%</width>
-                        <height>60</height>
-                        <font>Tiny</font>
-                        <aligny>top</aligny>
-                        <label fallback="19055">$INFO[ListItem.AddonSummary]</label>
                     </control>
                 
                 <!-- Creator -->
@@ -111,7 +97,7 @@
                     </control>
                     <control type="label">
                         <width>100%</width>
-                        <height>60</height>
+                        <height>55</height>
                         <font>Tiny</font>
                         <aligny>top</aligny>
                         <label fallback="19055">$INFO[ListItem.AddonCreator]</label>
@@ -127,7 +113,7 @@
                     </control>
                     <control type="label">
                         <width>100%</width>
-                        <height>60</height>
+                        <height>55</height>
                         <font>Tiny</font>
                         <aligny>top</aligny>
                         <label fallback="19055">$INFO[ListItem.AddonVersion]</label>
@@ -143,12 +129,32 @@
                     </control>
                     <control type="label">
                         <width>100%</width>
-                        <height>60</height>
+                        <height>55</height>
                         <font>Tiny</font>
                         <aligny>top</aligny>
                         <label fallback="19055">$INFO[ListItem.AddonType]</label>
                     </control>
-                
+					
+                 <!-- Disclaimer -->
+                    <control type="label">
+                        <width>100%</width>
+                        <height>25</height>
+                        <font>SmallBold</font>
+                        <label>Disclaimer</label>
+                        <aligny>center</aligny>
+						<visible>!IsEmpty(ListItem.AddonDisclaimer)</visible>
+                    </control>
+                    <control type="fadelabel">
+                        <width>100%</width>
+                        <height>55</height>
+                        <font>Tiny</font>
+                        <aligny>top</aligny>
+						<autoscroll>true</autoscroll>
+						<textcolor>FFFAF72F</textcolor>
+                        <label>$INFO[ListItem.AddonDisclaimer]</label>
+						<visible>!IsEmpty(ListItem.AddonDisclaimer)</visible>
+                    </control> 
+					
                 <!-- Description -->
                     <control type="label">
                         <width>100%</width>
@@ -168,8 +174,8 @@
 
 
                 <control type="grouplist" id="9000">
-                    <posx>130</posx>
-                    <posy>220</posy>
+                    <posx>126</posx>
+                    <posy>228</posy>
                     <width>480</width>
                     <height>660</height>
                     <itemgap>5</itemgap>

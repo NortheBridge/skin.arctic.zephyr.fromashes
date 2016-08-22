@@ -6,7 +6,7 @@
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(50)</visible>
-			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+			<!--<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>-->
 			<control type="group">
 				<control type="list" id="50">
 					<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons) | [Container.Content(files) + !substring(Container.FolderPath,plugin://,left) + !stringcompare(Container.FolderPath,library://video/movies/) + !stringcompare(Container.FolderPath,library://video/tvshows/) + !stringcompare(Container.FolderPath,special://videoplaylists/)] | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)]</visible>
@@ -20,13 +20,15 @@
 					<ondown>50</ondown>
 					<pagecontrol>60</pagecontrol>
 					<viewtype label="535">list</viewtype>
+					<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),50) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
 					<scrolltime tween="quadratic">400</scrolltime>
 					<itemlayout width="ListW" height="64">
 						<include>50itemlayout</include>
 					</itemlayout>
 					<focusedlayout width="ListW" height="128" condition="Skin.HasSetting(50list.showplot)">
 						<control type="group">
-							<visible>Control.HasFocus(50) + !Window.IsVisible(DialogVideoInfo.xml)</visible>
+							<!--<visible>Control.HasFocus(50) + !Window.IsVisible(DialogVideoInfo.xml)</visible>-->
+							<visible>Control.HasFocus(50)</visible>
 							<include>50focuslayout</include>
 							<control type="textbox">
 								<height>68</height>
@@ -40,7 +42,8 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>!Control.HasFocus(50) | Window.IsVisible(DialogVideoInfo.xml)</visible>
+							<!--<visible>!Control.HasFocus(50) | Window.IsVisible(DialogVideoInfo.xml)</visible>-->
+							<visible>!Control.HasFocus(50)</visible>
 							<include>50itemlayout</include>
 							<control type="textbox">
 								<height>68</height>
@@ -56,11 +59,13 @@
 					</focusedlayout>
 					<focusedlayout width="ListW" height="64" condition="!Skin.HasSetting(50list.showplot)">
 						<control type="group">
-							<visible>Control.HasFocus(50) + !Window.IsVisible(DialogVideoInfo.xml)</visible>
+							<!--<visible>Control.HasFocus(50) + !Window.IsVisible(DialogVideoInfo.xml)</visible>-->
+							<visible>Control.HasFocus(50)</visible>
 							<include>50focuslayout</include>
 						</control>
 						<control type="group">
-							<visible>!Control.HasFocus(50) | Window.IsVisible(DialogVideoInfo.xml)</visible>
+							<!--<visible>!Control.HasFocus(50) | Window.IsVisible(DialogVideoInfo.xml)</visible>-->
+							<visible>!Control.HasFocus(50)</visible>
 							<include>50itemlayout</include>
 						</control>
 					</focusedlayout>
@@ -75,7 +80,7 @@
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(50)</visible>
-			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+			<!--<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>-->
 			<control type="group">
 				<posy>320</posy>
 				<control type="fixedlist" id="50">
@@ -92,17 +97,20 @@
 					<movement>2</movement>
 					<pagecontrol>60</pagecontrol>
 					<viewtype label="535">list</viewtype>
+					<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),50) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
 					<scrolltime tween="quadratic">400</scrolltime>
 					<itemlayout width="ListW" height="64">
 						<include>50itemlayout</include>
 					</itemlayout>
 					<focusedlayout width="ListW" height="64">
 						<control type="group">
-							<visible>Control.HasFocus(50) + !Window.IsVisible(DialogVideoInfo.xml)</visible>
+							<!--<visible>Control.HasFocus(50) + !Window.IsVisible(DialogVideoInfo.xml)</visible>-->
+							<visible>Control.HasFocus(50)</visible>
 							<include>50focuslayout</include>
 						</control>
 						<control type="group">
-							<visible>!Control.HasFocus(50) | Window.IsVisible(DialogVideoInfo.xml)</visible>
+							<!--<visible>!Control.HasFocus(50) | Window.IsVisible(DialogVideoInfo.xml)</visible>-->
+							<visible>!Control.HasFocus(50)</visible>
 							<include>50itemlayout</include>
 						</control>
 					</focusedlayout>
@@ -126,7 +134,7 @@
 	</include>
 	<include name="View_50_SidePoster">
 		<control type="group" description="Poster">
-			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+			<!--<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>-->
 			<left>SidePad</left>
 			<top>PosterPad</top>
 			<visible>!IsEmpty(ListItem.Icon)</visible>
@@ -220,7 +228,7 @@
 				<width>PosterH</width>
 				<height>PosterH</height>
 				<fadetime>100</fadetime>
-				<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+				<aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
 				<texture flipy="true" diffuse="diffuse/listposter-ref.png" background="true">$VAR[PosterImage]</texture>
 				<visible>Skin.HasSetting(show.reflections)</visible>
 			</control>
@@ -240,7 +248,7 @@
 				<width>PosterH</width>
 				<height>PosterH</height>
 				<fadetime>100</fadetime>
-				<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+				<aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
 				<texture diffuse="diffuse/listposter.png" background="true">$VAR[PosterImage]</texture>
 			</control>
 			<control type="image">
@@ -257,7 +265,7 @@
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(50)</visible>
-			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+			<!--<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>-->
 			<control type="group">
 				<control type="list" id="50">
 					<top>PosterPad</top>
@@ -270,6 +278,7 @@
 					<ondown>50</ondown>
 					<pagecontrol>60</pagecontrol>
 					<viewtype label="535">list</viewtype>
+					<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),50) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
 					<scrolltime>200</scrolltime>
 					<itemlayout width="ListSquareW" height="64">
 						<include>50itemlayout_square</include>
@@ -295,7 +304,7 @@
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(550)</visible>
-			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+			<!--<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>-->
 			<control type="group">
 				<control type="list" id="550">
 					<visible>![Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons) | [Container.Content(files) + !substring(Container.FolderPath,plugin://,left) + !stringcompare(Container.FolderPath,library://video/movies/) + !stringcompare(Container.FolderPath,library://video/tvshows/) + !stringcompare(Container.FolderPath,special://videoplaylists/)] | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)]]</visible>
@@ -309,6 +318,7 @@
 					<ondown>550</ondown>
 					<pagecontrol>60</pagecontrol>
 					<viewtype label="535">list</viewtype>
+					<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),550) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
 					<scrolltime>200</scrolltime>
 					<itemlayout width="ListSquareW" height="64">
 						<include>50itemlayout_square</include>
@@ -334,7 +344,7 @@
 					<width>PosterH</width>
 					<height>PosterH</height>
 					<fadetime>100</fadetime>
-					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+					<aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
 					<texture flipy="true" diffuse="diffuse/listposter-ref.png" background="true">$VAR[PosterImage]</texture>
 					<visible>Skin.HasSetting(show.reflections)</visible>
 				</control>
@@ -354,7 +364,7 @@
 					<width>PosterH</width>
 					<height>PosterH</height>
 					<fadetime>100</fadetime>
-					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+					<aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
 					<texture diffuse="diffuse/listposter.png" background="true">$VAR[PosterImage]</texture>
 				</control>
 				<control type="image">

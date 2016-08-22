@@ -5,39 +5,70 @@
     <allowoverlay>no</allowoverlay>
 
     <controls>
-
+        <include>GlobalBackground</include>
         <include>GlobalOverlay</include>
 
         <control type="group">
-            <posx>240</posx>
-            <posy>83</posy>
             <include>Animation.FadeIn.Slide</include>
 
-            <control type="image">
-                <posx>-30</posx>
-                <posy>-30</posy>
-                <width>1500</width>
-                <height>975</height>
-                <texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
+	    <!-- Left Panel -->		
+			<control type="image">
+                <posx>108</posx>
+                <posy>140</posy>
+                <width>454</width>
+                <height>779</height>
+				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
+            </control>			
+        <!-- Left Panel Borders -->	
+		    <control type="image">
+                <posx>100</posx>
+                <posy>130</posy>
+                <width>470</width>
+                <height>800</height>
+                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture><!-- replaced Dark1-->
+            </control>			
+       	<!-- Right Panel -->		
+			<control type="image">
+                <posx>605</posx>
+                <posy>140</posy>
+                <width>1229</width>
+                <height>779</height>
+				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
+            </control>			
+	    <!-- Right Panel Borders -->	
+		    <control type="image">
+                <posx>595</posx>
+                <posy>130</posy>
+                <width>1250</width>
+                <height>800</height>
+                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
             </control>
-
+		<!-- Right Panel Header Box-->	
+            <control type="image">
+                <posx>637</posx>
+                <posy>170</posy>
+                <width>1170</width>
+                <height>90</height>
+                <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+            </control>
+		<!--Right Panel Header Label-->	
             <control type="label" id="20">
                 <description>Header Label</description>
-                <posx>15</posx>
-                <posy>-15</posy>
+                <posx>655</posx>
+                <posy>180</posy>
                 <align>center</align>
                 <font>MediumBold</font>
-                <width>1410</width>
+                <width>1120</width>
                 <label>-</label>
             </control>
 
             <control type="grouplist" id="9">
                 <description>button area</description>
-                <posx>15</posx>
-                <posy>114</posy>
-                <width>387</width>
-                <height>342</height>
-                <itemgap>3</itemgap>
+                <posx>637</posx>
+                <posy>270</posy>
+                <width>300</width>
+                <height>482</height>
+                <itemgap>5</itemgap>
                 <onleft>30</onleft>
                 <onright>2</onright>
                 <onup>9</onup>
@@ -46,10 +77,10 @@
 
             <control type="grouplist" id="2">
                 <description>control area</description>
-                <posx>458</posx>
-                <posy>114</posy>
-                <width>969</width>
-                <height>687</height>
+                <posx>955</posx>
+                <posy>270</posy>
+                <width>853</width>
+                <height>532</height>
                 <itemgap>3</itemgap>
                 <onup>9001</onup>
                 <ondown>9001</ondown>
@@ -59,37 +90,47 @@
 
             <control type="togglebutton" id="13">
                 <description>Default Category Button</description>
-                <width>387</width>
+                <width>300</width>
+				<height>55</height>
                 <align>left</align>
-                <texturefocus colordiffuse="$VAR[ColourHighlight]" border="8">common/box.png</texturefocus>
-                <alttexturefocus colordiffuse="$VAR[ColourHighlight]" border="8">common/box.png</alttexturefocus>
+				<textoffsetx>15</textoffsetx>
+                <texturefocus colordiffuse="$VAR[ColourHighlight]" border="20">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="Black30" border="20">common/box.png</texturenofocus>
+                <alttexturefocus colordiffuse="$VAR[ColourHighlight]" border="20">common/box.png</alttexturefocus>
             </control>
 
             <control type="button" id="3">
                 <description>Default Button</description>
+				<height>55</height>
                 <align>left</align>
-                <texturefocus colordiffuse="$VAR[ColourHighlight]" border="8">common/box.png</texturefocus>
+                <texturefocus colordiffuse="$VAR[ColourHighlight]" border="20">common/box.png</texturefocus>
             </control>
 
             <control type="radiobutton" id="4">
                 <description>Default RadioButton</description>
+				<height>55</height>
                 <align>left</align>
-                <radioposx>910</radioposx>
-                <texturefocus colordiffuse="$VAR[ColourHighlight]" border="8">common/box.png</texturefocus>
+				<textoffsetx>15</textoffsetx>
+				<textwidth>730</textwidth>
+                <radioposx>788</radioposx>
+				<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/on.png</textureradiofocus>
+		        <textureradionofocus colordiffuse="Black30">buttons/off.png</textureradionofocus>
+                <texturefocus colordiffuse="$VAR[ColourHighlight]" border="20">common/box.png</texturefocus>
             </control>
 
             <control type="spincontrolex" id="5">
                 <description>Default spincontrolex</description>
+				<height>55</height>
                 <reverse>yes</reverse>
                 <align>left</align>
-                <texturefocus colordiffuse="$VAR[ColourHighlight]" border="8">common/box.png</texturefocus>
+                <texturefocus colordiffuse="$VAR[ColourHighlight]" border="20">common/box.png</texturefocus>
             </control>
 
             <control type="label" id="7">
                 <label>-</label>
                 <textcolor>$VAR[ColourHighlight]</textcolor>
             </control>
-
+            					
             <control type="image" id="6">
                 <description>Default Seperator</description>
                 <height>-3</height>
@@ -98,23 +139,67 @@
 
             <control type="sliderex" id="8">
                 <description>Default Slider</description>
-                <width>969</width>
+				<height>55</height>
+                <width>853</width>
                 <align>left</align>
-                <texturefocus colordiffuse="$VAR[ColourHighlight]" border="8">common/box.png</texturefocus>
+                <texturefocus colordiffuse="$VAR[ColourHighlight]" border="20">common/box.png</texturefocus>
             </control>
-
+			<control type="label" id="15">
+				<posx>955</posx>
+				<width>793</width>
+				<height>2</height>
+				<label>-</label>
+				<colordiffuse>$VAR[ColourHighlight]</colordiffuse>
+				<texture>common/white.png</texture>
+			</control>
+			<control type="label">
+			    <posx>132</posx>
+				<posy>210</posy>
+                <width>100%</width>
+                <height>25</height>
+                <font>SmallBold</font>
+                <label>21863</label>
+                <aligny>center</aligny>
+            </control>
+            <control type="label">
+			    <posx>132</posx>
+				<posy>240</posy>
+                <width>100%</width>
+                <height>55</height>
+                <font>Tiny</font>
+                <aligny>top</aligny>
+                <label fallback="19055">$INFO[ListItem.AddonCreator]</label>
+            </control>
+			<control type="label">
+			    <posx>132</posx>
+				<posy>300</posy>
+                <width>100%</width>
+                <height>25</height>
+                <font>SmallBold</font>
+                <label>19114</label>
+                <aligny>center</aligny>
+            </control>
+            <control type="label">
+			    <posx>132</posx>
+				<posy>320</posy>
+                <width>400</width>
+                <height>60</height>
+                <font>Tiny</font>
+                <align>left</align>
+                <label fallback="19055">$INFO[ListItem.AddonVersion]</label>
+            </control>
             <control type="image">
-                <posx>15</posx>
-                <posy>513</posy>
-                <width>383</width>
-                <height>383</height>
+                <posx>131</posx>
+                <posy>380</posy>
+                <width>406</width>
+                <height>483</height>
                 <texture fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
                 <aspectratio align="center" aligny="bottom">keep</aspectratio>
             </control>
 
             <control type="group" id="9001">
-                <posx>458</posx>
-                <posy>828</posy>
+                <posx>727</posx>
+                <posy>830</posy>
 
                 <control type="button" id="10">
                     <description>OK Button</description>
@@ -126,8 +211,8 @@
                     <onright>11</onright>
                     <onup>2</onup>
                     <ondown>2</ondown>
-                    <texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                    <texturefocus colordiffuse="$VAR[ColourHighlight]" border="20">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="Black12" border="20">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
                 </control>
 
@@ -141,8 +226,8 @@
                     <onright>12</onright>
                     <onup>2</onup>
                     <ondown>2</ondown>
-                    <texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                    <texturefocus colordiffuse="$VAR[ColourHighlight]" border="20">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="Black12" border="20">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
                 </control>
 
@@ -156,8 +241,8 @@
                     <onright>10</onright>
                     <onup>2</onup>
                     <ondown>2</ondown>
-                    <texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                    <texturefocus colordiffuse="$VAR[ColourHighlight]" border="20">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="Black12" border="20">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
                 </control>
 
