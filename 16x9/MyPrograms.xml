@@ -23,46 +23,53 @@
         <control type="group">
             <!--<height>242</height>-->
             <include>Def9000Background</include>
-			<control type="label" id="20">
+			<control type="image">
+			    <posx>45</posx>
+                <posy>39</posy>
+				<width>70</width>
+				<height>70</height>
+				<texture colordiffuse="Black" border="8">common/box.png</texture>
+			</control>
+			<control type="image">
+                <posx>45</posx>
+                <posy>39</posy>
+                <width>70</width>
+                <height>70</height>
+                <texture colordiffuse="PanelWhite100" border="8">$VAR[HeaderIcon]</texture>
+                <aspectratio align="center" aligny="bottom">keep</aspectratio>
+            </control>	
+			<control type="label">
                 <description>Header Label</description>
                 <posx>-65</posx>
-                <posy>31</posy>
+                <posy>35</posy>
                 <align>center</align>
                 <font>SmallBold</font>
                 <width>680</width>
-                <label>My Programs SubMenu</label>
-            </control>
-			<control type="image">
-                <posx>30</posx>
-                <posy>30</posy>
-                <width>70</width>
-                <height>70</height>
-                <texture fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
-                <aspectratio align="center" aligny="bottom">keep</aspectratio>
+                <label>$VAR[MainHeaderLabel] Submenu</label>
             </control>
             <control type="grouplist" id="9000">
-			    <left>30</left>
+			    <left>39</left>
 				<top>130</top>
-				<width>447</width>
+				<width>444</width>
 				<itemgap>4</itemgap>
                 <include>Def9000GroupList</include>
                 <control type="button" id="2">
                     <description>View</description>
-                    <width>447</width>
+                    <width>444</width>
 					<include>DefSkinSettingMenuButton</include>
                     <align>left</align>
                 </control>
 
                 <control type="button" id="3">
                     <description>Sort</description>
-					<width>447</width>
+					<width>444</width>
 					<include>DefSkinSettingMenuButton</include>
                     <align>left</align>
                 </control>
 
                 <control type="togglebutton" id="4">
                     <description>Ascending</description>
-					<width>447</width>
+					<width>444</width>
 					<include>DefSkinSettingMenuButton</include>
                     <align>left</align>
                     <label>584</label>

@@ -106,6 +106,7 @@
 					<preloaditems>2</preloaditems>
 					<scrolltime tween="quadratic">200</scrolltime>
 					<focusposition>1</focusposition>
+					<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),514) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
 					<visible>!container.content(episodes)</visible>
 					<itemlayout width="315" height="750">
 						<include>ShiftPosterThumbs</include>

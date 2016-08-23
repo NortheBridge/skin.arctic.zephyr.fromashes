@@ -2,7 +2,6 @@
 <!-- Foundation -->
 <window id="103">
     <defaultcontrol always="true">300</defaultcontrol>
-    <allowoverlay>no</allowoverlay>
     <zorder>10</zorder>
 
     <coordinates>
@@ -10,6 +9,7 @@
     </coordinates>
 
     <controls>
+	    <!--<include>GlobalBackground</include>-->
         <include>GlobalOverlay</include>
         <control type="group">
             <visible>!Window.IsVisible(numericinput)</visible>
@@ -17,68 +17,190 @@
             <include>Animation.FadeOut</include>
             
             <centerleft>50%</centerleft>
-            <centertop>45%</centertop>
-            <height>522</height>
-            <width>1530</width>
-            <control type="image">
-                <top>-18</top>
-                <bottom>-18</bottom>
-                <left>-18</left>
-                <right>-18</right>
-                <texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
+            <centertop>60%</centertop>
+            <height>622</height>
+            <width>1740</width>
+		<!-- Keyboard Panel Background -->	
+			<control type="image">
+			    <description>panel background image</description>
+			    <posx>0</posx>
+			    <posy>0</posy>
+			    <width>1740</width>
+                <height>622</height>
+			    <texture border="5" colordiffuse="Black">common/white.png</texture>
             </control>
-
+		<!-- Keyboard Panel -->	
             <control type="image">
-                <posy>11</posy>
-                <left>10</left>
-                <right>10</right>
-                <height>75</height>
+                <posx>13</posx>
+                <posy>10</posy>
+                <width>1715</width>
+                <height>602</height>
+				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
+            </control>
+        <!-- Keyboard Panel Border -->
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1740</width>
+                <height>622</height>
+                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
+            </control>
+		<!-- Edit Box Background -->	
+			<control type="image">
+                <posy>80</posy>
+                <left>45</left>
+                <width>1467</width>
+                <height>70</height>
                 <aspectratio>stretch</aspectratio>
-                <texture border="20" colordiffuse="Black12">common/box.png</texture>
+                <texture border="20" colordiffuse="Black30">common/box.png</texture>
             </control>
+		<!-- Edit Box Label -->	
             <control type="label" id="311">
                 <description>Heading</description>
-                <left>30</left>
-                <right>30</right>
-                <posy>-86</posy>
-                <height>75</height>
+				<posx>45</posx>
+				<posy>25</posy>
+                <height>70</height>
                 <align>center</align>
-                <font>SmallBold</font>
+                <font>Tiny</font>
                 <textcolor>PanelWhite100</textcolor>
             </control>
+		<!-- Edit Box -->	
             <control type="edit" id="312">
                 <description>Edit Text</description>
-                <left>10</left>
-                <right>10</right>
-                <posy>11</posy>
-                <height>75</height>
+				<top>80</top>
+                <left>45</left>
+                <right>280</right>
+				<width>1467</width>
+                <height>70</height>
                 <align>center</align>
+                <aligny>center</aligny>
+				<onup>8000</onup>
+                <onright>9001</onright>
+				<ondown>100</ondown>
+				<onleft>301</onleft>
                 <textcolor>Black70</textcolor>
-                <texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>
+				<scroll>true</scroll>
+                <texturefocus colordiffuse="$VAR[ColourHighlight]" border="20">common/box.png</texturefocus>
+            </control>
+			
+		<!-- Left Button Grouplist -->	
+			<control type="grouplist" id="9000">
+                <posx>45</posx>
+                <posy>175</posy>
+                <height>660</height>
+                <itemgap>15</itemgap>
+                <onup>8000</onup>
+                <ondown>312</ondown>
+                <orientation>vertical</orientation>
+                <scrolltime tween="sine" easing="out">240</scrolltime>
+				<control type="button" id="309">
+                    <description>Layout</description>
+                    <onleft>111</onleft>
+                    <onright>100</onright>
+					<height>70</height>
+                    <width>430</width>
+                    <align>left</align>
+					<textoffsetx>40</textoffsetx>
+                    <include>DefKeyboardKeys</include>
+                </control>
+				<control type="radiobutton" id="302">
+                    <description>Shift</description>
+					<posy>85</posy>
+                    <width>430</width>
+					<height>70</height>
+					<align>left</align>
+					<textoffsetx>40</textoffsetx>
+                    <label>20178</label>
+                    <include>DefKeyboardKeys</include>
+					<onleft>131</onleft>
+                    <onright>120</onright>
+                </control>
+				<control type="radiobutton" id="303">
+                    <description>Caps</description>
+					<posy>170</posy>
+                    <width>430</width>
+					<height>70</height>
+					<align>left</align>
+					<textoffsetx>40</textoffsetx>
+                    <label>20179</label>
+                    <include>DefKeyboardKeys</include>
+                    <onleft>151</onleft>
+                    <onright>140</onright>
+                </control>
+				<control type="radiobutton" id="304">
+                    <description>Symbols</description>
+					<posy>255</posy>
+                    <width>430</width>
+					<height>70</height>
+					<align>left</align>
+					<textoffsetx>40</textoffsetx>
+                    <label>Symbols  @#!*</label>
+                    <onleft>171</onleft>
+                    <onright>160</onright>
+                    <textureradioofffocus>noop</textureradioofffocus>
+                    <textureradiooffnofocus>noop</textureradiooffnofocus>
+                    <textureradioonfocus>noop</textureradioonfocus>
+                    <textureradioonnofocus>noop</textureradioonnofocus>
+                    <include>DefKeyboardKeys</include>
+                </control>
+				<control type="button" id="307">
+                    <description>IP</description>
+					<posy>340</posy>
+                    <width>430</width>
+					<height>70</height>
+					<align>left</align>
+					<textoffsetx>40</textoffsetx>
+                    <label>IP Address</label>
+					<onleft>306</onleft>
+                    <onright>32</onright>
+                    <include>DefKeyboardKeys</include>
+                </control>				
+			</control>	
+												
+            <control type="grouplist" id="9001">
+                <right>39</right>
+                <top>80</top>
+                <width>180</width>
+                <itemgap>10</itemgap>
+                <onleft>312</onleft>
+                <onright>312</onright>
+                <onup>8000</onup>
+                <ondown>100</ondown>
+                <orientation>horizontal</orientation>
+            <!-- Done -->
+                <control type="button" id="300">
+                    <align>center</align>
+                    <label>186</label>
+                    <width>104</width>
+                    <include>DefKeyboardKeys</include>
+                    <onclick>SetFocus(100)</onclick>
+                </control>
+            <!-- Cancel Button -->
+                <control type="button" id="301">
+                    <align>center</align>
+                    <width>60</width>
+                    <include>DefKeyboardKeys</include>
+                    <label>X</label>
+                </control>
             </control>
 
             <control type="group">
-                <posx>10</posx>
-                <posy>96</posy>
-                <control type="grouplist" description="toprow">
+                <posx>485</posx>
+                <posy>175</posy>
+				
+			<!-- First Row -->	
+                <control type="grouplist" id="1001">
                     <orientation>horizontal</orientation>
                     <itemgap>10</itemgap>
-                    <control type="button" id="309">
-                        <description>Layout</description>
-                        <onup>300</onup>
-                        <ondown>302</ondown>
-                        <width>370</width>
-                        <textoffsetx>20</textoffsetx>
-                        <include>DefKeyboardKeys</include>
-                    </control>
+					<onleft>309</onleft>
+                    <onright>309</onright>
+					<onup>312</onup>                  
                     <control type="button" id="100">
-                        <onup>32</onup>
                         <ondown>120</ondown>
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
                     </control>
                     <control type="button" id="101">
-                        <onup>32</onup>
                         <ondown>121</ondown>
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
@@ -86,76 +208,62 @@
                     <control type="button" id="102">
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
-                        <onup>32</onup>
                         <ondown>122</ondown>
                     </control>
                     <control type="button" id="103">
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
-                        <onup>32</onup>
                         <ondown>123</ondown>
                     </control>
                     <control type="button" id="104">
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
-                        <onup>32</onup>
                         <ondown>124</ondown>
                     </control>
                     <control type="button" id="105">
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
-                        <onup>32</onup>
                         <ondown>125</ondown>
                     </control>
                     <control type="button" id="106">
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
-                        <onup>32</onup>
                         <ondown>126</ondown>
                     </control>
                     <control type="button" id="107">
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
-                        <onup>32</onup>
                         <ondown>127</ondown>
                     </control>
                     <control type="button" id="108">
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
-                        <onup>32</onup>
                         <ondown>128</ondown>
                     </control>
                     <control type="button" id="109">
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
-                        <onup>32</onup>
                         <ondown>129</ondown>
                     </control>
                     <control type="button" id="110">
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
-                        <onup>32</onup>
                         <ondown>130</ondown>
                     </control>
                     <control type="button" id="111">
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
-                        <onup>32</onup>
                         <ondown>131</ondown>
                     </control>
                 </control>
-                <control type="grouplist">
+				
+			<!-- Second Row -->	
+                <control type="grouplist" id="1002">
                     <posy>85</posy>
+					<onleft>302</onleft>
+                    <onright>302</onright>
                     <orientation>horizontal</orientation>
                     <itemgap>10</itemgap>
-                    <control type="radiobutton" id="302">
-                        <description>Shift</description>
-                        <width>370</width>
-                        <label>20178</label>
-                        <include>DefKeyboardKeys</include>
-                        <onup>309</onup>
-                        <ondown>303</ondown>
-                    </control>
                     <control type="button" id="120">
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
@@ -229,18 +337,15 @@
                         <ondown>151</ondown>
                     </control>
                 </control>
-                <control type="grouplist">
+				
+			<!-- Third Row -->	
+                <control type="grouplist" id="1003">
                     <posy>170</posy>
+					<onleft>303</onleft>
+                    <onright>303</onright>
                     <orientation>horizontal</orientation>
                     <itemgap>10</itemgap>
-                    <control type="radiobutton" id="303">
-                        <description>Caps</description>
-                        <width>370</width>
-                        <label>20179</label>
-                        <include>DefKeyboardKeys</include>
-                        <onup>302</onup>
-                        <ondown>307</ondown>
-                    </control>
+					
                     <control type="button" id="140">
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
@@ -314,30 +419,15 @@
                         <ondown>171</ondown>
                     </control>
                 </control>
-                <control type="grouplist">
+				
+			<!-- Fourth Row -->	
+                <control type="grouplist" id="1004">
                     <posy>255</posy>
                     <orientation>horizontal</orientation>
+					<onleft>304</onleft>
+                    <onright>304</onright>
                     <itemgap>10</itemgap>
-                    <control type="button" id="307">
-                        <description>IP</description>
-                        <width>180</width>
-                        <label>IP</label>
-                        <onup>303</onup>
-                        <ondown>300</ondown>
-                        <include>DefKeyboardKeys</include>
-                    </control>
-                    <control type="radiobutton" id="304">
-                        <description>Symbols</description>
-                        <width>180</width>
-                        <label>@#!*</label>
-                        <onup>303</onup>
-                        <ondown>300</ondown>
-                        <textureradioofffocus>noop</textureradioofffocus>
-                        <textureradiooffnofocus>noop</textureradiooffnofocus>
-                        <textureradioonfocus>noop</textureradioonfocus>
-                        <textureradioonnofocus>noop</textureradioonnofocus>
-                        <include>DefKeyboardKeys</include>
-                    </control>
+
                     <control type="button" id="160">
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
@@ -372,144 +462,155 @@
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
                         <onup>145</onup>
-                        <ondown>32</ondown>
+                        <ondown>8</ondown>
                     </control>
                     <control type="button" id="166">
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
                         <onup>146</onup>
-                        <ondown>32</ondown>
+                        <ondown>8</ondown>
                     </control>
                     <control type="button" id="167">
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
                         <onup>147</onup>
-                        <ondown>32</ondown>
+                        <ondown>8</ondown>
                     </control>
                     <control type="button" id="168">
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
                         <onup>148</onup>
-                        <ondown>32</ondown>
+                        <ondown>8</ondown>
                     </control>
                     <control type="button" id="169">
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
                         <onup>149</onup>
-                        <ondown>32</ondown>
+                        <ondown>8</ondown>
                     </control>
                     <control type="button" id="170">
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
                         <onup>150</onup>
-                        <ondown>32</ondown>
+                        <ondown>305</ondown>
                     </control>
                     <control type="button" id="171">
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
                         <onup>151</onup>
-                        <ondown>32</ondown>
+                        <ondown>306</ondown>
                     </control>
                 </control>
-                <control type="grouplist" id="1001">  <!-- Auto-Completion Change-->
+				
+			<!-- Fifth Row -->	
+                <control type="grouplist" id="1005">  
                     <posy>340</posy>
                     <orientation>horizontal</orientation>
+                    <onleft>307</onleft>
+                    <onright>307</onright>
                     <itemgap>10</itemgap>
-                    <control type="button" id="300">
-                        <description>Done</description>
-                        <width>370</width>
-                        <label>20177</label>
-                        <onup>307</onup>
-                        <ondown>1000</ondown>  <!-- Auto-Completion Change-->
-                        <include>DefKeyboardKeys</include>
-                    </control>
-                    
+
+                 <!-- Space Key -->   
                     <control type="button" id="32">
                         <description>Layout</description>
-                        <width>655</width>
+                        <width>680</width>
                         <label>20182</label>
-                        <onup>160</onup>
-                        <ondown>1000</ondown>  <!-- Auto-Completion Change-->
+                        <onup>1004</onup>
                         <include>DefKeyboardKeys</include>
                     </control>
                     <control type="button" id="8">
                         <description>Backspace</description>
-                        <width>275</width>
+                        <width>285</width>
                         <label>20181</label>
-                        <onup>169</onup>
-                        <ondown>1000</ondown>  <!-- Auto-Completion Change-->
+                        <onup>1004</onup>
                         <include>DefKeyboardKeys</include>
                     </control>
                     <control type="button" id="305">
                         <label>&lt;</label>
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
-                        <onup>170</onup>
-                        <ondown>1000</ondown>  <!-- Auto-Completion Change-->
+                        <onup>1004</onup>
                     </control>
                     <control type="button" id="306">
                         <label>&gt;</label>
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
-                        <onup>171</onup>
-                        <ondown>1000</ondown>  <!-- Auto-Completion Change-->
+                        <onup>1004</onup>
                     </control>
                 </control>            
             </control>
 			
-<!--  Auto-Completion --Begin-->			
-            <control type="image">
-                <top>545</top>
-				<width>1570</width>
-				<height>178</height>
-				<bottom>-18</bottom>
-                <left>-18</left>
-				<right>-18</right>
-                <texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
-                <visible>IntegerGreaterThan(Container(1000).NumItems,0)</visible>
+<!--  Auto-Completion --Begin-->
+		<!-- AutoComplete Panel Background -->
+			<control type="image">
+			    <posx>0</posx>
+			    <posy>-125</posy>
+			    <width>1740</width>
+                <height>110</height>
+			    <texture border="5" colordiffuse="Black">common/white.png</texture>
+				<visible>IntegerGreaterThan(Container(8000).NumItems,0)</visible>
             </control>
-            <control type="panel" id="1000">
-                <height>138</height>
-				<width>1550</width>
-                <top>568</top>
-                <left>10</left>
-				<right>0</right>
-			    <onleft>1000</onleft>
-			    <onright>1000</onright>
-                <onup>1001</onup>
+		<!-- AutoComplete Panel -->	
+			<control type="image">
+                <posx>11</posx>
+                <posy>-117</posy>
+                <width>1717</width>
+                <height>94</height>
+				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
+				<visible>IntegerGreaterThan(Container(8000).NumItems,0)</visible>
+            </control>			
+        <!-- AutoComplete Panel Border -->
+            <control type="image">
+                <posx>0</posx>
+                <posy>-125</posy>
+                <width>1740</width>
+                <height>110</height>
+                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
+				<visible>IntegerGreaterThan(Container(8000).NumItems,0)</visible>
+            </control>			
+		<!-- Panel Layout -->	
+            <control type="panel" id="8000">
+                <height>60</height>
+				<width>1690</width>
+                <top>-98</top>
+                <left>35</left>
+				<right>60</right>
+			    <onleft>8000</onleft>
+			    <onright>8000</onright>
+                <ondown>312</ondown>
                 <orientation>horizontal</orientation>
 				<scrolltime tween="sine" easing="out">200</scrolltime>
-                <itemlayout height="69" width="304">
+                <itemlayout height="60" width="338">
                     <control type="image">
 				        <posx>0</posx>
 					    <posy>0</posy>
-                        <width>294</width>
-                        <height>64</height>
-                        <texture border="5" colordiffuse="Black12">common/box.png</texture>
+                        <width>328</width>
+                        <height>60</height>
+                        <texture border="20" colordiffuse="Black30">common/box.png</texture>
                     </control>
                     <control type="label">
 					    <posx>0</posx>
 					    <posy>0</posy>
-					    <width>294</width>
-					    <height>64</height>
+					    <width>300</width>
+					    <height>60</height>
 					    <align>center</align>
                         <textcolor>Black70</textcolor>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                 </itemlayout>
-                <focusedlayout height="69" width="304">
+                <focusedlayout height="60" width="338">
 			        <control type="image">
 					    <posx>0</posx>
 					    <posy>0</posy>
-					    <width>294</width>
-					    <height>64</height>
-					    <texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>
+					    <width>328</width>
+					    <height>60</height>
+					    <texture border="20" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>
 				    </control>
 					<control type="label">
 					    <posx>0</posx>
 					    <posy>0</posy>
-					    <width>294</width>
-					    <height>64</height>
+					    <width>300</width>
+					    <height>60</height>
 					    <align>center</align>
 					    <textcolor>$VAR[ColourSelected]</textcolor>
 					    <label>$INFO[ListItem.Label]</label>

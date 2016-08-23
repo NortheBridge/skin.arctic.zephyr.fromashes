@@ -13,19 +13,19 @@
 
 	<!-- Right Panel Background -->		
 			<control type="image">
-                <posx>595</posx>
-                <posy>138</posy>
-                <width>1230</width>
-                <height>805</height>
-				<texture colordiffuse="Panel" border="15">dialog/frame-fo.png</texture>
+                <posx>591</posx>
+                <posy>132</posy>
+                <width>1238</width>
+                <height>815</height>
+				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
             </control>
 	<!-- Left Panel Background -->		
 			<control type="image">
-                <posx>70</posx>
-                <posy>120</posy>
-                <width>480</width>
-                <height>840</height>
-				<texture colordiffuse="FF090A0A" border="12">dialog/frame_fo.png</texture>
+                <posx>80</posx>
+                <posy>132</posy>
+                <width>460</width>
+                <height>815</height>
+				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
             </control>
 
 	<!-- Right Panel Borders -->	
@@ -1011,26 +1011,29 @@
 						<selected>Skin.HasSetting(global.kioskmode)</selected>
 						<onclick>Skin.ToggleSetting(global.kioskmode)</onclick>
 					</control>
-					<control type="radiobutton" id="9808" description="Dont use circle icons">
+	<!--############# This will remove the Circles around Icons in the Dialog Boxes #############-->				
+					<!--<control type="radiobutton" id="9808" description="Dont use circle icons">
 						<visible>ControlGroup(9100).HasFocus(9107)</visible>
 						<include>DefSkinSettingRadioButton</include>
 						<label>31186</label>
 						<selected>!Skin.HasSetting(global.hidecirles)</selected>
 						<onclick>Skin.ToggleSetting(global.hidecirles)</onclick>
-					</control>
+					</control>-->
 					<control type="button" id="9810" description="Busy Loader Image">
 						<visible>ControlGroup(9100).HasFocus(9107)</visible>
 						<include>DefSkinSettingButton</include>
 						<label>31216</label>
-						<label2>$INFO[Skin.String(busyloader)]</label2>
-						<onclick>Skin.SetFile(busyloader,.gif,special://skin/extras/spinners)</onclick>
+						<!--<label2>$INFO[Skin.String(busyloader)]</label2>
+						<onclick>Skin.SetFile(busyloader,.gif,special://skin/extras/spinners)</onclick>-->
+						<label2>$INFO[Skin.String(SkinHelper.SpinnerTexture)]</label2>
+						<onclick>RunScript(script.skin.helper.service,action=BUSYTEXTURE)</onclick>
 					</control>
 					<control type="radiobutton" id="9812" description="Busy Loader Minimal">
 						<visible>ControlGroup(9100).HasFocus(9107)</visible>
 						<include>DefSkinSettingRadioButton</include>
 						<label>31237</label>
-						<selected>Skin.HasSetting(hide.busydialog)</selected>
 						<onclick>Skin.ToggleSetting(hide.busydialog)</onclick>
+						<selected>Skin.HasSetting(hide.busydialog)</selected>
 					</control>
 					<control type="radiobutton" id="9814" description="Update Next Aired on Startup">
 						<visible>ControlGroup(9100).HasFocus(9107)</visible>
@@ -1114,10 +1117,10 @@
 						<include>DefSkinSettingButton</include>
 	                    <label>Style of the stars</label>
 	                    <label2>$INFO[Skin.String(ratingstarsfolder)]</label2>
-	                    <onclick condition="StringCompare(skin.string(ratingstarsfolder),default)">Skin.SetString(ratingstarsfolder,sloped)</onclick>
-			            <!--<onclick condition="StringCompare(skin.string(ratingstarsfolder),sloped)">Skin.SetString(ratingstarsfolder,italic)</onclick>-->
+	                    <!--<onclick condition="StringCompare(skin.string(ratingstarsfolder),default)">Skin.SetString(ratingstarsfolder,sloped)</onclick>
+			            <onclick condition="StringCompare(skin.string(ratingstarsfolder),sloped)">Skin.SetString(ratingstarsfolder,italic)</onclick>
 				        <onclick condition="StringCompare(skin.string(ratingstarsfolder),italic)">Skin.SetString(ratingstarsfolder,bar)</onclick>
-			            <!--<onclick condition="StringCompare(skin.string(ratingstarsfolder),bar)">Skin.SetString(ratingstarsfolder,strip)</onclick>-->
+			            <onclick condition="StringCompare(skin.string(ratingstarsfolder),bar)">Skin.SetString(ratingstarsfolder,strip)</onclick>-->
 			            <onclick condition="StringCompare(skin.string(ratingstarsfolder),strip)">Skin.SetString(ratingstarsfolder,default)</onclick>
 				        <onclick condition="IsEmpty(Skin.String(ratingstarsfolder))">Skin.SetString(ratingstarsfolder,default)</onclick>	
 	                </control>-->
@@ -1502,8 +1505,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Main Highlight Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=focuscolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=focuscolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 						<control type="image">
 	                        <right>40</right>
@@ -1573,8 +1575,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Highlight Colour 2</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=focuscolor2.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=focuscolor2.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 						<control type="image">
 	                        <right>40</right>
@@ -1644,8 +1645,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Selected Main Text Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=selectedcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=selectedcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 						<control type="image">
 	                        <right>40</right>
@@ -1715,8 +1715,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Spinner Highlight Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=spinnercolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=spinnercolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 						<control type="image">
 	                        <right>40</right>
@@ -1773,7 +1772,7 @@
 	        <!-- Reset Main Colors -->
 	                <control type="button" id="10028">				    
 					    <visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<texturefocus colordiffuse="SelectedOrange" border="5">common/box.png</texturefocus>
+						<texturefocus colordiffuse="SelectedOrange" border="20">common/box.png</texturefocus>
 						<include>DefSkinSettingButton</include>
 						<label>Reset Main Colours to Default</label>
 	                    <onclick>Skin.Reset(focuscolor.name)</onclick>
@@ -1826,8 +1825,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Disabled Text Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=disabledtextcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=disabledtextcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 						<control type="image">
 	                        <right>40</right>
@@ -1897,8 +1895,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Dialog Headers Text Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=dialogheaderstextcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=dialogheaderstextcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 						<control type="image">
 	                        <right>40</right>
@@ -2039,8 +2036,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Buttons NoFocused Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=buttoncolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=buttoncolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 						<control type="image">
 	                        <right>40</right>
@@ -2110,8 +2106,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Buttons Focus Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=buttonfocuscolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=buttonfocuscolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 						<control type="image">
 	                        <right>40</right>
@@ -2181,8 +2176,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Buttons NonFocus Text Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=buttontextcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=buttontextcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 						<control type="image">
 	                        <right>40</right>
@@ -2252,8 +2246,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Buttons Focus Text Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=buttonfocustextcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=buttonfocustextcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 						<control type="image">
 	                        <right>40</right>
@@ -2310,7 +2303,7 @@
 		   <!-- Reset Dialog Colors -->
 	                <control type="button" id="10046">				    
 					    <visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<texturefocus colordiffuse="SelectedOrange" border="5">common/box.png</texturefocus>
+						<texturefocus colordiffuse="SelectedOrange" border="20">common/box.png</texturefocus>
 						<include>DefSkinSettingButton</include>
 						<label>Reset Dialog Colours to Default</label>
 	                    <onclick>Skin.Reset(dialogheaderstextcolor.name)</onclick>
@@ -2366,8 +2359,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Widget Panel Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=widgetpanelcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=widgetpanelcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -2443,8 +2435,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Widget Title Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=widgettitlecolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=widgettitlecolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -2520,8 +2511,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Widget Plot Text Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=widgetplotcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=widgetplotcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -2597,8 +2587,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Widget SubLabel Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=widgetsublabelcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=widgetsublabelcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -2674,8 +2663,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Home Header Background Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=headerbackgroundcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=headerbackgroundcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -2746,13 +2734,12 @@
 							<width>1200</width>
 							<include>DefSkinSettingButton</include>
 	                        <onup>10058</onup>
-	                        <ondown>10062</ondown>
+	                        <ondown>10061</ondown>
 	                        <onleft>9200</onleft>
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Home Floor Background Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=homefloorbgcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=homefloorbgcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -2815,10 +2802,10 @@
 	        <!-- Reset Home Colors -->
 	                <control type="button" id="10061">				    
 					    <visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<texturefocus colordiffuse="SelectedOrange" border="5">common/box.png</texturefocus>
+						<texturefocus colordiffuse="SelectedOrange" border="20">common/box.png</texturefocus>
 						<include>DefSkinSettingButton</include>
 						<label>Reset Home Colours to Default</label>
-	                    <onclick>Skin.Reset(widgetbackgroundcolor.name)</onclick>
+	                    <onclick>Skin.Reset(widgetpanelcolor.name)</onclick>
 	                    <onclick>Skin.Reset(widgettitlecolor.name)</onclick>
 						<onclick>Skin.Reset(widgetplotcolor.name)</onclick>
 	                    <onclick>Skin.Reset(widgetsublabelcolor.name)</onclick>
@@ -2865,14 +2852,13 @@
 	                    <control type="button" id="10064">
 							<width>1200</width>
 							<include>DefSkinSettingButton</include>
-	                        <onup>10062</onup>
+	                        <onup>10061</onup>
 	                        <ondown>10066</ondown>
 	                        <onleft>9200</onleft>
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Hubs Menu Highlight Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=hubsmenucolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=hubsmenucolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -2948,8 +2934,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Hubs Menu Text Focus Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=hubsmenutextcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=hubsmenutextcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -3025,8 +3010,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Hubs Widget Border Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=hubswidgetbordercolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=hunswidgetbordercolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -3102,8 +3086,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Hubs Widget Sublabel Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=hubswidgetsublabelcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=hubswidgetsublabelcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -3166,7 +3149,7 @@
             <!-- Reset HUBS Colors -->
 	                <control type="button" id="10072">				    
 					    <visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<texturefocus colordiffuse="SelectedOrange" border="5">common/box.png</texturefocus>
+						<texturefocus colordiffuse="SelectedOrange" border="20">common/box.png</texturefocus>
 						<include>DefSkinSettingButton</include>
 						<label>Reset HUBs Colours to Default</label>
 	                    <onclick>Skin.Reset(hubsmenucolor.name)</onclick>
@@ -3220,8 +3203,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Highlight Select Colour for ALL "Views"</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=viewsselectcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=viewsselectcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -3297,8 +3279,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Library Details Text Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=viewdetailshighlighttextcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=viewdetailshighlighcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -3374,8 +3355,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Scrollbar Background Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=scrollbarbgcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=scrollbarbgcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -3451,8 +3431,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Scrollbar UnFocused Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=scrollbarunfocusedcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=scrollbarunfocusedcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -3528,8 +3507,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Scrollbar Focused Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=scrollbarfocusedcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=scrollbarfocusedcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -3604,8 +3582,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>SideBlade Panel Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=sidebladepanelcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=sidebladepanelcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -3680,8 +3657,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>SideBlade Highlight Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=sidebladehighlightcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=sidebladehighlightcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -3756,8 +3732,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>SideBlade Text Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=sidebladetextcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=sidebladetextcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -3819,7 +3794,7 @@
 	        <!-- Reset Library Colors -->
 	                <control type="button" id="10090">				    
 					    <visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<texturefocus colordiffuse="SelectedOrange" border="5">common/box.png</texturefocus>
+						<texturefocus colordiffuse="SelectedOrange" border="20">common/box.png</texturefocus>
 						<include>DefSkinSettingButton</include>
 						<label>Reset Library Colours to Default</label>
 	                    <onclick>Skin.Reset(viewsselectcolor.name)</onclick>
@@ -3877,8 +3852,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>OSD Buttons Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=osdbuttonscolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=osdbuttonscolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -3953,8 +3927,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>OSD Buttons Focus Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=osdbuttonsfocuscolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=osdbuttonsfocuscolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -4029,8 +4002,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>OSD ProgressBar Cache Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=osdprogressbarcachecolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=osdprogressbarcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -4105,8 +4077,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>OSD ProgressBar Cache End Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=osdprogressbarcacheendcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=osdprogressbarcachecolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -4181,8 +4152,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>OSD ProgressBar Background Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=osdprogressbarbgcolor.name)</onclick>
-							<enable>System.HasAddon(script.skin.helper.service)</enable>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=osdprogressbarbgcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -4244,7 +4214,7 @@
 	        <!-- Reset OSD Colors -->
 	                <control type="button" id="10102">				    
 					    <visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<texturefocus colordiffuse="SelectedOrange" border="5">common/box.png</texturefocus>
+						<texturefocus colordiffuse="SelectedOrange" border="20">common/box.png</texturefocus>
 						<include>DefSkinSettingButton</include>
 						<label>Reset OSD Colours to Default</label>
 	                    <onclick>Skin.Reset(osdbuttonscolor.name)</onclick>
@@ -4290,8 +4260,8 @@
 					<bottom>20</bottom>
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
-					<onup>11000</onup>
-					<ondown>11000</ondown>
+					<onup>11012</onup>
+					<ondown>11002</ondown>
 					<onright>60</onright>
 					<pagecontrol>60</pagecontrol>
 					<orientation>vertical</orientation>
@@ -4345,7 +4315,32 @@
 						<label2>$INFO[Skin.String(SkinHelper.ColorTheme.Night)]</label2>
 						<onclick>XBMC.RunScript(script.skin.helper.service,action=ColorThemes,daynight=night)</onclick>
 						<visible>Skin.HasSetting(SkinHelper.EnableDayNightThemes)</visible>
-					</control>					
+					</control>
+					<control type="label" id="11009">
+	    <!-- Seperator Heading -->			
+					    <visible>ControlGroup(9100).HasFocus(9110)</visible>
+						<font>MediumSmallBold</font>
+                        <label>Colour Picker Palettes</label>
+                        <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
+                    </control>
+		<!-- Heading Line Seperator -->			
+					<control type="image" id="11011">
+					    <visible>ControlGroup(9100).HasFocus(9110)</visible>
+					    <left>480</left>
+					    <width>1260</width>
+					    <height>2</height>
+					    <colordiffuse>FF1976D2</colordiffuse>
+					    <texture>common/white.png</texture>
+				    </control>
+			<!-- Color Picker Defaut Palette -->		
+					<control type="button" id="11012">
+					    <visible>ControlGroup(9100).HasFocus(9110)</visible>
+						<ondown>11002</ondown>
+                        <include>DefSkinSettingButton</include>
+                        <label>31810</label>
+                        <label2>[COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(defaultcolorpalette)][/COLOR]</label2>
+                        <onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=defaultcolorpalette,header=$LOCALIZE[31810])</onclick>
+                    </control>					
                 </control>
 				
 <!-- ##### Views Section ##### -->					
@@ -4357,8 +4352,8 @@
 					<bottom>20</bottom>
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
-					<onup>12002</onup>
-					<ondown>12034</ondown>
+					<onup>12000</onup>
+					<ondown>12000</ondown>
 					<onright>60</onright>
 					<pagecontrol>60</pagecontrol>
 					<orientation>vertical</orientation>
@@ -4381,12 +4376,11 @@
 				    </control>					
 			<!-- Views Settings -->		
 					<control type="button" id="12002" description="Enable or Disable views">
-                        <ondown>12010</ondown>
 						<include>DefSkinSettingButton</include>
 						<onclick>RunScript(script.skin.helper.service,action=enableviews)</onclick>
 						<label>31769</label>
 						<visible>ControlGroup(9100).HasFocus(9109)</visible>
-					</control>	
+					</control>
 					<control type="label" id="12003">
 		<!-- Seperator Heading -->			
 					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
@@ -4404,12 +4398,12 @@
 					    <texture>common/white.png</texture>
 				    </control>
 			<!-- Force Views Settings -->		
-    			    <control type="radiobutton" id="12010" description="Enable or Disable Force Views">
+    			    <control type="radiobutton" id="12010" description="Enable/Disable Force Views">
 					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
 						<include>DefSkinSettingRadioButton</include>
-				        <label>Enable Forced Views</label>
-				        <selected>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</selected>						
+				        <label>Enable Forced Views</label>						
 				        <onclick>Skin.ToggleSetting(SkinHelper.ForcedViews.Enabled)</onclick>
+						<selected>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</selected>
 			        </control>
 					<control type="button" id="12012" description="Force Movies">
 					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
@@ -4506,7 +4500,7 @@
 						<label2>[COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(SkinHelper.ForcedViews.pictures.label)]$INFO[Skin.String(SkinHelper.ForcedViews.pictures), (,)][/COLOR]</label2>
 				        <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=pictures)</onclick>
 				        <visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>			
-			        </control>
+			        </control>					
 				</control>
 		    <!-- Scrollbar for Views Settings Control Area -->		
 				<control type="scrollbar" id="60">
@@ -4522,7 +4516,8 @@
                     <texturesliderbar border="4" colordiffuse="$VAR[ScrollbarUnFocusedColour]">scrollbar/scrollv.png</texturesliderbar>
                     <texturesliderbarfocus border="4" colordiffuse="$VAR[ScrollbarFocusedColour]">scrollbar/scrollv.png</texturesliderbarfocus>
                     <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-                </control>				
+                </control>
+				
 <!-- ##### Backup/Restore Section ##### -->					
 				<control type="grouplist" id="14000">
 					<description>Control Area</description>
