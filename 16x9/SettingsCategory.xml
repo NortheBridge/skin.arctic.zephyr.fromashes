@@ -15,19 +15,19 @@
 
 	<!-- Right Panel Foreground -->		
 			<control type="image">
-                <posx>594</posx>
-                <posy>203</posy>
-                <width>1230</width>
-                <height>712</height>
-				<texture colordiffuse="Panel" border="12">dialog/frame-fo.png</texture>
+                <posx>591</posx>
+                <posy>201</posy>
+                <width>1236</width>
+                <height>718</height>
+				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
             </control>
 	<!-- Left Panel Foreground-->		
 			<control type="image">
-                <posx>85</posx>
-                <posy>203</posy>
-                <width>450</width>
-                <height>712</height>
-				<texture colordiffuse="PanelBlack30" border="12">dialog/frame_fo.png</texture>
+                <posx>84</posx>
+                <posy>201</posy>
+                <width>461</width>
+                <height>718</height>
+				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
             </control>
     <!-- Left Panel Background -->	
 		    <control type="image">
@@ -89,8 +89,8 @@
 
 		<!-- Left Group Menu Buttons -->
 			<control type="group">
-				<posx>130</posx>
-                <posy>210</posy>
+				<posx>118</posx>
+                <posy>221</posy>
                 <width>480</width>
                 <height>700</height>
                 <!-- Left Group -->

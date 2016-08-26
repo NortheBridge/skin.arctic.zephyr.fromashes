@@ -18,8 +18,8 @@
         <control type="group">
             <animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
 
-            <height>866</height>
-            <width>1100</width>
+            <!--<height>866</height>
+            <width>1100</width>-->
             <include>DefDialogInfoPanel</include>
             
             <control type="label" id="2">
@@ -27,53 +27,51 @@
                 <centerleft>50%</centerleft>
                 <width>1000</width>
                 <align>center</align>
-                <posy>15</posy>
+                <posy>38</posy>
                 <font>MediumBold</font>
             </control>
-  
+            
             <control type="grouplist" id="5">
                 <description>Control Area</description>
-                <left>15</left>
-                <right>15</right>
-                <top>100</top>
-                <height>618</height>
-                <itemgap>3</itemgap>
+                <left>40</left>
+                <top>150</top>
+				<width>1100</width>
+                <height>510</height>
+                <itemgap>4</itemgap>
                 <orientation>vertical</orientation>
                 <pagecontrol>60</pagecontrol>
                 <onleft>8000</onleft>
-                <onright>8000</onright>
+                <onright>60</onright>
                 <onup>8000</onup>
                 <ondown>8000</ondown>
             </control>
             <control type="grouplist" id="8000">
-                <bottom>30</bottom>
+                <bottom>35</bottom>
+				<left>40</left>
                 <orientation>horizontal</orientation>
                 <height>66</height>
                 <itemgap>30</itemgap>
-                <width>100%</width>
+                <width>1100</width>
                 <align>center</align>
                 <onup>5</onup>
                 <ondown>5</ondown>
                 <control type="button" id="28">
                     <description>OK</description>
                     <width>270</width>
-                    <font>Button</font>
-                    <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+					<align>center</align>
+					<include>DefSkinSettingMenuButton</include>
                 </control>
                 <control type="button" id="29">
                     <description>Defaults</description>
                     <width>270</width>
-                    <font>Button</font>
-                    <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+					<align>center</align>
+					<include>DefSkinSettingMenuButton</include>
                 </control>
                 <control type="button" id="30">
                     <description>Defaults</description>
                     <width>270</width>
-                    <font>Button</font>
-                    <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+					<align>center</align>
+					<include>DefSkinSettingMenuButton</include>
                 </control>
             </control>
 
@@ -82,21 +80,23 @@
                 <align>left</align>
 				<width>500</width>
 				<include>DefSkinSettingMenuButton</include>
-                <texturefocus colordiffuse="$VAR[ColorHighlight]" border="8">common/box.png</texturefocus>
             </control>
 
             <control type="radiobutton" id="8">
                 <description>Default RadioButton</description>
-                <align>left</align>
-                <radioposx>1230</radioposx>
-                <texturefocus colordiffuse="$VAR[ColorHighlight]" border="8">common/box.png</texturefocus>
+				<radioposx>1048</radioposx>
+                <radioposy>center</radioposy>
+				<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/on.png</textureradiofocus>
+                <textureradionofocus colordiffuse="Dark2">buttons/off.png</textureradionofocus>
+				<align>left</align>
+				<include>DefSkinSettingMenuButton</include>
             </control>
 
             <control type="spincontrolex" id="9">
                 <description>Default spincontrolex</description>
                 <align>left</align>
                 <reverse>yes</reverse>
-                <texturefocus colordiffuse="$VAR[ColorHighlight]" border="8">common/box.png</texturefocus>
+				<include>DefSkinSettingMenuButton</include>
             </control>
 
             <control type="image" id="11">
@@ -106,20 +106,29 @@
             <control type="edit" id="12">
                 <description>Default Button</description>
                 <align>left</align>
-                <texturefocus colordiffuse="$VAR[ColorHighlight]" border="8">common/box.png</texturefocus>
+				<include>DefSkinSettingMenuButton</include>
             </control>
 
             <control type="sliderex" id="13">
                 <description>Default Slider</description>
-                <texturefocus colordiffuse="$VAR[ColorHighlight]" border="8">common/box.png</texturefocus>
+				<include>DefSkinSettingMenuButton</include>
             </control>
 
             <control type="label" id="14">
                 <description>Default Button</description>
                 <align>left</align>
-                <texturefocus colordiffuse="$VAR[ColorHighlight]" border="8">common/box.png</texturefocus>
+				<include>DefSkinSettingMenuButton</include>
             </control>
-
+            <control type="scrollbar" id="60">
+				<onleft>5</onleft>
+				<posx>1155</posx>
+				<posy>152</posy>
+				<height>505</height>
+                <texturesliderbackground border="2" colordiffuse="$VAR[ScrollbarBGColour]">scrollbar/scrollv.png</texturesliderbackground>
+                <texturesliderbar border="2" colordiffuse="$VAR[ScrollbarUnFocusedColour]">scrollbar/scrollv.png</texturesliderbar>
+                <texturesliderbarfocus border="2" colordiffuse="$VAR[ScrollbarFocusedColour]">scrollbar/scrollv.png</texturesliderbarfocus>
+                <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+			</control>
 
 
         </control>

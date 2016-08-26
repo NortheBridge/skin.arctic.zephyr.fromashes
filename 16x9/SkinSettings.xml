@@ -46,8 +46,8 @@
             </control>
 			
 			<control type="group">
-				<posx>120</posx>
-                <posy>120</posy>
+				<posx>115</posx>
+                <posy>130</posy>
                 <width>1780</width>
                 <height>840</height>							
 <!-- Left Group Buttons -->

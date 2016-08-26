@@ -8,42 +8,44 @@
 		<include>Furniture_Clock</include>
 		<include>Furniture_NowPlaying</include>
 		<include>View_50_List_Square</include>
+		<include>View_52_BigList</include>
 		<control type="group">
 			<visible>ControlGroup(9000).HasFocus()</visible>
 			<include>GlobalOverlay</include>
 		</control>
 		<control type="group">		
 			<include>Def9000Background</include>
-			<!--<include>Def9000Arrows</include>-->
+			<include>Def9000Arrows</include>
+			<!--<control type="image">
+			    <posx>42</posx>
+                <posy>36</posy>
+				<width>85</width>
+				<height>75</height>
+				<texture colordiffuse="$VAR[ButtonFocusColour]" border="8">common/box.png</texture>
+			</control>-->
 			<control type="image">
-			    <posx>45</posx>
-                <posy>39</posy>
-				<width>70</width>
-				<height>70</height>
-				<texture colordiffuse="Black" border="8">common/box.png</texture>
-			</control>
-			<control type="image">
-                <posx>45</posx>
-                <posy>39</posy>
-                <width>70</width>
-                <height>70</height>
-                <texture colordiffuse="PanelWhite100" border="8">$VAR[HeaderIcon]</texture>
+                <posx>40</posx>
+                <posy>31</posy>
+                <width>85</width>
+                <height>85</height>
+				<texture colordiffuse="Dark1" border="8" >special://skin/media/DefaultAddonsInstalled.png</texture>
+                <!--<texture colordiffuse="PanelWhite100" border="8">$VAR[HeaderIcon]</texture>-->
                 <aspectratio align="center" aligny="bottom">keep</aspectratio>
             </control>	
 			<control type="label">
                 <description>Header Label</description>
                 <posx>-65</posx>
-                <posy>35</posy>
+                <posy>39</posy>
                 <align>center</align>
                 <font>SmallBold</font>
                 <width>680</width>
                 <label>$VAR[MainHeaderLabel] Submenu</label>
             </control>
 			<control type="grouplist" id="9000">
-			    <left>39</left>
-				<top>130</top>
-				<height>600</height>
+			    <left>41</left>
+				<top>145</top>
                 <width>444</width>
+				<height>380</height>
                 <itemgap>4</itemgap>				
 				<include>Def9000GroupList</include>
 				<control type="button" id="2">
@@ -77,18 +79,41 @@
 					<align>left</align>
 					<label>24034</label>
 				</control>
-				<control type="radiobutton" id="5">
+				<control type="button" id="5">
 					<description>Enable auto-updates</description>
 					<width>444</width>
 				    <radioposx>398</radioposx>
                     <radioposy>center</radioposy>
 					<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/on.png</textureradiofocus>
                     <textureradionofocus colordiffuse="Dark2">buttons/off.png</textureradionofocus>
-					<label>24063</label>
+					<label>10004</label>
 					<align>left</align>
 					<include>DefSkinSettingMenuButton</include>
 				</control>
-				<control type="radiobutton" id="6">
+				<control type="radiobutton" id="7">
+					<description>Hide foreign</description>
+					<width>444</width>
+				    <radioposx>398</radioposx>
+                    <radioposy>center</radioposy>
+					<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/on.png</textureradiofocus>
+                    <textureradionofocus colordiffuse="Dark2">buttons/off.png</textureradionofocus>
+					<align>left</align>
+					<include>DefSkinSettingMenuButton</include>
+					<label>25001</label>
+				</control>
+				<control type="radiobutton" id="8">
+					<description>Hide broken</description>
+					<width>444</width>
+				    <radioposx>398</radioposx>
+                    <radioposy>center</radioposy>
+					<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/on.png</textureradiofocus>
+                    <textureradionofocus colordiffuse="Dark2">buttons/off.png</textureradionofocus>
+					<align>left</align>
+					<include>DefSkinSettingMenuButton</include>
+					<label>24999</label>
+				</control>
+
+				<!--<control type="radiobutton" id="6">
 					<description>No notifications</description>
 					<width>444</width>
 				    <radioposx>398</radioposx>
@@ -98,7 +123,7 @@
 					<label>25000</label>
 					<align>left</align>
 					<include>DefSkinSettingMenuButton</include>
-				</control>
+				</control>-->
 				<!--  <control type="button" id="98">
 					<description>Open Player Controls</description>
 					<include>DefContextButton</include>

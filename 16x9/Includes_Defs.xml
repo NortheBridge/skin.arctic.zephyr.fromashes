@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+
 <!-- 1st Generation Color Enhancements -->
 <!-- ###Begin### -->
     <variable name="ColourHighlight">  
@@ -21,12 +22,7 @@
 	<variable name="SpinnerHighlight">  
         <value condition="!IsEmpty(Skin.String(spinnercolor.name))">$INFO[Skin.String(spinnercolor.name)]</value>
         <value>Highlight</value>
-	</variable>
-<!--############# Updated to new Busy Spinner Background Not Needed ############-->	
-	<!--<variable name="SpinnerBackgroundColour">  
-        <value condition="!IsEmpty(Skin.String(spinnerbgcolor.name))">$INFO[Skin.String(spinnerbgcolor.name)]</value>
-        <value>White100</value>
-	</variable>-->	
+	</variable>	
 	<variable name="ViewsSelectHighlight">  
         <value condition="!IsEmpty(Skin.String(viewsselectcolor.name))">$INFO[Skin.String(viewsselectcolor.name)]</value>
         <value>Dark1</value>
@@ -158,9 +154,10 @@
 	<variable name="SideBladeHighlightColour">  
         <value condition="!IsEmpty(Skin.String(sidebladehighlightcolor.name))">$INFO[Skin.String(sidebladehighlightcolor.name)]</value>
         <value>Dark1</value>	
-	</variable>
-		
+	</variable>		
 <!-- ###End### -->
+
+
 	<!---  Not Yet Functional ------ ############### Coming Soon #################-->
     <!--<onload condition="IsEmpty(Skin.String(ratingstarsfolder))">Skin.SetString(ratingstarsfolder,default)</onload>
 	<variable name="Colorratingstarsdo09">
@@ -207,14 +204,11 @@
 		<value condition="StringCompare(Skin.String(ratingstarsfolder),default)">stars/</value>
 		<value condition="StringCompare(skin.string(ratingstarsfolder),sloped)">stars/sloped/</value>
 		<value condition="StringCompare(skin.string(ratingstarsfolder),italic)">stars/italic/</value>
-		<value condition="StringCompare(skin.string(ratingstarsfolder),bar)">stars/bar/</value>
 		<value condition="StringCompare(skin.string(ratingstarsfolder),strip)">stars/strip/</value>
 		<value condition="IsEmpty(Skin.String(ratingstarsfolder))">stars/</value>
 	</variable>
 	<variable name="StarsRatingStyleStatus">
 	    <value condition="StringCompare(Skin.String(styleratingstars),3D)">DEFAULT</value>
-	    <value condition="StringCompare(Skin.String(styleratingstars),bar)">BAR]</value>
-	    <value condition="StringCompare(Skin.String(styleratingstars),flat)">FLAT</value>
 	    <value condition="StringCompare(Skin.String(styleratingstars),italic)">ITALIC</value>
 	    <value condition="StringCompare(Skin.String(styleratingstars),sloped)">SLOPED</value>
 	    <value condition="StringCompare(Skin.String(styleratingstars),strip)">STRIP</value>
@@ -772,8 +766,8 @@
 		<width>300</width>
 		<font>Button</font>
 <!-- 4th GEN Colour Modification -->		
-		<textcolor>$VAR[DialogTextColour]</textcolor>
-		<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="5">common/box.png</texturefocus>
+		<textcolor>$VAR[ButtonTextColour]</textcolor>
+		<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
 		<!--<textcolor>Black70</textcolor>
 		<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>-->
 	</include>
@@ -941,20 +935,14 @@
             <height>461</height>
             <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>			
         </control>
-		<control type="image">
-            <posx>-13</posx>
-            <posy>-5</posy>
-            <width>919</width>
-            <height>90</height>
-            <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
-        </control>
+		Focus
 		<control type="label" id="1">
 			<description>Heading</description>
 			<centerleft>50%</centerleft>
 			<width>885</width>
 			<font>MediumBold</font>
 			<align>center</align>
-			<posy>2</posy>
+			<posy>4</posy>
 		</control>
 		<control type="textbox" id="9">
 			<description>Line 1</description>
@@ -1087,8 +1075,6 @@
         <texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
         <texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
 		<alttexturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</alttexturefocus>
-        <!--<alttexturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</alttexturefocus>
-        <alttexturenofocus colordiffuse="FF090A0A" border="5">common/box.png</alttexturenofocus>-->
     </include>
 	
 <!-- Modification for SkinSettings  Radio Button -->	
@@ -1303,18 +1289,18 @@
 			<control type="image">
 				<description>arrow image</description>
 				<centerleft>50%</centerleft>
-				<posy>-16</posy>
+				<posy>122</posy>
 				<width>16</width>
 				<height>16</height>
-				<texture colordiffuse="White70" flipy="true">common/arrow-small.png</texture>
+				<texture colordiffuse="Dark2" flipy="true">common/arrow-small.png</texture>
 			</control>
 			<control type="image">
 				<description>arrow image</description>
 				<centerleft>50%</centerleft>
-				<posy>382</posy>
+				<posy>535</posy>
 				<width>16</width>
 				<height>16</height>
-				<texture colordiffuse="White70" flipy="false">common/arrow-small.png</texture>
+				<texture colordiffuse="Dark2" flipy="false">common/arrow-small.png</texture>
 			</control>
 		</control>
 	</include>
