@@ -1,5 +1,26 @@
 [B]Arctic Zephyr: From Ashes Changelog[/B]
 
+[B]Arctic Zephyr: From Ashes Danvers "Alpha 6 Preview Update" - Released August 27, 2016[/B]
+Danvers: 4.2.20-alpha6 (4.2.20-alpha6_danvers)
+
+ARCTIC ZEPHYR: FROM ASHES ANNIVERSARY EDITION (CODENAMED "DANVERS") IS PRE-RELEASE SOFTWARE DESIGNED FOR A PRE-RELEASE VERSION OF KODI.
+THERE IS NO GUARNTEE THAT ALL FEATURES WILL WORK. PLEASE LET US KNOW OF ANY ISSUES YOU RUN INTO. THIS SKIN IS NOW AVAILABLE IN THE 
+NORTHEBRIDGE BY DESIGN(R) REPOSITORY, EMBY BETA REPOSITORY, GITHUB, OR VIA DIRECT ZIP FILE DOWNLOAD ONLY.
+
+Updated the From Ashes Preview Startup Message
+Updated the Power Menu Selections to Include "From Ashes Support" and "Danvers Preview" options
+Resolved Color Selection Issues from the Alpha 4 Preview Update
+General Fixes to Dialogs
+General Fixes to Dialog Functionality
+Restored Ability to Select Between Various View Types
+Added the Autocompletion Keyboard as a Required Addon
+General Updates and Fixes
+Updated Textures
+
+THIS RELEASE HAS UNDERGONE GENERAL STABILITY TESTING FOR THE ARCTIC ZEPHYR: FROM ASHES DANVERS PREVIEW (BETA) PHASE. THE ALPHA 7 RELEASE WILL BE
+THE FINAL ALPHA FOR THE DANVERS PREVIEW. THIS VERSION WAS TESTED AGAINST THE LAST KODI KRYPTON ALPHA AND MAY CONTAIN BUGS IN KODI KRYPTON BETA.
+EMBY INTEGRATED FUNCTIONALITY WILL BE RESTORED DURING THE KODI KRYPTON BETA AS EMBY IS UPDATED TO FULLY SUPPORT KODI KRYPTON.
+
 [B]Arctic Zephyr: From Ashes Danvers "Alpha 4 Preview Update" - Released August 21, 2016[/B]
 Danvers: 4.2.20-alpha4 (4.2.20-alpha4_danvers)
 

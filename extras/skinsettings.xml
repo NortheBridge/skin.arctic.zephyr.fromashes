@@ -1,0 +1,9 @@
+<settings>
+
+	<!-- Default Color Palette -->
+    <setting id="defaultcolorpalette" value="basic" label="basic" condition="" icon="special://skin/extras/viewthumbs/defaultcolorpalette_basic.jpg" description="" default="true"/>
+    <setting id="defaultcolorpalette" value="rainbow" label="rainbow" condition="" icon="special://skin/extras/viewthumbs/defaultcolorpalette_rainbow.jpg" description=""/>
+    <setting id="defaultcolorpalette" value="material-design" label="material-design" condition="" icon="special://skin/extras/viewthumbs/defaultcolorpalette_material-design.jpg" description=""/>
+    <setting id="defaultcolorpalette" value="webcolors" label="webcolors" condition="" icon="special://skin/extras/viewthumbs/defaultcolorpalette_webcolors.jpg" description=""/>
+          
+</settings>

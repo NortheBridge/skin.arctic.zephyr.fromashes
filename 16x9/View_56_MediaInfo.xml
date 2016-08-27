@@ -22,6 +22,7 @@
 					<movement>3</movement>
 					<pagecontrol>60</pagecontrol>
 					<viewtype label="544">list</viewtype>
+					<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),56) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
 					<scrolltime tween="quadratic">400</scrolltime>
 					<itemlayout width="ListW" height="64">
 						<include>50itemlayout</include>
@@ -176,6 +177,7 @@
 					<movement>3</movement>
 					<pagecontrol>60</pagecontrol>
 					<viewtype label="544">list</viewtype>
+					<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),56) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
 					<scrolltime tween="quadratic">400</scrolltime>
 					<itemlayout width="654" height="64">
 						<include>56itemlayout</include>
@@ -377,6 +379,7 @@
 					<movement>2</movement>
 					<pagecontrol>60</pagecontrol>
 					<viewtype label="544">list</viewtype>
+					<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),56) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
 					<scrolltime tween="quadratic">400</scrolltime>
 					<itemlayout width="654" height="64">
 						<include>56itemlayout</include>

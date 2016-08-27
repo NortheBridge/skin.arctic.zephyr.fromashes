@@ -22,24 +22,56 @@
         </control>
         <control type="group">
             <include>Def9000Background</include>
+			<control type="image">
+			    <posx>45</posx>
+                <posy>39</posy>
+				<width>70</width>
+				<height>70</height>
+				<texture colordiffuse="Black" border="8">common/box.png</texture>
+			</control>
+			<control type="image">
+                <posx>45</posx>
+                <posy>39</posy>
+                <width>70</width>
+                <height>70</height>
+                <texture colordiffuse="PanelWhite100" border="8">$VAR[HeaderIcon]</texture>
+                <aspectratio align="center" aligny="bottom">keep</aspectratio>
+            </control>	
+			<control type="label">
+                <description>Header Label</description>
+                <posx>-65</posx>
+                <posy>35</posy>
+                <align>center</align>
+                <font>SmallBold</font>
+                <width>680</width>
+                <label>$VAR[MainHeaderLabel] Submenu</label>
+            </control>
+
             <control type="grouplist" id="9000">
+			    <left>39</left>
+				<top>130</top>
+				<width>444</width>
+				<itemgap>4</itemgap>
                 <include>Def9000GroupList</include>
 
                 <control type="button" id="2">
                     <description>View</description>
-                    <include>DefContextButton</include>
+					<width>444</width>
+                    <include>DefSkinSettingMenuButton</include>
                     <align>left</align>
                 </control>
 
                 <control type="button" id="3">
                     <description>Sort</description>
-                    <include>DefContextButton</include>
+					<width>444</width>
+                    <include>DefSkinSettingMenuButton</include>
                     <align>left</align>
                 </control>
 
                 <control type="togglebutton" id="4">
                     <description>Ascending</description>
-                    <include>DefContextButton</include>
+					<width>444</width>
+                    <include>DefSkinSettingMenuButton</include>
                     <align>left</align>
                     <label>584</label>
                     <altlabel>585</altlabel>
@@ -47,7 +79,8 @@
 
                 <control type="button" id="6">
                     <description>Slideshow</description>
-                    <include>DefContextButton</include>
+					<width>444</width>
+                    <include>DefSkinSettingMenuButton</include>
                     <align>left</align>
                     <label>108</label>
                     <visible>!ListItem.IsFolder</visible>
@@ -55,7 +88,8 @@
 
                 <control type="button" id="7">
                     <description>Recursive Slideshow</description>
-                    <include>DefContextButton</include>
+					<width>444</width>
+                    <include>DefSkinSettingMenuButton</include>
                     <align>left</align>
                     <label>108</label>
                     <visible>ListItem.IsFolder</visible>
@@ -63,7 +97,11 @@
 
                 <control type="radiobutton" id="9">
                     <description>Randomise</description>
-                    <include>DefContextButton</include>
+					<width>444</width>
+					<radioposx>398</radioposx>
+					<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/on.png</textureradiofocus>
+                    <textureradionofocus colordiffuse="Dark2">buttons/off.png</textureradionofocus>
+                    <include>DefSkinSettingMenuButton</include>
                     <align>left</align>
                     <label>13319</label>
                 </control>

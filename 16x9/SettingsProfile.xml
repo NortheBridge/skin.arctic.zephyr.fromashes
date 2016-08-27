@@ -13,43 +13,44 @@
         <include>GlobalOverlay</include>
 
         <control type="group">
-            <width>700</width>
+            <posy>170</posy>
             <include>DefDialogInfoPanel</include>
-            
+			<posx>300</posx>
+            <width>700</width>
             <control type="label">
                 <description>Header Label</description>
-                <centerleft>50%</centerleft>
+                <posx>45</posx>
+				<posy>33</posy>
                 <width>1000</width>
                 <align>center</align>
                 <label>10130</label>
-                <posy>15</posy>
                 <font>MediumBold</font>
             </control>
 
             <control type="radiobutton" id="4">
                 <description>Enable Login Screen</description>
-                <left>15</left>
-                <right>15</right>
-                <textoffsetx>20</textoffsetx>
-                <posy>90</posy>
+                <posx>30</posx>
+                <posy>140</posy>
                 <label>20096</label>				
                 <align>left</align>
+				<width>700</width>
                 <ondown>2</ondown>
                 <radioposx>624</radioposx>
 <!-- 4th GEN Colour Modification -->				
-				<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/radio-on.png</textureradiofocus>
-		        <textureradionofocus colordiffuse="Black30">buttons/radio-off.png</textureradionofocus>
-				<texturefocus colordiffuse="$VAR[DialogButtonFOColour]" border="8">common/box.png</texturefocus>
+				<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/on.png</textureradiofocus>
+		        <textureradionofocus colordiffuse="Black30">buttons/off.png</textureradionofocus>
+				<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
                 <!--<texturefocus colordiffuse="$VAR[ColourHighlight]" border="8">common/box.png</texturefocus>-->
+				<include>DefSkinSettingMenuButton</include>
             </control>
 
             <control type="list" id="2">
-                <posx>15</posx>
-                <posy>159</posy>
-                <width>670</width>
+                <posx>30</posx>
+                <posy>220</posy>
+                <width>700</width>
                 <height>483</height>
                 <onup>4</onup>
-                <itemlayout height="69" width="670">
+                <itemlayout height="69" width="700">
                     <control type="label">
                         <posx>20</posx>
                         <width>810</width>
@@ -66,23 +67,20 @@
                     </control>
 
                 </itemlayout>
-                <focusedlayout height="69" width="670">
+                <focusedlayout height="69" width="700">
                     <control type="group">                        
                         <visible>Control.HasFocus(2)</visible>
                         <control type="image">
                             <width>100%</width>
-                            <height>66</height>
-<!-- 4th GEN Colour Modification -->							
-							<texture border="5" colordiffuse="$VAR[DialogButtonFOColour]">common/box.png</texture>-->						
+                            <height>66</height>							
+							<texture border="20" colordiffuse="$VAR[ButtonFocusColour]">common/box.png</texture>-->						
                             <!--<texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>-->
                         </control>
 
                         <control type="label">
                             <posx>20</posx>
                             <width>810</width>
-<!-- 4th GEN Colour Modification -->							
-							<textcolor>$VAR[DialogTextColour]</textcolor>
-                            <!--<textcolor>$VAR[ColourSelected]</textcolor>-->
+                            <textcolor>$VAR[ColourSelected]</textcolor>
                             <info>ListItem.Label</info>
                         </control>
 
@@ -90,10 +88,8 @@
                             <right>20</right>
                             <width>810</width>
                             <align>right</align>
-                            <font>Tiny</font>
-<!-- 4th GEN Colour Modification -->							
-							<textcolor>$VAR[DialogTextColour]</textcolor>
-                            <!--<textcolor>$VAR[ColourSelected]</textcolor>-->
+                            <font>Tiny</font>					
+                            <textcolor>$VAR[ColourSelected]</textcolor>
                             <info>ListItem.Label2</info>
                         </control>
                     </control>
@@ -110,7 +106,7 @@
                             <width>810</width>
                             <align>right</align>
                             <font>Tiny</font>
-							<textcolor>$VAR[DialogTextColour]</textcolor>
+							<textcolor>$VAR[ColourSelected]</textcolor>
                             <info>ListItem.Label2</info>
                         </control>
                     </control>
