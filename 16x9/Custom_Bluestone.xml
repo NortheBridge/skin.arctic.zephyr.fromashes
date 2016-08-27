@@ -55,7 +55,7 @@
 			<posy>290</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Build: [COLOR=$VAR[ColourHighlight]]danvers@8a7bb05[/COLOR]</label> <!-- Say Hello to the Girl of Steel! Wait, You Can Read This? Easter Eggs! -->
+			<label>Build: [COLOR=$VAR[ColourHighlight]]danvers@980bd1d[/COLOR]</label> <!-- Say Hello to the Girl of Steel! Wait, You Can Read This? Easter Eggs! -->
 		</control>
 		<!-- The Full Version is Determined By the Branch (i.e. x.y.zz_branchnameabbreviated) -->
 		<!-- Goodbye to Bluestone; Now "Dormer" and "Danvers" -->
