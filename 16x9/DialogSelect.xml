@@ -6,23 +6,24 @@
 	<controls>
 		<include>GlobalOverlay</include>
 		<control type="group">
+		    <visible>!Control.IsVisible(6)</visible>
 			<include>DefDialogBackground</include>
 			<control type="label" id="1">
 				<include>DefDialogHeader</include>
 				<label>13406</label>
 			</control>
-
+			
 			<control type="list" id="3">
 				<left>38</left>
-				<width>1008</width>
+				<width>1100</width>
 				<posy>150</posy>
-				<height>526</height>
+				<height>544</height>
 				<onleft>8000</onleft>
 				<onright>60</onright>
 				<onup>3</onup>
 				<ondown>3</ondown>
 				<pagecontrol>60</pagecontrol>
-				<itemlayout height="66" width="1006">
+				<itemlayout height="66" width="1100">
 					<control type="label">
 						<left>30</left>
 						<right>30</right>
@@ -43,7 +44,7 @@
 						<info>ListItem.Label2</info>
 					</control>
 				</itemlayout>
-				<focusedlayout height="66" width="1106">
+				<focusedlayout height="66" width="1100">
 					<control type="image">
 						<left>0</left>
 						<right>0</right>
@@ -53,7 +54,7 @@
 					</control>
 					<control type="label">
 						<left>30</left>
-						<right>30</right>
+						<right>100</right>
 						<height>63</height>
 						<font>SmallBold</font>
 						<aligny>center</aligny>
@@ -63,7 +64,7 @@
 					</control>
 					<control type="label">
 						<left>30</left>
-						<right>30</right>
+						<right>100</right>
 						<align>right</align>
 						<height>63</height>
 						<aligny>center</aligny>
@@ -74,13 +75,12 @@
 				</focusedlayout>
 			</control>
 			
+		<!-- Scrollbar for Container (3) -->	
 			<control type="scrollbar" id="60">
 				<visible>Control.IsVisible(3)</visible>
-				<posx>1100</posx>
+				<posx>1150</posx>
 				<posy>160</posy>
 				<height>530</height>
-				<onup>60</onup>
-				<ondown>60</ondown>
 				<onleft>3</onleft>
 				<showonepage>false</showonepage>
                 <texturesliderbackground border="4" colordiffuse="$VAR[ScrollbarBGColour]">scrollbar/scrollv.png</texturesliderbackground>
@@ -88,218 +88,332 @@
                 <texturesliderbarfocus border="4" colordiffuse="$VAR[ScrollbarFocusedColour]">scrollbar/scrollv.png</texturesliderbarfocus>
                 <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
-			
-			
+		</control>	
+		
+		
+				<!-- Container (6) Group Large Selection Buttons -->	
+		<control type="group">
+            <visible>Control.IsVisible(6)</visible>
+
+		<!-- Main Background -->		
+			<control type="image">
+			    <description>panel background image</description>
+				<posx>410</posx>
+			    <posy>130</posy>
+			    <width>1165</width>
+                <height>820</height>
+			    <texture border="5" colordiffuse="Black">common/white.png</texture>
+            </control>
+		<!-- Left Panel Image -->	
+			<control type="image">
+			    <description>background image</description>
+			    <posx>420</posx>
+			    <posy>140</posy>
+			    <width>680</width>
+                <height>800</height>
+			    <texture border="12" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
+            </control>
+		<!-- Left Panel Border -->	
+		    <control type="image">
+                <posx>410</posx>
+                <posy>130</posy>
+                <width>700</width>
+                <height>820</height>
+                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
+            </control>
+		<!-- Left Panel Header Box -->	
+		    <control type="image">
+                <posx>440</posx>
+                <posy>160</posy>
+                <width>640</width>
+                <height>90</height>
+                <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+            </control>	
+		<!-- Right Panel Image -->	
+			<control type="image">
+			    <description>background image</description>
+			    <posx>1138</posx>
+			    <posy>140</posy>
+			    <width>434</width>
+                <height>800</height>
+			    <texture border="12" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
+            </control>
+		<!-- Right Panel Border -->	
+		    <control type="image">
+                <posx>1130</posx>
+                <posy>130</posy>
+                <width>450</width>
+                <height>820</height>
+                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
+            </control>
+		<!-- Right Panel Header Box -->	
+			<control type="image">
+                <posx>1158</posx>
+                <posy>160</posy>
+                <width>392</width>
+                <height>90</height>
+                <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+            </control>
+		<!-- Left Panel Text Header -->	
+			<control type="label" id="1">
+			    <description>Heading</description>
+			    <posx>460</posx>
+				<posy>170</posy>
+		        <width>600</width>
+		        <align>center</align>
+		        <font>MediumBold</font>		
+		        <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
+				<label>13406</label>13406
+			</control>
+		<!-- Right Panel Text Header -->	
+			<control type="label">
+			    <posx>1168</posx>
+				<posy>170</posy>
+		        <width>360</width>
+		        <align>center</align>
+		        <font>MediumBold</font>		
+		        <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
+				<label>Preview</label>
+			</control>
+		<!-- Right Panel Icon/Image/Spinner -->	
+            <control type="multiimage">
+                <posx>1154</posx>
+		        <posy>265</posy>
+				<width>400</width>
+				<height>300</height>
+                <aspectratio>keep</aspectratio>
+				<timeperimage>100</timeperimage>
+				<fadetime>0</fadetime>
+                <imagepath fallback="DefaultAddonNone.png">$INFO[Container(6).ListItem.Icon]</imagepath>
+                <visible>SubString(Container(6).ListItem.Icon,special://skin/extras/busy_spinners)</visible>
+            </control>
+            <control type="multiimage">
+                <posx>1154</posx>
+				<posy>265</posy>
+				<width>400</width>
+				<height>300</height>
+                <aspectratio>keep</aspectratio>
+				<timeperimage>5000</timeperimage>
+				<fadetime>150</fadetime>
+                <randomize>true</randomize>
+                <imagepath fallback="DefaultAddonNone.png">$INFO[Container(6).ListItem.Icon]</imagepath>
+                <visible>!SubString(Container(6).ListItem.Icon,special://skin/extras/busy_spinners)</visible>
+            </control>
+		<!-- Right Panel Summary Box -->	
+		    <control type="textbox">
+					<posx>1158</posx>
+                    <posy>790</posy>
+                    <width>390</width>
+                    <height>140</height>
+					<align>left</align>
+					<aligny>top</aligny>
+                    <font>Tiny</font>
+					<textcolor>$VAR[ColourSelected]</textcolor>
+					<label>$INFO[Container(6).ListItem.Property(Addon.Summary),, ]$INFO[Container(6).ListItem.Label2,, ][CR]$INFO[Container(6).ListItem.Property(Addon.Version),$LOCALIZE[24051] ]</label>
+			</control>
+	
 			<control type="list" id="6">
-				<posx>38</posx>
-				<posy>158</posy>
-				<width>620</width>
-				<height>526</height>
+				<posx>440</posx>
+				<posy>270</posy>
+				<width>605</width>
+				<height>480</height>
 				<onleft>8000</onleft>
 				<onright>61</onright>
 				<onup>6</onup>
 				<ondown>6</ondown>
 				<pagecontrol>61</pagecontrol>
-				<itemlayout height="76">
-					<control type="image">
-						<posx>32</posx>
-						<posy>5</posy>
-						<width>66</width>
-						<height>66</height>
+				<itemlayout height="120" width="605">
+					<!--<control type="image">
+						<posx>10</posx>
+						<posy>10</posy>
+						<width>100</width>
+						<height>100</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture diffuse="diffuse/dialogselect.png" fallback="DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
+						<texture diffuse="diffuse/dialogselect.png" fallback="DefaultAddon.png">$INFO[Listitem.Icon]</texture>
 						<visible>!Skin.HasSetting(global.hidecirles)</visible>
-					</control>
+					</control>-->
 					<control type="image">
-						<posx>32</posx>
-						<posy>5</posy>
-						<width>66</width>
-						<height>66</height>
+						<posx>10</posx>
+						<posy>10</posy>
+						<width>100</width>
+						<height>100</height>
 						<aspectratio scalediffuse="false">keep</aspectratio>
-						<texture fallback="DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
-						<visible>Skin.HasSetting(global.hidecirles)</visible>
+						<texture fallback="DefaultAddon.png">$INFO[Listitem.Icon]</texture>
+						<!--<visible>Skin.HasSetting(global.hidecirles)</visible>-->
 					</control>
 					<control type="label">
-						<posy>-18</posy>
-						<posx>170</posx>
-						<width>530</width>
-						<height>68</height>
+						<posy>5</posy>
+						<posx>120</posx>
+						<width>480</width>
+						<height>60</height>
+						<align>left</align>
+						<aligny>center</aligny>
 						<font>SmallBold</font>
 						<textcolor>Black70</textcolor>
 						<selectedcolor>Black70</selectedcolor>
 						<info>ListItem.Label</info>
-						<animation effect="slide" end="0,18" condition="IsEmpty(ListItem.Property(Addon.Summary))">Conditional</animation>
+						<scroll>false</scroll>
 					</control>
 					<control type="label">
-						<posx>170</posx>
-						<posy>18</posy>
-						<width>530</width>
-						<height>68</height>
+						<posx>120</posx>
+						<posy>35</posy>
+						<width>480</width>
+						<height>60</height>
 						<font>Mini</font>
 						<textcolor>Black70</textcolor>
 						<selectedcolor>Black70</selectedcolor>
-						<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+						<label>$INFO[ListItem.AddonSummary,, ]$INFO[ListItem.Label2,, ]$INFO[ListItem.AddonVersion,$LOCALIZE[24051] ]</label>
+						<!--<label>$INFO[ListItem.Property(Addon.Summary)]</label>-->
+						<scroll>false</scroll>
 					</control>
 				</itemlayout>
-				<focusedlayout height="76">
-					<control type="group">
+				<focusedlayout height="120" width="605">
+					<!--<control type="group">
 						<visible>!Control.HasFocus(6)</visible>
 						<control type="image">
-							<posx>32</posx>
-							<posy>5</posy>
-							<width>66</width>
-							<height>66</height>
-							<aspectratio scalediffuse="false">scale</aspectratio>
-							<texture diffuse="diffuse/dialogselect.png" fallback="DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
+							<posx>10</posx>
+							<posy>10</posy>
+							<width>100</width>
+							<height>100</height>
+							<aspectratio>scale</aspectratio>
+							<texture diffuse="diffuse/dialogselect.png" fallback="DefaultAddon.png">$INFO[Listitem.Icon]</texture>
 							<visible>!Skin.HasSetting(global.hidecirles)</visible>
 						</control>
 						<control type="image">
 							<posx>32</posx>
 							<posy>5</posy>
-							<width>66</width>
-							<height>66</height>
-							<aspectratio scalediffuse="false">keep</aspectratio>
-							<texture fallback="DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
+							<width>100</width>
+							<height>100</height>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="DefaultAddon.png">$INFO[Listitem.Icon]</texture>
 							<visible>Skin.HasSetting(global.hidecirles)</visible>
 						</control>
 						<control type="label">
 							<posy>-18</posy>
-							<posx>170</posx>
-							<width>520</width>
-							<height>68</height>
+							<posx>160</posx>
+							<width>480</width>
+							<height>60</height>
+							<align>left</align>
+                            <aligny>center</aligny>
 							<font>SmallBold</font>
 							<textcolor>Black70</textcolor>
 							<selectedcolor>Black70</selectedcolor>
 							<info>ListItem.Label</info>
-							<animation effect="slide" end="0,18" condition="IsEmpty(ListItem.Property(Addon.Summary))">Conditional</animation>
+							<scroll>true</scroll>
 						</control>
 						<control type="label">
-							<posx>170</posx>
+							<posx>160</posx>
 							<posy>18</posy>
-							<width>520</width>
-							<height>68</height>
+							<width>480</width>
+							<height>60</height>
 							<font>Mini</font>
 							<textcolor>Black70</textcolor>
 							<selectedcolor>Black70</selectedcolor>
-							<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+							<!--<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+							<label>$INFO[ListItem.AddonSummary,, ]$INFO[ListItem.Label2,, ]$INFO[ListItem.AddonVersion,$LOCALIZE[24051] ]</label>
+							<scroll>true</scroll>
 						</control>
-					</control>
+					</control>-->
 					<control type="group">
-						<visible>Control.HasFocus(6)</visible>
+						<!--<visible>Control.HasFocus(6)</visible>-->
 						<control type="image">
-							<width>596</width>
-							<height>76</height>
+							<width>605</width>
+							<height>120</height>
 							<texture border="20" colordiffuse="$VAR[ButtonFocusColour]">common/box.png</texture>
 						</control>
-						<control type="image">
-							<posx>32</posx>
-							<posy>5</posy>
-							<width>66</width>
-							<height>66</height>
+						<!--<control type="image">
+							<posx>10</posx>
+							<posy>10</posy>
+							<width>100</width>
+							<height>100</height>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<texture diffuse="diffuse/dialogselect.png" fallback="DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
+							<texture diffuse="diffuse/dialogselect.png" fallback="DefaultAddon.png">$INFO[Listitem.Icon]</texture>
 							<visible>!Skin.HasSetting(global.hidecirles)</visible>
-						</control>
+						</control>-->
 						<control type="image">
-							<posx>32</posx>
-							<posy>5</posy>
-							<width>66</width>
-							<height>66</height>
+							<posx>10</posx>
+							<posy>10</posy>
+							<width>100</width>
+							<height>100</height>
 							<aspectratio scalediffuse="false">keep</aspectratio>
-							<texture fallback="DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
-							<visible>Skin.HasSetting(global.hidecirles)</visible>
+							<texture fallback="DefaultAddon.png">$INFO[Listitem.Icon]</texture>
+							<!--<visible>Skin.HasSetting(global.hidecirles)</visible>-->
 						</control>
 						<control type="label">
-							<posy>-18</posy>
-							<posx>170</posx>
-							<width>520</width>
-							<height>68</height>
+							<posy>5</posy>
+							<posx>120</posx>
+							<width>480</width>
+							<height>60</height>
 							<font>SmallBold</font>
+							<align>left</align>
+                            <aligny>center</aligny>
 							<textcolor>$VAR[ColourSelected]</textcolor>
 							<selectedcolor>$VAR[ColourSelected]</selectedcolor>
 							<info>ListItem.Label</info>
-							<animation effect="slide" end="0,18" condition="IsEmpty(ListItem.Property(Addon.Summary))">Conditional</animation>
 						</control>
 						<control type="label">
-							<left>170</left>
-							<posy>18</posy>
-							<width>520</width>
-							<height>68</height>
+							<posx>120</posx>
+							<posy>35</posy>
+							<width>480</width>
+							<height>60</height>
 							<font>Mini</font>
 							<textcolor>$VAR[ColourSelected]</textcolor>
 							<selectedcolor>$VAR[ColourSelected]</selectedcolor>
-							<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+							<!--<label>$INFO[ListItem.Property(Addon.Summary)]</label>-->
+							<label>$INFO[ListItem.AddonSummary,, ]$INFO[ListItem.Label2,, ]$INFO[ListItem.AddonVersion,$LOCALIZE[24051] ]</label>
+							<scroll>true</scroll>
 						</control>
 					</control>
 				</focusedlayout>
 			</control>
             <control type="scrollbar" id="61">
 				<visible>Control.IsVisible(6)</visible>
-				<posx>669</posx>
-				<posy>160</posy>
-				<height>530</height>
-				<onup>61</onup>
-				<ondown>61</ondown>
 				<onleft>6</onleft>
-				<showonepage>false</showonepage>
+				<posx>1070</posx>
+				<posy>290</posy>
+				<height>480</height>
                 <texturesliderbackground border="4" colordiffuse="$VAR[ScrollbarBGColour]">scrollbar/scrollv.png</texturesliderbackground>
                 <texturesliderbar border="4" colordiffuse="$VAR[ScrollbarUnFocusedColour]">scrollbar/scrollv.png</texturesliderbar>
                 <texturesliderbarfocus border="4" colordiffuse="$VAR[ScrollbarFocusedColour]">scrollbar/scrollv.png</texturesliderbarfocus>
                 <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
 			</control>
-			<control type="image">
-				<description>Large Icon Image</description>
-				<posx>734</posx>
-				<posy>100</posy>
-				<width>400</width>
-				<height>475</height>
-				<texture fallback="DefaultAddonNone.png">$INFO[Container(6).ListItem.Icon]</texture>
-				<aspectratio>keep</aspectratio>
-				<visible>Control.IsVisible(6)</visible>
-			</control>
-			<control type="image">
-				<posx>700</posx>
-				<top>150</top>
-				<height>550</height>
-				<width>2</width>
-				<texture colordiffuse="Black">common/white.png</texture>
-				<visible>Control.IsVisible(6)</visible>
-			</control>
-			<control type="grouplist" id="8000">
-				<posx>30</posx>
-				<posy>720</posy>
-				<width>1050</width>
-				<height>55</height>
-				<onup>6</onup>
-				<ondown>6</ondown>
-				<onright>6</onright>
-				<onleft>6</onleft>
-				<orientation>horizontal</orientation>
-				<itemgap>10</itemgap>
-			    <control type="button" id="5">
-				    <description>Manual</description>
-					<left>0</left>
-				    <width>300</width>
-				    <height>55</height>
-				    <align>center</align>
-				    <label>186</label>				    
-				    <font>Button</font>
-				    <textcolor>Black70</textcolor>
-					<texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
-				    <texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>				
-			    </control>
-				<control type="button" id="7">
-                    <description>Cancel</description>
-                    <width>300</width>
-                    <height>55</height>
-                    <align>center</align>
-                    <label>222</label>
-                    <font>Button</font>
-                    <textcolor>Black70</textcolor>
-					<texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
-                    <texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
-                </control>
-			</control>	
+		</control>	
+
+
+		<control type="grouplist" id="8000">
+			<posx>440</posx>
+			<posy>830</posy>
+			<width>1050</width>
+			<height>55</height>
+			<orientation>horizontal</orientation>
+			<onup condition="Control.IsVisible(6)">6</onup>
+			<ondown condition="Control.IsVisible(6)">6</ondown>
+			<onup condition="!Control.IsVisible(6)">3</onup>
+			<ondown condition="!Control.IsVisible(6)">3</ondown>
+			<itemgap>10</itemgap>
+		    <control type="button" id="5">
+			    <description>Manual</description>
+				<left>0</left>
+			    <width>300</width>
+			    <height>55</height>
+			    <align>center</align>
+			    <label>186</label>				    
+			    <font>Button</font>
+			    <textcolor>Black70</textcolor>
+				<texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
+			    <texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>				
+		    </control>
+			<control type="button" id="7">
+                <description>Cancel</description>
+                <width>300</width>
+                <height>55</height>
+                <align>center</align>
+                <label>222</label>
+                <font>Button</font>
+                <textcolor>Black70</textcolor>
+		     	<texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
+            </control>	
 		</control>
 	</controls>
 </window>

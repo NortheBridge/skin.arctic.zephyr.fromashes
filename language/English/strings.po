@@ -837,7 +837,9 @@ msgctxt "#31801"
 msgid "For Pictures"
 msgstr ""
 
-
+msgctxt "#31810"
+msgid "Palette Selection:"
+msgstr ""
 
 
 

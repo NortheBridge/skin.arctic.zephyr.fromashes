@@ -51,10 +51,8 @@
 		<height>64</height>
 		<texture colordiffuse="Dark1">common/circle.png</texture>
 	</include>
-	
-<!-- Replaced by new Star Ratings -->	
 	<!-- Flags -->
-	<!--<variable name="Flagstar1">
+	<variable name="Flagstar1">
 		<value condition="IntegerGreaterThan(ListItem.Rating,1)">star10</value>
 		<value condition="IntegerGreaterThan(ListItem.Rating,0)">star5</value>
 		<value>star0</value>
@@ -77,9 +75,9 @@
 	<variable name="Flagstar5">
 		<value condition="IntegerGreaterThan(ListItem.Rating,9)">star10</value>
 		<value condition="IntegerGreaterThan(ListItem.Rating,8)">star5</value>
-		<value>star0</value>-->	
-	
-	<!--<variable name="HubFlagstar1">
+		<value>star0</value>
+	</variable>
+	<variable name="HubFlagstar1">
 		<value condition="IntegerGreaterThan(Container(9500).ListItem.Rating,1)">star10</value>
 		<value condition="IntegerGreaterThan(Container(9500).ListItem.Rating,0)">star5</value>
 		<value>star0</value>
@@ -103,9 +101,7 @@
 		<value condition="IntegerGreaterThan(Container(9500).ListItem.Rating,9)">star10</value>
 		<value condition="IntegerGreaterThan(Container(9500).ListItem.Rating,8)">star5</value>
 		<value>star0</value>
-	</variable>-->
-	
-	
+	</variable>
 	<!-- MusicFlags -->
 	<variable name="MusicFlagstar5">
 		<value condition="StringCompare(ListItem.StarRating,rating5.png)">star10</value>
@@ -221,33 +217,97 @@
 					<visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
 				</control>
 			</control>
-<!-- Modification for  ------ New Star Ratings ------#####BEGIN#####-->			
 			<control type="image">
-				<width>150</width>
-				<height>30</height>
+				<width>64</width>
+				<height>64</height>
 				<centertop>50%</centertop>
-				<texture fallback="$VAR[StarsFolder,,0.png]">$VAR[StarsFolder]$INFO[ListItem.Rating,,.png]</texture>
-				<aspectratio align="left" aligny="center">scale</aspectratio>
-				<colordiffuse>Dark1</colordiffuse>
+				<texture colordiffuse="Dark1">flags/$VAR[Flagstar1].png</texture>
 				<visible>!Skin.HasSetting(furniture.flags.colour)</visible>
 			</control>
 			<control type="image">
-				<width>150</width>
-				<height>30</height>				
-				<centertop>50%</centertop>				
-				<texture fallback="$VAR[StarsFolder,,0.png]">$VAR[StarsFolder]$INFO[ListItem.Rating,,.png]</texture>
-				<aspectratio align="left" aligny="center">scale</aspectratio>
-				<colordiffuse>$VAR[StarRatingColour]</colordiffuse>
+				<width>64</width>
+				<height>64</height>
+				<centertop>50%</centertop>
+				<texture colordiffuse="$VAR[ColourHighlight]">flags/$VAR[Flagstar1].png</texture>
 				<visible>Skin.HasSetting(furniture.flags.colour)</visible>
 			</control>
-<!-- Modification for  ------ New Star Ratings ------#####END#####-->
-					
+			<control type="image">
+				<posx>-48</posx>
+				<width>64</width>
+				<height>64</height>
+				<centertop>50%</centertop>
+				<texture colordiffuse="Dark1">flags/$VAR[Flagstar2].png</texture>
+				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
+				<visible>!Skin.HasSetting(furniture.flags.colour)</visible>
+			</control>
+			<control type="image">
+				<posx>-48</posx>
+				<width>64</width>
+				<height>64</height>
+				<centertop>50%</centertop>
+				<texture colordiffuse="$VAR[ColourHighlight]">flags/$VAR[Flagstar2].png</texture>
+				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
+				<visible>Skin.HasSetting(furniture.flags.colour)</visible>
+			</control>
+			<control type="image">
+				<posx>-48</posx>
+				<width>64</width>
+				<height>64</height>
+				<centertop>50%</centertop>
+				<texture colordiffuse="Dark1">flags/$VAR[Flagstar3].png</texture>
+				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
+				<visible>!Skin.HasSetting(furniture.flags.colour)</visible>
+			</control>
+			<control type="image">
+				<posx>-48</posx>
+				<width>64</width>
+				<height>64</height>
+				<centertop>50%</centertop>
+				<texture colordiffuse="$VAR[ColourHighlight]">flags/$VAR[Flagstar3].png</texture>
+				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
+				<visible>Skin.HasSetting(furniture.flags.colour)</visible>
+			</control>
+			<control type="image">
+				<posx>-48</posx>
+				<width>64</width>
+				<height>64</height>
+				<centertop>50%</centertop>
+				<texture colordiffuse="Dark1">flags/$VAR[Flagstar4].png</texture>
+				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
+				<visible>!Skin.HasSetting(furniture.flags.colour)</visible>
+			</control>
+			<control type="image">
+				<posx>-48</posx>
+				<width>64</width>
+				<height>64</height>
+				<centertop>50%</centertop>
+				<texture colordiffuse="$VAR[ColourHighlight]">flags/$VAR[Flagstar4].png</texture>
+				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
+				<visible>Skin.HasSetting(furniture.flags.colour)</visible>
+			</control>
+			<control type="image">
+				<posx>-48</posx>
+				<width>64</width>
+				<height>64</height>
+				<centertop>50%</centertop>
+				<texture colordiffuse="Dark1">flags/$VAR[Flagstar5].png</texture>
+				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
+				<visible>!Skin.HasSetting(furniture.flags.colour)</visible>
+			</control>
+			<control type="image">
+				<posx>-48</posx>
+				<width>64</width>
+				<height>64</height>
+				<centertop>50%</centertop>
+				<texture colordiffuse="$VAR[ColourHighlight]">flags/$VAR[Flagstar5].png</texture>
+				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
+				<visible>Skin.HasSetting(furniture.flags.colour)</visible>
+			</control>
 			<control type="label">
-				<left>5</left>  <!-- Modified for new Stars Ratings -->
-				<!--<left>-16</left>-->
+				<left>-16</left>
 				<width min="48">auto</width>
 				<centertop>50%</centertop>
-				<height>70</height>
+				<height>64</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Rating]</label>
@@ -1091,35 +1151,35 @@
 					<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
 				</control>
 <!--############# Updated to new Busy Spinner ############-->				
-				<control type="image">
+				<control type="multiimage">
                     <description>Busy animation</description>
-                    <centerleft>50%</centerleft>
-                    <centertop>47%</centertop>
-                    <width>100</width>
-                    <height>100</height>
+                    <include>GlobalSpinnerOverlay</include>
+					<posx>590</posx>
+					<posy>500</posy>
+                    <width>150</width>
+                    <height>150</height>
                     <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
-                    <texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">dialog/loading-spinner.png</texture>
-					<visible>Skin.HasSetting(hide.busydialog) + Window.IsVisible(DialogBusy.xml)</visible>
-					<include>GlobalOverlay</include>
-			        <include>GlobalSpinnerOverlay</include>
-					<!--<include>GlobalOverlay</include>-->
+					<imagepath>$INFO[Skin.String(SkinHelper.SpinnerTexturePath)]</imagepath>
+					<timeperimage>100</timeperimage>
+                    <colordiffuse>$VAR[SpinnerHighlight]</colordiffuse>
+					<fadetime>0</fadetime>
                     <aspectratio>keep</aspectratio>
+					<visible>!Skin.String(SkinHelper.SpinnerTexturePath,None)</visible>
+					<visible>Skin.HasSetting(hide.busydialog) + Window.IsVisible(DialogBusy.xml)</visible>
                 </control>
 <!--############# Updated to new Busy Spinner ############-->
                 <control type="label">
                     <description>Busy label</description>
-                    <centerleft>50%</centerleft>
-                    <centertop>53%</centertop>
-                    <width>720</width>
-                    <height>108</height>
+                    <posx>590</posx>
+                    <posy>490</posy>
+                    <width>520</width>
+                    <height>165</height>
                     <aligny>center</aligny>
                     <align>center</align>
                     <label>$LOCALIZE[20186]...</label>
                     <textcolor>ffededed</textcolor>
 					<visible>Skin.HasSetting(hide.busydialog) + Window.IsVisible(DialogBusy.xml)</visible>
-					<include>GlobalOverlay</include>
 					<include>GlobalSpinnerOverlay</include>
-			        <!--<include>GlobalOverlay</include>-->
                 </control>
 				<!--<control type="image">
 					<centertop>40</centertop>
@@ -1190,45 +1250,36 @@
 					<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
 				</control>
 <!--############# Updated to new Busy Spinner ############-->				
-				<control type="image">
+				<control type="multiimage">
                     <description>Busy animation</description>
-                    <centerleft>50%</centerleft>
-                    <centertop>47%</centertop>
-                    <width>100</width>
-                    <height>100</height>
-                    <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
-                    <texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">dialog/loading-spinner.png</texture>
-					<visible>Skin.HasSetting(hide.busydialog) + Window.IsVisible(DialogBusy.xml)</visible>
-					<include>GlobalOverlay</include>
 					<include>GlobalSpinnerOverlay</include>
-			        <!--<include>GlobalOverlay</include>-->
+                    <posx>740</posx>
+					<posy>500</posy>
+                    <width>150</width>
+                    <height>150</height>
+                    <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
+					<imagepath>$INFO[Skin.String(SkinHelper.SpinnerTexturePath)]</imagepath>
+					<timeperimage>100</timeperimage>
+                    <colordiffuse>$VAR[SpinnerHighlight]</colordiffuse>
+					<fadetime>0</fadetime>
                     <aspectratio>keep</aspectratio>
+					<visible>!Skin.String(SkinHelper.SpinnerTexturePath,None)</visible>
+					<visible>Skin.HasSetting(hide.busydialog) + Window.IsVisible(DialogBusy.xml)</visible>
                 </control>
 <!--############# Updated to new Busy Spinner ############-->
                 <control type="label">
                     <description>Busy label</description>
-                    <centerleft>50%</centerleft>
-                    <centertop>53%</centertop>
-                    <width>720</width>
-                    <height>108</height>
+                    <posx>750</posx>
+                    <posy>490</posy>
+                    <width>520</width>
+                    <height>170</height>
                     <aligny>center</aligny>
                     <align>center</align>
                     <label>$LOCALIZE[20186]...</label>
                     <textcolor>ffededed</textcolor>
 					<visible>Skin.HasSetting(hide.busydialog) + Window.IsVisible(DialogBusy.xml)</visible>
-					<include>GlobalOverlay</include>
 					<include>GlobalSpinnerOverlay</include>
-			        <!--<include>GlobalOverlay</include>-->
                 </control>				
-				<!--<control type="image">
-					<centertop>40</centertop>
-					<centerleft>40</centerleft>
-					<width>48</width>
-					<height>48</height>
-		            <texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
-					<visible>Skin.HasSetting(hide.busydialog) + Window.IsVisible(DialogBusy.xml)</visible>
-					<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
-				</control>-->
 			</control>
 			<control type="group">
 				<control type="label">
@@ -1349,7 +1400,6 @@
 			</control>-->
 		</control>
 	</include>
-	
 <!--- Modification ----- Added -----SkinSettings-------------------------------------------------------->	
 	<include name="Furniture_SkinSetting_Header">
 		<control type="grouplist">
@@ -1386,33 +1436,34 @@
 					<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
 				</control>
 <!--############# Updated to new Busy Spinner ############-->				
-				<control type="image">
+				<control type="multiimage">
                     <description>Busy animation</description>
-                    <centerleft>50%</centerleft>
-                    <centertop>47%</centertop>
-                    <width>100</width>
-                    <height>100</height>
+					<include>GlobalSpinnerOverlay</include>
+					<posx>740</posx>
+					<posy>500</posy>
+                    <width>150</width>
+                    <height>150</height>
                     <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
-                    <texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">dialog/loading-spinner.png</texture>
-					<visible>Skin.HasSetting(hide.busydialog) + Window.IsVisible(DialogBusy.xml)</visible>
-					<include>GlobalOverlay</include>
-			        <include>GlobalSpinnerOverlay</include>
-					<!--<include>GlobalOverlay</include>-->
+					<imagepath>$INFO[Skin.String(SkinHelper.SpinnerTexturePath)]</imagepath>
+					<timeperimage>100</timeperimage>
+                    <colordiffuse>$VAR[SpinnerHighlight]</colordiffuse>
+					<fadetime>0</fadetime>
                     <aspectratio>keep</aspectratio>
+					<visible>!Skin.String(SkinHelper.SpinnerTexturePath,None)</visible>
+					<visible>Skin.HasSetting(hide.busydialog) + Window.IsVisible(DialogBusy.xml)</visible>
                 </control>
 <!--############# Updated to new Busy Spinner ############-->
                 <control type="label">
                     <description>Busy label</description>
-                    <centerleft>50%</centerleft>
-                    <centertop>53%</centertop>
-                    <width>720</width>
-                    <height>108</height>
+                    <posx>750</posx>
+                    <posy>490</posy>
+                    <width>520</width>
+                    <height>170</height>
                     <aligny>center</aligny>
                     <align>center</align>
                     <label>$LOCALIZE[20186]...</label>
                     <textcolor>ffededed</textcolor>
 					<visible>Skin.HasSetting(hide.busydialog) + Window.IsVisible(DialogBusy.xml)</visible>
-					<include>GlobalOverlay</include>
 					<include>GlobalSpinnerOverlay</include>
                 </control>
 			</control>
@@ -1657,54 +1708,6 @@
 					<visible>Skin.HasSetting(furniture.flags.colour)</visible>
 				</control>
 			</control>
-			
-<!-- Modification for  ------ New Star Ratings ------#####BEGIN#####-->			
-			<control type="image">
-				<width>150</width>
-				<height>30</height>
-				<centertop>50%</centertop>
-				<texture fallback="$VAR[StarsFolder,,0.png]">$VAR[StarsFolder]$INFO[Container(301).ListItem.Rating,,.png]</texture>
-				<aspectratio align="left" aligny="center">scale</aspectratio>
-				<colordiffuse>Dark1</colordiffuse>
-				<visible>!Skin.HasSetting(furniture.flags.colour)</visible>
-				<visible>!StringCompare(Container(300).ListItem.Property(widget),Weather)</visible>
-			</control>
-			<control type="image">
-				<width>150</width>
-				<height>30</height>
-				<centertop>50%</centertop>
-				<texture fallback="$VAR[StarsFolder,,0.png]">$VAR[StarsFolder]$INFO[Container(301).ListItem.Rating,,.png]</texture>
-				<aspectratio align="left" aligny="center">scale</aspectratio>
-				<colordiffuse>$VAR[HomeStarRatingColour]</colordiffuse>
-				<visible>Skin.HasSetting(furniture.flags.colour)</visible>
-				<visible>!StringCompare(Container(300).ListItem.Property(widget),Weather)</visible>
-			</control>
-<!-- Modification for  ------ New Star Ratings ------#####END#####-->
-			
-			<!--<control type="image">
-				<posx>-48</posx>
-				<width>64</width>
-				<height>30</height>
-				<centertop>50%</centertop>
-				<texture fallback="$VAR[StarsFolder,,0.png]">$VAR[StarsFolder]$INFO[ListItem.Rating,,.png]</texture>
-				<aspectratio align="left" aligny="center">scale</aspectratio>
-				<colordiffuse>Dark1</colordiffuse>
-				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
-				<visible>!Skin.HasSetting(furniture.flags.colour)</visible>
-				<visible>!StringCompare(Container(300).ListItem.Property(widget),Weather)</visible>
-			</control>
-			<control type="image">
-				<posx>-48</posx>
-				<width>64</width>
-				<height>30</height>
-				<centertop>50%</centertop>
-				<texture fallback="$VAR[StarsFolder,,0.png]">$VAR[StarsFolder]$INFO[ListItem.Rating,,.png]</texture>
-				<aspectratio align="left" aligny="center">scale</aspectratio>
-				<colordiffuse>$VAR[StarRatingColour]</colordiffuse>
-				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
-				<visible>Skin.HasSetting(furniture.flags.colour)</visible>
-				<visible>!StringCompare(Container(300).ListItem.Property(widget),Weather)</visible>
-			</control>
 			<control type="image">
 				<width>64</width>
 				<height>64</height>
@@ -1727,8 +1730,7 @@
 				<height>64</height>
 				<centertop>50%</centertop>
 				<texture colordiffuse="Dark1">flags/$VAR[HomeFlagstar2].png</texture>
-				<visible>Skin.HasSetting(furniture.numericrating)</visible>
-
+				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
 				<visible>!Skin.HasSetting(furniture.flags.colour)</visible>
 				<visible>!StringCompare(Container(300).ListItem.Property(widget),Weather)</visible>
 			</control>
@@ -1738,8 +1740,7 @@
 				<height>64</height>
 				<centertop>50%</centertop>
 				<texture colordiffuse="$VAR[ColourHighlight]">flags/$VAR[HomeFlagstar2].png</texture>
-				<visible>Skin.HasSetting(furniture.numericrating)</visible>
-
+				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
 				<visible>Skin.HasSetting(furniture.flags.colour)</visible>
 				<visible>!StringCompare(Container(300).ListItem.Property(widget),Weather)</visible>
 			</control>
@@ -1802,10 +1803,9 @@
 				<visible>!Skin.HasSetting(furniture.numericrating)</visible>
 				<visible>Skin.HasSetting(furniture.flags.colour)</visible>
 				<visible>!StringCompare(Container(300).ListItem.Property(widget),Weather)</visible>
-			</control>-->
+			</control>
 			<control type="label">
-			    <left>5</left>  <!-- Modified for ne Stra Ratings -->
-				<!--<left>-16</left>-->
+				<left>-16</left>
 				<width min="48">auto</width>
 				<centertop>50%</centertop>
 				<height>64</height>
@@ -2022,9 +2022,7 @@
 		</control>
 	</include>
 	
-
-<!-- Replaced by new Star Ratings -->	
-	<!--<variable name="HomeFlagstar1">
+	<variable name="HomeFlagstar1">
 		<value condition="IntegerGreaterThan(Container(301).ListItem.Rating,1)">star10</value>
 		<value condition="IntegerGreaterThan(Container(301).ListItem.Rating,0)">star5</value>
 		<value>star0</value>
@@ -2048,5 +2046,5 @@
 		<value condition="IntegerGreaterThan(Container(301).ListItem.Rating,9)">star10</value>
 		<value condition="IntegerGreaterThan(Container(301).ListItem.Rating,8)">star5</value>
 		<value>star0</value>
-	</variable>-->
+	</variable>
 </includes>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+
 <!-- 1st Generation Color Enhancements -->
 <!-- ###Begin### -->
     <variable name="ColourHighlight">  
@@ -21,12 +22,7 @@
 	<variable name="SpinnerHighlight">  
         <value condition="!IsEmpty(Skin.String(spinnercolor.name))">$INFO[Skin.String(spinnercolor.name)]</value>
         <value>Highlight</value>
-	</variable>
-<!--############# Updated to new Busy Spinner Background Not Needed ############-->	
-	<!--<variable name="SpinnerBackgroundColour">  
-        <value condition="!IsEmpty(Skin.String(spinnerbgcolor.name))">$INFO[Skin.String(spinnerbgcolor.name)]</value>
-        <value>White100</value>
-	</variable>-->	
+	</variable>	
 	<variable name="ViewsSelectHighlight">  
         <value condition="!IsEmpty(Skin.String(viewsselectcolor.name))">$INFO[Skin.String(viewsselectcolor.name)]</value>
         <value>Dark1</value>
@@ -158,17 +154,19 @@
 	<variable name="SideBladeHighlightColour">  
         <value condition="!IsEmpty(Skin.String(sidebladehighlightcolor.name))">$INFO[Skin.String(sidebladehighlightcolor.name)]</value>
         <value>Dark1</value>	
-	</variable>
+	</variable>		
 <!-- ###End### -->
+
+
 	<!---  Not Yet Functional ------ ############### Coming Soon #################-->
-    <onload condition="IsEmpty(Skin.String(ratingstarsfolder))">Skin.SetString(ratingstarsfolder,default)</onload>
+    <!--<onload condition="IsEmpty(Skin.String(ratingstarsfolder))">Skin.SetString(ratingstarsfolder,default)</onload>
 	<variable name="Colorratingstarsdo09">
 		<value condition="!IsEmpty(Skin.String(ratingstarsdo09))">$INFO[Skin.String(ratingstarsdo09)]</value>
-		<value condition="IsEmpty(Skin.String(ratingstarsdo09))">FF606060</value>
+		<value condition="IsEmpty(Skin.String(ratingstarsdo09))">FF808080</value>
 	</variable>
 	<variable name="Colorratingstarsdo19">
 		<value condition="!IsEmpty(Skin.String(ratingstarsdo19))">$INFO[Skin.String(ratingstarsdo19)]</value>
-		<value condition="IsEmpty(Skin.String(ratingstarsdo19))">FF808080</value>
+		<value condition="IsEmpty(Skin.String(ratingstarsdo19))">FFA0A0A0</value>
 	</variable>
 	<variable name="Colorratingstarsdo29">
 		<value condition="!IsEmpty(Skin.String(ratingstarsdo29))">$INFO[Skin.String(ratingstarsdo29)]</value>
@@ -206,14 +204,11 @@
 		<value condition="StringCompare(Skin.String(ratingstarsfolder),default)">stars/</value>
 		<value condition="StringCompare(skin.string(ratingstarsfolder),sloped)">stars/sloped/</value>
 		<value condition="StringCompare(skin.string(ratingstarsfolder),italic)">stars/italic/</value>
-		<value condition="StringCompare(skin.string(ratingstarsfolder),bar)">stars/bar/</value>
 		<value condition="StringCompare(skin.string(ratingstarsfolder),strip)">stars/strip/</value>
 		<value condition="IsEmpty(Skin.String(ratingstarsfolder))">stars/</value>
 	</variable>
 	<variable name="StarsRatingStyleStatus">
-	    <value condition="StringCompare(Skin.String(styleratingstars),3D)">3D</value>
-	    <value condition="StringCompare(Skin.String(styleratingstars),bar)">BAR]</value>
-	    <value condition="StringCompare(Skin.String(styleratingstars),flat)">FLAT</value>
+	    <value condition="StringCompare(Skin.String(styleratingstars),3D)">DEFAULT</value>
 	    <value condition="StringCompare(Skin.String(styleratingstars),italic)">ITALIC</value>
 	    <value condition="StringCompare(Skin.String(styleratingstars),sloped)">SLOPED</value>
 	    <value condition="StringCompare(Skin.String(styleratingstars),strip)">STRIP</value>
@@ -771,8 +766,8 @@
 		<width>300</width>
 		<font>Button</font>
 <!-- 4th GEN Colour Modification -->		
-		<textcolor>$VAR[DialogTextColour]</textcolor>
-		<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="5">common/box.png</texturefocus>
+		<textcolor>$VAR[ButtonTextColour]</textcolor>
+		<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
 		<!--<textcolor>Black70</textcolor>
 		<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>-->
 	</include>
@@ -782,9 +777,43 @@
 		<include>Animation.FadeOut</include>
 		<centerleft>50%</centerleft>
 		<posy>120</posy>
-		<width>1320</width>
-		<height>840</height>
+		<!--<width>1320</width>
+		<height>840</height>-->
+		<width>1200</width>
+		<height>800</height>
 		<control type="image">
+			<description>panel background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1200</width>
+            <height>800</height>
+			<texture border="5" colordiffuse="Black">common/white.png</texture>
+        </control>
+		<control type="image">
+			<description>panel image</description>
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>1180</width>
+            <height>780</height>
+			<texture border="12" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
+        </control>
+		<control type="image">
+		    <description>panel border image</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1200</width>
+            <height>800</height>
+            <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
+        </control>
+		<control type="image">
+		    <description>panel header border image</description>
+            <posx>33</posx>
+            <posy>29</posy>
+            <width>1135</width>
+            <height>90</height>
+            <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+        </control>
+		<!--<control type="image">
 			<left>-24</left>
             <right>-24</right>
             <top>-24</top>
@@ -792,9 +821,9 @@
             <bordertexture border="32">common/shadow-24.png</bordertexture>
             <bordersize>24</bordersize>
             <texture colordiffuse="White100" border="16">common/box.png</texture>
-		</control>
-
+		</control>-->
 	</include>
+	
 	<include name="DefDialogInfoPanelFanart">
 		<include>Animation.FadeIn.Slide</include>
 		<include>Animation.FadeOut</include>
@@ -838,29 +867,37 @@
 		<include>Animation.ZoomIn</include>
 		<centerleft>50%</centerleft>
 		<centertop>50%</centertop>
-		<height>800</height>
-		<width>1180</width>
+		<height>820</height>
+		<width>1200</width>
 		<control type="image">
-			<description>background image</description>
-			<posx>5</posx>
-			<posy>5</posy>
-			<width>1170</width>
-            <height>790</height>
-			<!--<texture>buttons/dialogbutton-fo.png</texture>
-			<color>Black</color>-->
-			<texture border="5" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
+			<description>panel background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1200</width>
+            <height>820</height>
+			<texture border="5" colordiffuse="Black">common/white.png</texture>
         </control>
 		<control type="image">
+			<description>panel image</description>
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>1180</width>
+            <height>800</height>
+			<texture border="12" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
+        </control>
+		<control type="image">
+		    <description>panel border image</description>
             <posx>0</posx>
             <posy>0</posy>
-            <width>1180</width>
-            <height>800</height>
-            <texture colordiffuse="Panel" border="16">dialog/frame_Landscape-fo.png</texture>
+            <width>1200</width>
+            <height>820</height>
+            <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
         </control>
 		<control type="image">
+		    <description>panel header border image</description>
             <posx>33</posx>
-            <posy>29</posy>
-            <width>1115</width>
+            <posy>31</posy>
+            <width>1135</width>
             <height>90</height>
             <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
         </control>
@@ -877,37 +914,40 @@
 		<width>900</width>
 		<include>Animation.FadeIn.Slide</include>
 		<control type="image">
+			<description>panel background image</description>
+			<posx>-39</posx>
+			<posy>-39</posy>
+			<width>979</width>
+            <height>461</height>
+			<texture border="5" colordiffuse="Black">common/white.png</texture>
+        </control>
+		<control type="image">
 			<posx>-30</posx>
 			<posy>-30</posy>
-			<width>960</width>
-			<height>444</height>
-			<texture border="5" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
+			<width>961</width>
+			<height>443</height>
+			<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
 		</control>
 		<control type="image">
-            <posx>-35</posx>
-            <posy>-35</posy>
-            <width>970</width>
-            <height>454</height>
-            <texture border="5" colordiffuse="Panel">dialog/frame_Landscape-fo.png</texture>			
+            <posx>-39</posx>
+            <posy>-39</posy>
+            <width>979</width>
+            <height>461</height>
+            <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>			
         </control>
-		<control type="image">
-            <posx>-8</posx>
-            <posy>-5</posy>
-            <width>900</width>
-            <height>90</height>
-            <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
-        </control>
+		Focus
 		<control type="label" id="1">
 			<description>Heading</description>
 			<centerleft>50%</centerleft>
 			<width>885</width>
 			<font>MediumBold</font>
 			<align>center</align>
+			<posy>4</posy>
 		</control>
 		<control type="textbox" id="9">
 			<description>Line 1</description>
-			<left>15</left>
-			<right>15</right>
+			<left>20</left>
+			<right>20</right>
 			<posy>108</posy>
 			<height>300</height>
 		</control>
@@ -925,15 +965,18 @@
 		<!--<textcolor>Black70</textcolor>-->
 	</include>
 	<include name="DefKeyboardKeys">
-		<width>85</width>
-		<height>75</height>
-		<texturenofocus border="5" colordiffuse="Black12">common/box.png</texturenofocus>
-		<texturefocus border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texturefocus>
+		<width>105</width>85
+		<height>70</height>
+		<align>center</align>
+		<texturenofocus border="20" colordiffuse="Black30">common/box.png</texturenofocus>
+		<texturefocus border="20" colordiffuse="$VAR[ColourHighlight]">common/box.png</texturefocus>
 		<textoffsetx>0</textoffsetx>
 		<textcolor>Black70</textcolor>
 		<focusedcolor>$VAR[ColourSelected]</focusedcolor>
-		<radioposx>320</radioposx>
+		<radioposx>380</radioposx>
 		<radioposy>22</radioposy>
+		<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/on.png</textureradiofocus>
+        <textureradionofocus colordiffuse="Dark2">buttons/off.png</textureradionofocus>
 	</include>
 	<include name="DefContextButton">
 		<radioposx>400</radioposx>
@@ -1032,8 +1075,6 @@
         <texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
         <texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
 		<alttexturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</alttexturefocus>
-        <!--<alttexturefocus colordiffuse="$VAR[DialogButtonFocusColour]" border="5">common/box.png</alttexturefocus>
-        <alttexturenofocus colordiffuse="FF090A0A" border="5">common/box.png</alttexturenofocus>-->
     </include>
 	
 <!-- Modification for SkinSettings  Radio Button -->	
@@ -1106,8 +1147,8 @@
 			<include>Def9000Background</include>
 			<control type="label">
 				<description>Heading</description>
-                <posx>48</posx>
-                <posy>30</posy>
+                <posx>53</posx>
+                <posy>36</posy>
                 <width>400</width>
                 <align>center</align>
                 <font>SmallBold</font>
@@ -1137,7 +1178,7 @@
 				<onback condition="Window.IsVisible(SettingsCategory.xml)">3</onback>
 				<onback condition="!Window.IsVisible(SettingsCategory.xml)">9101</onback>
 				<posy>150</posy>
-				<posx>36</posx>
+				<posx>47</posx>
 				<height>350</height>
 				<itemgap>4</itemgap>
 				<include>Def9000GroupList</include>
@@ -1248,18 +1289,18 @@
 			<control type="image">
 				<description>arrow image</description>
 				<centerleft>50%</centerleft>
-				<posy>-16</posy>
+				<posy>122</posy>
 				<width>16</width>
 				<height>16</height>
-				<texture colordiffuse="White70" flipy="true">common/arrow-small.png</texture>
+				<texture colordiffuse="Dark2" flipy="true">common/arrow-small.png</texture>
 			</control>
 			<control type="image">
 				<description>arrow image</description>
 				<centerleft>50%</centerleft>
-				<posy>382</posy>
+				<posy>535</posy>
 				<width>16</width>
 				<height>16</height>
-				<texture colordiffuse="White70" flipy="false">common/arrow-small.png</texture>
+				<texture colordiffuse="Dark2" flipy="false">common/arrow-small.png</texture>
 			</control>
 		</control>
 	</include>
@@ -1269,29 +1310,35 @@
 		<include>Animation.FadeOut</include>
 		<top>184</top>
 		<centerleft>50%</centerleft>
-		<height>560</height>
-		<width>506</width>
+		<height>580</height>
+		<width>526</width>
+		<control type="image">
+			<description>panel background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>526</width>
+            <height>580</height>
+			<texture border="5" colordiffuse="Black">common/white.png</texture>
+        </control>
 		<control type="image">
 			<description>background image</description>
-			<posx>5</posx>
-			<posy>5</posy>
-			<width>496</width>
-            <height>550</height>
-			<!--<texture>buttons/dialogbutton-fo.png</texture>
-			<color>Black</color>-->
-			<texture border="5" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>506</width>
+            <height>560</height>
+			<texture border="12" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
         </control>
 		<control type="image">
             <posx>0</posx>
             <posy>0</posy>
-            <width>506</width>
-            <height>560</height>
-            <texture colordiffuse="Panel" border="16">dialog/frame_Landscape-fo.png</texture>
+            <width>526</width>
+            <height>580</height>
+            <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
         </control>
 		<control type="image">
-            <posx>21</posx>
-            <posy>20</posy>
-            <width>461</width>
+            <posx>33</posx>
+            <posy>29</posy>
+            <width>462</width>
             <height>90</height>
             <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
         </control>
@@ -1301,38 +1348,38 @@
 		<include>Animation.ZoomIn</include>
 		<include>Animation.FadeOut</include>
 		<centerleft>50%</centerleft>
-		<height>1080</height>
-		<width>466</width>
+		<height>1200</height>
+		<width>486</width>
+		<control type="image">
+			<description>panel background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1200</width>
+            <height>486</height>
+			<texture border="5" colordiffuse="Black">common/white.png</texture>
+        </control>
 		<control type="image">
 			<description>background image</description>
-			<posx>5</posx>
-			<posy>5</posy>
-			<width>1070</width>
-            <height>456</height>
-			<texture border="5" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>1080</width>
+            <height>466</height>
+			<texture border="12" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
         </control>
 		<control type="image">
             <posx>0</posx>
             <posy>0</posy>
-            <width>1080</width>
-            <height>466</height>
-            <texture colordiffuse="Panel" border="16">dialog/frame_Landscape-fo.png</texture>
+            <width>1200</width>
+            <height>486</height>
+            <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
         </control>
 		<control type="image">
-            <posx>22</posx>
-            <posy>20</posy>
-            <width>1035</width>
+            <posx>33</posx>
+            <posy>29</posy>
+            <width>1060</width>
             <height>90</height>
             <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
         </control>
-		<!--<control type="image">
-			<description>background image</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>466</width>
-			<height>100%</height>
-			<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
-		</control>-->
 	</include>
 	<include name="Def9000Background3">
 		<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
@@ -1340,24 +1387,30 @@
 		<include>Animation.FadeOut</include>
 		<top>195</top>
 		<centerleft>50%</centerleft>
-		<height>600</height>
-		<width>800</width>
+		<height>620</height>
+		<width>820</width>
+		<control type="image">
+			<description>panel background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>820</width>
+            <height>620</height>
+			<texture border="5" colordiffuse="Black">common/white.png</texture>
+        </control>
 		<control type="image">
 			<description>background image</description>
-			<posx>5</posx>
-			<posy>5</posy>
-			<width>790</width>
-            <height>592</height>
-			<!--<texture>buttons/dialogbutton-fo.png</texture>
-			<color>Black</color>-->
-			<texture border="5" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>800</width>
+            <height>600</height>
+			<texture border="12" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
         </control>
 		<control type="image">
             <posx>0</posx>
             <posy>0</posy>
-            <width>800</width>
-            <height>600</height>
-            <texture colordiffuse="Panel" border="16">dialog/frame_Landscape-fo.png</texture>
+            <width>820</width>
+            <height>620</height>
+            <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
         </control>
 		<control type="image">
             <posx>20</posx>
@@ -1971,5 +2024,10 @@
 			</control>
 		</control>
 	</include>
-	
+	<include name="DefaultSkinSettings">
+	    <onload condition="!Skin.String(SkinHelper.SpinnerTexture)">Skin.SetString(SkinHelper.SpinnerTexture,default)</onload>
+		<onload condition="!Skin.String(SkinHelper.SpinnerTexturePath)">Skin.SetString(SkinHelper.SpinnerTexturePath,special://skin/extras/busy_spinners/default)</onload>
+		<onload condition="!Skin.String(defaultcolorpalette.label)">Skin.SetString(defaultcolorpalette.label,basic)</onload>
+        <onload condition="!Skin.String(defaultcolorpalette)">Skin.SetString(defaultcolorpalette,basic)</onload>
+	</include>	
 </includes>
