@@ -95,6 +95,24 @@
 				    <label>About From Ashes</label>
                     <onclick>ActivateWindow(3115)</onclick>
                 </control>
+				
+				<control type="button" id="74657">
+					<description>From Ashes Support</description>
+					<width>520</width>
+					<align>center</align>
+					<include>DefSkinSettingMenuButton</include>
+					<label>From Ashes Support</label>
+					<onclick>RunScript(script.skin.helper.service,action=dialogok,header=Arctic Zephyr: From Ashes Support,message=Support for Arctic Zephyr: From Ashes Danvers is available on the Kodi forums, Emby forums, and on NortheBridge.com by searching for the keyword)</onclick>
+				</control>
+				
+				<control type="button" id="74658">
+					<description>Danvers Preview Notice 2</description>
+					<width>520</width>
+					<align>center</align>
+					<include>DefSkinSettingMenuButton</include>
+					<label>Danvers Preview</label>
+					<onclick>RunScript(script.skin.helper.service,action=dialogok,header=From Ashes Danvers Preview,message=You are running Danvers Preview Alpha 6. For more information and to get the latest news about AZ:FA visit the Kodi or Emby forums or search for from ashes on NortheBridge.com)</onclick>
+				</control>
 
                 <control type="button" id="3111">
                     <description>Exit XBMC button</description>
