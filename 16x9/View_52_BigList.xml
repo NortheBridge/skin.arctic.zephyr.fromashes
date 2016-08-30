@@ -23,7 +23,7 @@
 				<pagecontrol>60</pagecontrol>
 				<orientation>vertical</orientation>
 				<viewtype label="537">list</viewtype>
-				<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),52) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
+				<!--<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),52) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>-->
 				<scrolltime tween="quadratic">400</scrolltime>
 				<itemlayout height="130" width="1570">
 					<include>View_52_BigList_ItemLayout</include>
@@ -57,7 +57,7 @@
 				<pagecontrol>60</pagecontrol>
 				<orientation>vertical</orientation>
 				<viewtype label="537">list</viewtype>
-				<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),52) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
+				<!--<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),52) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>-->
 				<scrolltime tween="quadratic">400</scrolltime>
 				<itemlayout height="130" width="885">
 					<control type="image">

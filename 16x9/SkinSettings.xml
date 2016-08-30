@@ -13,7 +13,7 @@
 
 	<!-- Right Panel Background -->		
 			<control type="image">
-                <posx>591</posx>
+                <posx>581</posx>
                 <posy>132</posy>
                 <width>1238</width>
                 <height>815</height>
@@ -28,7 +28,7 @@
 				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
             </control>
 
-	<!-- Right Panel Borders -->	
+	<!-- left Panel Borders -->	
 		    <control type="image">
                 <posx>70</posx>
                 <posy>120</posy>
@@ -36,9 +36,9 @@
                 <height>840</height>
                 <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
             </control>		
-	<!-- Left Panel Borders -->	
+	<!-- Right Panel Borders -->	
 		    <control type="image">
-                <posx>580</posx>
+                <posx>570</posx>
                 <posy>120</posy>
                 <width>1260</width>
                 <height>840</height>
@@ -55,7 +55,7 @@
 				<control type="grouplist" id="9100">
 					<description>Button Area</description>
 					<width>400</width>
-					<top>20</top>
+					<top>30</top>
 					<bottom>20</bottom>
 					<left>10</left>
 					<itemgap>5</itemgap>
@@ -131,10 +131,9 @@
 				<control type="grouplist" id="9200">
 					<description>Control Area</description>
 					<left>485</left>
-					<top>20</top>
+					<top>5</top>
 					<width>1170</width>
-					<height>800</height>
-					<bottom>20</bottom>
+					<height>790</height>
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
 					<onright>60</onright>
@@ -234,8 +233,8 @@
 				    <visible>ControlGroup(9100).HasFocus(9101)</visible>
                     <onback>9200</onback>
                     <centerright>93</centerright>
-                    <posy>140</posy>
-                    <height>PosterH</height>
+                    <posy>20</posy>
+                    <height>775</height>
                     <width>12</width>
                     <onleft>9200</onleft>
                     <onright>9100</onright>
@@ -249,9 +248,9 @@
     			<control type="grouplist" id="9300">
 					<description>Control Area</description>
 					<left>485</left>
-					<top>20</top>
+					<top>5</top>
 					<width>1170</width>
-					<bottom>20</bottom>
+					<height>790</height>
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
 					<onup>9318</onup>
@@ -362,8 +361,8 @@
 				    <visible>ControlGroup(9100).HasFocus(9102)</visible>
                     <onback>9300</onback>
                     <centerright>93</centerright>
-                    <posy>140</posy>
-                    <height>PosterH</height>
+                    <posy>20</posy>
+                    <height>775</height>
                     <width>12</width>
                     <onleft>9300</onleft>
                     <onright>9100</onright>
@@ -377,9 +376,9 @@
 				<control type="grouplist" id="9400">
 					<description>Control Area</description>
 					<left>485</left>
-					<top>20</top>
+					<top>5</top>
 					<width>1170</width>
-					<bottom>20</bottom>
+					<height>790</height>
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
 					<onup>9442</onup>
@@ -403,7 +402,8 @@
 					    <height>2</height>
 					    <colordiffuse>FF1976D2</colordiffuse>
 					    <texture>common/white.png</texture>
-				    </control>					
+				    </control>
+					
 			<!-- Widget Settings -->
 					<control type="radiobutton" id="9410" description="Cases on widgets">
 						<visible>ControlGroup(9100).HasFocus(9104)</visible>
@@ -544,8 +544,8 @@
 				    <visible>ControlGroup(9100).HasFocus(9104)</visible>
                     <onback>9400</onback>
                     <centerright>93</centerright>
-                    <posy>140</posy>
-                    <height>PosterH</height>
+                    <posy>20</posy>
+                    <height>775</height>
                     <width>12</width>
                     <onleft>9400</onleft>
                     <onright>9100</onright>
@@ -559,9 +559,9 @@
 				<control type="grouplist" id="9500">
 					<description>Control Area</description>
 					<left>485</left>
-					<top>20</top>
+					<top>5</top>
 					<width>1170</width>
-					<bottom>20</bottom>
+					<height>790</height>
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
 					<onup>9508</onup>
@@ -621,8 +621,8 @@
 				    <visible>ControlGroup(9100).HasFocus(9105)</visible>
                     <onback>9500</onback>
                     <centerright>93</centerright>
-                    <posy>140</posy>
-                    <height>PosterH</height>
+                    <posy>20</posy>
+                    <height>775</height>
                     <width>12</width>
                     <onleft>9500</onleft>
                     <onright>9100</onright>
@@ -636,9 +636,9 @@
 				<control type="grouplist" id="9600">
 					<description>Control Area</description>
 					<left>485</left>
-					<top>20</top>
+					<top>5</top>
 					<width>1170</width>
-					<bottom>20</bottom>
+					<height>790</height>
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
 					<onup>9638</onup>
@@ -836,8 +836,8 @@
 				<control type="scrollbar" id="60">
 				    <visible>ControlGroup(9100).HasFocus(9106)</visible>
                     <centerright>93</centerright>
-                    <posy>140</posy>
-                    <height>PosterH</height>
+                    <posy>20</posy>
+                    <height>775</height>
                     <width>12</width>
                     <onleft>9600</onleft>
                     <onright>9100</onright>
@@ -851,9 +851,9 @@
 				<control type="grouplist" id="9700">
 					<description>Control Area</description>
 					<left>485</left>
-					<top>20</top>
+					<top>5</top>
 					<width>1170</width>
-					<bottom>20</bottom>
+					<height>790</height>
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
 					<onup>9716</onup>
@@ -946,8 +946,8 @@
 				    <visible>ControlGroup(9100).HasFocus(9103)</visible>
                     <onback>9700</onback>
                     <centerright>93</centerright>
-                    <posy>140</posy>
-                    <height>PosterH</height>
+                    <posy>20</posy>
+                    <height>775</height>
                     <width>12</width>
                     <onleft>9700</onleft>
                     <onright>9100</onright>
@@ -961,9 +961,9 @@
 				<control type="grouplist" id="9800">
 					<description>Control Area</description>
 					<left>485</left>
-					<top>20</top>
+					<top>5</top>
 					<width>1170</width>
-					<bottom>20</bottom>
+					<height>790</height>
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
 					<onup>9814</onup>
@@ -1043,14 +1043,23 @@
 						<onclick>Skin.ToggleSetting(NextAired.Update)</onclick>
 						<enable>System.HasAddon(script.tv.show.next.aired)</enable>
 					</control>
+					<control type="radiobutton" id="9816">
+					    <description>Enable Autocompletions for Keyboard</description>
+						<visible>ControlGroup(9100).HasFocus(9107)</visible>
+					    <include>DefSkinSettingRadioButton</include>
+					    <label>31811</label>
+					    <selected>!Skin.HasSetting(EnableKeyboardAutocompletions)</selected>
+					    <onclick condition="System.HasAddon(plugin.program.autocompletion)">Skin.ToggleSetting(EnableKeyboardAutocompletions)</onclick>
+					    <onclick condition="!System.HasAddon(plugin.program.autocompletion)">InstallAddon(plugin.program.autocompletion)</onclick>
+				    </control>
 				</control>	
 		    <!-- Scrollbar for Extras Settings Control Area -->		
 				<control type="scrollbar" id="60">
 				    <visible>ControlGroup(9100).HasFocus(9107)</visible>
                     <onback>9800</onback>
                     <centerright>93</centerright>
-                    <posy>140</posy>
-                    <height>PosterH</height>
+                    <posy>20</posy>
+                    <height>775</height>
                     <width>12</width>
                     <onleft>9800</onleft>
                     <onright>9100</onright>
@@ -1064,9 +1073,9 @@
 				<control type="grouplist" id="9900">
 					<description>Control Area</description>
 					<left>485</left>
-					<top>20</top>
+					<top>5</top>
 					<width>1170</width>
-					<bottom>20</bottom>
+					<height>790</height>
 					<itemgap>3</itemgap>
 					<onleft>9100</onleft>
 					<onup>9900</onup>
@@ -1430,8 +1439,8 @@
 				    <visible>ControlGroup(9100).HasFocus(9111)</visible>
                     <onback>9900</onback>
                     <centerright>93</centerright>
-                    <posy>140</posy>
-                    <height>PosterH</height>
+                    <posy>20</posy>
+                    <height>775</height>
                     <width>12</width>
                     <onleft>9900</onleft>
                     <onright>9100</onright>
@@ -1445,9 +1454,9 @@
     			<control type="grouplist" id="10000">
 					<description>Control Area</description>
 					<left>485</left>
-					<top>20</top>
+					<top>15</top>
 					<width>1170</width>
-					<bottom>20</bottom>
+					<height>790</height>
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
 					<onup>10102</onup>
@@ -4240,8 +4249,8 @@
 				    <visible>ControlGroup(9100).HasFocus(9108)</visible>
                     <onback>10000</onback>
                     <centerright>93</centerright>
-                    <posy>140</posy>
-                    <height>PosterH</height>
+                    <posy>20</posy>
+                    <height>775</height>
                     <width>12</width>
                     <onleft>10000</onleft>
                     <onright>9100</onright>
@@ -4381,14 +4390,14 @@
 						<label>31769</label>
 						<visible>ControlGroup(9100).HasFocus(9109)</visible>
 					</control>
-					<control type="label" id="12003">
-		<!-- Seperator Heading -->			
+					<!--<control type="label" id="12003">
+		<!-- Seperator Heading 			
 					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
 						<font>MediumSmallBold</font>
                         <label>Force Views Settings</label>
                         <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
                     </control>
-		<!-- Heading Line Seperator -->			
+		<!-- Heading Line Seperator 			
 					<control type="image" id="12004">
 					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
 					    <left>480</left>
@@ -4398,7 +4407,7 @@
 					    <texture>common/white.png</texture>
 				    </control>
 			<!-- Force Views Settings -->		
-    			    <control type="radiobutton" id="12010" description="Enable/Disable Force Views">
+    			    <!--<control type="radiobutton" id="12010" description="Enable/Disable Force Views">
 					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
 						<include>DefSkinSettingRadioButton</include>
 				        <label>Enable Forced Views</label>						
@@ -4500,15 +4509,15 @@
 						<label2>[COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(SkinHelper.ForcedViews.pictures.label)]$INFO[Skin.String(SkinHelper.ForcedViews.pictures), (,)][/COLOR]</label2>
 				        <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=pictures)</onclick>
 				        <visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>			
-			        </control>					
+			        </control>-->					
 				</control>
 		    <!-- Scrollbar for Views Settings Control Area -->		
 				<control type="scrollbar" id="60">
 				    <visible>ControlGroup(9100).HasFocus(9109)</visible>
                     <onback>12000</onback>
                     <centerright>93</centerright>
-                    <posy>140</posy>
-                    <height>PosterH</height>
+                    <posy>20</posy>
+                    <height>775</height>
                     <width>12</width>
                     <onleft>12000</onleft>
                     <onright>9100</onright>
@@ -4522,9 +4531,9 @@
 				<control type="grouplist" id="14000">
 					<description>Control Area</description>
 					<left>485</left>
-					<top>20</top>
+					<top>5</top>
 					<width>1170</width>
-					<bottom>20</bottom>
+					<height>790</height>
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
 					<onup>14000</onup>
