@@ -22,7 +22,7 @@
 					<pagecontrol>60</pagecontrol>
 					<preloaditems>2</preloaditems>
 					<viewtype label="31198">list</viewtype>
-					<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),58) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
+					<!--<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),58) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>-->
 					<scrolltime tween="quadratic">400</scrolltime>
 					<itemlayout width="890" height="330" condition="!Container.Content(episodes)">
 						<control type="image">

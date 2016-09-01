@@ -24,7 +24,7 @@
 					<preloaditems>2</preloaditems>
 					<pagecontrol>60</pagecontrol>
 					<viewtype label="539">list</viewtype>
-					<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),54) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
+					<!--<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),54) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>-->
 					<scrolltime tween="quadratic">400</scrolltime>
 					<itemlayout width="1288" height="106" condition="!Container.Content(episodes) + !Container.Content(albums) + !Container.Content(songs)">
 						<control type="label">
