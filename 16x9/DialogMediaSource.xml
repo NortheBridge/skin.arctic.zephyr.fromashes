@@ -11,25 +11,25 @@
         <control type="group">
             <include>DefDialogBackground</include>
             <control type="label" id="2">
-			    <posy>37</posy>
+			    <posy>22</posy>
                 <include>DefDialogHeader</include>				
                 <label>1026</label>
             </control>
             <control type="image">
-                <posx>55</posx>
-                <posy>38</posy>
-                <width>70</width>
-                <height>70</height>
-                <texture fallback="DefaultAddon.png">$INFO[ListItem.ActualIcon]</texture>
-                <aspectratio align="center" aligny="bottom">keep</aspectratio>
+                <posx>45</posx>
+                <posy>8</posy>
+                <width>100</width>
+                <height>100</height>
+				<texture colordiffuse="PanelWhite100" border="8">$VAR[HeaderIcon]</texture>
             </control>
             <control type="image">
                 <posx>810</posx>
-                <top>150</top>
-                <height>410</height>
-                <width>2</width>	    
+                <top>100</top>
+                <height>460</height>
+                <width>4</width>	    
 				<texture colordiffuse="Black">common/white.png</texture>
-            </control>	
+            </control>
+
             <control type="list" id="10">
                 <posx>35</posx>
                 <posy>150</posy>
@@ -143,9 +143,9 @@
                 <align>left</align>
                 <textoffsetx>100</textoffsetx>
                 <onup>10</onup>
-                <onleft>12</onleft>
-                <onright>18</onright>
-                <ondown>19</ondown>
+                <onleft>noop</onleft>
+                <onright>noop</onright>
+                <ondown>18</ondown>
                 <texturenofocus colordiffuse="$VAR[ButtonColour]" border="22">common/box.png</texturenofocus>				
                 <include>DefDialogButtons</include>
             </control>
@@ -175,7 +175,7 @@
 				<height>60</height>
                 <label>186</label>
                 <onup>12</onup>
-                <onleft>20</onleft>
+                <onleft>19</onleft>
                 <onright>19</onright>
                 <ondown>10</ondown>
 <!-- 4th GEN Colour Modification -->				
@@ -193,7 +193,7 @@
                 <label>222</label>
                 <onup>12</onup>
                 <onleft>18</onleft>
-                <onright>20</onright>
+                <onright>18</onright>
                 <ondown>10</ondown>
 <!-- 4th GEN Colour Modification -->				
                 <texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>

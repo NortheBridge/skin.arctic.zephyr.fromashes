@@ -9,8 +9,15 @@
         <include>Furniture_NowPlaying</include>
         <control type="group">
 			<include>Animation.Common</include>
-
-	<!-- Right Panel -->		
+            <control type="image">
+			    <description>right panel mask image</description>
+			    <posx>580</posx>
+			    <posy>190</posy>
+			    <width>1259</width>
+                <height>740</height>
+			    <texture border="5" colordiffuse="Black">common/white.png</texture>
+            </control>
+	    <!--Right Panel-->		
 			<control type="image">
                 <posx>591</posx>
                 <posy>201</posy>
@@ -18,23 +25,7 @@
                 <height>718</height>
 				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
             </control>
-	<!-- Left Panel -->		
-			<control type="image">
-                <posx>84</posx>
-                <posy>201</posy>
-                <width>461</width>
-                <height>718</height>
-				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
-            </control>
-    <!-- Left Panel Borders -->	
-		    <control type="image">
-                <posx>75</posx>
-                <posy>190</posy>
-                <width>479</width>
-                <height>740</height>
-                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture><!-- replaced Dark1-->
-            </control>		
-	<!-- Right Panel Borders -->	
+	    <!--Right Panel Borders-->	
 		    <control type="image">
                 <posx>580</posx>
                 <posy>190</posy>
@@ -42,21 +33,52 @@
                 <height>740</height>
                 <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
             </control>
-
-		<!--Pictures (Icons)-->	
-			<control type="group">
-			    <posx>600</posx>
+			<control type="image">
+			    <description>left panel mask image</description>
+			    <posx>75</posx>
+			    <posy>190</posy>
+			    <width>479</width>
+                <height>740</height>
+			    <texture border="5" colordiffuse="Black">common/white.png</texture>
+            </control>
+	    <!--Left Panel-->		
+			<control type="image">
+                <posx>84</posx>
+                <posy>201</posy>
+                <width>461</width>
+                <height>718</height>
+				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
+            </control>
+        <!--Left Panel Borders-->	
+		    <control type="image">
+                <posx>75</posx>
                 <posy>190</posy>
-                <width>1100</width>
-                <height>775</height>					
+                <width>479</width>
+                <height>740</height>
+                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture><!-- replaced Dark1-->
+            </control>
+			<control type="image">
+                <posx>84</posx>
+                <posy>570</posy>
+                <width>461</width>
+                <height>5</height>
+                <texture colordiffuse="Black" border="5">common/separator.png</texture><!-- replaced Dark1-->
+            </control>
+
+	    <!--Left Panel(Icons)-->	
+			<control type="group">
+			    <posx>84</posx>
+                <posy>201</posy>
+                <width>461</width>
+                <height>718</height>					
 				<control type="image">
-					<left>35</left>
-					<width>570</width>
-					<top>8</top>
-					<height>725</height>
-					<texture background="true">$INFO[Container(9100).ListItem.ActualIcon,default/]</texture>
+					<left>6</left>
+					<width>450</width>
+					<top>30</top>
+					<height>400</height>
+					<texture background="true">$INFO[Container(9100).ListItem.ActualIcon]</texture>
 				</control>
-		<!--Icon Label-->		
+	        <!--Left Panel Icon Label-->		
 				<control type="label">
 					<left>25</left>
 					<width>550</width>
@@ -65,18 +87,11 @@
 					<font>MediumSmallBold</font>
 					<textcolor>PanelWhite100</textcolor>
 					<label>$INFO[Container(9100).ListItem.Label]</label>
-				</control>
-            </control>
+				</control>		
 			
-			<control type="group">
-			    <posy>190</posy>
-				<right>100</right>
-				<width>600</width>
-                <height>740</height>
-			
-		<!--Info TextBox-->
+		    <!--Left Panel Info TextBox-->
                 <control type="textbox">
-                    <top>40</top>
+                    <top>400</top>
                     <bottom>30</bottom>
                     <right>20</right>
 					<left>50</left>
@@ -88,7 +103,7 @@
 			</control>
 			
 		<!--Up/Down Arrows-->	
-			<control type="group">
+			<!--<control type="group">
                 <control type="image">
 				    <description>arrow image</description>
 				    <posy>235</posy>
@@ -107,48 +122,88 @@
 				    <texture colordiffuse="Dark1" flipy="false">common/arrow-small.png</texture>
 				    <visible>Container(9100).HasNext</visible>
 			    </control>
-			</control>
+			</control>-->
 			
-		<!-- Settings Buttons -->
-			<control type="list" id="9100">
-				<posx>128</posx>
-                <posy>225</posy>
-                <width>480</width>
-                <height>660</height>
+		<!--Settings Icon Boxes-->
+			<control type="panel" id="9100">
+				<posx>626</posx>
+                <posy>237</posy>
+                <width>1236</width>
+                <height>718</height>
 				<onup>9100</onup>
 				<ondown>9100</ondown>
-                <viewtype label="List">list</viewtype>                
-				<itemlayout width="420" height="66">
-		<!--Button No Focus-->		
-                    <control type="image">
-                        <width>375</width>
-                        <height>60</height>
-					    <texture colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texture>
+				<orientation>vertical</orientation>
+				<preloaditems>4</preloaditems>               
+				<itemlayout width="300" height="220">
+		    <!--Box NoFocus-->
+		            <control type="image">
+                        <width>260</width>
+                        <height>200</height>                       
+						<texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+						<shadowcolor>Black</shadowcolor>
                     </control>
-		<!--Label No Focus-->			
+		    <!--Thumb Icon NoFocus-->			
+                    <control type="image">
+					    <posy>12</posy>
+                        <width>260</width>
+                        <height>200</height>
+						<colordiffuse>Dark1</colordiffuse>
+						<texture>$INFO[ListItem.Thumb]</texture>
+						<aspectratio align="center">keep</aspectratio>
+                    </control>
+		    <!--Label NoFocus-->
+		            <control type="image">
+					    <posx>4</posx>
+					    <posy>22</posy>
+                        <width>196</width>
+                        <height>18</height>                       
+						<texture colordiffuse="Dark4" border="20">common/box.png</texture>
+                    </control>
+		    <!--Label Text NoFocus-->			
                     <control type="label">
-                       <height>60</height>
-                       <posx>40</posx>
-                       <width>375</width>
-                       <align>left</align>
+                       <height>10</height>
+                       <posy>24</posy>
+                       <width>205</width>
+                       <align>center</align>
                        <font>Button</font>
                        <textcolor>$VAR[ButtonTextColour]</textcolor>
                        <label>$INFO[ListItem.Label]</label>
                     </control>
                 </itemlayout>
-                <focusedlayout width="420" height="66">
-		<!--Button Focus-->		
+                <focusedlayout width="300" height="220">
+		    <!--Box Focus-->		
                     <control type="image">
-                        <width>375</width>
-                        <height>60</height>                       
+                        <width>256</width>
+                        <height>196</height>                       
+						<texture colordiffuse="Black" border="20">common/box.png</texture>
+                    </control>
+			<!--Box Focus Border-->		
+					<control type="image">
+                        <width>260</width>
+                        <height>200</height>                       
+						<texture colordiffuse="Grey" border="30">buttons/dialoge_shadow.png</texture>
+                    </control>
+		    <!--Thumb Icon Focus-->			
+					<control type="image">
+					    <posy>12</posy>
+                        <width>260</width>
+                        <height>200</height>
+						<texture>$INFO[ListItem.Thumb]</texture>
+						<aspectratio align="center">keep</aspectratio>
+                    </control>
+		    <!--Label Focus-->			
+					<control type="image">
+					    <posy>22</posy>
+                        <width>205</width>
+                        <height>18</height>                       
 						<texture colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texture>
                     </control>
-		<!--Label Focus-->			
+		    <!--Label Text Focus-->			
                     <control type="label">
-                        <height>60</height>
-                        <posx>40</posx>
-                        <width>375</width>
-                        <align>left</align>
+                        <height>10</height>
+                        <posy>24</posy>
+                        <width>205</width>
+                        <align>center</align>
                         <font>Button</font>
                         <textcolor>$VAR[ButtonFocusTextColour]</textcolor>
                         <label>$INFO[ListItem.Label]</label>
@@ -161,70 +216,80 @@
 					    <label>20077</label>
                         <label2>31166</label2>
 					    <onclick>activatewindow(SkinSettings)</onclick>
-                        <icon>DefaultAddonProgram.png</icon>
+                        <icon>special://skin/extras/icons2/skin.png</icon>
+						<thumb>special://skin/extras/icons/skinsettings.png</thumb>
 				    </item>
 				    <item id="1">
                         <description>Appearance</description>
                         <label>14206</label>
                         <label2>31156</label2>
                         <onclick>activatewindow(InterfaceSettings)</onclick>
-                        <icon>DefaultAddonSkin.png</icon>
+                        <icon>special://skin/extras/icons2/appearance.png</icon>
+						<thumb>special://skin/extras/icons/controlpanel.png</thumb>
                     </item>
                     <item id="3">
                         <description>Addons</description>
                         <label>24001</label>
                         <label2>31162</label2>
                         <onclick>activatewindow(AddonBrowser)</onclick>
-                        <icon>DefaultAddon.png</icon>
+                        <icon>special://skin/extras/icons2/addons.png</icon>
+						<thumb>special://skin/extras/icons/addon.png</thumb>
                     </item>         
                     <item id="4">
                         <description>Media</description>
                         <label>14211</label>
                         <label2>31157</label2>
                         <onclick>activatewindow(MediaSettings)</onclick>
-                        <icon>DefaultAddonMusicVideoInfo.png</icon>
+                        <icon>special://skin/extras/icons2/library.png</icon>
+						<thumb>special://skin/extras/icons/soundwave.png</thumb>
                     </item>
 				    <item id="5">
                         <description>Player</description>
                         <label>14200</label>
                         <label2>31158</label2>
                         <onclick>activatewindow(PlayerSettings)</onclick>
-                        <icon>DefaultPlaylist.png</icon>
+                        <icon>special://skin/extras/icons2/video.png</icon>
+						<thumb>special://skin/extras/icons/play.png</thumb>
                     </item>
 				    <item id="6">
                         <description>Live TV</description>
                         <label>19191</label>
                         <label2>31163</label2>
                         <onclick>activatewindow(pvrsettings)</onclick>
-                        <icon>DefaultAddonPVRClient.png</icon>
+                        <icon>special://skin/extras/icons2/tvremote.png</icon>
+						<thumb>special://skin/extras/icons/livetv.png</thumb>
                     </item>
 				    <item id="7">
                         <description>Services</description>
                         <label>14036</label>
                         <label2>31164</label2>
                         <onclick>activateWindow(servicesettings)</onclick>
-                        <icon>DefaultAddonWebSkin.png</icon>
+                        <icon>special://skin/extras/icons2/network.png</icon>
+						<thumb>special://skin/extras/icons/network.png</thumb>
                     </item>
 				    <item id="8">
                         <description>System</description>
                         <label>13000</label>
                         <label2>31161</label2>
                         <onclick>activatewindow(SystemSettings)</onclick>
-                        <icon>DefaultAddonService.png</icon>
+                        <icon>special://skin/extras/icons2/settings.png</icon>
+						<thumb>special://skin/extras/icons/hdd.png</thumb>
                     </item>
                     <item id="9">
                         <description>System Info</description>
                         <label>130</label>
                         <label2>31167</label2>
                         <onclick>activatewindow(7)</onclick>
-                        <icon>DefaultAddonSubtitles.png</icon>
+                        <icon>special://skin/extras/icons2/sysinfo.png</icon>
+						<thumb>special://skin/extras/icons/sysinfo.png</thumb>
                     </item>
                     <item id="10">
 					   <description>Profiles</description>
 					   <label>13200</label>
                        <label2>31165</label2>
 					   <onclick>activatewindow(Profiles)</onclick>
-                       <icon>DefaultUser.png</icon>
+                       <icon>special://skin/extras/icons2/profiles.png</icon>
+					   <thumb>special://skin/extras/icons/artist.png</thumb>
 				    </item>
                 </content>
 				
