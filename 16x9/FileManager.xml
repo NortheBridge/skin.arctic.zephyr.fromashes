@@ -15,14 +15,18 @@
 	<!--Left Panel Group-->		
             <control type="group">
                 <description>Left panel</description>
-                <!--<left>SidePad</left>
-                <top>PosterPad</top>
-                <height>640</height>
-                <width>870</width>-->
 				<posx>85</posx>
 				<posy>190</posy>
 				<height>700</height>
 				<width>860</width>
+				<control type="image">
+			        <description>panel mask image</description>
+			        <posx>0</posx>
+			        <posy>0</posy>
+			        <width>860</width>
+                    <height>700</height>
+			        <texture border="5" colordiffuse="Black">common/white.png</texture>
+                </control>
 	    <!--Left Panel Background-->			
 				<control type="image">
                     <posx>10</posx>
@@ -40,22 +44,24 @@
                     <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
                 </control>
 	    <!--Left Panel Header Box Frame-->			
-				<control type="image">
-                    <posx>27</posx>
-                    <posy>28</posy>
-                    <width>805</width>
+                <control type="image">
+                    <posx>11</posx>
+                    <posy>11</posy>
+                    <width>840</width>
                     <height>90</height>
+                    <texture border="12" colordiffuse="Dark4">buttons/dialoge_inner.png</texture>
+                </control>
+		        <control type="image">
+                    <posx>10</posx>
+                    <posy>98</posy>
+                    <width>840</width>
+                    <height>4</height>
                     <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
                 </control>
-                <!--<control type="image">
-                    <width>100%</width>
-                    <height>100%</height>
-                    <texture border="5" colordiffuse="Panel">common/box.png</texture>
-                </control>-->
         <!--Left Panel Header Label-->
                 <control type="label" id="101">
                     <description>Header Label</description>
-                    <posy>38</posy>
+                    <posy>29</posy>
                     <posx>45</posx>
                     <align>left</align>
                     <font>TinyBold</font>
@@ -79,7 +85,7 @@
         <!--Left Panel List-->
                 <control type="list" id="20">
                     <description>Left File List</description>
-                    <posx>15</posx>
+                    <posx>20</posx>
                     <posy>124</posy>
                     <height>562</height>
                     <onleft>21</onleft>
@@ -185,6 +191,14 @@
 				<posy>190</posy>
 				<height>700</height>
 				<width>860</width>
+				<control type="image">
+			        <description>panel mask image</description>
+			        <posx>0</posx>
+			        <posy>0</posy>
+			        <width>860</width>
+                    <height>700</height>
+			        <texture border="5" colordiffuse="Black">common/white.png</texture>
+                </control>
 		<!-- Right Panel Background -->		
 				<control type="image">
                     <posx>10</posx>
@@ -203,25 +217,25 @@
                 </control>
 		<!--Right Panel Header Box Frame-->		
 				<control type="image">
-                    <posx>27</posx>
-                    <posy>28</posy>
-                    <width>805</width>
+                    <posx>11</posx>
+                    <posy>11</posy>
+                    <width>840</width>
                     <height>90</height>
+                    <texture border="12" colordiffuse="Dark4">buttons/dialoge_inner.png</texture>
+                </control>
+			<!--Right Header Separator-->	
+		        <control type="image">
+                    <posx>10</posx>
+                    <posy>98</posy>
+                    <width>840</width>
+                    <height>4</height>
                     <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
                 </control>
-                <!--<right>SidePad</right>
-                <top>PosterPad</top>
-                <height>640</height>
-                <width>870</width>            
-                <control type="image">
-                    <width>100%</width>
-                    <height>100%</height>
-                    <texture border="5" colordiffuse="Panel">common/box.png</texture>
-                </control>-->
+
         <!--Right Panel Header Label-->
                 <control type="label" id="102">
                     <description>Header Label</description>
-                    <posy>38</posy>
+                    <posy>29</posy>
                     <posx>45</posx>
                     <align>left</align>
                     <font>TinyBold</font>
@@ -230,7 +244,7 @@
         <!--Right Panel List-->
                 <control type="list" id="21">
                     <description>Left File List</description>
-                    <posx>15</posx>
+                    <posx>20</posx>
                     <posy>124</posy>
                     <height>562</height>
                     <onleft>20</onleft>

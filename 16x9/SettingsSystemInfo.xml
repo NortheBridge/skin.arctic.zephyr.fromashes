@@ -10,32 +10,55 @@
 		<include>Furniture_Header</include>
 		<control type="group">
 		    <include>Animation.Common</include>
-
-	<!-- Right Panel Foreground -->		
-			<control type="image">
-                <posx>594</posx>
-                <posy>203</posy>
-                <width>1230</width>
-                <height>712</height>
-				<texture colordiffuse="Panel" border="12">dialog/frame-fo.png</texture>
+            <control type="image">
+			    <description>panel mask image</description>
+			    <posx>75</posx>
+			    <posy>190</posy>
+			    <width>479</width>
+                <height>740</height>
+			    <texture border="5" colordiffuse="Black">common/white.png</texture>
             </control>
-	<!-- Left Panel Foreground-->		
+	<!-- Left Panel -->		
 			<control type="image">
-                <posx>85</posx>
-                <posy>203</posy>
-                <width>450</width>
-                <height>712</height>
-				<texture colordiffuse="FF090A0A" border="12">dialog/frame_fo.png</texture>
+                <posx>84</posx>
+                <posy>201</posy>
+                <width>461</width>
+                <height>718</height>
+				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
             </control>
-    <!-- Left Panel Background -->	
+    <!-- Left Panel Border -->	
 		    <control type="image">
                 <posx>75</posx>
                 <posy>190</posy>
                 <width>479</width>
                 <height>740</height>
                 <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
-            </control>		
-	<!-- Right Panel Background -->	
+            </control>
+		<!-- Left Panel Header Box -->	
+            <!--<control type="image">
+                <posx>99</posx>
+                <posy>216</posy>
+                <width>431</width>
+                <height>90</height>
+                <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+            </control>-->
+			<control type="image">
+			    <description>panel mask image</description>
+			    <posx>580</posx>
+			    <posy>190</posy>
+			    <width>1259</width>
+                <height>740</height>
+			    <texture border="5" colordiffuse="Black">common/white.png</texture>
+            </control>
+	<!-- Right Panel -->		
+			<control type="image">
+                <posx>591</posx>
+                <posy>201</posy>
+                <width>1236</width>
+                <height>718</height>
+				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
+            </control>			
+	<!-- Right Panel Border -->	
 		    <control type="image">
                 <posx>580</posx>
                 <posy>190</posy>
@@ -43,46 +66,70 @@
                 <height>740</height>
                 <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
             </control>
-
+		<!-- Right Panel Separator -->	
+			<control type="image">
+                <posx>591</posx>
+                <posy>300</posy>
+                <width>1236</width>
+                <height>5</height>
+                <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+            </control>
+		<!-- Right Panel Separator -->	
+			<control type="image">
+                <posx>591</posx>
+                <posy>500</posy>
+                <width>1236</width>
+                <height>5</height>
+                <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+            </control>
 			<control type="label">
-					<width>390</width>
-					<posx>130</posx>
-                    <posy>205</posy>
-					<font>MediumBold</font>
-					<label>5</label>
-					<textcolor>PanelWhite100</textcolor>
+				<width>390</width>
+				<posx>128</posx>
+                <posy>206</posy>
+				<font>MediumBold</font>
+				<label>5</label>
+				<textcolor>PanelWhite100</textcolor>
 			</control>
 			<control type="label">
-					<posx>130</posx>
-                    <posy>260</posy>
-					<height>30</height>
-					<font>Tiny</font>
-					<label>$INFO[System.FriendlyName]</label>
-					<textcolor>PanelWhite70</textcolor>
-					<scroll>true</scroll>
+				<posx>128</posx>
+                <posy>264</posy>
+				<height>30</height>
+				<font>Tiny</font>
+				<label>$INFO[System.FriendlyName]</label>
+				<textcolor>PanelWhite70</textcolor>
+				<scroll>true</scroll>
 			</control>
 			<control type="label" description="Header">
-					<left>1175</left>
-					<width>390</width>
-					<posy>205</posy>
-					<font>MediumBold</font>
-					<label>130</label>
-					<textcolor>PanelWhite100</textcolor>
+				<left>626</left>1126
+				<width>390</width>
+				<posy>206</posy>
+				<font>MediumBold</font>
+				<label>130</label>
+				<textcolor>PanelWhite100</textcolor>
 			</control>
 			<control type="label" id="52" description="XBMC Build Version">
-					<left>1175</left>
-					<posy>265</posy>
-					<height>30</height>
-					<font>Tiny</font>
-					<height>40</height>
-					<textcolor>PanelWhite70</textcolor>
-					<scroll>true</scroll>
-			</control>									
+				<left>626</left>
+				<posy>265</posy>
+				<height>30</height>
+				<font>Tiny</font>
+				<height>40</height>
+				<textcolor>PanelWhite70</textcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="54">
+				<left>1160</left>1126
+				<width>490</width>
+				<posy>216</posy>
+				<font>MediumBold</font>
+				<label>$INFO[Container(9101).ListItem.Label]</label>
+				<textcolor>PanelWhite100</textcolor>
+			</control>
+			
 		</control>
 
-		<control type="group">
-			<posx>590</posx>
-            <posy>180</posy>
+		<!--<control type="group">
+			<posx>580</posx>
+            <posy>230</posy>
             <width>540</width>
             <height>775</height>					
 			<control type="image">
@@ -133,16 +180,16 @@
 				<texture background="true">default/DefaultAddonPVRClient.png</texture>
 				<visible>ControlGroup(9101).HasFocus(99)</visible>
 			</control>
-		</control>		
+		</control>-->		
 				<!-- Left Group -->
 		<control type="group">
-			<posx>130</posx>
+			<posx>128</posx>
             <posy>210</posy>
             <width>480</width>
             <height>700</height>	
 			<control type="grouplist" id="9101">
 				<width>450</width>
-				<top>140</top>
+				<top>130</top>
 				<bottom>0</bottom>
 				<itemgap>4</itemgap>
 				<onleft>9000</onleft>
@@ -177,19 +224,19 @@
 			<control type="button" id="99">
 				<description>Live TV</description>
 				<include>DefSkinSettingMenuButton</include>
-				<label>19012</label>
+				<label>19191</label>
 			</control>
 		</control>
 		
 		<control type="grouplist">
-			<left>1050</left>
+			<left>591</left>
 			<top>98</top>
 			<itemgap>0</itemgap>
 			<!--<usecontrolcoords>true</usecontrolcoords>-->
 			<control type="label">
 				<description>CPU Text</description>
 				<font>Tiny</font>
-				<left>1080</left>
+				<left>1030</left>
 				<posx>230</posx>
 				<width>200</width>
 				<height>60</height>
@@ -217,26 +264,16 @@
 			</control>
 			<control type="label">
 				<description>Memory Text</description>
-				<left>1050</left>
+				<left>1030</left>
 				<posx>400</posx>
 				<font>Tiny</font>
 				<height>60</height>
 				<label>$LOCALIZE[31104]:  $INFO[system.memory(used.percent)]</label>
 				<include>DefSettingsButton</include>
 			</control>
-			<!--<control type="label">
-				<description>Memory Text</description>
-				<!--<posy>0</posy>
-				<align>right</align>
-				<posx>400</posx>
-				<font>Tiny</font>
-				<height>60</height>
-				<label>$INFO[system.memory(used.percent)]</label>
-				<include>DefSettingsButton</include>
-			</control>-->
 			<control type="progress" id="24">
 				<description>Memory BAR</description>
-				<left>1050</left>
+				<left>1030</left>
 				<font>Tiny</font>
 				<width>450</width>
 				<height>30</height>
@@ -254,71 +291,71 @@
 				<description>Label 2</description>
 				<font>Tiny</font>
 				<height>40</height>
-				<width>600</width>
 				<include>DefSettingsButton</include>
+				<scroll>true</scroll>
 			</control>
 			<control type="label" id="3">
 				<description>Label 3</description>
 				<font>Tiny</font>
 				<height>40</height>
-				<width>600</width>
 				<include>DefSettingsButton</include>
+				<scroll>true</scroll>
 			</control>
 			<control type="label" id="4">
 				<description>Label 4</description>
 				<font>Tiny</font>
 				<height>40</height>
-				<width>600</width>
 				<include>DefSettingsButton</include>
+				<scroll>true</scroll>
 			</control>
 			<control type="label" id="5">
 				<description>Label 5</description>
 				<font>Tiny</font>
 				<height>40</height>
-				<width>600</width>
 				<include>DefSettingsButton</include>
+				<scroll>true</scroll>
 			</control>
 			<control type="label" id="6">
 				<description>Label 6</description>
 				<font>Tiny</font>
 				<height>40</height>
-				<width>600</width>
 				<include>DefSettingsButton</include>
+				<scroll>true</scroll>
 			</control>
 			<control type="label" id="7">
 				<description>Label 7</description>
 				<font>Tiny</font>
 				<height>40</height>
-				<width>600</width>
 				<include>DefSettingsButton</include>
+				<scroll>true</scroll>
 			</control>
 			<control type="label" id="8">
 				<description>Label 8</description>
 				<font>Tiny</font>
 				<height>40</height>
-				<width>600</width>
 				<include>DefSettingsButton</include>
+				<scroll>true</scroll>
 			</control>
 			<control type="label" id="9">
 				<description>Label 9</description>
 				<font>Tiny</font>
 				<height>40</height>
-				<width>600</width>
 				<include>DefSettingsButton</include>
+				<scroll>true</scroll>
 			</control>
 			<control type="label" id="10">
 				<description>Label 10</description>
 				<font>Tiny</font>
 				<height>40</height>
-				<width>600</width>
 				<include>DefSettingsButton</include>
+				<scroll>true</scroll>
 			</control>
 			<control type="label" id="11">
 				<description>Label 11</description>
 				<font>Tiny</font>
 				<height>40</height>
-				<width>600</width>
 				<include>DefSettingsButton</include>
+				<scroll>true</scroll>
 			</control>
 		</control>
     </control>

@@ -21,14 +21,14 @@
 		    <control type="image">
 	            <left>0</left>
 	            <top>119</top>
-	            <width>480</width>
-	            <height>841</height>
-				<texture colordiffuse="Black" border="15">common/rounded-shadow8.png</texture>
+	            <width>505</width>
+	            <height>845</height>
+				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
 	        </control>
 		    <control type="button" id="3030">
-	            <left>21</left>
+	            <left>35</left>
 	            <top>138</top>
-	            <width>438</width>
+	            <width>420</width>
 	            <height>50</height>
 	            <onup>3010</onup>
 	            <ondown>3110</ondown>
@@ -44,14 +44,14 @@
 <!-- Colours Panel -->			
 			<control type="panel" id="3110">
 	            <viewtype label="panel">icons</viewtype>
-	            <left>60</left>
+	            <left>35</left>
 	            <top>230</top>
-	            <width>380</width>
-	            <height>500</height>
+	            <width>460</width>
+	            <height>505</height>
 	            <onup>3030</onup>
 	            <ondown>3010</ondown>	
-	            <onright>3110</onright>
-	            <onleft>60</onleft>
+	            <onleft>3110</onleft>
+	            <onright>60</onright>
 	            <orientation>vertical</orientation>
 	            <preloaditems>3</preloaditems>
 	            <pagecontrol>60</pagecontrol>
@@ -69,15 +69,15 @@
 	                    <height>40</height>
 	                    <texture>$INFO[ListItem.Icon]</texture>
 	                    <bordertexture colordiffuse="$VAR[ButtonFocusColour]" border="-2">common/white.png</bordertexture>
-	                    <animation effect="zoom" center="auto" start="-100" end="180" time="200" easing="inout" tween="sine">Focus</animation>
+	                    <animation effect="zoom" center="auto" start="100" end="180" time="200" easing="inout" tween="sine">Focus</animation>
 	                </control>
 	            </focusedlayout>
 	        </control>
 		<!-- Manual Edit -->	
 			<control type="button" id="3010">
-	            <left>18</left>
+	            <left>35</left>
 	            <top>770</top>
-	            <width>440</width>
+	            <width>420</width>
 	            <height>50</height>
 	            <onup>3110</onup>	
 	            <ondown>3015</ondown>
@@ -108,29 +108,29 @@
 		<!-- Transparency Group -->	
 			<control type="group" id="3020">
 	            <left>5</left>
-	            <top>835</top>
+	            <top>840</top>
 	            <width>300</width>
 	            <height>60</height>
 	            <control type="image">
 	                <width>440</width>
 	                <height>30</height>
-					<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="5">common/box.png</texturefocus>-->
+					<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="5">common/box.png</texturefocus>
 	                <visible>Control.HasFocus(3015)</visible>
 	            </control>
 				<control type="image">
 	                <width>450</width>
 	                <height>30</height>
-					<texturefocus colordiffuse="$VAR[ButtonColour]" border="5">common/box.png</texturefocus>-->
+					<texturefocus colordiffuse="$VAR[ButtonColour]" border="5">common/box.png</texturefocus>
 	                <visible>!Control.HasFocus(3015)</visible>
 	            </control>
 	<!-- Transparency Level -->				
 				<control type="label" id="3017">
-	                <left>45</left>
-	                <width>260</width>
+	                <left>65</left>
+	                <width>200</width>
 	                <height>35</height>
 	                <!--<align>left</align>-->
 					<font>Button</font>
-					<label>$ADDON[script.skin.helper.service 32049] $INFO[Control.Getlabel(3015)]</label>-->
+					<label>$ADDON[script.skin.helper.service 32049] $INFO[Control.Getlabel(3015)]</label>
 	            </control>
 	            <control type="slider" id="3015">
 	                <left>280</left>
@@ -142,15 +142,15 @@
 	        </control>
  
 			<control type="grouplist">	
-	            <left>18</left>
+	            <left>35</left>
 	            <top>895</top>
-	            <width>440</width>
+	            <width>420</width>
 	            <height>50</height>
 	            <orientation>horizontal</orientation>
-	            <itemgap>18</itemgap>
+	            <itemgap>20</itemgap>
 	<!-- Save Button -->			
 				<control type="button" id="3012">
-	                <width>210</width>
+	                <width>200</width>
 	                <height>50</height>
 	                <onup>3020</onup>
 	                <ondown>3030</ondown>
@@ -162,7 +162,7 @@
 	            </control>
 	<!-- Cancel Button -->
 	            <control type="button" id="3011">
-	                <width>210</width>
+	                <width>200</width>
 	                <height>50</height>
 	                <onup>3020</onup>
 	                <ondown>3030</ondown>
@@ -176,13 +176,13 @@
 
 	<!-- Scroll Bar -->		
 			<control type="scrollbar" id="60">
-                    <left>20</left>
+                    <left>500</left>
                     <posy>225</posy>
                     <height>505</height>
                     <width>10</width>
-                    <onleft>noop</onleft>
-                    <onright>3110</onright>
-					<texturesliderbackground border="5" colordiffuse="$VAR[ScrollbarBGColour]">scrollbar/scrollv.png</texturesliderbackground>
+                    <onright>noop</onright>
+                    <onleft>3110</onleft>
+					<texturesliderbackground border="5" colordiffuse="Dark1">scrollbar/scrollv.png</texturesliderbackground>
 					<texturesliderbar border="5" colordiffuse="$VAR[ScrollbarUnFocusedColour]">scrollbar/scrollv.png</texturesliderbar>
                     <texturesliderbarfocus border="5" colordiffuse="$VAR[ScrollbarFocusedColour]">scrollbar/scrollv.png</texturesliderbarfocus>
                     <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
