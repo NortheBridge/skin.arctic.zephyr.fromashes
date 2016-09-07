@@ -15,17 +15,18 @@
             <visible>!Window.IsVisible(numericinput)</visible>
             <include>Animation.ZoomIn</include>
             <include>Animation.FadeOut</include>
+			<animation effect="slide" end="0,36" time="150" condition="Control.IsVisible(311)" easing="out">Conditional</animation>
             
-            <centerleft>50%</centerleft>
-            <centertop>60%</centertop>
+            <posx>450</posx>
+            <posy>290</posy>
             <height>622</height>
-            <width>1740</width>
+            <width>1270</width>
 		<!-- Keyboard Panel Background -->	
 			<control type="image">
 			    <description>panel background image</description>
 			    <posx>0</posx>
 			    <posy>0</posy>
-			    <width>1740</width>
+			    <width>1270</width>
                 <height>622</height>
 			    <texture border="5" colordiffuse="Black">common/white.png</texture>
             </control>
@@ -33,7 +34,7 @@
             <control type="image">
                 <posx>13</posx>
                 <posy>10</posy>
-                <width>1715</width>
+                <width>1246</width>
                 <height>602</height>
 				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
             </control>
@@ -41,7 +42,7 @@
             <control type="image">
                 <posx>0</posx>
                 <posy>0</posy>
-                <width>1740</width>
+                <width>1270</width>
                 <height>622</height>
                 <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
             </control>
@@ -49,7 +50,7 @@
 			<control type="image">
                 <posy>80</posy>
                 <left>45</left>
-                <width>1467</width>
+                <width>1004</width>
                 <height>70</height>
                 <aspectratio>stretch</aspectratio>
                 <texture border="20" colordiffuse="Black30">common/box.png</texture>
@@ -70,14 +71,14 @@
 				<top>80</top>
                 <left>45</left>
                 <right>280</right>
-				<width>1467</width>
+				<width>1004</width>
                 <height>70</height>
                 <align>center</align>
                 <aligny>center</aligny>
-				<onup>8000</onup>
-                <onright>9001</onright>
+				<onup>1005</onup>
+                <onright>300</onright>
 				<ondown>100</ondown>
-				<onleft>301</onleft>
+				<onleft>8000</onleft>
                 <textcolor>Black70</textcolor>
 				<scroll>true</scroll>
                 <texturefocus colordiffuse="$VAR[ColourHighlight]" border="20">common/box.png</texturefocus>
@@ -95,10 +96,10 @@
                 <scrolltime tween="sine" easing="out">240</scrolltime>
 				<control type="button" id="309">
                     <description>Layout</description>
-                    <onleft>111</onleft>
+                    <onleft>8000</onleft>
                     <onright>100</onright>
 					<height>70</height>
-                    <width>430</width>
+                    <width>280</width>
                     <align>left</align>
 					<textoffsetx>40</textoffsetx>
                     <include>DefKeyboardKeys</include>
@@ -106,36 +107,36 @@
 				<control type="radiobutton" id="302">
                     <description>Shift</description>
 					<posy>85</posy>
-                    <width>430</width>
+                    <width>280</width>
 					<height>70</height>
 					<align>left</align>
 					<textoffsetx>40</textoffsetx>
                     <label>20178</label>
                     <include>DefKeyboardKeys</include>
-					<onleft>131</onleft>
+					<onleft>8000</onleft>
                     <onright>120</onright>
                 </control>
 				<control type="radiobutton" id="303">
                     <description>Caps</description>
 					<posy>170</posy>
-                    <width>430</width>
+                    <width>280</width>
 					<height>70</height>
 					<align>left</align>
 					<textoffsetx>40</textoffsetx>
                     <label>20179</label>
                     <include>DefKeyboardKeys</include>
-                    <onleft>151</onleft>
+                    <onleft>8000</onleft>
                     <onright>140</onright>
                 </control>
 				<control type="radiobutton" id="304">
                     <description>Symbols</description>
 					<posy>255</posy>
-                    <width>430</width>
+                    <width>280</width>
 					<height>70</height>
 					<align>left</align>
 					<textoffsetx>40</textoffsetx>
                     <label>Symbols  @#!*</label>
-                    <onleft>171</onleft>
+                    <onleft>8000</onleft>
                     <onright>160</onright>
                     <textureradioofffocus>noop</textureradioofffocus>
                     <textureradiooffnofocus>noop</textureradiooffnofocus>
@@ -145,13 +146,13 @@
                 </control>
 				<control type="button" id="307">
                     <description>IP</description>
-					<posy>340</posy>
-                    <width>430</width>
+					<posy>300</posy>
+                    <width>280</width>
 					<height>70</height>
 					<align>left</align>
 					<textoffsetx>40</textoffsetx>
                     <label>IP Address</label>
-					<onleft>306</onleft>
+					<onleft>8000</onleft>
                     <onright>32</onright>
                     <include>DefKeyboardKeys</include>
                 </control>				
@@ -160,7 +161,7 @@
             <control type="grouplist" id="9001">
                 <right>39</right>
                 <top>80</top>
-                <width>180</width>
+                <width>170</width>
                 <itemgap>10</itemgap>
                 <onleft>312</onleft>
                 <onright>312</onright>
@@ -171,7 +172,7 @@
                 <control type="button" id="300">
                     <align>center</align>
                     <label>186</label>
-                    <width>104</width>
+                    <width>94</width>
                     <include>DefKeyboardKeys</include>
                     <onclick>SetFocus(100)</onclick>
                 </control>
@@ -185,7 +186,7 @@
             </control>
 
             <control type="group">
-                <posx>485</posx>
+                <posx>340</posx>
                 <posy>175</posy>
 				
 			<!-- First Row -->	
@@ -513,16 +514,18 @@
                  <!-- Space Key -->   
                     <control type="button" id="32">
                         <description>Layout</description>
-                        <width>680</width>
+                        <width>390</width>
                         <label>20182</label>
                         <onup>1004</onup>
+						<ondown>120</ondown>
                         <include>DefKeyboardKeys</include>
                     </control>
                     <control type="button" id="8">
                         <description>Backspace</description>
-                        <width>285</width>
+                        <width>190</width>
                         <label>20181</label>
                         <onup>1004</onup>
+						<ondown>120</ondown>
                         <include>DefKeyboardKeys</include>
                     </control>
                     <control type="button" id="305">
@@ -530,67 +533,81 @@
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
                         <onup>1004</onup>
+						<ondown>120</ondown>
                     </control>
                     <control type="button" id="306">
                         <label>&gt;</label>
                         <description>Layout</description>
                         <include>DefKeyboardKeys</include>
                         <onup>1004</onup>
+						<ondown>120</ondown>
                     </control>
                 </control>            
             </control>
-			
+		</control>	
 <!--  Auto-Completion --Begin-->
 		<!-- AutoComplete Panel Background -->
+		<control type="group">
+			<posy>295</posy>
+			<animation type="Conditional" reversible="false" condition="!String.IsEmpty(Container(8000).ListItem.Label)">
+				<effect type="fade" end="100" time="225" />
+				<effect type="slide" start="0,-15" time="300" tween="cubic" easing="out" />
+			</animation>	
+			<animation type="Conditional" reversible="false" condition="String.IsEmpty(Container(8000).ListItem.Label)">
+				<effect type="fade" start="100" end="0" time="225" />
+				<effect type="slide" start="0,0" end="0,-15" time="400" tween="cubic" easing="out" />
+			</animation>
 			<control type="image">
-			    <posx>0</posx>
-			    <posy>-125</posy>
-			    <width>1740</width>
-                <height>110</height>
+			    <posx>55</posx>
+			    <posy>32</posy>
+			    <width>400</width>
+                <height>623</height>
 			    <texture border="5" colordiffuse="Black">common/white.png</texture>
 				<visible>IntegerGreaterThan(Container(8000).NumItems,0)</visible>
             </control>
 		<!-- AutoComplete Panel -->	
 			<control type="image">
-                <posx>11</posx>
-                <posy>-117</posy>
-                <width>1717</width>
-                <height>94</height>
+                <posx>65</posx>
+                <posy>40</posy>
+                <width>380</width>
+                <height>604</height>
 				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
 				<visible>IntegerGreaterThan(Container(8000).NumItems,0)</visible>
             </control>			
         <!-- AutoComplete Panel Border -->
             <control type="image">
-                <posx>0</posx>
-                <posy>-125</posy>
-                <width>1740</width>
-                <height>110</height>
+                <posx>55</posx>
+                <posy>30</posy>
+                <width>400</width>
+                <height>623</height>
                 <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
 				<visible>IntegerGreaterThan(Container(8000).NumItems,0)</visible>
             </control>			
 		<!-- Panel Layout -->	
             <control type="panel" id="8000">
-                <height>60</height>
-				<width>1690</width>
-                <top>-98</top>
-                <left>35</left>
+                <height>576</height>
+				<width>320</width>
+                <top>57</top>
+                <left>90</left>
 				<right>60</right>
-			    <onleft>8000</onleft>
-			    <onright>8000</onright>
-                <ondown>312</ondown>
-                <orientation>horizontal</orientation>
+			    <onleft>9000</onleft>
+			    <onright>312</onright>
+                <onup>8000</onup>
+				<ondown>8000</ondown>
+				<onback>noop</onback>
+				
+                <orientation>vertical</orientation>
+				<visible>System.HasAddon(plugin.program.autocompletion) + !Skin.HasSetting(EnableKeyboardAutocompletions)</visible>
 				<scrolltime tween="sine" easing="out">200</scrolltime>
-                <itemlayout height="60" width="338">
+                <itemlayout height="64" width="320">
                     <control type="image">
 				        <posx>0</posx>
-					    <posy>0</posy>
-                        <width>328</width>
+                        <width>320</width>
                         <height>60</height>
                         <texture border="20" colordiffuse="Black30">common/box.png</texture>
                     </control>
                     <control type="label">
-					    <posx>0</posx>
-					    <posy>0</posy>
+					    <posx>5</posx>
 					    <width>300</width>
 					    <height>60</height>
 					    <align>center</align>
@@ -598,17 +615,15 @@
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                 </itemlayout>
-                <focusedlayout height="60" width="338">
+                <focusedlayout height="64" width="320">
 			        <control type="image">
 					    <posx>0</posx>
-					    <posy>0</posy>
-					    <width>328</width>
+					    <width>320</width>
 					    <height>60</height>
 					    <texture border="20" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>
 				    </control>
 					<control type="label">
-					    <posx>0</posx>
-					    <posy>0</posy>
+					    <posx>5</posx>
 					    <width>300</width>
 					    <height>60</height>
 					    <align>center</align>

@@ -125,7 +125,7 @@
 	</variable>
 	<variable name="ButtonFocusColour">  
         <value condition="!IsEmpty(Skin.String(buttonfocuscolor.name))">$INFO[Skin.String(buttonfocuscolor.name)]</value>
-        <value>FF325CFE</value><!--Dark1-->	
+        <value>Highlight</value><!--Dark1-->	
 	</variable>
 	<variable name="ButtonTextColour">  
         <value condition="!IsEmpty(Skin.String(buttontextcolor.name))">$INFO[Skin.String(buttontextcolor.name)]</value>
@@ -159,7 +159,7 @@
 
 
 	<!---  Not Yet Functional ------ ############### Coming Soon #################-->
-    <!--<onload condition="IsEmpty(Skin.String(ratingstarsfolder))">Skin.SetString(ratingstarsfolder,default)</onload>
+    <onload condition="IsEmpty(Skin.String(ratingstarsfolder))">Skin.SetString(ratingstarsfolder,default)</onload>
 	<variable name="Colorratingstarsdo09">
 		<value condition="!IsEmpty(Skin.String(ratingstarsdo09))">$INFO[Skin.String(ratingstarsdo09)]</value>
 		<value condition="IsEmpty(Skin.String(ratingstarsdo09))">FF808080</value>
@@ -202,7 +202,6 @@
 	</variable>
 	<variable name="StarsFolder">
 		<value condition="StringCompare(Skin.String(ratingstarsfolder),default)">stars/</value>
-		<value condition="StringCompare(skin.string(ratingstarsfolder),sloped)">stars/sloped/</value>
 		<value condition="StringCompare(skin.string(ratingstarsfolder),italic)">stars/italic/</value>
 		<value condition="StringCompare(skin.string(ratingstarsfolder),strip)">stars/strip/</value>
 		<value condition="IsEmpty(Skin.String(ratingstarsfolder))">stars/</value>
@@ -210,7 +209,6 @@
 	<variable name="StarsRatingStyleStatus">
 	    <value condition="StringCompare(Skin.String(styleratingstars),3D)">DEFAULT</value>
 	    <value condition="StringCompare(Skin.String(styleratingstars),italic)">ITALIC</value>
-	    <value condition="StringCompare(Skin.String(styleratingstars),sloped)">SLOPED</value>
 	    <value condition="StringCompare(Skin.String(styleratingstars),strip)">STRIP</value>
 	</variable>
 	<variable name="StarRatingColour">
@@ -752,14 +750,12 @@
 	
 	<include name="DefDialogButtons">
 		<width>300</width>
-		<font>Button</font>
-<!-- 4th GEN Colour Modification -->		
+		<font>Button</font>		
 		<selectedcolor>$VAR[ButtonFocusTextColour]</selectedcolor>
         <textcolor>$VAR[ButtonTextColour]</textcolor>
 		<focusedcolor>$VAR[ButtonFocusTextColour]</focusedcolor>
-		<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
-		<!--<textcolor>Black70</textcolor>
-		<texturefocus colordiffuse="$VAR[ColourHighlight]" border="5">common/box.png</texturefocus>-->
+		<texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
+		<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>						
 	</include>
 	
 	<include name="DefDialogInfoButtons">
@@ -806,22 +802,19 @@
             <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
         </control>
 		<control type="image">
-		    <description>panel header border image</description>
-            <posx>33</posx>
-            <posy>29</posy>
-            <width>1135</width>
-            <height>90</height>
+            <posx>10</posx>
+            <posy>10</posy>
+            <width>1180</width>
+            <height>4</height>
             <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+        </control>	
+        <control type="image">
+            <posx>11</posx>
+            <posy>11</posy>
+            <width>1178</width>
+            <height>91</height>
+            <texture colordiffuse="Dark4" border="8">buttons/dialoge_inner.png</texture>
         </control>
-		<!--<control type="image">
-			<left>-24</left>
-            <right>-24</right>
-            <top>-24</top>
-            <bottom>-24</bottom>
-            <bordertexture border="32">common/shadow-24.png</bordertexture>
-            <bordersize>24</bordersize>
-            <texture colordiffuse="White100" border="16">common/box.png</texture>
-		</control>-->
 	</include>
 	
 	<include name="DefDialogInfoPanelFanart">
@@ -855,8 +848,8 @@
 	<include name="DefDialogHeader">
 		<description>header label</description>
 		<centerleft>50%</centerleft>
-		<posy>40</posy>
-		<width>1115</width>
+		<posy>25</posy>
+		<width>1180</width>
 		<align>center</align>
 		<font>MediumBold</font>
 <!-- 4th GEN Colour Modification -->		
@@ -894,19 +887,19 @@
             <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
         </control>
 		<control type="image">
-		    <description>panel header border image</description>
-            <posx>33</posx>
-            <posy>31</posy>
-            <width>1135</width>
-            <height>90</height>
+            <posx>10</posx>
+            <posy>100</posy>
+            <width>1180</width>
+            <height>4</height>
             <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
-        </control>
-		<!--<control type="image">
-			<width>1080</width>
-			<height>900</height>
-			<!--<texture border="16" colordiffuse="$VAR[DialogPanelColour]">common/rounded-shadow8.png</texture>
-			<texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
-		</control>-->		
+        </control>	
+        <control type="image">
+            <posx>11</posx>
+            <posy>11</posy>
+            <width>1178</width>
+            <height>91</height>
+            <texture colordiffuse="Dark4" border="8">buttons/dialoge_inner.png</texture>
+        </control>		
 	</include>
 	<include name="DefDialogOK">
 		<centerleft>50%</centerleft>
@@ -935,20 +928,33 @@
             <height>461</height>
             <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>			
         </control>
-		Focus
+		<control type="image">
+            <posx>-30</posx>
+            <posy>60</posy>
+            <width>961</width>
+            <height>4</height>
+            <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+        </control>	
+        <control type="image">
+            <posx>-29</posx>
+            <posy>-29</posy>
+            <width>959</width>
+            <height>91</height>
+            <texture colordiffuse="Dark4" border="8">buttons/dialoge_inner.png</texture>
+        </control>
 		<control type="label" id="1">
 			<description>Heading</description>
 			<centerleft>50%</centerleft>
-			<width>885</width>
+			<width>961</width>
 			<font>MediumBold</font>
 			<align>center</align>
-			<posy>4</posy>
+			<posy>-19</posy>
 		</control>
 		<control type="textbox" id="9">
 			<description>Line 1</description>
 			<left>20</left>
 			<right>20</right>
-			<posy>108</posy>
+			<posy>80</posy>
 			<height>300</height>
 		</control>
 	</include>
@@ -965,7 +971,7 @@
 		<!--<textcolor>Black70</textcolor>-->
 	</include>
 	<include name="DefKeyboardKeys">
-		<width>105</width>85
+		<width>70</width>85
 		<height>70</height>
 		<align>center</align>
 		<texturenofocus border="20" colordiffuse="Black30">common/box.png</texturenofocus>
@@ -973,7 +979,7 @@
 		<textoffsetx>0</textoffsetx>
 		<textcolor>Black70</textcolor>
 		<focusedcolor>$VAR[ColourSelected]</focusedcolor>
-		<radioposx>380</radioposx>
+		<radioposx>230</radioposx>
 		<radioposy>22</radioposy>
 		<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/on.png</textureradiofocus>
         <textureradionofocus colordiffuse="Dark2">buttons/off.png</textureradionofocus>
@@ -1336,10 +1342,17 @@
             <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
         </control>
 		<control type="image">
-            <posx>33</posx>
-            <posy>29</posy>
-            <width>462</width>
+            <posx>11</posx>
+            <posy>11</posy>
+            <width>504</width>
             <height>90</height>
+            <texture border="12" colordiffuse="Dark4">buttons/dialoge_inner.png</texture>
+        </control>
+		<control type="image">
+            <posx>10</posx>
+            <posy>98</posy>
+            <width>506</width>
+            <height>4</height>
             <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
         </control>
 	</include>

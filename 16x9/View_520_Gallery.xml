@@ -34,7 +34,7 @@
 				<ondown>60</ondown>
 				<onup condition="!Skin.HasSetting(global.kioskmode)">9000</onup>
 				<viewtype label="31742">List</viewtype>
-				<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),520) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
+				<!--<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),520) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>-->
 				<scrolltime tween="Quadratic" easing="out">300</scrolltime>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
