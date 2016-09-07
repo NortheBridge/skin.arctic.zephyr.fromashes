@@ -12,127 +12,156 @@
         <include>Furniture_NowPlaying</include>
         <control type="group">
 		    <include>Animation.Common</include>
-
-	<!-- Right Panel Foreground -->		
-			<control type="image">
-                <posx>591</posx>
-                <posy>201</posy>
-                <width>1236</width>
-                <height>718</height>
-				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
+            <posx>100</posx>
+            <posy>190</posy>
+            <width>450</width>
+            <height>700</height>
+            <control type="image">
+			    <description>panel mask image</description>
+			    <posx>0</posx>
+			    <posy>0</posy>
+			    <width>450</width>
+                <height>740</height>
+			    <texture border="5" colordiffuse="Black">common/white.png</texture>
             </control>
 	<!-- Left Panel Foreground-->		
 			<control type="image">
-                <posx>84</posx>
-                <posy>201</posy>
-                <width>461</width>
+                <posx>10</posx>
+                <posy>10</posy>
+                <width>430</width>
                 <height>718</height>
 				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
             </control>
     <!-- Left Panel Background -->	
 		    <control type="image">
-                <posx>75</posx>
-                <posy>190</posy>
-                <width>479</width>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>450</width>
                 <height>740</height>
                 <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>>
-            </control>		
-	<!-- Right Panel Background -->	
+            </control>
+
+                <!-- Left Group -->
+            <control type="grouplist" id="3">
+                <description>Button Area</description>
+                <width>400</width>
+				<top>40</top>
+				<bottom>20</bottom>
+				<left>39</left>
+				<itemgap>5</itemgap>
+                <onleft>9000</onleft>
+                <onright>5</onright>
+                <onup>20</onup>
+                <ondown>3</ondown>
+                <orientation>vertical</orientation>
+            </control>
+			<!-- Settings Level -->		
+			<control type="button" id="20">
+                <left>39</left>
+                <posy>600</posy>
+				<focusedcolor>$VAR[ColourHighlight2]</focusedcolor>
+				<include>DefSkinSettingMenuButton</include>
+                <font>Tiny</font>
+                <ondown>3</ondown>
+                <onleft>9000</onleft>
+                <onright>5</onright>
+                <onup>3</onup>
+                <onclick>SettingsLevelChange</onclick>
+            </control>
+			<control type="label">
+                <left>39</left>
+                <width>390</width>
+                <posy>545</posy>
+                <font>SmallBold</font>
+                <label>Setting level</label>
+                <textcolor>PanelWhite100</textcolor>
+            </control>
+	
+		<!--Description Header and Text -->
+		    <!--<control type="label">
+                <left>630</left>
+                <width>390</width>
+                <posy>763</posy>
+                <font>SmallBold</font>
+                <label>$VAR[Label_SettingsHeader]</label>
+                <textcolor>PanelWhite70</textcolor>
+            </control>-->
+        </control>  
+		<!-- Right Group Settings Buttons -->	
+        <control type="group">
+			<posx>580</posx>
+            <posy>190</posy>
+            <width>1080</width>
+            <height>650</height>
+			<control type="image">
+			    <description>panel mask image</description>
+			    <posx>0</posx>
+			    <posy>0</posy>
+			    <width>1259</width>
+                <height>740</height>
+			    <texture border="5" colordiffuse="Black">common/white.png</texture>
+            </control>
+		<!-- Right Panel Foreground -->		
+			<control type="image">
+                <posx>10</posx>
+                <posy>10</posy>
+                <width>1236</width>
+                <height>718</height>
+				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
+            </control>
+				<!-- Right Panel Background -->	
 		    <control type="image">
-                <posx>580</posx>
-                <posy>190</posy>
+                <posx>0</posx>
+                <posy>0</posy>
                 <width>1259</width>
                 <height>740</height>
                 <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
             </control>
-		
-		<!--Description Header and Text -->
-		    <control type="label">
-                <left>625</left>
-                <width>390</width>
-                <posy>70</posy>
-                <font>MediumBold</font>
-                <label>$VAR[Label_SettingsHeader]</label>
-                <textcolor>PanelWhite100</textcolor>
+			<control type="image">
+                <posx>10</posx>
+                <posy>602</posy>
+                <width>1236</width>
+                <height>5</height>
+                <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
             </control>
-            <control type="label" id="6">
-                <left>625</left>
+			<control type="image">
+                <posx>11</posx>
+                <posy>602</posy>
+                <width>1234</width>
+                <height>125</height>
+				<texture colordiffuse="Dark4" border="12">buttons/dialoge_inner.png</texture>
+            </control>
+            <control type="grouplist" id="5">
+                <description>Control Area</description>
+				<top>34</top>
+                <left>30</left>
+                <width>1140</width>
+                <height>542</height>
+                <itemgap>4</itemgap>
+                <onleft>3</onleft>
+                <onright>60</onright>
+                <onup>5</onup>
+                <ondown>5</ondown>
+				<pagecontrol>60</pagecontrol>
+                <orientation>vertical</orientation>
+            </control>
+			<control type="label" id="6">
+                <left>30</left>
                 <right>30</right>
-                <posy>138</posy>
-				<width>1180</width>
-                <height>30</height>
+                <posy>618</posy>
+				<width>1160</width>
+                <height>90</height>
                 <font>Tiny</font>
+				<aligny>top</aligny>
                 <textcolor>PanelWhite70</textcolor>
-                <scroll>true</scroll>
-            </control>
-            
-		<!-- Right Group Settings Buttons -->	
-            <control type="group">
-				<posx>600</posx>
-                <posy>225</posy>
-                <width>1080</width>
-                <height>755</height>
-                <control type="grouplist" id="5">
-                    <description>Control Area</description>
-                    <left>30</left>
-                    <width>1140</width>
-                    <height>685</height>
-                    <itemgap>3</itemgap>
-                    <onleft>3</onleft>
-                    <onright>60</onright>
-                    <onup>5</onup>
-                    <ondown>5</ondown>
-					<pagecontrol>60</pagecontrol>
-                    <orientation>vertical</orientation>
-                </control>
-            </control>
-
-		<!-- Left Group Menu Buttons -->
-			<control type="group">
-				<posx>118</posx>
-                <posy>221</posy>
-                <width>480</width>
-                <height>700</height>
-                <!-- Left Group -->
-                <control type="grouplist" id="3">
-                    <description>Button Area</description>
-                    <width>400</width>
-					<top>20</top>
-					<bottom>20</bottom>
-					<left>10</left>
-					<itemgap>5</itemgap>
-                    <onleft>9000</onleft>
-                    <onright>5</onright>
-                    <onup>20</onup>
-                    <ondown>3</ondown>
-                    <orientation>vertical</orientation>
-                </control>
-		<!-- Settings Level -->		
-				<control type="button" id="20">
-                    <left>10</left>
-                    <posy>600</posy>
-					<focusedcolor>$VAR[ColourHighlight2]</focusedcolor>
-					<include>DefSkinSettingMenuButton</include>
-                    <font>Tiny</font>
-                    <ondown>3</ondown>
-                    <onleft>9000</onleft>
-                    <onright>5</onright>
-                    <onup>3</onup>
-                    <onclick>SettingsLevelChange</onclick>
-                </control>
-				<control type="label">
-                    <left>10</left>
-                    <width>390</width>
-                    <posy>545</posy>
-                    <font>SmallBold</font>
-                    <label>Setting level</label>
-                    <textcolor>PanelWhite100</textcolor>
-                </control> 
+                <wrapmultiline>true</wrapmultiline>
+				<scroll>true</scroll>
             </control>
         </control>
         
         <include>Def9000SettingsMenu</include>
-    <!-- Various Control Buttons -->    
+    <!-- Various Control Buttons --> 
+
         <control type="button" id="7">
             <description>Default Button</description>
 			<onright>60</onright>
@@ -158,11 +187,37 @@
             <description>Default Category Button</description>
             <include>DefSkinSettingMenuButton</include>
         </control>
-		
+        <control type="image" id="11">
+			<description>separator image</description>
+			<height>3</height>
+			<texture colordiffuse="PanelWhite" flipx="true" border="3">common/separator.png</texture>
+		</control>
+		<control type="label" id="14">
+			<description>Default Label</description>
+			<width>1256</width>
+			<textoffsetx>45</textoffsetx>
+			<top>0</top>
+			<height>50</height>
+			<label>-</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>SmallBold</font>
+			<textcolor>Dark1</textcolor>
+			<shadowcolor>Black</shadowcolor>
+		</control>
+		<control type="image">
+			<description>Section header image</description>
+			<left>20</left>
+			<top>3</top>
+			<width>35</width>
+			<height>35</height>
+			<aspectratio>keep</aspectratio>
+			<texture>common/separator.png</texture>
+		</control>
 		<control type="scrollbar" id="60">
             <centerright>125</centerright>
-            <posy>235</posy>
-            <height>660</height>
+            <posy>227</posy>
+            <height>536</height>
             <width>12</width>
             <onleft>5</onleft>
             <onright>60</onright>

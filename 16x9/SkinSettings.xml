@@ -10,21 +10,45 @@
 		<control type="group">
 			<visible>!Window.IsVisible(yesnodialog) + !Window.IsActive(filebrowser)</visible>
 			<include>Animation.Common</include>
-
-	<!-- Right Panel Background -->		
+            <control type="image">
+			    <description>right panel mask image</description>
+			    <posx>570</posx>
+			    <posy>120</posy>
+			    <width>1260</width>
+                <height>840</height>
+			    <texture border="5" colordiffuse="Black">common/white.png</texture>
+            </control>
+	<!-- Right Panel -->		
 			<control type="image">
                 <posx>581</posx>
                 <posy>132</posy>
                 <width>1238</width>
-                <height>815</height>
+                <height>816</height>
 				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
             </control>
-	<!-- Left Panel Background -->		
+	<!-- Right Panel Borders -->	
+		    <control type="image">
+                <posx>570</posx>
+                <posy>120</posy>
+                <width>1260</width>
+                <height>840</height>
+                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
+            </control>
+
+			<control type="image">
+			    <description>left panel mask image</description>
+			    <posx>70</posx>
+			    <posy>120</posy>
+			    <width>480</width>
+                <height>840</height>
+			    <texture border="5" colordiffuse="Black">common/white.png</texture>
+            </control>
+	<!-- Left Panel -->		
 			<control type="image">
                 <posx>80</posx>
                 <posy>132</posy>
                 <width>460</width>
-                <height>815</height>
+                <height>816</height>
 				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
             </control>
 
@@ -36,14 +60,6 @@
                 <height>840</height>
                 <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
             </control>		
-	<!-- Right Panel Borders -->	
-		    <control type="image">
-                <posx>570</posx>
-                <posy>120</posy>
-                <width>1260</width>
-                <height>840</height>
-                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
-            </control>
 			
 			<control type="group">
 				<posx>115</posx>
@@ -232,7 +248,7 @@
 				<control type="scrollbar" id="60">
 				    <visible>ControlGroup(9100).HasFocus(9101)</visible>
                     <onback>9200</onback>
-                    <centerright>93</centerright>
+                    <centerright>105</centerright>
                     <posy>20</posy>
                     <height>775</height>
                     <width>12</width>
@@ -360,7 +376,7 @@
 				<control type="scrollbar" id="60">
 				    <visible>ControlGroup(9100).HasFocus(9102)</visible>
                     <onback>9300</onback>
-                    <centerright>93</centerright>
+                    <centerright>105</centerright>
                     <posy>20</posy>
                     <height>775</height>
                     <width>12</width>
@@ -543,7 +559,7 @@
 				<control type="scrollbar" id="60">
 				    <visible>ControlGroup(9100).HasFocus(9104)</visible>
                     <onback>9400</onback>
-                    <centerright>93</centerright>
+                    <centerright>105</centerright>
                     <posy>20</posy>
                     <height>775</height>
                     <width>12</width>
@@ -620,7 +636,7 @@
 				<control type="scrollbar" id="60">
 				    <visible>ControlGroup(9100).HasFocus(9105)</visible>
                     <onback>9500</onback>
-                    <centerright>93</centerright>
+                    <centerright>105</centerright>
                     <posy>20</posy>
                     <height>775</height>
                     <width>12</width>
@@ -835,7 +851,7 @@
 		    <!-- Scrollbar for Furniture Settings Control Area -->		
 				<control type="scrollbar" id="60">
 				    <visible>ControlGroup(9100).HasFocus(9106)</visible>
-                    <centerright>93</centerright>
+                    <centerright>105</centerright>
                     <posy>20</posy>
                     <height>775</height>
                     <width>12</width>
@@ -945,7 +961,7 @@
 				<control type="scrollbar" id="60">
 				    <visible>ControlGroup(9100).HasFocus(9103)</visible>
                     <onback>9700</onback>
-                    <centerright>93</centerright>
+                    <centerright>105</centerright>
                     <posy>20</posy>
                     <height>775</height>
                     <width>12</width>
@@ -1057,7 +1073,7 @@
 				<control type="scrollbar" id="60">
 				    <visible>ControlGroup(9100).HasFocus(9107)</visible>
                     <onback>9800</onback>
-                    <centerright>93</centerright>
+                    <centerright>105</centerright>
                     <posy>20</posy>
                     <height>775</height>
                     <width>12</width>
@@ -1126,10 +1142,8 @@
 						<include>DefSkinSettingButton</include>
 	                    <label>Style of the stars</label>
 	                    <label2>$INFO[Skin.String(ratingstarsfolder)]</label2>
-	                    <!--<onclick condition="StringCompare(skin.string(ratingstarsfolder),default)">Skin.SetString(ratingstarsfolder,sloped)</onclick>
-			            <onclick condition="StringCompare(skin.string(ratingstarsfolder),sloped)">Skin.SetString(ratingstarsfolder,italic)</onclick>
-				        <onclick condition="StringCompare(skin.string(ratingstarsfolder),italic)">Skin.SetString(ratingstarsfolder,bar)</onclick>
-			            <onclick condition="StringCompare(skin.string(ratingstarsfolder),bar)">Skin.SetString(ratingstarsfolder,strip)</onclick>-->
+			            <onclick condition="StringCompare(skin.string(ratingstarsfolder),default)">Skin.SetString(ratingstarsfolder,italic)</onclick>
+			            <onclick condition="StringCompare(skin.string(ratingstarsfolder),italic)">Skin.SetString(ratingstarsfolder,strip)</onclick>-->
 			            <onclick condition="StringCompare(skin.string(ratingstarsfolder),strip)">Skin.SetString(ratingstarsfolder,default)</onclick>
 				        <onclick condition="IsEmpty(Skin.String(ratingstarsfolder))">Skin.SetString(ratingstarsfolder,default)</onclick>	
 	                </control>-->
@@ -1147,8 +1161,8 @@
 	                        <ondown>9908</ondown>
 	                        <onleft>9200</onleft>
 	                        <label>Ratings:  0.0 - 0.9</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=ratingstarsdo09)</onclick>
-	                        <enable>System.HasAddon(script.skin.helper.service)</enable>
+							<onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=ratingstarsdo09,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
+							<enable>System.HasAddon(script.skin.helper.service)</enable>
 	                    </control>
 	                    <control type="image">
 	                        <include>DefButtonStars</include>
@@ -1438,7 +1452,7 @@
 				<control type="scrollbar" id="60">
 				    <visible>ControlGroup(9100).HasFocus(9111)</visible>
                     <onback>9900</onback>
-                    <centerright>93</centerright>
+                    <centerright>105</centerright>
                     <posy>20</posy>
                     <height>775</height>
                     <width>12</width>
@@ -4248,7 +4262,7 @@
 				<control type="scrollbar" id="60">
 				    <visible>ControlGroup(9100).HasFocus(9108)</visible>
                     <onback>10000</onback>
-                    <centerright>93</centerright>
+                    <centerright>105</centerright>
                     <posy>20</posy>
                     <height>775</height>
                     <width>12</width>

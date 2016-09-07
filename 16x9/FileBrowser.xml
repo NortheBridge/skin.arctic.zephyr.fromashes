@@ -10,35 +10,52 @@
 		    <include>Animation.ZoomIn</include>
 		    <include>Animation.FadeOut</include>
 			<visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(locksettings)</visible>
-		    
 		    <control type="image">
-			    <description>background image</description>
-			    <posx>445</posx>
-			    <posy>180</posy>
+			    <description>panel mask image</description>
+			    <posx>440</posx>
+			    <posy>175</posy>
+			    <width>1110</width>
+                <height>740</height>
+			    <texture border="5" colordiffuse="Black">common/white.png</texture>
+            </control>
+		    <control type="image">
+			    <description>panel image</description>
+			    <posx>450</posx>
+			    <posy>185</posy>
 			    <width>1090</width>
                 <height>720</height>
 			    <texture border="5" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
             </control>
 		    <control type="image">
+			    <description>panel border image</description>
                 <posx>440</posx>
                 <posy>175</posy>
-                <width>1100</width>
-                <height>730</height>
+                <width>1110</width>
+                <height>740</height>
                 <texture colordiffuse="Panel" border="16">dialog/frame_Landscape-fo.png</texture>
             </control>
+			<control type="image">
+			    <description>header background image</description>
+                <posx>451</posx>
+                <posy>186</posy>
+                <width>1088</width>
+                <height>91</height>
+                <texture colordiffuse="Dark4" border="8">buttons/dialoge_inner.png</texture>
+            </control>
 		    <control type="image">
-                <posx>478</posx>
-                <posy>215</posy>
-                <width>1020</width>
-                <height>90</height>
+			    <description>header separator image</description>
+                <posx>450</posx>
+                <posy>275</posy>
+                <width>1090</width>
+                <height>4</height>
                 <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
             </control>
            
             <control type="label" id="411">
                 <description>Heading</description>
-                <posx>501</posx>
-                <posy>225</posy>
-                <width>975</width>
+                <posx>450</posx>
+                <posy>197</posy>
+                <width>1090</width>
                 <align>center</align>
                 <font>MediumBold</font>            			
                 <label>1023</label>
@@ -58,7 +75,7 @@
             <control type="list" id="450">
                 <posx>480</posx>
                 <posy>320</posy>
-                <width>580</width>
+                <width>600</width>
                 <height>420</height>
                 <onleft>9000</onleft>
                 <onright>60</onright>
@@ -102,7 +119,7 @@
                     <control type="label">
                         <posy>0</posy>
                         <posx>80</posx>
-                        <width>580</width>
+                        <width>600</width>
                         <height>60</height>
 						<align>left</align>
                         <aligny>center</aligny>
@@ -163,7 +180,7 @@
                         <control type="label">
                             <posy>0</posy>
                             <posx>80</posx>
-                            <width>580</width>
+                            <width>600</width>
                             <height>60</height>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -229,7 +246,7 @@
                         <control type="label">
                             <posy>0</posy>
                             <posx>80</posx>
-                            <width>580</width>
+                            <width>600</width>
                             <height>60</height>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -257,7 +274,7 @@
 			<control type="list" id="451">
                 <posx>478</posx>
                 <posy>320</posy>
-                <width>580</width>
+                <width>600</width>
                 <height>420</height>
                 <onleft>9000</onleft>
 				<onright>60</onright>
@@ -287,7 +304,7 @@
 				    <control type="label">
                         <posy>5</posy>
                         <posx>80</posx>
-                        <width>580</width>
+                        <width>600</width>
                         <height>60</height>
 						<align>left</align>
                         <aligny>center</aligny>
@@ -323,7 +340,7 @@
 				        <control type="label">
                             <posy>0</posy>
                             <posx>80</posx>
-                            <width>580</width>
+                            <width>600</width>
                             <height>60</height>
 						    <align>left</align>
                             <aligny>center</aligny>
@@ -364,7 +381,7 @@
 						<control type="label">
                             <posy>0</posy>
                             <posx>80</posx>
-                            <width>580</width>
+                            <width>600</width>
                             <height>60</height>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -424,7 +441,7 @@
             <control type="image">
                 <description>Large Icon Image</description>
                 <posx>1171</posx>
-                <posy>308</posy>
+                <posy>294</posy>
                 <width>315</width>
                 <height>470</height>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
@@ -434,16 +451,16 @@
             </control>
 			<control type="image">
 				<posx>1125</posx>
-				<posy>320</posy>
-				<height>445</height>
+				<posy>279</posy>
+				<height>460</height>
 				<width>2</width>
 				<texture colordiffuse="Black">common/white.png</texture>
 			</control>
 			
 			<control type="scrollbar" id="60">
-                <posy>340</posy>
+                <posy>320</posy>
                 <posx>1090</posx>
-                <height>400</height>
+                <height>420</height>
 		        <onleft>450</onleft>
 				<onleft>451</onleft>
 				<onright>noop</onright>
