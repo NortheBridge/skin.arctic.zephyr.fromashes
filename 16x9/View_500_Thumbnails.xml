@@ -20,7 +20,7 @@
 					<pagecontrol>60</pagecontrol>
 					<orientation>vertical</orientation>
 					<viewtype label="21371">list</viewtype>
-					<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),500) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>
+					<!--<visible>StringCompare(Window(Home).Property(SkinHelper.ForcedView),500) | IsEmpty(Window(Home).Property(SkinHelper.ForcedView))</visible>-->
 					<scrolltime tween="quadratic">400</scrolltime>
 					<itemlayout height="330" width="296">
 						<control type="image">

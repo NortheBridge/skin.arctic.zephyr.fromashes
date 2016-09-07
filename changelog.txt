@@ -1,5 +1,31 @@
 [B]Arctic Zephyr: From Ashes Changelog[/B]
 
+[B]Arctic Zephyr: From Ashes Danvers "Alpha 7 Preview Update" - Released September 7, 2016[/B]
+Danvers: 4.9.90-alpha7 (4.2.90-alpha7_danvers)
+
+ARCTIC ZEPHYR: FROM ASHES ANNIVERSARY EDITION (CODENAMED "DANVERS") IS PRE-RELEASE SOFTWARE DESIGNED FOR A PRE-RELEASE VERSION OF KODI.
+THERE IS NO GUARNTEE THAT ALL FEATURES WILL WORK. PLEASE LET US KNOW OF ANY ISSUES YOU RUN INTO. THIS SKIN IS NOW AVAILABLE IN THE 
+NORTHEBRIDGE BY DESIGN(R) REPOSITORY, EMBY BETA REPOSITORY, GITHUB, OR VIA DIRECT ZIP FILE DOWNLOAD ONLY.
+
+Updated the User Experience to the Danvers Font Family ("Segoe," a modern version of the fonts from AZ:E)
+Unused Fonts Moved to "_AZEChunk" for removal at AZ:FA Danvers Release (this has caused a slight increase in size)
+Dialog Windows Have Been Updated with Significant Changes
+A Toggle Switch is now Available for the Keyboard at Skin Settings > Extras (Option to Turn On/Off Autocompletion)
+Addon Browser Info Now Displays Screenshots of an Addon if Available
+Toggle Buttons Have Been Added to the Addon Browser Window for News/Info
+The Color Selector Has Been Widened to Provide More Options On-Screen at Once
+Scrollbar for the Color Selector Has Been Moved from the Left to the Right
+The Addon Browser Now Supports "Big List" and "Thumbnail" View Types
+Header Design On All Dialogs Changed Removing the Outline Box In Favor of the Color Fill Box
+Settings Has Been Redesigned and Now Have Selectable Icons
+Settings Categories Have Text Headings for Better Grouping as well as Seperators
+System Info Window Large Icons Reverted In Favor of Large Text Boxes
+New Settings Textures Have Been Added to the "/extra/icons2" path
+Additions to "strings.po" for New Labels
+Version Branch Change from 4.2.20 to 4.9.90.
+Fixed New Dialogs Added to the Power Menu
+Updated the Danvers Preview Notification
+
 [B]Arctic Zephyr: From Ashes Danvers "Alpha 6 Preview Update" - Released August 27, 2016[/B]
 Danvers: 4.2.20-alpha6 (4.2.20-alpha6_danvers)
 

@@ -841,8 +841,18 @@ msgctxt "#31810"
 msgid "Palette Selection:"
 msgstr ""
 
+msgctxt "#31811"
+msgid "Enable Autocompletions for Keyboard"
+msgstr ""
 
+msgctxt "#31812"
+msgid "N/A"
+msgstr ""
 
+msgctxt "#31820"
+msgid "Decoder"
+msgstr ""
 
-
-
+msgctxt "#31821"
+msgid "No screenshot available"
+msgstr ""

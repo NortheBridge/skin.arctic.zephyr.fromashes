@@ -16,6 +16,14 @@
         
 		<control type="group">
 		    <visible>Control.IsVisible(50)</visible>
+			<control type="image">
+			    <description>panel mask image</description>
+			    <posx>75</posx>
+			    <posy>190</posy>
+			    <width>479</width>
+                <height>740</height>
+			    <texture border="5" colordiffuse="Black">common/white.png</texture>
+            </control>
 	<!-- Left Panel -->		
 		    <control type="image">
                 <posx>84</posx>
@@ -31,6 +39,15 @@
                 <width>479</width>
                 <height>740</height>
                 <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
+            </control>
+			
+			<control type="image">
+			    <description>right panel mask image</description>
+			    <posx>580</posx>
+			    <posy>190</posy>
+			    <width>1259</width>
+                <height>740</height>
+			    <texture border="5" colordiffuse="Black">common/white.png</texture>
             </control>
 	<!-- Right Panel -->		
 		    <control type="image">
@@ -50,28 +67,35 @@
             </control>
 	<!-- Right Panel Header Box -->		
 			<control type="image">
-                <posx>606</posx>
-                <posy>216</posy>
-                <width>1206</width>
-                <height>90</height>
+                <posx>591</posx>
+                <posy>291</posy>
+                <width>1236</width>
+                <height>4</height>
                 <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+            </control>	
+            <control type="image">
+                <posx>592</posx>
+                <posy>202</posy>
+                <width>1234</width>
+                <height>91</height>
+                <texture colordiffuse="Dark4" border="8">buttons/dialoge_inner.png</texture>
             </control>
 		<!-- Right Panel Header Label -->	
 			<control type="label">
                 <description>Header Label</description>
-                <posx>625</posx>
-                <posy>230</posy>
+                <centerleft>63%</centerleft>
+                <posy>212</posy>
                 <align>center</align>
                 <font>SmallBold</font>
-                <width>1180</width>
+                <width>1236</width>
                 <label>Kodi Events</label>
             </control>
 		<!-- Right Panel Settings -->	
 		    <control type="list" id="50">			    
-                <left>605</left>
+                <left>610</left>
                 <top>320</top>
-                <width>1200</width>
-                <height>100%</height>
+                <width>1180</width>
+                <height>510</height>
                 <onleft>9000</onleft>
                 <onright>60</onright>
                 <onup>570</onup>
@@ -79,7 +103,7 @@
                 <viewtype label="535">list</viewtype>
                 <pagecontrol>60</pagecontrol>
                 <scrolltime>200</scrolltime>
-                <itemlayout height="85" width="1200">
+                <itemlayout height="85" width="1170">
                     <control type="image">
                         <left>0</left>
                         <top>0</top>
@@ -130,7 +154,7 @@
                         <label>$INFO[ListItem.Label2]</label>
                     </control>
                 </itemlayout>
-	            <focusedlayout height="85" width="1200">
+	            <focusedlayout height="85" width="1170">
           		    <control type="image">
                         <left>0</left>
                         <top>0</top>
@@ -184,9 +208,9 @@
                 </focusedlayout>
 		    </control>
             <control type="scrollbar" id="60">
-                <right>15</right>
-                <top>-20</top>
-                <height>102%</height>
+                <right>40</right>
+                <top>320</top>
+                <height>510</height>
                 <onleft>507</onleft>
                 <showonepage>false</showonepage>
             </control>
@@ -251,12 +275,19 @@
 				</control>
 				
             </control>
-		<!-- Left Panel Large Icon -->	
+		<!-- Left Panel Large Icon -->
+		    <control type="image">
+                <posx>84</posx>
+                <posy>530</posy>
+                <width>461</width>
+                <height>5</height>
+                <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+            </control>
 			<control type="image">
-                <left>110</left>
-                <posy>520</posy>
-                <width>405</width>
-                <height>375</height>
+                <left>100</left>
+                <posy>547</posy>
+                <width>430</width>
+                <height>355</height>
                 <texture>$INFO[Listitem.Icon]</texture>
                 <aspectratio>scale</aspectratio>
                 <bordersize>2</bordersize>
