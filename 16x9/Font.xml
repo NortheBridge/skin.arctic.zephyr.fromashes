@@ -4,25 +4,25 @@
 	<fontset id="Default" unicode="true">
 		<font>
 			<name>symbolview</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>28</size>
 			<style />
 		</font>
 		<font>
 			<name>symbol</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>36</size>
 			<style />
 		</font>
 		<font>
 			<name>symbolbig</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>54</size>
 			<style />
 		</font>
 		<font>
 			<name>tinysymbol</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>20</size>
 			<style />
 		</font>
@@ -304,25 +304,25 @@
 	<fontset id="Large" unicode="true">
 		<font>
 			<name>symbolview</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>28</size>
 			<style />
 		</font>
 		<font>
 			<name>symbol</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>36</size>
 			<style />
 		</font>
 		<font>
 			<name>symbolbig</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>54</size>
 			<style />
 		</font>
 		<font>
 			<name>tinysymbol</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>20</size>
 			<style />
 		</font>
@@ -446,25 +446,25 @@
 	<fontset id="Arial" unicode="true">
 		<font>
 			<name>symbolview</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>28</size>
 			<style />
 		</font>
 		<font>
 			<name>symbol</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>36</size>
 			<style />
 		</font>
 		<font>
 			<name>symbolbig</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>54</size>
 			<style />
 		</font>
 		<font>
 			<name>tinysymbol</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>20</size>
 			<style />
 		</font>
@@ -580,125 +580,125 @@
 	<fontset id="Rexlia" unicode="true">
 		<font>
 			<name>symbolview</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>28</size>
 			<style />
 		</font>
 		<font>
 			<name>symbol</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>36</size>
 			<style />
 		</font>
 		<font>
 			<name>symbolbig</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>54</size>
 			<style />
 		</font>
 		<font>
 			<name>tinysymbol</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>20</size>
 			<style />
 		</font>
 		<font>
 			<name>LargeBold</name>
 			<style>uppercase</style>
-			<filename>rexlia-rg.ttf</filename>
+			<filename>Segoe-Semibold.ttf</filename>
 			<size>44</size>
 		</font>
 		<!--Required for Dynamic Sizing In View: Media Center Classic Experience (Old Vertical)-->
 		<font>
 			<name>LargeBoldMenu</name>
-			<filename>rexlia-rg.ttf</filename>
+			<filename>Segoe-Semibold.ttf</filename>
 			<size>74</size>
 		</font>
 		<!--End Required for Dynamic Sizing In View: Media Center Classic Experience (Old Vertical)-->
 		<font>
 			<name>LargeBoldReg</name>
-			<filename>rexlia-rg.ttf</filename>
+			<filename>Segoe-Semibold.ttf</filename>
 			<size>46</size>
 		</font>
 		<font>
 			<name>Large</name>
-			<filename>rexlia-rg.ttf</filename>
+			<filename>Segoe-Semibold.ttf</filename>
 			<size>44</size>
 		</font>
 		<font>
 			<name>EpisodeNumber</name>
-			<filename>rexlia-rg.ttf</filename>
+			<filename>Segoe-Semibold.ttf</filename>
 			<size>96</size>
 		</font>
 		<font>
 			<name>Medium</name>
-			<filename>rexlia-rg.ttf</filename>
+			<filename>Segoe-Semibold.ttf</filename>
 			<size>34</size>
 		</font>
 		<font>
 			<name>MediumBold</name>
-			<filename>rexlia-rg.ttf</filename>
+			<filename>Segoe-Semibold.ttf</filename>
 			<size>34</size>
 		</font>
 		<font>
 			<name>Small</name>
-			<filename>rexlia-rg.ttf</filename>
+			<filename>Segoe-Semibold.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>SmallBold</name>
-			<filename>rexlia-rg.ttf</filename>
+			<filename>Segoe-Semibold.ttf</filename>
 			<size>26</size>
 		</font>
 		<font>
 			<name>Tiny</name>
-			<filename>rexlia-rg.ttf</filename>
+			<filename>Segoe-Semibold.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
 			<name>TinyBold</name>
-			<filename>rexlia-rg.ttf</filename>
+			<filename>Segoe-Semibold.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
 			<name>Mini</name>
-			<filename>rexlia-rg.ttf</filename>
+			<filename>Segoe-Semibold.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>Button</name>
 			<style>uppercase</style>
-			<filename>rexlia-rg.ttf</filename>
+			<filename>Segoe-Semibold.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>Flag</name>
 			<style>uppercase</style>
-			<filename>rexlia-rg.ttf</filename>
+			<filename>Segoe-Semibold.ttf</filename>
 			<size>18</size>
 		</font>
 		<font>
 			<name>EPGTimeline</name>
-			<filename>rexlia-rg.ttf</filename>
+			<filename>Segoe-Semibold.ttf</filename>
 			<size>12</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Home</name>
 			<style>uppercase</style>
-			<filename>rexlia-rg.ttf</filename>
+			<filename>Segoe-Semibold.ttf</filename>
 			<size>26</size>
 		</font>
 		<font>
 			<name>HomeIcon</name>
 			<style>uppercase</style>
-			<filename>rexlia-rg.ttf</filename>
+			<filename>Segoe-Semibold.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>WidgetSelector</name>
 			<style>uppercase</style>
-			<filename>rexlia-rg.ttf</filename>
+			<filename>Segoe-Semibold.ttf</filename>
 			<size>18</size>
 		</font>
 		<font>
@@ -714,132 +714,132 @@
 		<!-- Required for system -->
 		<font>
 			<name>font13</name>
-			<filename>rexlia-rg.ttf</filename>
+			<filename>Segoe-Semibold.ttf</filename>
 			<size>26</size>
 		</font>
 	</fontset>
 	<fontset id="Plasmatic" unicode="true">
 		<font>
 			<name>symbolview</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>28</size>
 			<style />
 		</font>
 		<font>
 			<name>symbol</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>36</size>
 			<style />
 		</font>
 		<font>
 			<name>symbolbig</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>54</size>
 			<style />
 		</font>
 		<font>
 			<name>tinysymbol</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>20</size>
 			<style />
 		</font>
 		<font>
 			<name>LargeBold</name>
 			<style>uppercase</style>
-			<filename>plasmatic-regular.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>48</size>
 		</font>
 		<!--Required for Dynamic Sizing In View: Media Center Classic Experience (Old Vertical)-->
 		<font>
 			<name>LargeBoldMenu</name>
-			<filename>plasmatic-regular.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>74</size>
 		</font>
 		<!--End Required for Dynamic Sizing In View: Media Center Classic Experience (Old Vertical)-->
 		<font>
 			<name>LargeBoldReg</name>
-			<filename>plasmatic-regular.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>50</size>
 		</font>
 		<font>
 			<name>Large</name>
-			<filename>plasmatic-regular.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>48</size>
 		</font>
 		<font>
 			<name>EpisodeNumber</name>
-			<filename>plasmatic-regular.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>100</size>
 		</font>
 		<font>
 			<name>Medium</name>
-			<filename>plasmatic-regular.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>38</size>
 		</font>
 		<font>
 			<name>MediumBold</name>
-			<filename>plasmatic-regular.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>38</size>
 		</font>
 		<font>
 			<name>Small</name>
-			<filename>plasmatic-regular.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>30</size>
 		</font>
 		<font>
 			<name>SmallBold</name>
-			<filename>plasmatic-regular.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>32</size>
 		</font>
 		<font>
 			<name>Tiny</name>
-			<filename>plasmatic-regular.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>26</size>
 		</font>
 		<font>
 			<name>TinyBold</name>
-			<filename>plasmatic-regular.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>26</size>
 		</font>
 		<font>
 			<name>Mini</name>
-			<filename>plasmatic-regular.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>Button</name>
 			<style>uppercase</style>
-			<filename>plasmatic-regular.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>Flag</name>
 			<style>uppercase</style>
-			<filename>plasmatic-regular.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
 			<name>EPGTimeline</name>
-			<filename>plasmatic-regular.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>16</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Home</name>
 			<style>uppercase</style>
-			<filename>plasmatic-regular.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>32</size>
 		</font>
 		<font>
 			<name>HomeIcon</name>
 			<style>uppercase</style>
-			<filename>plasmatic-regular.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>WidgetSelector</name>
 			<style>uppercase</style>
-			<filename>plasmatic-regular.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
@@ -855,132 +855,132 @@
 		<!-- Required for system -->
 		<font>
 			<name>font13</name>
-			<filename>plasmatic-regular.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>30</size>
 		</font>
 	</fontset>
 	<fontset id="nk57" unicode="true">
 		<font>
 			<name>symbolview</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>28</size>
 			<style />
 		</font>
 		<font>
 			<name>symbol</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>36</size>
 			<style />
 		</font>
 		<font>
 			<name>symbolbig</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>54</size>
 			<style />
 		</font>
 		<font>
 			<name>tinysymbol</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>20</size>
 			<style />
 		</font>
 		<font>
 			<name>LargeBold</name>
 			<style>uppercase</style>
-			<filename>nk57-monospace-no-sb.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>44</size>
 		</font>
 		<!--Required for Dynamic Sizing In View: Media Center Classic Experience (Old Vertical)-->
 		<font>
 			<name>LargeBoldMenu</name>
-			<filename>nk57-monospace-no-sb.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>74</size>
 		</font>
 		<!--End Required for Dynamic Sizing In View: Media Center Classic Experience (Old Vertical)-->
 		<font>
 			<name>LargeBoldReg</name>
-			<filename>nk57-monospace-no-sb.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>46</size>
 		</font>
 		<font>
 			<name>Large</name>
-			<filename>nk57-monospace-no-sb.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>44</size>
 		</font>
 		<font>
 			<name>EpisodeNumber</name>
-			<filename>nk57-monospace-no-sb.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>96</size>
 		</font>
 		<font>
 			<name>Medium</name>
-			<filename>nk57-monospace-no-sb.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>34</size>
 		</font>
 		<font>
 			<name>MediumBold</name>
-			<filename>nk57-monospace-no-sb.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>34</size>
 		</font>
 		<font>
 			<name>Small</name>
-			<filename>nk57-monospace-no-sb.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>SmallBold</name>
-			<filename>nk57-monospace-no-sb.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>26</size>
 		</font>
 		<font>
 			<name>Tiny</name>
-			<filename>nk57-monospace-no-sb.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
 			<name>TinyBold</name>
-			<filename>nk57-monospace-no-sb.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
 			<name>Mini</name>
-			<filename>nk57-monospace-no-sb.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>Button</name>
 			<style>uppercase</style>
-			<filename>nk57-monospace-no-sb.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>Flag</name>
 			<style>uppercase</style>
-			<filename>nk57-monospace-no-sb.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>18</size>
 		</font>
 		<font>
 			<name>EPGTimeline</name>
-			<filename>nk57-monospace-no-sb.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>14</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Home</name>
 			<style>uppercase</style>
-			<filename>nk57-monospace-no-sb.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>32</size>
 		</font>
 		<font>
 			<name>HomeIcon</name>
 			<style>uppercase</style>
-			<filename>nk57-monospace-no-sb.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>WidgetSelector</name>
 			<style>uppercase</style>
-			<filename>nk57-monospace-no-sb.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>18</size>
 		</font>
 		<font>
@@ -996,132 +996,132 @@
 		<!-- Required for system -->
 		<font>
 			<name>font13</name>
-			<filename>nk57-monospace-no-sb.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>26</size>
 		</font>
 	</fontset>
 	<fontset id="Sui" unicode="true">
 		<font>
 			<name>symbolview</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>28</size>
 			<style />
 		</font>
 		<font>
 			<name>symbol</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>36</size>
 			<style />
 		</font>
 		<font>
 			<name>symbolbig</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>54</size>
 			<style />
 		</font>
 		<font>
 			<name>tinysymbol</name>
-			<filename>symbol.ttf</filename>
+			<filename>Segoe-Light.ttf</filename>
 			<size>20</size>
 			<style />
 		</font>
 		<font>
 			<name>LargeBold</name>
 			<style>uppercase</style>
-			<filename>sui-generis-rg.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>44</size>
 		</font>
 		<!--Required for Dynamic Sizing In View: Media Center Classic Experience (Old Vertical)-->
 		<font>
 			<name>LargeBoldMenu</name>
-			<filename>sui-generis-rg.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>74</size>
 		</font>
 		<!--End Required for Dynamic Sizing In View: Media Center Classic Experience (Old Vertical)-->
 		<font>
 			<name>LargeBoldReg</name>
-			<filename>sui-generis-rg.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>46</size>
 		</font>
 		<font>
 			<name>Large</name>
-			<filename>sui-generis-rg.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>44</size>
 		</font>
 		<font>
 			<name>EpisodeNumber</name>
-			<filename>sui-generis-rg.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>96</size>
 		</font>
 		<font>
 			<name>Medium</name>
-			<filename>sui-generis-rg.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>34</size>
 		</font>
 		<font>
 			<name>MediumBold</name>
-			<filename>sui-generis-rg.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>34</size>
 		</font>
 		<font>
 			<name>Small</name>
-			<filename>sui-generis-rg.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>SmallBold</name>
-			<filename>sui-generis-rg.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>26</size>
 		</font>
 		<font>
 			<name>Tiny</name>
-			<filename>sui-generis-rg.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
 			<name>TinyBold</name>
-			<filename>sui-generis-rg.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
 			<name>Mini</name>
-			<filename>sui-generis-rg.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>Button</name>
 			<style>uppercase</style>
-			<filename>sui-generis-rg.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>Flag</name>
 			<style>uppercase</style>
-			<filename>sui-generis-rg.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>18</size>
 		</font>
 		<font>
 			<name>EPGTimeline</name>
-			<filename>sui-generis-rg.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>12</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Home</name>
 			<style>uppercase</style>
-			<filename>sui-generis-rg.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>32</size>
 		</font>
 		<font>
 			<name>HomeIcon</name>
 			<style>uppercase</style>
-			<filename>sui-generis-rg.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
 			<name>WidgetSelector</name>
 			<style>uppercase</style>
-			<filename>sui-generis-rg.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>18</size>
 		</font>
 		<font>
@@ -1137,7 +1137,7 @@
 		<!-- Required for system -->
 		<font>
 			<name>font13</name>
-			<filename>sui-generis-rg.ttf</filename>
+			<filename>Segoe.ttf</filename>
 			<size>26</size>
 		</font>
 	</fontset>
