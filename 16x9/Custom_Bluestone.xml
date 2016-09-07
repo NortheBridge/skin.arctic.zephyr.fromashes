@@ -88,7 +88,7 @@
 			<posy>350</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Debug Build: [COLOR=$VAR[ColourHighlight]]Alpha 6 Preview[/COLOR]</label>
+			<label>Debug Build: [COLOR=$VAR[ColourHighlight]]Alpha 7 Preview[/COLOR]</label>
 		</control>
 	<control type="label">
 			<description>Sys_Name</description>
