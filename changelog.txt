@@ -1,12 +1,8 @@
 [B]Arctic Zephyr: From Ashes Changelog[/B]
 
-[B]Arctic Zephyr: From Ashes Danvers "Alpha 7 Preview Update" - Released September 7, 2016[/B]
-Danvers: 4.9.90-alpha7 (4.2.90-alpha7_danvers)
+[B]Arctic Zephyr: From Ashes Danvers "Alpha 8 Cumulative Preview Update" - Released September 9, 2016[/B]
 
-ARCTIC ZEPHYR: FROM ASHES ANNIVERSARY EDITION (CODENAMED "DANVERS") IS PRE-RELEASE SOFTWARE DESIGNED FOR A PRE-RELEASE VERSION OF KODI.
-THERE IS NO GUARNTEE THAT ALL FEATURES WILL WORK. PLEASE LET US KNOW OF ANY ISSUES YOU RUN INTO. THIS SKIN IS NOW AVAILABLE IN THE 
-NORTHEBRIDGE BY DESIGN(R) REPOSITORY, EMBY BETA REPOSITORY, GITHUB, OR VIA DIRECT ZIP FILE DOWNLOAD ONLY.
-
+Cumulative Update to Alpha 7 Preview Update to Fix Critical Kodi Crash Issue
 Updated the User Experience to the Danvers Font Family ("Segoe," a modern version of the fonts from AZ:E)
 Unused Fonts Moved to "_AZEChunk" for removal at AZ:FA Danvers Release (this has caused a slight increase in size)
 Dialog Windows Have Been Updated with Significant Changes
@@ -25,6 +21,16 @@ Additions to "strings.po" for New Labels
 Version Branch Change from 4.2.20 to 4.9.90.
 Fixed New Dialogs Added to the Power Menu
 Updated the Danvers Preview Notification
+Miscellaenous Bug Fixes and Enhancements
+
+[B]Arctic Zephyr: From Ashes Danvers "Alpha 7 Preview Update" - Released September 7, 2016[/B]
+Danvers: 4.9.90-alpha7 (4.2.90-alpha7_danvers)
+
+ARCTIC ZEPHYR: FROM ASHES ANNIVERSARY EDITION (CODENAMED "DANVERS") IS PRE-RELEASE SOFTWARE DESIGNED FOR A PRE-RELEASE VERSION OF KODI.
+THERE IS NO GUARNTEE THAT ALL FEATURES WILL WORK. PLEASE LET US KNOW OF ANY ISSUES YOU RUN INTO. THIS SKIN IS NOW AVAILABLE IN THE 
+NORTHEBRIDGE BY DESIGN(R) REPOSITORY, EMBY BETA REPOSITORY, GITHUB, OR VIA DIRECT ZIP FILE DOWNLOAD ONLY.
+
+This Release Was Suspended from Distribution due to Critical Issues. See the "Alpha 8 Cumulative Preview Update" for more information.
 
 [B]Arctic Zephyr: From Ashes Danvers "Alpha 6 Preview Update" - Released August 27, 2016[/B]
 Danvers: 4.2.20-alpha6 (4.2.20-alpha6_danvers)
