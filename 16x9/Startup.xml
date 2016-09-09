@@ -5,7 +5,7 @@
     <onload>SetProperty(SkinInitStarted,1,home)</onload>
 	
 	<!-- Danvers Preview Notice -->
-	<onload>RunScript(script.skin.helper.service,action=dialogok,header=Danvers Preview (Alpha 7),message=Welcome to the Arctic Zephyr: From Ashes Danvers Preview for Kodi Krypton! We thank you for participating in the Danvers Preview to help make AZ:FA the choice skin for Kodi users. Certain features may not be available or subject to change during the Danvers Preview and may not represent the released version of From Ashes.)</onload>
+	<onload>RunScript(script.skin.helper.service,action=dialogok,header=Danvers Preview (Alpha 8),message=Welcome to the Arctic Zephyr: From Ashes Danvers Preview for Kodi Krypton! We thank you for participating in the Danvers Preview to help make AZ:FA the choice skin for Kodi users. Certain features may not be available or subject to change during the Danvers Preview and may not represent the released version of From Ashes.)</onload>
     <controls>
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
