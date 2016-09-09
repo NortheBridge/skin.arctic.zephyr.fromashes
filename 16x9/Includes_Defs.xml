@@ -159,7 +159,7 @@
 
 
 	<!---  Not Yet Functional ------ ############### Coming Soon #################-->
-    <onload condition="IsEmpty(Skin.String(ratingstarsfolder))">Skin.SetString(ratingstarsfolder,default)</onload>
+    <!--<onload condition="IsEmpty(Skin.String(ratingstarsfolder))">Skin.SetString(ratingstarsfolder,default)</onload>
 	<variable name="Colorratingstarsdo09">
 		<value condition="!IsEmpty(Skin.String(ratingstarsdo09))">$INFO[Skin.String(ratingstarsdo09)]</value>
 		<value condition="IsEmpty(Skin.String(ratingstarsdo09))">FF808080</value>
@@ -803,7 +803,7 @@
         </control>
 		<control type="image">
             <posx>10</posx>
-            <posy>10</posy>
+            <posy>98</posy>
             <width>1180</width>
             <height>4</height>
             <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
@@ -952,10 +952,11 @@
 		</control>
 		<control type="textbox" id="9">
 			<description>Line 1</description>
-			<left>20</left>
-			<right>20</right>
+			<left>15</left>
+			<right>15</right>
 			<posy>80</posy>
-			<height>300</height>
+			<height>260</height>
+			<scroll>true</scroll>
 		</control>
 	</include>
 	<include name="DefPVRDialogButton">
@@ -1154,7 +1155,7 @@
 			<control type="label">
 				<description>Heading</description>
                 <posx>53</posx>
-                <posy>36</posy>
+                <posy>22</posy>
                 <width>400</width>
                 <align>center</align>
                 <font>SmallBold</font>
@@ -1387,10 +1388,17 @@
             <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
         </control>
 		<control type="image">
-            <posx>33</posx>
-            <posy>29</posy>
-            <width>1060</width>
+            <posx>11</posx>
+            <posy>11</posy>
+            <width>1078</width>
             <height>90</height>
+            <texture border="12" colordiffuse="Dark4">buttons/dialoge_inner.png</texture>
+        </control>
+		<control type="image">
+            <posx>10</posx>
+            <posy>98</posy>
+            <width>1080</width>
+            <height>4</height>
             <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
         </control>
 	</include>

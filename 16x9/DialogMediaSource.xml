@@ -145,7 +145,7 @@
                 <onup>10</onup>
                 <onleft>noop</onleft>
                 <onright>noop</onright>
-                <ondown>18</ondown>
+                <ondown>19</ondown>
                 <texturenofocus colordiffuse="$VAR[ButtonColour]" border="22">common/box.png</texturenofocus>				
                 <include>DefDialogButtons</include>
             </control>
@@ -175,7 +175,7 @@
 				<height>60</height>
                 <label>186</label>
                 <onup>12</onup>
-                <onleft>19</onleft>
+                <onleft>20</onleft>
                 <onright>19</onright>
                 <ondown>10</ondown>
 <!-- 4th GEN Colour Modification -->				
@@ -193,7 +193,7 @@
                 <label>222</label>
                 <onup>12</onup>
                 <onleft>18</onleft>
-                <onright>18</onright>
+                <onright>20</onright>
                 <ondown>10</ondown>
 <!-- 4th GEN Colour Modification -->				
                 <texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
