@@ -93,8 +93,8 @@
                 <control type="textbox">
                     <top>400</top>
                     <bottom>30</bottom>
-                    <right>20</right>
-					<left>50</left>
+                    <right>10</right>
+					<left>30</left>
                     <align>left</align>
                     <font>Tiny</font>
                     <textcolor>PanelWhite100</textcolor>
