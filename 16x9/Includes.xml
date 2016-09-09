@@ -109,7 +109,7 @@
 			<include>Animation.FadeIn</include>
 			<include condition="!Window.IsVisible(DialogBusy.xml)">Animation.FadeOut</include>
 			<include>Dimensions_Spinner_Halfscreen</include>
-			<texture colordiffuse="FF0C0D0D">diffuse/lovefilmthumb.png</texture>
+			<texture colordiffuse="EEBDBDBD">diffuseoverlay.png</texture>
 		</control>
 	</include>	
 	<include name="GlobalOverlay">
