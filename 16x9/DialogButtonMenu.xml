@@ -48,14 +48,14 @@
             </control>
 			<control type="image">
                 <posx>10</posx>
-                <posy>100</posy>
+                <posy>98</posy>
                 <width>590</width>
                 <height>4</height>
                 <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
             </control>
 		    <control type="label" id="500">
                 <description>header label</description>
-                <posy>26</posy>
+                <posy>22</posy>
                 <posx>45</posx>
 				<width>500</width>
                 <font>SmallBold</font>
