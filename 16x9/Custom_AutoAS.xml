@@ -2,7 +2,7 @@
 <!-- Foundation -->
 <window type="dialog" id="1108">
     <allowoverlay>no</allowoverlay>
-    <onload condition="System.HasAddon(script.artistslideshow) + !Skin.HasSetting(ArtistSlideShow.Disabled)">RunScript(script.artistslideshow)</onload>
+    <onload condition="System.HasAddon(script.artistslideshow) + String.IsEqual(Skin.String(musicvis.background),artistslideshow)">RunScript(script.artistslideshow)</onload>
     <visible>Player.HasAudio</visible>
     <controls></controls>
 </window> 

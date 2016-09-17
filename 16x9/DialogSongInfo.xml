@@ -4,10 +4,17 @@
 	<defaultcontrol always="true">10</defaultcontrol>
 	<controls>
 		<!-- Background -->
-		<include>DialogBackgroundImage</include>
+		<control type="group">
+            <visible>!Window.IsVisible(DialogAlbumInfo.xml)</visible>
+            <include>Animation.FadeIn</include>
+            <include>Animation.FadeOut</include>
+            <include>GlobalOverlay</include>
+        </control>
 		<!-- Main group -->
 		<control type="group">
-			<include>DialogAnimation</include>
+			<visible>!Window.IsVisible(DialogAlbumInfo.xml)</visible>
+            <include>Animation.FadeIn.Slide</include>
+            <include>Animation.FadeOut</include>
 			<centerleft>50%</centerleft>
 			<centertop>50%</centertop>
 			<width>800</width>

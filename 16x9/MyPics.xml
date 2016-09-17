@@ -2,7 +2,7 @@
 <!-- Foundation -->
 <window id="2">
     <defaultcontrol always="true">50</defaultcontrol>
-    <views>50,500</views>
+    <views>50,500,520</views>
 
     <controls>
 
@@ -13,6 +13,7 @@
         <include>Furniture_Clock</include>
         <include>View_50_List_Square</include>
         <include>View_500_Thumbnails</include>
+		<include>View_520_Gallery</include>
 
         <control type="group">
             <include>Animation.FadeIn</include>
@@ -23,15 +24,15 @@
         <control type="group">
             <include>Def9000Background</include>
 			<control type="image">
-			    <posx>45</posx>
-                <posy>39</posy>
+			    <posx>22</posx>
+			    <posy>21</posy>
 				<width>70</width>
 				<height>70</height>
-				<texture colordiffuse="Black" border="8">common/box.png</texture>
+				<texture colordiffuse="Dark4" border="8">common/box.png</texture>
 			</control>
 			<control type="image">
-                <posx>45</posx>
-                <posy>39</posy>
+                <posx>21</posx>
+                <posy>22</posy>
                 <width>70</width>
                 <height>70</height>
                 <texture colordiffuse="PanelWhite100" border="8">$VAR[HeaderIcon]</texture>
@@ -39,11 +40,11 @@
             </control>	
 			<control type="label">
                 <description>Header Label</description>
-                <posx>-65</posx>
-                <posy>35</posy>
+                <posx>10</posx>
+                <posy>22</posy>
                 <align>center</align>
                 <font>SmallBold</font>
-                <width>680</width>
+                <width>520</width>
                 <label>$VAR[MainHeaderLabel] Submenu</label>
             </control>
 
