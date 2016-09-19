@@ -238,7 +238,7 @@
 				<font>Tiny</font>
 				<left>1030</left>
 				<posx>230</posx>
-				<width>200</width>
+				<width>750</width>
 				<height>60</height>
 				<label>$LOCALIZE[13271]  $INFO[System.CPUUsage]</label>
 				<include>DefSettingsButton</include>

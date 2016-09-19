@@ -604,6 +604,9 @@ msgctxt "#31250"
 msgid "Vertical"
 msgstr ""
 
+msgctxt "#31253"
+msgid "Always display info and osd controls on music visualisation"
+msgstr ""
 
 msgctxt "#31730"
 msgid "Show Extra Fanart"
@@ -847,6 +850,18 @@ msgstr ""
 
 msgctxt "#31812"
 msgid "N/A"
+msgstr ""
+
+msgctxt "#31817"
+msgid "Poster Square"
+msgstr ""
+
+msgctxt "#31818"
+msgid "Wall Square"
+msgstr ""
+
+msgctxt "#31819"
+msgid "Gallery"
 msgstr ""
 
 msgctxt "#31820"
