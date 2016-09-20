@@ -203,13 +203,13 @@
 						<animation effect="fade" end="25" condition="true">Conditional</animation>
 						<texture border="1,0,0,10" flipx="true">common/separator.png</texture>
 					</control>
-					<control type="image">
+					<!--<control type="image">
 						<width>720</width>
 						<height>31</height>	
-						<texture border="4">commom/box.png</texture>
+						<texture border="4">common/box.png</texture>
 						<aspectratio>stretch</aspectratio>
 						<scroll>true</scroll>
-					</control>
+					</control>-->
 					<control type="label">
 						<left>5</left>
 						<width>165</width>
@@ -226,7 +226,7 @@
 						<height>31</height>
 						<font>Tiny</font>
 						<aligny>center</aligny>
-						<textcolor>$VAR[ColourSelected]</textcolor>
+						<textcolor>Black70</textcolor>
 						<shadowcolor>Black</shadowcolor>
 						<label fallback="N/A">$INFO[ListItem.Label2]</label>
 					</control>
@@ -284,9 +284,9 @@
  				<control type="image">
  					<width>328</width>
  					<height>195</height>
- 					<texture border="2" background="true">DefaultPicture.png</texture>
+ 					<texture border="2" background="boxes/cdcover_mask_aa.png">DefaultNoPreview.png</texture>
  					<aspectratio>scale</aspectratio>
- 					<bordertexture border="4">boxes/cdcover_mask_aa.png</bordertexture>
+ 					<bordertexture colordiffuse="Black">boxes/cdcover_mask_aa.png</bordertexture>
  					<bordersize>4</bordersize>
  				</control>
  				<control type="label">
@@ -303,9 +303,9 @@
  					<left>350</left>
  					<width>328</width>
  					<height>195</height>
- 					<texture border="2" background="true">DefaultPicture.png</texture>
+ 					<texture border="2" background="boxes/cdcover_mask_aa.png">DefaultNoPreview.png</texture>
  					<aspectratio>scale</aspectratio>
- 					<bordertexture border="4">boxes/cdcover_mask_aa.png</bordertexture>
+ 					<bordertexture colordiffuse="Black">boxes/cdcover_mask_aa.png</bordertexture>
  					<bordersize>4</bordersize>
  				</control>
  				<control type="label">
@@ -322,9 +322,9 @@
  					<left>698</left>
  					<width>328</width>
  					<height>195</height>
- 					<texture border="2" background="true">DefaultPicture.png</texture>
+ 					<texture border="2" background="boxes/cdcover_mask_aa.png">DefaultNoPreview.png</texture>
  					<aspectratio>scale</aspectratio>
- 					<bordertexture border="4">boxes/cdcover_mask_aa.png</bordertexture>
+ 					<bordertexture colordiffuse="Black">boxes/cdcover_mask_aa.png</bordertexture>
  					<bordersize>4</bordersize>
 				</control>
 				<control type="label">
