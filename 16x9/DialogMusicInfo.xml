@@ -141,11 +141,11 @@
                         <onclick condition="String.IsEmpty(Window.Property(tracklist))">SetProperty(tracklist,1)</onclick>
                         <onclick condition="!String.IsEmpty(Window.Property(tracklist))">ClearProperty(tracklist)</onclick>
                         <include>DefInfoButtons</include>
-                        <!--<visible>$EXP[isAlbum]</visible>-->
-						<visible>Container.Content(albums)</visible>
+                        <visible>$EXP[isAlbum]</visible>-->
+						<!--<visible>Container.Content(albums)</visible>-->
                     </control>
 
-                    <!--<control type="button" id ="9003">
+                    <control type="button" id ="9003">
                         <description>Youtube</description>
                         <label>31141</label>
                         <width>260</width>
@@ -153,7 +153,7 @@
                         <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/search/?q=$INFO[ListItem.Artist],return)</onclick>
                         <include>DefInfoButtons</include>
                     </control>-->
-                    <control type="button" id ="9003">
+                    <!--<control type="button" id ="9003">
                         <description>Youtube</description>
                         <label>31141</label>
                         <width>260</width>
@@ -161,7 +161,7 @@
                         <onclick>SetFocus(350)</onclick>
                         <include>DefInfoButtons</include>
                         <enable>Integer.IsGreater(Container(350).NumItems,0)</enable>
-                    </control>
+                    </control>-->
 
                     <control type="button" id ="6">
                         <description>Refresh</description>
@@ -185,7 +185,7 @@
                         <width>260</width>
                         <include>DefInfoButtons</include>
                         <visible>!Skin.HasSetting(global.kioskmode)</visible>
-                        <visible>Container.Content(artists)</visible>
+                        <visible>$EXP[isArtist]</visible>
                     </control>
 
                     <control type="button" id ="9004">
@@ -730,7 +730,7 @@
                             </control>
                         </control>
                     </focusedlayout>
-                    <content>plugin://script.extendedinfo?info=discography&amp;&amp;artistname=$INFO[ListItem.Artist]</content>
+                    <content target="music">plugin://script.extendedinfo?info=discography&amp;&amp;artistname=$INFO[ListItem.Artist]</content>
                 </control>
 
             </control>
@@ -821,6 +821,8 @@
             </control>
             <control type="image">
                 <include>Dimensions_Fullscreen</include>
+				<texture colordiffuse="Panel">common/bg.png</texture>
+                <animation effect="fade" start="100" end="95" condition="true">Conditional</animation>
                 <texture>$INFO[ListItem.Art(fanart)]</texture>
             </control>
         </control>

@@ -303,7 +303,8 @@
                         <description>Filter (hidden)</description>
 						<height>10</height>
                         <include>HiddenButton</include>
-                    </control>					
+                    </control>
+					
 			<!-- Background Settings -->
                     <control type="button" id="9302" description="Set library fanart">
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
@@ -318,13 +319,6 @@
                         <onclick>SetProperty(Dialog.3.BuiltIn,Skin.Reset(global.hidefanart)||Skin.SetBool(SkinHelper.EnableExtraFanart))</onclick>
                         <onclick>RunScript(script.toolbox,info=selectdialog,header=Select library background)</onclick>
                     </control>			
-					<control type="radiobutton" id="9303" description="Show fanart">
-						<visible>ControlGroup(9100).HasFocus(9102)</visible>
-						<include>DefSkinSettingRadioButton</include>
-						<label>31121</label>
-						<selected>!Skin.HasSetting(global.hidefanart)</selected>
-						<onclick>Skin.ToggleSetting(global.hidefanart)</onclick>
-					</control>
 					<control type="radiobutton" id="9304" description="Show Extra fanart">
 						<visible>ControlGroup(9100).HasFocus(9102)</visible>
 						<visible>!Skin.HasSetting(global.hidefanart)</visible>
@@ -368,6 +362,15 @@
 						<onclick condition="IsEmpty(Skin.String(fanart.fallback))">Skin.SetImage(fanart.fallback)</onclick>
 						<onclick condition="!IsEmpty(Skin.String(fanart.fallback))">Skin.Reset(fanart.fallback)</onclick>
 					</control>
+                    <control type="button" id="93101" description="Reset Fallback Image">
+                        <visible>ControlGroup(9100).HasFocus(9102)</visible>
+						<texturefocus colordiffuse="SelectedOrange" border="5">common/box.png</texturefocus>
+                        <include>DefSkinSettingButton</include>
+                        <label>- Reset Fallback Image -</label>
+                        <onclick>Skin.Reset(fanart.fallback)</onclick>
+                        <onclick>SetFocus(9310)</onclick>
+                        <visible>!String.IsEmpty(Skin.String(fanart.fallback))</visible>
+                    </control>					
 					<control type="button" id="9312" description="Set Weather Fanart">
 						<visible>ControlGroup(9100).HasFocus(9102)</visible>
 						<include>DefSkinSettingButton</include>
@@ -1011,13 +1014,27 @@
 						<onclick>Skin.ToggleSetting(ArtistSlideshow.Animate)</onclick>
 						<enable>Skin.HasSetting(musicvis.fanartfallback) | [!Skin.HasSetting(ArtistSlideShow.Disabled) + System.HasAddon(script.artistslideshow)]</enable>
 					</control>
+					<control type="radiobutton" id="9709" description="Show scrolling visual text in Music OSD">
+						<visible>ControlGroup(9100).HasFocus(9103)</visible>
+						<include>DefSkinSettingRadioButton</include>
+						<label>Show scrolling visual text in Music OSD</label>
+						<selected>Skin.HasSetting(osd.showvisualtext)</selected>
+						<onclick>Skin.ToggleSetting(osd.showvisualtext)</onclick>
+					</control>
+					<control type="radiobutton" id="97091" description="Show music info always in Music OSD">
+						<visible>ControlGroup(9100).HasFocus(9103)</visible>
+						<include>DefSkinSettingRadioButton</include>
+						<label>Show music info always in Music OSD</label>
+						<selected>Skin.HasSetting(osd.showmusicinfo)</selected>
+						<onclick>Skin.ToggleSetting(osd.showmusicinfo)</onclick>
+					</control>					
 					<control type="radiobutton" id="9710" description="Show detailed info on pause">
 						<visible>ControlGroup(9100).HasFocus(9103)</visible>
 						<include>DefSkinSettingRadioButton</include>
 						<label>31201</label>
 						<selected>Skin.HasSetting(osd.showinfoonpause)</selected>
 						<onclick>Skin.ToggleSetting(osd.showinfoonpause)</onclick>
-					</control>
+					</control>						
 					<control type="radiobutton" id="9718" description="Always show osd info/controls in music visualisation">
                         <visible>ControlGroup(9100).HasFocus(9103)</visible>
                         <include>DefSkinSettingRadioButton</include>
@@ -3174,7 +3191,7 @@
 	                        <width>36</width>
 	                        <height>36</height>
 	                        <texture>common/box.png</texture>
-	                        <colordiffuse>$VAR[HubsWidgetBordorColour]</colordiffuse>
+	                        <colordiffuse>$VAR[HubsWidgetBorderColour]</colordiffuse>
 	                    </control>
 						<control type="label">
 					<!-- In Use Label -->	

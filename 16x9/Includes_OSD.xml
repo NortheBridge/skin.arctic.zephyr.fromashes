@@ -786,9 +786,9 @@
         <control type="grouplist" id="6050">
             <visible>Player.HasMedia</visible>
             <usecontrolcoords>true</usecontrolcoords>
-            <top>0</top>
+            <top>20</top>
             <height>70</height>
-            <width>450</width>
+            <width>430</width>
             <align>center</align>
             <itemgap>10</itemgap>
             <scrolltime tween="sine">200</scrolltime>
@@ -802,7 +802,7 @@
                 <texturefocus colordiffuse="$VAR[OSDButtonsFocusColour]" flipx="true">osd/next.png</texturefocus>
                 <texturenofocus colordiffuse="$VAR[OSDButtonsColour]" flipx="true">osd/next.png</texturenofocus>
                 <label>-</label>
-                <top>10</top>
+                <top>20</top>
                 <width>48</width>
                 <height>48</height>
                 <font>-</font>
@@ -812,7 +812,7 @@
                 <texturefocus colordiffuse="$VAR[OSDButtonsFocusColour]" flipx="true">osd/ff.png</texturefocus>
                 <texturenofocus colordiffuse="$VAR[OSDButtonsColour]" flipx="true">osd/ff.png</texturenofocus>
                 <label>-</label>
-                <top>10</top>
+                <top>20</top>
                 <width>48</width>
                 <height>48</height>
                 <font>-</font>
@@ -827,7 +827,7 @@
                 <alttexturenofocus colordiffuse="$VAR[OSDButtonsColour]">osd/play.png</alttexturenofocus>
                 <label>-</label>
                 <altlabel>208</altlabel>
-                <top>10</top>
+                <top>20</top>
                 <width>48</width>
                 <height>48</height>
                 <font>-</font>
@@ -840,7 +840,7 @@
                 <texturefocus colordiffuse="$VAR[OSDButtonsFocusColour]">osd/stop.png</texturefocus>
                 <texturenofocus colordiffuse="$VAR[OSDButtonsColour]">osd/stop.png</texturenofocus>
                 <label>-</label>
-                <top>10</top>
+                <top>20</top>
                 <width>48</width>
                 <height>48</height>
                 <font>-</font>
@@ -850,7 +850,7 @@
                 <texturefocus colordiffuse="$VAR[OSDButtonsFocusColour]">osd/ff.png</texturefocus>
                 <texturenofocus colordiffuse="$VAR[OSDButtonsColour]">osd/ff.png</texturenofocus>
                 <label>-</label>
-                <top>10</top>
+                <top>20</top>
                 <width>48</width>
                 <height>48</height>
                 <font>-</font>
@@ -862,7 +862,7 @@
                 <texturefocus colordiffuse="$VAR[OSDButtonsFocusColour]">osd/next.png</texturefocus>
                 <texturenofocus colordiffuse="$VAR[OSDButtonsColour]">osd/next.png</texturenofocus>
                 <label>-</label>
-                <top>10</top>
+                <top>20</top>
                 <width>48</width>
                 <height>48</height>
                 <font>-</font>
@@ -872,7 +872,7 @@
                 <texturefocus colordiffuse="$VAR[OSDButtonsFocusColour]">osd/fullscreen.png</texturefocus>
                 <texturenofocus colordiffuse="$VAR[OSDButtonsColour]">osd/fullscreen.png</texturenofocus>
                 <label>-</label>
-                <top>10</top>
+                <top>20</top>
                 <width>48</width>
                 <height>48</height>
                 <font>-</font>

@@ -144,7 +144,7 @@
                         <width>1090</width>
                         <top>-2</top>
                         <height>644</height>
-                        <texture colordiffuse="$VAR[HubsWidgetBordorColour]" border="20">common/selectbox.png</texture><!-- replaced Dark1-->
+                        <texture colordiffuse="$VAR[HubsWidgetBorderColour]" border="20">common/selectbox.png</texture><!-- replaced Dark1-->
                         <visible>Control.HasFocus(9500)</visible>
                     </control>
                 </control>
@@ -177,7 +177,7 @@
                 <control type="group">
                     <control type="list" id="9501">
                         <description>Control Area</description>
-                        <left>1150</left>
+                        <left>1160</left>
                         <right>0</right>
                         <top>8</top>
                         <height>630</height>
@@ -191,7 +191,7 @@
                         <scrolltime tween="quadratic">400</scrolltime>
                         <include>Animation.FadeIn</include>
                         <include>Animation.FadeOut</include>
-                        <itemlayout width="580" height="70">
+                        <itemlayout width="570" height="70">
 						    <control type="image">
                                 <posx>0</posx>
                                 <posy>0</posy>
@@ -216,7 +216,7 @@
                                 <label>$INFO[ListItem.Label]</label>
                             </control>
                         </itemlayout>
-                        <focusedlayout width="580" height="70">
+                        <focusedlayout width="570" height="70">
                             <control type="group">
                                 <visible>Control.HasFocus(9501)</visible>
                                 <control type="image">

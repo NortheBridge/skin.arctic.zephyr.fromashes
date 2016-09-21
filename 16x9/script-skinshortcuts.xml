@@ -145,7 +145,8 @@
                         <height>66</height>					
 						<texture colordiffuse="Black">$INFO[ListItem.Icon]</texture><!-- replaced Light1-->
                         <visible>substring(ListItem.Icon,special://skin/extras/icons/)</visible>
-                        <visible>Skin.HasSetting(home.showicons) | substring(Window.Property(groupname),movieshub) | substring(Window.Property(groupname),episodeshub)</visible>-->
+						<visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
+                        <!--<visible>Skin.HasSetting(home.showicons) | substring(Window.Property(groupname),movieshub) | substring(Window.Property(groupname),episodeshub)</visible>-->
                     </control>
 				
 				    <visible>!Control.HasFocus(211)</visible>
@@ -173,8 +174,7 @@
                         <height>66</height>					
 						<texture colordiffuse="$VAR[ButtonFocusColour]">$INFO[ListItem.Icon]</texture><!-- replaced Light1-->
                         <visible>substring(ListItem.Icon,special://skin/extras/icons/)</visible>
-						<visible>!Control.HasFocus(211)</visible>-->
-                        <!--<visible>Skin.HasSetting(home.showicons) | substring(Window.Property(groupname),movieshub) | substring(Window.Property(groupname),episodeshub)</visible>-->
+						<visible>!Control.HasFocus(211)</visible>
                     </control>
 
                 </focusedlayout>
@@ -247,7 +247,7 @@
                     <label>31181</label>
                     <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
-                    <visible>stringcompare(Window.Property(groupname),movieshub) | stringcompare(Window.Property(groupname),episodeshub) | Skin.HasSetting(home.showicons)</visible>
+                    <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
                 </control>
                 <control type="button" id="405" description="Set Submenu">
                     <width>100%</width>
