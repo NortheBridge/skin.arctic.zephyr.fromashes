@@ -55,7 +55,7 @@
 			<posy>290</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Build: [COLOR=$VAR[ColourHighlight]]danvers@1dc49ee[/COLOR]</label> <!-- Say Hello to the Girl of Steel! Wait, You Can Read This? Easter Eggs! -->
+			<label>Build: [COLOR=$VAR[ColourHighlight]]danvers@ade00a3[/COLOR]</label> <!-- Say Hello to the Girl of Steel! Wait, You Can Read This? Easter Eggs! -->
 		</control>
 		<!-- The Full Version is Determined By the Branch (i.e. x.y.zz_branchnameabbreviated) -->
 		<!-- Goodbye to Bluestone; Now "Dormer" and "Danvers" -->
@@ -88,7 +88,7 @@
 			<posy>350</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Debug Build: [COLOR=$VAR[ColourHighlight]]Alpha 8 Preview[/COLOR]</label>
+			<label>Debug Build: [COLOR=$VAR[ColourHighlight]]Alpha 9 Preview[/COLOR]</label>
 		</control>
 	<control type="label">
 			<description>Sys_Name</description>
@@ -125,24 +125,24 @@
 		<!-- Legacy Script Checks -->
 		<!-- You know, a lot of people say I am just like Blair Waldorf. Fail these checks and you might just find out... xoxo - Easter Eggs -->
 	<control type="label">
-			<description>Legacy_ScriptCheck1</description>
+			<description>AXB_Backport</description>
 			<font>Tiny</font>
 			<align>left</align>
 			<posx>1200</posx>
 			<posy>230</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Legacy Duration: [COLOR=$VAR[ColourHighlight]]$INFO[System.AddonTitle(script.duration)][/COLOR]</label>
+			<label>Legacy Base (For Another Age): [COLOR=$VAR[ColourHighlight]]ArcticZephyr: Braz (AZB@55254ef)[/COLOR]</label>
 		</control>
 	<control type="label">
-			<description>Legacy_ScriptCheck1Ver</description>
+			<description>AZFA_Backport</description>
 			<font>Tiny</font>
 			<align>left</align>
 			<posx>1200</posx>
 			<posy>260</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Legacy Foundation: [COLOR=$VAR[ColourHighlight]]$INFO[System.AddonVersion(script.duration)][/COLOR]</label>
+			<label>Legacy Foundation (For Another Age): [COLOR=$VAR[ColourHighlight]]Arctic Zephyr: From Ashes (TBD)[/COLOR]</label>
 		</control>
 	<control type="label">
 			<description>Emby_ServerCheck</description>
@@ -253,6 +253,16 @@
 			<posy>130</posy>
 			<label>Based On "Arctic Zephyr: Exploded" by [COLOR=$VAR[ColourHighlight]]im85288 and badaas[/COLOR]</label>
 		</control>
+			<control type="label">
+			<description>AZBCreator</description>
+			<font>Tiny</font>
+            <width>100%</width>
+            <height>100%</height>
+            <align>center</align>
+            <aligny>center</aligny>
+			<posy>160</posy>
+			<label>Based On "Arctic Zephyr: Braz" by [COLOR=$VAR[ColourHighlight]]Braz[/COLOR]</label>
+		</control>
 			<!--Contributors-->
 	<control type="label">
 			<description>Contributors</description>
@@ -261,7 +271,7 @@
             <height>100%</height>
             <align>center</align>
             <aligny>center</aligny>
-			<posy>160</posy>
+			<posy>190</posy>
 			<label>[COLOR=$VAR[ColourHighlight]]Contributors[/COLOR]</label>
 		</control>
 			<!--Never Tell Anyone I Counted By "10s" to get from 130 to 160 Here-->
@@ -272,7 +282,7 @@
             <height>100%</height>
             <align>center</align>
             <aligny>center</aligny>
-			<posy>190</posy>
+			<posy>220</posy>
 			<label>[COLOR=$VAR[ColourHighlight]]minus0 (Kodi Forums),[/COLOR] papadcha (Emby Forums), [COLOR=$VAR[ColourHighlight]]Mike_Doc ("Madnox Skin" Features)[/COLOR], schimi2k ("Resolution Icons Pack 2.0," Misc. UX Look and Feel)</label>
 		</control>				
     </controls>
