@@ -28,86 +28,109 @@
                 <width>870</width>
             
                 <control type="image">
-                    <width>100%</width>
-                    <height>100%</height>
-                    <texture border="5" colordiffuse="Panel">common/box.png</texture>
+			        <description>panel background image</description>
+			        <posx>0</posx>
+			        <posy>0</posy>
+			        <width>870</width>
+                    <height>640</height>
+			        <texture border="5" colordiffuse="Black">common/white.png</texture>
                 </control>
-
+		        <control type="image">
+			        <posx>10</posx>
+			        <posy>10</posy>
+			        <width>850</width>
+			        <height>620</height>
+			        <texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
+		        </control>
+		        <control type="image">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>870</width>
+                    <height>640</height>
+                    <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>			
+                </control>
+		        <control type="image">
+                    <posx>10</posx>
+                    <posy>98</posy>
+                    <width>850</width>
+                    <height>4</height>
+                    <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+                </control>	
+                <control type="image">
+                    <posx>11</posx>
+                    <posy>11</posy>
+                    <width>848</width>
+                    <height>91</height>
+                    <texture colordiffuse="Dark4" border="8">buttons/dialoge_inner.png</texture>
+                </control>
                 <control type="label">
                     <description>Header Label</description>
-                    <top>5</top>
+                    <top>22</top>
                     <left>30</left>
                     <right>30</right>
                     <align>left</align>
                     <font>TinyBold</font>
-                    <textcolor>White70</textcolor>
+                    <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
                     <label>$LOCALIZE[2]$INFO[Control.GetLabel(12),  -  ,]</label>
                 </control>
 
                 <control type="list" id="50">
                     <description>Left File List</description>
-                    <left>15</left>
-                    <bottom>15</bottom>
-                    <right>15</right>
-                    <height>552</height>
+                    <left>30</left>
+                    <bottom>25</bottom>
+                    <right>20</right>
+                    <height>482</height>
                     <onleft>9000</onleft>
                     <onright>100</onright>
                     <onup>50</onup>
                     <ondown>50</ondown>
-
-                    <itemlayout height="69" width="840">
-
-                        
-
+					
+                    <itemlayout height="69" width="810"> 
+                        <control type="image">
+							<width>100%</width>
+							<height>66</height>
+							<texture border="20" colordiffuse="$VAR[ButtonColour]">common/box.png</texture>
+						</control>                
                         <control type="label">
                             <posx>30</posx>
                             <width>auto</width>
                             <align>left</align>
-                            <textcolor>White70</textcolor>
+                            <textcolor>$VAR[ButtonTextColour]</textcolor>
                             <info>ListItem.Label</info>
                         </control>
-
                         <control type="label">
                             <right>30</right>
-                            <width max="840">auto</width>
+                            <width max="810">auto</width>
                             <align>right</align>
                             <font>Tiny</font>
-                            <textcolor>White70</textcolor>
+                            <textcolor>$VAR[ButtonTextColour]</textcolor>
                             <info>ListItem.Label2</info>
                         </control>
-
                     </itemlayout>
-
-                    <focusedlayout height="69" width="840">
-
+                    <focusedlayout height="69" width="810">
                         <control type="image">
                             <width>100%</width>
                             <height>66</height>
-                            <texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>
+                            <texture border="20" colordiffuse="$VAR[ButtonFocusColour]">common/box.png</texture>
                             <animation effect="fade" start="100" end="0" condition="!Control.HasFocus(50)">Conditional</animation>
                         </control>
-
                         <control type="label">
                             <posx>30</posx>
                             <width>auto</width>
                             <align>left</align>
-                            <textcolor>White100</textcolor>
+                            <textcolor>$VAR[ButtonFocusTextColour]</textcolor>
                             <info>ListItem.Label</info>
                         </control>
-
                         <control type="label">
                             <right>30</right>
-                            <width max="840">auto</width>
+                            <width max="810">auto</width>
                             <align>right</align>
-                            <textcolor>White100</textcolor>
+                            <textcolor>$VAR[ButtonFocusTextColour]</textcolor>
                             <font>Tiny</font>
                             <info>ListItem.Label2</info>
                         </control>
-
                     </focusedlayout>
-
                 </control>
-
             </control>
        
             
@@ -117,87 +140,106 @@
                 <top>PosterPad</top>
                 <height>640</height>
                 <width>870</width>
-                <control type="image">
-                    <width>100%</width>
-                    <height>100%</height>
-                    <texture border="5" colordiffuse="Panel">common/box.png</texture>
-                </control>
 
+                <control type="image">
+			        <description>panel background image</description>
+			        <posx>0</posx>
+			        <posy>0</posy>
+			        <width>870</width>
+                    <height>640</height>
+			        <texture border="5" colordiffuse="Black">common/white.png</texture>
+                </control>
+		        <control type="image">
+			        <posx>10</posx>
+			        <posy>10</posy>
+			        <width>850</width>
+			        <height>620</height>
+			        <texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
+		        </control>
+		        <control type="image">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>870</width>
+                    <height>640</height>
+                    <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>			
+                </control>
+		        <control type="image">
+                    <posx>10</posx>
+                    <posy>98</posy>
+                    <width>850</width>
+                    <height>4</height>
+                    <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+                </control>	
+                <control type="image">
+                    <posx>11</posx>
+                    <posy>11</posy>
+                    <width>848</width>
+                    <height>91</height>
+                    <texture colordiffuse="Dark4" border="8">buttons/dialoge_inner.png</texture>
+                </control>
                 <control type="label">
                     <description>Header Label</description>
-                    <top>5</top>
+                    <top>22</top>
                     <left>30</left>
                     <right>30</right>
                     <align>left</align>
                     <font>TinyBold</font>
-                    <textcolor>White70</textcolor>
+                    <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
                     <label>$LOCALIZE[559]$INFO[Control.GetLabel(101),  -  ,]</label>
                 </control>
 
                 <control type="list" id="100">
                     <description>Left File List</description>
-                    <left>15</left>
-                    <bottom>15</bottom>
-                    <right>15</right>
-                    <height>552</height>
+                    <left>30</left>
+                    <bottom>25</bottom>
+                    <right>20</right>
+                    <height>482</height>
                     <onleft>50</onleft>
                     <onright>9000</onright>
                     <onup>100</onup>
                     <ondown>100</ondown>
-
-                    <itemlayout height="69" width="840">
-
-                        
-
+                    <itemlayout height="69" width="810">                        
                         <control type="label">
-                            <posx>30</posx>
+                            <posx>35</posx>
                             <width>720</width>
                             <align>left</align>
-                            <textcolor>White70</textcolor>
+                            <textcolor>$VAR[ButtonTextColour]</textcolor>
                             <info>ListItem.Label</info>
                         </control>
-
                         <control type="label">
                             <right>30</right>
                             <width>150</width>
                             <align>right</align>
                             <font>Tiny</font>
-                            <textcolor>White70</textcolor>
+                            <textcolor>$VAR[ButtonTextColour]</textcolor>
                             <info>ListItem.Label2</info>
                         </control>
-
                     </itemlayout>
 
-                    <focusedlayout height="69" width="840">
-
+                    <focusedlayout height="69" width="810">
                         <control type="image">
                             <width>100%</width>
                             <height>66</height>
-                            <texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>
+                            <texture border="20" colordiffuse="$VAR[ButtonFocusColour]">common/box.png</texture>
                             <animation effect="fade" start="100" end="0" condition="!Control.HasFocus(100)">Conditional</animation>
                         </control>
-
                         <control type="label">
                             <posx>30</posx>
                             <width>720</width>
                             <align>left</align>
-                            <textcolor>White100</textcolor>
+                            <textcolor>$VAR[ButtonFocusTextColour]</textcolor>
                             <info>ListItem.Label</info>
                         </control>
-
                         <control type="label">
                             <right>30</right>
                             <width>720</width>
                             <align>right</align>
-                            <textcolor>White100</textcolor>
+                            <textcolor>$VAR[ButtonFocusTextColour]</textcolor>
                             <font>Tiny</font>
                             <info>ListItem.Label2</info>
                         </control>
-
                     </focusedlayout>
-
                 </control>
-
             </control>
             
             
@@ -210,26 +252,62 @@
         </control>
         <control type="group">
             <include>Def9000Background</include>
+			<control type="image">
+			    <posx>22</posx>
+                <posy>21</posy>
+				<width>70</width>
+				<height>70</height>
+				<texture colordiffuse="Dark4" border="8">common/box.png</texture>
+			</control>
+			<control type="image">
+                <posx>20</posx>
+                <posy>21</posy>
+                <width>70</width>
+                <height>70</height>
+                <texture colordiffuse="PanelWhite100" border="8">$VAR[HeaderIcon]</texture>
+                <aspectratio align="center" aligny="bottom">keep</aspectratio>
+            </control>	
+			<control type="label">
+                <description>Header Label</description>
+                <posx>-65</posx>
+                <posy>22</posy>
+                <align>center</align>
+                <font>SmallBold</font>
+                <width>680</width>
+                <label>$VAR[MainHeaderLabel] Submenu</label>
+            </control>
             <control type="grouplist" id="9000">
                 <usecontrolcoords>true</usecontrolcoords>
-                <include>Def9000GroupList</include>
-
+                <left>37</left>
+				<top>130</top>
+				<width>450</width>
+				<itemgap>4</itemgap>
+				<include>Def9000GroupList</include>
                 <control type="button" id="6">
                     <label>502</label>
                     <description>Open</description>
-                    <include>DefContextButton</include>
+                    <width>450</width>
+                    <include>DefSkinSettingMenuButton</include>
+                    <align>left</align>
                 </control>
                 <control type="button" id="7">
                     <label>190</label>
                     <description>Save</description>
-                    <include>DefContextButton</include>
+                    <width>450</width>
+                    <include>DefSkinSettingMenuButton</include>
+                    <align>left</align>
                 </control>
                 <control type="button" id="8">
                     <label>192</label>
                     <description>Clear</description>
-                    <include>DefContextButton</include>
+                    <width>450</width>
+                    <include>DefSkinSettingMenuButton</include>
+                    <align>left</align>
                 </control>
-
+                <include content="MenuPlayerControls">
+                    <param name="PlayerControlsOnUp" value="98" />
+                    <param name="PlayerControlsOnDown" value="1802" />
+                </include>
             </control>
         </control>
         

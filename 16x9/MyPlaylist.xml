@@ -1,6 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
-<!-- Krypton Window; Replaces:
-* MyMusicPlaylist.xml
-* MyVideoPlaylist.xml -->
-<!--Disabled -->
+<window id="6">
+    <defaultcontrol always="true">52</defaultcontrol>
+    <menucontrol>9000</menucontrol>
+    <views>50,52,500,54</views>
+    <controls>
+
+        <include>GlobalBackground</include>
+        <include condition="!Window.IsActive(musicplaylist)">View_50_List</include>
+        <include condition="Window.IsActive(musicplaylist)">View_50_List_Square</include>
+        <include>View_54_Banner</include>
+        <include condition="Skin.HasSetting(52biglist.singlepane)">View_52_BigList_SinglePane</include>
+        <include condition="!Skin.HasSetting(52biglist.singlepane)">View_52_BigList_DoublePane</include>
+        <include>View_500_Thumbnails</include>
+        <include>Furniture_NowPlaying</include>
+        <include>Furniture_Header</include>
+        <include>Furniture_Clock</include>
+        <include>Furniture_Flags</include>
+        <include>Furniture_Weather</include>
+        
+        
+        <control type="group">
+            <include>Animation.FadeIn</include>
+            <include>Animation.FadeOut</include>
+            <visible>ControlGroup(9000).HasFocus()</visible>
+            <include>GlobalOverlay</include>
+        </control>
+        <control type="group">
+            <include>Def9000Background</include>
+            <include>Def9000Arrows</include>
+			<control type="label">
+                <description>Header Label</description>
+                <posx>0</posx>
+                <posy>21</posy>
+                <align>center</align>
+                <font>Tiny</font>
+                <width>526</width>
+                <label>$INFO[ListItem.Artist] Submenu</label>
+            </control>
+            <control type="grouplist" id="9000">
+			    <onleft>52</onleft>
+                <onright>52</onright>
+                <onback>52</onback>
+                <include>Def9000GroupListMusic</include>
+
+                <control type="button" id="2">
+                    <description>View</description>
+                    <include>DefContextButton</include>
+                    <align>left</align>
+                </control>>
+
+                <control type="button" id="3">
+                    <description>Sort</description>
+					<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
+				    <texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
+                    <include>DefContextButton</include>
+                    <align>left</align>
+                    <visible>false</visible>
+                </control>
+                <control type="togglebutton" id="4">
+                    <description>Ascending</description>
+                    <include>DefContextButton</include>
+                    <align>left</align>
+                    <label>584</label>
+                    <altlabel>585</altlabel>
+                </control>
+
+                <control type="button" id="1804">
+                    <description>Sort Direction</description>
+                    <include>DefContextButton</include>
+                    <align>left</align>
+                    <label>Sort direction</label>
+                    <label2>$VAR[SortDirection]</label2>
+                    <onclick>SendClick(4)</onclick>
+                    <enable>Control.IsEnabled(4)</enable>
+                </control>
+
+                <control type="radiobutton" id="9012" description="Big List Double Pane (52)">
+				    <radioposx>380</radioposx>
+                    <include>DefContextButton</include>
+                    <align>left</align>
+                    <label>31235</label>
+                    <selected>!Skin.HasSetting(52biglist.singlepane)</selected>
+                    <onclick>Skin.ToggleSetting(52biglist.singlepane)</onclick>
+                    <onclick>ReloadSkin()</onclick>
+                    <visible>Control.IsVisible(52)</visible>
+                </control>
+                
+                <control type="radiobutton" id="20">
+                    <description>Shuffle</description>
+					<radioposx>380</radioposx>
+                    <include>DefContextButton</include>
+                    <align>left</align>
+                    <label>191</label>
+                </control>
+                
+                <control type="button" id="26">
+                    <description>Repeat</description>
+                    <include>DefContextButton</include>
+                    <align>left</align>
+                    <label>486</label>
+                </control>
+                
+                <control type="button" id="21">
+                    <description>Save</description>
+                    <include>DefContextButton</include>
+                    <align>left</align>
+                    <label>190</label>
+                </control>
+
+                <control type="button" id="22">
+                    <description>Clear</description>
+                    <include>DefContextButton</include>
+                    <align>left</align>
+                    <label>192</label>
+                </control>
+
+                <control type="button" id="23">
+                    <description>Play</description>
+                    <include>DefContextButton</include>
+                    <align>left</align>
+                    <label>208</label>
+                </control>
+
+                <include content="MenuPlayerControls">
+                    <param name="PlayerControlsOnUp" value="23" />
+                    <param name="PlayerControlsOnDown" value="2" />
+                </include>
+
+            </control>
+        </control>
+    </controls>
+
+</window>

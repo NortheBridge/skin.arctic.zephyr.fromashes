@@ -6,50 +6,63 @@
 		
         <control type="group">
             <include>Animation.FadeIn.Slide</include>
-            <!--<centerleft>50%</centerleft>
+            <centerleft>50%</centerleft>
             <centertop>50%</centertop>
-            <width>1065</width>
-            <height>864</height>
+            <width>1420</width>
+            <height>777</height>
             <control type="image">
-                <description>background image</description>
-                <top>-8</top>
-                <bottom>-8</bottom>
-                <left>-8</left>
-                <right>-8</right>
-                <texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
-            </control>-->
+			    <description>panel mask image</description>
+			    <posx>0</posx>
+			    <posy>0</posy>
+			    <width>1420</width>
+                <height>777</height>
+			    <texture border="5" colordiffuse="Black">common/white.png</texture>
+            </control>
 			<control type="image">
-			    <description>background image</description>
-			    <posx>445</posx>
-			    <posy>100</posy>
-			    <width>1065</width>
-                <height>864</height>
-			    <texture border="5" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
+			    <description>inner panel image</description>
+			    <posx>10</posx>
+			    <posy>10</posy>
+			    <width>1400</width>
+                <height>757</height>
+			    <texture border="12" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
             </control>
 		    <control type="image">
-                <posx>440</posx>
-                <posy>95</posy>
-                <width>1075</width>
-                <height>874</height>
-                <colordiffuse>Panel</colordiffuse>
-                <texture backgroung="true" border="5">dialog/frame_Landscape-fo.png</texture>
-                <!--<texture border="5" color="Black">dialog/frame_Landscape-fo.png</texture>-->
+			    <description>outside border image</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1420</width>
+                <height>777</height>
+                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
             </control>
 		    <control type="image">
-                <posx>478</posx>
-                <posy>125</posy>
-                <width>1002</width>
+			    <description>separator image</description>
+                <posx>10</posx>
+                <posy>99</posy>
+                <width>1400</width>
+                <height>4</height>
+                <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+            </control>	
+			<control type="image">
+                <posx>11</posx>
+                <posy>11</posy>
+                <width>1398</width>
                 <height>90</height>
-                <texture border="25" colordiffuse="Black">buttons/dialoge_shadow.png</texture>
+                <texture colordiffuse="Dark4" border="8">buttons/dialoge_inner.png</texture>
             </control>
-
+            <control type="image">
+                <left>710</left>
+                <bottom>35</bottom>
+                <width>5</width>
+                <height>621</height>
+                <texture colordiffuse="Black30" border="0">common/separator.png</texture>
+            </control>
+			
             <control type="label" id="500">
                 <description>header label</description>
-                <posy>135</posy>
-                <posx>55</posx>
+                <posy>22</posy>
+                <posx>10</posx>
                 <font>SmallBold</font>
-                <align>center</align>
-<!-- 4th GEN Colour Modification -->				
+                <align>center</align>				
                 <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
 				<!--<textcolor>Black70</textcolor>-->
             </control>
@@ -57,66 +70,65 @@
             <!-- Left List: Current Shortcuts -->
             <control type="list" id="211">
                 <description>Rules List Control</description>
-                <posx>465</posx>
-				<posy>90</posy>
-                <bottom>15</bottom>
-                <width>580</width>
-                <height>759</height>
+                <left>55</left>
+                <bottom>35</bottom>
+                <width>600</width>
+                <height>621</height>
                 <onup>211</onup>
-                <onleft>211</onleft>
+                <onleft>60</onleft>
                 <onright>9100</onright>
                 <ondown>211</ondown>
-                <itemlayout width="580" height="63">
+				<pagecontrol>60</pagecontrol>
+                <itemlayout width="600" height="69">
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>100%</width>
-                        <height>60</height>
+                        <height>66</height>
                         <texture border="5" colordiffuse="$VAR[ButtonColour]">common/box.png</texture>
                     </control>
 					<control type="image">
                         <right>0</right>
                         <top>0</top>
-                        <width>60</width>
-                        <height>60</height>
-                        <texture colordiffuse="Black30">$INFO[ListItem.Icon]</texture>
+                        <width>66</width>
+                        <height>66</height>
+                        <texture colordiffuse="Dark1">$INFO[ListItem.Icon]</texture>
                         <visible>substring(ListItem.Icon,special://skin/extras/icons/)</visible>
                         <!--<visible>Skin.HasSetting(home.showicons) | substring(Window.Property(groupname),movieshub) | substring(Window.Property(groupname),episodeshub)</visible>-->
                     </control>
                     <control type="label">
                         <left>30</left>
 						<right>90</right>
-						<textcolor>Black30</textcolor>
+						<textcolor>Dark1</textcolor>
                         <label>$INFO[ListItem.Label]</label>
                     </control>				
                 </itemlayout>
 				
-                <focusedlayout width="580" height="63">
+                <focusedlayout width="600" height="69">
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>100%</width>
-                        <height>60</height>
+                        <height>66</height>
 <!-- 4th GEN Colour Modification -->						
 						<texture border="5" colordiffuse="$VAR[ButtonFocusColour]">common/box.png</texture>
                         <!--<texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>-->
                         <visible>Control.HasFocus(211)</visible>
                     </control>
-                    <!--<control type="image">
+                    <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>100%</width>
-                        <height>60</height>
-<!-- 4th GEN Colour Modification 						
+                        <height>60</height>				
 						<texture border="5" colordiffuse="55000000">common/box.png</texture>
                         <!--<texture border="5" colordiffuse="PanelBlack30">common/box.png</texture>-->
-                        <!--<visible>!Control.HasFocus(211)</visible>
-                    </control>-->
+                        <visible>!Control.HasFocus(211)</visible>
+                    </control>
                     <control type="label">
                         <left>30</left>
                         <right>90</right>
                         <label>$INFO[ListItem.Label]</label>
-                        <textcolor>Dark2</textcolor>
+                        <textcolor>Black</textcolor>
 						<visible>Control.HasFocus(211)</visible>
                     </control>
 					<!--<control type="label">
@@ -129,10 +141,11 @@
 					<control type="image">
                         <right>0</right>
                         <top>0</top>
-                        <width>60</width>
-                        <height>60</height>					
-						<texture colordiffuse="Dark2">$INFO[ListItem.Icon]</texture><!-- replaced Light1-->
+                        <width>66</width>
+                        <height>66</height>					
+						<texture colordiffuse="Black">$INFO[ListItem.Icon]</texture><!-- replaced Light1-->
                         <visible>substring(ListItem.Icon,special://skin/extras/icons/)</visible>
+						<visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
                         <!--<visible>Skin.HasSetting(home.showicons) | substring(Window.Property(groupname),movieshub) | substring(Window.Property(groupname),episodeshub)</visible>-->
                     </control>
 				
@@ -141,7 +154,7 @@
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>100%</width>
-                        <height>60</height>
+                        <height>66</height>
 <!-- 4th GEN Colour Modification -->						
 						<texture border="5" colordiffuse="55000000">common/box.png</texture>-->
                         <!--<texture border="5" colordiffuse="PanelBlack30">common/box.png</texture>-->
@@ -157,139 +170,160 @@
 					<control type="image">
                         <right>0</right>
                         <top>0</top>
-                        <width>60</width>
-                        <height>60</height>					
+                        <width>66</width>
+                        <height>66</height>					
 						<texture colordiffuse="$VAR[ButtonFocusColour]">$INFO[ListItem.Icon]</texture><!-- replaced Light1-->
                         <visible>substring(ListItem.Icon,special://skin/extras/icons/)</visible>
 						<visible>!Control.HasFocus(211)</visible>
-                        <!--<visible>Skin.HasSetting(home.showicons) | substring(Window.Property(groupname),movieshub) | substring(Window.Property(groupname),episodeshub)</visible>-->
                     </control>
 
                 </focusedlayout>
             </control>
-            
+            <control type="scrollbar" id="60">
+				<onright>211</onright>
+				<left>33</left>
+				<bottom>35</bottom>
+				<height>621</height>
+                <texturesliderbackground border="8" colordiffuse="$VAR[ScrollbarBGColour]">scrollbar/scrollv.png</texturesliderbackground>
+                <texturesliderbar border="8" colordiffuse="$VAR[ScrollbarUnFocusedColour]">scrollbar/scrollv.png</texturesliderbar>
+                <texturesliderbarfocus border="8" colordiffuse="$VAR[ScrollbarFocusedColour]">scrollbar/scrollv.png</texturesliderbarfocus>
+                <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+			</control>
+			
             <!-- Right Buttons -->
             <control type="grouplist" id="9100">
                 <onleft>211</onleft>
-                <onright>111</onright>
+                <onright>61</onright>
                 <onup>9100</onup>
                 <ondown>9100</ondown>
-                <posx>1075</posx>
-				<posy>60</posy>
-                <bottom>15</bottom>
-                <width>420</width>
-                <height>759</height>
+                <right>55</right>
+                <bottom>35</bottom>
+                <width>600</width>
+                <height>621</height>
+				<pagecontrol>61</pagecontrol>
                 <orientation>vertical</orientation>
                 <itemgap>3</itemgap>
                                                
                 <control type="button" id="401" description="Alt chooser">
                     <width>100%</width>
-                    <height>60</height>
-                    <texturenofocus colordiffuse="Panel" border="5">common/box.png</texturenofocus>
+                    <height>66</height>
+                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
 			        <texturefocus colordiffuse="FF1976D2" border="5">common/box.png</texturefocus>
                     <include>DefDialogButtons</include>
                 </control>
                 <control type="button" id="307" description="Custom">
                     <width>100%</width>
-                    <height>60</height>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                    <height>66</height>
+                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
+					<scroll>true</scroll>
                 </control>
                 <control type="button" id="305" description="Set Label">
                     <width>100%</width>
-                    <height>60</height>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                    <height>66</height>
+                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
+					<scroll>true</scroll>
                 </control>
                 
                 <control type="button" id="309" description="Widget">
                     <width>100%</width>
-                    <height>60</height>
+                    <height>66</height>
                     <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
                     <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
                 </control>
                 <control type="button" id="310" description="Background">
                     <width>100%</width>
-                    <height>60</height>
+                    <height>66</height>
                     <label2>$INFO[Container(211).ListItem.Property(background)]</label2>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
                 </control>
                 <control type="button" id="311" description="Browse for Thumb">
                     <width>100%</width>
-                    <height>60</height>
+                    <height>66</height>
                     <label>31181</label>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
-                    <visible>stringcompare(Window.Property(groupname),movieshub) | stringcompare(Window.Property(groupname),episodeshub) | Skin.HasSetting(home.showicons)</visible>
+                    <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
                 </control>
                 <control type="button" id="405" description="Set Submenu">
                     <width>100%</width>
-                    <height>60</height>
+                    <height>66</height>
                     <label>31112</label>
                     <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
                     <visible>!stringcompare(Container(211).ListItem.Label2,MovieHub) + !stringcompare(Container(211).ListItem.Label2,TVHub)</visible>
                 </control>
                 <control type="button" id="9301" description="Set MovieHub">
                     <width>100%</width>
-                    <height>60</height>
+                    <height>66</height>
                     <label>31178</label>
                     <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
                     <visible>stringcompare(Container(211).ListItem.Label2,MovieHub)</visible>
                     <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=movieshub)</onclick>
                 </control>
                 <control type="button" id="9302" description="Set TVHub">
                     <width>100%</width>
-                    <height>60</height>
+                    <height>66</height>
                     <label>31178</label>
                     <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
                     <visible>stringcompare(Container(211).ListItem.Label2,TVHub)</visible>
                     <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=episodeshub)</onclick>
                 </control>
                 <control type="button" id="303" description="Up">
                     <width>100%</width>
-                    <height>60</height>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                    <height>66</height>
+                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
                 </control>
                 <control type="button" id="304" description="Down">
                     <width>100%</width>
-                    <height>60</height>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                    <height>66</height>
+                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
                 </control>
                 <control type="button" id="301" description="Add">
                     <width>100%</width>
-                    <height>60</height>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                    <height>66</height>
+                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
                 </control>
                 <control type="button" id="302" description="Delete">
                     <width>100%</width>
-                    <height>60</height>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                    <height>66</height>
+					<texturefocus colordiffuse="SelectedOrange" border="5">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
                 </control>
                 
                 <control type="button" id="308" description="Reset">
                     <width>100%</width>
-                    <height>60</height>
-                    <texturenofocus colordiffuse="SelectedOrange" border="5">common/box.png</texturenofocus>
+                    <height>66</height>
+					<texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
+                    <texturefocus colordiffuse="SelectedOrange" border="5">common/box.png</texturefocus>
                     <include>DefDialogButtons</include>
                     <visible>!stringcompare(Window.Property(groupname),mainmenu)</visible>
                 </control>
-            </control>
-        
-            
-           
+            </control>       
+            <control type="scrollbar" id="61">
+				<onleft>9100</onleft>
+				<right>33</right>
+				<bottom>35</bottom>
+				<height>621</height>
+                <texturesliderbackground border="8" colordiffuse="$VAR[ScrollbarBGColour]">scrollbar/scrollv.png</texturesliderbackground>
+                <texturesliderbar border="8" colordiffuse="$VAR[ScrollbarUnFocusedColour]">scrollbar/scrollv.png</texturesliderbar>
+                <texturesliderbarfocus border="8" colordiffuse="$VAR[ScrollbarFocusedColour]">scrollbar/scrollv.png</texturesliderbarfocus>
+                <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+			</control>
+			
         </control>
     </controls>
 </window>

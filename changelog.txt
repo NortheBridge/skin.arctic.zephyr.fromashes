@@ -1,6 +1,40 @@
 [B]Arctic Zephyr: From Ashes Changelog[/B]
 
+[B]Arctic Zephyr: From Ashes Danvers "Alpha 9 Preview Update" - Released September 24, 2016[/B]
+Danvers: 4.9.90-alpha9 (4.2.90-alpha9_danvers)
+
+ARCTIC ZEPHYR: FROM ASHES ANNIVERSARY EDITION (CODENAMED "DANVERS") IS PRE-RELEASE SOFTWARE DESIGNED FOR A PRE-RELEASE VERSION OF KODI.
+THERE IS NO GUARNTEE THAT ALL FEATURES WILL WORK. PLEASE LET US KNOW OF ANY ISSUES YOU RUN INTO. THIS SKIN IS NOW AVAILABLE IN THE 
+NORTHEBRIDGE BY DESIGN(R) REPOSITORY, EMBY BETA REPOSITORY, GITHUB, OR VIA DIRECT ZIP FILE DOWNLOAD ONLY.
+
+Emby Comptability Improvements
+General Stability Enhancements for Beta Release
+Danvers Alpha 9 Textures Package
+Resolved Issues With Fonts
+Music Hub Implemented (Based on AZ:Braz)
+Music OSD Controls Now Available on Submenus
+Added some of "Braz's visualizations for Music." (Selectable in Settings)
+Changed How "script.cu-lrclyrics" Visualization Displays. (NOTICE: Must be installed to function. AZ:FA WILL REQUIRE THIS ADDON IN BETA 1)
+Updated all Playlist and Playlist Editors
+Changed the Graphic Equalizer in the Notification Area
+Made Equalizer Smaller to fit AZ:FA Design
+Changed the "playring.png" Texture to Now Reflect "ColourHighlight" Selection
+Added in "Playlist" Folder Braz's "albumwall.xsp" That is Selectable in Settings as a Background Visualization.
+More Design Fixes and Additions
+Added "Icons" view in "AddonBrowser"
+Made "Hubs" Now Fit Design Scheme.
+Made "script.skinshortcuts" More In Line with Design Scheme
+Changed Main and Sub Headings in Settings to Smaller font and now Centered. 
+Fixed Hub Widget Border not Working for Color Selection
+Updated Dialogs to Alpha 9
+
+
 [B]Arctic Zephyr: From Ashes Danvers "Alpha 8 Cumulative Preview Update" - Released September 9, 2016[/B]
+Danvers: 4.9.90-alpha8 (4.2.90-alpha8_danvers)
+
+ARCTIC ZEPHYR: FROM ASHES ANNIVERSARY EDITION (CODENAMED "DANVERS") IS PRE-RELEASE SOFTWARE DESIGNED FOR A PRE-RELEASE VERSION OF KODI.
+THERE IS NO GUARNTEE THAT ALL FEATURES WILL WORK. PLEASE LET US KNOW OF ANY ISSUES YOU RUN INTO. THIS SKIN IS NOW AVAILABLE IN THE 
+NORTHEBRIDGE BY DESIGN(R) REPOSITORY, EMBY BETA REPOSITORY, GITHUB, OR VIA DIRECT ZIP FILE DOWNLOAD ONLY.
 
 Cumulative Update to Alpha 7 Preview Update to Fix Critical Kodi Crash Issue
 Updated the User Experience to the Danvers Font Family ("Segoe," a modern version of the fonts from AZ:E)
