@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <allowoverlay>no</allowoverlay>
-    <zorder>1</zorder>
+	<defaultcontrol>111</defaultcontrol>
+    <!--<zorder>1</zorder>-->
     <controls>
         <control type="group">
             <include>Animation.FadeIn</include>
@@ -9,67 +10,236 @@
             <control type="group">
 
                 <control type="group">
-                    <top>100</top>
-                    <bottom>400</bottom>
-                    <width>100%</width>
+				    <animation effect="slide" end="334" start="0" time="75" tween="quadratic" condition="Window.IsActive(musicosd)">Conditional</animation>
+                    <top>25</top>
+                    <left>360</left>
+ 
 
+				    <!--<control type="image">
+                        <left>0</left>
+                        <top>90</top>
+                        <width>1200</width>
+                        <height>900</height>
+                        <texture border="5" colordiffuse="Dark3">common/white.png</texture>
+			        </control>-->
+					<control type="image">
+			            <description>panel background image</description>
+			            <posx>0</posx>
+			            <posy>0</posy>
+			            <width>1220</width>
+                        <height>920</height>
+			            <texture border="5" colordiffuse="Black">common/white.png</texture>
+                    </control>
+		            <control type="image">
+			            <description>background image</description>
+			            <posx>10</posx>
+			            <posy>10</posy>
+			            <width>1200</width>
+                        <height>900</height>
+			            <texture border="12" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
+                    </control>
+		            <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1220</width>
+                        <height>920</height>
+                        <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
+                    </control>
+		            <control type="image">
+                        <posx>11</posx>
+                        <posy>11</posy>
+                        <width>1198</width>
+                        <height>90</height>
+                        <texture border="12" colordiffuse="Dark4">buttons/dialoge_inner.png</texture>
+                    </control>
+		            <control type="image">
+                        <posx>10</posx>
+                        <posy>98</posy>
+                        <width>1200</width>
+                       <height>4</height>
+                       <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+                    </control>
+			
+            <!-- Close Window Button -->
+			        <control type="button" id="100">
+				        <description>Close Window button</description>
+				        <left>38</left>
+				        <top>30</top>
+				        <width>120</width>
+				        <height>50</height>
+						<onleft>110</onleft>
+                        <onright>110</onright>
+                        <onup>110</onup>
+                        <ondown>110</ondown>
+				        <label>[B]Close[/B]</label>
+				        <font>Tiny</font>
+				        <align>center</align>
+				        <aligny>center</aligny>
+				        <textoffsetx></textoffsetx>
+				        <textoffsety>-12</textoffsety>
+				        <onclick>Action(close)</onclick>
+				        <texturefocus border="15" colordiffuse="$VAR[ButtonFocusColour]">common/box.png</texturefocus>
+				        <texturenofocus border="15" colordiffuse="$VAR[ButtonColour]">common/box.png</texturenofocus>
+			        </control>	
+					<control type="label">
+                        <description>Artist & Song label</description>
+                        <left>10</left>
+                        <top>24</top>
+                        <width>1180</width>
+                        <height>50</height>
+                        <font>Small</font>
+                        <label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Title]</label>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <textcolor>Dark1</textcolor>
+						<scroll>true</scroll>
+                    </control>
+					<control type="image">
+                        <left>38</left>
+                        <top>140</top>
+                        <width>1130</width>
+                        <height>2</height>
+                        <texture colordiffuse="White">common/separator.png</texture>
+                    </control>
                     <!-- ** Required ** Do not change <id> or <type> (Smooth scrolling list for lyrics) -->
                     <control type="list" id="110">
-                        <left>SidePad</left>
-                        <right>SidePad</right>
-                        <top>SidePad</top>
-                        <bottom>0</bottom>
-                        <onleft>111</onleft>
+                        <left>35</left>
+                        <top>155</top>
+                        <width>1130</width>
+                        <height>655</height>
+                        <onleft>100</onleft>
                         <onright>111</onright>
                         <onup>110</onup>
                         <ondown>110</ondown>
                         <pagecontrol>111</pagecontrol>
                         <scrolltime>200</scrolltime>
-                        <itemlayout height="100" width="1760">
+                        <itemlayout height="38">
                             <control type="label">
-                                <width>100%</width>
+                                <width>1130</width>
+								<height>38</height>
                                 <align>center</align>
+								<aligny>center</aligny>
                                 <selectedcolor>$VAR[ColourHighlight]</selectedcolor>
                                 <info>ListItem.Label</info>
                                 <textcolor>$VAR[OSDPanelWhite70]</textcolor>
                                 <font>Lyrics</font>
                             </control>
                         </itemlayout>
-                        <focusedlayout height="100" width="1760">
+                        <focusedlayout height="38">
                             <control type="label">
-                                <width>100%</width>
+                                <width>1130</width>
+								<height>38</height>
                                 <align>center</align>
+								<aligny>center</aligny>
                                 <textcolor>$VAR[ColourHighlight]</textcolor>
                                 <selectedcolor>$VAR[ColourHighlight]</selectedcolor>
                                 <info>ListItem.Label</info>
                                 <font>Lyrics</font>
+								<visible>!Control.HasFocus(110)</visible>
+                            </control>
+							<control type="label">
+                                <width>1130</width>
+                                <height>38</height>
+                                <font>Lyrics</font>
+                                <aligny>center</aligny>
+                                <align>center</align>
+                                <textcolor>$VAR[ColourHighlight]</textcolor>
+                                <align>left</align>
+                                <label fallback="--">$INFO[ListItem.Label]</label>
+                                <visible>Control.HasFocus(110)</visible>
                             </control>
                         </focusedlayout>
                     </control>
+					
+			<!-- Next page button -->
+                    <control type="spincontrolex" id="111">
+                        <description>Next page button</description>
+                        <right>362</right>
+                        <top>845</top>
+						<width>1180</width>
+						<height>60</height>
+                        <subtype>page</subtype>
+                        <font>Small</font>
+                        <onleft>110</onleft>
+                        <onright>110</onright>
+                        <ondown>110</ondown>
+                        <onup>110</onup>
+                        <textcolor>$VAR[ColourHighlight2]</textcolor>
+						<selectedcolor>$VAR[ColourHighlight]</selectedcolor>
+						<texturefocus colordiffuse="$VAR[ColourHighlight]">common/white.png</texturefocus>
+                        <showonepage>true</showonepage>
+                        <visible>Control.IsVisible(110)</visible>
+                    </control>
+			
+                    <control type="label" id="2">
+                        <description>Pick label</description>
+                        <left>38</left>
+                        <top>145</top>
+                        <width>930</width>
+                        <height>45</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>SmallBold</font>
+                        <label>$ADDON[script.cu.lrclyrics 32005]</label>
+                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
+                        <!--visible>Control.IsVisible(120) + ![Control.IsVisible(100) | Control.IsVisible(110)]</visible-->
+				        <visible>Control.IsVisible(120) + !Control.IsVisible(110)</visible>
+                    </control>					
+					
                     <!-- ** Required ** Do not change <id> or <type> (Song Chooser if it gets it wrong) -->
                     <control type="list" id="120">
-                        <left>SidePad</left>
-                        <right>SidePad</right>
-                        <top>SidePad</top>
-                        <bottom>30</bottom>
-                        <onleft>111</onleft>
-                        <onright>111</onright>
-                        <onup>110</onup>
-                        <ondown>110</ondown>
-                        <pagecontrol>111</pagecontrol>
+                        <left>35</left>
+                        <top>200</top>
+                        <width>1130</width>
+                        <height>608</height>
+                        <onleft>100</onleft>
+                        <onright>121</onright>
+                        <onup>120</onup>
+                        <ondown>120</ondown>
+                        <pagecontrol>121</pagecontrol>
                         <scrolltime>200</scrolltime>
-                        <itemlayout height="50">
+						<animation effect="slide" start="0,0" end="45,0" time="0" condition="!Control.IsVisible(121)">Conditional</animation>
+                        <itemlayout height="60">
+						    <control type="image">
+                                <left>0</left>
+                                <top>0</top>
+                                <width>1130</width>
+                                <height>62</height>
+                                <texture border="8">common/separator.png</texture>
+                            </control>
                             <control type="label">
-                                <width>749</width>
+                                <left>15</left>
+                                <top>0</top>
+                                <width>1100</width>
+                                <height>60</height>
                                 <selectedcolor>$VAR[ColourHighlight]</selectedcolor>
                                 <info>ListItem.Label</info>
                                 <textcolor>$VAR[OSDPanelWhite70]</textcolor>
                                 <font>Small</font>
                             </control>
                         </itemlayout>
-                        <focusedlayout height="50">
+                        <focusedlayout height="60">
+						    <control type="image">
+                                <left>0</left>
+                                <top>0</top>
+                                <width>1130</width>
+                                <height>62</height>
+                                <visible>!Control.HasFocus(120)</visible>
+                                <texture border="8">common/white.png</texture>
+                            </control>
+							<control type="image">
+                                <left>0</left>
+                                <top>0</top>
+                                <width>1130</width>
+                                <height>62</height>
+                                <visible>Control.HasFocus(120)</visible>
+                                <texture border="8">buttons/roundedbutton-focus.png</texture>
+                            </control>
                             <control type="label">
-                                <width>749</width>
+                                <left>15</left>
+                                <top>0</top>
+                                <width>1100</width>
+                                <height>60</height>
                                 <textcolor>$VAR[ColourHighlight]</textcolor>
                                 <selectedcolor>$VAR[ColourHighlight]</selectedcolor>
                                 <info>ListItem.Label</info>
@@ -78,6 +248,46 @@
                         </focusedlayout>
                     </control>
 
+                    <control type="spincontrolex" id="121">
+                        <description>Next page button</description>
+                        <right>352</right>
+                        <top>845</top>	
+						<textoffsetx>15</textoffsetx>
+                        <subtype>page</subtype>
+                        <font>Small</font>
+                        <onleft>120</onleft>
+                        <onright>120</onright>
+                        <ondown>120</ondown>
+                        <onup>120</onup>
+                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
+						<selectedcolor>$VAR[ColourHighlight]</selectedcolor>
+						<texturefocus colordiffuse="$VAR[ColourHighlight]">common/white.png</texturefocus>
+                        <showonepage>true</showonepage>
+                        <visible>Control.IsVisible(120)</visible>
+                    </control>					
+					<!-- separator -->
+                    <control type="image">
+                        <left>35</left>
+                        <top>840</top>
+                        <width>1130</width>
+                        <height>2</height>
+				        <texture colordiffuse="White">common/separator.png</texture>
+                    </control>
+					<!-- Scraper label -->
+                    <control type="label">
+                        <left>38</left>
+                        <top>845</top>
+                        <width>930</width>
+                        <height>45</height>
+                        <label>Lyrics source : $INFO[Control.GetLabel(200)]</label>
+                        <font>Small</font>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <textcolor>Dark1</textcolor>
+                        <shadowcolor>Dark4</shadowcolor>
+                    </control>
+					
+					
                     <control type="label" id="200">
                         <description>Scraper label</description>
                         <visible>false</visible>

@@ -81,62 +81,62 @@
 					<ondown>9100</ondown>
 					<orientation>vertical</orientation>					
 					<control type="togglebutton" id="9101" description="Home">					    
-					    <onright>9200</onright>
+					    <onright>9214</onright>
 						<include>DefSkinSettingMenuButton</include>
 						<label>10000</label>
 					</control>
 					<control type="togglebutton" id="9104" description="Widgets">
-					    <onright>9400</onright>
+					    <onright>9410</onright>
 						<include>DefSkinSettingMenuButton</include>
 						<label>31144</label>
 					</control>
 					<control type="togglebutton" id="9102" description="Background">
-					    <onright>9300</onright>
+					    <onright>9302</onright>
 						<include>DefSkinSettingMenuButton</include>
 						<label>31110</label>					
 					</control>
 					<control type="togglebutton" id="9105" description="Hub Items">
-					    <onright>9500</onright>
+					    <onright>9502</onright>
 						<include>DefSkinSettingMenuButton</include>
 						<label>31178</label>
 					</control>
 					<control type="togglebutton" id="9106" description="Furniture">
-					    <onright>9600</onright>
+					    <onright>9602</onright>
 						<include>DefSkinSettingMenuButton</include>
 						<label>31152</label>
 					</control>
 					<control type="togglebutton" id="9103" description="OSD">
-					    <onright>9700</onright>
+					    <onright>9714</onright>
 						<include>DefSkinSettingMenuButton</include>
 						<label>478</label>
 					</control>
 					<control type="togglebutton" id="9107" description="Extras">
-					    <onright>9800</onright>
+					    <onright>9802</onright>
 						<include>DefSkinSettingMenuButton</include>
 						<label>31169</label>
 					</control>			
 					<!--<control type="togglebutton" id="9111" description="Stars">
-					    <onright>9900</onright>
+					    <onright>9902</onright>
 						<include>DefSkinSettingMenuButton</include>
 						<label>31781</label>
 					</control>-->
 					<control type="togglebutton" id="9108" description="Colours">
-					    <onright>10000</onright>
+					    <onright>10004</onright>
 						<include>DefSkinSettingMenuButton</include>
 						<label>31745</label>
 					</control>
 					<control type="togglebutton" id="9110" description="Colour themes">
-					    <onright>11000</onright>
+					    <onright>11002</onright>
 						<include>DefSkinSettingMenuButton</include>
 						<label>31782</label>
 					</control>
 					<control type="togglebutton" id="9109" description="Views">
-					    <onright>12000</onright>
+					    <onright>12002</onright>
 						<include>DefSkinSettingMenuButton</include>
 						<label>31783</label>
 					</control>
 					<control type="togglebutton" id="9112" description="Backup/Restore">
-					    <onright>14000</onright>
+					    <onright>14002</onright>
 						<include>DefSkinSettingMenuButton</include>
 						<label>31784</label>
 					</control>
@@ -160,7 +160,8 @@
 					<control type="label" id="9201">
 		<!-- Seperator Heading -->			
 					    <visible>ControlGroup(9100).HasFocus(9101)</visible>
-						<font>MediumSmallBold</font>
+						<font>SmallBold</font>
+						<align>center</align>
                         <label>Home Settings</label>
                         <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
                     </control>
@@ -173,12 +174,18 @@
 					    <colordiffuse>FF1976D2</colordiffuse>
 					    <texture>common/white.png</texture>
 				    </control>
+					<control type="label" id="92012">
+                        <description>Filter (hidden)</description>
+						<height>10</height>
+                        <include>HiddenButton</include>
+                    </control>	
+
 			<!-- Home Settings-->
 					<control type="button" id="9214" description="Home Style">
 						<visible>ControlGroup(9100).HasFocus(9101)</visible>
 						<include>DefSkinSettingButton</include>
 						<label>31247</label>
-						<label2>[COLOR=$VAR[ColourHighlight2]]$VAR[LabelHomeWidgetStyle][/COLOR]</label2>
+						<label2>$VAR[LabelHomeWidgetStyle]</label2>
 						<onclick>SetProperty(Dialog.NumItems,4)</onclick>
 						<onclick>SetProperty(Dialog.1.Label,Default - Horizontal)</onclick>
 						<onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(home.vertical) || Skin.Reset(home.classicwidgets) || Skin.Reset(home.netflix) )</onclick>
@@ -269,7 +276,7 @@
 					<height>790</height>
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
-					<onup>9318</onup>
+					<onup>9322</onup>
 					<ondown>9302</ondown>
 					<onright>60</onright>
 					<pagecontrol>60</pagecontrol>
@@ -278,7 +285,8 @@
 					<control type="label" id="9301">
 		<!-- Seperator Heading -->			
 					    <visible>ControlGroup(9100).HasFocus(9102)</visible>
-						<font>MediumSmallBold</font>
+						<align>center</align>
+						<font>SmallBold</font>
                         <label>Background Settings</label>
                         <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
                     </control>
@@ -290,15 +298,27 @@
 					    <height>2</height>
 					    <colordiffuse>FF1976D2</colordiffuse>
 					    <texture>common/white.png</texture>
-				    </control>					
-			<!-- Background Settings -->		
-					<control type="radiobutton" id="9302" description="Show fanart">
-						<visible>ControlGroup(9100).HasFocus(9102)</visible>
-						<include>DefSkinSettingRadioButton</include>
-						<label>31121</label>
-						<selected>!Skin.HasSetting(global.hidefanart)</selected>
-						<onclick>Skin.ToggleSetting(global.hidefanart)</onclick>
-					</control>
+				    </control>
+					<control type="label" id="93012">
+                        <description>Filter (hidden)</description>
+						<height>10</height>
+                        <include>HiddenButton</include>
+                    </control>
+					
+			<!-- Background Settings -->
+                    <control type="button" id="9302" description="Set library fanart">
+                        <visible>ControlGroup(9100).HasFocus(9102)</visible>
+                        <include>DefSkinSettingButton</include>
+                        <label>Select library background</label>
+                        <label2>$VAR[LibraryBackground]</label2>
+                        <onclick>SetProperty(Dialog.1.Label,None)</onclick>
+                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetBool(global.hidefanart))</onclick>
+                        <onclick>SetProperty(Dialog.2.Label,Fanart)</onclick>
+                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.Reset(global.hidefanart)||Skin.Reset(SkinHelper.EnableExtraFanart))</onclick>
+                        <onclick>SetProperty(Dialog.3.Label,Extra fanart)</onclick>
+                        <onclick>SetProperty(Dialog.3.BuiltIn,Skin.Reset(global.hidefanart)||Skin.SetBool(SkinHelper.EnableExtraFanart))</onclick>
+                        <onclick>RunScript(script.toolbox,info=selectdialog,header=Select library background)</onclick>
+                    </control>			
 					<control type="radiobutton" id="9304" description="Show Extra fanart">
 						<visible>ControlGroup(9100).HasFocus(9102)</visible>
 						<visible>!Skin.HasSetting(global.hidefanart)</visible>
@@ -342,6 +362,15 @@
 						<onclick condition="IsEmpty(Skin.String(fanart.fallback))">Skin.SetImage(fanart.fallback)</onclick>
 						<onclick condition="!IsEmpty(Skin.String(fanart.fallback))">Skin.Reset(fanart.fallback)</onclick>
 					</control>
+                    <control type="button" id="93101" description="Reset Fallback Image">
+                        <visible>ControlGroup(9100).HasFocus(9102)</visible>
+						<texturefocus colordiffuse="SelectedOrange" border="5">common/box.png</texturefocus>
+                        <include>DefSkinSettingButton</include>
+                        <label>- Reset Fallback Image -</label>
+                        <onclick>Skin.Reset(fanart.fallback)</onclick>
+                        <onclick>SetFocus(9310)</onclick>
+                        <visible>!String.IsEmpty(Skin.String(fanart.fallback))</visible>
+                    </control>					
 					<control type="button" id="9312" description="Set Weather Fanart">
 						<visible>ControlGroup(9100).HasFocus(9102)</visible>
 						<include>DefSkinSettingButton</include>
@@ -349,7 +378,7 @@
 						<label2>$INFO[Skin.String(weather.fanart)]</label2>
 						<onclick condition="IsEmpty(Skin.String(weather.fanart))">Skin.SetPath(weather.fanart)</onclick>
 						<onclick condition="!IsEmpty(Skin.String(weather.fanart))">Skin.Reset(weather.fanart)</onclick>
-					</control>
+					</control>					
 					<control type="button" id="9314" description="Set Music Dir">
 						<visible>ControlGroup(9100).HasFocus(9102)</visible>
 						<include>DefSkinSettingButton</include>
@@ -371,6 +400,27 @@
 						<selected>Skin.HasSetting(global.showvisualisation)</selected>
 						<onclick>Skin.ToggleSetting(global.showvisualisation)</onclick>
 					</control>
+                    <control type="button" id="9322" description="Set music viz fanart">
+                        <visible>ControlGroup(9100).HasFocus(9102)</visible>
+                        <include>DefSkinSettingButton</include>
+                        <label>Select music visualization background</label>
+                        <label2>$VAR[MusicVizBackground]</label2>
+                        <onclick>SetProperty(Dialog.1.Label,None)</onclick>
+                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(musicvis.background))</onclick>
+                        <onclick>SetProperty(Dialog.2.Label,Fanart)</onclick>
+                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(musicvis.background,fanart))</onclick>
+                        <onclick condition="System.HasAddon(script.artistslideshow)">SetProperty(Dialog.3.Label,Artist slideshow)</onclick>
+                        <onclick condition="System.HasAddon(script.artistslideshow)">SetProperty(Dialog.3.BuiltIn,Skin.SetString(musicvis.background,artistslideshow))</onclick>
+                        <onclick>SetProperty(Dialog.4.Label,Album wall)</onclick>
+                        <onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString(musicvis.background,albumwall))</onclick>
+                        <!--<onclick condition="System.HasAddon(script.colorbox)">SetProperty(Dialog.5.Label,Blurred album cover)</onclick>
+                        <onclick condition="System.HasAddon(script.colorbox)">SetProperty(Dialog.5.BuiltIn,Skin.SetString(musicvis.background,bluralbum))</onclick>
+                        <onclick condition="System.HasAddon(script.colorbox)">SetProperty(Dialog.6.Label,Pixelated fanart)</onclick>
+                        <onclick condition="System.HasAddon(script.colorbox)">SetProperty(Dialog.6.BuiltIn,Skin.SetString(musicvis.background,pixelfanart))</onclick>
+                        <onclick condition="System.HasAddon(script.colorbox)">SetProperty(Dialog.7.Label,Posterized fanart)</onclick>
+                        <onclick condition="System.HasAddon(script.colorbox)">SetProperty(Dialog.7.BuiltIn,Skin.SetString(musicvis.background,posterizefanart))</onclick>-->
+                        <onclick>RunScript(script.toolbox,info=selectdialog,header=Select music visualization background)</onclick>
+                    </control>					
 				</control>	
 		    <!-- Scrollbar for Background Settings Control Area -->		
 				<control type="scrollbar" id="60">
@@ -393,6 +443,7 @@
 					<description>Control Area</description>
 					<left>485</left>
 					<top>5</top>
+					<bottom>45</bottom>
 					<width>1170</width>
 					<height>790</height>
 					<itemgap>5</itemgap>
@@ -406,7 +457,8 @@
 					<control type="label" id="9401">
 		<!-- Seperator Heading -->			
 					    <visible>ControlGroup(9100).HasFocus(9104)</visible>
-						<font>MediumSmallBold</font>
+						<font>SmallBold</font>
+						<align>center</align>
                         <label>Widget Settings</label>
                         <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
                     </control>
@@ -419,6 +471,11 @@
 					    <colordiffuse>FF1976D2</colordiffuse>
 					    <texture>common/white.png</texture>
 				    </control>
+					<control type="label" id="94012">
+                        <description>Filter (hidden)</description>
+						<height>10</height>
+                        <include>HiddenButton</include>
+                    </control>					
 					
 			<!-- Widget Settings -->
 					<control type="radiobutton" id="9410" description="Cases on widgets">
@@ -589,8 +646,9 @@
 					<control type="label" id="9501">
 		<!-- Seperator Heading -->			
 					    <visible>ControlGroup(9100).HasFocus(9105)</visible>
-						<font>MediumSmallBold</font>
-                        <label>Hubs Settings</label>
+						<font>SmallBold</font>
+						<align>center</align>
+                        <label>Hub Settings</label>
                         <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
                     </control>
 		<!-- Heading Line Seperator -->			
@@ -601,7 +659,13 @@
 					    <height>2</height>
 					    <colordiffuse>FF1976D2</colordiffuse>
 					    <texture>common/white.png</texture>
-				    </control>					
+				    </control>
+					<control type="label" id="95012">
+                        <description>Filter (hidden)</description>
+						<height>10</height>
+                        <include>HiddenButton</include>
+                    </control>					
+					
 			<!-- Hubs Settings -->		
 					<control type="button" id="9502" description="Select Movies Hub Widget">					
 						<visible>ControlGroup(9100).HasFocus(9105)</visible>
@@ -652,9 +716,10 @@
 				<control type="grouplist" id="9600">
 					<description>Control Area</description>
 					<left>485</left>
-					<top>5</top>
+					<top>20</top>
+					<bottom>55</bottom>
 					<width>1170</width>
-					<height>790</height>
+					<height>774</height>
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
 					<onup>9638</onup>
@@ -666,7 +731,8 @@
 					<control type="label" id="9601">
 		<!-- Seperator Heading -->			
 					    <visible>ControlGroup(9100).HasFocus(9106)</visible>
-						<font>MediumSmallBold</font>
+						<font>SmallBold</font>
+						<align>center</align>
                         <label>Furniture Settings</label>
                         <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
                     </control>
@@ -678,7 +744,13 @@
 					    <height>2</height>
 					    <colordiffuse>FF1976D2</colordiffuse>
 					    <texture>common/white.png</texture>
-				    </control>					
+				    </control>
+					<control type="label" id="96012">
+                        <description>Filter (hidden)</description>
+						<height>10</height>
+                        <include>HiddenButton</include>
+                    </control>
+					
 			<!-- Furniture Settings -->		
 					<control type="radiobutton" id="9602" description="Watched/Unwatched">
 						<visible>ControlGroup(9100).HasFocus(9106)</visible>
@@ -727,7 +799,7 @@
 						<include>DefSkinSettingButton</include>
 						<label>$LOCALIZE[31753]</label>
 			<!-- Modification  Changed Default UK to US --->			
-						<label2 fallback="US">[COLOR=$VAR[ColourHighlight2]]$VAR[MovieMPAALangLabel][/COLOR]</label2>
+						<label2 fallback="US">$VAR[MovieMPAALangLabel]</label2>
 						<onclick>SetProperty(Dialog.NumItems,4)</onclick>
 						<onclick>SetProperty(Dialog.1.Label,Default - US)</onclick>
 						<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(RatingCountry,US))</onclick>
@@ -816,7 +888,7 @@
 					<control type="button" id="9638" description="Video Info Blur">
 						<include>DefSkinSettingButton</include>
 						<label>Blur Level</label>
-						<label2 fallback="10">[COLOR=$VAR[ColourHighlight2]]$VAR[VideoInfoBlurLevel][/COLOR]</label2>
+						<label2 fallback="10">$VAR[VideoInfoBlurLevel]</label2>
 						<onclick>SetProperty(Dialog.NumItems,13)</onclick>
 						<onclick>SetProperty(Dialog.1.Label,100)</onclick>
 						<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(VideoInfoBlur,100))</onclick>
@@ -873,7 +945,7 @@
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
 					<onup>9716</onup>
-					<ondown>9702</ondown>
+					<ondown>9714</ondown>
 					<onright>60</onright>
 					<pagecontrol>60</pagecontrol>
 					<orientation>vertical</orientation>
@@ -881,7 +953,8 @@
 					<control type="label" id="9701">
 		<!-- Seperator Heading -->			
 					    <visible>ControlGroup(9100).HasFocus(9103)</visible>
-						<font>MediumSmallBold</font>
+						<font>SmallBold</font>
+						<align>center</align>
                         <label>OSD Settings</label>
                         <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
                     </control>
@@ -893,8 +966,22 @@
 					    <height>2</height>
 					    <colordiffuse>FF1976D2</colordiffuse>
 					    <texture>common/white.png</texture>
-				    </control>					
-			<!-- OSD Settings -->		
+				    </control>
+					<control type="label" id="97012">
+                        <description>Filter (hidden)</description>
+						<height>10</height>
+                        <include>HiddenButton</include>
+                    </control>
+					
+			<!-- OSD Settings -->
+			        <control type="radiobutton" id="9714" description="Match theme">
+						<visible>ControlGroup(9100).HasFocus(9103)</visible>
+						<include>DefSkinSettingRadioButton</include>
+						<label>31196</label>
+						<selected>!Skin.HasSetting(osd.usetheme)</selected>
+						<onclick>Skin.ToggleSetting(osd.usetheme)</onclick>
+						<onclick>ReloadSkin()</onclick>
+					</control>
 				    <control type="radiobutton" id="9702" description="Show Fanart">
 						<visible>ControlGroup(9100).HasFocus(9103)</visible>
 						<include>DefSkinSettingRadioButton</include>
@@ -927,27 +1014,40 @@
 						<onclick>Skin.ToggleSetting(ArtistSlideshow.Animate)</onclick>
 						<enable>Skin.HasSetting(musicvis.fanartfallback) | [!Skin.HasSetting(ArtistSlideShow.Disabled) + System.HasAddon(script.artistslideshow)]</enable>
 					</control>
+					<control type="radiobutton" id="9709" description="Show scrolling visual text in Music OSD">
+						<visible>ControlGroup(9100).HasFocus(9103)</visible>
+						<include>DefSkinSettingRadioButton</include>
+						<label>Show scrolling visual text in Music OSD</label>
+						<selected>Skin.HasSetting(osd.showvisualtext)</selected>
+						<onclick>Skin.ToggleSetting(osd.showvisualtext)</onclick>
+					</control>
+					<control type="radiobutton" id="97091" description="Show music info always in Music OSD">
+						<visible>ControlGroup(9100).HasFocus(9103)</visible>
+						<include>DefSkinSettingRadioButton</include>
+						<label>Show music info always in Music OSD</label>
+						<selected>Skin.HasSetting(osd.showmusicinfo)</selected>
+						<onclick>Skin.ToggleSetting(osd.showmusicinfo)</onclick>
+					</control>					
 					<control type="radiobutton" id="9710" description="Show detailed info on pause">
 						<visible>ControlGroup(9100).HasFocus(9103)</visible>
 						<include>DefSkinSettingRadioButton</include>
 						<label>31201</label>
 						<selected>Skin.HasSetting(osd.showinfoonpause)</selected>
 						<onclick>Skin.ToggleSetting(osd.showinfoonpause)</onclick>
-					</control>
+					</control>						
+					<control type="radiobutton" id="9718" description="Always show osd info/controls in music visualisation">
+                        <visible>ControlGroup(9100).HasFocus(9103)</visible>
+                        <include>DefSkinSettingRadioButton</include>
+                        <label>31253</label>
+                        <selected>Skin.HasSetting(osd.alwaysshowmusicosd)</selected>
+                        <onclick>Skin.ToggleSetting(osd.alwaysshowmusicosd)</onclick>
+                    </control>
 					<control type="radiobutton" id="9712" description="Show clearart">
 						<visible>ControlGroup(9100).HasFocus(9103)</visible>
 						<include>DefSkinSettingRadioButton</include>
 						<label>31217</label>
 						<selected>Skin.HasSetting(ShowClearArtOSD)</selected>
 						<onclick>Skin.ToggleSetting(ShowClearArtOSD)</onclick>
-					</control>
-					<control type="radiobutton" id="9714" description="Match theme">
-						<visible>ControlGroup(9100).HasFocus(9103)</visible>
-						<include>DefSkinSettingRadioButton</include>
-						<label>31196</label>
-						<selected>!Skin.HasSetting(osd.usetheme)</selected>
-						<onclick>Skin.ToggleSetting(osd.usetheme)</onclick>
-						<onclick>ReloadSkin()</onclick>
 					</control>
 					<control type="radiobutton" id="9716" description="Hide spoilers">
 						<visible>ControlGroup(9100).HasFocus(9103)</visible>
@@ -982,7 +1082,7 @@
 					<height>790</height>
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
-					<onup>9814</onup>
+					<onup>9816</onup>
 					<ondown>9802</ondown>
 					<onright>60</onright>
 					<pagecontrol>60</pagecontrol>
@@ -991,7 +1091,8 @@
 					<control type="label" id="9801">
 		<!-- Seperator Heading -->			
 					    <visible>ControlGroup(9100).HasFocus(9107)</visible>
-						<font>MediumSmallBold</font>
+						<font>SmallBold</font>
+						<align>center</align>
                         <label>Extras Settings</label>
                         <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
                     </control>
@@ -1003,7 +1104,13 @@
 					    <height>2</height>
 					    <colordiffuse>FF1976D2</colordiffuse>
 					    <texture>common/white.png</texture>
-				    </control>					
+				    </control>
+					<control type="label" id="98012">
+                        <description>Filter (hidden)</description>
+						<height>10</height>
+                        <include>HiddenButton</include>
+                    </control>
+					
 			<!-- Extras Settings -->		
                     <control type="radiobutton" id="9802" description="Next Up Poster">
 						<visible>ControlGroup(9100).HasFocus(9107)</visible>
@@ -1103,7 +1210,8 @@
 					<control type="label" id="9901">
 		<!-- Seperator Heading -->			
 					    <visible>ControlGroup(9100).HasFocus(9111)</visible>
-						<font>MediumSmallBold</font>
+						<font>SmallBold</font>
+						<align>center</align>
                         <label>Stars Settings</label>
                         <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
                     </control>
@@ -1115,7 +1223,13 @@
 					    <height>2</height>
 					    <colordiffuse>FF1976D2</colordiffuse>
 					    <texture>common/white.png</texture>
-				    </control>					
+				    </control>
+					<control type="label" id="99012">
+                        <description>Filter (hidden)</description>
+						<height>10</height>
+                        <include>HiddenButton</include>
+                    </control>
+					
 			<!-- Stars Settings -->		
 				    <control type="button" id="9902">
 				        <visible>ControlGroup(9100).HasFocus(9111)</visible>
@@ -1470,7 +1584,7 @@
 					<left>485</left>
 					<top>15</top>
 					<width>1170</width>
-					<height>790</height>
+					<height>776</height>
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
 					<onup>10102</onup>
@@ -1482,7 +1596,8 @@
 					<control type="label" id="10001">
 	    <!-- Seperator Heading -->			
 					    <visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<font>MediumSmallBold</font>
+						<font>SmallBold</font>
+						<align>center</align>
                         <label>Colours Settings</label>
                         <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
                     </control>
@@ -1498,8 +1613,9 @@
 					<control type="label" id="10003">
 	    <!-- Seperator -- Sub Heading -->
 					    <visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<font>MediumSmallBold</font>
-                        <label>     Main Colours</label>
+						<font>SmallBold</font>
+						<align>center</align>
+                        <label>Main Colours</label>
                         <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
                     </control>
 			<!-- Sub Heading Line -- Seperator -->		
@@ -1511,6 +1627,12 @@
 					    <colordiffuse>FF1976D2</colordiffuse>
 					    <texture>common/white.png</texture>
 				    </control>
+					<control type="label" id="100032">
+                        <description>Filter (hidden)</description>
+						<height>10</height>
+                        <include>HiddenButton</include>
+                    </control>					
+					
 		<!-- Colours Settings -->			
 		    <!-- Main Highlight Color -->
 					<control type="group" id="10004">
@@ -1817,8 +1939,9 @@
 					<control type="label" id="10031">
 	    <!-- Seperator Sub Heading -->			
 					    <visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<font>MediumSmallBold</font>
-                        <label>     Dialog Colours</label>
+						<font>SmallBold</font>
+						<align>center</align>
+                        <label>Dialog Colours</label>
                         <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
                     </control>
 		    <!-- Sub Heading Line -- Seperator -->			
@@ -1830,6 +1953,11 @@
 					    <colordiffuse>FF1976D2</colordiffuse>
 					    <texture>common/white.png</texture>
 				    </control>
+					<control type="label" id="100312">
+                        <description>Filter (hidden)</description>
+						<height>10</height>
+                        <include>HiddenButton</include>
+                    </control>					
 					
 <!-- Dialog Color Settings ###Begin### -->		
             <!-- Dialog Disabled Color -->
@@ -2351,9 +2479,10 @@
 					<control type="label" id="10049">
         <!--Seperator Sub Heading-->
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<font>MediumSmallBold</font>
+						<font>SmallBold</font>
+						<align>center</align>
 						<textcolor>$VAR[DialogHeadersTextColour]</textcolor>
-						<label>     Home Colours</label>
+						<label>Home Colours</label>
 					</control>
 		    <!-- Sub Heading Line -- Seperator -->			
 					<control type="image" id="100491">
@@ -2364,7 +2493,12 @@
 					    <colordiffuse>FF1976D2</colordiffuse>
 					    <texture>common/white.png</texture>
 				    </control>
-					
+					<control type="label" id="100492">
+                        <description>Filter (hidden)</description>
+						<height>10</height>
+                        <include>HiddenButton</include>
+                    </control>				
+				
 <!-- Home Color Settings ###Begin### -->		
             <!-- Widget Panel Colour -->
 			        <control type="group" id="10016">
@@ -2850,9 +2984,10 @@
 					<control type="label" id="10063">
         <!--Seperator Sub Heading -->
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<font>MediumSmallBold</font>
+						<font>SmallBold</font>
+						<align>center</align>
 						<textcolor>$VAR[DialogHeadersTextColour]</textcolor>
-						<label>     HUBS Colours</label>
+						<label>Hub Colours</label>
 					</control>
 			<!-- Sub Heading Line -- Seperator -->			
 					<control type="image" id="100631">
@@ -2863,6 +2998,11 @@
 					    <colordiffuse>FF1976D2</colordiffuse>
 					    <texture>common/white.png</texture>
 				    </control>
+					<control type="label" id="100632">
+                        <description>Filter (hidden)</description>
+						<height>10</height>
+                        <include>HiddenButton</include>
+                    </control>
 					
 <!-- Hubs Color Settings ###Begin### -->					
             <!-- Hubs Menu Highlight Colour -->
@@ -3033,7 +3173,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Hubs Widget Border Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=hunswidgetbordercolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=hubswidgetbordercolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -3051,7 +3191,7 @@
 	                        <width>36</width>
 	                        <height>36</height>
 	                        <texture>common/box.png</texture>
-	                        <colordiffuse>$VAR[HubsWidgetBordorColour]</colordiffuse>
+	                        <colordiffuse>$VAR[HubsWidgetBorderColour]</colordiffuse>
 	                    </control>
 						<control type="label">
 					<!-- In Use Label -->	
@@ -3195,9 +3335,10 @@
 					<control type="label" id="100731">
         <!--Seperator Sub Heading-->
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<font>MediumSmallBold</font>
+						<font>SmallBold</font>
+						<align>center</align>
 						<textcolor>$VAR[DialogHeadersTextColour]</textcolor>
-						<label>     Library Colours</label>
+						<label>Library Colours</label>
 					</control>
 			<!-- Sub Heading Line -- Seperator -->			
 					<control type="image" id="100732">
@@ -3208,6 +3349,11 @@
 					    <colordiffuse>FF1976D2</colordiffuse>
 					    <texture>common/white.png</texture>
 				    </control>
+					<control type="label" id="100733">
+                        <description>Filter (hidden)</description>
+						<height>10</height>
+                        <include>HiddenButton</include>
+                    </control>
 					
 <!-- Views Color Settings ###Begin### -->					
             <!-- "Views" Select Highlight Colour -->
@@ -3844,9 +3990,10 @@
 					<control type="label" id="100911">
         <!--Seperator Heading-->
 						<visible>ControlGroup(9100).HasFocus(9108)</visible>
-						<font>MediumSmallBold</font>
+						<font>SmallBold</font>
+						<align>center</align>
 						<textcolor>$VAR[DialogHeadersTextColour]</textcolor>
-						<label>     OSD Colours</label>
+						<label>OSD Colours</label>
 					</control>
 			<!-- Sub Heading Line -- Seperator -->			
 					<control type="image" id="100912">
@@ -3857,6 +4004,12 @@
 					    <colordiffuse>FF1976D2</colordiffuse>
 					    <texture>common/white.png</texture>
 				    </control>
+					<control type="label" id="100913">
+                        <description>Filter (hidden)</description>
+						<height>10</height>
+                        <include>HiddenButton</include>
+                    </control>
+
 					
 <!-- OSD Color Settings ###Begin### -->					
             <!--OSD Buttons Colour -->					
@@ -4278,9 +4431,9 @@
     			<control type="grouplist" id="11000">
 					<description>Control Area</description>
 					<left>485</left>
-					<top>20</top>
+					<top>5</top>
 					<width>1170</width>
-					<bottom>20</bottom>
+					<bottom>35</bottom>
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
 					<onup>11012</onup>
@@ -4292,19 +4445,26 @@
 					<control type="label" id="11001">
 	    <!-- Seperator Heading -->			
 					    <visible>ControlGroup(9100).HasFocus(9110)</visible>
-						<font>MediumSmallBold</font>
+						<font>SmallBold</font>
+						<align>center</align>
                         <label>Colour Themes Settings</label>
                         <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
                     </control>
 		<!-- Heading Line Seperator -->			
-					<control type="image">
+					<control type="image" id="110012">
 					    <visible>ControlGroup(9100).HasFocus(9110)</visible>
 					    <left>480</left>
 					    <width>1260</width>
 					    <height>2</height>
 					    <colordiffuse>FF1976D2</colordiffuse>
 					    <texture>common/white.png</texture>
-				    </control>					
+				    </control>
+					<control type="label" id="110013">
+                        <description>Filter (hidden)</description>
+						<height>10</height>
+                        <include>HiddenButton</include>
+                    </control>
+					
 			<!-- Colour Themes Settings -->		
 	        <!-- Manage Custom Themes -->				
 					<control type="button" id="11002">
@@ -4342,7 +4502,8 @@
 					<control type="label" id="11009">
 	    <!-- Seperator Heading -->			
 					    <visible>ControlGroup(9100).HasFocus(9110)</visible>
-						<font>MediumSmallBold</font>
+						<font>SmallBold</font>
+						<align>center</align>
                         <label>Colour Picker Palettes</label>
                         <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
                     </control>
@@ -4361,7 +4522,7 @@
 						<ondown>11002</ondown>
                         <include>DefSkinSettingButton</include>
                         <label>31810</label>
-                        <label2>[COLOR=$VAR[ColourHighlight2]]$INFO[Skin.String(defaultcolorpalette)][/COLOR]</label2>
+                        <label2>$INFO[Skin.String(defaultcolorpalette)]</label2>
                         <onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=defaultcolorpalette,header=$LOCALIZE[31810])</onclick>
                     </control>					
                 </control>
@@ -4370,9 +4531,9 @@
 				<control type="grouplist" id="12000">
 					<description>Control Area</description>
 					<left>485</left>
-					<top>20</top>
+					<top>5</top>
 					<width>1170</width>
-					<bottom>20</bottom>
+					<bottom>35</bottom>
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
 					<onup>12000</onup>
@@ -4384,19 +4545,26 @@
 					<control type="label" id="12001">
 		<!-- Seperator Heading -->			
 					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
-						<font>MediumSmallBold</font>
+						<font>SmallBold</font>
+						<align>center</align>
                         <label>Library Views Settings</label>
                         <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
                     </control>
 		<!-- Heading Line Seperator -->			
-					<control type="image">
+					<control type="image" id="120011">
 					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
 					    <left>480</left>
 					    <width>1260</width>
 					    <height>2</height>
 					    <colordiffuse>FF1976D2</colordiffuse>
 					    <texture>common/white.png</texture>
-				    </control>					
+				    </control>
+					<control type="label" id="120012">
+                        <description>Filter (hidden)</description>
+						<height>10</height>
+                        <include>HiddenButton</include>
+                    </control>
+					
 			<!-- Views Settings -->		
 					<control type="button" id="12002" description="Enable or Disable views">
 						<include>DefSkinSettingButton</include>
@@ -4407,7 +4575,7 @@
 					<!--<control type="label" id="12003">
 		<!-- Seperator Heading 			
 					    <visible>ControlGroup(9100).HasFocus(9109)</visible>
-						<font>MediumSmallBold</font>
+						<font>SmallBold</font>
                         <label>Force Views Settings</label>
                         <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
                     </control>
@@ -4559,19 +4727,26 @@
 					<control type="label" id="14001">
 		<!-- Seperator Heading -->			
 					    <visible>ControlGroup(9100).HasFocus(9112)</visible>
-						<font>MediumSmallBold</font>
+						<font>SmallBold</font>
+						<align>center</align>
                         <label>Backup/Restore Settings</label>
                         <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
                     </control>
 		<!-- Heading Line Seperator -->			
-					<control type="image">
+					<control type="image" id="140011">
 					    <visible>ControlGroup(9100).HasFocus(9112)</visible>
 					    <left>480</left>
 					    <width>1260</width>
 					    <height>2</height>
 					    <colordiffuse>FF1976D2</colordiffuse>
 					    <texture>common/white.png</texture>
-				    </control>					
+				    </control>
+					<control type="label" id="140012">
+                        <description>Filter (hidden)</description>
+						<height>10</height>
+                        <include>HiddenButton</include>
+                    </control>
+					
 			<!-- Bacup/Restore Settings -->		
 					<control type="button" id="14002" description="Backup skin settings">
 						<visible>ControlGroup(9100).HasFocus(9112)</visible>

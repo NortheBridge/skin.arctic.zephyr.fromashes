@@ -2,26 +2,63 @@
     <defaultcontrol always="true">120</defaultcontrol>
     <controls>
         <control type="group">
+		    <posx>90</posx>
             <posy>95</posy>
             <width>1630</width>
             <height>798</height>
-            <include>DefDialogInfoPanel</include>
-            
+            <control type="image">
+			    <description>panel background image</description>
+			    <posx>0</posx>
+			    <posy>0</posy>
+			    <width>1630</width>
+                <height>798</height>
+			    <texture border="5" colordiffuse="Black">common/white.png</texture>
+            </control>
+		    <control type="image">
+			    <description>panel image</description>
+			    <posx>14</posx>
+			    <posy>12</posy>
+			    <width>1602</width>
+                <height>773</height>
+			    <texture border="12" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
+            </control>
+		    <control type="image">
+		        <description>panel border image</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1630</width>
+                <height>798</height>
+                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
+            </control>
+		    <control type="image">
+                <posx>10</posx>
+                <posy>100</posy>
+                <width>1610</width>
+                <height>4</height>
+                <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+            </control>	
+            <control type="image">
+                <posx>11</posx>
+                <posy>11</posy>
+                <width>1608</width>
+                <height>91</height>
+                <texture colordiffuse="Dark4" border="8">buttons/dialoge_inner.png</texture>
+            </control>
             <!-- Header -->
             <control type="label" id="100">
                 <description>Header Label</description>
                 <centerleft>50%</centerleft>
-                <width>1000</width>
+                <width>1608</width>
                 <align>center</align>
                 <label>13388</label>
-                <posy>15</posy>
+                <posy>22</posy>
                 <font>MediumBold</font>
             </control>
             
             <!-- Header Image -->
             <control type="image" id="110">
-                <posx>15</posx>
-                <posy>15</posy>
+                <posx>35</posx>
+                <posy>22</posy>
                 <width>330</width>
                 <height>60</height>
                 <aspectratio align="left" aligny="top">keep</aspectratio>
@@ -33,15 +70,15 @@
             
             <!-- Subs List -->
             <control type="list" id="120">
-                <left>15</left>
-                <posy>90</posy>
-                <width>1100</width>
+                <left>25</left>
+                <posy>120</posy>
+                <width>1090</width>
                 <height>621</height>
                 <onup>120</onup>
                 <onleft>150</onleft>
                 <onright>150</onright>
                 <ondown>120</ondown>
-                <itemlayout height="69" width="1100">
+                <itemlayout height="69" width="1090">
                     <control type="image">
                         <posx>11</posx>
                         <posy>12</posy>
@@ -104,12 +141,12 @@
 
                 </itemlayout>
 
-                <focusedlayout height="69" width="1100">
+                <focusedlayout height="69" width="1090">
                     <control type="image">
                         <height>66</height>
                         <width>100%</width>
 <!-- 4th GEN Colour Modification -->						
-						<texture border="5" colordiffuse="$VAR[DialogButtonHighlightColour]">common/box.png</texture>
+						<texture border="20" colordiffuse="$VAR[ButtonFocusColour]">common/box.png</texture>
                         <!--<texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>-->
                     </control>
                     <control type="image">
@@ -176,12 +213,25 @@
 
             </control>
             
-            
+            <control type="image">
+			    <posx>10</posx>
+                <bottom>55</bottom>
+                <width>1610</width>
+                <height>4</height>
+                <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+            </control>
+			<control type="image">
+                <posx>11</posx>
+                <bottom>13</bottom>
+                <width>1608</width>
+                <height>46</height>
+                <texture colordiffuse="Dark4" border="8">buttons/dialoge_inner.png</texture>
+            </control>
             <!-- Search Labels -->
             <control type="label" id="140">
                 <description>Content Picker label</description>
                 <posx>295</posx>
-                <bottom>15</bottom>
+                <bottom>5</bottom>
                 <width>1438</width>
                 <align>left</align>
                 <textcolor>Black30</textcolor>
@@ -192,7 +242,7 @@
                 <description>Content Picker label</description>
                 <left>45</left>
                 <right>30</right>
-                <bottom>15</bottom>
+                <bottom>5</bottom>
                 <align>left</align>
                 <font>Tiny</font>
                 <textcolor>Black70</textcolor>
@@ -201,19 +251,18 @@
             
             <!-- Manual Search -->
             <control type="button" id="160">
-                <posx>1130</posx>
-                <posy>90</posy>
-                <width>485</width>
+                <posx>1140</posx>
+                <posy>120</posy>
+                <width>455</width>
                 <height>66</height>
                 <label>413</label>
                 <ondown>150</ondown>
                 <onleft>120</onleft>
                 <align>left</align>
-                <textcolor>Black30</textcolor>
-                <focusedcolor>White100</focusedcolor>
-<!-- 4th GEN Colour Modification -->				
-				<texturefocus border="5" colordiffuse="$VAR[DialogButtonHighlightColour]">common/box.png</texturefocus>
-                <texturenofocus border="5" colordiffuse="$VAR[DialogMenuDisabledColour]">common/box.png</texturenofocus>
+                <textcolor>$VAR[ButtonTextColour]</textcolor>
+                <focusedcolor>$VAR[ButtonFocusTextColour]</focusedcolor>				
+				<texturefocus border="20" colordiffuse="$VAR[ButtonFocusColour]">common/box.png</texturefocus>
+                <texturenofocus border="20" colordiffuse="$VAR[ButtonColour]">common/box.png</texturenofocus>
                 <!--<texturefocus border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texturefocus>
                 <texturenofocus border="5" colordiffuse="Black12">common/box.png</texturenofocus>-->
             </control>
@@ -221,9 +270,9 @@
             <!-- Providers -->
             <control type="list" id="150">
                 <description>Button Area</description>
-                <posx>1130</posx>
-                <posy>159</posy>
-                <width>485</width>
+                <posx>1140</posx>
+                <posy>189</posy>
+                <width>455</width>
                 <height>552</height>
                 <onleft>120</onleft>
                 <onright>120</onright>
@@ -231,11 +280,11 @@
                 <ondown>120</ondown>
                 <orientation>vertical</orientation>
                 <scrolltime>0</scrolltime>
-                <itemlayout height="69" width="485">
+                <itemlayout height="69" width="455">
                     <control type="image">
                         <height>66</height>
                         <width>100%</width>
-                        <texture border="5" colordiffuse="Black12">common/box.png</texture>
+                        <texture border="20" colordiffuse="$VAR[ButtonColour]">common/box.png</texture>
                     </control>
                     <control type="label">
                         <left>30</left>
@@ -243,27 +292,25 @@
                         <height>66</height>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
-                        <textcolor>Black30</textcolor>
-                        <selectedcolor>$VAR[ColourHighlight2]</selectedcolor>
+                        <textcolor>$VAR[ButtonTextColour]</textcolor>
+                        <selectedcolor>$VAR[ButtonFocusTextColour]</selectedcolor>
                     </control>
 
                 </itemlayout>
 
-                <focusedlayout height="69" width="485">
+                <focusedlayout height="69" width="455">
                     <control type="image">
                         <height>66</height>
                         <width>100%</width>
 <!-- 4th GEN Colour Modification -->						
-						<texture border="5" colordiffuse="$VAR[DialogButtonHighlightColour]">common/box.png</texture>
+						<texture border="20" colordiffuse="$VAR[ButtonFocusColour]">common/box.png</texture>
                         <!--<texture border="5" colordiffuse="$VAR[ColourHighlight]">common/box.png</texture>-->
                         <visible>Control.HasFocus(150)</visible>
                     </control>
                     <control type="image">
-                        <height>69</height>
-                        <width>100%</width>
-<!-- 4th GEN Colour Modification -->						
-						<texture border="5" colordiffuse="$VAR[DialogMenuDisabledColour]">common/box.png</texture>
-                        <!--<texture border="5" colordiffuse="Black12">common/box.png</texture>-->
+                        <height>66</height>
+                        <width>100%</width>						
+                        <texture border="20" colordiffuse="$VAR[ButtonColour]">common/box.png</texture>-->
                         <visible>!Control.HasFocus(150)</visible>
                     </control>
                     <control type="label">
@@ -272,8 +319,8 @@
                         <height>66</height>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
-                        <textcolor>Black30</textcolor>
-                        <selectedcolor>$VAR[ColourHighlight2]</selectedcolor>
+                        <textcolor>$VAR[ButtonTextColour]</textcolor>
+                        <selectedcolor>$VAR[ButtonFocusTextColour]</selectedcolor>
                         <visible>!Control.HasFocus(150)</visible>
                     </control>
                     <control type="label">
@@ -282,8 +329,8 @@
                         <height>66</height>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
-                        <textcolor>White100</textcolor>
-                        <selectedcolor>$VAR[ColourHighlight2]</selectedcolor>
+                        <textcolor>$VAR[ButtonTextColour]</textcolor>
+                        <selectedcolor>$VAR[ButtonFocusTextColour]</selectedcolor>
                         <visible>Control.HasFocus(150)</visible>
                     </control>                    
                 </focusedlayout>

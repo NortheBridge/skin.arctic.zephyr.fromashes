@@ -2,16 +2,21 @@
 <!-- Foundation -->
 <window id="501">
     <defaultcontrol always="true">50</defaultcontrol>
-    <views>50,500,503</views>
+    <views>50,500,503,52</views>
     <controls>
         <include>GlobalBackground</include>
         <include>Furniture_Header</include>
         <include>Furniture_Clock</include>
         <include>Furniture_Flags</include>
         <include>Furniture_NowPlaying</include>
+		<include>Furniture_Weather</include>
         <include>View_50_List_Square</include>
         <include>View_500_Thumbnails</include>
         <include>View_503_Poster_Square</include>
+		<include condition="Skin.HasSetting(52biglist.singlepane)">View_52_BigList_SinglePane</include>
+        <include condition="!Skin.HasSetting(52biglist.singlepane)">View_52_BigList_DoublePane</include>
+		
+		
         <control type="group">
             <visible>ControlGroup(9000).HasFocus()</visible>
             <include>GlobalOverlay</include>
@@ -20,7 +25,7 @@
             <include>Def9000Background</include>
             <include>Def9000Arrows</include>
             <control type="grouplist" id="9000">
-                <include>Def9000GroupList</include>
+			    <include>Def9000GroupListMusic</include>
                 <include>Def9000MusicSide</include>
                 <control type="button" id="9001" description="Library">
                     <visible>Library.HasContent(music) | Library.HasContent(musicvideos)</visible>
@@ -34,8 +39,6 @@
 		<control type="group">
 			<visible>!Window.IsVisible(DialogProgress.xml)</visible>
 			<visible>!Window.IsVisible(DialogBusy.xml)</visible>
-			<!--<posx>735</posx>
-			<posy>486</posy>-->
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
 			
@@ -64,33 +67,7 @@
                 <label>$LOCALIZE[20186]...</label>
                 <textcolor>ffededed</textcolor>
             </control>			
-			<!--<control type="image">
-				<description>background image</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>450</width>
-				<height>108</height>
-	            <texture border="16" colordiffuse="$VAR[SpinnerBackgroundColour]">common/rounded-shadow8.png</texture>
-			</control>
-			<control type="image">
-				<description>Busy animation</description>
-				<posx>30</posx>
-				<posy>30</posy>
-				<width>48</width>
-				<height>48</height>
-	            <texture colordiffuse="$VAR[Spinnerlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
-				<aspectratio>keep</aspectratio>
-			</control>
-			<control type="label">
-				<description>Busy label</description>
-				<posx>105</posx>
-				<width>720</width>
-				<height>108</height>
-				<aligny>center</aligny>
-				<align>left</align>
-				<label>$LOCALIZE[20186]...</label>
-				<textcolor>Black70</textcolor>
-			</control>-->
+
 			<visible>stringcompare(Container.NumItems,0)</visible>
 		</control>
     </controls>

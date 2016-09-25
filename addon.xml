@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
     id="skin.arctic.zephyr.fromashes.danvers"
-    version="4.9.90-alpha8"
-    name="Arctic Zephyr: From Ashes (Danvers Preview)"
+    version="4.9.90-alpha9"
+    name="Arctic Zephyr: From Ashes Danvers (Preview)"
     provider-name="NortheBridge">
     <requires>
         <import addon="xbmc.gui" version="5.12.0"/>

@@ -2,15 +2,21 @@
 <!-- Foundation -->
 <window id="20">
 	<defaultcontrol always="true">50</defaultcontrol>
-	<views>50,52,500</views>
+	<menucontrol>9000</menucontrol>
+	<views>50,503,500,52,505</views>
 	<controls>
 		<include>GlobalBackground</include>
 		<include>Furniture_Header</include>
 		<include>Furniture_Clock</include>
 		<include>Furniture_NowPlaying</include>
+		<include>Furniture_Weather</include>
+		
 		<include>View_50_List_Square</include>
-		<include>View_52_BigList</include>
-		<include>View_500_Thumbnails</include>
+        <include>View_503_Poster_Square</include>
+        <include>View_500_Thumbnails</include>
+        <include condition="Skin.HasSetting(52biglist.singlepane)">View_52_BigList_SinglePane</include>
+        <include condition="!Skin.HasSetting(52biglist.singlepane)">View_52_BigList_DoublePane</include>
+        <include>View_505_Wall_NoInfo</include>
 
 		<control type="group">
 			<visible>ControlGroup(9000).HasFocus()</visible>

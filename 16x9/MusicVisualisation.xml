@@ -27,11 +27,55 @@
             <fadetime>600</fadetime>
             <loop>yes</loop>
             <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
-            <visible>System.HasAddon(script.artistslideshow) + !Skin.HasSetting(ArtistSlideShow.Disabled)</visible>
+            <visible>System.HasAddon(script.artistslideshow) + String.IsEqual(Skin.String(musicvis.background),artistslideshow)</visible>
             <animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart)">Conditional</animation>
             <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
             <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
         </control>
+		
+        <control type="group">
+            <visible>String.IsEqual(Skin.String(musicvis.background),albumwall)</visible>
+            <control type="panel" id="9032">
+                <left>0</left>
+                <top>0</top>
+                <width>1920</width>
+                <height>1080</height>
+                <viewtype label="Wall">icons</viewtype>
+                <onleft>9032</onleft>
+                <onright>9032</onright>
+                <onup>9032</onup>
+                <ondown>9032</ondown>
+                <pagecontrol>60</pagecontrol>
+                <scrolltime tween="cubic" easing="inout">600</scrolltime>
+                <orientation>vertical</orientation>
+                <preloaditems>2</preloaditems>
+                <itemlayout height="192" width="192">
+                    <control type="image">
+                        <animation effect="fade" start="100" end="40" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart) + Visualisation.Enabled">Conditional</animation>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>192</width>
+                        <height>192</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <fadetime>400</fadetime>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="192" width="192">
+                    <control type="image">
+                        <animation effect="fade" start="100" end="40" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart) + Visualisation.Enabled">Conditional</animation>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>192</width>
+                        <height>192</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <fadetime>400</fadetime>
+                    </control>
+                </focusedlayout>
+                <content>special://skin/extras/playlists/AlbumWall.xsp</content>
+            </control>
+        </control>		
 
         <control type="group">
             <visible>Skin.HasSetting(furniture.logo)</visible>
@@ -57,7 +101,9 @@
                 <texture border="2" colordiffuse="$VAR[OSDPanel]">common/white.png</texture>
                 <animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
             </control>
-            <visible>Window.IsActive(MusicOSD.xml) | Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsVisible(script-cu-lrclyrics-main.xml) | Skin.HasSetting(osd.showmusicinfo)</visible>
+			<visible>Skin.HasSetting(osd.showmusicinfo)</visible>
+			<visible>Window.IsActive(MusicOSD.xml) | Window.IsVisible(script-cu-lrclyrics-main.xml) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo</visible>
+            <!--<visible>Window.IsActive(MusicOSD.xml) | Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsVisible(script-cu-lrclyrics-main.xml) | Skin.HasSetting(osd.showmusicinfo)</visible>-->
             <control type="group">
                 <height>500</height>
                 <bottom>60</bottom>
@@ -159,7 +205,7 @@
                                 <itemgap>24</itemgap>
                                 <usecontrolcoords>true</usecontrolcoords>
                                 <visible>true</visible>
-                               <!-- <control type="image">
+                               <control type="image">
                                     <posx>-16</posx>
                                     <width>64</width>
                                     <height>64</height>
@@ -328,7 +374,8 @@
         <control type="group">
             <top>-100</top>
             <control type="group">
-                <visible>Skin.HasSetting(osd.showvisualtext) + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+                <visible>Skin.HasSetting(osd.showvisualtext) + !Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
+				<visible>!Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
                 <animation effect="fade" time="600">Visible</animation>
                 <animation effect="fade" time="350">Hidden</animation>
                 <control type="label">
@@ -339,7 +386,7 @@
                     <label>$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist, ,]</label>
                     <scroll>true</scroll>
                     <pauseatend>0</pauseatend>
-                    <font>Font-MusicVis-Artist</font>
+					<font>Font-MusicVis-Artist</font>
                     <textcolor>88252525</textcolor>
                     <angle>0</angle>
                     <align>left</align>
@@ -352,6 +399,7 @@
                     <posx>0</posx>
                     <posy>470</posy>
                     <width>2070</width>
+					<height>15</height>
                     <label>$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]</label>
                     <scroll>true</scroll>
                     <pauseatend>0</pauseatend>
@@ -369,7 +417,7 @@
                     <posx>0</posx>
                     <posy>360</posy>
                     <width>2070</width>
-                    <height>25</height>
+					<height>20</height>
                     <label>$INFO[MusicPlayer.Title, ,]$INFO[MusicPlayer.Title, ,]$INFO[MusicPlayer.Title, ,]$INFO[MusicPlayer.Title, ,]$INFO[MusicPlayer.Title, ,]</label>
                     <scroll>true</scroll>
                     <font>Font-MusicVis-Title</font>
@@ -383,7 +431,7 @@
             </control>
         </control>
 
-        <control type="group">
+        <!--<control type="group">
             <visible>Skin.HasSetting(osd.showtwitter)</visible>
             <bottom>-5</bottom>
             <height>36</height>
@@ -410,8 +458,91 @@
                 <label fallback="19055">$INFO[Container(9301).ListItem.Property(author),[B],[/B]]$INFO[Container(9301).ListItem.Property(date), ,]$INFO[Container(9301).ListItem.Property(comment), - ","]$INFO[Container(9301).ListItem(1).Property(author), •• [B],[/B]]$INFO[Container(9301).ListItem(1).Property(date), ,]$INFO[Container(9301).ListItem(1).Property(comment), - ","]$INFO[Container(9301).ListItem(2).Property(author), •• [B],[/B]]$INFO[Container(9301).ListItem(2).Property(date), ,]$INFO[Container(9301).ListItem(2).Property(comment), - ","]$INFO[Container(9301).ListItem(3).Property(author), •• [B],[/B]]$INFO[Container(9301).ListItem(3).Property(date), ,]$INFO[Container(9301).ListItem(3).Property(comment), - ","]$INFO[Container(9301).ListItem(4).Property(author), •• [B],[/B]]$INFO[Container(9301).ListItem(4).Property(date), ,]$INFO[Container(9301).ListItem(4).Property(comment), - ","]$INFO[Container(9301).ListItem(5).Property(author), •• [B],[/B]]$INFO[Container(9301).ListItem(5).Property(date), ,]$INFO[Container(9301).ListItem(5).Property(comment), - ","]$INFO[Container(9301).ListItem(6).Property(author), •• [B],[/B]]$INFO[Container(9301).ListItem(6).Property(date), ,]$INFO[Container(9301).ListItem(6).Property(comment), - ","]$INFO[Container(9301).ListItem(7).Property(author), •• [B],[/B]]$INFO[Container(9301).ListItem(7).Property(date), ,]$INFO[Container(9301).ListItem(7).Property(comment), - ","]$INFO[Container(9301).ListItem(8).Property(author), •• [B],[/B]]$INFO[Container(9301).ListItem(8).Property(date), ,]$INFO[Container(9301).ListItem(8).Property(comment), - ","]$INFO[Container(9301).ListItem(9).Property(author), •• [B],[/B]]$INFO[Container(9301).ListItem(9).Property(date), ,]$INFO[Container(9301).ListItem(9).Property(comment), - ","]$INFO[Container(9301).ListItem(10).Property(author), •• [B],[/B]]$INFO[Container(9301).ListItem(10).Property(date), ,]$INFO[Container(9301).ListItem(10).Property(comment), - ","]$INFO[Container(9301).ListItem(11).Property(author), •• [B],[/B]]$INFO[Container(9301).ListItem(11).Property(date), ,]$INFO[Container(9301).ListItem(11).Property(comment), - ","]$INFO[Container(9301).ListItem(12).Property(author), •• [B],[/B]]$INFO[Container(9301).ListItem(12).Property(date), ,]$INFO[Container(9301).ListItem(12).Property(comment), - ","]$INFO[Container(9301).ListItem(13).Property(author), •• [B],[/B]]$INFO[Container(9301).ListItem(13).Property(date), ,]$INFO[Container(9301).ListItem(13).Property(comment), - ","]$INFO[Container(9301).ListItem(14).Property(author), •• [B],[/B]]$INFO[Container(9301).ListItem(14).Property(date), ,]$INFO[Container(9301).ListItem(14).Property(comment), - ","]$INFO[Container(9301).ListItem(15).Property(author), •• [B],[/B]]$INFO[Container(9301).ListItem(15).Property(date), ,]$INFO[Container(9301).ListItem(15).Property(comment), - ","]$INFO[Container(9301).ListItem(16).Property(author), •• [B],[/B]]$INFO[Container(9301).ListItem(16).Property(date), ,]$INFO[Container(9301).ListItem(16).Property(comment), - ","]$INFO[Container(9301).ListItem(17).Property(author), •• [B],[/B]]$INFO[Container(9301).ListItem(17).Property(date), ,]$INFO[Container(9301).ListItem(17).Property(comment), - ","]$INFO[Container(9301).ListItem(18).Property(author), •• [B],[/B]]$INFO[Container(9301).ListItem(18).Property(date), ,]$INFO[Container(9301).ListItem(18).Property(comment), - ","]$INFO[Container(9301).ListItem(19).Property(author), •• [B],[/B]]$INFO[Container(9301).ListItem(19).Property(date), ,]$INFO[Container(9301).ListItem(19).Property(comment), - ","]</label>
                 <aligny>center</aligny>
             </control>
-        </control>
+        </control>-->
 
+        <control type="image">
+            <height>100%</height>
+            <width>100%</width>
+            <texture>common/white.png</texture>
+            <colordiffuse>Panel</colordiffuse>
+            <visible>Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
+        </control>
+        <control type="group">
+            <visible>Window.IsVisible(script-cu-lrclyrics-main.xml) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
+            <animation effect="slide" start="0,110" end="0" time="150" tween="quadratic">Visible</animation>
+            <animation effect="slide" start="0,110" end="0" time="150" tween="quadratic">WindowOpen</animation>
+            <animation effect="slide" end="0,110" start="0" time="150" tween="quadratic">Hidden</animation>
+            <animation effect="slide" end="0,110" start="0" time="150" tween="quadratic">WindowClose</animation>
+            <control type="image">
+                <top>110r</top>
+                <width>100%</width>
+                <height>374</height>
+                <texture>common/white.png</texture>
+                <colordiffuse>Black12</colordiffuse>
+                <visible>Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
+            </control>
+            <control type="group">
+			    <visible>!Window.IsVisible(MusicOSD.xml)</visible>
+			    <visible>Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
+                <animation effect="fade" start="0" end="100" delay="150" time="150">Visible</animation>
+                <animation effect="fade" start="0" end="100" delay="150" time="150">WindowOpen</animation>
+                <top>110r</top>
+                <bottom>0</bottom>
+                <width>100%</width>
+                <control type="image">
+                    <height>374</height>
+                    <texture>common/white.png</texture>
+                    <colordiffuse>Black12</colordiffuse>
+                    <visible>Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
+				</control>
+                <control type="group">
+                    <left>SidePad</left>
+                    <right>SidePad</right>
+                    <top>20</top>
+                    <bottom>20</bottom>
+                    <control type="label" description="Finishes Time">
+                        <left>0</left>
+                        <right>0</right>
+                        <bottom>30</bottom>
+                        <height>40</height>
+						<width>400</width>
+                        <font>Tiny</font>
+                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
+                        <label>$VAR[PlayerStatus]</label>
+                    </control>
+                    <control type="label" description="Duration Total Time">
+                        <right>0</right>
+                        <align>right</align>
+                        <width>400</width>
+                        <bottom>30</bottom>
+                        <height>40</height>
+                        <font>Tiny</font>
+                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
+                        <label>$INFO[Player.Time]$INFO[Player.Duration,  /  ,]</label>
+                    </control>
+          
+                    <control type="progress" description="cache">
+                        <description>Progress Bar</description>
+                        <width>100%</width>
+                        <bottom>10</bottom>
+                        <height>8</height>
+                        <info>Player.ProgressCache</info>
+                        <visible>true</visible>
+                        <texturebg colordiffuse="00ffffff">osd/progress-bg.png</texturebg>
+                        <lefttexture colordiffuse="00ffffff">osd/progress-end.png</lefttexture>
+                        <midtexture colordiffuse="00ffffff">osd/progress-end.png</midtexture>
+                        <righttexture colordiffuse="00ffffff">osd/progress-end.png</righttexture>
+                    </control>
+                    <control type="progress" id="23">
+                        <description>Progress Bar</description>
+                        <width>100%</width>
+                        <bottom>10</bottom>
+                        <height>8</height>
+                        <info>Player.Progress</info>
+                    </control>
+                </control>		
+		    </control>
+		</control>	
         <control type="list" id="9301">
             <height>36</height>
             <orientation>horizontal</orientation>
