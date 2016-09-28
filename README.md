@@ -5,7 +5,7 @@ The Arctic Zephyr: From Ashes Skin designed for Emby and Kodi is a streamlined, 
 ![Shields IO Kodi 17](https://img.shields.io/badge/Kodi-17-blue.svg) ![Shields IO AZFA Branch](https://img.shields.io/badge/Arctic%20Zephyr%3A%20From%20Ashes-Danvers%20(4.9.90--beta)-blue.svg) ![Shields IO Branch Status](https://img.shields.io/badge/Danvers%20Preview-Beta%201-red.svg)
 
 Starting with the release of Arctic Zephyr: From Ashes (Danvers Preview), NortheBridge now provides a central location to help you quickly get started with and take advantage of the many features Arctic Zephyr: From Ashes has to offer. All information is available on the "Arctic Zephyr: From Ashes Official Website:"
-https://northebridge.com/systems/oss/kodi/fromashes
+https://northebridge.com/systems/oss/kodi/fromashes (UNDER DEVELOPMENT!)
 
 NortheBridge also now provides the NortheBridge by Design(R) Repository for Kodi which allows you to access the Verizon Enterprise CDN Network to download Arctic Zephyr: From Ashes without having to install the skin from a zip file.
 Download the Repository: https://embycdn.northebridge.com/Victorious/repository.northebridge.by.design-1.0.0.zip
