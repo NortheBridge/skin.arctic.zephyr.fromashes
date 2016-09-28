@@ -860,9 +860,16 @@
 					<control type="radiobutton" id="9628" description="DiscArt">
 						<visible>ControlGroup(9100).HasFocus(9106)</visible>
 						<include>DefSkinSettingRadioButton</include>
-						<label>Do not show DiscArt</label>
+						<label>Do not show Video DiscArt</label>
 						<selected>Skin.HasSetting(furniture.nodiscart)</selected>
 						<onclick>Skin.ToggleSetting(furniture.nodiscart)</onclick>
+					</control>
+					<control type="radiobutton" id="9629" description="DiscArt">
+						<visible>ControlGroup(9100).HasFocus(9106)</visible>
+						<include>DefSkinSettingRadioButton</include>
+						<label>Do not show Music DiscArt</label>
+						<selected>Skin.HasSetting(furniture.nomusic.discart)</selected>
+						<onclick>Skin.ToggleSetting(furniture.nomusic.discart)</onclick>
 					</control>
 					<control type="radiobutton" id="9630" description="Colour icons">
 						<visible>ControlGroup(9100).HasFocus(9106)</visible>
@@ -1048,7 +1055,7 @@
 						<label>31217</label>
 						<selected>Skin.HasSetting(ShowClearArtOSD)</selected>
 						<onclick>Skin.ToggleSetting(ShowClearArtOSD)</onclick>
-					</control>
+					</control>			
 					<control type="radiobutton" id="9716" description="Hide spoilers">
 						<visible>ControlGroup(9100).HasFocus(9103)</visible>
 						<include>DefSkinSettingRadioButton</include>
@@ -3448,7 +3455,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>Library Details Text Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=viewdetailshighlighcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=viewdetailshighlighttextcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -4178,7 +4185,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>OSD ProgressBar Cache Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=osdprogressbarcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=osdprogressbarcachecolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -4253,7 +4260,7 @@
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
 	                        <label>OSD ProgressBar Cache End Colour</label>
-	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=osdprogressbarcachecolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=osdprogressbarcacheendcolor.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
 	                    </control>
 					<!-- In Use Box Outline -->	
 						<control type="image">
@@ -4396,7 +4403,6 @@
 	                    <onclick>Skin.Reset(osdbuttonscolor.name)</onclick>
 	                    <onclick>Skin.Reset(osdbuttonsfocuscolor.name)</onclick>
 						<onclick>Skin.Reset(osdprogressbarcachecolor.name)</onclick>
-	                    <onclick>Skin.Reset(osdprogressbarcacheendcolor.name)</onclick>
 						<onclick>Skin.Reset(osdprogressbarcacheendcolor.name)</onclick>
 						<onclick>Skin.Reset(osdprogressbarbgcolor.name)</onclick>
 	                    <onclick>Notification(Applying settings...,Done)</onclick>
