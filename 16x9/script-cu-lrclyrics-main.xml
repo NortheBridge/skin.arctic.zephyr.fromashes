@@ -83,9 +83,9 @@
 			        </control>	
 					<control type="label">
                         <description>Artist & Song label</description>
-                        <left>10</left>
+                        <left>160</left>
                         <top>24</top>
-                        <width>1180</width>
+                        <width>1040</width>
                         <height>50</height>
                         <font>Small</font>
                         <label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Title]</label>
