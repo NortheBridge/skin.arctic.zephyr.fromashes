@@ -17,8 +17,11 @@
     <widget label="31189">RecommendedAlbums</widget>
     
     <!-- Weather Widget -->
-    <widget label="8">Weather</widget>
-    
+    <widget label="31251" condition="!IsEmpty(Skin.String(weather.fanart.path))">Weather</widget>
+
+    <!-- Playlist -->
+    <widgetPlaylists>True</widgetPlaylists>
+ 
     <!-- Next Aired -->
     <widget label="31220">NextAired</widget>
     
@@ -27,8 +30,8 @@
 
     <!-- Extended Info Trakt.tv -->
     <widget label="31134">TrendingMovies</widget>
-    <widget label="31135">TrendingShows</widget>
-
+    <widget label="31135">TrendingShows</widget> 
+ 
     <!-- Extended Info themoviedb.org -->
     <widget label="31208">InCinemas</widget>
     <widget label="31223">Upcoming</widget>
@@ -47,11 +50,8 @@
     <widget label="31735">bbc.music</widget>
     <widget label="31736">extendedinfo.eurogamer</widget>
     <widget label="31737">extendedinfo.engadget</widget>
-    <widget label="31738">extendedinfo.mobiletechreview</widget>
-
-    <!-- Playlist -->
-    <widgetPlaylists>True</widgetPlaylists>
-    
+    <widget label="31738">extendedinfo.mobiletechreview</widget> 
+ 
     <!-- Custom Widgets -->
     <widget label="31759">Custom1</widget>
     <widget label="31760">Custom2</widget>
@@ -63,23 +63,30 @@
     <widget label="31766">Custom8</widget>
     <widget label="31767">Custom9</widget>
     <widget label="31768">Custom10</widget>
-    
+ 
     <!-- Additional Common Items -->
-    <shortcut label="31193" type="TVHub" grouping="common" icon="special://skin/extras/icons/tv.png">ActivateWindow(1102)</shortcut>
-    <shortcut label="31192" type="MovieHub" grouping="common" icon="special://skin/extras/icons/film.png">ActivateWindow(1101)</shortcut>
+    <shortcut label="Hub 1119" type="Hub 1119" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1119)</shortcut>
+    <shortcut label="Hub 1118" type="Hub 1118" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1118)</shortcut>
+    <shortcut label="Hub 1117" type="Hub 1117" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1117)</shortcut>
+    <shortcut label="Hub 1116" type="Hub 1116" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1116)</shortcut>
+    <shortcut label="Hub 1115" type="Hub 1115" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1115)</shortcut>
+    <shortcut label="Hub 1114" type="Hub 1114" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1114)</shortcut>
+    <shortcut label="Hub 1113" type="Hub 1113" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1113)</shortcut>
+    <shortcut label="31193" type="TVHub" grouping="common" icon="special://skin/extras/icons/tv.png">ActivateWindow(1112)</shortcut>
+    <shortcut label="31192" type="MovieHub" grouping="common" icon="special://skin/extras/icons/film.png">ActivateWindow(1111)</shortcut>
     <shortcut label="31212" type="themoviedb.org episodes" grouping="common" icon="special://skin/extras/icons/director.png">ActivateWindow(1105)</shortcut>
     <shortcut label="31208" type="themoviedb.org movies" grouping="common" icon="special://skin/extras/icons/director.png">ActivateWindow(1104)</shortcut>
-    <shortcut label="Top250" type="top250" grouping="common" icon="special://skin/extras/icons/top250.png">RunScript(script.skin.helper.service,action=showinfo;INFO[Window(Home).Property(SkinHelper.IMDB.Top250)]</shortcut>
+	<shortcut label="Top250" type="top250" grouping="common" icon="special://skin/extras/icons/top250.png">RunScript(script.skin.helper.service,action=showinfo;INFO[Window(Home).Property(SkinHelper.IMDB.Top250)]</shortcut>
     <shortcut label="Oscars" type="oscars" grouping="common" icon="special://skin/extras/icons/oscars.png"> RunScript(script.oscars.view)</shortcut>
     
     <!-- Override Actions Because Im A Dummy Who Doesnt Know The Correct Window IDs To Use -->
     <override action="ActivateWindow(3201)">
         <condition>true</condition>
-        <action>ActivateWindow(1101)</action>
+        <action>ActivateWindow(1111)</action>
     </override>
     <override action="ActivateWindow(3202)">
         <condition>true</condition>
-        <action>ActivateWindow(1102)</action>
+        <action>ActivateWindow(1112)</action>
     </override>
     <override action="ActivateWindow(3204)">
         <condition>true</condition>
@@ -177,6 +184,7 @@
     <icon image="DefaultAddonProgram.png">special://skin/extras/icons/addons.png</icon>
     
     <!-- Thumbs -->
+        <!-- Thumbs -->
     <thumbnail label="3dtv.png">special://skin/extras/icons/3dtv.png</thumbnail>
     <thumbnail label="actor.png">special://skin/extras/icons/actor.png</thumbnail>
     <thumbnail label="addons.png">special://skin/extras/icons/addons.png</thumbnail>
@@ -392,5 +400,19 @@
     <thumbnail label="year.png">special://skin/extras/icons/year.png</thumbnail>
     <thumbnail label="years.png">special://skin/extras/icons/years.png</thumbnail>
     <thumbnail label="youtube.png">special://skin/extras/icons/youtube.png</thumbnail>
+
+    <!-- GROUPINGS -->
+    <!-- Video Grouping -->
+    <video-groupings>
+        <node label="32040">
+            <content>playlist-video</content>
+        </node>
+        <node label="32010">
+            <shortcut label="1037" type="32014" icon="DefaultAddonVideo.png">ActivateWindow(Videos,Addons,return)</shortcut>
+            <content>addon-video</content>
+        </node>
+        <content>video</content>
+        
+    </video-groupings>
     
 </overrides>

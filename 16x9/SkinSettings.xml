@@ -319,14 +319,14 @@
                         <onclick>SetProperty(Dialog.3.BuiltIn,Skin.Reset(global.hidefanart)||Skin.SetBool(SkinHelper.EnableExtraFanart))</onclick>
                         <onclick>RunScript(script.toolbox,info=selectdialog,header=Select library background)</onclick>
                     </control>			
-					<control type="radiobutton" id="9304" description="Show Extra fanart">
+					<!--<control type="radiobutton" id="9304" description="Show Extra fanart">
 						<visible>ControlGroup(9100).HasFocus(9102)</visible>
 						<visible>!Skin.HasSetting(global.hidefanart)</visible>
 						<include>DefSkinSettingRadioButton</include>
 						<label>31730</label>
 						<selected>Skin.HasSetting(EnableExtraFanart)</selected>
 						<onclick>Skin.ToggleSetting(EnableExtraFanart)</onclick>
-					</control>
+					</control>-->
 					<control type="button" id="9306" description="Fanart Opacity">
 						<include>DefSkinSettingButton</include>
 						<label>$LOCALIZE[31780]</label>
@@ -671,15 +671,15 @@
 						<visible>ControlGroup(9100).HasFocus(9105)</visible>
 						<include>DefSkinSettingButton</include>
 						<label>31182</label>
-						<label2>$INFO[Skin.String(MovieHubWidget)]</label2>
-						<onclick condition="IsEmpty(Skin.String(MovieHubWidget))">Skin.SetFile(MovieHubWidget,.xsp|.m3u,special://profile/playlists/video/)</onclick>
-						<onclick condition="!IsEmpty(Skin.String(MovieHubWidget))">Skin.Reset(MovieHubWidget)</onclick>
+						<label2>$INFO[Skin.String(DefHubWidget)]</label2>
+						<onclick condition="IsEmpty(Skin.String(DefHubWidget))">Skin.SetFile(DefHubWidget,.xsp|.m3u,special://profile/playlists/video/)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(DefHubWidget))">Skin.Reset(DefHubWidget)</onclick>
 					</control>
 					<control type="button" id="9504" description="Select Movies Hub Items">
 						<visible>ControlGroup(9100).HasFocus(9105)</visible>
 						<include>DefSkinSettingButton</include>
 						<label>$LOCALIZE[20342] [LOWERCASE]$LOCALIZE[31178][/LOWERCASE]</label>
-						<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=movieshub)</onclick>
+						<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=x$PARAM[hubid])</onclick>
 					</control>
 					<control type="button" id="9506" description="Select TV Shows Hub Widget">
 						<visible>ControlGroup(9100).HasFocus(9105)</visible>
@@ -693,7 +693,7 @@
 						<visible>ControlGroup(9100).HasFocus(9105)</visible>
 						<include>DefSkinSettingButton</include>
 						<label>$LOCALIZE[20343] [LOWERCASE]$LOCALIZE[31178][/LOWERCASE]</label>
-						<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=episodeshub)</onclick>
+						<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=x$PARAM[hubid])</onclick>
 					</control>
 				</control>	
 		<!-- Scrollbar for Hubs Settings Control Area -->		
@@ -834,6 +834,34 @@
 						<selected>Skin.HasSetting(show.reflections)</selected>
 						<onclick>Skin.ToggleSetting(show.reflections)</onclick>
 					</control>
+					<control type="button" id="9621" description="Plot Overlay display time">
+                        <visible>ControlGroup(9100).HasFocus(9106)</visible>
+						<include>DefSkinSettingButton</include>
+                        <label>31254</label>
+						<label2 fallback="4">$VAR[LabelPlotOverlayTime] (sec)</label2>						
+						<onclick>SetProperty(Dialog.NumItems,10)</onclick>
+						<onclick>SetProperty(Dialog.1.Label,1 Second)</onclick>
+						<onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(timelimit,1))</onclick>
+						<onclick>SetProperty(Dialog.2.Label,2 Seconds)</onclick>
+						<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(timelimit,2))</onclick>
+						<onclick>SetProperty(Dialog.3.Label,3 Seconds)</onclick>
+						<onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(timelimit,3))</onclick>
+						<onclick>SetProperty(Dialog.4.Label,4 Seconds  - Default)</onclick>
+						<onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString(timelimit,4))</onclick>
+						<onclick>SetProperty(Dialog.5.Label,5 Second)</onclick>
+						<onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString(timelimit,5))</onclick>
+						<onclick>SetProperty(Dialog.6.Label,6 Seconds)</onclick>
+						<onclick>SetProperty(Dialog.6.BuiltIn,Skin.SetString(timelimit,6))</onclick>
+						<onclick>SetProperty(Dialog.7.Label,7 Seconds)</onclick>
+						<onclick>SetProperty(Dialog.7.BuiltIn,Skin.SetString(timelimit,7))</onclick>
+						<onclick>SetProperty(Dialog.8.Label,8 Seconds)</onclick>
+						<onclick>SetProperty(Dialog.8.BuiltIn,Skin.SetString(timelimit,8))</onclick>
+						<onclick>SetProperty(Dialog.9.Label,9 Seconds)</onclick>
+						<onclick>SetProperty(Dialog.9.BuiltIn,Skin.SetString(timelimit,9))</onclick>
+						<onclick>SetProperty(Dialog.10.Label,10 Seconds)</onclick>
+						<onclick>SetProperty(Dialog.10.BuiltIn,Skin.SetString(timelimit,10))</onclick>
+						<onclick>RunScript(script.toolbox,info=selectdialog,header=Select Plot Overlay Time)</onclick>
+                    </control>
 					<control type="radiobutton" id="9622" description="Logo">
 						<visible>ControlGroup(9100).HasFocus(9106)</visible>
 						<include>DefSkinSettingRadioButton</include>
@@ -849,14 +877,14 @@
 						<selected>Skin.HasSetting(furniture.logo.fake)</selected>
 						<onclick>Skin.ToggleSetting(furniture.logo.fake)</onclick>
 					</control>
-					<control type="radiobutton" id="9626" description="Animate Logo">
+					<!--<control type="radiobutton" id="9626" description="Animate Logo">
 						<visible>ControlGroup(9100).HasFocus(9106)</visible>
 						<include>DefSkinSettingRadioButton</include>
 						<label>Animate Logo</label>
 						<visible>Skin.HasSetting(furniture.logo)</visible>
 						<selected>Skin.HasSetting(furniture.logo.animate)</selected>
 						<onclick>Skin.ToggleSetting(furniture.logo.animate)</onclick>
-					</control>
+					</control>-->
 					<control type="radiobutton" id="9628" description="DiscArt">
 						<visible>ControlGroup(9100).HasFocus(9106)</visible>
 						<include>DefSkinSettingRadioButton</include>
@@ -1182,6 +1210,13 @@
 					    <onclick condition="System.HasAddon(plugin.program.autocompletion)">Skin.ToggleSetting(EnableKeyboardAutocompletions)</onclick>
 					    <onclick condition="!System.HasAddon(plugin.program.autocompletion)">InstallAddon(plugin.program.autocompletion)</onclick>
 				    </control>
+					<control type="radiobutton" id="9818" description="Turn Off Danvers Preview dialog box">
+						<visible>ControlGroup(9100).HasFocus(9107)</visible>
+					    <include>DefSkinSettingRadioButton</include>
+					    <label>31813</label>
+					    <selected>Skin.HasSetting(home.hidebeta.dialog)</selected>
+						<onclick>Skin.ToggleSetting(home.hidebeta.dialog)</onclick>
+				    </control>					
 				</control>	
 		    <!-- Scrollbar for Extras Settings Control Area -->		
 				<control type="scrollbar" id="60">
@@ -2185,7 +2220,7 @@
 	                    <width>1170</width>
 	                    <height>50</height>
 						<itemgap>3</itemgap>
-	                    <control type="button" id="10038">
+	                    <control type="button" id="10036">
 							<width>1200</width>
 							<include>DefSkinSettingButton</include>
 	                        <onup>10036</onup>
