@@ -62,6 +62,13 @@
 		<value condition="!IsEmpty(ListItem.Plot) + Skin.HasSetting(osd.hidespoilers) + Container.Content(episodes) + ![stringcompare(ListItem.Overlay,OverlayUnWatched.png) + ListItem.IsResumable]">$INFO[ListItem.Plot]</value>
 		<value>$INFO[ListItem.Plot]</value>
 	</variable>
+    <variable name="LabelWidgetType">
+        <value condition="IsEmpty(Container(211).ListItem.Property(widgetaspect)) | StringCompare(Container(211).ListItem.Property(widgetaspect),Poster)">$LOCALIZE[31262]</value>
+        <value condition="StringCompare(Container(211).ListItem.Property(widgetaspect),Square)">$LOCALIZE[31263]</value>
+        <value condition="StringCompare(Container(211).ListItem.Property(widgetaspect),Fanart)">$LOCALIZE[31265]</value>
+        <value condition="StringCompare(Container(211).ListItem.Property(widgetaspect),Thumbnail)">$LOCALIZE[31264]</value>
+    </variable>	
+	
 <!-- Added for defining --LabelOverlayPlot-- variables  Thanks to Jurialmonkey-->
 	<variable name="LabelOverlayPlot">
         <value condition="!IsEmpty(Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]">$INFO[Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)]</value>
@@ -265,7 +272,10 @@
 		<value condition="Container.Content(Seasons)">$INFO[ListItem.TVShowTitle]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
-	
+	<variable name="LabelPlotOverlayTime">
+        <value condition="!IsEmpty(Skin.String(timelimit))">$INFO[Skin.String(timelimit)]</value>
+        <value>4</value>
+    </variable>
 	<!--<variable name="ColourHighlight">
 		<value condition="Skin.HasSetting(ColourHighlight)">$INFO[Skin.String(focuscolor.name)]</value>
 		<value condition="!Skin.HasSetting(ColourHighlight)">Highlight</value>
@@ -309,7 +319,7 @@
 	</variable>
 	<variable name="MovieMPAALangLabel">
 		<value condition="!IsEmpty(Skin.String(RatingCountry))">$INFO[Skin.String(RatingCountry)]</value>
-		<value>UK</value>
+		<value>US</value>
 	</variable>
 
 	<variable name="FanartFadeLabel">

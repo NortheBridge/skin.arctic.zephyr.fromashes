@@ -95,7 +95,7 @@
                         <height>60</height>
                         <texture colordiffuse="Dark1">$INFO[ListItem.Icon]</texture>
                         <visible>substring(ListItem.Icon,special://skin/extras/icons/)</visible>
-                        <!--<visible>Skin.HasSetting(home.showicons) | substring(Window.Property(groupname),movieshub) | substring(Window.Property(groupname),episodeshub)</visible>-->
+                        <!--<visible>Skin.HasSetting(home.showicons) | substring(Window.Property(groupname),x111)</visible>-->
                     </control>
                     <control type="label">
 					    <top>-5</top>
@@ -148,7 +148,7 @@
 						<texture colordiffuse="Black">$INFO[ListItem.Icon]</texture><!-- replaced Light1-->
                         <visible>substring(ListItem.Icon,special://skin/extras/icons/)</visible>
 						<visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
-                        <!--<visible>Skin.HasSetting(home.showicons) | substring(Window.Property(groupname),movieshub) | substring(Window.Property(groupname),episodeshub)</visible>-->
+                        <!--<visible>Skin.HasSetting(home.showicons) | substring(Window.Property(groupname),x111)</visible>-->
                     </control>
 				
 				    <visible>!Control.HasFocus(211)</visible>
@@ -156,8 +156,7 @@
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>100%</width>
-                        <height>60</height>
-<!-- 4th GEN Colour Modification -->						
+                        <height>60</height>						
 						<texture border="5" colordiffuse="55000000">common/box.png</texture>-->
                         <!--<texture border="5" colordiffuse="PanelBlack30">common/box.png</texture>-->
 						<visible>!Control.HasFocus(211)</visible>
@@ -213,8 +212,6 @@
 					<align>left</align>
 					<label>$ADDON[script.skinshortcuts 32048]</label>
                     <label2>$INFO[Container(211).ListItem.Label]</label2>
-                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
-			        <texturefocus colordiffuse="FF1976D2" border="5">common/box.png</texturefocus>
                     <include>DefDialogButtons</include>
                 </control>
                 <control type="button" id="307" description="Custom">
@@ -223,7 +220,6 @@
 					<align>left</align>
 					<label>$ADDON[script.skinshortcuts 32027]</label>
                     <label2>$INFO[Container(211).ListItem.Property(displaypath)]</label2>
-                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
 					<scroll>true</scroll>
                 </control>
@@ -233,52 +229,50 @@
 					<align>left</align>
 					<label>$ADDON[script.skinshortcuts 32025]</label>
                     <label2>$INFO[Container(211).ListItem.Label]</label2>
-                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
 					<scroll>true</scroll>
                 </control>
                 
-                <control type="button" id="309" description="Widget">
+                <control type="button" id="312" description="Widget">
                     <width>100%</width>
                     <height>60</height>
 					<align>left</align>
 					<label2>$INFO[Container(211).ListItem.Property(widgetName)]</label2>
-                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
-                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
+                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>					
                     <include>DefDialogButtons</include>
                     <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
                 </control>
-                <control type="button" id="310" description="Background">
+                <control type="button" id="306" description="Browse for Thumb">
+                    <width>100%</width>
+                    <height>60</height>
+                    <label>31181</label>
+					<align>left</align>
+					<!--<label2>$INFO[Container(211).ListItem.Property(thumbnail)]</label2>-->
+					<label2>$INFO[Container(211).ListItem.Icon]</label2>
+                    <include>DefDialogButtons</include>
+					<!--<visible>substring(Window.Property(groupname),x111) | Skin.HasSetting(home.showicons)</visible>-->
+                    <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>-->
+                </control>
+				<control type="button" id="310" description="Background">
                     <width>100%</width>
                     <height>60</height>
 					<align>left</align>
                     <label>$ADDON[script.skinshortcuts 32045]</label>
                     <label2>$INFO[Container(211).ListItem.Property(background)]</label2>
-                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
 					<visible>!String.IsEqual(Window.Property(groupname),powermenu)</visible>
-                </control>
-                <control type="button" id="311" description="Browse for Thumb">
-                    <width>100%</width>
-                    <height>60</height>
-                    <label>31181</label>
-					<align>left</align>
-					<label2>$INFO[Container(211).ListItem.Property(thumbnail)]</label2>
-                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
-                    <include>DefDialogButtons</include>
-                    <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
+					<visible>!String.StartsWith(Window.Property(groupname),x11)</visible>
                 </control>
                 <control type="button" id="405" description="Set Submenu">
                     <width>100%</width>
                     <height>60</height>
 					<align>left</align>
                     <label>$ADDON[script.skinshortcuts 32072]</label>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
+					<visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
                     <visible>!stringcompare(Container(211).ListItem.Label2,MovieHub) + !stringcompare(Container(211).ListItem.Label2,TVHub)</visible>
                 </control>
-                <control type="button" id="9301" description="Set MovieHub">
+                <!--<control type="button" id="9301" description="Set MovieHub">
                     <width>100%</width>
                     <height>60</height>
                     <label>31178</label>
@@ -299,26 +293,69 @@
                     <include>DefDialogButtons</include>
                     <visible>stringcompare(Container(211).ListItem.Label2,TVHub)</visible>
                     <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=episodeshub)</onclick>
-                </control>
+                </control>-->
+				
+				<include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1111" />
+                    <param name="buttonid1" value="9301" />
+                    <param name="buttonid2" value="9501" />
+                </include>
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1112" />
+                    <param name="buttonid1" value="9302" />
+                    <param name="buttonid2" value="9502" />
+                </include>
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1113" />
+                    <param name="buttonid1" value="9303" />
+                    <param name="buttonid2" value="9503" />
+                </include>
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1114" />
+                    <param name="buttonid1" value="9304" />
+                    <param name="buttonid2" value="9504" />
+                </include>
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1115" />
+                    <param name="buttonid1" value="9305" />
+                    <param name="buttonid2" value="9505" />
+                </include>
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1116" />
+                    <param name="buttonid1" value="9306" />
+                    <param name="buttonid2" value="9506" />
+                </include>
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1117" />
+                    <param name="buttonid1" value="9307" />
+                    <param name="buttonid2" value="9507" />
+                </include>
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1118" />
+                    <param name="buttonid1" value="9308" />
+                    <param name="buttonid2" value="9508" />
+                </include>
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1119" />
+                    <param name="buttonid1" value="9309" />
+                    <param name="buttonid2" value="9509" />
+                </include>
                 <control type="button" id="303" description="Up">
                     <width>100%</width>
                     <height>60</height>
 					<align>left</align>
-                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
                 </control>
                 <control type="button" id="304" description="Down">
                     <width>100%</width>
                     <height>60</height>
 					<align>left</align>
-                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
                 </control>
                 <control type="button" id="301" description="Add">
                     <width>100%</width>
                     <height>60</height>
 					<align>left</align>
-                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
                 </control>
                 <control type="button" id="302" description="Delete">
@@ -326,7 +363,6 @@
                     <height>60</height>
 					<align>left</align>
 					<texturefocus colordiffuse="SelectedOrange" border="5">common/box.png</texturefocus>
-                    <texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <include>DefDialogButtons</include>
                 </control>
                 
@@ -334,7 +370,6 @@
                     <width>100%</width>
                     <height>60</height>
 					<align>left</align>
-					<texturenofocus colordiffuse="Black70" border="5">common/box.png</texturenofocus>
                     <texturefocus colordiffuse="SelectedOrange" border="5">common/box.png</texturefocus>
                     <include>DefDialogButtons</include>
                     <visible>!stringcompare(Window.Property(groupname),mainmenu)</visible>
@@ -352,5 +387,7 @@
 			</control>
 			
         </control>
+
+        <control type="button" id="404"><visible allowhiddenfocus="true">false</visible></control>
     </controls>
 </window>

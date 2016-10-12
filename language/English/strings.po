@@ -608,6 +608,46 @@ msgctxt "#31253"
 msgid "Always display info and osd controls on music visualisation"
 msgstr ""
 
+msgctxt "#31254"
+msgid "Show plot overlay"
+msgstr ""
+
+msgctxt "#31255"
+msgid "Show info overlay"
+msgstr ""
+
+msgctxt "#31259"
+msgid "Extra fanart"
+msgstr ""
+
+msgctxt "#31261"
+msgid "Widget aspect"
+msgstr ""
+
+msgctxt "#31262"
+msgid "Poster"
+msgstr ""
+
+msgctxt "#31263"
+msgid "Square"
+msgstr ""
+
+msgctxt "#31264"
+msgid "Thumbnail"
+msgstr ""
+
+msgctxt "#31265"
+msgid "Fanart"
+msgstr ""
+
+msgctxt "#31712"
+msgid "second(s)"
+msgstr ""
+
+msgctxt "#31713"
+msgid "Plot Overlay display time"
+msgstr ""
+
 msgctxt "#31730"
 msgid "Show Extra Fanart"
 msgstr ""
@@ -850,6 +890,10 @@ msgstr ""
 
 msgctxt "#31812"
 msgid "N/A"
+msgstr ""
+
+msgctxt "#31813"
+msgid "Turn off Danvers Preview dialog box"
 msgstr ""
 
 msgctxt "#31817"

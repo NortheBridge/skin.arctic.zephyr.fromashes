@@ -42,8 +42,8 @@
 		<include>Furniture_Clock</include>
 		<include>Furniture_Flags</include>
 		<include>Furniture_Logo</include>
-<!--Changed --Include not used -->		
-		<!--<include>Furniture_OverlayInfo</include>-->
+        <include>Furniture_OverlayInfo</include>
+		
 		<control type="group">
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
@@ -68,19 +68,11 @@
 					<description>Watched Toggle</description>
 					<include>DefContextButton2</include>
 					<align>left</align>
-					<label>20367</label>
-				</control>
-				<control type="button" id="9091">
-					<description>Global Search</description>
-					<include>DefContextButton2</include>
-					<align>left</align>
-					<label>137</label>
-					<onclick>RunScript(script.globalsearch,tvshows=true&amp;movies=true&amp;episodes=true&amp;actors=true)</onclick>
+					<label>31133</label>
 				</control>
 				<control type="edit" id="19">
 					<label>587</label>
-					<!--<description>Filter (hidden)</description>-->
-					<description>Filter</description>
+					<description>Filter (hidden)</description>
 					<include>DefContextButton2</include>
 					<visible>!Container.CanFilterAdvanced</visible>
 				</control>
@@ -94,6 +86,14 @@
 					<onclick>SetFocus(50)</onclick>
 					<onclick>Filter</onclick>
 					<selected>Container.Filtered</selected>
+				</control>
+				<control type="button" id="9091">
+					<description>Global Search</description>
+					<include>DefContextButton2</include>
+					<align>left</align>
+					<label>137</label>
+					<onclick>SetFocus(50)</onclick>
+					<onclick>RunScript(script.globalsearch,tvshows=true&amp;movies=true&amp;episodes=true&amp;actors=true)</onclick>
 				</control>
 				<control type="radiobutton" id="11">
 					<description>Unlock Shares</description>

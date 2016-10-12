@@ -248,9 +248,20 @@
 	    <value condition="IntegerGreaterThan(Container(301).ListItem.Rating,8.9)">$INFO[Skin.String(ratingstarsdo99)]</value>
 	</variable>	
 <!-- End of Stars -->
-
+    
+	<!-- Plot Overlay Time Limit -->
+    <include name="TimeLimit1"><visible>[System.IdleTime(1) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include>
+    <include name="TimeLimit2"><visible>[System.IdleTime(2) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include>
+    <include name="TimeLimit3"><visible>[System.IdleTime(3) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
+    <include name="TimeLimit4"><visible>[System.IdleTime(4) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
+    <include name="TimeLimit5"><visible>[System.IdleTime(5) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
+    <include name="TimeLimit6"><visible>[System.IdleTime(6) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
+    <include name="TimeLimit7"><visible>[System.IdleTime(7) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
+    <include name="TimeLimit8"><visible>[System.IdleTime(8) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
+    <include name="TimeLimit9"><visible>[System.IdleTime(9) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
+    <include name="TimeLimit10"><visible>[System.IdleTime(10) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include>
 		
-	<variable name="DefSettingsOnRight">
+	<!--<variable name="DefSettingsOnRight">
 		<value condition="Window.IsVisible(AppearanceSettings)">ReplaceWindow(VideosSettings)</value>
 		<value condition="Window.IsVisible(VideosSettings)">ReplaceWindow(MusicSettings)</value>
 		<value condition="Window.IsVisible(MusicSettings)">ReplaceWindow(PicturesSettings)</value>
@@ -271,7 +282,8 @@
 		<value condition="Window.IsVisible(SystemSettings)">ReplaceWindow(NetworkSettings)</value>
 		<value condition="Window.IsVisible(PvrSettings)">ReplaceWindow(SystemSettings)</value>
 		<value condition="Window.IsVisible(SkinSettings)">ReplaceWindow(PvrSettings)</value>
-	</variable>
+	</variable>-->
+	
 	<variable name="DefWidgetContent">
 		<!-- Individual Widget Paths -->
 		<value condition="StringCompare(Container(300).ListItem.Property(widget),Playlist)">$INFO[Container(300).ListItem.Property(widgetPlaylist)]</value>
@@ -318,6 +330,7 @@
 		<value condition="!IsEmpty(Container(300).ListItem.Property(Background))">$INFO[Container(300).ListItem.Property(Background)]</value>
 		<!-- Slideshow -->
 		<value condition="Skin.HasSetting(home.dontshowfanart) + IsEmpty(Container(300).ListItem.Property(widget))">$INFO[Window(Home).Property(script.grab.fanart.Global.FanArt)]</value>
+		<value condition="!IsEmpty(Skin.String(home.slideshowpath)) + IsEmpty(Container(300).ListItem.Property(widget))">noop</value>
 		<!-- Global Widget -->
 		<value condition="StringCompare(Window(home).Property(widget),Spotlight) + IsEmpty(Container(300).ListItem.Property(widget))">plugin://service.library.data.provider?type=recommendedepisodes+recommendedmovies+randommovies&amp;reload=$INFO[Window.Property(recommendedepisodes)]$INFO[Window.Property(recommendedmovies)]$INFO[Window.Property(randommovies)]</value>
 		<value condition="StringCompare(Window(home).Property(widget),RandomMovies) + IsEmpty(Container(300).ListItem.Property(widget))">plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
@@ -1503,14 +1516,6 @@
 			<label>584</label>
 			<altlabel>585</altlabel>
 		</control>
-		<control type="radiobutton" id="9030" description="Plot Overlay">
-		    <radioposx>380</radioposx>
-			<include>DefContextButton2</include>
-			<align>left</align>
-			<label>31255</label>
-			<selected>Skin.HasSetting(furniture.overlayinfo)</selected>
-			<onclick>Skin.ToggleSetting(furniture.overlayinfo)</onclick>
-		</control>
 		<control type="radiobutton" id="9001" description="Low List (50)">
 		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
@@ -1730,7 +1735,7 @@
 		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
-			<label>Hide Watched/Unwatched Indicator</label>
+			<label>Watched/Unwatched Indicator</label>
 			<selected>Skin.HasSetting(views.155.showtick)</selected>
 			<onclick>Skin.ToggleSetting(views.155.showtick)</onclick>
 			<visible>Control.IsVisible(155)</visible>
@@ -1739,11 +1744,28 @@
 		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
-			<label>Hide Watched/Unwatched Indicator</label>
+			<label>Watched/Unwatched Indicator</label>
 			<selected>Skin.HasSetting(views.156.showtick)</selected>
 			<onclick>Skin.ToggleSetting(views.156.showtick)</onclick>
 			<visible>Control.IsVisible(156)</visible>
 		</control>
+		<control type="radiobutton" id="9030" description="Plot Overlay">
+		    <radioposx>380</radioposx>
+			<include>DefContextButton2</include>
+			<align>left</align>
+			<label>31255</label>
+			<selected>Skin.HasSetting(furniture.overlayinfo)</selected>
+			<onclick>Skin.ToggleSetting(furniture.overlayinfo)</onclick>
+		</control>
+		<!--<control type="radiobutton" id="9032" description="Enable Extra Fanart">
+		    <radioposx>380</radioposx>
+            <include>DefContextButton2</include>
+            <align>left</align>
+            <label>31259</label>
+            <selected>Skin.HasSetting(SkinHelper.EnableExtraFanart)</selected>
+            <onclick>Skin.ToggleSetting(SkinHelper.EnableExtraFanart)</onclick>
+            <visible>System.HasAddon(script.skin.helper.service)</visible>
+        </control>-->
 	</include>
 			
 	<include name="Def9000MusicSide">
@@ -1782,91 +1804,6 @@
             <visible>IntegerGreaterThan(Playlist.Length(music),1)</visible>
         </control>
 	</include>	
-	<!--<include name="Def9000MusicSide">
-		<left>0</left>
-		<top>115</top>
-		<width>455</width>
-		<height>1080</height>
-		<onleft>9000</onleft>
-		<onright>ClearProperty(MediaMenu,Home)</onright>
-		<onright condition="![Window.IsVisible(tvguide) | Window.IsActive(SettingsCategory.xml)]">50</onright>
-		<onright condition="Window.IsVisible(tvguide)">10</onright>
-		<onright condition="Window.IsActive(SettingsCategory.xml)">3</onright>
-		<onup>9000</onup>
-		<ondown>9000</ondown>
-		<onback>ClearProperty(MediaMenu,Home)</onback>
-		<onback>50</onback>
-		<itemgap>0</itemgap>
-		<animation effect="slide" start="-440,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
-		<control type="label" id="200">
-			<height>42</height>
-			<textoffsetx>15</textoffsetx>
-			<font>Home</font>
-			<label>View Options</label>
-			<textcolor>$VAR[ColourHighlight]</textcolor>
-			<aligny>center</aligny>
-		</control>
-		<control type="button" id="2">
-			<description>View</description>
-			<include>DefContextButton2</include>
-			<align>left</align>
-		</control>
-		<control type="button" id="3">
-			<description>Sort</description>
-			<include>DefContextButton2</include>
-			<align>left</align>
-		</control>
-		<control type="togglebutton" id="4">
-			<description>Ascending</description>
-			<include>DefContextButton2</include>
-			<align>left</align>
-			<label>584</label>
-			<altlabel>585</altlabel>
-		</control>
-		<control type="button" id="5">
-			<description>Files</description>
-			<include>DefContextButton2</include>
-			<align>left</align>
-			<label>744</label>
-			<onclick>SetFocus(50)</onclick>
-			<visible>Window.IsVisible(MyMusicNav.xml)</visible>
-		</control>
-		<control type="button" id="7">
-			<description>Playlist</description>
-			<include>DefContextButton2</include>
-			<align>left</align>
-			<label>136</label>
-			<onclick>SetFocus(50)</onclick>
-			<visible>Window.IsVisible(MyMusicSongs.xml)</visible>
-			<visible>!stringcompare(Container.FolderPath,special://musicplaylists/)</visible>
-		</control>
-		<control type="button" id="9098">
-			<description>Now Playing</description>
-			<include>DefContextButton2</include>
-			<label>13350</label>
-			<align>left</align>
-			<onclick>ActivateWindow(MusicPlaylist)</onclick>
-			<visible>IntegerGreaterThan(Playlist.Length(music),1)</visible>
-		</control>
-		<control type="radiobutton" id="9007" description="Low List (57)">
-			<include>DefContextButton2</include>
-			<align>left</align>
-			<label>31142</label>
-			<selected>Skin.HasSetting(57list.low)</selected>
-			<onclick>Skin.ToggleSetting(57list.low)</onclick>
-			<onclick>ReloadSkin()</onclick>
-			<visible>Control.IsVisible(57)</visible>
-		</control>
-		<control type="radiobutton" id="9008" description="Big Wide Info (51)">
-			<include>DefContextButton2</include>
-			<align>left</align>
-			<label>31147</label>
-			<selected>Skin.HasSetting(51bigwide.showinfo)</selected>
-			<onclick>Skin.ToggleSetting(51bigwide.showinfo)</onclick>
-			<onclick>ReloadSkin()</onclick>
-			<visible>Control.IsVisible(51)</visible>
-		</control>
-	</include>-->
 	
 	<include name="DefDialogSelectManual6">
 		<posx>738</posx>
@@ -2281,5 +2218,334 @@
 		<onload condition="!Skin.String(SkinHelper.SpinnerTexturePath)">Skin.SetString(SkinHelper.SpinnerTexturePath,special://skin/extras/busy_spinners/default)</onload>
 		<onload condition="!Skin.String(defaultcolorpalette.label)">Skin.SetString(defaultcolorpalette.label,basic)</onload>
         <onload condition="!Skin.String(defaultcolorpalette)">Skin.SetString(defaultcolorpalette,basic)</onload>
-	</include>	
+	</include>
+
+    <include name="DefHubWindow">
+        <include>GlobalBackground</include>
+        <include>Furniture_Header</include>
+        <include>Furniture_NowPlaying</include>
+        <include>Furniture_Clock</include>
+        <include>Furniture_Weather</include>
+        <include>Furniture_Hub_Flags</include>
+        <control type="group">
+            <include>Animation.Common</include>
+            <control type="group">
+                <top>PosterPad</top>
+                <left>SidePad</left>
+                <right>SidePad</right>
+                <height>640</height>
+                <control type="group">
+				
+			<!--Widget Area-->	
+					<control type="image">
+			            <description>panel background mask image</description>
+			            <posx>-8</posx>
+			            <posy>-20</posy>
+			            <width>1126</width>
+                        <height>680</height>
+			            <texture border="5" colordiffuse="Black">common/white.png</texture>
+                    </control>
+		            <control type="image">
+					    <description>panel border image</description>
+                        <posx>-8</posx>
+                        <posy>-20</posy>
+                        <width>1126</width>
+                        <height>680</height>
+                        <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
+                    </control>
+                    <control type="image">
+                        <left>10</left>
+                        <width>1082</width>
+                        <top>-5</top>
+                        <height>660</height>
+                        <texture background="true" diffuse="diffuse/home-fanart.png">pvr/background.jpg</texture>
+                        <visible>!IntegerGreaterThan(Container(9500).NumItems,0)</visible>
+                    </control>
+                    <control type="wraplist" id="9500">
+                        <description>Widget</description>
+                        <left>7</left>
+                        <width>1094</width>
+                        <top>-5</top>
+                        <bottom>0</bottom>
+                        <onright>9501</onright>
+                        <onup>9500</onup>
+                        <ondown>9500</ondown>
+                        <preloaditems>1</preloaditems>
+                        <orientation>vertical</orientation>
+                        <autoscroll time="10000">!Control.HasFocus(9500)</autoscroll>
+                        <scrolltime tween="quadratic">400</scrolltime>
+                        <include>Animation.FadeIn</include>
+                        <include>Animation.FadeOut</include>
+                        <itemlayout width="1094" height="660">
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <texture background="true" diffuse="diffuse/home-fanart.png">$VAR[LandscapeImage]</texture>
+                            </control>
+                        </itemlayout>
+                        <focusedlayout width="1094" height="660">
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <texture background="true" diffuse="diffuse/home-fanart.png">$VAR[LandscapeImage]</texture>
+                            </control>
+                        </focusedlayout>
+                        <content target="$VAR[DefHubWidgetTarget]">$VAR[DefHubWidget]</content>
+                    </control>
+                    <control type="group">
+                        <left>7</left>
+                        <width>1094</width>
+                        <bottom>-5</bottom>
+                        <height>70</height>
+                        <visible>IntegerGreaterThan(Container(9500).NumItems,0)</visible>
+                        <control type="image">
+                            <left>0</left>
+                            <right>0</right>
+                            <bottom>-5</bottom>
+                            <height>70</height>
+                            <texture border="15" colordiffuse="df000000">common/white.png</texture>
+                        </control>
+                        <control type="label">
+                            <posx>30</posx>
+                            <width>200</width>
+                            <font>Small</font>
+                            <aligny>center</aligny>
+                            <height>64</height>
+                            <textcolor>$VAR[HubsWidgetSublabelColour]</textcolor>
+                            <selectedcolor>$VAR[HubsWidgetSublabelColour]</selectedcolor>
+                            <label>$INFO[Container(9500).ListItem.Year]</label>
+                        </control>
+                        <control type="label">
+                            <posx>120</posx>
+                            <width>auto</width>
+                            <aligny>center</aligny>
+                            <height>64</height>
+                            <font>SmallBreplaced</font>
+                            <textcolor>$VAR[HubsWidgetSublabelColour]</textcolor>
+                            <selectedcolor>$VAR[HubsWidgetSublabelColour]</selectedcolor>
+                            <label>$INFO[Container(9500).ListItem.Label]</label>
+                        </control>
+                        <control type="label">
+                            <right>154</right>
+                            <width>500</width>
+                            <aligny>center</aligny>
+                            <height>64</height>
+                            <align>right</align>
+                            <font>Small</font>
+                            <textcolor>$VAR[HubsWidgetSublabelColour]</textcolor>
+                            <selectedcolor>$VAR[HubsWidgetSublabelColour]</selectedcolor>
+                            <label>$INFO[Container(9500).ListItem.Duration,, $LOCALIZE[31102]]</label>
+                        </control>
+                        <control type="image">
+                            <centerright>110</centerright>
+                            <centertop>32</centertop>
+                            <width>32</width>
+                            <height>32</height>
+                            <aspectratio aligny="top">keep</aspectratio>
+                            <texture>$VAR[PercentWatched9500]</texture>
+                        </control>
+                        <control type="label">
+                            <right>30</right>
+                            <width>500</width>
+                            <aligny>center</aligny>
+                            <height>64</height>
+                            <align>right</align>
+                            <font>Small</font>
+                            <textcolor>$VAR[HubsWidgetSublabelColour]</textcolor>
+                            <selectedcolor>$VAR[HubsWidgetSublabelColour]</selectedcolor>
+                            <label>$INFO[Container(9500).ListItem.Rating]</label>
+                        </control>
+                    </control>
+                    <control type="image">
+                        <left>6</left>
+                        <width>1096</width>
+                        <top>-6</top>
+                        <height>654</height>
+                        <texture colordiffuse="$VAR[HubsWidgetBorderColour]" border="20">common/selectbox.png</texture>
+                        <visible>Control.HasFocus(9500)</visible>
+                    </control>
+                </control>
+				
+				
+  			<!--Right Control Area-->
+                <control type="image">
+			        <description>panel background mask image</description>
+			        <posx>1130</posx>
+			        <posy>-20</posy>
+			        <width>640</width>
+                    <height>680</height>
+			        <texture border="5" colordiffuse="Black">common/white.png</texture>
+                </control>
+		        <control type="image">
+			        <description>panel image</description>
+			        <posx>1140</posx>
+			        <posy>-10</posy>
+			        <width>620</width>
+                    <height>660</height>
+			        <texture border="12" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
+                </control>
+		        <control type="image">
+				    <description>border image</description>
+                    <posx>1130</posx>
+                    <posy>-20</posy>
+                    <width>640</width>
+                    <height>680</height>
+                    <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
+                </control>               
+                <control type="group">
+                    <control type="list" id="9501">
+                        <description>Control Area</description>
+                        <left>1160</left>
+                        <right>0</right>
+                        <top>8</top>
+                        <height>630</height>
+                        <onleft>9500</onleft>
+                        <onright>60</onright>
+                        <onup>9501</onup>
+                        <ondown>9501</ondown>
+                        <pagecontrol>60</pagecontrol>
+                        <preloaditems>2</preloaditems>
+                        <orientation>vertical</orientation>
+                        <scrolltime tween="quadratic">400</scrolltime>
+                        <include>Animation.FadeIn</include>
+                        <include>Animation.FadeOut</include>
+                        <itemlayout width="570" height="70">
+						    <control type="image">
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width>100%</width>
+                                <height>66</height>
+                                <texture border="5" colordiffuse="$VAR[ButtonColour]">common/box.png</texture>
+                            </control>
+                            <control type="image">
+                                <right>0</right>
+                                <top>0</top>
+                                <bottom>0</bottom>
+                                <width>80</width>
+                                <texture colordiffuse="Dark2">$INFO[ListItem.Icon]</texture>
+                                <visible>substring(ListItem.Icon,special://skin/extras/icons/)</visible>
+                            </control>
+                            <control type="label">
+                                <left>30</left>
+                                <right>80</right>
+                                <height>100%</height>
+                                <font>SmallBreplaced</font>
+                                <textcolor>Dark2</textcolor>
+                                <label>$INFO[ListItem.Label]</label>
+                            </control>
+                        </itemlayout>
+                        <focusedlayout width="570" height="70">
+                            <control type="group">
+                                <visible>Control.HasFocus(9501)</visible>
+                                <control type="image">
+                                    <width>100%</width>
+                                    <height>66</height>
+                                    <texture border="15" colordiffuse="$VAR[HubsMenuHighlightColour]">common/box.png</texture>
+                                </control>
+                                <control type="image">
+                                    <right>0</right>
+                                    <top>0</top>
+                                    <bottom>0</bottom>
+                                    <width>80</width>
+                                    <texture colordiffuse="$VAR[HubsMenuTextHighlightColour]">$INFO[ListItem.Icon]</texture>
+                                    <visible>substring(ListItem.Icon,special://skin/extras/icons/)</visible>
+                                </control>
+                                <control type="label">
+                                    <left>30</left>
+                                    <right>80</right>
+                                    <height>100%</height>
+                                    <font>SmallBreplaced</font>
+                                    <textcolor>Light1</textcolor>
+                                    <label>$INFO[ListItem.Label]</label>
+                                </control>
+                            </control>
+                            <control type="group">
+                                <visible>!Control.HasFocus(9501)</visible>
+                                <control type="image">
+                                    <right>0</right>
+                                    <top>0</top>
+                                    <bottom>0</bottom>
+                                    <width>80</width>
+                                    <texture colordiffuse="$VAR[HubsMenuHighlightColour]">$INFO[ListItem.Icon]</texture>
+                                    <visible>substring(ListItem.Icon,special://skin/extras/icons/)</visible>
+                                </control>
+                                <control type="label">
+                                    <left>30</left>
+                                    <right>80</right>
+                                    <height>100%</height>
+                                    <font>SmallBreplaced</font>
+                                    <textcolor>$VAR[HubsMenuHighlightColour]</textcolor>
+                                    <label>$INFO[ListItem.Label]</label>
+                                </control>
+                            </control>
+                        </focusedlayout>
+                        <content><include>$PARAM[categories]</include></content>
+                    </control>
+                </control>
+                
+            </control>
+            <control type="scrollbar" id="60">
+                <onback>9501</onback>
+                <centerright>96</centerright>
+                <posy>PosterPad</posy>
+                <height>PosterH</height>
+                <width>8</width>
+                <onleft>9501</onleft>
+                <onright>9501</onright>
+                <texturesliderbackground border="4" colordiffuse="$VAR[ScrollbarBGColour]">scrollbar/scrollv.png</texturesliderbackground>
+                <texturesliderbar border="4" colordiffuse="$VAR[ScrollbarUnFocusedColour]">scrollbar/scrollv.png</texturesliderbar>
+                <texturesliderbarfocus border="4" colordiffuse="$VAR[ScrollbarFocusedColour]">scrollbar/scrollv.png</texturesliderbarfocus>
+                <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+            </control>
+        </control>
+    </include>
+
+    <variable name="DefHubWidget">
+        <value condition="Window.IsVisible(1111) + !IsEmpty(Skin.String(Widget.1111))">$INFO[Skin.String(Widget.1111)]</value>
+        <value condition="Window.IsVisible(1112) + !IsEmpty(Skin.String(Widget.1112))">$INFO[Skin.String(Widget.1112)]</value>
+        <value condition="Window.IsVisible(1113) + !IsEmpty(Skin.String(Widget.1113))">$INFO[Skin.String(Widget.1113)]</value>
+        <value condition="Window.IsVisible(1114) + !IsEmpty(Skin.String(Widget.1114))">$INFO[Skin.String(Widget.1114)]</value>
+        <value condition="Window.IsVisible(1115) + !IsEmpty(Skin.String(Widget.1115))">$INFO[Skin.String(Widget.1115)]</value>
+        <value condition="Window.IsVisible(1116) + !IsEmpty(Skin.String(Widget.1116))">$INFO[Skin.String(Widget.1116)]</value>
+        <value condition="Window.IsVisible(1117) + !IsEmpty(Skin.String(Widget.1117))">$INFO[Skin.String(Widget.1117)]</value>
+        <value condition="Window.IsVisible(1118) + !IsEmpty(Skin.String(Widget.1118))">$INFO[Skin.String(Widget.1118)]</value>
+        <value condition="Window.IsVisible(1119) + !IsEmpty(Skin.String(Widget.1119))">$INFO[Skin.String(Widget.1119)]</value>
+        <value condition="Window.IsVisible(1112)">special://skin/extras/playlists/RandomEpisodes.xsp</value>
+        <value>special://skin/extras/playlists/RandomMovies.xsp</value>
+    </variable>
+
+    <variable name="DefHubWidgetTarget">
+        <value condition="Window.IsVisible(1111) + !IsEmpty(Skin.String(Widget.1111)) + !IsEmpty(Skin.String(Widget.1111.Type))">$INFO[Skin.String(Widget.1111.Type)]</value>
+        <value condition="Window.IsVisible(1112) + !IsEmpty(Skin.String(Widget.1112)) + !IsEmpty(Skin.String(Widget.1112.Type))">$INFO[Skin.String(Widget.1112.Type)]</value>
+        <value condition="Window.IsVisible(1113) + !IsEmpty(Skin.String(Widget.1113)) + !IsEmpty(Skin.String(Widget.1113.Type))">$INFO[Skin.String(Widget.1113.Type)]</value>
+        <value condition="Window.IsVisible(1114) + !IsEmpty(Skin.String(Widget.1114)) + !IsEmpty(Skin.String(Widget.1114.Type))">$INFO[Skin.String(Widget.1114.Type)]</value>
+        <value condition="Window.IsVisible(1115) + !IsEmpty(Skin.String(Widget.1115)) + !IsEmpty(Skin.String(Widget.1115.Type))">$INFO[Skin.String(Widget.1115.Type)]</value>
+        <value condition="Window.IsVisible(1116) + !IsEmpty(Skin.String(Widget.1116)) + !IsEmpty(Skin.String(Widget.1116.Type))">$INFO[Skin.String(Widget.1116.Type)]</value>
+        <value condition="Window.IsVisible(1117) + !IsEmpty(Skin.String(Widget.1117)) + !IsEmpty(Skin.String(Widget.1117.Type))">$INFO[Skin.String(Widget.1117.Type)]</value>
+        <value condition="Window.IsVisible(1118) + !IsEmpty(Skin.String(Widget.1118)) + !IsEmpty(Skin.String(Widget.1118.Type))">$INFO[Skin.String(Widget.1118.Type)]</value>
+        <value condition="Window.IsVisible(1119) + !IsEmpty(Skin.String(Widget.1119)) + !IsEmpty(Skin.String(Widget.1119.Type))">$INFO[Skin.String(Widget.1119.Type)]</value>
+        <value>video</value>
+    </variable>
+
+    <include name="Defs_Shortcuts_SetHub">
+        <control type="button" id="$PARAM[buttonid2]" description="Set HUB WIDGET">
+            <width>100%</width>
+            <label>Hub Widget</label>31278
+            <height>60</height>
+            <align>left</align>
+            <include>DefDialogButtons</include>
+            <label2>$INFO[Skin.String(Widget.$PARAM[hubid].Label)]</label2>
+            <visible>stringcompare(Container(211).ListItem.Label2,Hub $PARAM[hubid]) | stringcompare(Container(211).ListItem.Property(Path),ActivateWindow($PARAM[hubid]))</visible>
+            <onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;grouping=widget&amp;skinList=Widget.$PARAM[hubid]&amp;skinLabel=Widget.$PARAM[hubid].Label&amp;skinType=Widget.$PARAM[hubid].Type)</onclick>
+        </control>
+        <control type="button" id="$PARAM[buttonid1]" description="Set HUB">
+            <width>100%</width>
+            <label>31178</label>
+            <height>60</height>
+            <align>left</align>
+            <include>DefDialogButtons</include>
+            <visible>stringcompare(Container(211).ListItem.Label2,Hub $PARAM[hubid]) | stringcompare(Container(211).ListItem.Property(Path),ActivateWindow($PARAM[hubid]))</visible>
+            <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=x$PARAM[hubid])</onclick>
+        </control>
+    </include>	
 </includes>
