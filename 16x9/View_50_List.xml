@@ -9,7 +9,8 @@
 			<!--<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>-->
 			<control type="group">
 				<control type="list" id="50">
-					<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons) | [Container.Content(files) + !substring(Container.FolderPath,plugin://,left) + !stringcompare(Container.FolderPath,library://video/movies/) + !stringcompare(Container.FolderPath,library://video/tvshows/) + !stringcompare(Container.FolderPath,special://videoplaylists/)] | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)]</visible>
+					<!--<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons) | [Container.Content(files) + !substring(Container.FolderPath,plugin://,left) + !stringcompare(Container.FolderPath,library://video/movies/) + !stringcompare(Container.FolderPath,library://video/tvshows/) + !stringcompare(Container.FolderPath,special://videoplaylists/)] | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)]</visible>-->
+					<visible>String.StartsWith(Container.FolderPath,plugin://plugin.program.advanced.launcher/) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons) | Window.IsActive(videoplaylist) | [Container.Content(files) + !String.StartsWith(Container.FolderPath,plugin://) + !String.IsEqual(Container.FolderPath,library://video/movies/) + !String.IsEqual(Container.FolderPath,library://video/tvshows/) + !String.IsEqual(Container.FolderPath,special://videoplaylists/)] | [Container.Content(episodes)]</visible>
 					<top>PosterPad</top>
 					<height>PosterH</height>
 					<left>ListX</left>
@@ -84,7 +85,8 @@
 			<control type="group">
 				<posy>320</posy>
 				<control type="fixedlist" id="50">
-					<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons) | [Container.Content(files) + !substring(Container.FolderPath,plugin://,left) + !stringcompare(Container.FolderPath,library://video/movies/) + !stringcompare(Container.FolderPath,library://video/tvshows/) + !stringcompare(Container.FolderPath,special://videoplaylists/)] | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)]</visible>
+					<!--<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons) | [Container.Content(files) + !substring(Container.FolderPath,plugin://,left) + !stringcompare(Container.FolderPath,library://video/movies/) + !stringcompare(Container.FolderPath,library://video/tvshows/) + !stringcompare(Container.FolderPath,special://videoplaylists/)] | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)]</visible>-->
+					<visible>String.StartsWith(Container.FolderPath,plugin://plugin.program.advanced.launcher/) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons) | Window.IsActive(videoplaylist) | [Container.Content(files) + !String.StartsWith(Container.FolderPath,plugin://) + !String.IsEqual(Container.FolderPath,library://video/movies/) + !String.IsEqual(Container.FolderPath,library://video/tvshows/) + !String.IsEqual(Container.FolderPath,special://videoplaylists/)] | [Container.Content(episodes)]</visible>
 					<top>PosterPad</top>
 					<height>320</height>
 					<left>ListX</left>
@@ -143,7 +145,7 @@
 				<width>PosterW</width>
 				<height>PosterH</height>
 				<fadetime>100</fadetime>
-				<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+				<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 				<texture flipy="true" diffuse="diffuse/listposter-ref.png" background="true">$VAR[PosterImage]</texture>
 				<visible>Skin.HasSetting(show.reflections)</visible>
 			</control>
@@ -165,7 +167,7 @@
 				<width>PosterW</width>
 				<height>PosterH</height>
 				<fadetime>100</fadetime>
-				<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+				<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 				<texture diffuse="diffuse/listposter.png" background="true">$VAR[PosterImage]</texture>
 				<visible>!Skin.Hassetting(views.cases)</visible>
 			</control>
@@ -174,7 +176,7 @@
 				<top>11</top>
 				<width>411</width>
 				<height>627</height>
-				<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+				<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 				<texture background="true" diffuse="diffuse/listposter.png">$VAR[PosterImage]</texture>
 				<visible>Skin.Hassetting(views.cases) + !Skin.Hassetting(views.clearcases)</visible>
 			</control>
@@ -182,7 +184,7 @@
 				<width>PosterW</width>
 				<height>PosterH</height>
 				<fadetime>100</fadetime>
-				<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+				<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 				<texture background="true" diffuse="diffuse/listposter.png">$VAR[PosterImage]</texture>
 				<visible>Skin.Hassetting(views.cases) + Skin.Hassetting(views.clearcases)</visible>
 			</control>
@@ -193,7 +195,7 @@
 				<height>730</height>
 				<fadetime>100</fadetime>
 				<texture background="true">boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
-				<aspectratio align="center" aligny="top">stretch</aspectratio>
+				<aspectratio align="center" aligny="top">scale</aspectratio>
 				<bordersize>2</bordersize>
 				<visible>Skin.Hassetting(views.cases) + Skin.Hassetting(views.clearcases)</visible>
 			</control>
@@ -204,7 +206,7 @@
 				<height>730</height>
 				<fadetime>100</fadetime>
 				<texture background="true">boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
-				<aspectratio align="center" aligny="top">stretch</aspectratio>
+				<aspectratio align="center" aligny="top">scale</aspectratio>
 				<bordersize>2</bordersize>
 				<visible>Skin.Hassetting(views.cases) + !Skin.Hassetting(views.clearcases)</visible>
 			</control>
@@ -307,7 +309,8 @@
 			<!--<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>-->
 			<control type="group">
 				<control type="list" id="550">
-					<visible>![Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons) | [Container.Content(files) + !substring(Container.FolderPath,plugin://,left) + !stringcompare(Container.FolderPath,library://video/movies/) + !stringcompare(Container.FolderPath,library://video/tvshows/) + !stringcompare(Container.FolderPath,special://videoplaylists/)] | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)]]</visible>
+					<!--<visible>![Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons) | [Container.Content(files) + !substring(Container.FolderPath,plugin://,left) + !stringcompare(Container.FolderPath,library://video/movies/) + !stringcompare(Container.FolderPath,library://video/tvshows/) + !stringcompare(Container.FolderPath,special://videoplaylists/)] | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)]]</visible>-->
+					<visible>String.StartsWith(Container.FolderPath,plugin://plugin.program.advanced.launcher/) | ![Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons) | Container.Content(episodes) | [Container.Content(files) + !String.StartsWith(Container.FolderPath,plugin://) + !String.IsEqual(Container.FolderPath,library://video/movies/) + !String.IsEqual(Container.FolderPath,library://video/tvshows/) + !String.IsEqual(Container.FolderPath,special://videoplaylists/)]]</visible>
 					<top>PosterPad</top>
 					<height>PosterH</height>
 					<left>ListSquareX</left>
@@ -433,6 +436,7 @@
 			<textcolor>Light1</textcolor>
 			<selectedcolor>Light1</selectedcolor>
 			<label>$VAR[LabelDuration]</label>
+			<visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
 		</control>
 		<control type="label">
 			<centerright>110</centerright>
@@ -443,7 +447,8 @@
 			<font>symbolview</font>
 			<label>$VAR[PercentWatchedLabel]</label>
 			<textcolor>$VAR[ColourHighlight2]</textcolor>
-			<visible>!stringcompare(ListItem.Label,..)</visible>                   
+			<!--<visible>!stringcompare(ListItem.Label,..)</visible>-->  
+			<visible>!String.IsEqual(ListItem.Label,..) + !String.StartsWith(Container.FolderPath,plugin://)</visible>
 			<animation effect="slide" start="0" end="64" time="0" condition="Container.Content(Seasons)">Conditional</animation>
 		</control>	
 		<control type="label">
@@ -457,7 +462,8 @@
 			<selectedcolor>Light1</selectedcolor>
 			<label fallback="0.0">$INFO[ListItem.Rating]</label>
 			<visible>!stringcompare(ListItem.Label,..)</visible>
-			<visible>!Container.Content(seasons)</visible>
+			<visible>![Container.Content(seasons) | Container.Content(artists) | Container.Content(actors)]</visible>
+			<!--<visible>!Container.Content(seasons)</visible>-->
 		</control>
 	</include>
 	<include name="50itemlayout">
@@ -505,6 +511,7 @@
 			<textcolor>Dark1</textcolor>
 			<selectedcolor>Dark1</selectedcolor>
 			<label>$VAR[LabelDuration]</label>
+			<visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
 		</control>
 		<control type="label">
 			<centerright>110</centerright>
@@ -516,7 +523,8 @@
 			<label>$VAR[PercentWatchedLabel]</label>
 			<textcolor>$VAR[ColourHighlight2]</textcolor>
 			<selectedcolor>$VAR[UnWatchedHighlightColor]</selectedcolor>
-            <visible>!stringcompare(ListItem.Label,..)</visible>                       
+            <!--<visible>!stringcompare(ListItem.Label,..)</visible>--> 
+			<visible>!String.IsEqual(ListItem.Label,..) + !String.StartsWith(Container.FolderPath,plugin://)</visible>
 			<animation effect="slide" start="0" end="64" time="0" condition="Container.Content(Seasons)">Conditional</animation> 	
 		</control>
 		<control type="label">
@@ -530,7 +538,8 @@
 			<selectedcolor>Dark1</selectedcolor>
 			<label fallback="0.0">$INFO[ListItem.Rating]</label>
 			<visible>!stringcompare(ListItem.Label,..)</visible>
-			<visible>!Container.Content(seasons)</visible>
+			<!--<visible>!Container.Content(seasons)</visible>-->
+			<visible>![Container.Content(seasons) | Container.Content(artists) | Container.Content(actors)]</visible>
 		</control>
 	</include>
 	<include name="50itemlayout_square">
@@ -565,6 +574,19 @@
 			<selectedcolor>Dark1</selectedcolor>
 			<visible>ListItem.IsPlaying</visible>
 		</control>
+		<control type="label">
+            <posx>30</posx>
+            <width>auto</width>
+            <align>right</align>
+            <aligny>center</aligny>
+            <height>64</height>
+            <font>SmallBold</font>
+            <label>$INFO[ListItem.Year]</label>
+            <textoffsetx>30</textoffsetx>
+            <textcolor>Dark1</textcolor>
+            <selectedcolor>Dark1</selectedcolor>
+            <visible>String.StartsWith(Container.FolderPath,plugin://plugin.program.advanced.launcher/)</visible>
+        </control>
 		<control type="label">
 			<right>30</right>
 			<width>500</width>
@@ -614,6 +636,19 @@
 			<selectedcolor>Light1</selectedcolor>
 			<visible>ListItem.IsPlaying</visible>
 		</control>
+		<control type="label">
+            <posx>30</posx>
+            <width>auto</width>
+            <align>right</align>
+            <aligny>center</aligny>
+            <height>64</height>
+            <font>SmallBold</font>
+            <label>$INFO[ListItem.Year]</label>
+            <textoffsetx>30</textoffsetx>
+            <textcolor>Light1</textcolor>
+            <selectedcolor>Light1</selectedcolor>
+            <visible>String.StartsWith(Container.FolderPath,plugin://plugin.program.advanced.launcher/)</visible>
+        </control>
 		<control type="label">
 			<right>30</right>
 			<width>500</width>

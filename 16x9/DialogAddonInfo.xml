@@ -1,563 +1,275 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
-<window id="146">
-    <defaultcontrol always="true">9000</defaultcontrol>
-    <allowoverlay>no</allowoverlay>
-
-    <controls>
-        <include>GlobalOverlay</include>
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<onload condition="!ListItem.Property(addon.isinstalled) + Window.IsActive(addonbrowser)">SetFocus(6)</onload>
+	<onload>SetProperty(infobackground,$INFO[ListItem.Art(fanart)],home)</onload>
+	<onunload>ClearProperty(infobackground,home)</onunload>
+	<controls>
 		<control type="group">
-            <animation type="Conditional" reversible="true" condition="Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogConfirm.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml)">
-                <effect type="zoom" end="95" start="100" time="200" center="auto" tween="quadratic" easing="in" />
-            </animation>
-
-            <control type="group">
-			    <left>84</left>
-				<top>200</top>
-
-	<!-- Left Panel -->		
-			    <control type="image">
-                    <posx>10</posx>
-                    <posy>10</posy>
-                    <width>450</width>
-                    <height>720</height>
-				    <texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
-                </control>
-    <!-- Left Panel Borders -->	
-		        <control type="image">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>470</width>
-                    <height>740</height>
-                    <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
-                </control>		
-                <control type="image">
-					<description>Add-on Cover Image</description>
-					<posx>20</posx>
-                    <posy>20</posy>
-					<width>428</width>
-					<height>428</height>
-					<info>ListItem.Thumb</info>
-					<bordertexture border="4">boxes/cdcover_mask_aa.png</bordertexture>
-					<bordersize>4</bordersize>
-					<aspectratio align="center" aligny="center">scale</aspectratio>
-				</control>
-				
-				<control type="image">
-					<description>Default Add-on Cover Image</description>
-					<width>428</width>
-					<height>428</height>
-					<texture>DefaultAddon.png</texture>
-					<bordertexture border="4">boxes/cdcover_mask_aa.png</bordertexture>
-					<bordersize>50</bordersize>
-					<aspectratio>scale</aspectratio>
-					<visible>String.IsEmpty(ListItem.Thumb)</visible>
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
-				</control>
-	
-				<control type="image">
-				    <left>10</left>
-				    <top>460</top>
-				    <width>450</width>
-				    <height>3</height>
-				    <!--<animation effect="fade" end="30" condition="true">Conditional</animation>-->
-				    <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
-			    </control>
-
-				<control type="textbox">
-				    <description>Add-on Description</description>
-				    <left>25</left>
-				    <top>480</top>
-				    <width>410</width>
-				    <height>208</height>
-				    <font>Tiny</font>
-				    <textcolor>$VAR[ColourSelected]</textcolor>
-				    <shadowcolor>Black</shadowcolor>
-				    <label fallback="19055">$INFO[ListItem.AddonDescription]</label>
-				    <align>justify</align>
-				    <pagecontrol>60</pagecontrol>
-				    <autoscroll time="2000" delay="6000" repeat="10000">true</autoscroll>
-				    <visible>IsEmpty(Window.Property(showinfo))</visible>
-			    </control>
-			
-			    <control type="textbox">
-				    <description>Add-on News</description>
-				    <left>25</left>
-				    <top>480</top>
-				    <width>410</width>
-				    <height>208</height>
-				    <font>Tiny</font>
-				    <textcolor>$VAR[ColourSelected]</textcolor>
-				    <shadowcolor>Black</shadowcolor>
-				    <label fallback="19055">$INFO[ListItem.AddonNews]</label>
-				    <align>justify</align>
-				    <pagecontrol>60</pagecontrol>
-				    <autoscroll time="2000" delay="6000" repeat="10000">true</autoscroll>
-				    <visible>StringCompare(Window.Property(showinfo),news)</visible>
-			    </control>
+			<include>OpenClose_Right</include>
+			<control type="button">
+				<left>605</left>
+				<top>400</top>
+				<width>1235</width>
+				<height>375</height>
+				<label>-</label>
 			</control>
-			
+			<control type="textbox">
+				<left>670</left>
+				<top>435</top>
+				<width>1050</width>
+				<height>300</height>
+				<font>font_textbox</font>
+				<label>$INFO[ListItem.AddonSummary,[B],[/B][CR]][COLOR=white]$INFO[ListItem.AddonDescription][/COLOR][COLOR=white][CR][/COLOR]</label>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
+				<autoscroll delay="5000" repeat="7500" time="5000">true</autoscroll>
+			</control>
 			<control type="group">
-				<left>570</left>
-				<top>200</top>
-	    <!--Right Panel-->		
-			    <control type="image">
-                    <posx>10</posx>
-                    <posy>10</posy>
-                    <width>1239</width>
-                    <height>720</height>
-				    <texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
-                </control>
-	    <!--Right Panel Borders-->	
-		        <control type="image">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>1259</width>
-                    <height>740</height>
-                    <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
-                </control>
-				<control type="image">
-                    <posx>11</posx>
-                    <posy>11</posy>
-                    <width>1238</width>
-                    <height>90</height>
-                    <texture colordiffuse="Dark4" border="8">buttons/dialoge_inner.png</texture>
-                </control>
-			<!--Right Panel Header-->	
-                <control type="label">
-                    <description>Header Label</description>
-					<!--<posx>30</posx>-->
-					<top>22</top>
-					<width>1236</width>
-					<align>center</align>
-					<font>Small</font>
-					<textcolor>$VAR[ColourHighlight]</textcolor>
-					<autoscroll>true</autoscroll>
-                    <label>[UPPERCASE]$INFO[ListItem.AddonName][/UPPERCASE]</label>
-                </control>
-				<control type="image">
-                    <posx>11</posx>
-                    <posy>98</posy>
-                    <width>1238</width>
-                    <height>5</height>
-                    <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
-                </control>
-            </control>
-
-
-			<control type="list" id="9001">
-				<left>800</left>
-				<top>320</top>
-				<width>720</width>
-				<height>249</height>
-				<itemlayout width="720" height="31">
-					<control type="image">
-						<top>29</top>
-						<left>5</left>
-						<width>710</width>
-						<height>2</height>
-						<animation effect="fade" end="30" condition="true">Conditional</animation>
-						<texture colordiffuse="Black70" flipx="true">common/separator.png</texture>
-					</control>
-					<control type="image">
-						<left>170</left>
-						<width>1</width>
-						<height>34</height>
-						<animation effect="fade" end="25" condition="true">Conditional</animation>
-						<texture border="1,0,0,10" flipy="true">common/separator.png</texture>
-					</control>
-					<control type="label">
-						<left>5</left>
-						<width>165</width>
-						<height>31</height>
-						<font>Tiny</font>
-						<aligny>center</aligny>
-						<textcolor>$VAR[ColourSelected]</textcolor>
-						<shadowcolor>Black</shadowcolor>
-						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-					</control>
-					<control type="label">
-						<left>179</left>
-						<width>533</width>
-						<height>31</height>
-						<font>Tiny</font>
-						<aligny>center</aligny>
-						<textcolor>Black70</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<label fallback="N/A">$INFO[ListItem.Label2]</label>
-					</control>
-				</itemlayout>	
-				<focusedlayout width="720" height="31">
-					<control type="image">
-						<top>29</top>
-						<left>5</left>
-						<width>710</width>
-						<height>2</height>
-						<animation effect="fade" end="30" condition="true">Conditional</animation>
-						<texture colordiffuse="Black70" flipx="true">common/separator.png</texture>
-					</control>
-					<control type="image">
-						<left>170</left>
-						<width>1</width>
-						<height>34</height>
-						<animation effect="fade" end="25" condition="true">Conditional</animation>
-						<texture border="1,0,0,10" flipx="true">common/separator.png</texture>
-					</control>
-					<!--<control type="image">
-						<width>720</width>
-						<height>31</height>	
-						<texture border="4">common/box.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<scroll>true</scroll>
-					</control>-->
-					<control type="label">
-						<left>5</left>
-						<width>165</width>
-						<height>31</height>
-						<font>Tiny</font>
-						<aligny>center</aligny>
-						<textcolor>$VAR[ColourSelected]</textcolor>
-						<shadowcolor>Black</shadowcolor>
-						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-					</control>
-					<control type="label">
-						<left>179</left>
-						<width>533</width>
-						<height>31</height>
-						<font>Tiny</font>
-						<aligny>center</aligny>
-						<textcolor>Black70</textcolor>
-						<shadowcolor>Black</shadowcolor>
-						<label fallback="N/A">$INFO[ListItem.Label2]</label>
-					</control>
-				</focusedlayout>
-			    <content>
-					<item id="1">
-						<description>Summary</description>
-						<label>$LOCALIZE[20037]</label>
-						<label2>$INFO[ListItem.AddonSummary]</label2>
-						<onclick>noop</onclick>
-					</item>
-					<item id="2">
-						<description>Author</description>
-						<label>$LOCALIZE[21863]</label>
-						<label2>$INFO[ListItem.AddonCreator]</label2>
-						<onclick>noop</onclick>
-					</item>
-					<item id="3">
-						<description>Version</description>
-						<label>$LOCALIZE[19114]</label>
-						<label2>$INFO[ListItem.AddonVersion]</label2>
-						<onclick>noop</onclick>
-					</item>
-					<item id="4">
-						<description>ID</description>
-						<label>$LOCALIZE[560]</label>
-						<label2>$INFO[ListItem.Property(Addon.ID)]</label2>
-						<onclick>noop</onclick>
-					</item>
-					<item id="5">
-						<description>Status</description>
-						<label>$LOCALIZE[126]</label>
-						<label2 fallback="1223">$INFO[ListItem.Property(Addon.Status)]</label2>
-						<onclick>noop</onclick>
-					</item>
-					<item id="6">
-						<description>Broken</description>
-						<label>$LOCALIZE[24098]</label>
-						<label2 fallback="106">$INFO[ListItem.AddonBroken]</label2>
-						<onclick>noop</onclick>
-					</item>
-					<item id="7">
-						<description>Install Date</description>
-						<label>$LOCALIZE[12013]</label>
-						<label2>$INFO[ListItem.AddonInstallDate]</label2>
-						<onclick>noop</onclick>
-					</item>
-				</content>
-			</control>
-			
-            <control type="group">
- 				<left>669</left>
- 				<top>569</top>
+ 				<left>625</left>
+ 				<top>176</top>
  				<visible>Integer.IsEqual(Container(50).NumItems,0)</visible>
  				<control type="image">
- 					<width>328</width>
- 					<height>195</height>
- 					<texture border="2" background="boxes/cdcover_mask_aa.png">DefaultNoPreview.png</texture>
+ 					<width>385</width>
+ 					<height>220</height>
+ 					<texture border="2" background="true">DefaultNoPreview.png</texture>
  					<aspectratio>scale</aspectratio>
- 					<bordertexture colordiffuse="Black">boxes/cdcover_mask_aa.png</bordertexture>
+ 					<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
  					<bordersize>4</bordersize>
  				</control>
  				<control type="label">
- 				    <left>5</left>
-					<top>10</top>
+ 				    <left>10</left>
+					<top>173</top>
 					<height>30</height>
-					<width>308</width>
+					<width>365</width>
 					<align>center</align>
-					<font>Tiny</font>
-				    <label>31821</label>
-					<shadowcolor>Black</shadowcolor>
+					<font>font10</font>
+				    <label>40235</label>
+					<shadowcolor>text_shadow</shadowcolor>
 				</control>
  				<control type="image">
- 					<left>350</left>
- 					<width>328</width>
- 					<height>195</height>
- 					<texture border="2" background="boxes/cdcover_mask_aa.png">DefaultNoPreview.png</texture>
+ 					<left>405</left>
+ 					<width>385</width>
+ 					<height>220</height>
+ 					<texture border="2" background="true">DefaultNoPreview.png</texture>
  					<aspectratio>scale</aspectratio>
- 					<bordertexture colordiffuse="Black">boxes/cdcover_mask_aa.png</bordertexture>
+ 					<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
  					<bordersize>4</bordersize>
  				</control>
  				<control type="label">
- 				    <left>360</left>
-					<top>10</top>
+ 				   <left>415</left>
+					<top>173</top>
 					<height>30</height>
-					<width>308</width>
+					<width>365</width>
 					<align>center</align>
-					<font>Tiny</font>
-				    <label>31821</label>
-					<shadowcolor>Black</shadowcolor>
+					<font>font10</font>
+				    <label>40235</label>
+					<shadowcolor>text_shadow</shadowcolor>
 				</control>
  				<control type="image">
- 					<left>698</left>
- 					<width>328</width>
- 					<height>195</height>
- 					<texture border="2" background="boxes/cdcover_mask_aa.png">DefaultNoPreview.png</texture>
+ 					<left>810</left>
+ 					<width>385</width>
+ 					<height>220</height>
+ 					<texture border="2" background="true">DefaultNoPreview.png</texture>
  					<aspectratio>scale</aspectratio>
- 					<bordertexture colordiffuse="Black">boxes/cdcover_mask_aa.png</bordertexture>
+ 					<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
  					<bordersize>4</bordersize>
 				</control>
 				<control type="label">
- 				   <left>708</left>
-					<top>10</top>
+ 				   <left>820</left>
+					<top>173</top>
 					<height>30</height>
-					<width>308</width>
+					<width>365</width>
 					<align>center</align>
-					<font>Tiny</font>
-				    <label>31821</label>
-					<shadowcolor>Black</shadowcolor>
+					<font>font10</font>
+				    <label>40235</label>
+					<shadowcolor>text_shadow</shadowcolor>
 				</control>
-			</control>
-			<control type="panel" id="50">
-				<left>669</left>
-				<top>569</top>
-				<width>1040</width>
-				<height>208</height>
-				<scrolltime>200</scrolltime>
-				<orientation>horizontal</orientation>
-				<ondown>9000</ondown>
+				</control>
+				<control type="panel" id="50">
+ 				<left>625</left>
+ 				<top>176</top>
+ 				<width>1215</width>
+ 				<height>233</height>
+ 				<ondown>9000</ondown>
  				<onup>9000</onup>
-				<itemlayout height="200" width="348">		
-					<control type="image">
-						<width>328</width>
-						<height>195</height>
-						<bordertexture colordiffuse="$VAR[ButtonColour]">boxes/cdcover_mask_aa.png</bordertexture>
-						<bordersize>4</bordersize>
-						<aspectratio>scale</aspectratio>
-						<texture border="2" background="true">DefaultNoPreview.png</texture>
-						<bordersize>4</bordersize>
-					</control>
-					<control type="image">
-						<width>328</width>
-						<height>195</height>
-						<bordertexture colordiffuse="$VAR[ButtonColour]">boxes/cdcover_mask_aa.png</bordertexture>
-						<bordersize>4</bordersize>
-						<aspectratio>scale</aspectratio>
-						<texture border="2" background="true">$INFO[ListItem.Icon]</texture>
-						<bordersize>4</bordersize>
-					</control>
-				</itemlayout>
-				<focusedlayout height="200" width="348">
-					<control type="group">
-						<control type="image">
-							<width>328</width>
-							<height>195</height>
-							<texture border="2" background="true">DefaultNoPreview.png</texture>
-							<aspectratio>scale</aspectratio>
-							<bordertexture colordiffuse="$VAR[ButtonFocusColour]">boxes/cdcover_mask_aa.png</bordertexture>
-							<bordersize>4</bordersize>
-						</control>
-						<control type="image">
-							<width>328</width>
-							<height>195</height>
-							<bordertexture colordiffuse="$VAR[ButtonFocusColour]">boxes/cdcover_mask_aa.png</bordertexture>
-							<bordersize>4</bordersize>
-							<aspectratio>scale</aspectratio>
-							<texture border="2" background="true">$INFO[ListItem.Icon]</texture>
-						</control>
-					</control>
-				</focusedlayout>
-			</control>
-			
-		<!--Screenshots Directional Arrows-->	
-			<control type="image">
-                <animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="800" pulse="true" reversible="false" condition="true">Conditional</animation>
-                <right>180</right>
-                <posy>630</posy>
-                <width>25</width>
-                <height>60</height>
-                <aspectratio>keep</aspectratio>
-                <texture>common/arrow-small-right.png</texture>
-                <visible>Control.HasFocus(50)</visible>
-                <colordiffuse>Dark1</colordiffuse>
-                <visible>Container(50).HasNext</visible>
-            </control>
-            <control type="image">
-                <animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="800" pulse="true" reversible="false" condition="true">Conditional</animation>
-                <right>1275</right>
-                <posy>630</posy>
-                <width>25</width>
-                <height>60</height>
-                <aspectratio>keep</aspectratio>
-                <texture flipx="true">common/arrow-small-right.png</texture>
-                <visible>Control.HasFocus(50)</visible>
-                <colordiffuse>Dark1</colordiffuse>
-                <visible>Container(50).HasPrevious</visible>
-            </control>
-			
-			<control type="Label">
-				<description>Disclaimer</description>
-				<left>585</left>
-				<top>874</top>
-				<width>1230</width>
-				<align>center</align>
-				<font>Tiny</font>
-				<textcolor>FFFAF72F</textcolor>
-				<shadowcolor>Black</shadowcolor>
-				<label>[UPPERCASE]$LOCALIZE[24052]:  $INFO[ListItem.AddonDisclaimer][/UPPERCASE]</label>
-				<scroll>true</scroll>
-				<visible>!String.IsEmpty(ListItem.AddonDisclaimer)</visible>
-			</control>
-													
-
-            <control type="grouplist" id="9000">
-                <posx>665</posx>
-                <posy>800</posy>
-                <width>1040</width>
-                <height>660</height>
-                <itemgap>10</itemgap>
-                <onleft>9000</onleft>
+ 				<orientation>horizontal</orientation>
+ 				<itemlayout height="225" width="405">
+ 					<control type="image">
+ 						<width>385</width>
+ 						<height>220</height>
+ 						<texture border="2" background="true">DefaultNoPreview.png</texture>
+ 						<aspectratio>scale</aspectratio>
+ 						<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
+ 						<bordersize>4</bordersize>
+ 					</control>
+ 					<control type="image">
+ 						<width>385</width>
+ 						<height>220</height>
+ 						<texture border="2" background="true">$INFO[ListItem.Icon]</texture>
+ 						<aspectratio>scale</aspectratio>
+ 						<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
+ 						<bordersize>4</bordersize>
+ 					</control>
+ 				</itemlayout>
+ 				<focusedlayout height="225" width="405">
+ 					<control type="image">
+ 						<width>385</width>
+ 						<height>220</height>
+ 						<texture border="2" background="true">DefaultNoPreview.png</texture>
+ 						<aspectratio>scale</aspectratio>
+ 						<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
+ 						<bordersize>4</bordersize>
+ 					</control>
+ 					<control type="image">
+ 						<width>385</width>
+ 						<height>220</height>
+ 						<texture border="2" background="true">$INFO[ListItem.Icon]</texture>
+ 						<aspectratio>scale</aspectratio>
+ 						<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
+ 						<bordersize>4</bordersize>
+ 					</control>
+ 					<control type="image">
+ 						<width>385</width>
+ 						<height>220</height>
+ 						<texture border="8" colordiffuse="$VAR[SkinColorVar]">buttons/thumbnail_focused.png</texture>
+ 					</control>
+ 				</focusedlayout>
+  			</control>
+  			<include content="LeftRightArrows">
+ 				<param name="list_id" value="50" />
+ 				<param name="left_posx" value="580" />
+ 				<param name="right_posx" value="1840" />
+ 				<param name="posy" value="280" />
+ 				<param name="visible" value="true" />
+ 			</include>
+			<control type="grouplist" id="9000">
+				<left>90</left>
+				<top>820</top>
+				<width>1740</width>
+				<height>300</height>
+				<onleft>9000</onleft>
 				<onright>9000</onright>
 				<onup>50</onup>
 				<ondown>9000</ondown>
-                <orientation>horizontal</orientation>
-				<control type="button" id="11">
-                    <description>Close</description>
-                    <height>68</height>
-					<width>250</width>
-                    <include>DefSkinSettingMenuButton</include>
-                    <label>222</label>
-					<onclick>Close</onclick>
-                </control>
-				<control type="button" id="12">
-                    <description>Launch Addon</description>
-                    <height>68</height>
-					<width>250</width>
-                    <include>DefSkinSettingMenuButton</include>
-                    <label>518</label>
-                </control>
-				<control type="button" id="9">
-                    <description>Addon Settings</description>
-                    <height>68</height>
-					<width>250</width>
-                    <include>DefSkinSettingMenuButton</include>
-                    <label>24020</label>
-                    <visible>!Skin.HasSetting(global.kioskmode)</visible>
-                </control>
-				<control type="button" id="8">
-                    <description>Update Addon button</description>
-                    <height>68</height>
-					<width>250</width>
-                    <include>DefSkinSettingMenuButton</include>
-                    <label>24069</label>
-                    <visible>!Skin.HasSetting(global.kioskmode)</visible>
-                </control>
+				<align>center</align>
+				<itemgap>-18</itemgap>
+				<orientation>horizontal</orientation>
+				<include content="InfoDialogButton">
+					<param name="id" value="12" />
+					<param name="icon" value="icons/infodialogs/launch.png" />
+					<param name="label" value="$LOCALIZE[518]" />
+				</include>
+				<include content="InfoDialogButton">
+					<param name="id" value="9" />
+					<param name="icon" value="icons/infodialogs/configure.png" />
+					<param name="label" value="$LOCALIZE[24020]" />
+				</include>
+				<include content="InfoDialogButton">
+					<param name="id" value="8" />
+					<param name="icon" value="icons/infodialogs/update.png" />
+					<param name="label" value="$LOCALIZE[24069]" />
+				</include>
 				<control type="radiobutton" id="13">
-                    <description>Enable Auto Update</description>
-                    <height>68</height>
-					<width>250</width>
-					<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/on.png</textureradiofocus>
-                    <textureradionofocus colordiffuse="Dark2">buttons/off.png</textureradionofocus>
-                    <radioposx>180</radioposx>
-                    <include>DefSkinSettingMenuButton</include>
-                    <label>24048</label>
-                    <visible>Control.IsEnabled(13)</visible>
-                </control>
-  				
-				<control type="togglebutton" id="101">
-                    <description>News</description>
-					<height>68</height>
-					<width>250</width>
-                    <label>29916</label>
-                    <altlabel>29915</altlabel>
-					<usealttexture>StringCompare(Window.Property(showinfo),news)</usealttexture>
-                    <onclick condition="!StringCompare(Window.Property(showinfo),news)">SetProperty(showinfo,news)</onclick>
-                    <onclick condition="StringCompare(Window.Property(showinfo),news)">ClearProperty(showinfo)</onclick>
-                    <include>DefSkinSettingMenuButton</include>
-                </control>-->
-				<control type="button" id="6">
-                    <description>Install/Uninstall Addon button</description>
-                    <height>68</height>
-					<width>250</width>
-                    <include>DefSkinSettingMenuButton</include>
-                    <label>24022</label>
-                    <visible>!Skin.HasSetting(global.kioskmode)</visible>
-					<selected>ListItem.Property(addon.isinstalled) | !Window.IsActive(addonbrowser)</selected>-->
-                </control>
-				<control type="button" id="7">
-                    <description>Enable/Disable Addon button</description>
-                    <height>68</height>
-					<width>250</width>
-                    <include>DefSkinSettingMenuButton</include>
-                    <label>24021</label>   
-                    <visible>!Skin.HasSetting(global.kioskmode)</visible>
-					<selected>!String.StartsWith(Control.GetLabel(7),$LOCALIZE[24022]) | !Window.IsActive(addonbrowser)</selected>-->
-                </control>
-				
-            	<!--<control type="togglebutton" id="212">
-			        <description>Description / News / Screenshots</description>
-                    <height>68</height>
-					<width>250</width>
-                    <align>center</align>
-                    <label>20008</label>
-                    <altlabel>29915</altlabel>
-					<usealttexture>StringCompare(Window.Property(showinfo),screenshots)</usealttexture>
-					<include>DefSkinSettingMenuButton</include>
-                    <onclick condition="!StringCompare(Window.Property(showinfo),screenshots)">SetProperty(showinfo,screenshots)</onclick>
-                    <onclick condition="StringCompare(Window.Property(showinfo),screenshots)">ClearProperty(showinfo)</onclick>
-                    <visible>![String.IsEmpty(ListItem.AddonNews) + Integer.IsEqual(Container(50).NumItems,0)]</visible>
-                </control>-->               
-            </control>
-			
-		<!--Buttons Directional Arrows-->
-            <control type="image">
-                <animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="800" pulse="true" reversible="false" condition="true">Conditional</animation>
-                <right>180</right>
-                <posy>800</posy>
-                <width>20</width>
-                <height>60</height>
-                <aspectratio>keep</aspectratio>
-                <texture>common/arrow-small-right.png</texture>
-                <visible>!Control.HasFocus(50)</visible>
-                <colordiffuse>Dark1</colordiffuse>
-                <visible>Container(9000).HasNext</visible>
-            </control>
-            <control type="image">
-                <animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="800" pulse="true" reversible="false" condition="true">Conditional</animation>
-                <right>1275</right>
-                <posy>800</posy>
-                <width>20</width>
-                <height>60</height>
-                <aspectratio>keep</aspectratio>
-                <texture flipx="true">common/arrow-small-right.png</texture>
-                <visible>!Control.HasFocus(50)</visible>
-                <colordiffuse>Dark1</colordiffuse>
-                <visible>Container(9000).HasPrevious</visible>
-            </control>	
-
-            
-        </control>
-
-    </controls>
-
+					<width>262</width>
+					<height>140</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsetx>35</textoffsetx>
+					<textoffsety>76</textoffsety>
+					<radioposx>56</radioposx>
+					<radioposy>14</radioposy>
+					<radiowidth>150</radiowidth>
+					<font>font10</font>
+					<visible>Control.IsEnabled(13)</visible>
+				</control>
+				<include content="InfoDialogButton">
+					<param name="id" value="10" />
+					<param name="icon" value="icons/infodialogs/changelog.png" />
+					<param name="onclick_1" value="SetProperty(TextViewer_Header,$LOCALIZE[24054],home)" />
+					<param name="onclick_2" value="SetProperty(TextViewer_Text,$ESCVAR[AddonNewsVar],home)" />
+					<param name="onclick_3" value="ActivateWindow(1102)" />
+					<param name="label" value="$LOCALIZE[24054]" />
+				</include>
+				<include content="InfoDialogToggleButton">
+					<param name="id" value="7" />
+					<param name="icon_on" value="icons/infodialogs/disable.png" />
+					<param name="icon_off" value="icons/infodialogs/enabled.png" />
+					<param name="selected" value="!String.StartsWith(Control.GetLabel(7),$LOCALIZE[24022]) | !Window.IsActive(addonbrowser)" />
+					<param name="label" value="" />
+				</include>
+				<include content="InfoDialogToggleButton">
+					<param name="id" value="6" />
+					<param name="icon_on" value="icons/infodialogs/uninstall.png" />
+					<param name="icon_off" value="icons/infodialogs/install.png" />
+					<param name="selected" value="ListItem.Property(addon.isinstalled) | !Window.IsActive(addonbrowser)" />
+					<param name="label" value="" />
+				</include>
+			</control>
+		</control>
+		<control type="group">
+			<include>OpenClose_Left</include>
+			<top>158</top>
+			<left>80</left>
+			<control type="image">
+				<width>505</width>
+				<height>505</height>
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="border_alpha">colors/black.png</texture>
+				<bordertexture border="20">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+			</control>
+			<control type="image">
+				<left>24</left>
+				<top>24</top>
+				<width>457</width>
+				<height>457</height>
+				<aspectratio aligny="top">scale</aspectratio>
+				<fadetime>300</fadetime>
+				<texture background="true" fallback="DefaultFolderSquare.png">$INFO[ListItem.Icon]</texture>
+			</control>
+			<control type="button">
+ 				<left>-3</left>
+ 				<top>490</top>
+ 				<width>511</width>
+ 				<height>128</height>
+ 				<label>-</label>
+ 			</control>
+ 			<control type="textbox">
+ 				<left>38</left>
+ 				<top>515</top>
+ 				<width>450</width>
+ 				<height>75</height>
+ 				<font>font_textbox</font>
+ 				<label fallback="31008">$INFO[ListItem.AddonDisclaimer,$LOCALIZE[24052] : ]</label>
+ 				<textcolor>$VAR[SkinColorVar]</textcolor>
+ 				<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+ 			</control>
+			<control type="group">
+				<visible>!String.IsEmpty(ListItem.AddonBroken)</visible>
+				<include>OpenClose_Fade</include>
+				<control type="image">
+					<left>24</left>
+					<top>24</top>
+					<width>457</width>
+					<height>457</height>
+					<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
+				</control>
+				<control type="textbox">
+					<left>34</left>
+					<top>34</top>
+					<width>437</width>
+					<height>437</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[24096]</label>
+					<font>font24_title</font>
+				</control>
+			</control>
+		</control>
+		<include content="InfoDialogTopBarInfo">
+			<param name="main_label" value="[COLOR white]$INFO[ListItem.AddonName][/COLOR]" />
+			<param name="sub_label" value="$INFO[ListItem.AddonVersion][COLOR white]$INFO[ListItem.AddonCreator, $LOCALIZE[31071] ][/COLOR]" />
+			<param name="textcolor" value="$VAR[SkinColorVar]" />
+		</include>
+	</controls>
 </window>

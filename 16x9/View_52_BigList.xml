@@ -9,7 +9,7 @@
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(52)</visible>
-			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+			<!--<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>-->
 			<control type="list" id="52">
 				<top>PosterPad</top>
 				<left>180</left>
@@ -43,12 +43,13 @@
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(52)</visible>
-			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+			<!--<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>-->
 			<control type="panel" id="52">
 				<top>PosterPad</top>
 				<left>SidePad</left>
 				<width>1770</width>
 				<height>650</height>
+				<oninfo condition="String.StartsWith(Container.FolderPath,plugin://plugin.program.advanced.launcher/)">SetFocus(9601)</oninfo>
 				<onleft condition="!Skin.HasSetting(global.kioskmode)">9000</onleft>
 				<onright>60</onright>
 				<ondown>52</ondown>
@@ -83,11 +84,13 @@
 			<top>10</top>
 			<width>100</width>
 			<height>100</height>
-			<aspectratio scalediffuse="false">scale</aspectratio>
+			<aspectratio scalediffuse="false">keep</aspectratio>
+            <texture background="true">$VAR[ThumbImage]</texture>
+			<!--<aspectratio scalediffuse="false">scale</aspectratio>
 			<texture diffuse="common/circle.png" background="true">$INFO[ListItem.Icon]</texture>
-			<visible>!Skin.HasSetting(global.hidecirles)</visible>
+			<visible>!Skin.HasSetting(global.hidecirles)</visible>-->
 		</control>
-		<control type="image">
+		<!--<control type="image">
 			<left>10</left>
 			<top>10</top>
 			<width>100</width>
@@ -95,7 +98,7 @@
 			<aspectratio scalediffuse="false">keep</aspectratio>
 			<texture background="true">$INFO[ListItem.Icon]</texture>
 			<visible>Skin.HasSetting(global.hidecirles)</visible>
-		</control>
+		</control>-->
 		<control type="label">
 			<left>130</left>
 			<top>10</top>
@@ -116,6 +119,7 @@
 			<font>Small</font>
 			<textcolor>Dark1</textcolor>
 			<label>$INFO[ListItem.Label2]</label>
+			<visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
 		</control>
 		<control type="label">
 			<centerright>58</centerright>
@@ -125,7 +129,8 @@
 			<font>symbolview</font>
 			<label>$VAR[PercentWatchedLabel]</label>
 			<textcolor>$VAR[ColourHighlight2]</textcolor>
-            <visible>!stringcompare(ListItem.Label,..)</visible>                       
+            <!--<visible>!stringcompare(ListItem.Label,..)</visible>--> 
+			<visible>!String.IsEqual(ListItem.Label,..) + !String.StartsWith(Container.FolderPath,plugin://)</visible>
 		</control>	
 	</include>
 	<include name="View_52_BigList_FocusLayout">
@@ -146,11 +151,13 @@
 			<top>10</top>
 			<width>100</width>
 			<height>100</height>
-			<aspectratio scalediffuse="false">scale</aspectratio>
+			<aspectratio scalediffuse="false">keep</aspectratio>
+            <texture background="true">$VAR[ThumbImage]</texture>
+			<!--<aspectratio scalediffuse="false">scale</aspectratio>
 			<texture diffuse="common/circle.png" background="true">$INFO[ListItem.Icon]</texture>
-			<visible>!Skin.HasSetting(global.hidecirles)</visible>
+			<visible>!Skin.HasSetting(global.hidecirles)</visible>-->
 		</control>
-		<control type="image">
+		<!--<control type="image">
 			<left>10</left>
 			<top>10</top>
 			<width>100</width>
@@ -158,7 +165,7 @@
 			<aspectratio scalediffuse="false">keep</aspectratio>
 			<texture background="true">$INFO[ListItem.Icon]</texture>
 			<visible>Skin.HasSetting(global.hidecirles)</visible>
-		</control>
+		</control>-->
 		<control type="label">
 			<left>130</left>
 			<top>10</top>
@@ -179,6 +186,7 @@
 			<font>Small</font>
 			<textcolor>Light1</textcolor>
 			<label>$INFO[ListItem.Label2]</label>
+			<visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>
 		</control>
 		<control type="label">
 			<centerright>58</centerright>
@@ -188,7 +196,8 @@
 			<font>symbolview</font>
 			<label>$VAR[PercentWatchedLabel]</label>
 			<textcolor>$VAR[ColourHighlight2]</textcolor>
-            <visible>!stringcompare(ListItem.Label,..)</visible>                        
+            <!--<visible>!stringcompare(ListItem.Label,..)</visible> -->
+			<visible>!String.IsEqual(ListItem.Label,..) + !String.StartsWith(Container.FolderPath,plugin://)</visible>
 		</control>
 	</include>
 </includes>

@@ -5,12 +5,13 @@
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(54)</visible>
-			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+			<!--<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>-->
 			<control type="group">
 				<control type="fixedlist" id="54">
 					<animation effect="slide" start="0" end="136" condition="!Container.Content(episodes) + !Container.Content(albums) + !Container.Content(songs)">Conditional</animation>
 					<animation effect="slide" start="0" end="210" condition="Container.Content(albums) | Container.Content(songs)">Conditional</animation>
-					<visible>Container.Content(songs) | Container.Content(albums) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(sets)</visible>
+					<!--<visible>Container.Content(songs) | Container.Content(albums) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(sets)</visible>-->
+					<visible>String.StartsWith(Container.FolderPath,plugin://plugin.program.advanced.launcher/) | Container.Content(songs) | Container.Content(albums) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(sets) | Window.IsActive(musicplaylist)</visible>
 					<top>PosterPad</top>
 					<height>640</height>
 					<centerleft>50%</centerleft>
@@ -236,7 +237,7 @@
 							<top>10</top>
 							<width>207</width>
 							<height>310</height>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<aspectratio scalediffuse="false">scale</aspectratio>
 							<texture diffuse="diffuse/cardposter.png" background="true">$VAR[PosterImage]</texture>
 						</control>
 						<control type="label">
@@ -399,7 +400,7 @@
 								<top>24</top>
 								<right>24</right>
 								<height>270</height>
-<!--Changed-->					<texture border="8" colordiffuse="$VAR[ViewsSelectHighlight]">common/box.png</texture><!--Changed from "Dark1"-->
+             					<texture border="8" colordiffuse="$VAR[ViewsSelectHighlight]">common/box.png</texture><!--Changed from "Dark1"-->
 							</control>
 							<control type="image">
 								<left>24</left>
@@ -479,7 +480,7 @@
 								<label>$VAR[LabelPlotBoxLong]</label>
 								<font>Tiny</font>
 								<textcolor>Light1</textcolor>
-<!--Changed-->					<selectedcolor>$VAR[ViewsDetailsHighlightTextColour]</selectedcolor>
+					            <selectedcolor>$VAR[ViewsDetailsHighlightTextColour]</selectedcolor>
 							</control>
 						</control>
 					</focusedlayout>
@@ -497,7 +498,7 @@
 								<top>24</top>
 								<right>24</right>
 								<height>270</height>
-<!--Changed-->					<texture border="8" colordiffuse="$VAR[ViewsSelectHighlight]">common/box.png</texture><!--Changed from "Dark1"-->
+            					<texture border="8" colordiffuse="$VAR[ViewsSelectHighlight]">common/box.png</texture><!--Changed from "Dark1"-->
 							</control>
 							<control type="image">
 								<left>24</left>
@@ -559,7 +560,7 @@
 								<top>24</top>
 								<right>24</right>
 								<height>270</height>
-<!--Changed-->					<texture border="8" colordiffuse="$VAR[ViewsSelectHighlight]">common/box.png</texture><!--Changed from "Dark1"-->
+					            <texture border="8" colordiffuse="$VAR[ViewsSelectHighlight]">common/box.png</texture><!--Changed from "Dark1"-->
 							</control>
 							<control type="image">
 								<left>24</left>

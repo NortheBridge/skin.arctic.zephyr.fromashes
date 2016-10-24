@@ -181,7 +181,7 @@
 					<control type="image">
                         <width>260</width>
                         <height>200</height>                       
-						<texture colordiffuse="Grey" border="30">buttons/dialoge_shadow.png</texture>
+						<texture colordiffuse="$VAR[ButtonFocusColour]" border="30">buttons/dialoge_shadow.png</texture>
                     </control>
 		    <!--Thumb Icon Focus-->			
 					<control type="image">
@@ -193,6 +193,7 @@
                     </control>
 		    <!--Label Focus-->			
 					<control type="image">
+					    <posx>4</posx>
 					    <posy>22</posy>
                         <width>205</width>
                         <height>18</height>                       
@@ -290,6 +291,14 @@
 					   <onclick>activatewindow(Profiles)</onclick>
                        <icon>special://skin/extras/icons2/profiles.png</icon>
 					   <thumb>special://skin/extras/icons/artist.png</thumb>
+				    </item>
+					<item id="11">
+					   <description>File manager</description>
+					   <label>7</label>
+                       <label2>311671</label2>
+					   <onclick>activatewindow(FileManager)</onclick>
+                       <icon>special://skin/extras/icons2/filemanager.png</icon>
+					   <thumb>special://skin/extras/icons/files.png</thumb>
 				    </item>
                 </content>
 				

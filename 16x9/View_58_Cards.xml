@@ -6,10 +6,11 @@
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(58)</visible>
-			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+			<!--<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>-->
 			<control type="group">
 				<control type="panel" id="58">
-					<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)] | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>
+					<!--<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)] | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>-->
+					<visible>String.StartsWith(Container.FolderPath,plugin://plugin.program.advanced.launcher/) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !String.StartsWith(Container.FolderPath,plugin://)] | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>
 					<top>206</top>
 					<height>660</height>
 					<left>70</left>
@@ -57,7 +58,7 @@
 							<top>10</top>
 							<width>207</width>
 							<height>310</height>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<aspectratio scalediffuse="false">scale</aspectratio>
 							<texture diffuse="diffuse/cardposter.png" background="true">$VAR[PosterImage]</texture>
 						</control>
 						<control type="label">
@@ -119,7 +120,7 @@
 							<top>10</top>
 							<width>400</width>
 							<height>310</height>
-							<aspectratio scalediffuse="false">keep</aspectratio>
+							<aspectratio scalediffuse="false">scale</aspectratio>
 							<texture diffuse="diffuse/cardthumb.png" background="true">$VAR[FanartImage]</texture>
 						</control>
 						<control type="label">
@@ -176,7 +177,7 @@
 							<top>10</top>
 							<width>207</width>
 							<height>310</height>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<aspectratio scalediffuse="false">scale</aspectratio>
 							<texture diffuse="diffuse/cardposter.png" background="true">$VAR[PosterImage]</texture>
 						</control>
                         <control type="label">
@@ -247,7 +248,7 @@
 							<top>10</top>
 							<width>400</width>
 							<height>310</height>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<aspectratio scalediffuse="false">scale</aspectratio>
 							<texture diffuse="diffuse/cardthumb.png" background="true">$VAR[FanartImage]</texture>
 						</control>
 						<control type="label">

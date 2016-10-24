@@ -286,6 +286,7 @@
 	
 	<variable name="DefWidgetContent">
 		<!-- Individual Widget Paths -->
+		<value condition="!IsEmpty(Container(300).ListItem.Property(widgetPath)) + Skin.HasSetting(NoPersistentWidgets)">$INFO[Container(300).ListItem.Property(widgetPath)]</value>
 		<value condition="StringCompare(Container(300).ListItem.Property(widget),Playlist)">$INFO[Container(300).ListItem.Property(widgetPlaylist)]</value>
 		<value condition="StringCompare(Container(300).ListItem.Property(widget),RandomMovies)">plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
 		<value condition="StringCompare(Container(300).ListItem.Property(widget),RandomEpisodes)">plugin://service.library.data.provider?type=randomepisodes&amp;reload=$INFO[Window.Property(randomepisodes)]</value>
@@ -345,7 +346,8 @@
 		<value condition="StringCompare(Window(home).Property(widget),TopRatedMovies) + IsEmpty(Container(300).ListItem.Property(widget))">plugin://script.extendedinfo?info=topratedmovies</value>
 		<value condition="StringCompare(Window(home).Property(widget),TopRatedTvShows) + IsEmpty(Container(300).ListItem.Property(widget))">plugin://script.extendedinfo?info=topratedtvshows</value>
 		<value condition="StringCompare(Window(home).Property(widget),AiringTodayTvShows) + IsEmpty(Container(300).ListItem.Property(widget))">plugin://script.extendedinfo?info=airingtodaytvshows</value>
-		<value condition="IsEmpty(Container(300).ListItem.Property(widget))">plugin://service.library.data.provider?type=recommendedepisodes+recommendedmovies+randommovies&amp;reload=$INFO[Window.Property(recommendedepisodes)]$INFO[Window.Property(recommendedmovies)]$INFO[Window.Property(randommovies)]</value>
+		<!--<value condition="IsEmpty(Container(300).ListItem.Property(widget))">plugin://service.library.data.provider?type=recommendedepisodes+recommendedmovies+randommovies&amp;reload=$INFO[Window.Property(recommendedepisodes)]$INFO[Window.Property(recommendedmovies)]$INFO[Window.Property(randommovies)]</value>-->
+		<value>plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
 	</variable>
 
 	<variable name="DefWidgetContentAlbums">
@@ -1022,8 +1024,7 @@
 		<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/on.png</textureradiofocus>
 		<textureradionofocus colordiffuse="Black30">buttons/off.png</textureradionofocus>
 		<focusedcolor>$VAR[ColourSelected]</focusedcolor>		
-		<alttexturefocus colordiffuse="Dark1" border="16">common/white.png</alttexturefocus>
-<!-- 4th GEN Colour Modification -->		
+		<alttexturefocus colordiffuse="Dark1" border="16">common/white.png</alttexturefocus>		
 		<texturefocus colordiffuse="$VAR[SideBladeHighlightColour]" border="16">common/white.png</texturefocus>
 		<!--<texturefocus colordiffuse="Dark1" border="16">common/white.png</texturefocus>-->
 	</include>
@@ -1475,7 +1476,7 @@
 	</include>
 	<include name="Def9000MediaMenuTop">
 		<left>0</left>
-		<top>115</top>
+		<top>50</top>
 		<width>455</width>
 		<height>1080</height>
 		<onleft>9000</onleft>
@@ -1757,7 +1758,7 @@
 			<selected>Skin.HasSetting(furniture.overlayinfo)</selected>
 			<onclick>Skin.ToggleSetting(furniture.overlayinfo)</onclick>
 		</control>
-		<!--<control type="radiobutton" id="9032" description="Enable Extra Fanart">
+		<control type="radiobutton" id="9032" description="Enable Extra Fanart">
 		    <radioposx>380</radioposx>
             <include>DefContextButton2</include>
             <align>left</align>
@@ -1765,45 +1766,68 @@
             <selected>Skin.HasSetting(SkinHelper.EnableExtraFanart)</selected>
             <onclick>Skin.ToggleSetting(SkinHelper.EnableExtraFanart)</onclick>
             <visible>System.HasAddon(script.skin.helper.service)</visible>
-        </control>-->
+        </control>
 	</include>
 			
-	<include name="Def9000MusicSide">
+	<!--<include name="Def9000MusicMenuTop">
+		<left>0</left>
+		<top>50</top>
+		<width>455</width>
+		<height>1080</height>
+		<onleft>9000</onleft>
+		<onright>ClearProperty(MediaMenu,Home)</onright>
+		<onright condition="![Window.IsVisible(tvguide) | Window.IsActive(SettingsCategory.xml)]">50</onright>
+		<onright condition="Window.IsVisible(tvguide)">10</onright>
+		<onright condition="Window.IsActive(SettingsCategory.xml)">3</onright>
+		<onup>9000</onup>
+		<ondown>9000</ondown>
+		<onback>ClearProperty(MediaMenu,Home)</onback>
+		<onback>50</onback>
+		<itemgap>0</itemgap>
+		<animation effect="slide" start="-440,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
+		<control type="label" id="200">
+			<height>42</height>
+			<textoffsetx>15</textoffsetx>
+			<font>Home</font>
+			<label>View Options</label>
+			<textcolor>$VAR[ColourHighlight]</textcolor>
+			<aligny>center</aligny>
+		</control>
         <control type="button" id="2">
             <description>View</description>
-            <include>DefContextButton</include>
+            <include>DefContextButton2</include>
             <align>left</align>
         </control>
         <control type="button" id="3">
             <description>Sort</description>
-            <include>DefContextButton</include>
+            <include>DefContextButton2</include>
             <align>left</align>
         </control>
-        <control type="togglebutton" id="4">
+        <control type="button" id="4">
             <description>Ascending</description>
-            <include>DefContextButton</include>
+            <include>DefContextButton2</include>
             <align>left</align>
             <label>584</label>
             <altlabel>585</altlabel>
-        </control>
+        </control>		
         <control type="button" id="7">
             <description>Playlist</description>
-            <include>DefContextButton</include>
+            <include>DefContextButton2</include>
             <align>left</align>
             <label>136</label>
             <onclick>SetFocus(50)</onclick>
-            <visible>Window.IsVisible(MyMusicSongs.xml)</visible>
+            <visible>Window.IsVisible(MyPlaylist.xml)</visible>
             <visible>!stringcompare(Container.FolderPath,special://musicplaylists/)</visible>
         </control>       
         <control type="button" id="9098">
             <description>Now Playing</description>
-            <include>DefContextButton</include>
+            <include>DefContextButton2</include>
             <label>13350</label>
             <align>left</align>
             <onclick>ActivateWindow(MusicPlaylist)</onclick>
             <visible>IntegerGreaterThan(Playlist.Length(music),1)</visible>
         </control>
-	</include>	
+	</include>-->	
 	
 	<include name="DefDialogSelectManual6">
 		<posx>738</posx>
@@ -2498,8 +2522,8 @@
                 <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
             </control>
         </control>
-    </include>
-
+    </include>	
+	
     <variable name="DefHubWidget">
         <value condition="Window.IsVisible(1111) + !IsEmpty(Skin.String(Widget.1111))">$INFO[Skin.String(Widget.1111)]</value>
         <value condition="Window.IsVisible(1112) + !IsEmpty(Skin.String(Widget.1112))">$INFO[Skin.String(Widget.1112)]</value>

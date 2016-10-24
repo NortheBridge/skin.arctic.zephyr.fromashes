@@ -5,9 +5,10 @@
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(155)</visible>
-			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+			<!--<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>-->
 			<control type="panel" id="155">
-				<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes)</visible>
+				<!--<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes)</visible>-->
+				<visible>String.StartsWith(Container.FolderPath,plugin://plugin.program.advanced.launcher/) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(episodes)</visible>
 				<top>180</top>
 				<right>0</right>
 				<width>1920</width>
@@ -27,7 +28,7 @@
 						<top>0</top>
 						<right>0</right>
 						<bottom>0</bottom>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture diffuse="diffuse/wall.png" background="true">$VAR[PosterImage]</texture>
 						<animation effect="fade" start="25" end="25" condition="stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
 					</control>
@@ -55,7 +56,7 @@
 						<top>0</top>
 						<right>0</right>
 						<bottom>0</bottom>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture diffuse="diffuse/wall.png" background="true">$VAR[PosterImage]</texture>
 					</control>
 					<control type="image">
@@ -63,7 +64,7 @@
 						<top>0</top>
 						<right>-256</right>
 						<bottom>0</bottom>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture colordiffuse="Panel" background="true">common/white.png</texture>
 						<animation effect="fade" start="95" end="95" condition="true">Conditional</animation>
 						<visible>!Container.Column(12)</visible>
@@ -72,7 +73,7 @@
 						<posx>-256</posx>
 						<width>256</width>
 						<height>360</height>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture colordiffuse="Panel" background="true">common/white.png</texture>
 						<animation effect="fade" start="95" end="95" condition="true">Conditional</animation>
 						<visible>Container.Column(12) | Container.Column(13)</visible>
@@ -229,7 +230,7 @@
 						<top>0</top>
 						<right>128</right>
 						<bottom>0</bottom>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture diffuse="diffuse/wall.png" background="true">$VAR[PosterImage]</texture>
 					</control>
                     <control type="label">
@@ -263,7 +264,7 @@
 						<posx>-384</posx>
 						<width>256</width>
 						<height>360</height>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture colordiffuse="Panel" background="true">common/white.png</texture>
 						<animation effect="fade" start="95" end="95" condition="true">Conditional</animation>
 					</control>
@@ -336,7 +337,7 @@
 						<top>-180</top>
 						<right>128</right>
 						<bottom>180</bottom>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture diffuse="diffuse/wall.png" background="true">$VAR[PosterImage]</texture>
 					</control>
 					<control type="label">
@@ -371,7 +372,7 @@
 						<posx>-384</posx>
 						<width>256</width>
 						<height>360</height>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture colordiffuse="Panel" background="true">common/white.png</texture>
 						<animation effect="fade" start="95" end="95" condition="true">Conditional</animation>
 					</control>
@@ -445,7 +446,7 @@
 						<top>-180</top>
 						<right>0</right>
 						<bottom>180</bottom>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture diffuse="diffuse/wall.png" background="true">$VAR[PosterImage]</texture>
 					</control>
 					<control type="image">
@@ -453,7 +454,7 @@
 						<posy>-180</posy>
 						<right>-256</right>
 						<bottom>0</bottom>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture colordiffuse="Panel" background="true">common/white.png</texture>
 						<animation effect="fade" start="95" end="95" condition="true">Conditional</animation>
 						<visible>!Container.Column(12)</visible>
@@ -463,7 +464,7 @@
 						<posy>-180</posy>
 						<width>256</width>
 						<height>360</height>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture colordiffuse="Panel" background="true">common/white.png</texture>
 						<animation effect="fade" start="95" end="95" condition="true">Conditional</animation>
 						<visible>Container.Column(12) | Container.Column(13)</visible>
