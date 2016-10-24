@@ -6,7 +6,7 @@
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(51)</visible>
-			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+			<!--<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>-->
 			<control type="group">
 				<top>PosterPad</top>
 				<left>SidePad</left>
@@ -20,7 +20,8 @@
 					<texture border="15" colordiffuse="Panel">common/rounded-shadow8.png</texture>
 				</control>
 				<control type="wraplist" id="51">
-					<visible>Container.Content(musicvideos) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)</visible>
+					<!--<visible>Container.Content(musicvideos) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)</visible>-->
+					<visible>String.StartsWith(Container.FolderPath,plugin://plugin.program.advanced.launcher/) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)</visible>
 					<width>1112</width>
 					<right>0</right>
 					<top>0</top>
@@ -157,7 +158,7 @@
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(51)</visible>
-			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+			<!--<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>-->
 			<control type="group">
 				<include>BigWideContent</include>
 				<control type="group">
@@ -240,7 +241,7 @@
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(51)</visible>
-			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+			<!--<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>-->
 			<control type="group">
 				<top>PosterPad</top>
 				<left>SidePad</left>
@@ -515,7 +516,8 @@
 				<height>620</height>
 				<!-- <control type="image"> <left>-8</left> <right>-8</right> <top>-8</top> <bottom>-8</bottom> <texture border="15" colordiffuse="Panel">common/rounded-shadow8.png</texture> </control> -->
 				<control type="wraplist" id="51">
-					<visible>Container.Content(musicvideos) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)</visible>
+					<!--<visible>Container.Content(musicvideos) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)</visible>-->
+					<visible>String.StartsWith(Container.FolderPath,plugin://plugin.program.advanced.launcher/) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)</visible>
 					<left>0</left>
 					<right>0</right>
 					<top>0</top>
@@ -665,7 +667,8 @@
 			<texture border="15" colordiffuse="Panel">common/rounded-shadow8.png</texture>
 		</control>
 		<control type="wraplist" id="51">
-			<visible>Container.Content(musicvideos) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)</visible>
+			<!--<visible>Container.Content(musicvideos) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)</visible>-->
+			<visible>String.StartsWith(Container.FolderPath,plugin://plugin.program.advanced.launcher/) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)</visible>
 			<left>0</left>
 			<right>0</right>
 			<top>0</top>

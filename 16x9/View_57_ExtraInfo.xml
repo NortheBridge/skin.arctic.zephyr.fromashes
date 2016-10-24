@@ -6,10 +6,11 @@
         <control type="group">
             <include>Animation.Common</include>
             <visible>Control.IsVisible(57)</visible>
-            <visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+            <!--<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>-->
             <control type="group">
                 <control type="list" id="57">
-                    <visible>Container.Content(musicvideos) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>
+                    <!--<visible>Container.Content(musicvideos) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>-->
+					<visible>String.StartsWith(Container.FolderPath,plugin://plugin.program.advanced.launcher/) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>
                     <top>PosterPad</top>
                     <height>PosterH</height>
                     <right>SidePad</right>
@@ -30,11 +31,13 @@
 
                     <focusedlayout width="1100" height="64">
                         <control type="group">
-                            <visible>Control.HasFocus(57) + !Window.IsVisible(DialogVideoInfo.xml)</visible>
+                            <!--<visible>Control.HasFocus(57) + !Window.IsVisible(DialogVideoInfo.xml)</visible>-->
+							<visible>Control.HasFocus(57)</visible>
                             <include>50focuslayout</include>
                         </control>
                         <control type="group">
-                            <visible>!Control.HasFocus(57) | Window.IsVisible(DialogVideoInfo.xml)</visible>
+                            <!--<visible>!Control.HasFocus(57) | Window.IsVisible(DialogVideoInfo.xml)</visible>-->
+							<visible>!Control.HasFocus(57)</visible>
                             <include>50itemlayout</include>
                         </control>
                     </focusedlayout>
@@ -53,7 +56,8 @@
             <control type="group">
                 <posy>320</posy>
                 <control type="fixedlist" id="57">
-                    <visible>Container.Content(musicvideos) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)] | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>
+                    <!--<visible>Container.Content(musicvideos) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)] | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>-->
+					<visible>String.StartsWith(Container.FolderPath,plugin://plugin.program.advanced.launcher/) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)] | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>
                     <top>PosterPad</top>
                     <height>320</height>
                     <right>SidePad</right>
@@ -74,11 +78,13 @@
 
                     <focusedlayout width="1100" height="64">
                         <control type="group">
-                            <visible>Control.HasFocus(57) + !Window.IsVisible(DialogVideoInfo.xml)</visible>
+                            <!--<visible>Control.HasFocus(57) + !Window.IsVisible(DialogVideoInfo.xml)</visible>-->
+							<visible>Control.HasFocus(57)</visible>
                             <include>50focuslayout</include>
                         </control>
                         <control type="group">
-                            <visible>!Control.HasFocus(57) | Window.IsVisible(DialogVideoInfo.xml)</visible>
+                            <!--<visible>!Control.HasFocus(57) | Window.IsVisible(DialogVideoInfo.xml)</visible>-->
+							<visible>!Control.HasFocus(57)</visible>
                             <include>50itemlayout</include>
                         </control>
                     </focusedlayout>
@@ -122,7 +128,7 @@
                     <right>10</right>
                     <bottom>10</bottom>
                     <fadetime>200</fadetime>
-                    <aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+                    <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                     <texture diffuse="diffuse/pvrinfo.png" background="true">$VAR[LandscapeImage]</texture>
                     <visible>!Container.Content(episodes) + !Skin.HasSetting(views.57.showfanart)</visible>
                 </control>
@@ -132,7 +138,7 @@
                     <right>10</right>
                     <bottom>10</bottom>
                     <fadetime>200</fadetime>
-                    <aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+                    <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                     <texture diffuse="diffuse/pvrinfo.png" background="true">$VAR[FanartImage]</texture>
                     <visible>!Container.Content(episodes) + Skin.HasSetting(views.57.showfanart)</visible>
                 </control>

@@ -6,10 +6,11 @@
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(56)</visible>
-			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+			<!--<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>-->
 			<control type="group">
 				<control type="fixedlist" id="56">
-					<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)] | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>
+					<!--<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)] | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>-->
+					<visible>String.StartsWith(Container.FolderPath,plugin://plugin.program.advanced.launcher/) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)] | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>
 					<top>PosterPad</top>
 					<height>448</height>
 					<left>ListX</left>
@@ -29,11 +30,13 @@
 					</itemlayout>
 					<focusedlayout width="ListW" height="64">
 						<control type="group">
-							<visible>Control.HasFocus(56) + !Window.IsVisible(DialogVideoInfo.xml)</visible>
+							<!--<visible>Control.HasFocus(56) + !Window.IsVisible(DialogVideoInfo.xml)</visible>-->
+							<visible>Control.HasFocus(56)</visible>
 							<include>50focuslayout</include>
 						</control>
 						<control type="group">
-							<visible>!Control.HasFocus(56) | Window.IsVisible(DialogVideoInfo.xml)</visible>
+							<!--<visible>!Control.HasFocus(56) | Window.IsVisible(DialogVideoInfo.xml)</visible>-->
+							<visible>!Control.HasFocus(56)</visible>
 							<include>50itemlayout</include>
 						</control>
 					</focusedlayout>
@@ -48,7 +51,7 @@
 					<width>PosterW</width>
 					<height>PosterH</height>
 					<fadetime>100</fadetime>
-					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+					<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 					<texture flipy="true" diffuse="diffuse/listposter-ref.png" background="true">$VAR[PosterImage]</texture>
 					<visible>Skin.HasSetting(show.reflections)</visible>
 				</control>
@@ -70,7 +73,7 @@
 					<width>PosterW</width>
 					<height>PosterH</height>
 					<fadetime>100</fadetime>
-					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+					<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 					<texture diffuse="diffuse/listposter.png" background="true">$VAR[PosterImage]</texture>
 					<visible>!Skin.Hassetting(views.cases)</visible>
 				</control>
@@ -79,7 +82,7 @@
 					<top>11</top>
 					<width>411</width>
 					<height>627</height>
-					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+					<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 					<texture background="true" diffuse="diffuse/listposter.png">$VAR[PosterImage]</texture>
 					<visible>Skin.Hassetting(views.cases) + !Skin.Hassetting(views.clearcases)</visible>
 				</control>
@@ -87,7 +90,7 @@
 					<width>PosterW</width>
 					<height>PosterH</height>
 					<fadetime>100</fadetime>
-					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+					<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 					<texture background="true" diffuse="diffuse/listposter.png">$VAR[PosterImage]</texture>
 					<visible>Skin.Hassetting(views.cases) + Skin.Hassetting(views.clearcases)</visible>
 				</control>
@@ -98,7 +101,7 @@
 					<height>730</height>
 					<fadetime>100</fadetime>
 					<texture background="true">boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
-					<aspectratio align="center" aligny="top">stretch</aspectratio>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<bordersize>2</bordersize>
 					<visible>Skin.Hassetting(views.cases) + Skin.Hassetting(views.clearcases)</visible>
 				</control>
@@ -109,7 +112,7 @@
 					<height>680</height>
 					<fadetime>100</fadetime>
 					<texture background="true">boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
-					<aspectratio align="center" aligny="top">stretch</aspectratio>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<bordersize>2</bordersize>
 					<visible>Skin.Hassetting(views.cases) + !Skin.Hassetting(views.clearcases)</visible>
 				</control>
@@ -161,10 +164,11 @@
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(56)</visible>
-			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+			<!--<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>-->
 			<control type="group">
 				<control type="list" id="56">
-					<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)] | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>
+					<!--<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)] | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>-->
+					<visible>String.StartsWith(Container.FolderPath,plugin://plugin.program.advanced.launcher/) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)] | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>
 					<top>PosterPad</top>
 					<height>PosterH</height>
 					<right>731</right>
@@ -184,11 +188,13 @@
 					</itemlayout>
 					<focusedlayout width="654" height="64">
 						<control type="group">
-							<visible>Control.HasFocus(56) + !Window.IsVisible(DialogVideoInfo.xml)</visible>
+							<!--<visible>Control.HasFocus(56) + !Window.IsVisible(DialogVideoInfo.xml)</visible>-->
+							<visible>Control.HasFocus(56)</visible>
 							<include>56focuslayout</include>
 						</control>
 						<control type="group">
-							<visible>!Control.HasFocus(56) | Window.IsVisible(DialogVideoInfo.xml)</visible>
+							<!--<visible>!Control.HasFocus(56) | Window.IsVisible(DialogVideoInfo.xml)</visible>-->
+							<visible>!Control.HasFocus(56)</visible>
 							<include>56itemlayout</include>
 						</control>
 					</focusedlayout>
@@ -203,7 +209,7 @@
 					<width>PosterW</width>
 					<height>PosterH</height>
 					<fadetime>200</fadetime>
-					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+					<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 					<texture flipy="true" diffuse="diffuse/listposter-ref.png" background="true">$VAR[PosterImage]</texture>
 					<visible>Skin.HasSetting(show.reflections)</visible>
 				</control>
@@ -225,7 +231,7 @@
 					<width>PosterW</width>
 					<height>PosterH</height>
 					<fadetime>200</fadetime>
-					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+					<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 					<texture diffuse="diffuse/listposter.png" background="true">$VAR[PosterImage]</texture>
 					<visible>!Skin.Hassetting(views.cases)</visible>
 				</control>
@@ -234,7 +240,7 @@
 					<top>11</top>
 					<width>411</width>
 					<height>627</height>
-					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+					<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 					<texture background="true" diffuse="diffuse/listposter.png">$VAR[PosterImage]</texture>
 					<visible>Skin.Hassetting(views.cases) + !Skin.Hassetting(views.clearcases)</visible>
 				</control>
@@ -242,7 +248,7 @@
 					<width>PosterW</width>
 					<height>PosterH</height>
 					<fadetime>200</fadetime>
-					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+					<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 					<texture background="true" diffuse="diffuse/listposter.png">$VAR[PosterImage]</texture>
 					<visible>Skin.Hassetting(views.cases) + Skin.Hassetting(views.clearcases)</visible>
 				</control>
@@ -253,7 +259,7 @@
 					<height>730</height>
 					<fadetime>200</fadetime>
 					<texture background="true">boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
-					<aspectratio align="center" aligny="top">stretch</aspectratio>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<bordersize>2</bordersize>
 					<visible>Skin.Hassetting(views.cases) + Skin.Hassetting(views.clearcases)</visible>
 				</control>
@@ -264,7 +270,7 @@
 					<height>680</height>
 					<fadetime>200</fadetime>
 					<texture background="true">boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
-					<aspectratio align="center" aligny="top">stretch</aspectratio>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<bordersize>2</bordersize>
 					<visible>Skin.Hassetting(views.cases) + !Skin.Hassetting(views.clearcases)</visible>
 				</control>
@@ -362,11 +368,12 @@
 		<control type="group">
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(56)</visible>
-			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
+			<!--<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>-->
 			<control type="group">
 				<posy>320</posy>
 				<control type="fixedlist" id="56">
-					<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)] | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>
+					<!--<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)] | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>-->
+					<visible>String.StartsWith(Container.FolderPath,plugin://plugin.program.advanced.launcher/) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)] | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>
 					<top>PosterPad</top>
 					<height>320</height>
 					<right>731</right>
@@ -386,11 +393,13 @@
 					</itemlayout>
 					<focusedlayout width="654" height="64">
 						<control type="group">
-							<visible>Control.HasFocus(56) + !Window.IsVisible(DialogVideoInfo.xml)</visible>
+							<!--<visible>Control.HasFocus(56) + !Window.IsVisible(DialogVideoInfo.xml)</visible>-->
+							<visible>Control.HasFocus(56)</visible>
 							<include>56focuslayout</include>
 						</control>
 						<control type="group">
-							<visible>!Control.HasFocus(56) | Window.IsVisible(DialogVideoInfo.xml)</visible>
+							<!--<visible>!Control.HasFocus(56) | Window.IsVisible(DialogVideoInfo.xml)</visible>-->
+							<visible>!Control.HasFocus(56)</visible>
 							<include>56itemlayout</include>
 						</control>
 					</focusedlayout>
@@ -417,7 +426,7 @@
 					<width>PosterW</width>
 					<height>PosterH</height>
 					<fadetime>200</fadetime>
-					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+					<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 					<texture flipy="true" diffuse="diffuse/listposter-ref.png" background="true">$VAR[PosterImage]</texture>
 					<visible>Skin.HasSetting(show.reflections)</visible>
 				</control>
@@ -439,7 +448,7 @@
 					<width>PosterW</width>
 					<height>PosterH</height>
 					<fadetime>200</fadetime>
-					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+					<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 					<texture diffuse="diffuse/listposter.png" background="true">$VAR[PosterImage]</texture>
 					<visible>!Skin.Hassetting(views.cases)</visible>
 				</control>
@@ -448,7 +457,7 @@
 					<top>11</top>
 					<width>411</width>
 					<height>627</height>
-					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+					<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 					<texture background="true" diffuse="diffuse/listposter.png">$VAR[PosterImage]</texture>
 					<visible>Skin.Hassetting(views.cases) + !Skin.Hassetting(views.clearcases)</visible>
 				</control>
@@ -456,7 +465,7 @@
 					<width>PosterW</width>
 					<height>PosterH</height>
 					<fadetime>200</fadetime>
-					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+					<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 					<texture background="true" diffuse="diffuse/listposter.png">$VAR[PosterImage]</texture>
 					<visible>Skin.Hassetting(views.cases) + Skin.Hassetting(views.clearcases)</visible>
 				</control>
@@ -467,7 +476,7 @@
 					<height>730</height>
 					<fadetime>200</fadetime>
 					<texture background="true">boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
-					<aspectratio align="center" aligny="top">stretch</aspectratio>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<bordersize>2</bordersize>
 					<visible>Skin.Hassetting(views.cases) + Skin.Hassetting(views.clearcases)</visible>
 				</control>
@@ -478,7 +487,7 @@
 					<height>680</height>
 					<fadetime>200</fadetime>
 					<texture background="true">boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
-					<aspectratio align="center" aligny="top">stretch</aspectratio>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<bordersize>2</bordersize>
 					<visible>Skin.Hassetting(views.cases) + !Skin.Hassetting(views.clearcases)</visible>
 				</control>

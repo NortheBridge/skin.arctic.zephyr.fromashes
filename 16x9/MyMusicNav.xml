@@ -3,24 +3,47 @@
 <window id="502">
     <defaultcontrol always="true">50</defaultcontrol>
 	<menucontrol>9000</menucontrol>
-    <views>50,505,506,507,500,503,54,57,51</views>
+	<allowoverlay>yes</allowoverlay>
 
+	<views>50,505,500,503,54,51,52,57</views>
     <controls>
-        <include>GlobalBackground</include>
+	    <include>GlobalBackground</include>
         <include>Furniture_Header</include>
         <include>Furniture_Clock</include>
         <include>Furniture_Logo</include>
         <include>Furniture_NowPlaying</include>
-        <include>View_50_List_Square</include>
-        <include condition="!Skin.HasSetting(51bigwide.showinfo)">View_51_BigWide</include>
-        <include condition="Skin.HasSetting(51bigwide.showinfo)">View_51_BigWide_Info</include>
+		<include condition="!Skin.HasSetting(lights.out)">GlobalBackground</include>
+		<!--<include>View_50_List_Square</include>-->
+		<!--<include>View_550_List</include>
+		<include>View_50_List</include>
+		<include condition="!Skin.HasSetting(50list.low)">View_50_List</include>
+		<include condition="Skin.HasSetting(50list.low)">View_50_LowList</include>
+		<include condition="Skin.HasSetting(51bigwide.showinfo)">View_51_BigWide_Info</include>
+        <include condition="!Skin.HasSetting(51bigwide.showinfo)">View_51_BigWide_Classic</include>
+		<include condition="Skin.HasSetting(52biglist.singlepane)">View_52_BigList_SinglePane</include>
+		<include condition="!Skin.HasSetting(52biglist.singlepane)">View_52_BigList_DoublePane</include>
+		<include>View_53_Poster</include>
+		<include>View_54_Banner</include>
+		<include>View_55_Wall</include>
+        <include>View_56_InfoWall</include>
+		<include>View_555_Wall_Episodes</include>
+		<include>View_503_Poster_Square</include>
+        <include>View_505_Wall_NoInfo</include>
         <include>View_500_Thumbnails</include>
         <include>View_503_Poster_Square</include>
-        <include>View_505_506_Wall</include>
+        <include>View_505_506_Wall</include>-->
+		<include>View_50_List_Square</include>
+        <include condition="!Skin.HasSetting(51bigwide.showinfo)">View_51_BigWide</include>
+        <include condition="Skin.HasSetting(51bigwide.showinfo)">View_51_BigWide_Info</include>
+        <include condition="Skin.HasSetting(52biglist.singlepane)">View_52_BigList_SinglePane</include>
+        <include condition="!Skin.HasSetting(52biglist.singlepane)">View_52_BigList_DoublePane</include>
+        <include>View_500_Thumbnails</include>
+        <include>View_503_Poster_Square</include>
+        <include condition="!Skin.HasSetting(505wall.showinfo)">View_505_Wall_NoInfo</include>
+        <include condition="Skin.HasSetting(505wall.showinfo)">View_505_Wall</include>
         <include>View_54_Banner</include>
-        <include condition="!Skin.HasSetting(57list.low)">View_57_ExtraInfo</include>
-        <include condition="Skin.HasSetting(57list.low)">View_57_ExtraInfo_LowList</include>
-		
+        <include>View_57_Panel</include>
+				
         <control type="group">
             <include>Animation.FadeIn</include>
             <include>Animation.FadeOut</include>
@@ -28,45 +51,82 @@
             <include>GlobalOverlay</include>
         </control>
 		
-        <control type="group">
+        <!--<control type="group">
 		    <include>Def9000Background</include>
-            <include>Def9000Arrows</include>
-				
-			<control type="label">
-                <description>Header Label</description>
-                <posx>0</posx>
-                <posy>21</posy>
-                <align>center</align>
-                <font>Tiny</font>
-                <width>526</width>
-                <label>$INFO[ListItem.Artist] Submenu</label>
-            </control>
-            <control type="grouplist" id="9000">
-			    <include>Def9000GroupListMusic</include>
-                <include>Def9000MusicSide</include>
-				
-				<control type="radiobutton" id="9007" description="Low List (57)">
-				    <radioposx>380</radioposx>
-                    <include>DefContextButton</include>
+            <include>Def9000Arrows</include>-->
+		<control type="group">
+            <include>Def9000SideBladeLeft</include>			
+			<control type="grouplist" id="9000">
+			    <left>0</left>
+		        <top>50</top>
+		        <width>455</width>
+		        <height>1080</height>
+		        <onleft>9000</onleft>
+		        <onright>ClearProperty(MediaMenu,Home)</onright>
+		        <onright condition="![Window.IsVisible(tvguide) | Window.IsActive(SettingsCategory.xml)]">50</onright>
+		        <onright condition="Window.IsVisible(tvguide)">10</onright>
+		        <onright condition="Window.IsActive(SettingsCategory.xml)">3</onright>
+		        <onup>9000</onup>
+		        <ondown>9000</ondown>
+		        <onback>ClearProperty(MediaMenu,Home)</onback>
+		        <onback>50</onback>
+		        <itemgap>0</itemgap>
+		        <animation effect="slide" start="-440,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
+		        <control type="label" id="200">
+			        <height>42</height>
+			        <textoffsetx>15</textoffsetx>
+			        <font>Home</font>
+			        <label>View Options</label>
+			        <textcolor>$VAR[ColourHighlight]</textcolor>
+			        <aligny>center</aligny>
+		        </control>
+		        <!--<control type="button" id="9326">
+			        <description>View</description>
+			        <include>DefContextButton2</include>
+			        <align>left</align>
+			        <label>View: $INFO[Container.Viewmode]</label>
+			        <onclick>XBMC.RunScript(script.skin.helper.service,action=setview)</onclick>
+		        </control>-->
+                <control type="button" id="2">
+                    <description>View</description>
+                    <include>DefContextButton2</include>
                     <align>left</align>
-                    <label>31142</label>
-                    <selected>Skin.HasSetting(57list.low)</selected>
-                    <onclick>Skin.ToggleSetting(57list.low)</onclick>
-                    <onclick>ReloadSkin()</onclick>
-                    <visible>Control.IsVisible(57)</visible>
                 </control>
-				<control type="radiobutton" id="9008" description="Big Wide Info (51)">
-				    <radioposx>380</radioposx>
-                    <include>DefContextButton</include>
+                <control type="button" id="3">
+                    <description>Sort</description>
+                    <include>DefContextButton2</include>
                     <align>left</align>
-                    <label>31147</label>
-                    <selected>Skin.HasSetting(51bigwide.showinfo)</selected>
-                    <onclick>Skin.ToggleSetting(51bigwide.showinfo)</onclick>
-                    <onclick>ReloadSkin()</onclick>
-                    <visible>Control.IsVisible(51)</visible>
                 </control>
-                <control type="radiobutton" id="9009" description="Info Wall (505)">
-				    <radioposx>380</radioposx>
+                <control type="togglebutton" id="4">
+                    <description>Ascending</description>
+                    <align>left</align>
+                    <label>584</label>
+                    <altlabel>585</altlabel>
+					<include>DefContextButton2</include>
+                </control>
+		        <control type="radiobutton" id="9092" description="Big Wide Info (51)">
+		            <radioposx>380</radioposx>
+			        <include>DefContextButton2</include>
+			        <align>left</align>
+			        <label>31147</label>
+			        <selected>Skin.HasSetting(51bigwide.showinfo)</selected>
+			        <onclick>Skin.ToggleSetting(51bigwide.showinfo)</onclick>
+			        <onclick>Skin.Reset(51bigwide.showclassic)</onclick>
+			        <onclick>ReloadSkin()</onclick>
+			        <visible>Control.IsVisible(51)</visible>
+		        </control>
+		        <control type="radiobutton" id="9093" description="Big Wide Classic (51)">
+		            <radioposx>380</radioposx>
+			        <include>DefContextButton2</include>
+			        <align>left</align>
+			        <label>31245</label>
+			        <selected>Skin.HasSetting(51bigwide.showclassic)</selected>
+			        <onclick>Skin.ToggleSetting(51bigwide.showclassic)</onclick>
+			        <onclick>Skin.Reset(51bigwide.showinfo)</onclick>
+			        <onclick>ReloadSkin()</onclick>
+			        <visible>Control.IsVisible(51)</visible>
+		        </control>
+				<control type="radiobutton" id="9086" description="Info Wall (505)">
                     <include>DefContextButton</include>
                     <align>left</align>
                     <label>31147</label>
@@ -75,10 +135,64 @@
                     <onclick>ReloadSkin()</onclick>
                     <visible>Control.IsVisible(505)</visible>
                 </control>
-                
+		        
+		        <control type="radiobutton" id="9089" description="Low List (57)">
+			        <include>DefContextButton2</include>
+			        <align>left</align>
+			        <label>31142</label>
+			        <selected>Skin.HasSetting(57list.low)</selected>
+			        <onclick>Skin.ToggleSetting(57list.low)</onclick>
+			        <onclick>ReloadSkin()</onclick>
+			        <visible>Control.IsVisible(57)</visible>
+		        </control>
+		        
+		        <control type="radiobutton" id="9094" description="Big List Double Pane (52)">
+		            <visible>Control.IsVisible(52)</visible>
+			        <radioposx>380</radioposx>
+                    <include>DefContextButton2</include>
+                    <align>left</align>
+                    <label>31235</label>
+                    <selected>!Skin.HasSetting(52biglist.singlepane)</selected>
+                    <onclick>Skin.ToggleSetting(52biglist.singlepane)</onclick>
+                    <onclick>ReloadSkin()</onclick>
+		        </control>
+		        <!--<control type="button" id="5">
+			        <description>Files</description>
+			        <include>DefContextButton2</include>
+			        <align>left</align>
+			        <label>744</label>
+			        <onclick>SetFocus(50)</onclick>
+			        <visible>Window.IsVisible(MyMusicNav.xml)</visible>
+		        </control>		
+                <control type="button" id="7">
+                    <description>Playlist</description>
+                    <include>DefContextButton2</include>
+                    <align>left</align>
+                    <label>136</label>
+                    <onclick>SetFocus(50)</onclick>
+                    <visible>Window.IsVisible(MyPlaylist.xml)</visible>
+                    <visible>!stringcompare(Container.FolderPath,special://musicplaylists/)</visible>
+                </control>       
+                <control type="button" id="9098">
+                    <description>Now Playing</description>
+                    <include>DefContextButton2</include>
+                    <label>13350</label>
+                    <align>left</align>
+                    <onclick>ActivateWindow(MusicPlaylist)</onclick>
+                    <visible>IntegerGreaterThan(Playlist.Length(music),1)</visible>
+                </control>-->
+		        <control type="label" id="201">
+                    <width>455</width>
+                    <height>42</height>
+                    <textoffsetx>15</textoffsetx>
+                    <font>Home</font>
+                    <label>Misc Options</label>
+                    <textcolor>$VAR[ColourHighlight]</textcolor>
+                    <aligny>center</aligny>
+                </control>
                 <control type="button" id="9091">
                     <description>Global Search</description>
-                    <include>DefContextButton</include>
+                    <include>DefContextButton2</include>
                     <align>left</align>
                     <label>137</label>
                     <onclick>RunScript(script.globalsearch,artists=true&amp;albums=true&amp;songs=true)</onclick>
@@ -86,30 +200,54 @@
                 <control type="radiobutton" id="16">
                     <description>PartyMode</description>
 					<radioposx>380</radioposx>
-                    <include>DefContextButton</include>
+                    <include>DefContextButton2</include>
                     <align>left</align>
                     <label>589</label>
                 </control>
-
                 <control type="radiobutton" id="98">
                     <visible>Container.CanFilterAdvanced</visible>
                     <description>Filter</description>
 					<radioposx>380</radioposx>
-                    <include>DefContextButton</include>
+                    <include>DefContextButton2</include>
                     <label>587</label>
                     <align>left</align>
                     <onclick>SetFocus(50)</onclick>
                     <onclick>Filter</onclick>
                     <selected>Container.Filtered</selected>
                 </control>
-
+                <control type="label" id="203">
+                    <width>455</width>
+                    <height>42</height>
+                    <textoffsetx>15</textoffsetx>
+                    <font>Home</font>
+                    <label>Actions</label>
+                    <textcolor>$VAR[ColourHighlight]</textcolor>
+                    <aligny>center</aligny>
+                </control>
+			    <control type="button" id="7">
+                    <description>Playlist</description>
+                    <include>DefContextButton2</include>
+                    <align>left</align>
+                    <label>136</label>
+                    <onclick>SetFocus(50)</onclick>
+                    <visible>Window.IsVisible(MyPlaylist.xml)</visible>
+                    <visible>!stringcompare(Container.FolderPath,special://musicplaylists/)</visible>
+                </control>
+			    <control type="button" id="9098">
+                    <description>Music playlist</description>
+                    <label>View playlist</label>
+                    <include>DefContextButton2</include>
+                    <align>left</align>
+                    <onclick>ActivateWindow(musicplaylist)</onclick>
+                    <visible>Player.HasAudio</visible>
+                </control>
                 <control type="togglebutton" id="20">
                     <description>Update</description>
                     <align>left</align>
                     <label>653</label>
 					<altlabel>13353</altlabel>
 					<usealttexture>library.isscanningvideo</usealttexture>
-                    <include>DefContextButton</include>
+                    <include>DefContextButton2</include>
                 </control>
 			    <include content="MenuPlayerControls">
                     <param name="PlayerControlsOnUp" value="20" />
@@ -151,6 +289,6 @@
                 <textcolor>ffededed</textcolor>
             </control>
             <visible>stringcompare(Container.NumItems,0)</visible>
-		</control>-->
+		</control>
     </controls>
 </window>

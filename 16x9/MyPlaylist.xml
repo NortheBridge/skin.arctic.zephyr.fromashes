@@ -5,7 +5,12 @@
     <menucontrol>9000</menucontrol>
     <views>50,52,500,54</views>
     <controls>
-
+        
+		<control type="radiobutton" id="19">
+            <description>Filter (hidden)</description>
+            <include>HiddenButton</include>
+        </control>
+		
         <include>GlobalBackground</include>
         <include condition="!Window.IsActive(musicplaylist)">View_50_List</include>
         <include condition="Window.IsActive(musicplaylist)">View_50_List_Square</include>
@@ -87,13 +92,13 @@
                     <visible>Control.IsVisible(52)</visible>
                 </control>
                 
-                <control type="radiobutton" id="20">
+                <!--<control type="radiobutton" id="20">
                     <description>Shuffle</description>
 					<radioposx>380</radioposx>
                     <include>DefContextButton</include>
                     <align>left</align>
                     <label>191</label>
-                </control>
+                </control>-->
                 
                 <control type="button" id="26">
                     <description>Repeat</description>
