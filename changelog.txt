@@ -1,5 +1,14 @@
 [B]Arctic Zephyr: From Ashes Changelog[/B]
 
+[B]Arctic Zephyr: From Ashes "Dormer End of Life Update Rollup" - Released November 2, 2016[/B]
+Dormer: 3.3.30 (3.2.30_dormer)
+Enhanced Stability
+Final Codecheck
+Added End of Life for Dormer Notifications
+
+NO FUTURE UPDATES WILL OCCUR FOR KODI 16 JARVIS. PLEASE UPDATE TO KODI 17 KRYPTON AND ARCTIC ZEPHYR: FROM ASHES DANVERS TO ENJOY NEW
+FEATURES AND ENHANCEMENTS AS WELL AS CONTINUED SUPPORT. PLEASE SEE THE EMBY AND KODI FORUMS FOR MORE DETAIL.
+
 [B]Arctic Zephyr: From Ashes "Summer 2016 Update Rollup Patch Level 1 (PL1)" - Released July 17, 2016[/B]
 Dormer: 3.2.21 (3.2.20_dormer) / Danvers: No Danvers Variant
 Resolved Color Selection Issues for 4th Generation Color Enhancer
