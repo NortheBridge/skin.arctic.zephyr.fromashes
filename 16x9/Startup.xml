@@ -3,6 +3,61 @@
 <window>
     <defaultcontrol always="true">9315</defaultcontrol>
     <onload>SetProperty(SkinInitStarted,1,home)</onload>
+    	<!-- Dormer End of Life Notice -->
+	<onload>RunScript(script.skin.helper.service,action=dialogok,header=From Ashes (Dormer) Notice,message=Thank you for using Arctic Zephyr: From Ashes for Kodi Jarvis. As of this release, the Dormer branch is no longer actively developed and has reached End of Life. Please update to Kodi 17 Krypton and Arctic Zephyr: From Ashes Danvers which features many requested features and improvements.)</onload>
+    <controls>
+        <control type="image" description="Background">
+            <include>Dimensions_Fullscreen</include>
+            <texture colordiffuse="Background">common/bg.jpg</texture>
+            <animation effect="fade" start="100" end="0" time="500" tween="quadratic">WindowClose</animation>
+            <visible>IsEmpty(Skin.String(StartupPlaylist))</visible>
+        </control>
+        <control type="button" id="9315">
+            <visible allowhiddenfocus="true">false</visible>
+            <onfocus condition="IsEmpty(Window(home).Property(SkinInitStarted)) + !IsEmpty(Skin.String(StartupPlaylist))">PlayMedia($ESCINFO[Skin.String(StartupPlaylist)])</onfocus>
+            <onfocus condition="System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(NextAired.Update) + Library.HasContent(tvshows)">RunScript(script.tv.show.next.aired,silent=True)</onfocus>
+            <onfocus condition="!Player.HasVideo + !IsEmpty(Skin.String(StartupPlaylist))">ReplaceWindow(Home)</onfocus>
+            <onfocus condition="IsEmpty(Skin.String(StartupPlaylist))">AlarmClock(GoHome,ReplaceWindow(home),00:01,silent,false)</onfocus>
+        </control>
+        <control type="label">
+            <description>Loading</description>
+            <width>100%</width>
+            <height>100%</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>Arctic Zephyr: [COLOR=$VAR[ColourHighlight]]From Ashes[/COLOR]</label>
+            <font>EpisodeNumber</font>
+            <textcolor>Dark1</textcolor>
+            <animation effect="fade" start="100" end="0" time="500" tween="quadratic">WindowClose</animation>
+            <visible>IsEmpty(Skin.String(StartupPlaylist))</visible>
+        </control>
+        <control type="label">
+            <description>Preview_Loading</description>
+            <width>100%</width>
+            <height>50%</height>
+            <align>center</align>
+            <top>30</top>
+            <label>[COLOR=$VAR[ColourHighlight]]Danvers[/COLOR] Preview ($INFO[System.AddonVersion(skin.arctic.zephyr.fromashes.danvers)])</label>
+            <font>Tiny</font>
+            <textcolor>Dark1</textcolor>
+            <animation effect="fade" start="100" end="0" time="500" tween="quadratic">WindowClose</animation>
+            <visible>IsEmpty(Skin.String(StartupPlaylist))</visible>
+        </control>
+        <control type="label">
+            <description>Preview_Loading2</description>
+            <width>100%</width>
+            <height>50%</height>
+            <align>center</align>
+            <bottom>30</bottom>
+            <label>[COLOR=$VAR[ColourHighlight]]Arctic Zephyr: From Ashes Anniversary Edition[/COLOR] (Kodi Krypton)</label>
+            <font>Tiny</font>
+            <textcolor>Dark1</textcolor>
+            <animation effect="fade" start="100" end="0" time="500" tween="quadratic">WindowClose</animation>
+            <visible>IsEmpty(Skin.String(StartupPlaylist))</visible>
+        </control>
+    </controls>
+</window>
+
     <controls>
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
