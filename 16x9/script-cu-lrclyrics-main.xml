@@ -1,606 +1,302 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <window>
-	<menucontrol>999</menucontrol>
-    <coordinates>
-        <system>1</system>
-    </coordinates>
-	
+    <allowoverlay>no</allowoverlay>
+	<defaultcontrol>111</defaultcontrol>
+    <!--<zorder>1</zorder>-->
     <controls>
-	
         <control type="group">
-            <posy>92</posy>
-            <visible>!Window.IsVisible(MusicOSD.xml)</visible>
-            <animation type="WindowOpen">
-                <effect type="slide" time="200" start="0,188" end="0,0" easing="out" tween="cubic" />
-                <effect type="fade" start="0" end="100" time="200" />
-            </animation>
-            <animation type="WindowClose">
-                <effect type="slide" time="200" start="0,0" end="0,188" easing="in" tween="cubic" />
-                <effect type="fade" start="100" end="0" time="200" />
-            </animation>
-			
-            <control type="image">
-                <width>1920</width>
-                <height>188</height>
-                <texture colordiffuse="Panel">common/white.png</texture>
-                <aspectratio>stretch</aspectratio>
-            </control>
-			
-            <control type="grouplist" id="999">
-                <posx>48</posx>
-                <posy>22</posy>
-                <width>960</width>
-                <height>188</height>
-                <itemgap>30</itemgap>
-                <orientation>horizontal</orientation>
-                <onleft>1</onleft>
-                <onright>1</onright>
-                <onup>120</onup>
-                <ondown>110</ondown>
-
-                <control type="button" id="401">
-                    <description>Skip Back</description>
-                    <width>60</width>
-		            <height>60</height>
-		            <font>Mini</font>
-		            <focusedcolor>FFE8E8E8</focusedcolor>
-		            <disabledcolor>FFBBBBBB</disabledcolor>
-		            <aspectratio>keep</aspectratio>
-		            <align>center</align>
-		            <aligny>top</aligny>
-		            <textoffsetx>-4</textoffsetx>
-		            <textoffsety>60</textoffsety>
-		            <textwidth>100</textwidth>
-		            <wrapmultiline>true</wrapmultiline>
-                    <label>Back</label>
-                    <texturefocus colordiffuse="FF34c4d9">OSD/PrevTrackFO.png</texturefocus>
-                    <texturenofocus>OSD/PrevTrackNF.png</texturenofocus>
-                    <onclick>playercontrol(previous)</onclick>
-                </control>
-				
-                <control type="button" id="402">
-                    <description>Rewind</description>
-                    <width>60</width>
-		            <height>60</height>
-		            <font>Mini</font>
-		            <focusedcolor>FFE8E8E8</focusedcolor>
-		            <disabledcolor>FFBBBBBB</disabledcolor>
-		            <aspectratio>keep</aspectratio>
-		            <align>center</align>
-		            <aligny>top</aligny>
-		            <textoffsetx>-4</textoffsetx>
-		            <textoffsety>60</textoffsety>
-		            <textwidth>100</textwidth>
-		            <wrapmultiline>true</wrapmultiline>
-                    <label>Rewind</label>
-                    <texturefocus colordiffuse="FF34c4d9">OSD/RewindFO.png</texturefocus>
-                    <texturenofocus>OSD/RewindNF.png</texturenofocus>
-                    <onclick>playercontrol(rewind)</onclick>
-                </control>
-				
-                <control type="togglebutton" id="403">
-                    <description>Play/Pause</description>
-                    <width>60</width>
-		            <height>60</height>
-		            <font>Mini</font>
-		            <focusedcolor>FFE8E8E8</focusedcolor>
-		            <disabledcolor>FFBBBBBB</disabledcolor>
-		            <aspectratio>keep</aspectratio>
-		            <align>center</align>
-		            <aligny>top</aligny>
-		            <textoffsetx>-4</textoffsetx>
-		            <textoffsety>60</textoffsety>
-		            <textwidth>100</textwidth>
-		            <wrapmultiline>true</wrapmultiline>
-                    <texturefocus colordiffuse="FF34c4d9">OSD/PauseFO.png</texturefocus>
-                    <texturenofocus>OSD/PauseNF.png</texturenofocus>
-                    <label>Pause</label>
-                    <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-                    <alttexturefocus colordiffuse="FF34c4d9">OSD/PlayFO.png</alttexturefocus>
-                    <alttexturenofocus>OSD/PlayNF.png</alttexturenofocus>
-                    <altlabel>$LOCALIZE[208]</altlabel>
-                    <onclick>playercontrol(play)</onclick>
-                </control>
-				
-                <control type="button" id="404">
-                    <description>Stop</description>
-                    <width>60</width>
-		            <height>60</height>
-		            <font>Mini</font>
-		            <focusedcolor>FFE8E8E8</focusedcolor>
-		            <disabledcolor>FFBBBBBB</disabledcolor>
-		            <aspectratio>keep</aspectratio>
-		            <align>center</align>
-		            <aligny>top</aligny>
-		            <textoffsetx>-4</textoffsetx>
-		            <textoffsety>60</textoffsety>
-		            <textwidth>100</textwidth>
-		            <wrapmultiline>true</wrapmultiline>
-                    <label>Stop</label>
-                    <texturefocus colordiffuse="FF34c4d9">OSD/StopFO.png</texturefocus>
-                    <texturenofocus>OSD/StopNF.png</texturenofocus>
-                    <onclick>playercontrol(stop)</onclick>
-                </control>
-				
-                <control type="button" id="405">
-                    <description>Forward</description>
-                    <width>60</width>
-		            <height>60</height>
-		            <font>Mini</font>
-		            <focusedcolor>FFE8E8E8</focusedcolor>
-		            <disabledcolor>FFBBBBBB</disabledcolor>
-		            <aspectratio>keep</aspectratio>
-		            <align>center</align>
-		            <aligny>top</aligny>
-		            <textoffsetx>-4</textoffsetx>
-		            <textoffsety>60</textoffsety>
-		            <textwidth>100</textwidth>
-		            <wrapmultiline>true</wrapmultiline>
-                    <label>Forward</label>
-                    <texturefocus colordiffuse="FF34c4d9">OSD/ForwardFO.png</texturefocus>
-                    <texturenofocus>OSD/ForwardNF.png</texturenofocus>
-                    <onclick>playercontrol(forward)</onclick>
-                </control>
-				
-                <control type="button" id="406">
-                    <description>Skip Forward</description>
-                    <width>60</width>
-		            <height>60</height>
-		            <font>Mini</font>
-		            <focusedcolor>FFE8E8E8</focusedcolor>
-		            <disabledcolor>FFBBBBBB</disabledcolor>
-		            <aspectratio>keep</aspectratio>
-		            <align>center</align>
-		            <aligny>top</aligny>
-		            <textoffsetx>-4</textoffsetx>
-		            <textoffsety>60</textoffsety>
-		            <textwidth>100</textwidth>
-		            <wrapmultiline>true</wrapmultiline>
-                    <label>$LOCALIZE[209]</label>
-                    <texturefocus colordiffuse="FF34c4d9">OSD/NextTrackFO.png</texturefocus>
-                    <texturenofocus>OSD/NextTrackNF.png</texturenofocus>
-                    <onclick>playercontrol(next)</onclick>
-                </control>
-				
-                <control type="togglebutton" id="400">
-                    <description>Random</description>
-                    <width>60</width>
-		            <height>60</height>
-		            <font>Mini</font>
-		            <focusedcolor>FFE8E8E8</focusedcolor>
-		            <disabledcolor>FFBBBBBB</disabledcolor>
-		            <aspectratio>keep</aspectratio>
-		            <align>center</align>
-		            <aligny>top</aligny>
-		            <textoffsetx>-4</textoffsetx>
-		            <textoffsety>60</textoffsety>
-		            <textwidth>100</textwidth>
-		            <wrapmultiline>true</wrapmultiline>
-                    <texturefocus colordiffuse="FF34c4d9">OSD/RandomOffFO.png</texturefocus>
-                    <texturenofocus>OSD/RandomOffNF.png</texturenofocus>
-                    <label>Random[CR]Off</label>
-                    <usealttexture>Playlist.IsRandom</usealttexture>
-                    <alttexturefocus colordiffuse="FF34c4d9">OSD/RandomOnFO.png</alttexturefocus>
-                    <alttexturenofocus>OSD/RandomOnNF.png</alttexturenofocus>
-                    <altlabel>Random[CR]On</altlabel>
-                    <onclick>playercontrol(random)</onclick>
-                </control>	
-				
-                <control type="button" id="407">
-                    <description>Repeat</description>
-                    <width>60</width>
-		            <height>60</height>
-		            <font>Mini</font>
-		            <focusedcolor>FFE8E8E8</focusedcolor>
-		            <disabledcolor>FFBBBBBB</disabledcolor>
-		            <aspectratio>keep</aspectratio>
-		            <align>center</align>
-		            <aligny>top</aligny>
-		            <textoffsetx>-4</textoffsetx>
-		            <textoffsety>60</textoffsety>
-		            <textwidth>100</textwidth>
-		            <wrapmultiline>true</wrapmultiline>
-                    <texturefocus>-</texturefocus>
-                    <texturenofocus>-</texturenofocus>
-                    <onclick>playercontrol(repeat)</onclick>
-                </control>
-				
-            </control>
-			
+            <include>Animation.FadeIn</include>
+            <include>Animation.FadeOut</include>
             <control type="group">
-                <posx>783</posx>
-                <posy>22</posy>
-				
-                <control type="image" id="408">
-                    <width>60</width>
-		            <height>60</height>
-		            <font>Mini</font>
-		            <focusedcolor>FFE8E8E8</focusedcolor>
-		            <disabledcolor>FFBBBBBB</disabledcolor>
-		            <aspectratio>keep</aspectratio>
-		            <align>center</align>
-		            <aligny>top</aligny>
-		            <textoffsetx>-4</textoffsetx>
-		            <textoffsety>60</textoffsety>
-		            <textwidth>100</textwidth>
-		            <wrapmultiline>true</wrapmultiline>
-                    <texture colordiffuse="FF34c4d9">OSD/RepeatNF.png</texture>
-                    <visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
-                    <visible>!Control.HasFocus(407)</visible>
-                </control>
-				
-                <control type="image" id="409">
-                    <width>60</width>
-		            <height>60</height>
-		            <font>Mini</font>
-		            <focusedcolor>FFE8E8E8</focusedcolor>
-		            <disabledcolor>FFBBBBBB</disabledcolor>
-		            <aspectratio>keep</aspectratio>
-		            <align>center</align>
-		            <aligny>top</aligny>
-		            <textoffsetx>-4</textoffsetx>
-		            <textoffsety>60</textoffsety>
-		            <textwidth>100</textwidth>
-		            <wrapmultiline>true</wrapmultiline>
-                    <texture colordiffuse="FF34c4d9">OSD/RepeatFO.png</texture>
-                    <visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
-                    <visible>Control.HasFocus(407)</visible>
-                </control>
-				
-                <control type="label">
-                    <width>60</width>
-		            <height>60</height>
-		            <font>Mini</font>
-		            <focusedcolor>FFE8E8E8</focusedcolor>
-		            <disabledcolor>FFBBBBBB</disabledcolor>
-		            <aspectratio>keep</aspectratio>
-		            <align>center</align>
-		            <aligny>top</aligny>
-		            <textoffsetx>-4</textoffsetx>
-		            <textoffsety>60</textoffsety>
-		            <textwidth>100</textwidth>
-		            <wrapmultiline>true</wrapmultiline>
-                    <visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
-                    <label>Repeat[CR]Off</label>
-                </control>
-				
-                <control type="image" id="410">
-                    <width>60</width>
-		            <height>60</height>
-		            <font>Mini</font>
-		            <focusedcolor>FFE8E8E8</focusedcolor>
-		            <disabledcolor>FFBBBBBB</disabledcolor>
-		            <aspectratio>keep</aspectratio>
-		            <align>center</align>
-		            <aligny>top</aligny>
-		            <textoffsetx>-4</textoffsetx>
-		            <textoffsety>60</textoffsety>
-		            <textwidth>100</textwidth>
-		            <wrapmultiline>true</wrapmultiline>
-                    <texture colordiffuse="FF34c4d9">OSD/RepeatOneNF.png</texture>
-                    <visible>Playlist.IsRepeatOne</visible>
-                    <visible>!Control.HasFocus(407)</visible>
-                </control>
-				
-                <control type="image" id="411">
-                    <width>60</width>
-		            <height>60</height>
-		            <font>Mini</font>
-		            <focusedcolor>FFE8E8E8</focusedcolor>
-		            <disabledcolor>FFBBBBBB</disabledcolor>
-		            <aspectratio>keep</aspectratio>
-		            <align>center</align>
-		            <aligny>top</aligny>
-		            <textoffsetx>-4</textoffsetx>
-		            <textoffsety>60</textoffsety>
-		            <textwidth>100</textwidth>
-		            <wrapmultiline>true</wrapmultiline>
-                    <texture colordiffuse="FF34c4d9">OSD/RepeatOneFO.png</texture>
-                    <visible>Playlist.IsRepeatOne</visible>
-                    <visible>Control.HasFocus(407)</visible>
-                </control>
-				
-                <control type="label">
-                    <width>60</width>
-		            <height>60</height>
-		            <font>Mini</font>
-		            <focusedcolor>FFE8E8E8</focusedcolor>
-		            <disabledcolor>FFBBBBBB</disabledcolor>
-		            <aspectratio>keep</aspectratio>
-		            <align>center</align>
-		            <aligny>top</aligny>
-		            <textoffsetx>-4</textoffsetx>
-		            <textoffsety>60</textoffsety>
-		            <textwidth>100</textwidth>
-		            <wrapmultiline>true</wrapmultiline>
-                    <visible>Playlist.IsRepeatOne</visible>
-                    <label>Repeat[CR]One</label>
-                </control>
-				
-                <control type="image" id="412">
-                    <width>60</width>
-		            <height>60</height>
-		            <font>Mini</font>
-		            <focusedcolor>FFE8E8E8</focusedcolor>
-		            <disabledcolor>FFBBBBBB</disabledcolor>
-		            <aspectratio>keep</aspectratio>
-		            <align>center</align>
-		            <aligny>top</aligny>
-		            <textoffsetx>-4</textoffsetx>
-		            <textoffsety>60</textoffsety>
-		            <textwidth>100</textwidth>
-		            <wrapmultiline>true</wrapmultiline>
-                    <texture colordiffuse="FF34c4d9">OSD/RepeatAllNF.png</texture>
-                    <visible>Playlist.IsRepeat</visible>
-                    <visible>!Control.HasFocus(407)</visible>
-                </control>
-				
-                <control type="image" id="413">
-                    <width>60</width>
-		            <height>60</height>
-		            <font>Mini</font>
-		            <focusedcolor>FFE8E8E8</focusedcolor>
-		            <disabledcolor>FFBBBBBB</disabledcolor>
-		            <aspectratio>keep</aspectratio>
-		            <align>center</align>
-		            <aligny>top</aligny>
-		            <textoffsetx>-4</textoffsetx>
-		            <textoffsety>60</textoffsety>
-		            <textwidth>100</textwidth>
-		            <wrapmultiline>true</wrapmultiline>
-                    <texture colordiffuse="FF34c4d9">OSD/RepeatAllFO.png</texture>
-                    <visible>Playlist.IsRepeat</visible>
-                    <visible>Control.HasFocus(407)</visible>
-                </control>
-				
-                <control type="label">
-                    <width>60</width>
-		            <height>60</height>
-		            <font>Mini</font>
-		            <focusedcolor>FFE8E8E8</focusedcolor>
-		            <disabledcolor>FFBBBBBB</disabledcolor>
-		            <aspectratio>keep</aspectratio>
-		            <align>center</align>
-		            <aligny>top</aligny>
-		            <textoffsetx>-4</textoffsetx>
-		            <textoffsety>60</textoffsety>
-		            <textwidth>100</textwidth>
-		            <wrapmultiline>true</wrapmultiline>
-                    <visible>Playlist.IsRepeat</visible>
-                    <label>Repeat[CR]All</label>
-                </control>
-				
-            </control>
-			
-            <control type="group">
-                <posx>1023</posx>
-				
-                <control type="image">
-                    <width>960</width>
-                    <height>188</height>
-                    <texture colordiffuse="FFE8E8E8">common/white.png</texture>
-                    <aspectratio>stretch</aspectratio>
-                </control>
-				
-                <control type="image">
-                    <width>3</width>
-                    <height>188</height>
-                    <texture>common/white.png</texture>
-                </control>
-				
-                <control type="image">
-                    <posx>3</posx>
-                    <width>188</width>
-                    <height>188</height>
-                    <texture>$INFO[MusicPlayer.Cover]</texture>
-                    <aspectratio aligny="top">scale</aspectratio>
-					<visible>Player.HasAudio</visible>
-                </control>
-				
-                <control type="grouplist">
-                    <posx>219</posx>
-                    <posy>15</posy>
-                    <width>735</width>
-                    <height>174</height>
-                    <itemgap>15</itemgap>
 
-                    <control type="label">
-                        <width>750</width>
-                        <height>38</height>
-                        <label>$INFO[MusicPlayer.Artist]</label>
-                        <font>Medium</font>
+                <control type="group">
+				    <animation effect="slide" end="334" start="0" time="75" tween="quadratic" condition="Window.IsActive(musicosd)">Conditional</animation>
+                    <top>25</top>
+                    <left>360</left>
+ 
+
+				    <!--<control type="image">
+                        <left>0</left>
+                        <top>90</top>
+                        <width>1200</width>
+                        <height>900</height>
+                        <texture border="5" colordiffuse="Dark3">common/white.png</texture>
+			        </control>-->
+					<control type="image">
+			            <description>panel background image</description>
+			            <posx>0</posx>
+			            <posy>0</posy>
+			            <width>1220</width>
+                        <height>920</height>
+			            <texture border="5" colordiffuse="Black">common/white.png</texture>
+                    </control>
+		            <control type="image">
+			            <description>background image</description>
+			            <posx>10</posx>
+			            <posy>10</posy>
+			            <width>1200</width>
+                        <height>900</height>
+			            <texture border="12" colordiffuse="Panel">buttons/dialoge_inner.png</texture>
+                    </control>
+		            <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1220</width>
+                        <height>920</height>
+                        <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
+                    </control>
+		            <control type="image">
+                        <posx>11</posx>
+                        <posy>11</posy>
+                        <width>1198</width>
+                        <height>90</height>
+                        <texture border="12" colordiffuse="Dark4">buttons/dialoge_inner.png</texture>
+                    </control>
+		            <control type="image">
+                        <posx>10</posx>
+                        <posy>98</posy>
+                        <width>1200</width>
+                       <height>4</height>
+                       <texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+                    </control>
+			
+            <!-- Close Window Button -->
+			        <control type="button" id="100">
+				        <description>Close Window button</description>
+				        <left>38</left>
+				        <top>30</top>
+				        <width>120</width>
+				        <height>50</height>
+						<onleft>110</onleft>
+                        <onright>110</onright>
+                        <onup>110</onup>
+                        <ondown>110</ondown>
+				        <label>[B]Close[/B]</label>
+				        <font>Tiny</font>
+				        <align>center</align>
+				        <aligny>center</aligny>
+				        <textoffsetx></textoffsetx>
+				        <textoffsety>-12</textoffsety>
+				        <onclick>Action(close)</onclick>
+				        <texturefocus border="15" colordiffuse="$VAR[ButtonFocusColour]">common/box.png</texturefocus>
+				        <texturenofocus border="15" colordiffuse="$VAR[ButtonColour]">common/box.png</texturenofocus>
+			        </control>	
+					<control type="label">
+                        <description>Artist & Song label</description>
+                        <left>160</left>
+                        <top>24</top>
+                        <width>1040</width>
+                        <height>50</height>
+                        <font>Small</font>
+                        <label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Title]</label>
+                        <align>center</align>
                         <aligny>center</aligny>
-						<textcolor>FF333333</textcolor>
-						<visible>Player.HasAudio</visible>
+                        <textcolor>Dark1</textcolor>
+						<scroll>true</scroll>
+                    </control>
+					<control type="image">
+                        <left>38</left>
+                        <top>140</top>
+                        <width>1130</width>
+                        <height>2</height>
+                        <texture colordiffuse="White">common/separator.png</texture>
+                    </control>
+                    <!-- ** Required ** Do not change <id> or <type> (Smooth scrolling list for lyrics) -->
+                    <control type="list" id="110">
+                        <left>35</left>
+                        <top>155</top>
+                        <width>1130</width>
+                        <height>655</height>
+                        <onleft>100</onleft>
+                        <onright>111</onright>
+                        <onup>110</onup>
+                        <ondown>110</ondown>
+                        <pagecontrol>111</pagecontrol>
+                        <scrolltime>200</scrolltime>
+                        <itemlayout height="38">
+                            <control type="label">
+                                <width>1130</width>
+								<height>38</height>
+                                <align>center</align>
+								<aligny>center</aligny>
+                                <selectedcolor>$VAR[ColourHighlight]</selectedcolor>
+                                <info>ListItem.Label</info>
+                                <textcolor>$VAR[OSDPanelWhite70]</textcolor>
+                                <font>Lyrics</font>
+                            </control>
+                        </itemlayout>
+                        <focusedlayout height="38">
+                            <control type="label">
+                                <width>1130</width>
+								<height>38</height>
+                                <align>center</align>
+								<aligny>center</aligny>
+                                <textcolor>$VAR[ColourHighlight]</textcolor>
+                                <selectedcolor>$VAR[ColourHighlight]</selectedcolor>
+                                <info>ListItem.Label</info>
+                                <font>Lyrics</font>
+								<visible>!Control.HasFocus(110)</visible>
+                            </control>
+							<control type="label">
+                                <width>1130</width>
+                                <height>38</height>
+                                <font>Lyrics</font>
+                                <aligny>center</aligny>
+                                <align>center</align>
+                                <textcolor>$VAR[ColourHighlight]</textcolor>
+                                <align>left</align>
+                                <label fallback="--">$INFO[ListItem.Label]</label>
+                                <visible>Control.HasFocus(110)</visible>
+                            </control>
+                        </focusedlayout>
                     </control>
 					
+			<!-- Next page button -->
+                    <control type="spincontrolex" id="111">
+                        <description>Next page button</description>
+                        <right>362</right>
+                        <top>845</top>
+						<width>1180</width>
+						<height>60</height>
+                        <subtype>page</subtype>
+                        <font>Small</font>
+                        <onleft>110</onleft>
+                        <onright>110</onright>
+                        <ondown>110</ondown>
+                        <onup>110</onup>
+                        <textcolor>$VAR[ColourHighlight2]</textcolor>
+						<selectedcolor>$VAR[ColourHighlight]</selectedcolor>
+						<texturefocus colordiffuse="$VAR[ColourHighlight]">common/white.png</texturefocus>
+                        <showonepage>true</showonepage>
+                        <visible>Control.IsVisible(110)</visible>
+                    </control>
+			
+                    <control type="label" id="2">
+                        <description>Pick label</description>
+                        <left>38</left>
+                        <top>145</top>
+                        <width>930</width>
+                        <height>45</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>SmallBold</font>
+                        <label>$ADDON[script.cu.lrclyrics 32005]</label>
+                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
+                        <!--visible>Control.IsVisible(120) + ![Control.IsVisible(100) | Control.IsVisible(110)]</visible-->
+				        <visible>Control.IsVisible(120) + !Control.IsVisible(110)</visible>
+                    </control>					
+					
+                    <!-- ** Required ** Do not change <id> or <type> (Song Chooser if it gets it wrong) -->
+                    <control type="list" id="120">
+                        <left>35</left>
+                        <top>200</top>
+                        <width>1130</width>
+                        <height>608</height>
+                        <onleft>100</onleft>
+                        <onright>121</onright>
+                        <onup>120</onup>
+                        <ondown>120</ondown>
+                        <pagecontrol>121</pagecontrol>
+                        <scrolltime>200</scrolltime>
+						<animation effect="slide" start="0,0" end="45,0" time="0" condition="!Control.IsVisible(121)">Conditional</animation>
+                        <itemlayout height="60">
+						    <control type="image">
+                                <left>0</left>
+                                <top>0</top>
+                                <width>1130</width>
+                                <height>62</height>
+                                <texture border="8">common/separator.png</texture>
+                            </control>
+                            <control type="label">
+                                <left>15</left>
+                                <top>0</top>
+                                <width>1100</width>
+                                <height>60</height>
+                                <selectedcolor>$VAR[ColourHighlight]</selectedcolor>
+                                <info>ListItem.Label</info>
+                                <textcolor>$VAR[OSDPanelWhite70]</textcolor>
+                                <font>Small</font>
+                            </control>
+                        </itemlayout>
+                        <focusedlayout height="60">
+						    <control type="image">
+                                <left>0</left>
+                                <top>0</top>
+                                <width>1130</width>
+                                <height>62</height>
+                                <visible>!Control.HasFocus(120)</visible>
+                                <texture border="8">common/white.png</texture>
+                            </control>
+							<control type="image">
+                                <left>0</left>
+                                <top>0</top>
+                                <width>1130</width>
+                                <height>62</height>
+                                <visible>Control.HasFocus(120)</visible>
+                                <texture border="8">buttons/roundedbutton-focus.png</texture>
+                            </control>
+                            <control type="label">
+                                <left>15</left>
+                                <top>0</top>
+                                <width>1100</width>
+                                <height>60</height>
+                                <textcolor>$VAR[ColourHighlight]</textcolor>
+                                <selectedcolor>$VAR[ColourHighlight]</selectedcolor>
+                                <info>ListItem.Label</info>
+                                <font>Small</font>
+                            </control>
+                        </focusedlayout>
+                    </control>
+
+                    <control type="spincontrolex" id="121">
+                        <description>Next page button</description>
+                        <right>352</right>
+                        <top>845</top>	
+						<textoffsetx>15</textoffsetx>
+                        <subtype>page</subtype>
+                        <font>Small</font>
+                        <onleft>120</onleft>
+                        <onright>120</onright>
+                        <ondown>120</ondown>
+                        <onup>120</onup>
+                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
+						<selectedcolor>$VAR[ColourHighlight]</selectedcolor>
+						<texturefocus colordiffuse="$VAR[ColourHighlight]">common/white.png</texturefocus>
+                        <showonepage>true</showonepage>
+                        <visible>Control.IsVisible(120)</visible>
+                    </control>					
+					<!-- separator -->
+                    <control type="image">
+                        <left>35</left>
+                        <top>840</top>
+                        <width>1130</width>
+                        <height>2</height>
+				        <texture colordiffuse="White">common/separator.png</texture>
+                    </control>
+					<!-- Scraper label -->
                     <control type="label">
-                        <width>750</width>
-                        <height>24</height>
-                        <label>$INFO[MusicPlayer.Album]</label>
-                        <font>Tiny</font>
-						<textcolor>FF333333</textcolor>
-						<visible>Player.HasAudio</visible>
+                        <left>38</left>
+                        <top>845</top>
+                        <width>930</width>
+                        <height>45</height>
+                        <label>Lyrics source : $INFO[Control.GetLabel(200)]</label>
+                        <font>Small</font>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <textcolor>Dark1</textcolor>
+                        <shadowcolor>Dark4</shadowcolor>
                     </control>
 					
-                    <control type="label">
-                        <width>750</width>
-                        <height>24</height>
-                        <label>$INFO[MusicPlayer.Title]</label>
-                        <font>Tiny</font>
-						<textcolor>FF333333</textcolor>
-						<visible>Player.HasAudio</visible>
-                    </control>
 					
-                    <control type="label">
-                        <width>750</width>
-                        <height>24</height>
-                        <label>[B]$INFO[Player.Time] / $INFO[Player.Duration][/B]</label>
-                        <font>Tiny</font>
-						<textcolor>FF333333</textcolor>
-						<visible>Player.HasAudio</visible>
+                    <control type="label" id="200">
+                        <description>Scraper label</description>
+                        <visible>false</visible>
                     </control>
-					
+
                 </control>
-				
+
             </control>
-			
+
         </control>
-		
-        <control type="group">
-            <posy>285</posy>
-            <include>Common_Animation_Dialog</include>
-			
-            <control type="image">
-                <width>1920</width>
-                <height>710</height>
-                <texture colordiffuse="Black70">common/white.png</texture>
-                <aspectratio>stretch</aspectratio>
-            </control>
-			<control type="image">
-                <width>1920</width>
-                <height>710</height>
-                <texture colordiffuse="Black70">common/white.png</texture>
-                <aspectratio>stretch</aspectratio>
-            </control>
-            <control type="label" id="200">
-                <description>Scraper Label</description>
-                <posx>2769</posx>
-            </control>
-			
-            <!-- ** Required ** Do not change <id> or <type> -->
-            <control type="list" id="110">
-                <posy>15</posy>
-                <width>1920</width>
-                <height>667</height>
-                <onleft>111</onleft>
-                <onright>111</onright>
-                <onup>999</onup>
-                <ondown>110</ondown>
-                <viewtype label="535">list</viewtype>
-                <pagecontrol>111</pagecontrol>
-                <scrolltime>200</scrolltime>
-                <itemlayout height="44">
-				
-                    <control type="label">
-                        <width>1920</width>
-                        <height>33</height>
-                        <info>ListItem.Label</info>
-                        <font>Small</font>
-                        <align>center</align>
-                        <textcolor>FF000000</textcolor>
-                    </control>					
-                </itemlayout>				
-                <focusedlayout height="44">				
-                    <control type="image">
-                        <width>1920</width>
-                        <height>44</height>
-                        <texture colordiffuse="CC21B75BC">common/white.png</texture>
-                        <aspectratio>stretch</aspectratio>
-                        <animation effect="fade" start="100" end="50" condition="!Control.HasFocus(110)">Conditional</animation>
-                        <visible>Control.HasFocus(110)</visible>
-                    </control>					
-                    <control type="label">
-                        <width>1920</width>
-                        <height>33</height>
-						<textcolor>FFE8E8E8</textcolor>
-                        <label fallback="-- --">$INFO[ListItem.Label]</label>
-                        <font>Small</font>
-                        <align>center</align>
-                    </control>					
-                </focusedlayout>				
-            </control>
-			
-            <control type="spincontrol" id="111">
-                <description>Next page button</description>
-				<posx>105r</posx>
-		        <posy>650</posy>
-		        <width>38</width>
-		        <height>33</height>
-		        <font>Small</font>
-		        <align>right</align>
-		        <subtype>page</subtype>
-		        <ondown>999</ondown>
-		        <textcolor>FF000000</textcolor>
-				<focusedcolor>CC21B75BC</focusedcolor>
-		        <textureup flipy="true" colordiffuse="33000000">buttons/spin-down.png</textureup>
-                <texturedown colordiffuse="33000000">buttons/spin-down.png</texturedown>
-		        <textureupfocus flipy="true" colordiffuse="CC21B75BC">buttons/spin-down.png</textureupfocus>
-                <texturedownfocus colordiffuse="CC21B75BC">buttons/spin-down.png</texturedownfocus>
-		        <showonepage>false</showonepage>
-                <onleft>110</onleft>
-                <onright>110</onright>
-                <onup>110</onup>
-                <visible>Control.IsVisible(110)</visible>
-            </control>
-			
-            <!-- ** Required ** Do not change <id> or <type> -->
-            <control type="list" id="120">
-                <posy>15</posy>
-                <width>1920</width>
-                <height>480</height>
-                <onleft>121</onleft>
-                <onright>121</onright>
-                <onup>999</onup>
-                <ondown>120</ondown>
-                <viewtype label="535">list</viewtype>
-                <pagecontrol>121</pagecontrol>
-                <scrolltime>200</scrolltime>				
-                <itemlayout height="44">			
-                    <control type="label">
-                        <width>1920</width>
-                        <height>33</height>
-                        <info>ListItem.Label</info>
-                        <font>Small</font>
-                        <align>center</align>
-                        <textcolor>FFBBBBBB</textcolor>
-                    </control>					
-                </itemlayout>				
-                <focusedlayout height="44">				
-                    <control type="image">
-                        <width>1920</width>
-                        <height>44</height>
-                        <texture colordiffuse="CC21B75BC">common/white.png</texture>
-                        <aspectratio>stretch</aspectratio>
-                        <animation effect="fade" start="100" end="50" condition="!Control.HasFocus(110)">Conditional</animation>
-                        <visible>Control.HasFocus(120)</visible>
-                    </control>					
-                    <control type="label">
-                        <width>1920</width>
-                        <height>33</height>
-                        <label fallback="-- --">$INFO[ListItem.Label]</label>
-                        <font>Small</font>
-                        <align>center</align>
-                    </control>					
-                </focusedlayout>                
-            </control>
-			
-            <control type="spincontrol" id="121">
-                <description>Next page button</description>
-				<posx>105r</posx>
-		        <posy>450</posy>
-		        <width>38</width>
-		        <height>33</height>
-		        <font>Small</font>
-		        <align>right</align>
-		        <subtype>page</subtype>
-		        <ondown>999</ondown>
-		        <textcolor>FF000000</textcolor>
-		        <focusedcolor>CC21B75BC</focusedcolor>
-		        <textureup flipy="true" colordiffuse="33000000">buttons/spin-down.png</textureup>
-                <texturedown colordiffuse="33000000">buttons/spin-down.png</texturedown>
-		        <textureupfocus flipy="true" colordiffuse="CC21B75BC">buttons/spin-down.png</textureupfocus>
-                <texturedownfocus colordiffuse="CC21B75BC">buttons/spin-down.png</texturedownfocus>
-		        <showonepage>false</showonepage>
-                <onleft>120</onleft>
-                <onright>120</onright>
-                <onup>120</onup>
-                <visible>Control.IsVisible(120)</visible>
-            </control>
-			
-        </control>
-		
     </controls>
-	
 </window>

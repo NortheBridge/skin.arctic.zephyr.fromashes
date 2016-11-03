@@ -258,23 +258,21 @@
             </control>
             <control type="group">
                 <control type="image">
-				    <visible>Container(3110).HasPrevious</visible>
                     <description>arrow image</description>
 					<animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="800" pulse="true" reversible="false" condition="true">Conditional</animation>
                     <centerleft>50%</centerleft>
                     <posy>130</posy>
-                    <width>18</width>
-                    <height>18</height>
+                    <width>16</width>
+                    <height>16</height>
                     <texture colordiffuse="Dark2" flipy="true">common/arrow-small.png</texture>
                 </control>
                 <control type="image">
-				    <visible>Container(3110).HasNext</visible>
                     <description>arrow image</description>
 					<animation effect="fade" start="100" end="50" tween="sine" easing="inout" time="800" pulse="true" reversible="false" condition="true">Conditional</animation>
                     <centerleft>50%</centerleft>
                     <posy>642</posy>
-                    <width>18</width>
-                    <height>18</height>
+                    <width>16</width>
+                    <height>16</height>
                     <texture colordiffuse="Dark2" flipy="false">common/arrow-small.png</texture>
                 </control>
             </control>

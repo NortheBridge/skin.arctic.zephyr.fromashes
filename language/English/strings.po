@@ -284,10 +284,6 @@ msgctxt "#31167"
 msgid "[B]View System Information[/B][CR][CR] •     Summary[CR] •     Storage[CR] •     Network[CR] •     Video[CR] •     Hardware[CR] •     PVR Backend"
 msgstr ""
 
-msgctxt "#311671"
-msgid "[B]File Management[/B][CR][CR] •     File browser[CR] •     Add file source[CR] •     Edit file source"
-msgstr ""
-
 msgctxt "#31168"
 msgid "Startup video"
 msgstr ""
@@ -642,10 +638,6 @@ msgstr ""
 
 msgctxt "#31265"
 msgid "Fanart"
-msgstr ""
-
-msgctxt "#31274"
-msgid "Allow widget reloading"
 msgstr ""
 
 msgctxt "#31712"

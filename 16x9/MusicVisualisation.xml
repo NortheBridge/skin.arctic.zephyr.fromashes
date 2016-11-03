@@ -3,35 +3,12 @@
 <window id="2006">
     <defaultcontrol always="true">-</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-	<!--<onload condition="Skin.HasSetting(osd.showmusicinfo)">ActivateWindow(musicosd)</onload>-->
     <controls>
-	    
         <control type="visualisation" id="2">
             <visible>Skin.HasSetting(OSDVisualisation.ShowFanart) | [!Skin.HasSetting(musicvis.fanartfallback) + [!System.HasAddon(script.artistslideshow) | Skin.HasSetting(ArtistSlideShow.Disabled)]]</visible>
             <description>visualisation</description>
             <include>Dimensions_Fullscreen</include>
         </control>
-		
-		<control type="progress" id="23" description="Progress Bar">
-            <posx>84</posx>
-            <posy>-750</posy>
-            <width>747</width>
-			<height>15</height>
-            <info>Player.Progress</info>
-            <visible>true</visible>
-        </control>
-		
-		<control type="image">
-            <aspectratio>scale</aspectratio>
-            <include>Dimensions_Fullscreen</include>
-            <texture background="true">$INFO[Player.Art(fanart)]</texture>
-            <visible>String.IsEqual(Skin.String(musicvis.background),fanart)</visible>
-			<visible>!Skin.HasSetting(osd.flipinfo)</visible>
-            <animation effect="fade" start="100" end="40" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart) + Visualisation.Enabled">Conditional</animation>
-            <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
-            <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
-        </control>
-		
         <control type="image">
             <aspectratio>scale</aspectratio>
             <include>Dimensions_Fullscreen</include>
@@ -41,7 +18,7 @@
             <animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart)">Conditional</animation>
             <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
             <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
-        </control>-->
+        </control>
         <control type="multiimage">
             <aspectratio>scale</aspectratio>
             <include>Dimensions_Fullscreen</include>
@@ -51,11 +28,11 @@
             <loop>yes</loop>
             <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
             <visible>System.HasAddon(script.artistslideshow) + String.IsEqual(Skin.String(musicvis.background),artistslideshow)</visible>
-            <animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart) + Visualisation.Enabled">Conditional</animation>
+            <animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart)">Conditional</animation>
             <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
             <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
         </control>
-		<!--AlbumWall Visualisation-->
+		
         <control type="group">
             <visible>String.IsEqual(Skin.String(musicvis.background),albumwall)</visible>
             <control type="panel" id="9032">
@@ -99,9 +76,24 @@
                 <content>special://skin/extras/playlists/AlbumWall.xsp</content>
             </control>
         </control>		
-		
-		
-        <control type="group">		    
+
+        <control type="group">
+            <visible>Skin.HasSetting(furniture.logo)</visible>
+            <left>1622</left>
+            <top>19</top>
+            <include>Animation.FadeIn</include>
+            <include>Animation.FadeOut</include>
+            <control id="8308" type="image">
+                <width>258</width>
+                <height>130</height>
+                <texture fallback="empty.png">$VAR[MusicPlayerClearLogo]</texture>
+                <aspectratio align="center" aligny="center">keep</aspectratio>
+                <animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
+                <animation effect="rotate" end="10" center="auto" condition="true" time="200">conditional</animation>
+            </control>
+        </control>
+
+        <control type="group">
             <include>Animation.FadeIn</include>
             <include>Animation.FadeOut</include>
             <control type="image">
@@ -109,8 +101,9 @@
                 <texture border="2" colordiffuse="$VAR[OSDPanel]">common/white.png</texture>
                 <animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
             </control>
-			<visible>!Skin.HasSetting(osd.flipinfo)</visible>
-            <visible>Window.IsActive(MusicOSD.xml) | Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsVisible(script-cu-lrclyrics-main.xml) | Skin.HasSetting(osd.showmusicinfo)</visible>
+			<visible>Skin.HasSetting(osd.showmusicinfo)</visible>
+			<visible>Window.IsActive(MusicOSD.xml) | Window.IsVisible(script-cu-lrclyrics-main.xml) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo</visible>
+            <!--<visible>Window.IsActive(MusicOSD.xml) | Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsVisible(script-cu-lrclyrics-main.xml) | Skin.HasSetting(osd.showmusicinfo)</visible>-->
             <control type="group">
                 <height>500</height>
                 <bottom>60</bottom>
@@ -152,7 +145,7 @@
                         <width>460</width>
                         <height>460</height>
                         <fadetime>400</fadetime>
-                        <texture diffuse="thumbs/cdcover_mask2.png" background="true" fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture> 
+                        <texture fallback="DefaultAlbumCover.png" diffuse="thumbs/cdcover_mask2.png">$VAR[PlayerPoster]</texture>
                         <aspectratio aligny="center" align="center">scale</aspectratio>
                         <bordertexture border="-90">thumbs/cd_shadow2.png</bordertexture>
                         <visible>Skin.HasSetting(widgets.music.rounded)</visible>
@@ -162,7 +155,7 @@
                         <width>460</width>
                         <height>460</height>
                         <fadetime>400</fadetime>
-                        <texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
+                        <texture fallback="DefaultAlbumCover.png">$VAR[PlayerPoster]</texture>
                         <aspectratio aligny="center" align="center">scale</aspectratio>
                         <bordertexture border="-90">thumbs/cd_shadow2.png</bordertexture>
                         <visible>!Skin.HasSetting(widgets.music.rounded)</visible>
@@ -218,8 +211,7 @@
                                     <width>64</width>
                                     <height>64</height>
                                     <colordiffuse>$VAR[ColourHighlight]</colordiffuse>
-                                    <texture>flags/$VAR[OSDMusicFlagstar1].png</texture>-->
-									<texture>$INFO[MusicPlayer.Rating,stars/,.png]</texture>
+                                    <texture>flags/$VAR[OSDMusicFlagstar1].png</texture>
                                 </control>
                                 <control type="image">
                                     <posx>-48</posx>
@@ -279,16 +271,16 @@
                                     <width>95</width>
                                     <height>64</height>
                                     <aspectratio>keep</aspectratio>
-                                    <texture colordiffuse="$VAR[OSDPanelWhite70]">skin://media/music/recordlabel/$INFO[MusicPlayer.Property(Album_Label),,.png]</texture>
+                                    <texture colordiffuse="$VAR[OSDPanelWhite70]">resource://resource.images.recordlabels.white/$INFO[MusicPlayer.Property(Album_Label),,.png]</texture>
                                 </control>
                             </control>
+
                             <control type="label" description="AlbumYear">
                                 <width>100%</width>
                                 <height>40</height>
-                                <font>SmalllBold</font>
+                                <font>SmallBold</font>
                                 <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-								<label>[COLOR=$VAR[ColourHighlight]][I]$INFO[MusicPlayer.Album][/I][/COLOR]$INFO[MusicPlayer.Year,  •  ,]</label>
-                                <!--<label>$VAR[PlayerPlotBox]</label>-->
+                                <label>$VAR[PlayerPlotBox]</label>
                             </control>
                             <control type="label" description="Other info">
                                 <top>20</top>
@@ -297,8 +289,7 @@
                                 <font>Tiny</font>
                                 <align>left</align>
                                 <textcolor>$VAR[OSDPanelWhite30]</textcolor>
-                               <!-- <label>$INFO[musicplayer.Codec,$LOCALIZE[21446]: ,]$INFO[musicplayer.Bitrate, · $LOCALIZE[623]: ,kbps][CR]$INFO[musicplayer.bitspersample,$LOCALIZE[612]: ,]$INFO[musicplayer.Samplerate, · $LOCALIZE[613]: ,kHz][CR]$INFO[musicplayer.Channels,$LOCALIZE[21444]: ]</label>-->
-							    <label>$LOCALIZE[21446]: [COLOR=$VAR[ColourHighlight]]$INFO[musicplayer.Codec][/COLOR]  •  $LOCALIZE[623]: [COLOR=$VAR[ColourHighlight]]$INFO[MusicPlayer.Bitrate][/COLOR]kbps[CR]$LOCALIZE[613]: [COLOR=$VAR[ColourHighlight]]$INFO[MusicPlayer.Samplerate][/COLOR]kHz  •  [COLOR=$VAR[ColourHighlight]]$INFO[MusicPlayer.BitsPerSample][/COLOR] Bits [CR]$LOCALIZE[21444]: [COLOR=$VAR[ColourHighlight]]$INFO[MusicPlayer.Channels][/COLOR]</label>-->
+                                <label>$INFO[musicplayer.Codec,$LOCALIZE[21446]: ,]$INFO[musicplayer.Bitrate, · $LOCALIZE[623]: ,kbps][CR]$INFO[musicplayer.bitspersample,$LOCALIZE[612]: ,]$INFO[musicplayer.Samplerate, · $LOCALIZE[613]: ,kHz][CR]$INFO[musicplayer.Channels,$LOCALIZE[21444]: ]</label>
                             </control>
                             <control type="label" description="NextUp">
                                 <top>5</top>
@@ -352,23 +343,9 @@
                     </control>
                 </control>
             </control>
-		</control>	
-	    <control type="group">
-            <visible>Skin.HasSetting(furniture.logo) + !Skin.HasSetting(osd.flipinfo)</visible>
-            <left>1435</left>
-            <top>320</top>
-            <include>Animation.FadeIn</include>
-            <include>Animation.FadeOut</include>
-            <control id="8308" type="image">
-                <width>400</width>
-                <height>200</height>
-                <texture fallback="empty.png">$VAR[MusicPlayerClearLogo]</texture>
-                <aspectratio align="center" aligny="center">keep</aspectratio>
-            </control>
-		</control>	
-		
-        <!--<control type="group">
-            <visible>musicplayer.Codec</visible>
+        </control>
+        <control type="group">
+            <visible>Player.ShowCodec</visible>
             <left>70</left>
             <posy>70</posy>
             <width>1420</width>
@@ -381,7 +358,7 @@
                 <posy>0</posy>
                 <width>100%</width>
                 <height>100%</height>
-				<texture border="16" colordiffuse="$VAR[OSDPanel]">common/rounded-shadow8.png</texture>
+                <texture border="16" colordiffuse="$VAR[OSDPanel]">common/rounded-shadow8.png</texture>
             </control>
             <control type="label">
                 <description>row 1 label</description>
@@ -393,15 +370,13 @@
                 <label>$INFO[musicplayer.Codec,$LOCALIZE[21446]: ,]$INFO[musicplayer.Bitrate, · $LOCALIZE[623]: ,kbps]$INFO[musicplayer.bitspersample, · $LOCALIZE[612]: ,]$INFO[musicplayer.Samplerate, · $LOCALIZE[613]: ,kHz]$INFO[musicplayer.Channels, · $LOCALIZE[21444]: ]</label>
                 <textcolor>$VAR[OSDPanelWhite100]</textcolor>
             </control>
-        </control>-->
+        </control>
 
-	<!--Scrolling Text Visualisation-->	
         <control type="group">
             <top>-100</top>
             <control type="group">
                 <visible>Skin.HasSetting(osd.showvisualtext) + !Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
 				<visible>!Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
-				<visible>!Skin.HasSetting(osd.flipinfo)</visible>
                 <animation effect="fade" time="600">Visible</animation>
                 <animation effect="fade" time="350">Hidden</animation>
                 <control type="label">
@@ -485,1014 +460,16 @@
                 <aligny>center</aligny>
             </control>
         </control>-->
-		
-<!--######################################################---Music OSD Info Flip---##########################################-->		
-	<!--Music OSD Info (Flip Right to Left/Left to Right)-->	
-        <control type="group" description="INFO grouped">
-		    <visible>Skin.HasSetting(osd.flipinfo)</visible>
-			<visible>!Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
-			<visible>[Skin.HasSetting(osd.showmusicinfo) | Window.IsActive(MusicOSD) | !Visualisation.Enabled] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
-            <animation effect="fade" time="500">Visible</animation>500 
-            <animation effect="fade" time="200">Hidden</animation>200
-            <control type="image">
-			    <width>1920</width>
-			    <height>500</height>
-                <aspectratio scalediffuse="false">stretch</aspectratio>
-                <fadetime>600</fadetime>
-				<texture background="true">$INFO[Player.Art(fanart)]</texture>
-				<animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
-				<animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
-            </control>			
-		<!-- Music OSD info flip -->	
-		    <!--LEFT Panel--> 
-            <control type="group">
-			    <visible>Skin.HasSetting(osd.flipinfo)</visible>
-                <posy>30</posy>
-			<!--Start zoom/fade in-->	
-                <animation type="Conditional" condition="!IntegerGreaterThan(Control.GetLabel(23),0)" reversible="false">
-                    <effect type="zoom" tween="quadratic" start="0" end="100" time="800" center="640,360" />
-                    <effect type="fade" start="0" end="100" time="800" center="640,360" />
-                </animation>
-			<!--100% Finish zoom/fade out-->
-                <animation type="Conditional" condition="StringCompare(Control.GetLabel(23),100)" reversible="false">
-                    <effect type="zoom" tween="quadratic" easing="in" start="100" end="260" time="800" center="640,360" />
-                    <effect type="fade" start="100" end="0" easing="out" time="800" />
-                </animation>
-			<!--Greater than 25% Left flip-->	
-                <animation type="Conditional" condition="IntegerGreaterThan(Control.GetLabel(23),25) + !IntegerGreaterThan(Control.GetLabel(23),50)" reversible="true">
-                    <effect type="rotatey" tween="quadratic" start="0" end="180" time="1500" center="960,540" />
-                    <effect type="fade" start="100" end="0" delay="300" time="700" center="640,360" />
-                </animation>
-			<!--Greater than 48% Left flip-->	
-				<animation type="Conditional" condition="IntegerGreaterThan(Control.GetLabel(23),75) + !IntegerGreaterThan(Control.GetLabel(23),95)" reversible="true">
-                    <effect type="rotatey" tween="quadratic" start="0" end="180" time="1500" center="960,540" />
-                    <effect type="fade" start="100" end="0" delay="300" time="700" center="640,360" />
-                </animation>
-			<!--Greater than 72% Left flip-->	
-				<!--<animation type="Conditional" condition="IntegerGreaterThan(Control.GetLabel(23),85) + !IntegerGreaterThan(Control.GetLabel(23),90)" reversible="true">
-                    <effect type="rotatey" tween="quadratic" start="0" end="180" time="1500" center="960,540" />
-                    <effect type="fade" start="100" end="0" delay="300" time="700" center="640,360" />
-                </animation>				
-			<!--Music Disc and Cover Group-->
-                <control type="group">
-				    <visible>Skin.HasSetting(osd.flipinfo)</visible>
-                    <camera x="450" y="540" />
-                    <animation effect="rotatey" start="0" end="-20" center="450,0" time="0" reversible="false" condition="true">Conditional</animation>
-                    <posy>225</posy>
-                    <posx>220</posx>
-					
-                    <control type="image" description="Album Disc">
-                        <posx>2</posx>
-                        <posy>-215</posy>
-                        <height>600</height>
-                        <width>590</width>
-                        <fadetime>300</fadetime>
-                        <aspectratio aligny="top">stretch</aspectratio>
-						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
-						<texture flipy="false" fallback="cdart/default-2.png">$INFO[Player.FolderPath]cdart.png</texture>
-                        <!--<texture flipy="true">images/record.png</texture>-->
-						<visible>!Skin.HasSetting(osd.disablecdart)</visible>
-                    </control>
-                    <control type="image" description="Album Cover Reflection">
-                        <posx>0</posx>
-                        <posy>600</posy>
-                        <height>600</height>
-                        <width>600</width>
-                        <fadetime>100</fadetime>
-						<aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
-					    <texture flipy="true" diffuse="diffuse/listposter-ref.png" background="true" fallback="DefaultAlbumCover.png">$VAR[PlayerPoster]</texture>
-                    </control>
-					<control type="image" description="Album Shadow Border">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <height>600</height>
-                        <width>600</width>
-						<texture border="5" colordiffuse="FF181818">common/box.png</texture>
-                    </control>
-                    <control type="image" description="Album Cover Art">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <height>600</height>
-                        <width>600</width>
-                        <fadetime>100</fadetime>
-						<aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
-					    <texture diffuse="diffuse/listposter.png" background="true" fallback="DefaultAlbumCover.png">$VAR[PlayerPoster]</texture>
-                    </control>
-                </control>
-			<!--Music Disc and Cover Group-->				
-                <control type="group">
-				    <visible>Skin.HasSetting(osd.flipinfo)</visible>
-                    <posx>839</posx>739
-				<!--Info Panel Border-->	
-					<control type="image">
-                        <posx>-50</posx>
-                        <posy>500</posy>
-                        <width>1030</width>
-                        <height>440</height>
-                        <fadetime>400</fadetime>
-                        <aspectratio>stretch</aspectratio>
-                        <texture border="50">images/contextmenu.png</texture>
-                        <animation effect="fade" time="300">Visible</animation>
-                        <animation effect="fade" time="200">Hidden</animation>
-						<visible>Skin.HasSetting(osd.enableborder)</visible>
-                    </control>
-                    <control type="label" description="Song Title">
-                        <posx>0</posx>
-                        <posy>525</posy>
-                        <width>900</width>
-                        <scroll>true</scroll>
-                        <align>left</align>
-                        <font>ArtistTtile</font>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        <shadowcolor>Black</shadowcolor>
-                        <animation effect="fade" time="200">VisibleChange</animation>
-						<label>[COLOR=$VAR[ColourHighlight]]$INFO[MusicPlayer.TrackNumber,,. ][/COLOR]$INFO[Player.Title]</label>
-                    </control>
-                    <control type="label" description="Artist Name">
-                        <posx>0</posx>
-                        <posy>585</posy>
-                        <width>900</width>
-                        <scroll>true</scroll>
-                        <align>left</align>
-                        <font>MediumBold</font>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-						<label>$VAR[PlayerBigTitle]</label>
-                    </control>
-                    <control type="label" description="Album Name">
-					    <posx>0</posx>
-                        <posy>636</posy>
-                        <width>900</width>
-                        <label>[COLOR=$VAR[ColourHighlight]][I]$INFO[MusicPlayer.Album][/I][/COLOR]$INFO[MusicPlayer.Year,  •  ,]</label>
-                        <align>left</align>
-                        <font>Small</font>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                    </control>
-					<control type="label" description="Bitrate">
-					    <posx>0</posx>
-                        <posy>700</posy>
-                        <width>95</width>
-                        <height>32</height>
-						<align>left</align>
-						<font>Tiny</font>
-						<textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        <label>$LOCALIZE[623]:</label>
-                    </control>
-					<control type="label" description="Bitrate">
-					    <posx>0</posx>
-                        <posy>732</posy>
-                        <width>95</width>
-                        <height>32</height>
-						<align>center</align>
-						<font>Mini</font>
-						<textcolor>$VAR[ColourHighlight]</textcolor>
-                        <label>$INFO[MusicPlayer.Bitrate] kbps</label>
-                    </control>
-                    <control type="image" description="Codec">
-					    <posx>110</posx>
-                        <posy>700</posy>
-                        <width>95</width>
-                        <height>64</height>
-						<align>left</align>
-                        <texture colordiffuse="$VAR[OSDPanelWhite70]">$INFO[MusicPlayer.Codec,flags/audio/,.png]</texture>
-                        <aspectratio>keep</aspectratio>
-                    </control>
-                    <control type="image" description="Audio Channels">
-					    <posx>205</posx>
-                        <posy>700</posy>
-                        <width>95</width>
-                        <height>64</height>
-						<align>left</align>
-                        <texture colordiffuse="$VAR[OSDPanelWhite70]">$INFO[MusicPlayer.Channels,flags/channels/,.png]</texture>
-                        <aspectratio>keep</aspectratio>
-                    </control>
-					<!--<control type="image" description="Recording Studio">
-					    <posx>300</posx>
-                        <posy>700</posy>
-                        <width>95</width>
-                        <height>64</height>
-						<align>left</align>
-                        <aspectratio>keep</aspectratio>
-                        <texture colordiffuse="$VAR[OSDPanelWhite70]">skin://media/music/recordlabel/$INFO[MusicPlayer.Property(Album_Label),,.png]</texture>
-						<texture colordiffuse="$VAR[OSDPanelWhite70]" background="true" fallback="[no label].png">$INFO[MusicPlayer.Property(Album_Label),music/recordlabel/,.png]</texture>
-                    </control>-->
-                    <control type="label" description="Playlist Position">
-                        <posx>0</posx>
-                        <posy>760</posy>
-                        <width>900</width>
-                        <align>left</align>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        <animation effect="fade" time="200">VisibleChange</animation>
-                        <label>[B]Playlist Position $INFO[MusicPlayer.PlaylistPosition] $LOCALIZE[20163] $INFO[MusicPlayer.PlaylistLength][/B]</label>
-                        <font>Tiny</font>
-                    </control>
-					<control type="label" description="NextUp">
-					    <posx>0</posx>
-                        <posy>814</posy>
-                        <width>1000</width>
-                        <height>40</height>
-                        <align>left</align>
-                        <font>Tiny</font>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        <label>[B]$LOCALIZE[209]...  [/B][COLOR=$VAR[ColourHighlight]][I]$INFO[MusicPlayer.offset(1).Title][/I][/COLOR]</label>
-                    </control>
-			<!--Progress Bar Group-->	
-                    <control type="group">
-					    <visible>Skin.HasSetting(osd.flipinfo)</visible>
-                        <posy>866</posy>
-                        <control type="label">
-                            <posx>0</posx>
-                            <posy>0</posy>
-                            <height>30</height>
-                            <width>123</width>
-                            <align>left</align>
-                            <label>[B]$INFO[Player.Time][/B]</label>
-                            <font>Tiny</font>
-                            <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        </control>
-                        <control type="progress">
-                            <posx>122</posx>
-                            <posy>11</posy>
-                            <width>675</width>
-                            <height>13</height>
-                            <texturebg border="8,8,8,8" colordiffuse="$VAR[OSDProgressBarBGColour]">osd/progress-bg.png</texturebg>
-                            <midtexture border="0,8,0,8" colordiffuse="$VAR[OSDProgressBarCacheColour]">osd/progress-end.png</midtexture>
-                            <righttexture border="4,8,4,8" colordiffuse="$VAR[OSDProgressBarCacheEndColour]">osd/progress-end.png</righttexture>
-                            <lefttexture border="8,8,8,8" colordiffuse="$VAR[OSDProgressBarCacheColour]">osd/progress-end.png</lefttexture>
-                            <overlaytexture>-</overlaytexture>
-                            <info>Player.Progress</info>
-                            <visible>true</visible>
-                        </control>
-                        <control type="label">
-                            <posx>930</posx>
-                            <posy>0</posy>
-                            <height>30</height>
-                            <width>123</width>
-                            <align>right</align>
-                            <label>[B]$INFO[Player.TimeRemaining,-][/B]</label>
-                            <font>Tiny</font>
-                            <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        </control>
-                        <control type="label">
-                            <posx>777</posx>
-                            <posy>45</posy>
-                            <height>30</height>
-                            <width>135</width>
-                            <align>left</align>
-                            <label>$INFO[Control.GetLabel(23)]</label>
-                            <font>Tiny</font>
-                            <textcolor>FFFF0000</textcolor>
-                            <visible>Skin.HasSetting(DebugInfo)</visible>
-                        </control>
-                    </control>					
-			<!--Artist ClearLogo Group-->		
-			        <control type="group">
-					    <visible>Skin.HasSetting(osd.flipinfo)</visible>
-                        <left>415</left>
-                        <top>130</top>
-                        <include>Animation.FadeIn</include>
-                        <include>Animation.FadeOut</include>
-                        <control id="8308" type="image">
-                            <width>300</width>
-                            <height>200</height>
-                            <texture fallback="empty.png">$VAR[MusicPlayerClearLogo]</texture>
-                            <aspectratio align="center" aligny="center">keep</aspectratio>
-							<animation effect="zoom" start="0" end="100" time="150" easing="inout">VisibleChange</animation>
-                            <animation effect="rotatey" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
-                        </control>
-					</control>
-                </control>					
-            </control>
-									
-<!-- Music OSD info flip LEFT Group-->
-	    <!--Greater than 25%-->
-            <control type="group"> 
-                <posy>30</posy>
-				<visible>!Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
-				<visible>Skin.HasSetting(osd.flipinfo)</visible>
-                <visible>IntegerGreaterThan(Control.GetLabel(23),25) + !IntegerGreaterThan(Control.GetLabel(23),50)</visible>
-                <animation type="Visible" reversible="false">
-                    <effect type="rotatey" tween="quadratic" start="-180" end="0" time="1500" center="960," />
-                    <effect type="fade" start="0" end="100" delay="300" time="700" center="640,360" />
-                </animation>
-                <animation type="Hidden" reversible="false">
-                    <effect type="rotatey" tween="quadratic" start="0" end="-180" time="1500" center="960," />
-                    <effect type="fade" start="100" end="0" time="400" center="640,360" />
-                </animation>	              
-			<!--Music Disc and Cover Group-->	
-                <control type="group">
-                    <camera x="1470" y="540" />
-                    <animation effect="rotatey" start="0" end="20" center="1470," time="0" reversible="false" condition="true">Conditional</animation>
-                    <posy>225</posy>
-                    <posx>1110</posx>
-                    <control type="image" description="Album Disc">
-                        <posx>-270</posx>
-                        <posy>-260</posy>
-                        <height>600</height>
-                        <width>595</width>
-                        <fadetime>100</fadetime>
-                        <aspectratio aligny="bottom">stretch</aspectratio>
-                        <animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
-						<texture flipy="false" fallback="cdart/default-2.png">$INFO[Player.FolderPath]cdart.png</texture>
-						<visible>!Skin.HasSetting(osd.disablecdart)</visible>
-                    </control>
-                    <control type="image" description="Album Cover Reflection">
-                        <posx>0</posx>
-                        <posy>600</posy>
-                        <height>600</height>
-                        <width>600</width>
-                        <fadetime>100</fadetime>
-						<aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
-					    <texture flipy="true" diffuse="diffuse/listposter-ref.png" background="true" fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
-                    </control>
-					<control type="image" description="Album Shadow Border">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <height>600</height>
-                        <width>600</width>
-						<texture border="5" colordiffuse="FF181818">common/box.png</texture>
-                        </control>
-                        <control type="image" description="Album Cover Art">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <height>600</height>
-                        <width>600</width>
-                        <fadetime>100</fadetime>
-                        <aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
-					    <texture diffuse="diffuse/listposter.png" background="true" fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
-                    </control>
-                </control>
-			<!--Music Information Group-->	
-                <control type="group">
-                    <posx>1166</posx>
-				<!--Info Panel Border-->	
-					<control type="image">
-                        <posx>-1070</posx>
-                        <posy>485</posy>
-                        <width>1030</width>
-                        <height>465</height>
-                        <fadetime>400</fadetime>
-                        <aspectratio>stretch</aspectratio>
-                        <texture border="50">images/contextmenu.png</texture>
-                        <animation effect="fade" time="300">Visible</animation>
-                        <animation effect="fade" time="200">Hidden</animation>
-						<visible>Skin.HasSetting(osd.enableborder)</visible>
-                    </control>
-                    <control type="label" description="Song Title">
-                        <posx>-90</posx>
-                        <posy>525</posy>
-                        <width>900</width>
-                        <scroll>true</scroll>
-                        <align>right</align>
-                        <font>ArtistTtile</font>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        <animation effect="fade" time="200">VisibleChange</animation>
-						<label>[COLOR=$VAR[ColourHighlight]]$INFO[MusicPlayer.TrackNumber,,. ][/COLOR]$INFO[Player.Title]</label>
-                    </control>
-                        <control type="label" description="Artist Name">
-                        <posx>-90</posx>
-                        <posy>585</posy>
-                        <width>900</width>
-                        <scroll>true</scroll>
-                        <align>right</align>
-                        <font>MediumBold</font>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-						<!--<label>$VAR[PlayerBigTitle]</label>-->
-						<label>$INFO[MusicPlayer.Artist]</label>
-                    </control>
-                    <control type="label" description="Album Name">
-					    <posx>-90</posx>
-                        <posy>636</posy>
-                        <width>900</width>
-                        <label>[COLOR=$VAR[ColourHighlight]][I]$INFO[MusicPlayer.Album][/I][/COLOR]$INFO[MusicPlayer.Year, • ,]</label>
-						<scroll>true</scroll>
-                        <align>right</align>
-                        <font>Small</font>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                    </control>
-					<control type="label" description="Bitrate">
-					    <posx>-170</posx>
-                        <posy>700</posy>
-                        <width>95</width>
-                        <height>32</height>
-						<align>left</align>
-						<font>Tiny</font>
-						<textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        <label>$LOCALIZE[623]:</label>
-                    </control>
-					<control type="label" description="Bitrate">
-					    <posx>-180</posx>
-                        <posy>732</posy>
-                        <width>95</width>
-                        <height>32</height>
-						<align>center</align>
-						<font>Mini</font>
-						<textcolor>$VAR[ColourHighlight]</textcolor>
-                        <label>$INFO[MusicPlayer.Bitrate] kbps</label>
-                    </control>
-					<control type="image" description="Codec">
-					    <posx>-295</posx>
-                        <posy>700</posy>
-                        <width>95</width>
-                        <height>64</height>
-                        <texture colordiffuse="$VAR[OSDPanelWhite70]">$INFO[MusicPlayer.Codec,flags/audio/,.png]</texture>
-                        <aspectratio>keep</aspectratio>
-                    </control>
-                    <control type="image" description="Audio Channel">
-					    <posx>-405</posx>
-                        <posy>700</posy>
-                        <width>95</width>
-                        <height>64</height>
-						<align>right</align>
-                        <texture colordiffuse="$VAR[OSDPanelWhite70]">$INFO[MusicPlayer.Channels,flags/channels/,.png]</texture>
-                        <aspectratio>keep</aspectratio>
-                    </control>
-                    <!--<control type="image" description="Recording Studio">
-					    <posx>-385</posx>
-                        <posy>700</posy>
-                        <width>95</width>
-                        <height>64</height>
-						<align>right</align>
-                        <aspectratio>keep</aspectratio>
-                        <!--<texture colordiffuse="$VAR[OSDPanelWhite70]">resource://resource.images.recordlabels.white/$INFO[ListItem.Property(Album_Label),,.png]</texture>-->
-						<!--<texture colordiffuse="$VAR[OSDPanelWhite70]" background="true" fallback="[no label].png">resource://resource.images.recordlabels.white/$INFO[ListItem.Property(Album_Label),,.png]</texture>
-                    </control>-->
-                    <control type="label" description="Track position">
-                        <posx>-90</posx>
-                        <posy>760</posy>
-                        <width>900</width>
-                        <align>right</align>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        <animation effect="fade" time="200">VisibleChange</animation>
-                        <label>[B]Playlist Position  $INFO[MusicPlayer.PlaylistPosition] $LOCALIZE[20163] $INFO[MusicPlayer.PlaylistLength][/B]</label>
-                        <font>Tiny</font>
-                        <shadowcolor>Black</shadowcolor>
-                    </control>
-					<control type="label" description="NextUp">
-					    <posx>-90</posx>
-                        <posy>814</posy>
-                        <width>1000</width>
-                        <height>40</height>
-                        <align>right</align>
-                        <font>Tiny</font>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        <label>[B]$LOCALIZE[209]...  [/B][COLOR=$VAR[ColourHighlight]][I]$INFO[MusicPlayer.offset(1).Title][/I][/COLOR]</label>
-						<scroll>true</scroll>
-                    </control>
-                </control>
-			<!--Progress Bar-->	
-                <control type="group">
-                    <posy>866</posy>
-                    <control type="label">
-                        <posx>147</posx>
-                        <posy>0</posy>
-                        <height>30</height>
-                        <width>123</width>
-                        <align>left</align>
-                        <label>[B]$INFO[Player.Time][/B]</label>
-                        <font>Tiny</font>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                    </control>
-                    <control type="progress" description="Progress Bar">
-                        <posx>267</posx>
-                        <posy>11</posy>
-                        <width>675</width>
-                        <height>13</height>
-                        <texturebg border="8,8,8,8" colordiffuse="$VAR[OSDProgressBarBGColour]">osd/progress-bg.png</texturebg>
-                        <midtexture border="0,8,0,8" colordiffuse="$VAR[OSDProgressBarCacheColour]">osd/progress-end.png</midtexture>
-                        <righttexture border="4,8,4,8" colordiffuse="$VAR[OSDProgressBarCacheEndColour]">osd/progress-end.png</righttexture>
-                        <lefttexture border="8,8,8,8" colordiffuse="$VAR[OSDProgressBarCacheColour]">osd/progress-end.png</lefttexture>
-                        <overlaytexture>-</overlaytexture>
-                        <info>Player.Progress</info>
-                        <visible>true</visible>
-                    </control>
-                    <control type="label">
-                        <posx>1076</posx>
-                        <posy>0</posy>
-                        <height>30</height>
-                        <width>123</width>
-                        <align>right</align>
-                        <label>[B]$INFO[Player.TimeRemaining,-][/B]</label>
-                        <font>Tiny</font>
-                        <textcolor>FF838383</textcolor>
-                    </control>
-                        <control type="label">
-                        <posx>687</posx>
-                        <posy>45</posy>
-                        <height>30</height>
-                        <width>135</width>
-                        <align>left</align>
-                        <label>$INFO[Control.GetLabel(23)]</label>
-                        <font>Tiny</font>
-                        <textcolor>FFFF0000</textcolor>
-                        <visible>Skin.HasSetting(DebugInfo)</visible>
-                    </control>
-                </control>
-			<!--Artist ClearLogo Group-->					
-		        <control type="group">
-                    <left>250</left>
-                    <top>130</top>
-                    <include>Animation.FadeIn</include>
-                    <include>Animation.FadeOut</include>
-                    <control type="image">
-                        <width>300</width>
-                        <height>200</height>
-                        <texture fallback="empty.png">$VAR[MusicPlayerClearLogo]</texture>
-                        <aspectratio align="center" aligny="center">keep</aspectratio>
-                        <animation effect="zoom" start="0" end="100" time="150">VisibleChange</animation>-->
-                        <animation effect="rotatey" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
-                    </control>
-				</control>	
-			</control>
-         
-<!-- Music OSD info flip RIGHT Group-->
-	    <!--Greater than 75%--> 
-            <control type="group"> 
-                <posy>30</posy>
-				<visible>!Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
-				<visible>Skin.HasSetting(osd.flipinfo)</visible>				
-                <visible>IntegerGreaterThan(Control.GetLabel(23),75) + !IntegerGreaterThan(Control.GetLabel(23),95)</visible>
-			    <animation type="Visible" reversible="false">
-                    <effect type="rotatey" tween="quadratic" start="-180" end="0" time="1500" center="960," />
-                    <effect type="fade" start="0" end="100" delay="300" time="700" center="640,360" />
-                </animation>
-                <animation type="Hidden" reversible="false">
-                    <effect type="rotatey" tween="quadratic" start="0" end="-180" time="1500" center="960," />
-                    <effect type="fade" start="100" end="0" time="400" center="640,360" />
-                </animation>
-			<!--Music Disc and Cover Group-->	              
-                <control type="group">
-                    <camera x="1470" y="540" />
-                    <animation effect="rotatey" start="0" end="20" center="1470," time="0" reversible="false" condition="true">Conditional</animation>
-                    <posy>225</posy>
-                    <posx>1110</posx>
-                    <control type="image" description="Album Disc">
-                        <posx>-270</posx>
-                        <posy>-260</posy>
-                        <height>600</height>
-                        <width>595</width>
-                        <fadetime>100</fadetime>
-                        <aspectratio aligny="bottom">stretch</aspectratio>
-                        <animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
-						<texture flipy="false" fallback="cdart/default-2.png">$INFO[Player.FolderPath]cdart.png</texture>
-                    </control>
-                    <control type="image" description="Album Cover Reflection">
-                        <posx>0</posx>
-                        <posy>600</posy>
-                        <height>600</height>
-                        <width>600</width>
-                        <fadetime>100</fadetime>
-						<aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
-					    <texture flipy="true" diffuse="diffuse/listposter-ref.png" background="true" fallback="DefaultAlbumCover.png">$VAR[PlayerPoster]</texture>
-						<visible>!Skin.HasSetting(osd.disablecdart)</visible>
-                    </control>
-					<control type="image" description="Album Shadow Border">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <height>600</height>
-                        <width>600</width>
-						<texture border="5" colordiffuse="FF181818">common/box.png</texture>
-                    </control>
-                    <control type="image" description="Album Cover Art">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <height>600</height>
-                        <width>600</width>
-                        <fadetime>100</fadetime>
-                        <aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
-					    <texture diffuse="diffuse/listposter.png" background="true" fallback="DefaultAlbumCover.png">$VAR[PlayerPoster]</texture>
-                    </control>
-                </control>
-			<!--Music Information Group-->
-                <control type="group">
-                    <posx>1166</posx>
-				<!--Info Panel Border-->	
-					<control type="image">
-                        <posx>-1070</posx>
-                        <posy>485</posy>
-                        <width>1030</width>
-                        <height>465</height>
-                        <fadetime>400</fadetime>
-                        <aspectratio>stretch</aspectratio>
-                        <texture border="50">images/contextmenu.png</texture>
-                        <animation effect="fade" time="300">Visible</animation>
-                        <animation effect="fade" time="200">Hidden</animation>
-						<visible>Skin.HasSetting(osd.enableborder)</visible>
-                    </control>
-                    <control type="label" description="Song Title">
-                        <posx>-90</posx>
-                        <posy>525</posy>
-                        <width>900</width>
-                        <scroll>true</scroll>
-                        <align>right</align>
-                        <font>ArtistTtile</font>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        <animation effect="fade" time="200">VisibleChange</animation>
-						<label>[COLOR=$VAR[ColourHighlight]]$INFO[MusicPlayer.TrackNumber,,. ][/COLOR]$INFO[Player.Title]</label>
-                    </control>
-                    <control type="label" description="Artist Name">
-                        <posx>-90</posx>
-                        <posy>585</posy>
-                        <width>900</width>
-                        <scroll>true</scroll>
-                        <align>right</align>
-                        <font>MediumBold</font>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-						<label>$INFO[MusicPlayer.Artist]</label>
-                    </control>
-                    <control type="label" description="Album Name">
-					    <posx>-90</posx>
-                        <posy>636</posy>
-                        <width>900</width>
-                        <label>[COLOR=$VAR[ColourHighlight]][I]$INFO[MusicPlayer.Album][/I][/COLOR]$INFO[MusicPlayer.Year, • ,]</label>
-                        <align>right</align>
-                        <font>Small</font>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                    </control>
-					<control type="label" description="Bitrate">
-					    <posx>-170</posx>
-                        <posy>700</posy>
-                        <width>95</width>
-                        <height>32</height>
-						<align>left</align>
-						<font>Tiny</font>
-						<textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        <label>$LOCALIZE[623]:</label>
-                    </control>
-					<control type="label" description="Bitrate">
-					    <posx>-180</posx>
-                        <posy>732</posy>
-                        <width>95</width>
-                        <height>32</height>
-						<align>center</align>
-						<font>Mini</font>
-						<textcolor>$VAR[ColourHighlight]</textcolor>
-                        <label>$INFO[MusicPlayer.Bitrate] kbps</label>
-                    </control>
-					<control type="image" description="Codec">
-					    <posx>-295</posx>
-                        <posy>700</posy>
-                        <width>95</width>
-                        <height>64</height>
-                        <texture colordiffuse="$VAR[OSDPanelWhite70]">$INFO[MusicPlayer.Codec,flags/audio/,.png]</texture>
-                        <aspectratio>keep</aspectratio>
-                    </control>
-                    <control type="image" description="Audio Channel">
-					    <posx>-405</posx>
-                        <posy>700</posy>
-                        <width>95</width>
-                        <height>64</height>
-						<align>right</align>
-                        <texture colordiffuse="$VAR[OSDPanelWhite70]">$INFO[MusicPlayer.Channels,flags/channels/,.png]</texture>
-                        <aspectratio>keep</aspectratio>
-                    </control>
-                    <!--<control type="image" description="Recording Studio">
-					    <posx>-370</posx>
-                        <posy>700</posy>
-                        <width>95</width>
-                        <height>64</height>
-						<align>right</align>
-                        <aspectratio>keep</aspectratio>
-                        <!--<texture colordiffuse="$VAR[OSDPanelWhite70]">resource://resource.images.recordlabels.white/$INFO[ListItem.Property(Album_Label),,.png]</texture>-->
-						<!--<texture colordiffuse="$VAR[OSDPanelWhite70]" background="true" fallback="[no label].png">$INFO[ListItem.Property(Album_Label)</texture>
-                    </control>-->
-                    <control type="label" description="Track position">
-                        <posx>-90</posx>
-                        <posy>760</posy>
-                        <width>900</width>
-                        <align>right</align>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        <animation effect="fade" time="200">VisibleChange</animation>
-                        <label>[B]Playlist Position  $INFO[MusicPlayer.PlaylistPosition] $LOCALIZE[20163] $INFO[MusicPlayer.PlaylistLength][/B]</label>
-                        <font>Tiny</font>
-                        <shadowcolor>Black</shadowcolor>
-                    </control>
-					<control type="label" description="NextUp">
-					    <posx>-90</posx>
-                        <posy>814</posy>
-                        <width>1000</width>
-                        <height>40</height>
-                        <align>right</align>
-                        <font>Tiny</font>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        <label>[B]$LOCALIZE[209]...  [/B][COLOR=$VAR[ColourHighlight]][I]$INFO[MusicPlayer.offset(1).Title][/I][/COLOR]</label>
-						<scroll>true</scroll>
-                    </control>
-                </control>
-			<!--Progress Bar-->	
-                <control type="group">
-                    <posy>866</posy>
-                    <control type="label">
-                        <posx>147</posx>
-                        <posy>0</posy>
-                        <height>30</height>
-                        <width>123</width>
-                        <align>left</align>
-                        <label>[B]$INFO[Player.Time][/B]</label>
-                        <font>Tiny</font>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                    </control>
-                    <control type="progress" description="Progress Bar">
-                        <posx>267</posx>
-                        <posy>11</posy>
-                        <width>675</width>
-                        <height>13</height>
-                        <texturebg border="8,8,8,8" colordiffuse="$VAR[OSDProgressBarBGColour]">osd/progress-bg.png</texturebg>
-                        <midtexture border="0,8,0,8" colordiffuse="$VAR[OSDProgressBarCacheColour]">osd/progress-end.png</midtexture>
-                        <righttexture border="4,8,4,8" colordiffuse="$VAR[OSDProgressBarCacheEndColour]">osd/progress-end.png</righttexture>
-                        <lefttexture border="8,8,8,8" colordiffuse="$VAR[OSDProgressBarCacheColour]">osd/progress-end.png</lefttexture>
-                        <overlaytexture>-</overlaytexture>
-                        <info>Player.Progress</info>
-                        <visible>true</visible>
-                    </control>
-                    <control type="label">
-                        <posx>1076</posx>
-                        <posy>0</posy>
-                        <height>30</height>
-                        <width>123</width>
-                        <align>right</align>
-                        <label>[B]$INFO[Player.TimeRemaining,-][/B]</label>
-                        <font>Tiny</font>
-                        <textcolor>FF838383</textcolor>
-                    </control>
-                    <control type="label">
-                        <posx>687</posx>
-                        <posy>45</posy>
-                        <height>30</height>
-                        <width>135</width>
-                        <align>left</align>
-                        <label>$INFO[Control.GetLabel(23)]</label>
-                        <font>Tiny</font>
-                        <textcolor>FFFF0000</textcolor>
-                        <visible>Skin.HasSetting(DebugInfo)</visible>
-                    </control>
-                </control>
-			<!--Artist ClearLogo Group-->				
-		        <control type="group">
-                    <left>250</left>
-                    <top>130</top>
-                    <include>Animation.FadeIn</include>
-                    <include>Animation.FadeOut</include>
-                    <control type="image">
-                        <width>300</width>
-                        <height>200</height>
-                        <texture fallback="empty.png">$VAR[MusicPlayerClearLogo]</texture>
-                        <aspectratio align="center" aligny="center">keep</aspectratio>
-                        <animation effect="rotatey" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
-                    </control>
-				</control>	
-			</control>       
- 
-<!-- Music OSD info flip RIGHT Group-->
-	    <!--Greater than 75%-->
-            <!--<control type="group"> 
-                <posy>30</posy>
-				<visible>!Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
-				<visible>Skin.HasSetting(osd.flipinfo)</visible>
-                <visible>IntegerGreaterThan(Control.GetLabel(23),85) + !IntegerGreaterThan(Control.GetLabel(23),90)</visible>
-                <animation type="Visible" reversible="false">
-                    <effect type="rotatey" tween="quadratic" start="-180" end="0" time="1500" center="960," />
-                    <effect type="fade" start="0" end="100" delay="300" time="700" center="640,360" />
-                </animation>
-                <animation type="Hidden" reversible="false">
-                    <effect type="rotatey" tween="quadratic" start="0" end="-180" time="1500" center="960," />
-                    <effect type="fade" start="100" end="0" time="400" center="640,360" />
-                </animation>	              
-			<!--Music Disc and Cover Group-->
-                <!--<control type="group">
-                    <camera x="1470" y="540" />
-                    <animation effect="rotatey" start="0" end="20" center="1470," time="0" reversible="false" condition="true">Conditional</animation>
-                    <posy>225</posy>
-                    <posx>1110</posx>
-                    <control type="image" description="Album Disc">
-                        <posx>-270</posx>
-                        <posy>-260</posy>
-                        <height>600</height>
-                        <width>595</width>
-                        <fadetime>100</fadetime>
-                        <aspectratio aligny="bottom">stretch</aspectratio>
-						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
-						<texture flipy="false" fallback="cdart/default-2.png">$INFO[Player.FolderPath]cdart.png</texture>
-						<visible>!Skin.HasSetting(osd.disablecdart)</visible>
-                    </control>
-                    <control type="image" description="Album Cover Reflection">
-                        <posx>0</posx>
-                        <posy>600</posy>
-                        <height>600</height>
-                        <width>600</width>
-                        <fadetime>100</fadetime>
-						<aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
-					    <texture flipy="true" diffuse="diffuse/listposter-ref.png" background="true" fallback="DefaultAlbumCover.png">$VAR[PlayerPoster]</texture>
-                    </control>
-					<control type="image" description="Album Shadow Border">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <height>600</height>
-                        <width>600</width>
-						<texture border="5" colordiffuse="FF181818">common/box.png</texture>
-                    </control>
-                    <control type="image" description="Album Cover Art">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <height>600</height>
-                        <width>600</width>
-                        <fadetime>100</fadetime>
-                        <aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
-					    <texture diffuse="diffuse/listposter.png" background="true" fallback="DefaultAlbumCover.png">$VAR[PlayerPoster]</texture>
-                    </control>
-                </control>
-			<!--Music Information Group-->
-                <!--<control type="group">
-                    <posx>1166</posx>
-				<!--Info Panel Border-->	
-					<!--<control type="image">
-                        <posx>-1070</posx>
-                        <posy>485</posy>
-                        <width>1030</width>
-                        <height>465</height>
-                        <fadetime>400</fadetime>
-                        <aspectratio>stretch</aspectratio>
-                        <texture border="50">images/contextmenu.png</texture>
-                        <animation effect="fade" time="300">Visible</animation>
-                        <animation effect="fade" time="200">Hidden</animation>
-						<visible>Skin.HasSetting(osd.enableborder)</visible>
-                    </control>
-                    <control type="label" description="Song Title">
-                        <posx>-90</posx>
-                        <posy>525</posy>
-                        <width>900</width>
-                        <scroll>true</scroll>
-                        <align>right</align>
-                        <font>ArtistTtile</font>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        <animation effect="fade" time="200">VisibleChange</animation>
-						<label>[COLOR=$VAR[ColourHighlight]]$INFO[MusicPlayer.TrackNumber,,. ][/COLOR]$INFO[Player.Title]</label>
-                    </control>
-                    <control type="label" description="Artist Name">
-                        <posx>-90</posx>
-                        <posy>585</posy>
-                        <width>900</width>
-                        <scroll>true</scroll>
-                        <align>right</align>
-                        <font>MediumBold</font>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-						<label>$INFO[MusicPlayer.Artist]</label>
-                    </control>
-                    <control type="label" description="Album Name">
-					    <posx>-90</posx>
-                        <posy>636</posy>
-                        <width>900</width>
-                        <label>[COLOR=$VAR[ColourHighlight]][I]$INFO[MusicPlayer.Album][/I][/COLOR]$INFO[MusicPlayer.Year, • ,]</label>
-                        <align>right</align>
-                        <font>Small</font>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                    </control>
-					<control type="label" description="Bitrate">
-					    <posx>-170</posx>
-                        <posy>700</posy>
-                        <width>95</width>
-                        <height>32</height>
-						<align>left</align>
-						<font>Tiny</font>
-						<textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        <label>$LOCALIZE[623]:</label>
-                    </control>
-					<control type="label" description="Bitrate">
-					    <posx>-180</posx>
-                        <posy>732</posy>
-                        <width>95</width>
-                        <height>32</height>
-						<align>center</align>
-						<font>Mini</font>
-						<textcolor>$VAR[ColourHighlight]</textcolor>
-                        <label>$INFO[MusicPlayer.Bitrate] kbps</label>
-                    </control>
-					<control type="image" description="Codec">
-					    <posx>-295</posx>
-                        <posy>700</posy>
-                        <width>95</width>
-                        <height>64</height>
-                        <texture colordiffuse="$VAR[OSDPanelWhite70]">$INFO[MusicPlayer.Codec,flags/audio/,.png]</texture>
-                        <aspectratio>keep</aspectratio>
-                    </control>
-                    <control type="image" description="Audio Channel">
-					    <posx>-405</posx>
-                        <posy>700</posy>
-                        <width>95</width>
-                        <height>64</height>
-						<align>right</align>
-                        <texture colordiffuse="$VAR[OSDPanelWhite70]">$INFO[MusicPlayer.Channels,flags/channels/,.png]</texture>
-                        <aspectratio>keep</aspectratio>
-                    </control>
-                    <!--<control type="image" description="Recording Studio">
-					    <posx>-370</posx>
-                        <posy>700</posy>
-                        <width>95</width>
-                        <height>64</height>
-						<align>right</align>
-                        <aspectratio>keep</aspectratio>
-                        <!--<texture colordiffuse="$VAR[OSDPanelWhite70]">resource://resource.images.recordlabels.white/$INFO[ListItem.Property(Album_Label),,.png]</texture>-->
-						<!--<texture colordiffuse="$VAR[OSDPanelWhite70]" background="true" fallback="[no label].png">$INFO[ListItem.Property(Album_Label)</texture>
-                    </control>-->
-                    <!--<control type="label" description="Track position">
-                        <posx>-90</posx>
-                        <posy>760</posy>
-                        <width>900</width>
-                        <align>right</align>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        <animation effect="fade" time="200">VisibleChange</animation>
-                        <label>[B]Playlist Position  $INFO[MusicPlayer.PlaylistPosition] $LOCALIZE[20163] $INFO[MusicPlayer.PlaylistLength][/B]</label>
-                        <font>Tiny</font>
-                        <shadowcolor>Black</shadowcolor>
-                    </control>
-					<control type="label" description="NextUp">
-					    <posx>-90</posx>
-                        <posy>814</posy>
-                        <width>1000</width>
-                        <height>40</height>
-                        <align>right</align>
-                        <font>Tiny</font>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        <label>[B]$LOCALIZE[209]...  [/B][COLOR=$VAR[ColourHighlight]][I]$INFO[MusicPlayer.offset(1).Title][/I][/COLOR]</label>
-						<scroll>true</scroll>
-                    </control>
-                </control>
-			<!--Progress Bar-->	
-                <!--<control type="group">
-                    <posy>866</posy>
-                    <control type="label">
-                        <posx>147</posx>
-                        <posy>0</posy>
-                        <height>30</height>
-                        <width>123</width>
-                        <align>left</align>
-                        <label>[B]$INFO[Player.Time][/B]</label>
-                        <font>Tiny</font>
-                        <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                    </control>
-                    <control type="progress" description="Progress Bar">
-                        <posx>267</posx>
-                        <posy>11</posy>
-                        <width>675</width>
-                        <height>13</height>
-                        <texturebg border="8,8,8,8" colordiffuse="$VAR[OSDProgressBarBGColour]">osd/progress-bg.png</texturebg>
-                        <midtexture border="0,8,0,8" colordiffuse="$VAR[OSDProgressBarCacheColour]">osd/progress-end.png</midtexture>
-                        <righttexture border="4,8,4,8" colordiffuse="$VAR[OSDProgressBarCacheEndColour]">osd/progress-end.png</righttexture>
-                        <lefttexture border="8,8,8,8" colordiffuse="$VAR[OSDProgressBarCacheColour]">osd/progress-end.png</lefttexture>
-                        <overlaytexture>-</overlaytexture>
-                        <info>Player.Progress</info>
-                        <visible>true</visible>
-                    </control>
-                    <control type="label">
-                        <posx>1076</posx>
-                        <posy>0</posy>
-                        <height>30</height>
-                        <width>123</width>
-                        <align>right</align>
-                        <label>[B]$INFO[Player.TimeRemaining,-][/B]</label>
-                        <font>Tiny</font>
-                        <textcolor>FF838383</textcolor>
-                    </control>
-                    <control type="label">
-                        <posx>687</posx>
-                        <posy>45</posy>
-                        <height>30</height>
-                        <width>135</width>
-                        <align>left</align>
-                        <label>$INFO[Control.GetLabel(23)]</label>
-                        <font>Tiny</font>
-                        <textcolor>FFFF0000</textcolor>
-                        <visible>Skin.HasSetting(DebugInfo)</visible>
-                    </control>
-                </control>
-			<!--Artist ClearLogo Group-->						
-		        <!--<control type="group">
-                    <left>250</left>
-                    <top>130</top>
-                    <include>Animation.FadeIn</include>
-                    <include>Animation.FadeOut</include>
-                    <control type="image">
-                        <width>300</width>
-                        <height>200</height>
-                        <texture fallback="empty.png">$VAR[MusicPlayerClearLogo]</texture>
-                        <aspectratio align="center" aligny="center">keep</aspectratio> 
-                        <animation effect="rotatey" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
-                    </control>
-				</control>	
-			</control>-->
-        </control>	
-	
-	<!--cu-lrclyrics controls-->
-        <!--<control type="image">
+
+        <control type="image">
             <height>100%</height>
             <width>100%</width>
             <texture>common/white.png</texture>
-            <colordiffuse>$VAR[OSDPanel]</colordiffuse>
-            <animation effect="fade" start="100" end="90" condition="Skin.HasSetting(osd.usetheme)">Conditional</animation>
+            <colordiffuse>Panel</colordiffuse>
             <visible>Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
         </control>
         <control type="group">
-		    <visible>!Window.IsVisible(musicosd)</visible>
-            <visible>Window.IsVisible(script-cu-lrclyrics-main.xml) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo</visible>
+            <visible>Window.IsVisible(script-cu-lrclyrics-main.xml) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
             <animation effect="slide" start="0,110" end="0" time="150" tween="quadratic">Visible</animation>
             <animation effect="slide" start="0,110" end="0" time="150" tween="quadratic">WindowOpen</animation>
             <animation effect="slide" end="0,110" start="0" time="150" tween="quadratic">Hidden</animation>
@@ -1502,8 +479,7 @@
                 <width>100%</width>
                 <height>374</height>
                 <texture>common/white.png</texture>
-                <colordiffuse>$VAR[OSDPanel]</colordiffuse>
-                <animation effect="fade" start="100" end="90" condition="Skin.HasSetting(osd.usetheme)">Conditional</animation>
+                <colordiffuse>Black12</colordiffuse>
                 <visible>Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
             </control>
             <control type="group">
@@ -1567,38 +543,7 @@
                     </control>
                 </control>		
 		    </control>
-		</control>-->
-
-        <control type="group">
-            <visible>Player.ShowCodec</visible>
-            <visible>!Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
-            <left>70</left>
-            <posy>70</posy>
-            <width>1420</width>
-            <height>100</height>
-            <include>Animation.FadeIn.Slide</include>
-            <include>Animation.FadeOut</include>
-            <animation effect="slide" end="668" start="0" time="150" tween="quadratic" condition="Window.IsActive(musicosd)">Conditional</animation>
-            <control type="image">
-                <description>background image</description>
-                <posx>0</posx>
-                <posy>0</posy>
-                <width>100%</width>
-                <height>100%</height>
-                <texture border="16" colordiffuse="$VAR[OSDPanel]">common/rounded-shadow8.png</texture>
-            </control>
-            <control type="label">
-                <description>row 1 label</description>
-                <left>30</left>
-                <right>30</right>
-                <height>100%</height>
-                <align>left</align>
-                <aligny>center</aligny>
-                <label>$INFO[musicplayer.Codec,$LOCALIZE[21446]: ,]$INFO[musicplayer.Bitrate, · $LOCALIZE[623]: ,kbps]$INFO[musicplayer.bitspersample, · $LOCALIZE[612]: ,]$INFO[musicplayer.Samplerate, · $LOCALIZE[613]: ,kHz]$INFO[musicplayer.Channels, · $LOCALIZE[21444]: ]</label>
-                <textcolor>$VAR[OSDPanelWhite100]</textcolor>
-            </control>
-        </control>
-		
+		</control>	
         <control type="list" id="9301">
             <height>36</height>
             <orientation>horizontal</orientation>

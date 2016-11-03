@@ -190,13 +190,13 @@
                         <textcolor>$VAR[OSDPanelWhite30]</textcolor>
                         <label>$VAR[PlayerPlotBox]</label>
                     </control>
-                    <!--<control type="label" description="NextUp">
+                    <!-- <control type="label" description="NextUp">
                         <width>100%</width>
                         <height>40</height>
                         <align>center</align>
                         <font>Tiny</font>
                         <textcolor>$VAR[OSDPanelWhite70]</textcolor>
-                        <label>[B]$LOCALIZE[209]... [/B][COLOR=$VAR[ColourHighlight]]$INFO[MusicPlayer.offset(1).Title][/COLOR]</label>
+                        <label>$INFO[MusicPlayer.offset(1).Title,[B]$LOCALIZE[209]...  [/B]]</label>
                     </control> -->
                     <control type="label" description="Duration">
                         <width>100%</width>
@@ -295,7 +295,7 @@
                                 <centertop>50%</centertop>
                                 <height>32</height>
                                 <width>32</width>
-                                <texture colordiffuse="$VAR[OSDPanelWhite70]">indicator/playwhite.png</texture>
+                                <texture colordiffuse="$VAR[ColourHighlight2]">indicator/playwhite.png</texture>
                                 <visible>!IsEmpty(ListItem.Property(IsPlaying))</visible>
                             </control>
                             <control type="label">

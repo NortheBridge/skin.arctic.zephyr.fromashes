@@ -3,7 +3,7 @@
 <window id="20">
 	<defaultcontrol always="true">50</defaultcontrol>
 	<menucontrol>9000</menucontrol>
-	<views>50,503,500,506,507,52,505,513,514</views>
+	<views>50,503,500,52,505</views>
 	<controls>
 		<include>GlobalBackground</include>
 		<include>Furniture_Header</include>
@@ -12,19 +12,17 @@
 		<include>Furniture_Weather</include>
 		
 		<include>View_50_List_Square</include>
-		<include condition="Skin.HasSetting(52biglist.singlepane)">View_52_BigList_SinglePane</include>
-        <include condition="!Skin.HasSetting(52biglist.singlepane)">View_52_BigList_DoublePane</include>
+        <include>View_503_Poster_Square</include>
         <include>View_500_Thumbnails</include>
-		<include>View_503_Poster_Square</include>
-        <include>View_514_PosterShift</include>
-        <include>View_513_PosterRow</include>
-        <include>View_505_506_Wall</include>
+        <include condition="Skin.HasSetting(52biglist.singlepane)">View_52_BigList_SinglePane</include>
+        <include condition="!Skin.HasSetting(52biglist.singlepane)">View_52_BigList_DoublePane</include>
+        <include>View_505_Wall_NoInfo</include>
 
 		<control type="group">
 			<visible>ControlGroup(9000).HasFocus()</visible>
 			<include>GlobalOverlay</include>
 		</control>
-		<!--<control type="group">		
+		<control type="group">		
 			<include>Def9000Background</include>
 			<include>Def9000Arrows</include>
 			<!--<control type="image">
@@ -34,14 +32,14 @@
 				<height>75</height>
 				<texture colordiffuse="$VAR[ButtonFocusColour]" border="8">common/box.png</texture>
 			</control>-->
-			<!--<control type="image">
+			<control type="image">
                 <posx>40</posx>
                 <posy>15</posy>
                 <width>85</width>
                 <height>85</height>
 				<texture colordiffuse="Dark1" border="8" >special://skin/media/DefaultAddonsInstalled.png</texture>
                 <!--<texture colordiffuse="PanelWhite100" border="8">$VAR[HeaderIcon]</texture>-->
-                <!--<aspectratio align="center" aligny="bottom">keep</aspectratio>
+                <aspectratio align="center" aligny="bottom">keep</aspectratio>
             </control>	
 			<control type="label">
                 <description>Header Label</description>
@@ -63,145 +61,86 @@
 					<description>View</description>
 					<width>444</width>
 					<!--<texturenofocus colordiffuse="Dark3" border="20">common/box.png</texturenofocus>-->
-					<!--<include>DefSkinSettingMenuButton</include>
+					<include>DefSkinSettingMenuButton</include>
 					<align>left</align>
-				</control>-->
-		<control type="group">
-			<include>Def9000SideBladeLeft</include>
-			<control type="grouplist" id="9000">
-				<left>0</left>
-				<top>50</top>
-				<width>455</width>
-				<height>1080</height>
-				<onleft>9000</onleft>
-				<onright>ClearProperty(MediaMenu,Home)</onright>
-				<onright condition="![Window.IsVisible(tvguide) | Window.IsActive(SettingsCategory.xml)]">50</onright>
-				<onright condition="Window.IsVisible(tvguide)">10</onright>
-				<onright condition="Window.IsActive(SettingsCategory.xml)">3</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-				<onback>ClearProperty(MediaMenu,Home)</onback>
-				<onback>50</onback>
-				<itemgap>0</itemgap>
-				<animation effect="slide" start="-440,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
-				<control type="label" id="200">
-					<height>42</height>
-					<textoffsetx>15</textoffsetx>
-					<font>Home</font>
-					<label>View Options</label>
-					<textcolor>$VAR[ColourHighlight]</textcolor>
-					<aligny>center</aligny>
 				</control>
-				<control type="button" id="1802">
-                    <description>View</description>
-                    <label>View</label>
-                    <label2>$INFO[Container.Viewmode]</label2>
-                    <include>DefContextButton2</include>
-                    <align>left</align>
-                    <onclick>ActivateWindow(1109)</onclick>
-                </control>
 				<control type="button" id="3">
 					<description>Sort</description>
-					<include>DefContextButton2</include>
-                    <align>left</align>
+					<width>444</width>
+					<!--<texturenofocus colordiffuse="Dark3" border="20">common/box.png</texturenofocus>-->
+					<include>DefSkinSettingMenuButton</include>
+					<align>left</align>
 				</control>
 				<control type="togglebutton" id="4">
 					<description>Ascending/Descending</description>
+					<width>444</width>
+					<!--<texturenofocus colordiffuse="Dark3" border="20">common/box.png</texturenofocus>-->
+					<include>DefSkinSettingMenuButton</include>
 					<label>584</label>
 					<align>left</align>
 					<altlabel>585</altlabel>
-					<include>DefContextButton2</include>
-				</control>
-				<control type="radiobutton" id="9009" description="Low List (50)">
-                    <radioposx>380</radioposx>
-			        <include>DefContextButton2</include>
-                    <align>left</align>
-                    <label>31214</label>
-                    <selected>Skin.HasSetting(50list.showplot)</selected>
-                    <onclick>Skin.ToggleSetting(50list.showplot)</onclick>
-                    <visible>Control.IsVisible(50) + !Skin.HasSetting(50list.low)</visible>
-                </control>
-				<control type="radiobutton" id="9012" description="Big List Double Pane (52)">
-                    <radioposx>380</radioposx>
-			        <include>DefContextButton2</include>
-                    <align>left</align>
-                    <label>31235</label>
-                    <selected>!Skin.HasSetting(52biglist.singlepane)</selected>
-                    <onclick>Skin.ToggleSetting(52biglist.singlepane)</onclick>
-                    <onclick>ReloadSkin()</onclick>
-					<onclick>ReloadSkin()</onclick>
-                    <visible>Control.IsVisible(52)</visible>
-                </control>
-				
-				
-				<control type="label" id="201">
-					<height>42</height>
-					<textoffsetx>15</textoffsetx>
-					<font>Home</font>
-					<label>Misc Options</label>
-					<textcolor>$VAR[ColourHighlight]</textcolor>
-					<aligny>center</aligny>
 				</control>
 				<control type="button" id="9">
 					<description>Check for updates</description>
-					<include>DefContextButton2</include>
+					<width>444</width>
+					<!--<texturenofocus colordiffuse="Dark3" border="20">common/box.png</texturenofocus>-->
+					<include>DefSkinSettingMenuButton</include>
 					<align>left</align>
 					<label>24034</label>
 				</control>
 				<control type="button" id="5">
-					<description>Settings</description>
-				    <radioposx>380</radioposx>
+					<description>Enable auto-updates</description>
+					<width>444</width>
+				    <radioposx>398</radioposx>
                     <radioposy>center</radioposy>
-					<include>DefContextButton2</include>
+					<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/on.png</textureradiofocus>
+                    <textureradionofocus colordiffuse="Dark2">buttons/off.png</textureradionofocus>
 					<label>10004</label>
 					<align>left</align>
+					<include>DefSkinSettingMenuButton</include>
 				</control>
 				<control type="radiobutton" id="7">
 					<description>Hide foreign</description>
-				    <radioposx>380</radioposx>
+					<width>444</width>
+				    <radioposx>398</radioposx>
                     <radioposy>center</radioposy>
-					<include>DefContextButton2</include>
+					<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/on.png</textureradiofocus>
+                    <textureradionofocus colordiffuse="Dark2">buttons/off.png</textureradionofocus>
 					<align>left</align>
+					<include>DefSkinSettingMenuButton</include>
 					<label>25001</label>
 				</control>
 				<control type="radiobutton" id="8">
 					<description>Hide broken</description>
-				    <radioposx>380</radioposx>
+					<width>444</width>
+				    <radioposx>398</radioposx>
                     <radioposy>center</radioposy>
+					<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/on.png</textureradiofocus>
+                    <textureradionofocus colordiffuse="Dark2">buttons/off.png</textureradionofocus>
 					<align>left</align>
-                    <include>DefContextButton2</include>
+					<include>DefSkinSettingMenuButton</include>
 					<label>24999</label>
 				</control>
-				
-				
-                <control type="label" id="202">
-					<height>42</height>
-					<textoffsetx>15</textoffsetx>
-					<font>Home</font>
-					<label>Last Updated</label>
-					<textcolor>$VAR[ColourHighlight2]</textcolor>
-					<aligny>center</aligny>
-				</control>
-				<control type="label" id="203">
-				    <textcolor>$VAR[ColourHighlight2]</textcolor>
-					<include>DefContextButton2</include>
-					<textoffsetx>15</textoffsetx>
-					<font>Home</font>
-					<label>$INFO[Window(AddonBrowser).Property(Updated)]</label>
-					<aligny>center</aligny>
-				</control>
-				<control type="radiobutton" id="6">
+
+				<!--<control type="radiobutton" id="6">
 					<description>No notifications</description>
-				    <radioposx>380</radioposx>
+					<width>444</width>
+				    <radioposx>398</radioposx>
                     <radioposy>center</radioposy>
-                    <include>DefContextButton2</include>
+					<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/on.png</textureradiofocus>
+                    <textureradionofocus colordiffuse="Dark2">buttons/off.png</textureradionofocus>
 					<label>25000</label>
 					<align>left</align>
-				</control>
-				<include content="MenuPlayerControls">
-                    <param name="PlayerControlsOnUp" value="9" />
-                    <param name="PlayerControlsOnDown" value="1802" />
-                </include>
+					<include>DefSkinSettingMenuButton</include>
+				</control>-->
+				<!--  <control type="button" id="98">
+					<description>Open Player Controls</description>
+					<include>DefContextButton</include>
+					<align>left</align>
+					<label>31015</label>
+					<onclick>ActivateWindow(playercontrols)</onclick>
+					<visible>Player.HasMedia</visible>
+				</control> -->
 			</control>
 		</control>
 	</controls>
