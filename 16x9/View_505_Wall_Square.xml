@@ -7,7 +7,7 @@
 			<visible>Control.IsVisible(505)</visible>
 			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml)</visible>
 			<control type="panel" id="505">
-				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos)</visible>
+				<visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left) | Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos)</visible>
 				<top>206</top>
 				<right>70</right>
 				<width>1120</width>
@@ -107,7 +107,7 @@
 				<control type="image">
 					<width>PosterH</width>
 					<height>360</height>
-<!--Changed-->		<texture border="5" colordiffuse="$VAR[ViewsSelectHighlight]">common/box.png</texture>
+<!--Changed-->		<texture border="5" colordiffuse="FF181818">common/box.png</texture>
 				</control>
 				<control type="image">
 					<width>PosterH</width>
@@ -162,7 +162,7 @@
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(506)</visible>
 			<control type="panel" id="506">
-				<visible>Container.Content(musicvideos) | Container.Content(albums)</visible>
+				<visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/) | Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos)</visible>
 				<top>206</top>
 				<right>70</right>
 				<width>1120</width>
@@ -220,7 +220,7 @@
 						<top>3</top>
 						<right>3</right>
 						<bottom>3</bottom>
-<!--Changed-->						<texture colordiffuse="$VAR[ViewsSelectHighlight]" border="20">common/selectbox.png</texture><!--Changed-->
+<!--Changed-->			<texture colordiffuse="$VAR[ViewsSelectHighlight]" border="20">common/selectbox.png</texture><!--Changed-->
 						<animation type="Focus">
 							<effect type="zoom" start="90" end="100" time="150" tween="sine" easing="inout" center="auto" />
 							<effect type="fade" start="0" end="100" time="150" tween="sine" easing="in" />
@@ -246,7 +246,7 @@
 				<control type="image">
 					<width>PosterH</width>
 					<height>PosterH</height>
-<!--Changed-->		<texture border="5" colordiffuse="$VAR[ViewsSelectHighlight]">common/box.png</texture>
+<!--Changed-->		<texture border="5" colordiffuse="FF181818">common/box.png</texture>
 				</control>
 				<control type="image">
 					<width>PosterH</width>
@@ -268,7 +268,7 @@
 			<include>Animation.Common</include>
 			<visible>Control.IsVisible(507)</visible>
 			<control type="panel" id="507">
-				<visible>Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums)</visible>
+				<visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/) | Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos)</visible>
 				<top>206</top>
 				<right>70</right>
 				<left>70</left>

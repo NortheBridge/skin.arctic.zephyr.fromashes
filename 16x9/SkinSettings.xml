@@ -217,6 +217,13 @@
 						<selected>Skin.HasSetting(home.showheader)</selected>
 						<onclick>Skin.ToggleSetting(home.showheader)</onclick>
 					</control>
+					<!--<control type="radiobutton" id="9215" description="Allow Widget Reloading">
+                        <visible>ControlGroup(9100).HasFocus(9101)</visible>
+                        <include>DefSkinSettingRadioButton</include>
+                        <label>31274</label>
+                        <selected>Skin.HasSetting(NoPersistentWidgets)</selected>
+                        <onclick>Skin.ToggleSetting(NoPersistentWidgets)</onclick>
+                    </control>-->
 					<control type="radiobutton" id="9217" description="Always Show Weather Widget">
 						<visible>ControlGroup(9100).HasFocus(9101)</visible>
 						<include>DefSkinSettingRadioButton</include>
@@ -359,8 +366,9 @@
 						<include>DefSkinSettingButton</include>
 						<label>31150</label>
 						<label2>$INFO[Skin.String(fanart.fallback)]</label2>
-						<onclick condition="IsEmpty(Skin.String(fanart.fallback))">Skin.SetImage(fanart.fallback)</onclick>
-						<onclick condition="!IsEmpty(Skin.String(fanart.fallback))">Skin.Reset(fanart.fallback)</onclick>
+						<!--<onclick condition="IsEmpty(Skin.String(fanart.fallback))">Skin.SetImage(fanart.fallback)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(fanart.fallback))">Skin.Reset(fanart.fallback)</onclick>-->
+						<onclick>Skin.SetImage(fanart.fallback,special://skin/media/)</onclick>
 					</control>
                     <control type="button" id="93101" description="Reset Fallback Image">
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
@@ -681,6 +689,15 @@
 						<label>$LOCALIZE[20342] [LOWERCASE]$LOCALIZE[31178][/LOWERCASE]</label>
 						<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=x$PARAM[hubid])</onclick>
 					</control>
+					<control type="button" id="9505" description="Select Movies Hub Header Text">
+						<visible>ControlGroup(9100).HasFocus(9105)</visible>
+						<include>DefSkinSettingButton</include>
+						<label>HUB Header Text</label>
+						<!--<label>$ADDON[script.skinshortcuts 32025]</label>-->
+						<label2>$INFO[Skin.String(HubHeaderText1111.label)]</label2>
+						<!--<onclick>Skin.ToggleSetting(Hub.HeaderText1111)</onclick>
+						<selected>Skin.HasSetting(SmartShortcuts.favorites)</selected>-->
+					</control>					
 					<control type="button" id="9506" description="Select TV Shows Hub Widget">
 						<visible>ControlGroup(9100).HasFocus(9105)</visible>
 						<include>DefSkinSettingButton</include>
@@ -751,14 +768,38 @@
                         <include>HiddenButton</include>
                     </control>
 					
-			<!-- Furniture Settings -->		
-					<control type="radiobutton" id="9602" description="Watched/Unwatched">
+			<!-- Furniture Settings -->	
+					<control type="radiobutton" id="9602" description="Hide indicators">
+						<visible>ControlGroup(9100).HasFocus(9106)</visible>
+						<include>DefSkinSettingRadioButton</include>
+						<label>Hide all indicators</label>
+						<selected>Skin.HasSetting(furniture.hideindicators)</selected>
+						<onclick>Skin.ToggleSetting(furniture.hideindicators)</onclick>
+					</control>		
+					<control type="radiobutton" id="9603" description="Watched/Unwatched">
 						<visible>ControlGroup(9100).HasFocus(9106)</visible>
 						<include>DefSkinSettingRadioButton</include>
 						<label>Show unwatched indicator</label>
+						<visible>!Skin.HasSetting(furniture.hideindicators)</visible>
 						<selected>Skin.HasSetting(furniture.unwatched)</selected>
 						<onclick>Skin.ToggleSetting(furniture.unwatched)</onclick>
 					</control>
+					<control type="radiobutton" id="96031" description="Resume indicator">
+						<visible>ControlGroup(9100).HasFocus(9106)</visible>
+						<include>DefSkinSettingRadioButton</include>
+						<label>Do not show resume indicator</label>
+						<visible>!Skin.HasSetting(furniture.hideindicators)</visible>
+						<selected>Skin.HasSetting(furniture.hideresume)</selected>
+						<onclick>Skin.ToggleSetting(furniture.hideresume)</onclick>
+					</control>
+					<control type="radiobutton" id="96032" description="New indicator">
+						<visible>ControlGroup(9100).HasFocus(9106)</visible>
+						<include>DefSkinSettingRadioButton</include>
+						<label>Do not show new indicator</label>
+						<visible>!Skin.HasSetting(furniture.hideindicators)</visible>
+						<selected>Skin.HasSetting(furniture.hidenew)</selected>
+						<onclick>Skin.ToggleSetting(furniture.hidenew)</onclick>
+					</control>					
 					<control type="radiobutton" id="9604" description="Header">
 						<visible>ControlGroup(9100).HasFocus(9106)</visible>
 						<include>DefSkinSettingRadioButton</include>
@@ -860,7 +901,7 @@
 						<onclick>SetProperty(Dialog.9.BuiltIn,Skin.SetString(timelimit,9))</onclick>
 						<onclick>SetProperty(Dialog.10.Label,10 Seconds)</onclick>
 						<onclick>SetProperty(Dialog.10.BuiltIn,Skin.SetString(timelimit,10))</onclick>
-						<onclick>RunScript(script.toolbox,info=selectdialog,header=Select Plot Overlay Time)</onclick>
+						<onclick>RunScript(script.toolbox,info=selectdialog,header=Select Plot Overlay Time)</onclick>		
                     </control>
 					<control type="radiobutton" id="9622" description="Logo">
 						<visible>ControlGroup(9100).HasFocus(9106)</visible>
@@ -979,7 +1020,7 @@
 					<height>790</height>
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
-					<onup>9716</onup>
+					<onup>9721</onup>
 					<ondown>9714</ondown>
 					<onright>60</onright>
 					<pagecontrol>60</pagecontrol>
@@ -1017,6 +1058,27 @@
 						<onclick>Skin.ToggleSetting(osd.usetheme)</onclick>
 						<onclick>ReloadSkin()</onclick>
 					</control>
+					<control type="radiobutton" id="9710" description="Show detailed info on pause">
+						<visible>ControlGroup(9100).HasFocus(9103)</visible>
+						<include>DefSkinSettingRadioButton</include>
+						<label>31201</label>
+						<selected>Skin.HasSetting(osd.showinfoonpause)</selected>
+						<onclick>Skin.ToggleSetting(osd.showinfoonpause)</onclick>
+					</control>
+					<control type="radiobutton" id="97101" description="Show clearart">
+						<visible>ControlGroup(9100).HasFocus(9103)</visible>
+						<include>DefSkinSettingRadioButton</include>
+						<label>31217</label>
+						<selected>Skin.HasSetting(ShowClearArtOSD)</selected>
+						<onclick>Skin.ToggleSetting(ShowClearArtOSD)</onclick>
+					</control>
+					<control type="radiobutton" id="9716" description="Hide spoilers">
+						<visible>ControlGroup(9100).HasFocus(9103)</visible>
+						<include>DefSkinSettingRadioButton</include>
+						<label>Hide Spoilers for unwatched TV Shows</label>
+						<selected>Skin.HasSetting(osd.hidespoilers)</selected>
+						<onclick>Skin.ToggleSetting(osd.hidespoilers)</onclick>
+					</control>
 				    <control type="radiobutton" id="9702" description="Show Fanart">
 						<visible>ControlGroup(9100).HasFocus(9103)</visible>
 						<include>DefSkinSettingRadioButton</include>
@@ -1025,7 +1087,7 @@
 						<enable>!System.HasAddon(script.artistslideshow) | Skin.HasSetting(ArtistSlideShow.Disabled)</enable>
 						<onclick>Skin.ToggleSetting(musicvis.fanartfallback)</onclick>
 					</control>
-					<control type="radiobutton" id="9704" description="Show slideshow in background">
+					<control type="radiobutton" id="9704" description="Show artist slideshow">
 						<visible>ControlGroup(9100).HasFocus(9103)</visible>
 						<include>DefSkinSettingRadioButton</include>
 						<label>31118</label>
@@ -1033,13 +1095,14 @@
 						<selected>!Skin.HasSetting(ArtistSlideShow.Disabled)</selected>
 						<onclick>Skin.ToggleSetting(ArtistSlideShow.Disabled)</onclick>
 					</control>
-					<control type="radiobutton" id="9706" description="Show slideshow in background">
+					<control type="radiobutton" id="9706" description="Show visualisation behind slideshow">
 						<visible>ControlGroup(9100).HasFocus(9103)</visible>
 						<include>DefSkinSettingRadioButton</include>
 						<label>31119</label>
 						<selected>Skin.HasSetting(OSDVisualisation.ShowFanart)</selected>
 						<onclick>Skin.ToggleSetting(OSDVisualisation.ShowFanart)</onclick>
-						<enable>Skin.HasSetting(musicvis.fanartfallback) | [!Skin.HasSetting(ArtistSlideShow.Disabled) + System.HasAddon(script.artistslideshow)]</enable>
+						<!--<enable>Skin.HasSetting(musicvis.fanartfallback) | [!Skin.HasSetting(ArtistSlideShow.Disabled) + System.HasAddon(script.artistslideshow)]</enable>-->
+						<enable>!String.IsEmpty(Skin.String(musicvis.background))</enable>
 					</control>
 					<control type="radiobutton" id="9708" description="Animate Artist slideshow">
 						<visible>ControlGroup(9100).HasFocus(9103)</visible>
@@ -1047,7 +1110,8 @@
 						<label>31120</label>
 						<selected>Skin.HasSetting(ArtistSlideshow.Animate)</selected>
 						<onclick>Skin.ToggleSetting(ArtistSlideshow.Animate)</onclick>
-						<enable>Skin.HasSetting(musicvis.fanartfallback) | [!Skin.HasSetting(ArtistSlideShow.Disabled) + System.HasAddon(script.artistslideshow)]</enable>
+						<!--<enable>Skin.HasSetting(musicvis.fanartfallback) | [!Skin.HasSetting(ArtistSlideShow.Disabled) + System.HasAddon(script.artistslideshow)]</enable>-->
+						<enable>!String.IsEmpty(Skin.String(musicvis.background)) + !String.IsEqual(Skin.String(musicvis.background),albumwall)</enable>
 					</control>
 					<control type="radiobutton" id="9709" description="Show scrolling visual text in Music OSD">
 						<visible>ControlGroup(9100).HasFocus(9103)</visible>
@@ -1063,34 +1127,44 @@
 						<selected>Skin.HasSetting(osd.showmusicinfo)</selected>
 						<onclick>Skin.ToggleSetting(osd.showmusicinfo)</onclick>
 					</control>					
-					<control type="radiobutton" id="9710" description="Show detailed info on pause">
+					<control type="radiobutton" id="9711" description="Flip Music OSD">
 						<visible>ControlGroup(9100).HasFocus(9103)</visible>
 						<include>DefSkinSettingRadioButton</include>
-						<label>31201</label>
-						<selected>Skin.HasSetting(osd.showinfoonpause)</selected>
-						<onclick>Skin.ToggleSetting(osd.showinfoonpause)</onclick>
-					</control>						
-					<control type="radiobutton" id="9718" description="Always show osd info/controls in music visualisation">
+						<label>Flip Music OSD  *CuLyrics Must be set to manual*</label>
+						<selected>Skin.HasSetting(osd.flipinfo)</selected>
+						<onclick>Skin.ToggleSetting(osd.flipinfo)</onclick>
+						<onclick>SetFocus(9712)</onclick>
+					</control>					
+					<!--<control type="radiobutton" id="9718" description="Disable background overlay lyrics">
                         <visible>ControlGroup(9100).HasFocus(9103)</visible>
                         <include>DefSkinSettingRadioButton</include>
-                        <label>31253</label>
-                        <selected>Skin.HasSetting(osd.alwaysshowmusicosd)</selected>
-                        <onclick>Skin.ToggleSetting(osd.alwaysshowmusicosd)</onclick>
+                        <label>Disable background overlay lyrics</label>
+                        <selected>Skin.HasSetting(osd.disablelyrics)</selected>
+                        <onclick>Skin.ToggleSetting(osd.disablelyrics)</onclick>
+                    </control>-->
+					<control type="button" id="9712" description="Enable Lyrics while playing music">
+                        <visible>ControlGroup(9100).HasFocus(9103)</visible>
+                        <include>DefSkinSettingButton</include>
+                        <label>Enable Lyrics while playing music</label>
+                        <label2 fallback="None">$INFO[Skin.String(LyricScript_Path)]</label2>
+                        <onclick condition="!Skin.String(LyricScript_Path)">Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
+                        <onclick condition="Skin.String(LyricScript_Path)">Addon.OpenSettings($INFO[Skin.String(LyricScript_Path)])</onclick>
                     </control>
-					<control type="radiobutton" id="9712" description="Show clearart">
-						<visible>ControlGroup(9100).HasFocus(9103)</visible>
-						<include>DefSkinSettingRadioButton</include>
-						<label>31217</label>
-						<selected>Skin.HasSetting(ShowClearArtOSD)</selected>
-						<onclick>Skin.ToggleSetting(ShowClearArtOSD)</onclick>
-					</control>			
-					<control type="radiobutton" id="9716" description="Hide spoilers">
-						<visible>ControlGroup(9100).HasFocus(9103)</visible>
-						<include>DefSkinSettingRadioButton</include>
-						<label>Hide Spoilers for unwatched TV Shows</label>
-						<selected>Skin.HasSetting(osd.hidespoilers)</selected>
-						<onclick>Skin.ToggleSetting(osd.hidespoilers)</onclick>
-					</control>
+					<control type="radiobutton" id="9720" description="Disable CDArt in Flip MusicOSD">
+                        <visible>ControlGroup(9100).HasFocus(9103)</visible>
+                        <include>DefSkinSettingRadioButton</include>
+                        <label>Hide Disc Art on flip Music OSD</label>
+                        <selected>Skin.HasSetting(osd.disablecdart)</selected>
+                        <onclick>Skin.ToggleSetting(osd.disablecdart)</onclick>
+                    </control>
+					<control type="radiobutton" id="9721" description="Enable info panel border in Flip MusicOSD">
+                        <visible>ControlGroup(9100).HasFocus(9103)</visible>
+                        <include>DefSkinSettingRadioButton</include>
+                        <label>Enable info panel border in Flip MusicOSD</label>
+                        <selected>Skin.HasSetting(osd.enableborder)</selected>
+                        <onclick>Skin.ToggleSetting(osd.enableborder)</onclick>
+                    </control>
+					
 				</control>	
 		    <!-- Scrollbar for OSD Settings Control Area -->		
 				<control type="scrollbar" id="60">
@@ -1117,7 +1191,7 @@
 					<height>790</height>
 					<itemgap>5</itemgap>
 					<onleft>9100</onleft>
-					<onup>9816</onup>
+					<onup>9818</onup>
 					<ondown>9802</ondown>
 					<onright>60</onright>
 					<pagecontrol>60</pagecontrol>
@@ -2083,7 +2157,7 @@
 							<width>1200</width>
 							<include>DefSkinSettingButton</include>
 	                        <onup>10032</onup>
-	                        <ondown>10038</ondown>
+	                        <ondown>10036</ondown>
 	                        <onleft>9200</onleft>
 							<onright>60</onright>
 					        <pagecontrol>60</pagecontrol>
@@ -2223,7 +2297,7 @@
 	                    <control type="button" id="10036">
 							<width>1200</width>
 							<include>DefSkinSettingButton</include>
-	                        <onup>10036</onup>
+	                        <onup>10034</onup>
 	                        <ondown>10040</ondown>
 	                        <onleft>9200</onleft>
 							<onright>60</onright>
@@ -2293,7 +2367,7 @@
 	                    <control type="button" id="10040">
 							<width>1200</width>
 							<include>DefSkinSettingButton</include>
-	                        <onup>10038</onup>
+	                        <onup>10036</onup>
 	                        <ondown>10042</ondown>
 	                        <onleft>9200</onleft>
 							<onright>60</onright>
@@ -4026,6 +4100,523 @@
                         <height>15</height>
                     </control>
 <!-- Views Color Settings ###End### -->					
+					
+	<!-- ###Indicators Section### -->					
+    <!-- Indicators Colour Heading -->					
+					<control type="label" id="10200">
+        <!--Seperator Heading-->
+		                <visible>!Skin.HasSetting(furniture.hideindicators)</visible>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<font>SmallBold</font>
+						<align>center</align>
+						<textcolor>$VAR[DialogHeadersTextColour]</textcolor>
+						<label>Indicators Colours</label>
+					</control>
+			<!-- Sub Heading Line -- Seperator -->			
+					<control type="image" id="10202">
+					    <visible>!Skin.HasSetting(furniture.hideindicators)</visible> 
+					    <visible>ControlGroup(9100).HasFocus(9108)</visible>
+					    <left>480</left>
+					    <width>1260</width>
+					    <height>2</height>
+					    <colordiffuse>FF1976D2</colordiffuse>
+					    <texture>common/white.png</texture>
+				    </control>
+					<control type="label" id="10204">
+					    <visible>Skin.HasSetting(furniture.alternateindicators)</visible>
+                        <description>Filter (hidden)</description>
+						<height>10</height>
+                        <include>HiddenButton</include>
+                    </control>
+					
+<!-- Indicators Color Settings ###Begin### -->					
+            <!--Indicator Watched Colour -->					
+					<control type="group" id="10210">
+					    <visible>!Skin.HasSetting(furniture.hideindicators)</visible>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+	                    <orientation>horizontal</orientation>
+	                    <width>1170</width>
+	                    <height>50</height>
+						<itemgap>3</itemgap>
+	                    <control type="button" id="10220">
+							<width>1200</width>
+							<include>DefSkinSettingButton</include>
+	                        <onup>10090</onup>
+	                        <ondown>10222</ondown>
+	                        <onleft>9200</onleft>
+							<onright>60</onright>
+					        <pagecontrol>60</pagecontrol>
+	                        <label>Watched Icon Colour</label>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=watched.colour.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
+	                    </control>
+					<!-- In Use Box Outline -->	
+						<control type="image">
+	                        <right>40</right>
+	                        <top>5</top>
+	                        <width>40</width>
+	                        <height>40</height>
+	                        <texture>common/box.png</texture>
+				            <colordiffuse>Grey</colordiffuse>
+	                    </control>
+					<!-- In Use Colour Box -->	
+	                    <control type="image">
+	                        <right>42</right>
+	                        <top>7</top>
+	                        <width>36</width>
+	                        <height>36</height>
+	                        <texture>common/box.png</texture>
+	                        <colordiffuse>$VAR[WatchedColourHighlight]</colordiffuse>
+	                    </control>
+						<control type="label">
+					<!-- In Use Label -->	
+	                        <right>90</right>
+	                        <top>8</top>
+	                        <width>75</width>
+	                        <height>36</height>
+							<font>Flag</font>
+	                        <textcolor>$VAR[ButtonTextColour]</textcolor>
+							<label>In Use</label>
+	                    </control>
+					<!-- Default Box Outline -->	
+						<control type="image">
+	                        <right>200</right>
+	                        <top>5</top>
+	                        <width>40</width>
+	                        <height>40</height>
+	                        <texture>common/box.png</texture>
+				            <colordiffuse>Grey</colordiffuse>
+	                    </control>
+					<!-- Default Colour Box -->	
+	                    <control type="image">
+	                        <right>202</right>
+	                        <top>7</top>
+	                        <width>36</width>
+	                        <height>36</height>
+	                        <texture>common/box.png</texture>
+	                        <colordiffuse>Highlight2</colordiffuse>
+	                    </control>
+					<!-- Default Label -->	
+						<control type="label">
+	                        <right>250</right>
+	                        <top>8</top>
+	                        <width>100</width>
+	                        <height>36</height>
+							<font>Flag</font>
+	                        <textcolor>$VAR[ButtonTextColour]</textcolor>
+							<label>Default</label>
+	                    </control>
+	             	</control>
+					
+            <!--Indicator UnWatched Colour -->					
+					<control type="group" id="10212">
+					    <visible>!Skin.HasSetting(furniture.hideindicators)</visible>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+	                    <orientation>horizontal</orientation>
+	                    <width>1170</width>
+	                    <height>50</height>
+						<itemgap>3</itemgap>
+	                    <control type="button" id="10222">
+							<width>1200</width>
+							<include>DefSkinSettingButton</include>
+	                        <onup>10220</onup>
+	                        <ondown>10224</ondown>
+	                        <onleft>9200</onleft>
+							<onright>60</onright>
+					        <pagecontrol>60</pagecontrol>
+	                        <label>UnWatched Icon Colour</label>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=unwatched.colour.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
+	                    </control>
+					<!-- In Use Box Outline -->	
+						<control type="image">
+	                        <right>40</right>
+	                        <top>5</top>
+	                        <width>40</width>
+	                        <height>40</height>
+	                        <texture>common/box.png</texture>
+				            <colordiffuse>Grey</colordiffuse>
+	                    </control>
+					<!-- In Use Colour Box -->	
+	                    <control type="image">
+	                        <right>42</right>
+	                        <top>7</top>
+	                        <width>36</width>
+	                        <height>36</height>
+	                        <texture>common/box.png</texture>
+	                        <colordiffuse>$VAR[UnwatchedColourHighlight]</colordiffuse>
+	                    </control>
+						<control type="label">
+					<!-- In Use Label -->	
+	                        <right>90</right>
+	                        <top>8</top>
+	                        <width>75</width>
+	                        <height>36</height>
+							<font>Flag</font>
+	                        <textcolor>$VAR[ButtonTextColour]</textcolor>
+							<label>In Use</label>
+	                    </control>
+					<!-- Default Box Outline -->	
+						<control type="image">
+	                        <right>200</right>
+	                        <top>5</top>
+	                        <width>40</width>
+	                        <height>40</height>
+	                        <texture>common/box.png</texture>
+				            <colordiffuse>Grey</colordiffuse>
+	                    </control>
+					<!-- Default Colour Box -->	
+	                    <control type="image">
+	                        <right>202</right>
+	                        <top>7</top>
+	                        <width>36</width>
+	                        <height>36</height>
+	                        <texture>common/box.png</texture>
+	                        <colordiffuse>Highlight2</colordiffuse>
+	                    </control>
+					<!-- Default Label -->	
+						<control type="label">
+	                        <right>250</right>
+	                        <top>8</top>
+	                        <width>100</width>
+	                        <height>36</height>
+							<font>Flag</font>
+	                        <textcolor>$VAR[ButtonTextColour]</textcolor>
+							<label>Default</label>
+	                    </control>
+	             	</control>
+					
+            <!--Indicator New Colour -->					
+					<!--<control type="group" id="10214">
+					    <visible>!Skin.HasSetting(furniture.hideindicators)</visible>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+	                    <orientation>horizontal</orientation>
+	                    <width>1170</width>
+	                    <height>50</height>
+						<itemgap>3</itemgap>
+	                    <control type="button" id="10224">
+							<width>1200</width>
+							<include>DefSkinSettingButton</include>
+	                        <onup>10222</onup>
+	                        <ondown>10226</ondown>
+	                        <onleft>9200</onleft>
+							<onright>60</onright>
+					        <pagecontrol>60</pagecontrol>
+	                        <label>New Icon Colour</label>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=new.colour.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
+	                    </control>
+					<!-- In Use Box Outline -->	
+						<!--<control type="image">
+	                        <right>40</right>
+	                        <top>5</top>
+	                        <width>40</width>
+	                        <height>40</height>
+	                        <texture>common/box.png</texture>
+				            <colordiffuse>Grey</colordiffuse>
+	                    </control>
+					<!-- In Use Colour Box -->	
+	                    <!--<control type="image">
+	                        <right>42</right>
+	                        <top>7</top>
+	                        <width>36</width>
+	                        <height>36</height>
+	                        <texture>common/box.png</texture>
+	                        <colordiffuse>$VAR[NewColourHighlight]</colordiffuse>
+	                    </control>
+						<control type="label">
+					<!-- In Use Label -->	
+	                       <!--<right>90</right>
+	                        <top>8</top>
+	                        <width>75</width>
+	                        <height>36</height>
+							<font>Flag</font>
+	                        <textcolor>$VAR[ButtonTextColour]</textcolor>
+							<label>In Use</label>
+	                    </control>
+					<!-- Default Box Outline -->	
+						<!--<control type="image">
+	                        <right>200</right>
+	                        <top>5</top>
+	                        <width>40</width>
+	                        <height>40</height>
+	                        <texture>common/box.png</texture>
+				            <colordiffuse>Grey</colordiffuse>
+	                    </control>
+					<!-- Default Colour Box -->	
+	                    <!--<control type="image">
+	                        <right>202</right>
+	                        <top>7</top>
+	                        <width>36</width>
+	                        <height>36</height>
+	                        <texture>common/box.png</texture>
+	                        <colordiffuse>Highlight2</colordiffuse>
+	                    </control>
+					<!-- Default Label -->	
+						<!--<control type="label">
+	                        <right>250</right>
+	                        <top>8</top>
+	                        <width>100</width>
+	                        <height>36</height>
+							<font>Flag</font>
+	                        <textcolor>$VAR[ButtonTextColour]</textcolor>
+							<label>Default</label>
+	                    </control>
+	             	</control>-->					
+					
+            <!--Indicator Resume Colour -->					
+					<control type="group" id="10216">
+					    <visible>!Skin.HasSetting(furniture.hideindicators)</visible>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+	                    <orientation>horizontal</orientation>
+	                    <width>1170</width>
+	                    <height>50</height>
+						<itemgap>3</itemgap>
+	                    <control type="button" id="10226">
+							<width>1200</width>
+							<include>DefSkinSettingButton</include>
+	                        <onup>10224</onup>
+	                        <ondown>10228</ondown>
+	                        <onleft>9200</onleft>
+							<onright>60</onright>
+					        <pagecontrol>60</pagecontrol>
+	                        <label>Resume Icon Colour</label>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=resume.colour.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
+	                    </control>
+					<!-- In Use Box Outline -->	
+						<control type="image">
+	                        <right>40</right>
+	                        <top>5</top>
+	                        <width>40</width>
+	                        <height>40</height>
+	                        <texture>common/box.png</texture>
+				            <colordiffuse>Grey</colordiffuse>
+	                    </control>
+					<!-- In Use Colour Box -->	
+	                    <control type="image">
+	                        <right>42</right>
+	                        <top>7</top>
+	                        <width>36</width>
+	                        <height>36</height>
+	                        <texture>common/box.png</texture>
+	                        <colordiffuse>$VAR[ResumeColourHighlight]</colordiffuse>
+	                    </control>
+						<control type="label">
+					<!-- In Use Label -->	
+	                        <right>90</right>
+	                        <top>8</top>
+	                        <width>75</width>
+	                        <height>36</height>
+							<font>Flag</font>
+	                        <textcolor>$VAR[ButtonTextColour]</textcolor>
+							<label>In Use</label>
+	                    </control>
+					<!-- Default Box Outline -->	
+						<control type="image">
+	                        <right>200</right>
+	                        <top>5</top>
+	                        <width>40</width>
+	                        <height>40</height>
+	                        <texture>common/box.png</texture>
+				            <colordiffuse>Grey</colordiffuse>
+	                    </control>
+					<!-- Default Colour Box -->	
+	                    <control type="image">
+	                        <right>202</right>
+	                        <top>7</top>
+	                        <width>36</width>
+	                        <height>36</height>
+	                        <texture>common/box.png</texture>
+	                        <colordiffuse>Highlight2</colordiffuse>
+	                    </control>
+					<!-- Default Label -->	
+						<control type="label">
+	                        <right>250</right>
+	                        <top>8</top>
+	                        <width>100</width>
+	                        <height>36</height>
+							<font>Flag</font>
+	                        <textcolor>$VAR[ButtonTextColour]</textcolor>
+							<label>Default</label>
+	                    </control>
+	             	</control>					
+					
+            <!--Indicator Playing Colour -->					
+					<control type="group" id="10218">
+					    <visible>!Skin.HasSetting(furniture.hideindicators)</visible>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+	                    <orientation>horizontal</orientation>
+	                    <width>1170</width>
+	                    <height>50</height>
+						<itemgap>3</itemgap>
+	                    <control type="button" id="10228">
+							<width>1200</width>
+							<include>DefSkinSettingButton</include>
+	                        <onup>10226</onup>
+	                        <ondown>10230</ondown>
+	                        <onleft>9200</onleft>
+							<onright>60</onright>
+					        <pagecontrol>60</pagecontrol>
+	                        <label>Playing Now Icon Colour</label>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=playing.colour.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
+	                    </control>
+					<!-- In Use Box Outline -->	
+						<control type="image">
+	                        <right>40</right>
+	                        <top>5</top>
+	                        <width>40</width>
+	                        <height>40</height>
+	                        <texture>common/box.png</texture>
+				            <colordiffuse>Grey</colordiffuse>
+	                    </control>
+					<!-- In Use Colour Box -->	
+	                    <control type="image">
+	                        <right>42</right>
+	                        <top>7</top>
+	                        <width>36</width>
+	                        <height>36</height>
+	                        <texture>common/box.png</texture>
+	                        <colordiffuse>$VAR[PlayingColourHighlight]</colordiffuse>
+	                    </control>
+						<control type="label">
+					<!-- In Use Label -->	
+	                        <right>90</right>
+	                        <top>8</top>
+	                        <width>75</width>
+	                        <height>36</height>
+							<font>Flag</font>
+	                        <textcolor>$VAR[ButtonTextColour]</textcolor>
+							<label>In Use</label>
+	                    </control>
+					<!-- Default Box Outline -->	
+						<control type="image">
+	                        <right>200</right>
+	                        <top>5</top>
+	                        <width>40</width>
+	                        <height>40</height>
+	                        <texture>common/box.png</texture>
+				            <colordiffuse>Grey</colordiffuse>
+	                    </control>
+					<!-- Default Colour Box -->	
+	                    <control type="image">
+	                        <right>202</right>
+	                        <top>7</top>
+	                        <width>36</width>
+	                        <height>36</height>
+	                        <texture>common/box.png</texture>
+	                        <colordiffuse>Highlight2</colordiffuse>
+	                    </control>
+					<!-- Default Label -->	
+						<control type="label">
+	                        <right>250</right>
+	                        <top>8</top>
+	                        <width>100</width>
+	                        <height>36</height>
+							<font>Flag</font>
+	                        <textcolor>$VAR[ButtonTextColour]</textcolor>
+							<label>Default</label>
+	                    </control>
+	             	</control>
+
+            <!--Indicator Backing Colour -->					
+					<control type="group" id="10220">
+					    <visible>!Skin.HasSetting(furniture.hideindicators)</visible>
+						<visible>ControlGroup(9100).HasFocus(9108)</visible>
+	                    <orientation>horizontal</orientation>
+	                    <width>1170</width>
+	                    <height>50</height>
+						<itemgap>3</itemgap>
+	                    <control type="button" id="10230">
+							<width>1200</width>
+							<include>DefSkinSettingButton</include>
+	                        <onup>10228</onup>
+	                        <ondown>10232</ondown>
+	                        <onleft>9200</onleft>
+							<onright>60</onright>
+					        <pagecontrol>60</pagecontrol>
+	                        <label>Icon Backing Colour</label>
+	                        <onclick>RunScript(script.skin.helper.service,action=COLORPICKER,skinstring=posterbacking.colour.name,palette=$INFO[Skin.String(defaultcolorpalette)])</onclick>
+	                    </control>
+					<!-- In Use Box Outline -->	
+						<control type="image">
+	                        <right>40</right>
+	                        <top>5</top>
+	                        <width>40</width>
+	                        <height>40</height>
+	                        <texture>common/box.png</texture>
+				            <colordiffuse>Grey</colordiffuse>
+	                    </control>
+					<!-- In Use Colour Box -->	
+	                    <control type="image">
+	                        <right>42</right>
+	                        <top>7</top>
+	                        <width>36</width>
+	                        <height>36</height>
+	                        <texture>common/box.png</texture>
+	                        <colordiffuse>$VAR[PercentColourHighlight]</colordiffuse>
+	                    </control>
+						<control type="label">
+					<!-- In Use Label -->	
+	                        <right>90</right>
+	                        <top>8</top>
+	                        <width>75</width>
+	                        <height>36</height>
+							<font>Flag</font>
+	                        <textcolor>$VAR[ButtonTextColour]</textcolor>
+							<label>In Use</label>
+	                    </control>
+					<!-- Default Box Outline -->	
+						<control type="image">
+	                        <right>200</right>
+	                        <top>5</top>
+	                        <width>40</width>
+	                        <height>40</height>
+	                        <texture>common/box.png</texture>
+				            <colordiffuse>Grey</colordiffuse>
+	                    </control>
+					<!-- Default Colour Box -->	
+	                    <control type="image">
+	                        <right>202</right>
+	                        <top>7</top>
+	                        <width>36</width>
+	                        <height>36</height>
+	                        <texture>common/box.png</texture>
+	                        <colordiffuse>Highlight</colordiffuse>
+	                    </control>
+					<!-- Default Label -->	
+						<control type="label">
+	                        <right>250</right>
+	                        <top>8</top>
+	                        <width>100</width>
+	                        <height>36</height>
+							<font>Flag</font>
+	                        <textcolor>$VAR[ButtonTextColour]</textcolor>
+							<label>Default</label>
+	                    </control>
+	             	</control>
+
+	        <!-- Reset Indicators Colors -->
+	                <control type="button" id="10232">
+                        <visible>!Skin.HasSetting(furniture.hideindicators)</visible>				    
+					    <visible>ControlGroup(9100).HasFocus(9108)</visible>
+						<texturefocus colordiffuse="SelectedOrange" border="20">common/box.png</texturefocus>
+						<include>DefSkinSettingButton</include>
+						<label>Reset OSD Colours to Default</label>
+						<onclick>Skin.Reset(watched.colour.name)</onclick>
+	                    <onclick>Skin.Reset(unwatched.colour.name)</onclick>
+	                    <!--<onclick>Skin.Reset(new.colour.name)</onclick>-->
+						<onclick>Skin.Reset(resume.colour.name)</onclick>
+						<onclick>Skin.Reset(playing.colour.name)</onclick>
+						<onclick>Skin.Reset(posterbacking.colour.name)</onclick>
+	                    <onclick>Notification(Applying settings...,Done)</onclick>
+	                    <onclick>SetFocus(9200)</onclick>
+	                </control>
+					<control type="label" id="10233">
+	    <!-- Seperator -->
+                        <visible>!Skin.HasSetting(furniture.hideindicators)</visible>		
+					    <visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <label>-</label>
+                        <height>15</height>
+                    </control>
+<!-- Indicators Color Settings ###End### -->
+					
 					
     <!-- ###OSD Section### -->					
     <!-- OSD Colour Heading -->					
