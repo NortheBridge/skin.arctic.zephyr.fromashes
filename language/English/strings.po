@@ -237,11 +237,11 @@ msgid "Show now playing info"
 msgstr ""
 
 msgctxt "#31156"
-msgid "[B]Configure Appearance Settings[/B][CR][CR] •     Change the skin[CR] •     Set language and region[CR] •     Change file listing options[CR] •     Set up a screensaver"
+msgid "[B]Configure Interface Settings[/B][CR][CR] •     Skin[CR] •     Region[CR] •     Control[CR] •     Screensaver[CR] •     Master Lock[CR]"
 msgstr ""
 
 msgctxt "#31157"
-msgid "[B]Configure Video Settings[/B][CR][CR] •     Manage your video library[CR] •     Set video playback options[CR] •     Change video listing options[CR] •     Set subtitle fonts"
+msgid "[B]Configure Library Settings[/B][CR][CR] •     Display[CR] •     Navigation[CR] •     Media Database[CR]"
 msgstr ""
 
 msgctxt "#31158"
@@ -249,7 +249,7 @@ msgid "[B]Configure Music Settings[/B][CR][CR] •     Manage your music library
 msgstr ""
 
 msgctxt "#31159"
-msgid "[B]Configure Picture Settings[/B][CR][CR] •     Set picture listing options[CR] •     Configure slideshows"
+msgid "[B]Configure Player Settings[/B][CR][CR] •     Playback Actions[CR] •     How Content is Played[CR]"
 msgstr ""
 
 msgctxt "#31160"
@@ -593,7 +593,7 @@ msgid "Home menu style"
 msgstr ""
 
 msgctxt "#31248"
-msgid "Normal"
+msgid "Default-Horizontal"
 msgstr ""
 
 msgctxt "#31249"
@@ -604,6 +604,17 @@ msgctxt "#31250"
 msgid "Vertical"
 msgstr ""
 
+msgctxt "#31269"
+msgid "Fallback widget"
+msgstr ""
+
+msgctxt "#31271"
+msgid "Single Image"
+msgstr ""
+
+msgctxt "#31272"
+msgid "Multi Image"
+msgstr ""
 
 msgctxt "#31730"
 msgid "Show Extra Fanart"
@@ -772,3 +783,75 @@ msgstr ""
 msgctxt "#31780"
 msgid "Configure background opacity"
 msgstr ""
+
+msgctxt "#31781"
+msgid "Stars"
+msgstr ""
+
+msgctxt "#31782"
+msgid "Colour Themes"
+msgstr ""
+
+msgctxt "#31783"
+msgid "Views"
+msgstr ""
+
+msgctxt "#31784"
+msgid "Backup/Restore"
+msgstr ""
+
+msgctxt "#31790"
+msgid "For Movies:"
+msgstr ""
+
+msgctxt "#31791"
+msgid "For TV Shows:"
+msgstr ""
+
+msgctxt "#31792"
+msgid "For Seasons:"
+msgstr ""
+
+msgctxt "#31793"
+msgid "For Episodes:"
+msgstr ""
+
+msgctxt "#31794"
+msgid "For Movie Sets:"
+msgstr ""
+
+msgctxt "#31795"
+msgid "For Movies Inside Sets:"
+msgstr ""
+
+msgctxt "#31796"
+msgid "For Programs"
+msgstr ""
+
+msgctxt "#31797"
+msgid "For Files"
+msgstr ""
+
+msgctxt "#31798"
+msgid "For Music Artists"
+msgstr ""
+
+msgctxt "#31799"
+msgid "For Music Songs"
+msgstr ""
+
+msgctxt "#31800"
+msgid "For Music Albums"
+msgstr ""
+
+msgctxt "#31801"
+msgid "For Pictures"
+msgstr ""
+
+
+
+
+
+
+
+

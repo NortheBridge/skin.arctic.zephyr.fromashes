@@ -49,6 +49,9 @@
     <widget label="31737">extendedinfo.engadget</widget>
     <widget label="31738">extendedinfo.mobiletechreview</widget>
 
+    <!-- Weather Widget -->
+    <widget label="31251" condition="!IsEmpty(Skin.String(weather.fanart.path))">Weather</widget>
+
     <!-- Playlist -->
     <widgetPlaylists>True</widgetPlaylists>
     
