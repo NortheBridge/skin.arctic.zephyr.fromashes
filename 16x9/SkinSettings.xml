@@ -175,8 +175,7 @@
 						<selected>Skin.HasSetting(home.submenu2)</selected>
 						<onclick>Skin.ToggleSetting(home.submenu2)</onclick>
 					</control>
-					<control type="button" id="9220" description="Set Slideshow Path">
-					    <ondown>9214</ondown>
+					<!--<control type="button" id="9220" description="Set Slideshow Path">			
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9101)</visible>
 						<include>DefSettingsButton</include>
@@ -185,7 +184,29 @@
 						<onclick condition="IsEmpty(Skin.String(home.slideshowpath))">Skin.SetPath(home.slideshowpath)</onclick>
 						<onclick condition="!IsEmpty(Skin.String(home.slideshowpath))">Skin.Reset(home.dontshowfanart)</onclick>
 						<onclick condition="!IsEmpty(Skin.String(home.slideshowpath))">Skin.Reset(home.slideshowpath)</onclick>
-					</control>
+					</control>-->
+					<control type="button" id="92201" description="Set Slideshow Path">
+					    <ondown>9214</ondown>
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9101)</visible>
+                        <include>DefSettingsButton</include>
+                        <label>31269</label>
+                        <label2>$VAR[LabelFallbackWidgetName]</label2>
+                        <onclick>ActivateWindow(1106)</onclick> 
+                    </control>
+					
+					<control type="radiobutton" id="9222" description="Show slideshow instead of fanart">
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9101)</visible>
+                        <include>DefSettingsButton</include>
+                        <label>31149</label>
+                        <selected>Skin.HasSetting(home.dontshowfanart)</selected>
+                        <!-- <onclick condition="!Skin.HasSetting(home.dontshowfanart) + IsEmpty(Skin.String(home.slideshowpath))">Skin.SetPath(home.slideshowpath)</onclick> -->
+                        <onclick>Skin.ToggleSetting(home.dontshowfanart)</onclick>
+                    </control>
+					
+					
+					
 					<!-- Fanart -->
 					<control type="radiobutton" id="9223" description="Show fanart">
 						<width>1310</width>
@@ -234,6 +255,18 @@
 						<onclick>Skin.ToggleSetting(Fanart.Animate)</onclick>
 					</control>
 					<control type="button" id="9225" description="Set Fallback Image">
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9102)</visible>
+                        <include>DefSettingsButton</include>
+                        <label>31150</label>
+                        <label2>$INFO[Skin.String(fanart.fallback)]</label2>
+                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[16018])</onclick>
+                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(fanart.fallback))</onclick>
+                        <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31271])</onclick>
+                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetImage(fanart.fallback))</onclick>
+                        <onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31150])</onclick> 
+                    </control>
+					<!--<control type="button" id="9225" description="Set Fallback Image">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9102)</visible>
 						<include>DefSettingsButton</include>
@@ -241,15 +274,16 @@
 						<label2>$INFO[Skin.String(fanart.fallback)]</label2>
 						<onclick condition="IsEmpty(Skin.String(fanart.fallback))">Skin.SetImage(fanart.fallback)</onclick>
 						<onclick condition="!IsEmpty(Skin.String(fanart.fallback))">Skin.Reset(fanart.fallback)</onclick>
-					</control>
+					</control>-->
 					<control type="button" id="9229" description="Set Weather Fanart">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9102)</visible>
 						<include>DefSettingsButton</include>
 						<label>31143</label>
 						<label2>$INFO[Skin.String(weather.fanart)]</label2>
-						<onclick condition="IsEmpty(Skin.String(weather.fanart))">Skin.SetPath(weather.fanart)</onclick>
-						<onclick condition="!IsEmpty(Skin.String(weather.fanart))">Skin.Reset(weather.fanart)</onclick>
+						<!--<onclick condition="IsEmpty(Skin.String(weather.fanart))">Skin.SetPath(weather.fanart)</onclick>
+						<onclick condition="!IsEmpty(Skin.String(weather.fanart))">Skin.Reset(weather.fanart)</onclick>-->
+						<onclick>RunScript(script.image.resource.select,property=weather.fanart&amp;type=resource.images.weatherfanart)</onclick>
 					</control>
 					<control type="button" id="9227" description="Set Music Dir">
 						<width>1310</width>
@@ -276,6 +310,15 @@
 						<onclick>Skin.ToggleSetting(global.showvisualisation)</onclick>
 					</control>
 					<!-- OSD -->>
+					<control type="radiobutton" id="9234" description="Match theme">
+						<width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9103)</visible>
+						<include>DefSettingsButton</include>
+						<label>31196</label>
+						<selected>!Skin.HasSetting(osd.usetheme)</selected>
+						<onclick>Skin.ToggleSetting(osd.usetheme)</onclick>
+						<onclick>ReloadSkin()</onclick>
+					</control>
 					<control type="radiobutton" id="9235" description="Show Fanart">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9103)</visible>
@@ -327,15 +370,6 @@
 						<label>31217</label>
 						<selected>Skin.HasSetting(ShowClearArtOSD)</selected>
 						<onclick>Skin.ToggleSetting(ShowClearArtOSD)</onclick>
-					</control>
-					<control type="radiobutton" id="9234" description="Match theme">
-						<width>1310</width>
-						<visible>ControlGroup(9100).HasFocus(9103)</visible>
-						<include>DefSettingsButton</include>
-						<label>31196</label>
-						<selected>!Skin.HasSetting(osd.usetheme)</selected>
-						<onclick>Skin.ToggleSetting(osd.usetheme)</onclick>
-						<onclick>ReloadSkin()</onclick>
 					</control>
 					<control type="radiobutton" id="9240" description="Hide spoilers">
 						<width>1310</width>
@@ -407,7 +441,7 @@
 						<selected>Skin.HasSetting(home.dontautoshowwidget)</selected>
 						<onclick>Skin.ToggleSetting(home.dontautoshowwidget)</onclick>
 					</control>
-					<control type="radiobutton" id="9243" description="Show slideshow instead of fanart">
+					<!--<control type="radiobutton" id="9243" description="Show slideshow instead of fanart">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9104)</visible>
 						<include>DefSettingsButton</include>
@@ -415,7 +449,7 @@
 						<selected>Skin.HasSetting(home.dontshowfanart)</selected>
 						<onclick>Skin.ToggleSetting(home.dontshowfanart)</onclick>
 						<visible>System.HasAddon(script.grab.fanart)</visible>
-					</control>
+					</control>-->
 					<control type="button" id="9246" description="Custom Widget 1">
 						<width>1310</width>
 						<visible>ControlGroup(9100).HasFocus(9104)</visible>

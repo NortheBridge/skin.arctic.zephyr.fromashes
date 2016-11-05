@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <variable name="LabelWidgetShortcutsName">
+        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName))">$INFO[Container(211).ListItem.Property(widgetName)]</value>
+        <value condition="!IsEmpty(Container(211).ListItem.Property(background))">$LOCALIZE[31110]</value>
+        <value>Fallback Widget</value>
+    </variable>
+	 <variable name="LabelFallbackWidgetName">
+        <value condition="stringcompare(Skin.String(home.slideshowpath),pvr/background.jpg)">$LOCALIZE[16018]</value>
+        <value condition="!IsEmpty(Skin.String(home.slideshowpath))">$INFO[Skin.String(home.slideshowpath)]</value>
+        <value>$LOCALIZE[31105]</value>
+    </variable>
 	<variable name="LabelTitle">
 		<value condition="Container.Content(episodes) + !IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
 		<value>$INFO[ListItem.Label]</value>
