@@ -23,7 +23,7 @@
                 <posy>201</posy>
                 <width>1236</width>
                 <height>718</height>
-				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
+				<texture colordiffuse="Panel">common/white.png</texture>
             </control>
 	    <!--Right Panel Borders-->	
 		    <control type="image">
@@ -31,7 +31,7 @@
                 <posy>190</posy>
                 <width>1259</width>
                 <height>740</height>
-                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture>
+                <texture colordiffuse="66BBBBBB" border="2">dialog/frame_Landscape-fo.png</texture>
             </control>
 			<control type="image">
 			    <description>left panel mask image</description>
@@ -42,12 +42,13 @@
 			    <texture border="5" colordiffuse="Black">common/white.png</texture>
             </control>
 	    <!--Left Panel-->		
-			<control type="image">
-                <posx>84</posx>
+			<!--<control type="image">
+                <posx>86</posx>
                 <posy>201</posy>
-                <width>461</width>
+                <width>456</width>
                 <height>718</height>
-				<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>
+				<!--<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>-->
+				<!--<texture colordiffuse="Panel">common/white.png</texture>
             </control>
         <!--Left Panel Borders-->	
 		    <control type="image">
@@ -55,28 +56,36 @@
                 <posy>190</posy>
                 <width>479</width>
                 <height>740</height>
-                <texture colordiffuse="Panel" border="8">dialog/frame_Landscape-fo.png</texture><!-- replaced Dark1-->
-            </control>
-			<control type="image">
-                <posx>84</posx>
-                <posy>570</posy>
-                <width>461</width>
-                <height>5</height>
-                <texture colordiffuse="Black" border="5">common/separator.png</texture><!-- replaced Dark1-->
+                <texture colordiffuse="66BBBBBB" border="40">common/white.png</texture>
             </control>
 
 	    <!--Left Panel(Icons)-->	
 			<control type="group">
-			    <posx>84</posx>
+			    <posx>106</posx>
                 <posy>201</posy>
-                <width>461</width>
-                <height>718</height>					
+                <width>456</width>
+                <height>718</height>
 				<control type="image">
-					<left>6</left>
-					<width>450</width>
+                    <posx>-20</posx>
+                    <posy>0</posy>
+                    <width>456</width>
+                    <height>718</height>
+				    <!--<texture colordiffuse="Panel" border="12">buttons/dialoge_inner.png</texture>-->
+				    <texture colordiffuse="CCBBBBBB">common/white.png</texture>
+                </control>
+				<!--<control type="image">
+                    <posx>-19</posx>
+                    <posy>375</posy>
+                    <width>455</width>
+                    <height>10</height>
+                    <texture colordiffuse="66BBBBBB">common/white.png</texture>
+                </control>-->
+				<control type="image">
+					<left>0</left>
+					<width>456</width>
 					<top>30</top>
 					<height>400</height>
-					<texture background="true">$INFO[Container(9100).ListItem.ActualIcon]</texture>
+					<texture colordiffuse="Panel" background="true">$INFO[Container(9100).ListItem.ActualIcon]</texture>
 				</control>
 	        <!--Left Panel Icon Label-->		
 				<control type="label">
@@ -85,10 +94,10 @@
 					<top>20</top>
 					<height>60</height>
 					<font>MediumSmallBold</font>
-					<textcolor>PanelWhite100</textcolor>
+					<textcolor>Panel</textcolor>
 					<label>$INFO[Container(9100).ListItem.Label]</label>
 				</control>		
-			
+			    
 		    <!--Left Panel Info TextBox-->
                 <control type="textbox">
                     <top>400</top>
@@ -97,7 +106,7 @@
 					<left>30</left>
                     <align>left</align>
                     <font>Tiny</font>
-                    <textcolor>PanelWhite100</textcolor>
+                    <textcolor>Panel</textcolor>
                     <label>$INFO[Container(9100).ListItem.Label2]</label>
                 </control>
 			</control>
@@ -139,7 +148,7 @@
 		            <control type="image">
                         <width>260</width>
                         <height>200</height>                       
-						<texture colordiffuse="Black" border="25">buttons/dialoge_shadow.png</texture>
+						<texture colordiffuse="FF000000" border="25">buttons/dialoge_shadow.png</texture>
 						<shadowcolor>Black</shadowcolor>
                     </control>
 		    <!--Thumb Icon NoFocus-->			
@@ -153,11 +162,11 @@
                     </control>
 		    <!--Label NoFocus-->
 		            <control type="image">
-					    <posx>4</posx>
+					    <posx>6</posx>
 					    <posy>22</posy>
                         <width>196</width>
                         <height>18</height>                       
-						<texture colordiffuse="Dark4" border="20">common/box.png</texture>
+						<texture colordiffuse="CCBBBBBB" border="20">common/box.png</texture>
                     </control>
 		    <!--Label Text NoFocus-->			
                     <control type="label">
@@ -181,7 +190,7 @@
 					<control type="image">
                         <width>260</width>
                         <height>200</height>                       
-						<texture colordiffuse="Grey" border="30">buttons/dialoge_shadow.png</texture>
+						<texture colordiffuse="$VAR[ButtonFocusColour]" border="30">buttons/dialoge_shadow.png</texture>
                     </control>
 		    <!--Thumb Icon Focus-->			
 					<control type="image">
@@ -193,6 +202,7 @@
                     </control>
 		    <!--Label Focus-->			
 					<control type="image">
+					    <posx>6</posx>
 					    <posy>22</posy>
                         <width>205</width>
                         <height>18</height>                       
@@ -290,6 +300,14 @@
 					   <onclick>activatewindow(Profiles)</onclick>
                        <icon>special://skin/extras/icons2/profiles.png</icon>
 					   <thumb>special://skin/extras/icons/artist.png</thumb>
+				    </item>
+					<item id="11">
+					   <description>File manager</description>
+					   <label>7</label>
+                       <label2>311671</label2>
+					   <onclick>activatewindow(FileManager)</onclick>
+                       <icon>special://skin/extras/icons2/filemanager.png</icon>
+					   <thumb>special://skin/extras/icons/files.png</thumb>
 				    </item>
                 </content>
 				

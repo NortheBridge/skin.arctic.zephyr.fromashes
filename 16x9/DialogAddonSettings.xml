@@ -83,7 +83,7 @@
                 <width>436</width>
                 <height>291</height>
                 <texture fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
-                <aspectratio>scale</aspectratio>
+                <aspectratio>stretch</aspectratio>
             </control>
 
 			

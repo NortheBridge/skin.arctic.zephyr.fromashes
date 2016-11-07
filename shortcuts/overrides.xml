@@ -1,57 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <overrides>
 
-    <!-- Movies -->
-    <widget label="31124">RecentMovies</widget>
-    <widget label="31127">RandomMovies</widget>
-    <widget label="31123">RecommendedMovies</widget>
-    
-    <!-- Episodes -->
-    <widget label="31126">RandomEpisodes</widget>
-    <widget label="31125">RecentEpisodes</widget>
-    <widget label="31122">RecommendedEpisodes</widget>
-    
-    <!-- Albums -->
-    <widget label="31188">RecentAlbums</widget>
-    <widget label="31187">RandomAlbums</widget>
-    <widget label="31189">RecommendedAlbums</widget>
-    
-    <!-- Weather Widget -->
-    <widget label="31251" condition="!IsEmpty(Skin.String(weather.fanart.path))">Weather</widget>
-
+    <!-- Smart shortcuts -->
+    <widget label="Widgets" type="32010">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=skinplaylists,librarydataprovider,scriptwidgets,extendedinfo,smartshortcuts,pvr,smartishwidgets</widget>
     <!-- Playlist -->
     <widgetPlaylists>True</widgetPlaylists>
- 
-    <!-- Next Aired -->
-    <widget label="31220">NextAired</widget>
-    
-    <!-- Favourites -->
-    <widget label="1036">Favourites</widget>
 
-    <!-- Extended Info Trakt.tv -->
-    <widget label="31134">TrendingMovies</widget>
-    <widget label="31135">TrendingShows</widget> 
- 
-    <!-- Extended Info themoviedb.org -->
-    <widget label="31208">InCinemas</widget>
-    <widget label="31223">Upcoming</widget>
-    <widget label="31224">PopularMovies</widget>
-    <widget label="31225">TopRatedMovies</widget>
-    <widget label="31226">PopularTvShows</widget>
-    <widget label="31227">TopRatedTvShows</widget>
-    <widget label="31228">OnAirTvShows</widget>
-    <widget label="31229">AiringTodayTvShows</widget>
-    
-    <!-- BBC and ExtendedInfo -->
-    <widget label="31731">bbc.popular</widget>
-    <widget label="31732">bbc.sport</widget>
-    <widget label="31733">bbc.scifi</widget>
-    <widget label="31734">bbc.documentaries</widget>
-    <widget label="31735">bbc.music</widget>
-    <widget label="31736">extendedinfo.eurogamer</widget>
-    <widget label="31737">extendedinfo.engadget</widget>
-    <widget label="31738">extendedinfo.mobiletechreview</widget> 
- 
     <!-- Custom Widgets -->
     <widget label="31759">Custom1</widget>
     <widget label="31760">Custom2</widget>
@@ -63,30 +17,57 @@
     <widget label="31766">Custom8</widget>
     <widget label="31767">Custom9</widget>
     <widget label="31768">Custom10</widget>
- 
+
+    <!-- Live TV Widget -->
+    <widget label="31103" condition="System.GetBool(pvrmanager.enabled)">LiveTV</widget>
+
+    <!-- Weather Widget -->
+    <widget label="31251" condition="!IsEmpty(Skin.String(weather.fanart))">Weather</widget>
+
+    <!-- Next Aired -->
+    <widget label="31220" condition="System.HasAddon(script.tv.show.next.aired)">NextAired</widget>
+
+    <!-- Favourites -->
+    <widget label="1036" condition="System.HasAddon(script.favourites)">Favourites</widget>
+    
+	<!-- Extended Info Trakt.tv -->
+    <widget label="31134">TrendingMovies</widget>
+    <widget label="31135">TrendingShows</widget>
+	
+    <!-- Extended Info themoviedb.org -->
+    <widget label="31208">InCinemas</widget>
+    <widget label="31223">Upcoming</widget>
+    <widget label="31224">PopularMovies</widget>
+    <widget label="31225">TopRatedMovies</widget>
+    <widget label="31226">PopularTvShows</widget>
+    <widget label="31227">TopRatedTvShows</widget>
+    <widget label="31228">OnAirTvShows</widget>
+    <widget label="31229">AiringTodayTvShows</widget>
+
+    <widgetdefaultnode defaultID="movies" group="mainmenu" label="Recommended" type="movies" path="plugin://script.skin.helper.service/?action=RECOMMENDEDMOVIES&amp;reload=$INFO[Window(Home).Property(widgetreload)]" target="video">recommendedmovies</widgetdefaultnode>
+    <widgetdefaultnode defaultID="tvshows" group="mainmenu" label="Recommended" type="movies" path="plugin://service.library.data.provider?type=recommendedepisodes&amp;reload=$INFO[Window.Property(recommendedepisodes)]" target="video">recommendedepisodes</widgetdefaultnode>
+    <widgetdefaultnode defaultID="music" group="mainmenu" label="Recommended" type="music" path="plugin://service.library.data.provider?type=recommendedalbums&amp;reload=$INFO[Window.Property(recommendedalbums)]" target="video">recommendedmusic</widgetdefaultnode>
+    <widgetdefaultnode defaultID="videos" group="mainmenu" label="Recommended and Random" type="movies" path="plugin://service.library.data.provider?type=recommendedepisodes+recommendedmovies+randommovies&amp;reload=$INFO[Window.Property(recommendedepisodes)]$INFO[Window.Property(recommendedmovies)]$INFO[Window.Property(randommovies)]" target="video">moviesandepisodes</widgetdefaultnode>
+    <widgetdefaultnode defaultID="livetv" group="mainmenu" label="TV Channels" type="movies" path="pvr://channels/tv/All&amp;channels/" target="video">tvchannels</widgetdefaultnode>
+
     <!-- Additional Common Items -->
-    <shortcut label="Hub 1119" type="Hub 1119" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1119)</shortcut>
-    <shortcut label="Hub 1118" type="Hub 1118" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1118)</shortcut>
-    <shortcut label="Hub 1117" type="Hub 1117" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1117)</shortcut>
-    <shortcut label="Hub 1116" type="Hub 1116" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1116)</shortcut>
-    <shortcut label="Hub 1115" type="Hub 1115" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1115)</shortcut>
-    <shortcut label="Hub 1114" type="Hub 1114" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1114)</shortcut>
-    <shortcut label="Hub 1113" type="Hub 1113" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1113)</shortcut>
-    <shortcut label="31193" type="TVHub" grouping="common" icon="special://skin/extras/icons/tv.png">ActivateWindow(1112)</shortcut>
-    <shortcut label="31192" type="MovieHub" grouping="common" icon="special://skin/extras/icons/film.png">ActivateWindow(1111)</shortcut>
+    <shortcut label="31193" type="TVHub" grouping="common" icon="special://skin/extras/icons/tv.png">ActivateWindow(1102)</shortcut>
+    <shortcut label="31192" type="MovieHub" grouping="common" icon="special://skin/extras/icons/film.png">ActivateWindow(1101)</shortcut>
     <shortcut label="31212" type="themoviedb.org episodes" grouping="common" icon="special://skin/extras/icons/director.png">ActivateWindow(1105)</shortcut>
     <shortcut label="31208" type="themoviedb.org movies" grouping="common" icon="special://skin/extras/icons/director.png">ActivateWindow(1104)</shortcut>
-	<shortcut label="Top250" type="top250" grouping="common" icon="special://skin/extras/icons/top250.png">RunScript(script.skin.helper.service,action=showinfo;INFO[Window(Home).Property(SkinHelper.IMDB.Top250)]</shortcut>
-    <shortcut label="Oscars" type="oscars" grouping="common" icon="special://skin/extras/icons/oscars.png"> RunScript(script.oscars.view)</shortcut>
-    
+    <shortcut label="Top250" type="top250" grouping="common" icon="special://skin/extras/icons/top250.png">RunScript(script.imdb250.view)</shortcut>
+    <shortcut label="Oscars" type="oscars" grouping="common" icon="special://skin/extras/icons/oscars.png">RunScript(script.oscars.view)</shortcut>
+
+    <shortcut label="Smart Shortcuts" type="32010" grouping="video">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>
+
     <!-- Override Actions Because Im A Dummy Who Doesnt Know The Correct Window IDs To Use -->
     <override action="ActivateWindow(3201)">
         <condition>true</condition>
-        <action>ActivateWindow(1111)</action>
+        <action>ActivateWindow(1101)</action>
     </override>
     <override action="ActivateWindow(3202)">
         <condition>true</condition>
-        <action>ActivateWindow(1112)</action>
+        <action>ActivateWindow(1102)</action>
     </override>
     <override action="ActivateWindow(3204)">
         <condition>true</condition>
@@ -98,9 +79,23 @@
     </override>
     
     <!-- Browse for Backgrounds -->
-    <backgroundBrowse>True</backgroundBrowse>
     <background label="::PLAYLIST::">playlistBackground</background>
-    
+    <background label="smartshortcuts">||BROWSE||plugin://script.skin.helper.service/?action=backgrounds</background>
+    <background label="smartshortcuts">||BROWSE||special://skin/extras/backgrounds</background>
+    <backgroundBrowse default="protocol://">True</backgroundBrowse>
+
+    <backgrounddefault defaultID="movies">$INFO[Window(Home).Property(SkinHelper.AllMoviesBackground)]</backgrounddefault>
+    <backgrounddefault defaultID="tvshows">$INFO[Window(Home).Property(SkinHelper.AllTvShowsBackground)]</backgrounddefault>
+    <backgrounddefault defaultID="livetv">special://skin/extras/backgrounds/Channels.jpg</backgrounddefault>
+    <backgrounddefault defaultID="music">$INFO[Window(Home).Property(SkinHelper.AllMusicBackground)]</backgrounddefault>
+    <backgrounddefault defaultID="musicvideos">$INFO[Window(Home).Property(SkinHelper.AllMusicVideosBackground)]</backgrounddefault>
+    <backgrounddefault defaultID="weather">$INFO[Skin.String(weather.fanart)]$INFO[Window(Weather).Property(Current.FanartCode)]</backgrounddefault>
+    <backgrounddefault defaultID="pictures">$INFO[Window(Home).Property(SkinHelper.PicturesBackground)]</backgrounddefault>
+    <backgrounddefault defaultID="programs">special://skin/extras/backgrounds/Channels2.jpg</backgrounddefault>
+    <backgrounddefault defaultID="videos">$INFO[Window(Home).Property(SkinHelper.GlobalFanartBackground)]</backgrounddefault>
+    <backgrounddefault defaultID="settings">special://skin/extras/backgrounds/Motherboard.jpg</backgrounddefault>
+    <backgrounddefault defaultID="power">special://skin/extras/backgrounds/kodi.jpg</backgrounddefault>
+
     <!-- Warning to Remove Settings -->
     <warn heading="31176" message="31177">ActivateWindow(Settings)</warn>
     
@@ -184,7 +179,6 @@
     <icon image="DefaultAddonProgram.png">special://skin/extras/icons/addons.png</icon>
     
     <!-- Thumbs -->
-        <!-- Thumbs -->
     <thumbnail label="3dtv.png">special://skin/extras/icons/3dtv.png</thumbnail>
     <thumbnail label="actor.png">special://skin/extras/icons/actor.png</thumbnail>
     <thumbnail label="addons.png">special://skin/extras/icons/addons.png</thumbnail>
@@ -226,7 +220,7 @@
     <thumbnail label="map.png">special://skin/extras/icons/map.png</thumbnail>
     <thumbnail label="musicvideo.png">special://skin/extras/icons/musicvideo.png</thumbnail>
     <thumbnail label="mute.png">special://skin/extras/icons/mute.png</thumbnail>
-	<thumbnail label="netflix.png">special://skin/extras/icons/netflix.png</thumbnail>
+    <thumbnail label="netflix.png">special://skin/extras/icons/netflix.png</thumbnail>
     <thumbnail label="network.png">special://skin/extras/icons/network.png</thumbnail>
     <thumbnail label="octo.png">special://skin/extras/icons/octo.png</thumbnail>
     <thumbnail label="pictures.png">special://skin/extras/icons/pictures.png</thumbnail>
@@ -333,6 +327,7 @@
     <thumbnail label="map.png">special://skin/extras/icons/map.png</thumbnail>
     <thumbnail label="musicvideo.png">special://skin/extras/icons/musicvideo.png</thumbnail>
     <thumbnail label="mute.png">special://skin/extras/icons/mute.png</thumbnail>
+    <thumbnail label="netflix.png">special://skin/extras/icons/netflix.png</thumbnail>
     <thumbnail label="network.png">special://skin/extras/icons/network.png</thumbnail>
     <thumbnail label="newspaper.png">special://skin/extras/icons/newspaper.png</thumbnail>
     <thumbnail label="nfl.png">special://skin/extras/icons/nfl.png</thumbnail>
@@ -400,19 +395,7 @@
     <thumbnail label="year.png">special://skin/extras/icons/year.png</thumbnail>
     <thumbnail label="years.png">special://skin/extras/icons/years.png</thumbnail>
     <thumbnail label="youtube.png">special://skin/extras/icons/youtube.png</thumbnail>
+    <thumbnail label="emby2.png">special://skin/extras/icons/emby2.png</thumbnail>
 
-    <!-- GROUPINGS -->
-    <!-- Video Grouping -->
-    <video-groupings>
-        <node label="32040">
-            <content>playlist-video</content>
-        </node>
-        <node label="32010">
-            <shortcut label="1037" type="32014" icon="DefaultAddonVideo.png">ActivateWindow(Videos,Addons,return)</shortcut>
-            <content>addon-video</content>
-        </node>
-        <content>video</content>
-        
-    </video-groupings>
-    
+    <thumbnail label="smartshortcuts">||BROWSE||plugin://script.skin.helper.service/?action=backgrounds</thumbnail>
 </overrides>

@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+	<!-- Plot Overlay Time Limit -->
+    <include name="TimeLimit1"><visible>[System.IdleTime(1) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include>
+    <include name="TimeLimit2"><visible>[System.IdleTime(2) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include>
+    <include name="TimeLimit3"><visible>[System.IdleTime(3) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
+    <include name="TimeLimit4"><visible>[System.IdleTime(4) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
+    <include name="TimeLimit5"><visible>[System.IdleTime(5) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
+    <include name="TimeLimit6"><visible>[System.IdleTime(6) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
+    <include name="TimeLimit7"><visible>[System.IdleTime(7) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
+    <include name="TimeLimit8"><visible>[System.IdleTime(8) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
+    <include name="TimeLimit9"><visible>[System.IdleTime(9) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
+    <include name="TimeLimit10"><visible>[System.IdleTime(10) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include>
+
 <!-- 1st Generation Color Enhancements -->
 <!-- ###Begin### -->
     <variable name="ColourHighlight">  
@@ -154,7 +166,64 @@
 	<variable name="SideBladeHighlightColour">  
         <value condition="!IsEmpty(Skin.String(sidebladehighlightcolor.name))">$INFO[Skin.String(sidebladehighlightcolor.name)]</value>
         <value>Dark1</value>	
-	</variable>		
+	</variable>
+	
+	
+	<variable name="ResumeColourHighlight">  
+        <value condition="!IsEmpty(Skin.String(resume.colour.name))">$INFO[Skin.String(resume.colour.name)]</value>
+        <value>Highlight2</value>	
+	</variable>	
+	<variable name="PlayingColourHighlight">  
+        <value condition="!IsEmpty(Skin.String(playing.colour.name))">$INFO[Skin.String(playing.colour.name)]</value>
+        <value>Highlight2</value>	
+	</variable>
+	<variable name="NewColourHighlight">  
+        <value condition="!IsEmpty(Skin.String(new.colour.name))">$INFO[Skin.String(new.colour.name)]</value>
+        <value>Highlight2</value>	
+	</variable>
+	<variable name="WatchedColourHighlight">  
+        <value condition="!IsEmpty(Skin.String(watched.colour.name))">$INFO[Skin.String(watched.colour.name)]</value>
+        <value>Highlight2</value>	
+	</variable>
+	<variable name="UnwatchedColourHighlight">  
+        <value condition="!IsEmpty(Skin.String(unwatched.colour.name))">$INFO[Skin.String(unwatched.colour.name)]</value>
+        <value>Highlight2</value>	
+	</variable>
+	<variable name="PercentColourHighlight">  
+        <value condition="!IsEmpty(Skin.String(posterbacking.colour.name))">$INFO[Skin.String(posterbacking.colour.name)]</value>
+        <value>Highlight</value>	
+	</variable>	
+	<!--<variable name="ResumeColourHighlight">
+		<value condition="Skin.HasSetting(ResumeColour)">$INFO[Skin.String(resume.colour.name)]</value>
+		<value condition="!Skin.HasSetting(ResumeColour) + Skin.HasSetting(ColourHighlight2)">$INFO[Skin.String(focuscolor2.name)]</value>
+		<value condition="!Skin.HasSetting(ResumeColour) + !Skin.HasSetting(ColourHighlight2)">Highlight2</value>
+	</variable>
+	<variable name="PlayingColourHighlight">
+		<value condition="Skin.HasSetting(PlayingColour)">$INFO[Skin.String(playing.colour.name)]</value>
+		<value condition="!Skin.HasSetting(PlayingColour) + Skin.HasSetting(ColourHighlight2)">$INFO[Skin.String(focuscolor2.name)]</value>
+		<value condition="!Skin.HasSetting(PlayingColour) + !Skin.HasSetting(ColourHighlight2)">Highlight2</value>
+	</variable>
+	<variable name="NewColourHighlight">
+		<value condition="Skin.HasSetting(NewColour)">$INFO[Skin.String(new.colour.name)]</value>
+		<value condition="!Skin.HasSetting(NewColour) + Skin.HasSetting(ColourHighlight2)">$INFO[Skin.String(focuscolor2.name)]</value>
+		<value condition="!Skin.HasSetting(NewColour) + !Skin.HasSetting(ColourHighlight2)">Highlight2</value>
+	</variable>
+	<variable name="WatchedColourHighlight">
+		<value condition="Skin.HasSetting(WatchedColour)">$INFO[Skin.String(watched.colour.name)]</value>
+		<value condition="!Skin.HasSetting(WatchedColour) + Skin.HasSetting(ColourHighlight2)">$INFO[Skin.String(focuscolor2.name)]</value>
+		<value condition="!Skin.HasSetting(WatchedColour) + !Skin.HasSetting(ColourHighlight2)">Highlight2</value>
+	</variable>
+	<variable name="UnwatchedColourHighlight">
+		<value condition="Skin.HasSetting(UnwatchedColour)">$INFO[Skin.String(unwatched.colour.name)]</value>
+		<value condition="!Skin.HasSetting(UnwatchedColour) + Skin.HasSetting(ColourHighlight2)">$INFO[Skin.String(focuscolor2.name)]</value>
+		<value condition="!Skin.HasSetting(UnwatchedColour) + !Skin.HasSetting(ColourHighlight2)">Highlight2</value>
+	</variable>
+	<variable name="PercentColourHighlight">
+		<value condition="Skin.HasSetting(PosterBackingColour)">$INFO[Skin.String(posterbacking.colour.name)]</value>
+		<value condition="Skin.HasSetting(ColourHighlight)">$INFO[Skin.String(focuscolor.name)]</value>
+		<value condition="!Skin.HasSetting(ColourHighlight)">Highlight</value>
+	</variable>-->
+	
 <!-- ###End### -->
 
 
@@ -247,20 +316,8 @@
 	    <value condition="IntegerGreaterThan(Container(301).ListItem.Rating,7.9) + !IntegerGreaterThan(Container(301).ListItem.Rating,8.9)">$INFO[Skin.String(ratingstarsdo89)]</value>
 	    <value condition="IntegerGreaterThan(Container(301).ListItem.Rating,8.9)">$INFO[Skin.String(ratingstarsdo99)]</value>
 	</variable>	
-<!-- End of Stars -->
-    
-	<!-- Plot Overlay Time Limit -->
-    <include name="TimeLimit1"><visible>[System.IdleTime(1) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include>
-    <include name="TimeLimit2"><visible>[System.IdleTime(2) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include>
-    <include name="TimeLimit3"><visible>[System.IdleTime(3) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
-    <include name="TimeLimit4"><visible>[System.IdleTime(4) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
-    <include name="TimeLimit5"><visible>[System.IdleTime(5) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
-    <include name="TimeLimit6"><visible>[System.IdleTime(6) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
-    <include name="TimeLimit7"><visible>[System.IdleTime(7) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
-    <include name="TimeLimit8"><visible>[System.IdleTime(8) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
-    <include name="TimeLimit9"><visible>[System.IdleTime(9) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include> 
-    <include name="TimeLimit10"><visible>[System.IdleTime(10) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible></include>
-		
+<!-- End of Stars -->   
+	
 	<!--<variable name="DefSettingsOnRight">
 		<value condition="Window.IsVisible(AppearanceSettings)">ReplaceWindow(VideosSettings)</value>
 		<value condition="Window.IsVisible(VideosSettings)">ReplaceWindow(MusicSettings)</value>
@@ -283,9 +340,33 @@
 		<value condition="Window.IsVisible(PvrSettings)">ReplaceWindow(SystemSettings)</value>
 		<value condition="Window.IsVisible(SkinSettings)">ReplaceWindow(PvrSettings)</value>
 	</variable>-->
+
+    <variable name="LibraryBackground">
+        <value condition="Skin.HasSetting(global.hidefanart)">None</value>
+        <value condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">Extra fanart</value>
+        <value>Fanart</value>
+    </variable>
+    <variable name="MusicVizBackground">
+        <value condition="String.IsEqual(Skin.String(musicvis.background),fanart)">Fanart</value>
+        <value condition="String.IsEqual(Skin.String(musicvis.background),artistslideshow)">Artist slideshow</value>
+        <value condition="String.IsEqual(Skin.String(musicvis.background),albumwall)">Album wall</value>
+        <value condition="String.IsEqual(Skin.String(musicvis.background),bluralbum)">Blurred album cover</value>
+        <value condition="String.IsEqual(Skin.String(musicvis.background),pixelfanart)">Pixelated fanart</value>
+        <value condition="String.IsEqual(Skin.String(musicvis.background),posterizefanart)">Posterized fanart</value>
+        <value>None</value>
+    </variable>
+    <variable name="BackgroundCustomizerHeader">
+        <value condition="Skin.HasSetting(Edit.LibraryBackground)">Select library background</value>
+        <value condition="Skin.HasSetting(Edit.MusicVizBackground)">Select music visualization background</value>
+    </variable>
+    <variable name="SortDirection">
+        <value condition="Container.SortDirection(Ascending)">Ascending</value>
+        <value condition="Container.SortDirection(Descending)">Descending</value>
+    </variable>
 	
 	<variable name="DefWidgetContent">
 		<!-- Individual Widget Paths -->
+		<value condition="!IsEmpty(Container(300).ListItem.Property(widgetPath)) + Skin.HasSetting(NoPersistentWidgets)">$INFO[Container(300).ListItem.Property(widgetPath)]</value>
 		<value condition="StringCompare(Container(300).ListItem.Property(widget),Playlist)">$INFO[Container(300).ListItem.Property(widgetPlaylist)]</value>
 		<value condition="StringCompare(Container(300).ListItem.Property(widget),RandomMovies)">plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
 		<value condition="StringCompare(Container(300).ListItem.Property(widget),RandomEpisodes)">plugin://service.library.data.provider?type=randomepisodes&amp;reload=$INFO[Window.Property(randomepisodes)]</value>
@@ -345,7 +426,8 @@
 		<value condition="StringCompare(Window(home).Property(widget),TopRatedMovies) + IsEmpty(Container(300).ListItem.Property(widget))">plugin://script.extendedinfo?info=topratedmovies</value>
 		<value condition="StringCompare(Window(home).Property(widget),TopRatedTvShows) + IsEmpty(Container(300).ListItem.Property(widget))">plugin://script.extendedinfo?info=topratedtvshows</value>
 		<value condition="StringCompare(Window(home).Property(widget),AiringTodayTvShows) + IsEmpty(Container(300).ListItem.Property(widget))">plugin://script.extendedinfo?info=airingtodaytvshows</value>
-		<value condition="IsEmpty(Container(300).ListItem.Property(widget))">plugin://service.library.data.provider?type=recommendedepisodes+recommendedmovies+randommovies&amp;reload=$INFO[Window.Property(recommendedepisodes)]$INFO[Window.Property(recommendedmovies)]$INFO[Window.Property(randommovies)]</value>
+		<!--<value condition="IsEmpty(Container(300).ListItem.Property(widget))">plugin://service.library.data.provider?type=recommendedepisodes+recommendedmovies+randommovies&amp;reload=$INFO[Window.Property(recommendedepisodes)]$INFO[Window.Property(recommendedmovies)]$INFO[Window.Property(randommovies)]</value>-->
+		<value>plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
 	</variable>
 
 	<variable name="DefWidgetContentAlbums">
@@ -1022,8 +1104,7 @@
 		<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/on.png</textureradiofocus>
 		<textureradionofocus colordiffuse="Black30">buttons/off.png</textureradionofocus>
 		<focusedcolor>$VAR[ColourSelected]</focusedcolor>		
-		<alttexturefocus colordiffuse="Dark1" border="16">common/white.png</alttexturefocus>
-<!-- 4th GEN Colour Modification -->		
+		<alttexturefocus colordiffuse="Dark1" border="16">common/white.png</alttexturefocus>		
 		<texturefocus colordiffuse="$VAR[SideBladeHighlightColour]" border="16">common/white.png</texturefocus>
 		<!--<texturefocus colordiffuse="Dark1" border="16">common/white.png</texturefocus>-->
 	</include>
@@ -1473,9 +1554,9 @@
 			<colordiffuse>$VAR[ColourHighlight]</colordiffuse>
 		</control>
 	</include>
-	<include name="Def9000MediaMenuTop">
+	<!--<include name="Def9000MediaMenuTop">
 		<left>0</left>
-		<top>115</top>
+		<top>50</top>
 		<width>455</width>
 		<height>1080</height>
 		<onleft>9000</onleft>
@@ -1749,14 +1830,14 @@
 			<onclick>Skin.ToggleSetting(views.156.showtick)</onclick>
 			<visible>Control.IsVisible(156)</visible>
 		</control>
-		<control type="radiobutton" id="9030" description="Plot Overlay">
+		<!--<control type="radiobutton" id="9030" description="Plot Overlay">
 		    <radioposx>380</radioposx>
 			<include>DefContextButton2</include>
 			<align>left</align>
 			<label>31255</label>
 			<selected>Skin.HasSetting(furniture.overlayinfo)</selected>
 			<onclick>Skin.ToggleSetting(furniture.overlayinfo)</onclick>
-		</control>
+		</control>-->
 		<!--<control type="radiobutton" id="9032" description="Enable Extra Fanart">
 		    <radioposx>380</radioposx>
             <include>DefContextButton2</include>
@@ -1765,45 +1846,566 @@
             <selected>Skin.HasSetting(SkinHelper.EnableExtraFanart)</selected>
             <onclick>Skin.ToggleSetting(SkinHelper.EnableExtraFanart)</onclick>
             <visible>System.HasAddon(script.skin.helper.service)</visible>
-        </control>-->
-	</include>
+        </control>
+	</include>-->
 			
-	<include name="Def9000MusicSide">
+	<!--<include name="Def9000MusicMenuTop">
+		<left>0</left>
+		<top>50</top>
+		<width>455</width>
+		<height>1080</height>
+		<onleft>9000</onleft>
+		<onright>ClearProperty(MediaMenu,Home)</onright>
+		<onright condition="![Window.IsVisible(tvguide) | Window.IsActive(SettingsCategory.xml)]">50</onright>
+		<onright condition="Window.IsVisible(tvguide)">10</onright>
+		<onright condition="Window.IsActive(SettingsCategory.xml)">3</onright>
+		<onup>9000</onup>
+		<ondown>9000</ondown>
+		<onback>ClearProperty(MediaMenu,Home)</onback>
+		<onback>50</onback>
+		<itemgap>0</itemgap>
+		<animation effect="slide" start="-440,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
+		<control type="label" id="200">
+			<height>42</height>
+			<textoffsetx>15</textoffsetx>
+			<font>Home</font>
+			<label>View Options</label>
+			<textcolor>$VAR[ColourHighlight]</textcolor>
+			<aligny>center</aligny>
+		</control>
         <control type="button" id="2">
             <description>View</description>
-            <include>DefContextButton</include>
+            <include>DefContextButton2</include>
             <align>left</align>
         </control>
         <control type="button" id="3">
             <description>Sort</description>
-            <include>DefContextButton</include>
+            <include>DefContextButton2</include>
             <align>left</align>
         </control>
-        <control type="togglebutton" id="4">
+        <control type="button" id="4">
             <description>Ascending</description>
-            <include>DefContextButton</include>
+            <include>DefContextButton2</include>
             <align>left</align>
             <label>584</label>
             <altlabel>585</altlabel>
-        </control>
+        </control>		
         <control type="button" id="7">
             <description>Playlist</description>
-            <include>DefContextButton</include>
+            <include>DefContextButton2</include>
             <align>left</align>
             <label>136</label>
             <onclick>SetFocus(50)</onclick>
-            <visible>Window.IsVisible(MyMusicSongs.xml)</visible>
+            <visible>Window.IsVisible(MyPlaylist.xml)</visible>
             <visible>!stringcompare(Container.FolderPath,special://musicplaylists/)</visible>
         </control>       
         <control type="button" id="9098">
             <description>Now Playing</description>
-            <include>DefContextButton</include>
+            <include>DefContextButton2</include>
             <label>13350</label>
             <align>left</align>
             <onclick>ActivateWindow(MusicPlaylist)</onclick>
             <visible>IntegerGreaterThan(Playlist.Length(music),1)</visible>
         </control>
-	</include>	
+	</include>-->	
+	
+	<include name="DefViewLayout">
+        <control type="group">
+		    <include>GlobalOverlay</include>
+		    <include>Animation.Common</include>
+            <height>540</height>180
+            <left>439</left>
+            <width>410</width>1490
+            <top>0</top>
+			<control type="group">
+			    <control type="image">
+                    <visible>Container(3110).HasPrevious</visible>
+                    <description>arrow image</description>
+                    <right>180</right>
+                    <posy>70</posy>
+                    <width>20</width>
+                    <height>20</height>
+                    <texture colordiffuse="Dark1" flipy="true">common/arrow-small.png</texture>
+                </control>
+                <control type="image">
+                    <visible>Container(3110).HasNext</visible>
+                    <description>arrow image</description>
+                    <right>180</right>
+                    <posy>1020</posy>
+                    <width>20</width>
+                    <height>20</height>
+					<texture colordiffuse="Dark1" flipy="false">common/arrow-small.png</texture>
+                </control>
+			</control>	
+	        <control type="image">
+                <description>background image</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>420</width>1490
+                <height>1080</height>
+                <texture border="5" colordiffuse="$VAR[SideBladePanelColour]">common/white.png</texture>
+            </control>
+			<control type="label" id="200">
+			    <top>50</top>
+		        <width>400</width>
+			    <height>42</height>
+			    <textoffsetx>15</textoffsetx>
+			    <font>Home</font>
+			    <label>View Types</label>
+			    <textcolor>$VAR[ColourHighlight]</textcolor>
+			    <aligny>center</aligny>
+		    </control>
+            <control type="grouplist" id="3110">
+                <description>grouplist for context buttons</description>
+                <posx>2</posx>
+                <posy>92</posy>
+                <width>415</width>
+                <height>910</height>
+                <onleft>9000</onleft>
+                <onup>3110</onup>
+				<ondown>3110</ondown>
+				<onback>50</onback>
+				<orientation>vertical</orientation>		
+		        <scrolltime tween="quadratic">400</scrolltime>
+                <control type="button" id="3111">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>List</label>
+                    <onclick>Container.SetViewMode(50)</onclick>
+					<onclick>Close</onclick>
+                </control>
+				<control type="button" id="3113">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>Big list</label>
+                    <onclick>Container.SetViewMode(52)</onclick>
+					<onclick>Close</onclick>
+                    <visible>!Window.IsActive(pictures)</visible>
+                </control>
+                <control type="button" id="3116">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>InfoWall 1</label>
+                    <onclick>Container.SetViewMode(55)</onclick>
+					<onclick>Close</onclick>
+                    <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)</visible>
+                </control>
+				<control type="button" id="3129">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>InfoWall 2</label>
+                    <onclick>Container.SetViewMode(159)</onclick>
+					<onclick>Close</onclick>
+                    <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)</visible>
+                </control>				
+				<control type="button" id="3127">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>Media Info</label>
+                    <onclick>Container.SetViewMode(56)</onclick>
+					<onclick>Close</onclick>
+                    <visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)] | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>
+                </control>
+				<control type="button" id="31271">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>Extra Info</label>
+                    <onclick>Container.SetViewMode(57)</onclick>
+					<onclick>Close</onclick>
+                    <visible>Container.Content(musicvideos) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>
+                </control>
+                <control type="button" id="3126">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>Icons</label>
+                    <onclick>Container.SetViewMode(555)</onclick>
+					<onclick>Close</onclick>
+                    <visible>Container.Content(episodes)</visible>
+                </control>
+				
+		<!--View_505_Wall_Square-->		
+               <control type="button" id="3122">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>Wall Square</label>
+                    <onclick>Container.SetViewMode(505)</onclick>
+					<onclick>Close</onclick>
+                    <visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left) | Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos)</visible>
+                </control>
+				
+                <control type="button" id="3124">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>Big Icons 1</label>
+                    <onclick>Container.SetViewMode(503)</onclick>
+					<onclick>Close</onclick>
+                    <visible>Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums) | Window.IsActive(MyPrograms.xml) | Container.Content(addons)</visible>
+                </control>
+                <control type="button" id="3114">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>Big Icons 2</label>
+                    <onclick>Container.SetViewMode(53)</onclick>
+					<onclick>Close</onclick>
+                    <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)</visible>
+                </control>
+                <control type="button" id="31141">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>Poster Row</label>
+                    <onclick>Container.SetViewMode(513)</onclick>
+					<onclick>Close</onclick>
+                    <visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Window.IsActive(MyPrograms.xml) | Container.Content(addons)</visible>
+                </control>
+                <control type="button" id="31142">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>Poster Shift</label>
+                    <onclick>Container.SetViewMode(514)</onclick>
+					<onclick>Close</onclick>
+                    <visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Window.IsActive(MyPrograms.xml) | Container.Content(addons)</visible>
+                </control>				
+                <control type="button" id="3117">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>Cards</label>
+                    <onclick>Container.SetViewMode(58)</onclick>
+					<onclick>Close</onclick>
+                    <!--<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(episodes) + !String.StartsWith(Container.FolderPath,plugin://)] | Container.Content(sets)</visible>-->
+					<visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)] | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>
+                </control>
+                <!--<control type="button" id="3125">
+				    <width>200</width>
+                    <include>DefContextButton2</include>
+                    <label>Panel</label>
+                    <onclick>Container.SetViewMode(57)</onclick>
+                    <visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)] | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>
+                </control>-->
+				<control type="button" id="3125">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>Panel</label>
+                    <onclick>Container.SetViewMode(157)</onclick>
+					<onclick>Close</onclick>
+                    <visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://)] | Container.Content(artists)</visible>
+                </control>
+                <control type="button" id="3115">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>Wide</label>
+                    <onclick>Container.SetViewMode(54)</onclick>
+					<onclick>Close</onclick>
+                    <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(episodes) + !String.StartsWith(Container.FolderPath,plugin://)] | Container.Content(albums) | Container.Content(songs) | Window.IsActive(musicplaylist) | Container.Content(sets)</visible>
+                </control>
+                <control type="button" id="3112">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>Big Wide</label>
+                    <onclick>Container.SetViewMode(51)</onclick>
+					<onclick>Close</onclick>
+                    <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(artists) | Container.Content(sets)</visible>
+                </control>
+                <control type="button" id="31121">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>Banner Wall</label>
+                    <onclick>Container.SetViewMode(59)</onclick>
+					<onclick>Close</onclick>
+                    <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+                </control>
+				<control type="button" id="3118">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>Gallery</label>
+                    <onclick>Container.SetViewMode(520)</onclick>
+					<onclick>Close</onclick>
+                    <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets) | Window.IsActive(pictures)</visible>
+                </control>
+                <control type="button" id="31181">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>Thumbnail</label>
+                    <onclick>Container.SetViewMode(500)</onclick>
+					<onclick>Close</onclick>
+                </control>
+				<control type="button" id="31182">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>Big Screen Wall</label>
+                    <onclick>Container.SetViewMode(155)</onclick>
+					<onclick>Close</onclick>
+					<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes)</visible>
+                </control>
+				<control type="button" id="3119">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>Big Screen Wall +</label>
+                    <onclick>Container.SetViewMode(156)</onclick>
+					<onclick>Close</onclick>
+					<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes)</visible>
+                </control>
+				<control type="button" id="31191">
+				    <width>413</width>
+                    <include>DefContextButton2</include>
+                    <label>NetFlix</label>
+                    <onclick>Container.SetViewMode(515)</onclick>
+					<onclick>Close</onclick>
+					<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes)</visible>
+                </control>
+            </control>
+	    </control>
+	    <control type="group">
+		    <posx>900</posx>
+		    <control type="image">
+                <description>background image</description>
+                <posx>-36</posx>
+                <posy>0</posy>
+                <width>1100</width>1490
+                <height>1080</height>
+                <texture border="5" colordiffuse="$VAR[SideBladePanelColour]">common/white.png</texture>
+            </control>
+			<control type="label" id="200">
+			    <top>50</top>
+				<posx>-20</posx>
+		        <width>400</width>
+			    <height>42</height>
+			    <font>Home</font>
+			    <label>Views</label>
+			    <textcolor>$VAR[ColourHighlight]</textcolor>
+			    <aligny>center</aligny>
+		    </control>
+		    <control type="image">
+			    <visible>ControlGroup(3110).HasFocus(3111)</visible>
+                <description>Thumb image</description>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/50.jpg</texture>
+            </control>
+			<control type="image">
+			    <visible>ControlGroup(3110).HasFocus(3113)</visible>
+                <description>Thumb image</description>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/52.jpg</texture>
+            </control>
+			<control type="image">
+			    <visible>ControlGroup(3110).HasFocus(3116)</visible>
+                <description>Thumb image</description>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/55.jpg</texture>
+            </control>
+			<control type="image">
+                <description>Thumb image</description>
+				<visible>ControlGroup(3110).HasFocus(3129)</visible>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/159.jpg</texture>
+            </control>
+			<control type="image">
+                <description>Thumb image</description>
+				<visible>ControlGroup(3110).HasFocus(3127)</visible>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/56.jpg</texture>
+            </control>
+			<control type="image">
+			    <visible>ControlGroup(3110).HasFocus(31271)</visible>
+                <description>Thumb image</description>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/57.jpg</texture>
+            </control>
+			<control type="image">
+                <description>Thumb image</description>
+				<visible>ControlGroup(3110).HasFocus(3126)</visible>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/555.jpg</texture>
+            </control>
+			<control type="image">
+                <description>Thumb image</description>
+				<visible>ControlGroup(3110).HasFocus(3122)</visible>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/505.jpg</texture>
+            </control>
+			<control type="image">
+                <description>Thumb image</description>
+				<visible>ControlGroup(3110).HasFocus(3124)</visible>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/503.jpg</texture>
+            </control>
+			<control type="image">
+                <description>Thumb image</description>
+				<visible>ControlGroup(3110).HasFocus(3114)</visible>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/53.jpg</texture>
+            </control>
+			<control type="image">
+                <description>Thumb image</description>
+				<visible>ControlGroup(3110).HasFocus(31141)</visible>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/513.jpg</texture>
+            </control>
+			<control type="image">
+                <description>Thumb image</description>
+				<visible>ControlGroup(3110).HasFocus(31142)</visible>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/514.jpg</texture>
+            </control>
+			<control type="image">
+                <description>Thumb image</description>
+				<visible>ControlGroup(3110).HasFocus(3117)</visible>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/58.jpg</texture>
+            </control>
+			<control type="image">
+                <description>Thumb image</description>
+				<visible>ControlGroup(3110).HasFocus(3125)</visible>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/157.jpg</texture>
+            </control>
+			<control type="image">
+                <description>Thumb image</description>
+				<visible>ControlGroup(3110).HasFocus(3115)</visible>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/54.jpg</texture>
+            </control>
+			<control type="image">
+                <description>Thumb image</description>
+				<visible>ControlGroup(3110).HasFocus(3112)</visible>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/51.jpg</texture>
+            </control>
+			<control type="image">
+                <description>Thumb image</description>
+				<visible>ControlGroup(3110).HasFocus(31121)</visible>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/59.jpg</texture>
+            </control>
+			<control type="image">
+                <description>Thumb image</description>
+				<visible>ControlGroup(3110).HasFocus(3118)</visible>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/520.jpg</texture>
+            </control>
+			<control type="image">
+                <description>Thumb image</description>
+				<visible>ControlGroup(3110).HasFocus(31181)</visible>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/500.jpg</texture>
+            </control>
+			<control type="image">
+                <description>Thumb image</description>
+				<visible>ControlGroup(3110).HasFocus(31182)</visible>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/155.jpg</texture>
+            </control>
+			<control type="image">
+                <description>Thumb image</description>
+				<visible>ControlGroup(3110).HasFocus(3119)</visible>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/156.jpg</texture>
+            </control>
+			<control type="image">
+                <description>Thumb image</description>
+				<visible>ControlGroup(3110).HasFocus(31191)</visible>
+                <posx>0</posx>
+                <posy>92</posy>
+                <width>965</width>
+                <height>900</height>
+                <texture border="5">special://skin/extras/viewthumbs/515.jpg</texture>
+            </control>
+		</control>		
+    </include>
+	
+	<include name="VideoViewTypes">
+	    <control type="image">
+                <description>background image</description>
+                <posx>872</posx>
+                <posy>645</posy>
+                <width>500</width>1490
+                <height>400</height>
+                <texture border="5" colordiffuse="$VAR[SideBladePanelColour]">common/white.png</texture>
+        </control>
+		<control type="image">
+                <description>background image</description>
+                <posx>840</posx>
+                <posy>880</posy>
+                <width>40</width>1490
+                <height>40</height>
+                <texture colordiffuse="$VAR[SideBladePanelColour]" flipx="true">indicator/playlist.png</texture>
+        </control>	
+		<control type="image">
+                <description>Thumb image</description>
+                <posx>882</posx>
+                <posy>655</posy>
+                <width>480</width>1490
+                <height>380</height>
+                <texture border="5">$INFO[ListItem.Container.ViewType]</texture>
+            
+	    </control>
+	</include>
+	
+	
+	
+	
 	
 	<include name="DefDialogSelectManual6">
 		<posx>738</posx>
@@ -2191,35 +2793,14 @@
         </control>
     </include>
 <!--End-->	
-    <variable name="LibraryBackground">
-        <value condition="Skin.HasSetting(global.hidefanart)">None</value>
-        <value condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">Extra fanart</value>
-        <value>Fanart</value>
-    </variable>
-    <variable name="MusicVizBackground">
-        <value condition="String.IsEqual(Skin.String(musicvis.background),fanart)">Fanart</value>
-        <value condition="String.IsEqual(Skin.String(musicvis.background),artistslideshow)">Artist slideshow</value>
-        <value condition="String.IsEqual(Skin.String(musicvis.background),albumwall)">Album wall</value>
-        <value condition="String.IsEqual(Skin.String(musicvis.background),bluralbum)">Blurred album cover</value>
-        <value condition="String.IsEqual(Skin.String(musicvis.background),pixelfanart)">Pixelated fanart</value>
-        <value condition="String.IsEqual(Skin.String(musicvis.background),posterizefanart)">Posterized fanart</value>
-        <value>None</value>
-    </variable>
-    <variable name="BackgroundCustomizerHeader">
-        <value condition="Skin.HasSetting(Edit.LibraryBackground)">Select library background</value>
-        <value condition="Skin.HasSetting(Edit.MusicVizBackground)">Select music visualization background</value>
-    </variable>
-    <variable name="SortDirection">
-        <value condition="Container.SortDirection(Ascending)">Ascending</value>
-        <value condition="Container.SortDirection(Descending)">Descending</value>
-    </variable>
+
 	<include name="DefaultSkinSettings">
 	    <onload condition="!Skin.String(SkinHelper.SpinnerTexture)">Skin.SetString(SkinHelper.SpinnerTexture,default)</onload>
 		<onload condition="!Skin.String(SkinHelper.SpinnerTexturePath)">Skin.SetString(SkinHelper.SpinnerTexturePath,special://skin/extras/busy_spinners/default)</onload>
 		<onload condition="!Skin.String(defaultcolorpalette.label)">Skin.SetString(defaultcolorpalette.label,basic)</onload>
         <onload condition="!Skin.String(defaultcolorpalette)">Skin.SetString(defaultcolorpalette,basic)</onload>
 	</include>
-
+		
     <include name="DefHubWindow">
         <include>GlobalBackground</include>
         <include>Furniture_Header</include>
@@ -2498,8 +3079,8 @@
                 <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
             </control>
         </control>
-    </include>
-
+    </include>	
+	
     <variable name="DefHubWidget">
         <value condition="Window.IsVisible(1111) + !IsEmpty(Skin.String(Widget.1111))">$INFO[Skin.String(Widget.1111)]</value>
         <value condition="Window.IsVisible(1112) + !IsEmpty(Skin.String(Widget.1112))">$INFO[Skin.String(Widget.1112)]</value>
@@ -2548,4 +3129,4 @@
             <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=x$PARAM[hubid])</onclick>
         </control>
     </include>	
-</includes>
+</includes>>
