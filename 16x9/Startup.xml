@@ -4,7 +4,7 @@
     <defaultcontrol always="true">9315</defaultcontrol>
     <onload>SetProperty(SkinInitStarted,1,home)</onload>
     	<!-- Dormer End of Life Notice -->
-	<onload>RunScript(script.skin.helper.service,action=dialogok,header=From Ashes (Dormer) Notice,message=Thank you for using Arctic Zephyr: From Ashes for Kodi Jarvis. As of this release, the Dormer branch is no longer actively developed and has reached End of Life. Please update to Kodi 17 Krypton and Arctic Zephyr: From Ashes Danvers which features many requested features and improvements.)</onload>
+	<onload>RunScript(script.skin.helper.service,action=dialogok,header=From Ashes (Dormer) Notice,message=The From Ashes Project thanks you for using Arctic Zephyr From Ashes on Kodi Jarvis. The Dormer Branch is no longer maintained and we strongly encourage all users to update to Kodi Krypton and Arctic Zephyr From Ashes Danvers for future support and updates.)</onload>
     <controls>
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
