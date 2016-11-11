@@ -1,5 +1,11 @@
 [B]Arctic Zephyr: From Ashes Changelog[/B]
 
+[B]Arctic Zephyr: From Ashes "Dormer Last Call Update" - Released November 11, 2016
+Dormer: 3.4.20 (3.4.20_dormer)
+Added toggle button in SkinSettings>Extras - Trun of Dormer Notice.
+Fixed "Set Slideshow Path" in SkinSettings > Home
+Addon Framework Update
+
 [B]Arctic Zephyr: From Ashes "Dormer End of Life Update Rollup Hotfix #1" - Released November 6, 2016[/B]
 Dormer: 3.2.41 (3.2.41_dormer)
 Fixed Dormer End of Life Notification
