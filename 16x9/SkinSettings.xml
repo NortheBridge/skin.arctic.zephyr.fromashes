@@ -185,14 +185,21 @@
 						<onclick condition="!IsEmpty(Skin.String(home.slideshowpath))">Skin.Reset(home.dontshowfanart)</onclick>
 						<onclick condition="!IsEmpty(Skin.String(home.slideshowpath))">Skin.Reset(home.slideshowpath)</onclick>
 					</control>-->
-					<control type="button" id="92201" description="Set Slideshow Path">
-					    <ondown>9214</ondown>
+					<control type="button" id="9220" description="Set Slideshow Path">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9101)</visible>
                         <include>DefSettingsButton</include>
                         <label>31269</label>
                         <label2>$VAR[LabelFallbackWidgetName]</label2>
-                        <onclick>ActivateWindow(1106)</onclick> 
+                        <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[16018])</onclick>
+                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(home.slideshowpath,pvr/background.jpg))</onclick>
+                        <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31271])</onclick>
+                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetImage(home.slideshowpath))</onclick>
+                        <onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31272])</onclick>
+                        <onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetPath(home.slideshowpath))</onclick>
+                        <onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31105])</onclick>
+                        <onclick>SetProperty(Dialog.4.BuiltIn,Skin.Reset(home.slideshowpath))</onclick>
+                        <onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31269])</onclick> 
                     </control>
 					
 					<control type="radiobutton" id="9222" description="Show slideshow instead of fanart">
@@ -808,7 +815,14 @@
 						<onclick>Skin.ToggleSetting(NextAired.Update)</onclick>
 						<enable>System.HasAddon(script.tv.show.next.aired)</enable>
 					</control>
-					
+					<control type="radiobutton" id="9277" description="Turn Off Dormers Notice dialog box">
+					    <width>1310</width>
+						<visible>ControlGroup(9100).HasFocus(9107)</visible>
+					    <include>DefSettingsButton</include>
+					    <label>Turn off From Ashes (Dormer) Notice</label>
+					    <selected>Skin.HasSetting(home.hidenotice.dialog)</selected>
+						<onclick>Skin.ToggleSetting(home.hidenotice.dialog)</onclick>
+				    </control>
 <!-- Modification -->					
 					<control type="button" id="9278" description="Backup skin settings">
 						<width>1310</width>

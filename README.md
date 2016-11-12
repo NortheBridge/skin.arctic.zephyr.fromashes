@@ -6,7 +6,9 @@ The Arctic Zephyr: From Ashes Skin designed for Emby and Kodi is a streamlined, 
 
 Starting with the release of Arctic Zephyr: From Ashes (Danvers Preview), NortheBridge now provides a central location to help you quickly get started with and take advantage of the many features Arctic Zephyr: From Ashes has to offer. All information is available on the "Arctic Zephyr: From Ashes Quick Start" site.
 
-NortheBridge's From Ashes Waypoint Quick Start Site: https://waypoint.northebridge.com/fromashes
+NortheBridge's From Ashes Waypoint Quick Start Site: https://northebridge.com/waypoint/getstarted/fromashes
+
+###### Arctic Zephyr: From Ashes (Dormer Branch) has reached "End of Life" Status and is no longer supported, updated, or otherwise maintained. Please update to Arctic Zephyr: From Ashes (Danvers) on Kodi 17 Krypton for continued support.
 
 ## Designed For
 ![Kodi logo](https://raw.githubusercontent.com/xbmc/xbmc-forum/master/xbmc/images/logo-sbs-black.png) ![Emby logo](http://emby.media/community/public/style_images/logoemby.png)
