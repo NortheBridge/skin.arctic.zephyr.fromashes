@@ -88,7 +88,7 @@
 			<posy>350</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Debug Build: [COLOR=$VAR[ColourHighlight]]Beta 1 Preview[/COLOR]</label>
+			<label>Build Type: [COLOR=$VAR[ColourHighlight]]Beta 5 Preview, Release[/COLOR]</label>
 		</control>
 	<control type="label">
 			<description>Sys_Name</description>
@@ -145,24 +145,24 @@
 			<label>Legacy Foundation (For Another Age): [COLOR=$VAR[ColourHighlight]]Arctic Zephyr: From Ashes (TBD)[/COLOR]</label>
 		</control>
 	<control type="label">
-			<description>Emby_ServerCheck</description>
+			<description>AddonFramework</description>
 			<font>Tiny</font>
 			<align>left</align>
 			<posx>1200</posx>
 			<posy>290</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Emby Server: [COLOR=$VAR[ColourHighlight]]$INFO[System.AddonTitle(plugin.video.emby)][/COLOR]</label>
+			<label>Addon Framework: [COLOR=$VAR[ColourHighlight]]4.9.91[/COLOR]</label>
 		</control>
 	<control type="label">
-			<description>Emby_ServerCheckVer2</description>
+			<description>Texture Package</description>
 			<font>Tiny</font>
 			<align>left</align>
 			<posx>1200</posx>
 			<posy>320</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Emby Plugin: [COLOR=$VAR[ColourHighlight]]$INFO[System.AddonVersion(plugin.video.emby)][/COLOR]</label>
+			<label>Texture Package: [COLOR=$VAR[ColourHighlight]]4.9.91[/COLOR]</label>
 		</control>
 		<!-- End Compatibility Checks -->
 		<!-- While others like to compare me to Person of Interest's Root... so yes, don't fail these checks. Could this be another Easter Egg Ms. Groves?-->
@@ -232,6 +232,17 @@
             <aligny>center</aligny>
 			<posy>70</posy>
 			<label>Co-Author: [COLOR=$VAR[ColourHighlight]]minus0[/COLOR]</label>
+		</control>
+		<!--Welcome Habitual_Sinner to the team-->
+	<control type="label">
+			<description>AssocAuthor</description>
+			<font>Tiny</font>
+            <width>100%</width>
+            <height>100%</height>
+            <align>center</align>
+            <aligny>center</aligny>
+			<posy>100</posy>
+			<label>Associate Author: [COLOR=$VAR[ColourHighlight]]Habitual_Sinner[/COLOR]</label>
 		</control>		
 	<control type="label">
 			<description>AZCreator</description>
@@ -240,7 +251,7 @@
             <height>100%</height>
             <align>center</align>
             <aligny>center</aligny>
-			<posy>100</posy>
+			<posy>130</posy>
 			<label>Based On "Arctic Zephyr" by [COLOR=$VAR[ColourHighlight]]Jurialmonkey[/COLOR]</label>
 		</control>	
 	<control type="label">
@@ -250,7 +261,7 @@
             <height>100%</height>
             <align>center</align>
             <aligny>center</aligny>
-			<posy>130</posy>
+			<posy>160</posy>
 			<label>Based On "Arctic Zephyr: Exploded" by [COLOR=$VAR[ColourHighlight]]im85288 and badaas[/COLOR]</label>
 		</control>
 			<control type="label">
@@ -260,7 +271,7 @@
             <height>100%</height>
             <align>center</align>
             <aligny>center</aligny>
-			<posy>160</posy>
+			<posy>190</posy>
 			<label>Based On "Arctic Zephyr: Braz" by [COLOR=$VAR[ColourHighlight]]Braz[/COLOR]</label>
 		</control>
 			<!--Contributors-->
@@ -271,7 +282,7 @@
             <height>100%</height>
             <align>center</align>
             <aligny>center</aligny>
-			<posy>190</posy>
+			<posy>220</posy>
 			<label>[COLOR=$VAR[ColourHighlight]]Contributors[/COLOR]</label>
 		</control>
 			<!--Never Tell Anyone I Counted By "10s" to get from 130 to 160 Here-->
@@ -282,7 +293,7 @@
             <height>100%</height>
             <align>center</align>
             <aligny>center</aligny>
-			<posy>220</posy>
+			<posy>250</posy>
 			<label>[COLOR=$VAR[ColourHighlight]]minus0 (Kodi Forums),[/COLOR] papadcha (Emby Forums), [COLOR=$VAR[ColourHighlight]]Mike_Doc ("Madnox Skin" Features)[/COLOR], schimi2k ("Resolution Icons Pack 2.0," Misc. UX Look and Feel)</label>
 		</control>				
     </controls>
