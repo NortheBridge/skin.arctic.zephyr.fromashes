@@ -36,6 +36,17 @@
 	<include file="Includes_Home_NetflixXbmcUI.xml" />
 	<!-- Skin Shortcuts -->
 	<include file="script-skinshortcuts-includes.xml" />
+	
+	<expression name="isMovie">String.IsEqual(ListItem.DBTYPE,movie)</expression>
+    <expression name="isTvshow">String.IsEqual(ListItem.DBTYPE,tvshow)</expression>
+    <expression name="isSeason">String.IsEqual(ListItem.DBTYPE,season)</expression>
+    <expression name="isEpisode">String.IsEqual(ListItem.DBTYPE,episode)</expression>
+    <expression name="isMusicvideo">String.IsEqual(ListItem.DBTYPE,musicvideo)</expression>
+    <expression name="isArtist">String.IsEqual(ListItem.DBTYPE,artist)</expression>
+    <expression name="isAlbum">String.IsEqual(ListItem.DBTYPE,album)</expression>
+    <expression name="isSong">String.IsEqual(ListItem.DBTYPE,song)</expression>
+	
+	
 	<include name="HiddenButton">
 		<posx>-20</posx>
 		<posy>-20</posy>
@@ -136,13 +147,15 @@
 		<value condition="Window.IsVisible(home) + [StringCompare(Container(300).ListItem.Property(widget),bbc.popular) | StringCompare(Container(300).ListItem.Property(widget),bbc.sport) | StringCompare(Container(300).ListItem.Property(widget),bbc.scifi) | StringCompare(Container(300).ListItem.Property(widget),bbc.documentaries) | StringCompare(Container(300).ListItem.Property(widget),bbc.music) | StringCompare(Container(300).ListItem.Property(widget),extendedinfo.eurogamer) | StringCompare(Container(300).ListItem.Property(widget),extendedinfo.engadget) | StringCompare(Container(300).ListItem.Property(widget),extendedinfo.mobiletechreview)]">$INFO[Container(301).ListItem.Icon]</value>
 		<value condition="Window.IsVisible(home) + !Container(301).IsUpdating + !IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
 		<value condition="Window.IsVisible(home) + !Container(301).IsUpdating">pvr/background.jpg</value>
-		<value condition="[Window.IsActive(videolibrary) | Window.IsActive(movieinformation)]  +  substring(ListItem.Path,plugin://plugin.video.emby) + Skin.HasSetting(EnableExtraFanart)">$INFO[ListItem.Path]extrafanart/</value>
-		<value condition="[Window.IsActive(videolibrary) | Window.IsActive(movieinformation)] + Skin.HasSetting(EnableExtraFanart) + !IsEmpty(Window(Home).Property(ExtraFanArtPath))">$INFO[Window(Home).Property(ExtraFanArtPath)]</value>
-		<value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
-		<value condition="!IsEmpty(Container(9500).ListItem.Art(fanart))">$INFO[Container(9500).ListItem.Art(fanart)]</value>
-		<value condition="!IsEmpty(Container(500).ListItem.Art(fanart))">$INFO[Container(500).ListItem.Art(fanart)]</value>
-		<value condition="!IsEmpty(ListItem.Property(Fanart_Image))">$INFO[ListItem.Property(Fanart_Image)]</value>
-		<value condition="!IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
+		<!--<value condition="[Window.IsActive(videolibrary) | Window.IsActive(movieinformation)]  +  substring(ListItem.Path,plugin://plugin.video.emby) + Skin.HasSetting(EnableExtraFanart)">$INFO[ListItem.Path]extrafanart/</value>
+		<value condition="[Window.IsActive(videolibrary) | Window.IsActive(movieinformation)] + Skin.HasSetting(EnableExtraFanart) + !IsEmpty(Window(Home).Property(ExtraFanArtPath))">$INFO[Window(Home).Property(ExtraFanArtPath)]</value>-->
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ExtraFanArtPath)) + Skin.HasSetting(SkinHelper.EnableExtraFanart) + System.HasAddon(script.skin.helper.service) + Window.IsVisible(MyVideoNav.xml)">$INFO[Window(Home).Property(SkinHelper.ExtraFanArtPath)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="!String.IsEmpty(Container(9500).ListItem.Art(fanart))">$INFO[Container(9500).ListItem.Art(fanart)]</value>
+		<value condition="!String.IsEmpty(Container(500).ListItem.Art(fanart))">$INFO[Container(500).ListItem.Art(fanart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Property(Fanart_Image))">$INFO[ListItem.Property(Fanart_Image)]</value>
+		<value condition="!String.IsEmpty(ListItem.Property(Fanart))">$INFO[ListItem.Property(Fanart)]</value>
+		<value condition="!String.IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
 		<value>common/null.png</value>
 	</variable>
 	<include name="GlobalVideoWindow">

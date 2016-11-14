@@ -4,7 +4,7 @@
 		<!-- Header -->
 		<control type="group">
 			<visible>Skin.HasSetting(home.showheader)</visible>
-			<animation effect="slide" start="0" end="0,-250" time="150" condition="[!Skin.HasSetting(home.classicwidgets) + Control.HasFocus(301)] | ControlGroup(303).HasFocus()">Conditional</animation>
+			<animation effect="slide" start="0" end="0,-250" time="150" condition="[!Skin.HasSetting(home.classicwidgets) + Control.HasFocus(301)]">Conditional</animation>
 			<animation effect="slide" start="0" end="0,-250" time="150">WindowClose</animation>
 			<animation effect="slide" end="0" start="0,-250" time="150">WindowOpen</animation>
 			<control type="image" description="TopBG">
@@ -48,8 +48,9 @@
 			<include>Animation.FadeOut</include>
 			<visible>!Skin.HasSetting(home.showheader)</visible>
 			<visible>Player.HasMedia</visible>
-			<visible>!Control.HasFocus(301) + !ControlGroup(303).HasFocus()</visible>
-			<animation effect="slide" end="0,100" time="150" condition="[[!Skin.HasSetting(home.showheader) + [Window.IsVisible(DialogKaiToast.xml) | Window.IsVisible(DialogExtendedProgressBar.xml) | Window.IsVisible(DialogVolumeBar.xml)]]]">Conditional</animation>
+			<visible>!Control.HasFocus(301) | [Skin.HasSetting(home.classicwidgets) + !Skin.HasSetting(home.showheader)]</visible>
+			<!--<visible>!Control.HasFocus(301) + !ControlGroup(303).HasFocus()</visible>-->
+			<animation effect="slide" end="0,100" time="150" condition="[[!Skin.HasSetting(home.showheader) + [Window.IsVisible(DialogNotification.xml) | Window.IsVisible(DialogExtendedProgressBar.xml) | Window.IsVisible(DialogVolumeBar.xml)]]]">Conditional</animation>
 			<control type="image">
 				<description>background image</description>
 				<posx>0</posx>
@@ -143,13 +144,14 @@
 			<height>100</height>
 			<include>Animation.FadeIn.Slide</include>
 			<include>Animation.FadeOut</include>
-			<visible>!Control.HasFocus(301) + !ControlGroup(303).HasFocus()</visible>
-			<visible>Skin.HasSetting(home.showheader) | !Window.IsVisible(DialogKaiToast.xml)</visible>
+			<visible>!Control.HasFocus(301) | [Skin.HasSetting(home.classicwidgets) + !Skin.HasSetting(home.showheader)]</visible>
+			<!--<visible>!Control.HasFocus(301) + !ControlGroup(303).HasFocus()</visible>-->
+			<visible>Skin.HasSetting(home.showheader) | !Window.IsVisible(DialogNotification.xml)</visible>
 			<visible>Skin.HasSetting(home.showheader) | !Window.IsVisible(DialogExtendedProgress.xml)</visible>
 			<visible>Skin.HasSetting(home.showheader) | !Window.IsVisible(DialogVolumeBar.xml)</visible>
 			<animation effect="slide" end="0,100" time="150" condition="!Skin.HasSetting(home.showheader) + Player.HasMedia">Conditional</animation>
 			<animation effect="slide" start="0" end="0,190" time="150" condition="Skin.HasSetting(home.showheader)">Conditional</animation>
-			<visible>PVR.IsRecording</visible>
+			<visible>PVR.IsRecording | Pvr.HasTimer</visible>
 			<control type="image">
 				<description>background image</description>
 				<posx>0</posx>
@@ -189,7 +191,7 @@
 			</control>
 		</control>
 		<!-- Next Recording -->
-		<control type="group">
+		<!--<control type="group">
 			<right>72</right>
 			<posy>170</posy>
 			<width>660</width>
@@ -242,7 +244,7 @@
 					<label>$VAR[LabelNextRecording]</label>
 				</control>
 			</control>
-		</control>
+		</control>-->
 	</include>
 	<include name="HomeWeatherWidget">
 		<!-- Weather Widget -->
@@ -252,7 +254,8 @@
 			<animation effect="slide" end="0,100" time="150" condition="!Skin.HasSetting(home.showheader) + Player.HasMedia">Conditional</animation>
 			<visible>StringCompare(Container(300).ListItem.Property(widget),Weather) | Skin.HasSetting(home.showweatherfanart)</visible>
 			<visible>!Player.HasVideo | !Skin.HasSetting(global.showvideo)</visible>
-			<visible>!Control.HasFocus(301) + !ControlGroup(303).HasFocus()</visible>
+			<visible>!Control.HasFocus(301) | [Skin.HasSetting(home.classicwidgets) + !Skin.HasSetting(home.showheader) + ![Player.HasMedia + [Pvr.IsRecording | Pvr.HasTimer | Window.IsVisible(DialogNotification.xml) | Window.IsVisible(DialogExtendedProgressBar.xml) | Window.IsVisible(DialogVolumeBar.xml)]]]</visible>
+			<!--<visible>!Control.HasFocus(301) + !ControlGroup(303).HasFocus()</visible>-->
 			<include>Animation.FadeIn.Slide</include>
 			<include>Animation.FadeOut</include>
 			<visible>!Skin.HasSetting(furniture.weather)</visible>
@@ -276,7 +279,7 @@
 				<height>80</height>
 				<fadetime>350</fadetime>
 				<aspectratio aligny="center" align="center">keep</aspectratio>
-				<texture colordiffuse="Dark1">$INFO[Weather.FanartCode,weather/small/,.png]</texture>
+				<texture colordiffuse="Dark1">$INFO[Weather.FanartCode,resource://resource.images.weathericons.white/,.png]</texture>
 			</control>
 			<control type="label">
 				<left>104</left>
@@ -312,9 +315,9 @@
 			</control>
 		</control>
 	</include>
-	<include name="HomeWidgetSelector">
+	<!--<include name="HomeWidgetSelector">
 		<!-- Widget Selector -->
-		<control type="group">
+		<!--<control type="group">
 			<visible>![Window.IsVisible(home) + Skin.HasSetting(home.dontshowfanart) + IsEmpty(Container(300).ListItem.Property(widget))] + IsEmpty(Container(300).ListItem.Property(Background))</visible>
 			<animation effect="slide" end="0" start="0,-250" time="150" reversible="false" condition="ControlGroup(303).HasFocus()">Conditional</animation>
 			<animation effect="slide" start="0" end="0,-250" time="150" reversible="false" condition="!ControlGroup(303).HasFocus()">Conditional</animation>
@@ -324,7 +327,7 @@
 				<top>0</top>
 				<height>100</height>
 				<aspectratio aligny="top">scale</aspectratio>
-			<!--replaced "Background" -->	
+
 				<texture colordiffuse="$VAR[HomeHeaderBGColour]">common/bg.jpg</texture>
 				<animation effect="fade" start="100" end="75" time="200" condition="true">Conditional</animation>
 			</control>
@@ -333,7 +336,7 @@
 				<height>100</height>
 				<top>0</top>
 				<aspectratio aligny="bottom">scale</aspectratio>
-			<!--replaced "Background" -->	
+	
 				<texture colordiffuse="$VAR[HomeFloorBGColour]">common/floor.png</texture>
 			</control>
 			<control type="image" description="Shadow">
@@ -372,7 +375,7 @@
 					<include>DefWidgetSelector</include>
 				</control>
 				<!-- <control type="button" id="333"> <label>31123</label> <onfocus>SetProperty(widget,RecommendedMovies,home)</onfocus> <include>DefWidgetSelector</include> </control> -->
-				<control type="button" id="334">
+				<!--<control type="button" id="334">
 					<label>31126</label>
 					<onfocus>SetProperty(widget,RandomEpisodes,home)</onfocus>
 					<include>DefWidgetSelector</include>
@@ -419,7 +422,7 @@
 				</control>
 			</control>
 		</control>
-	</include>
+	</include>-->
 	<include name="HomeWidgetUpdating">
 		<!-- Container Updating -->
 		<control type="group">
@@ -462,37 +465,45 @@
                 <label>$LOCALIZE[20186]...</label>
                 <textcolor>ffededed</textcolor>
             </control>
-            <!--<control type="image">
-                <description>Busy animation</description>
-                <centerleft>50%</centerleft>
-                <centertop>47%</centertop>
-                <width>100</width>
-                <height>100</height>
-                <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
-                <texture colordiffuse="$VAR[SpinnerHighlight]" fallback="special://skin/extras/spinners/flower.gif">dialog/loading-spinner.png</texture>
-                <aspectratio>keep</aspectratio>
-            </control>-->
-<!--############# Updated to new Busy Spinner ############-->
-            <!--<control type="label">
-                <description>Busy label</description>
-                <centerleft>50%</centerleft>
-                <centertop>53%</centertop>
-                <width>720</width>
-                <height>108</height>
-                <aligny>center</aligny>
-                <align>center</align>
-                <label>$LOCALIZE[20186]...</label>
-                <textcolor>ffededed</textcolor>
-            </control>-->
 		</control>
 	</include>
+	
+    <include name="Home-Widget-Featured">      
+		<control type="wraplist" id="301">		
+            <description>Widget</description>
+            <width>1</width>
+            <height>1</height>
+            <oninfo condition="IsEmpty(Container(301).ListItem.TvShowTitle) + IsEmpty(Container(301).ListItem.Artist)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(301).ListItem.Title],imdb_id=$INFO[Container(301).ListItem.IMDBNumber])</oninfo>
+            <oninfo condition="!IsEmpty(Container(301).ListItem.TvShowTitle)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(301).ListItem.TvShowTitle],imdb_id=$INFO[Container(301).ListItem.IMDBNumber])</oninfo>
+            <onup condition="IsEmpty(Container(300).ListItem.Property(widget))">303</onup>
+            <onup condition="!IsEmpty(Container(300).ListItem.Property(widget))">300</onup>
+            <ondown>300</ondown>
+            <onback>300</onback>
+            <onleft>301</onleft>
+            <onright>301</onright>
+            <preloaditems>2</preloaditems>
+            <orientation>horizontal</orientation>
+            <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+            <scrolltime tween="quadratic">0</scrolltime>
+            <include>Animation.FadeIn</include>
+            <include>Animation.FadeOut</include>
+            <itemlayout width="1" height="1">
+            </itemlayout>
+            <focusedlayout width="1" height="1">
+            </focusedlayout>
+            <content target="video">$VAR[DefWidgetContent]</content>
+        </control>
+    </include>	
+	
 	<include name="HomeWidgetInfo">
 		<!-- Widget Info -->
 		<control type="group">
 			<animation type="WindowClose">
 				<effect type="fade" start="100" end="0" time="150" />
 			</animation>
-			<control type="wraplist" id="301">
+			<include condition="Skin.HasSetting(NoPersistentWidgets)">Home-Widget-Featured</include>
+            <include condition="!Skin.HasSetting(NoPersistentWidgets)">skinshortcuts-template-widget-featured</include>
+			<!--<control type="wraplist" id="301">
 				<description>Widget</description>
 				<visible>!StringCompare(Container(300).ListItem.Property(widget),NextAired)</visible>
 				<visible>!StringCompare(Container(300).ListItem.Property(widget),Favourites)</visible>
@@ -541,15 +552,16 @@
 					<include>DefNextAiredWidget</include>
 					<include>DefFavouritesWidget</include>
 				</content>
-			</control>
+			</control>-->
 			<!-- Normal Widget -->
 			<control type="group">
 				<visible>!Container(301).IsUpdating</visible>
 				<visible>IntegerGreaterThan(Container(301).NumItems,0)</visible>
-				<visible>!StringCompare(Container(300).ListItem.Property(widget),Weather)</visible>
+				<visible>!StringCompare(Container(300).ListItem.Property(widget),Weather,left)</visible>
 				<visible>!substring(Container(300).ListItem.Property(widget),Albums) + !substring(Container(300).ListItem.Property(widget),Favourites)</visible>
 				<visible>![Window.IsVisible(home) + !IsEmpty(Skin.String(home.slideshowpath)) + IsEmpty(Container(300).ListItem.Property(widget))] + [IsEmpty(Container(300).ListItem.Property(Background)) | !IsEmpty(Container(300).ListItem.Property(widget))]</visible>
 				<visible>!Player.HasVideo | !Skin.HasSetting(global.showvideo)</visible>
+				<visible>!Skin.HasSetting(home.dontautoshowwidget) | Control.HasFocus(301)</visible>
 				<include>Animation.FadeIn</include>
 				<animation effect="slide" start="0" end="0,220" time="500" tween="back" reversible="false" easing="out" condition="Control.HasFocus(301) | ControlGroup(303).HasFocus()">Conditional</animation>
 				<animation effect="slide" end="0" start="0,220" time="150" reversible="false" condition="!Control.HasFocus(301) + !ControlGroup(303).HasFocus()">Conditional</animation>
@@ -643,7 +655,8 @@
 			<!-- Album Widget -->
 			<control type="group">
 				<visible>!Container(301).IsUpdating</visible>
-				<visible>!StringCompare(Container(300).ListItem.Property(widget),Weather)</visible>
+				<visible>!Skin.HasSetting(home.dontautoshowwidget) | Control.HasFocus(301)</visible>
+				<visible>!substring(Container(300).ListItem.Property(widget),Weather,left)</visible>
 				<visible>substring(Container(300).ListItem.Property(widget),Albums) | substring(Container(300).ListItem.Property(widget),Favourites)</visible>
 				<visible>![Window.IsVisible(home) + Skin.HasSetting(home.dontshowfanart) + IsEmpty(Container(300).ListItem.Property(widget))] + [IsEmpty(Container(300).ListItem.Property(Background)) | !IsEmpty(Container(300).ListItem.Property(widget))]</visible>
 				<visible>!Player.HasVideo | !Skin.HasSetting(global.showvideo)</visible>
@@ -1903,7 +1916,8 @@
 					<!-- Logo -->
 					<control type="image">
 						<top>19</top>
-						<right>-250</right>
+						<left>50%</left>
+						<!--<right>-250</right>-->
 						<width>258</width>
 						<height>130</height>
 						<texture>$VAR[WidgetLogo]</texture>
@@ -1914,11 +1928,12 @@
 						<visible>Skin.HasSetting(furniture.logo)</visible>
 						<visible>Control.HasFocus(301)</visible>
 						<visible>!Player.HasMedia</visible>
-						<animation effect="rotate" end="10" center="auto" condition="true" time="200">conditional</animation>
+						<!--<animation effect="rotate" end="10" center="auto" condition="true" time="200">conditional</animation>-->
 					</control>
 					<control type="image">
 						<top>19</top>
-						<right>-250</right>
+						<left>50%</left>
+						<!--<right>-250</right>-->
 						<width>258</width>
 						<height>130</height>
 						<texture>$VAR[WidgetAlbumLogo]</texture>
@@ -1930,11 +1945,12 @@
 						<visible>Control.HasFocus(301)</visible>
 						<visible>!Player.HasMedia</visible>
 						<visible>substring(Container(300).ListItem.Property(widget),Albums)</visible>
-						<animation effect="rotate" end="10" center="auto" condition="true" time="200">conditional</animation>
+						<!--<animation effect="rotate" end="10" center="auto" condition="true" time="200">conditional</animation>-->
 					</control>
 					<control type="image">
 						<top>19</top>
-						<right>40</right>
+						<left>50%</left>
+						<!--<right>40</right>-->
 						<width>258</width>
 						<height>130</height>
 						<texture>$VAR[WidgetLogo]</texture>
@@ -1945,7 +1961,7 @@
 						<visible>Skin.HasSetting(furniture.logo)</visible>
 						<visible>!Control.HasFocus(301)</visible>
 						<visible>!Player.HasMedia</visible>
-						<animation effect="rotate" end="10" center="auto" condition="true" time="200">conditional</animation>
+						<!--<animation effect="rotate" end="10" center="auto" condition="true" time="200">conditional</animation>-->
 					</control>
 					<control type="image">
 						<top>19</top>
@@ -1961,11 +1977,12 @@
 						<visible>!Control.HasFocus(301)</visible>
 						<visible>!Player.HasMedia</visible>
 						<visible>substring(Container(300).ListItem.Property(widget),Albums)</visible>
-						<animation effect="rotate" end="10" center="auto" condition="true" time="200">conditional</animation>
+						<!--<animation effect="rotate" end="10" center="auto" condition="true" time="200">conditional</animation>-->
 					</control>
 					<control type="image">
 						<top>19</top>
-						<right>40</right>
+						<left>50%</left>
+						<!--<right>40</right>-->
 						<width>258</width>
 						<height>130</height>
 						<texture>$INFO[Window(Weather).Property(WeatherProviderLogo)]</texture>
@@ -1975,7 +1992,7 @@
 						<animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(3438) + !Control.HasFocus(3439) + !Control.HasFocus(3440) + !Control.HasFocus(3442)">Conditional</animation>
 						<visible>Skin.HasSetting(furniture.logo)</visible>
 						<visible>!Player.HasMedia</visible>
-						<animation effect="rotate" end="10" center="auto" condition="true" time="200">conditional</animation>
+						<!--<animation effect="rotate" end="10" center="auto" condition="true" time="200">conditional</animation>-->
 						<visible>StringCompare(Container(300).ListItem.Property(widget),Weather)</visible>
 					</control>
 					<control type="grouplist">
@@ -1991,8 +2008,7 @@
 						<control type="label">
 							<font>SmallBold</font>
 							<width>100%</width>
-							<align>left</align>
-					<!-- replaced "Dark1" with "$VAR[WidgetTitleColour]" -->		
+							<align>left</align>	
 							<textcolor>$VAR[WidgetTitleColour]</textcolor>
 							<label>$VAR[WidgetTitle]</label>
 						</control>
@@ -2000,16 +2016,14 @@
 							<font>Tiny</font>
 							<width>100%</width>
 							<height>127</height>
-							<align>left</align>
-					<!-- replaced "Dark2" with "$VAR[WidgetPlotColour]" -->		
+							<align>left</align>	
 							<textcolor>$VAR[WidgetPlotColour]</textcolor>
 							<label>$VAR[WidgetPlot]</label>
 						</control>
 						<control type="label">
 							<font>Tiny</font>
 							<width>100%</width>
-							<align>left</align>
-					<!-- replaced "Dark2" with "$VAR[WidgetSubLabelColour]" -->		
+							<align>left</align>	
 							<textcolor>$VAR[WidgetSubLabelColour]</textcolor>
 							<label>$VAR[WidgetSubLabel]</label>
 						</control>

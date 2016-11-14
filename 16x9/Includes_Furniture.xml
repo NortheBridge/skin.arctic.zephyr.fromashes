@@ -175,7 +175,7 @@
 	<include name="Furniture_Flags">
 		<control type="grouplist">
 			<visible>!Skin.HasSetting(furniture.flags)</visible>
-			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) + !Window.IsVisible(script-ExtendedInfo Script-YoutubeList.xml)</visible>
+			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml) + !Window.IsVisible(script-script.extendedinfo-Script-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-Script-DialogInfo.xml) + !Window.IsVisible(script-script.extendedinfo-Script-VideoList.xml) + !Window.IsVisible(script-script.extendedinfo-Script-YoutubeList.xml)</visible>
 			<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 			<visible>!stringcompare(ListItem.Label,..)</visible>
 			<include>Animation.FadeIn</include>
@@ -806,9 +806,9 @@
 			<visible>Skin.HasSetting(furniture.logo)</visible>
 			<visible>!Player.HasMedia</visible>
 			<visible>!Control.HasFocus(515)</visible>
-			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
+			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml) + !Window.IsVisible(script-script.extendedinfo-Script-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-Script-DialogInfo.xml)</visible>
 			<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)</visible>
-			<left>1622</left>
+			<left>50%</left>
 			<top>19</top>
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
@@ -818,7 +818,7 @@
 				<texture>$VAR[ClearLogo]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
-				<animation effect="rotate" end="10" center="auto" condition="true" time="200">conditional</animation>
+				<!--<animation effect="rotate" end="10" center="auto" condition="true" time="200">conditional</animation>-->
 			</control>
 			<control type="textbox">
 				<width>258</width>
@@ -832,7 +832,7 @@
 				<visible>Skin.HasSetting(furniture.logo.fake)</visible>
 				<visible>[Container.Content(movies) | Container.Content(sets) + IsEmpty(ListItem.Art(clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + IsEmpty(ListItem.Art(tvshow.clearlogo))]</visible>
 				<visible>[IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))] + [SubString(ListItem.Title,a,Left) | SubString(ListItem.Title,b,Left) | SubString(ListItem.Title,c,Left) | SubString(ListItem.Title,d,Left)]</visible>
-				<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>
+				<!--<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>-->
 			</control>
 			<control type="textbox">
 				<width>258</width>
@@ -846,7 +846,7 @@
 				<visible>Skin.HasSetting(furniture.logo.fake)</visible>
 				<visible>[Container.Content(movies) | Container.Content(sets) + IsEmpty(ListItem.Art(clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + IsEmpty(ListItem.Art(tvshow.clearlogo))]</visible>
 				<visible>[IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))]+ [SubString(ListItem.Title,e,Left) | SubString(ListItem.Title,f,Left) | SubString(ListItem.Title,g,Left) | SubString(ListItem.Title,h,Left)]</visible>
-				<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>
+				<!--<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>-->
 			</control>
 			<control type="textbox">
 				<width>258</width>
@@ -860,7 +860,7 @@
 				<visible>Skin.HasSetting(furniture.logo.fake)</visible>
 				<visible>[Container.Content(movies) | Container.Content(sets) + IsEmpty(ListItem.Art(clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + IsEmpty(ListItem.Art(tvshow.clearlogo))]</visible>
 				<visible>[IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))] + [SubString(ListItem.Title,i,Left) | SubString(ListItem.Title,j,Left) | SubString(ListItem.Title,k,Left) | SubString(ListItem.Title,l,Left)]</visible>
-				<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>
+				<!--<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>-->
 			</control>
 			<control type="textbox">
 				<width>258</width>
@@ -874,7 +874,7 @@
 				<visible>Skin.HasSetting(furniture.logo.fake)</visible>
 				<visible>[Container.Content(movies) | Container.Content(sets) + IsEmpty(ListItem.Art(clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + IsEmpty(ListItem.Art(tvshow.clearlogo))]</visible>
 				<visible>[IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))] + [SubString(ListItem.Title,m,Left) | SubString(ListItem.Title,n,Left) | SubString(ListItem.Title,o,Left) | SubString(ListItem.Title,p,Left)]</visible>
-				<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>
+				<!--<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>-->
 			</control>
 			<control type="textbox">
 				<width>258</width>
@@ -888,7 +888,7 @@
 				<visible>Skin.HasSetting(furniture.logo.fake)</visible>
 				<visible>[Container.Content(movies) | Container.Content(sets) + IsEmpty(ListItem.Art(clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + IsEmpty(ListItem.Art(tvshow.clearlogo))]</visible>
 				<visible>[IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))] + [SubString(ListItem.Title,q,Left) | SubString(ListItem.Title,r,Left) | SubString(ListItem.Title,s,Left) | SubString(ListItem.Title,t,Left)]</visible>
-				<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>
+				<!--<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>-->
 			</control>
 			<control type="textbox">
 				<width>258</width>
@@ -902,7 +902,7 @@
 				<visible>Skin.HasSetting(furniture.logo.fake)</visible>
 				<visible>[Container.Content(movies) | Container.Content(sets) + IsEmpty(ListItem.Art(clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + IsEmpty(ListItem.Art(tvshow.clearlogo))]</visible>
 				<visible>[IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))] + [SubString(ListItem.Title,u,Left) | SubString(ListItem.Title,v,Left) | SubString(ListItem.Title,w,Left) | SubString(ListItem.Title,x,Left) | SubString(ListItem.Title,y,Left) | SubString(ListItem.Title,z,Left)]</visible>
-				<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>
+				<!--<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>-->
 			</control>
 		</control>
 		<control type="group">
@@ -910,7 +910,7 @@
 			<visible>!Window.IsVisible(DialogAlbumInfo.xml)</visible>
 			<visible>!Player.HasMedia</visible>
 			<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs)</visible>
-			<left>1622</left>
+			<left>50%</left>
 			<top>19</top>
 			<include>Animation.FadeIn</include>
 			<include>Animation.FadeOut</include>
@@ -920,7 +920,7 @@
 				<texture fallback="empty.png">$VAR[MusicClearLogo]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
-				<animation effect="rotate" end="10" center="auto" condition="true" time="200">conditional</animation>
+				<!--<animation effect="rotate" end="10" center="auto" condition="true" time="200">conditional</animation>-->
 				<visible>Skin.HasSetting(furniture.logo) + !IsEmpty(Skin.String(cdartlocation))</visible>
 			</control>
 			<control type="textbox">
@@ -935,7 +935,7 @@
 				<visible>Skin.HasSetting(furniture.logo.fake)</visible>
 				<visible>Skin.HasSetting(furniture.logo) + Substring(Control.GetLabel(8308),empty.png)</visible>
 				<visible>[IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))] + [SubString(ListItem.Title,a,Left) | SubString(ListItem.Title,b,Left) | SubString(ListItem.Title,c,Left) | SubString(ListItem.Title,d,Left)]</visible>
-				<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>
+				<!--<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>-->
 			</control>
 			<control type="textbox">
 				<width>258</width>
@@ -949,7 +949,7 @@
 				<visible>Skin.HasSetting(furniture.logo) + Substring(Control.GetLabel(8308),empty.png)</visible>
 				<visible>Skin.HasSetting(furniture.logo.fake)</visible>
 				<visible>[IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))]+ [SubString(ListItem.Title,e,Left) | SubString(ListItem.Title,f,Left) | SubString(ListItem.Title,g,Left) | SubString(ListItem.Title,h,Left)]</visible>
-				<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>
+				<!--<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>-->
 			</control>
 			<control type="textbox">
 				<width>258</width>
@@ -963,7 +963,7 @@
 				<visible>Skin.HasSetting(furniture.logo) + Substring(Control.GetLabel(8308),empty.png)</visible>
 				<visible>Skin.HasSetting(furniture.logo.fake)</visible>
 				<visible>[IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))] + [SubString(ListItem.Title,i,Left) | SubString(ListItem.Title,j,Left) | SubString(ListItem.Title,k,Left) | SubString(ListItem.Title,l,Left)]</visible>
-				<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>
+				<!--<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>-->
 			</control>
 			<control type="textbox">
 				<width>258</width>
@@ -977,7 +977,7 @@
 				<visible>Skin.HasSetting(furniture.logo) + Substring(Control.GetLabel(8308),empty.png)</visible>
 				<visible>Skin.HasSetting(furniture.logo.fake)</visible>
 				<visible>[IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))] + [SubString(ListItem.Title,m,Left) | SubString(ListItem.Title,n,Left) | SubString(ListItem.Title,o,Left) | SubString(ListItem.Title,p,Left)]</visible>
-				<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>
+				<!--<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>-->
 			</control>
 			<control type="textbox">
 				<width>258</width>
@@ -991,7 +991,7 @@
 				<visible>Skin.HasSetting(furniture.logo) + Substring(Control.GetLabel(8308),empty.png)</visible>
 				<visible>Skin.HasSetting(furniture.logo.fake)</visible>
 				<visible>[IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))] + [SubString(ListItem.Title,q,Left) | SubString(ListItem.Title,r,Left) | SubString(ListItem.Title,s,Left) | SubString(ListItem.Title,t,Left)]</visible>
-				<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>
+				<!--<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>-->
 			</control>
 			<control type="textbox">
 				<width>258</width>
@@ -1005,7 +1005,7 @@
 				<visible>Skin.HasSetting(furniture.logo) + Substring(Control.GetLabel(8308),empty.png)</visible>
 				<visible>Skin.HasSetting(furniture.logo.fake)</visible>
 				<visible>[IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))] + [SubString(ListItem.Title,u,Left) | SubString(ListItem.Title,v,Left) | SubString(ListItem.Title,w,Left) | SubString(ListItem.Title,x,Left) | SubString(ListItem.Title,y,Left) | SubString(ListItem.Title,z,Left)]</visible>
-				<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>
+				<!--<animation effect="rotate" end="15" center="auto" condition="true" time="200">conditional</animation>-->
 			</control>
 		</control>
 	</include>			
@@ -1013,16 +1013,16 @@
 		<value condition="Window.IsVisible(DialogMuteBug.xml)">special://skin/extras/icons/mute.png</value>
 		<value condition="Window.IsVisible(DialogButtonMenu.xml)">special://skin/extras/icons/power.png</value>
 		<value condition="Window.IsVisible(DialogFavourites.xml)">special://skin/extras/icons/favourites.png</value>
-		<value condition="Window.IsVisible(1101)">special://skin/extras/icons/film.png</value>
-		<value condition="Window.IsVisible(1102)">special://skin/extras/icons/tv.png</value>
+		<!--<value condition="Window.IsVisible(1101)">special://skin/extras/icons/film.png</value>
+		<value condition="Window.IsVisible(1102)">special://skin/extras/icons/tv.png</value>-->
 		<value condition="Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105)">special://skin/extras/icons/director.png</value>
 		<value condition="Player.HasAudio + [Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation) | Window.IsVisible(home)]">special://skin/extras/icons/songs.png</value>
 		<value condition="Player.HasVideo + VideoPlayer.Content(livetv) + [Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation) | Window.IsVisible(home)]">special://skin/extras/icons/livetv.png</value>
 		<value condition="Player.HasVideo + VideoPlayer.Content(movies) + [Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation) | Window.IsVisible(home)]">special://skin/extras/icons/film.png</value>
 		<value condition="Player.HasVideo + VideoPlayer.Content(episodes) + [Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation) | Window.IsVisible(home)]">special://skin/extras/icons/tv.png</value>
 		<value condition="Player.HasVideo + [Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation) | Window.IsVisible(home)]">special://skin/extras/icons/eye.png</value>
-		<value condition="Window.IsVisible(script-ExtendedInfo Script-YoutubeList.xml)">special://skin/extras/icons/youtube.png</value>
-		<value condition="Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">special://skin/extras/icons/info.png</value>
+		<value condition="Window.IsVisible(script-script.extendedinfo-Script-YoutubeList.xml)">special://skin/extras/icons/youtube.png</value>
+		<value condition="Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-Script-VideoList.xml) | Window.IsVisible(script-script.extendedinfo-Script-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-Script-DialogInfo.xml)">special://skin/extras/icons/info.png</value>
 		<value condition="SubString(Container.FolderPath,sources://,Left)">special://skin/extras/icons/files.png</value>
 		<value condition="SubString(Container.FolderPath,special://videoplaylists/,Left)">special://skin/extras/icons/playlist.png</value>
 		<value condition="StringCompare(Container.FolderPath,special://profile/playlists/)">special://skin/extras/icons/playlist.png</value>
@@ -1062,8 +1062,8 @@
 		<value condition="Window.IsVisible(MyMusicPlaylistEditor.xml)">$LOCALIZE[20011]</value>
 		<value condition="Window.IsVisible(DialogButtonMenu.xml)">$LOCALIZE[33060]</value>
 		<value condition="Window.IsVisible(DialogFavourites.xml)">$LOCALIZE[1036]</value>
-		<value condition="Window.IsVisible(script-ExtendedInfo Script-YoutubeList.xml)">$LOCALIZE[31141]</value>
-		<value condition="Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">$LOCALIZE[31241]</value>
+		<value condition="Window.IsVisible(script-script.extendedinfo-Script-YoutubeList.xml)">$LOCALIZE[31141]</value>
+		<value condition="Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-Script-VideoList.xml) | Window.IsVisible(script-script.extendedinfo-Script-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-Script-DialogInfo.xml)">$LOCALIZE[31241]</value>
 		<value condition="Window.IsVisible(MyVideoNav.xml) + StringCompare(Container.FolderPath,videodb://movies/titles/)">$LOCALIZE[20342]</value>
 		<value condition="Window.IsVisible(MyVideoNav.xml) + StringCompare(Container.FolderPath,videodb://tvshows/titles/)">$LOCALIZE[20343]</value>
 		<value condition="Window.IsVisible(MyVideoNav.xml) + SubString(Container.FolderPath,videodb://movies/,Left)">$INFO[Container.FolderName]</value>
@@ -1086,8 +1086,9 @@
 		<value condition="Window.IsVisible(AddonBrowser.xml)">$LOCALIZE[24001]</value>
 		<value condition="Window.IsVisible(MyMusicPlaylist.xml)">$LOCALIZE[559]</value>
 		<value condition="Window.IsVisible(FileManager.xml)">$LOCALIZE[744]</value>
-		<value condition="Window.IsVisible(1101)">$LOCALIZE[31192]</value>
-		<value condition="Window.IsVisible(1102)">$LOCALIZE[31193]</value>
+		<value condition="Window.IsVisible(1111)">$INFO[Skin.String(Header.1111]</value>
+		<value condition="Window.IsVisible(1112)">$INFO[Container(211).ListItem.Label]</value>-->
+		<value condition="Window.IsVisible(1113)">$INFO[Container(211).ListItem.Label2]</value>
 		<value condition="Window.IsVisible(1103) + StringCompare(Window(1103).Property(content),1)">$INFO[Window(home).Property(ExtStudio),$LOCALIZE[31205] ,]</value>
 		<value condition="Window.IsVisible(1103) + StringCompare(Window(1103).Property(content),2)">$INFO[Window(home).Property(ExtMovie),$LOCALIZE[31204] ,]</value>
 		<value condition="Window.IsVisible(1103)">$INFO[Window(home).Property(ExtDirector),$LOCALIZE[31191] ,]</value>
@@ -1102,8 +1103,8 @@
 		<value>$LOCALIZE[10000]</value>
 	</variable>
 	<variable name="SubHeaderLabel">
-		<value condition="Window.IsVisible(script-ExtendedInfo Script-YoutubeList.xml)">$INFO[Window.Property(Filter_Label),, ]$INFO[Window.Property(TotalItems),, $LOCALIZE[31101]]</value>
-		<value condition="Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">$LOCALIZE[31242]</value>
+		<value condition="Window.IsVisible(script-script.extendedinfo-Script-YoutubeList.xml)">$INFO[Window.Property(Filter_Label),, ]$INFO[Window.Property(TotalItems),, $LOCALIZE[31101]]</value>
+		<value condition="Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-Script-VideoList.xml) | Window.IsVisible(script-script.extendedinfo-Script-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-Script-DialogInfo.xml)">$LOCALIZE[31242]</value>
 		<value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[10029]</value>
 		<value condition="[Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRGuide.xml) | Window.IsVisible(MyPVRRecordings.xml)]">[COLOR=$VAR[ColourHighlight]]$INFO[Container.NumItems,,[/COLOR] $LOCALIZE[31101]]$INFO[Control.GetLabel(3), • ,]$INFO[Control.GetLabel(28), • ,]</value>
 		<value condition="!IsEmpty(Container.NumItems) + !Window.IsVisible(home) + Skin.HasSetting(furniture.unwatched) + Window.IsVisible(MyVideoNav.xml)">[COLOR=$VAR[ColourHighlight]]$INFO[Container.NumItems,,[/COLOR] $LOCALIZE[31101] • ][COLOR=$VAR[ColourHighlight]]$INFO[Container.TotalUnwatched,,[/COLOR] $LOCALIZE[16101]]$INFO[Control.GetLabel(3), • ,]</value>
@@ -1121,9 +1122,9 @@
 			<visible>!Skin.HasSetting(furniture.header)</visible>
 			<visible>!ControlGroup(303).HasFocus()</visible>
 			<visible>!Control.HasFocus(515)</visible>
-			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
-			<include condition="!Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">Animation.FurnitureFadeInOut</include>
-			<include condition="Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">FurnitureFadeInOutExtended</include>
+			<visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogAlbumInfo.xml) + !Window.IsVisible(script-script.extendedinfo-Script-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-Script-DialogInfo.xml)</visible>
+			<include condition="!Window.IsVisible(script-script.extendedinfo-Script-VideoList.xml)">Animation.FurnitureFadeInOut</include>
+			<include condition="Window.IsVisible(script-script.extendedinfo-Script-VideoList.xml)">FurnitureFadeInOutExtended</include>
 			<orientation>horizontal</orientation>
 			<itemgap>24</itemgap>
 			<control type="group" description="iconbox">
@@ -1221,7 +1222,7 @@
 		<control type="grouplist">
 			<top>3</top>
 			<left>90</left>
-			<visible>Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
+			<visible>Window.IsVisible(script-script.extendedinfo-Script-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-Script-DialogInfo.xml)</visible>
 			<include>Animation.FurnitureFadeInOutExtended</include>
 			<orientation>horizontal</orientation>
 			<itemgap>24</itemgap>
@@ -1612,10 +1613,20 @@
         </control>
 
         <control type="group">
-            <visible>[System.IdleTime(3) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible>
-            <visible>![Window.IsVisible(script-skinshortcuts.xml) | Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogProgress.xml) | Window.IsVisible(DialogYesNo.xml) | Window.IsVisible(DialogOK.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()]</visible>
+		    <include condition="StringCompare(Skin.String(timelimit),1)">TimeLimit1</include>
+            <include condition="StringCompare(Skin.String(timelimit),2)">TimeLimit2</include>
+            <include condition="StringCompare(Skin.String(timelimit),3)">TimeLimit3</include>
+            <include condition="StringCompare(Skin.String(timelimit),4)">TimeLimit4</include> 
+            <include condition="StringCompare(Skin.String(timelimit),5)">TimeLimit5</include>
+            <include condition="StringCompare(Skin.String(timelimit),6)">TimeLimit6</include> 
+            <include condition="StringCompare(Skin.String(timelimit),7)">TimeLimit7</include>
+            <include condition="StringCompare(Skin.String(timelimit),8)">TimeLimit8</include> 
+            <include condition="StringCompare(Skin.String(timelimit),9)">TimeLimit9</include>
+            <include condition="StringCompare(Skin.String(timelimit),10)">TimeLimit10</include> 
+            <include condition="IsEmpty(Skin.String(timelimit))">TimeLimit4</include>
+            <visible>![Window.IsVisible(script-skinshortcuts.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogConfirm.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()]</visible>
             <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
-            <visible>!Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
+            <visible>!Window.IsVisible(script-script.extendedinfo-Script-VideoList.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-script.extendedinfo-Script-DialogInfo.xml) + !Window.IsVisible(script-script.extendedinfo-Script-DialogVideoInfo.xml)</visible>
             <visible>[!IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]] | !IsEmpty(ListItem.Plot)</visible>
             <include>Animation.FadeIn</include>
             <control type="image" description="Background">
@@ -1639,10 +1650,20 @@
             <right>SidePad</right>
             <top>PosterPad</top>
             <height>650</height>
-            <visible>[System.IdleTime(3) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible>
-            <visible>![Window.IsVisible(script-skinshortcuts.xml) | Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogProgress.xml) | Window.IsVisible(DialogYesNo.xml) | Window.IsVisible(DialogOK.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()]</visible>
+            <include condition="StringCompare(Skin.String(timelimit),1)">TimeLimit1</include>
+            <include condition="StringCompare(Skin.String(timelimit),2)">TimeLimit2</include>
+            <include condition="StringCompare(Skin.String(timelimit),3)">TimeLimit3</include>
+            <include condition="StringCompare(Skin.String(timelimit),4)">TimeLimit4</include> 
+            <include condition="StringCompare(Skin.String(timelimit),5)">TimeLimit5</include>
+            <include condition="StringCompare(Skin.String(timelimit),6)">TimeLimit6</include> 
+            <include condition="StringCompare(Skin.String(timelimit),7)">TimeLimit7</include>
+            <include condition="StringCompare(Skin.String(timelimit),8)">TimeLimit8</include> 
+            <include condition="StringCompare(Skin.String(timelimit),9)">TimeLimit9</include>
+            <include condition="StringCompare(Skin.String(timelimit),10)">TimeLimit10</include>  
+            <include condition="IsEmpty(Skin.String(timelimit))">TimeLimit4</include>
+            <visible>![Window.IsVisible(script-skinshortcuts.xml) | Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogConfirm.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()]</visible>
             <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
-            <visible>!Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
+            <visible>!Window.IsVisible(script-script.extendedinfo-Script-VideoList.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-script.extendedinfo-Script-DialogInfo.xml) + !Window.IsVisible(script-script.extendedinfo-Script-DialogVideoInfo.xml)</visible>
             <visible>[!IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]] | !IsEmpty(ListItem.Plot)</visible>
             <include>Animation.FadeIn.Slide</include>
 
@@ -1652,11 +1673,10 @@
                 <right>60</right>
                 <posy>60</posy>
                 <font>EpisodeNumber</font>
-                <textcolor>Dark1</textcolor>
+                <textcolor>$VAR[ColourHighlight]</textcolor>
                 <height>45</height>
                 <label>$VAR[LabelOverlayTitle]</label>
             </control>
-
             <control type="textbox">
                 <description>textarea</description>
                 <left>60</left>

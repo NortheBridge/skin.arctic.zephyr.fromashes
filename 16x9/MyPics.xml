@@ -15,7 +15,7 @@
         <include>View_500_Thumbnails</include>
 		<include>View_520_Gallery</include>
 
-        <control type="group">
+        <!--<control type="group">
             <include>Animation.FadeIn</include>
             <include>Animation.FadeOut</include>
             <visible>ControlGroup(9000).HasFocus()</visible>
@@ -60,19 +60,62 @@
 					<width>444</width>
                     <include>DefSkinSettingMenuButton</include>
                     <align>left</align>
-                </control>
+                </control>-->
+        <control type="group">
+            <include>Animation.FadeIn</include>
+            <include>Animation.FadeOut</include>
+            <visible>ControlGroup(9000).HasFocus()</visible>
+            <include>GlobalOverlay</include>
+        </control>
 
+        <control type="group">
+            <include>Def9000SideBladeLeft</include>
+            <control type="grouplist" id="9000">
+                <left>0</left>
+                <top>50</top>
+                <width>455</width>
+                <height>1080</height>
+                <onleft>9000</onleft>
+				<onright>Close</onright>
+				<onup>9000</onup>
+		        <ondown>9000</ondown>
+				<onback>50</onback>
+                <onback>ClearProperty(MediaMenu,Home)</onback>
+                <itemgap>0</itemgap>
+                <animation effect="slide" start="-440,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
+                <control type="label" id="200">
+                    <height>42</height>
+                    <textoffsetx>15</textoffsetx>
+                    <font>Home</font>
+                    <label>View Options</label>
+                    <textcolor>$VAR[ColourHighlight]</textcolor>
+                    <aligny>center</aligny>
+                </control>
+                <!--<control type="button" id="2">
+                    <description>View</description>
+                    <include>DefContextButton2</include>
+                    <align>left</align>
+                </control>-->
+				<control type="button" id="1802">
+                    <description>View</description>
+                    <label>View</label>
+                    <label2>$INFO[Container.Viewmode]</label2>
+                    <include>DefContextButton2</include>
+                    <align>left</align>
+					<!--<onclick>Close</onclick>-->
+                    <onclick>ActivateWindow(1109)</onclick>
+                </control>
                 <control type="button" id="3">
                     <description>Sort</description>
 					<width>444</width>
-                    <include>DefSkinSettingMenuButton</include>
+                    <include>DefContextButton2</include>
                     <align>left</align>
                 </control>
 
                 <control type="togglebutton" id="4">
                     <description>Ascending</description>
 					<width>444</width>
-                    <include>DefSkinSettingMenuButton</include>
+                    <include>DefContextButton2</include>
                     <align>left</align>
                     <label>584</label>
                     <altlabel>585</altlabel>
@@ -80,8 +123,7 @@
 
                 <control type="button" id="6">
                     <description>Slideshow</description>
-					<width>444</width>
-                    <include>DefSkinSettingMenuButton</include>
+					<include>DefContextButton2</include>
                     <align>left</align>
                     <label>108</label>
                     <visible>!ListItem.IsFolder</visible>
@@ -89,8 +131,7 @@
 
                 <control type="button" id="7">
                     <description>Recursive Slideshow</description>
-					<width>444</width>
-                    <include>DefSkinSettingMenuButton</include>
+					<include>DefContextButton2</include>
                     <align>left</align>
                     <label>108</label>
                     <visible>ListItem.IsFolder</visible>
@@ -98,15 +139,15 @@
 
                 <control type="radiobutton" id="9">
                     <description>Randomise</description>
-					<width>444</width>
-					<radioposx>398</radioposx>
-					<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/on.png</textureradiofocus>
-                    <textureradionofocus colordiffuse="Dark2">buttons/off.png</textureradionofocus>
-                    <include>DefSkinSettingMenuButton</include>
+					<radioposx>380</radioposx>
+					<include>DefContextButton2</include>
                     <align>left</align>
                     <label>13319</label>
                 </control>
-
+                <include content="MenuPlayerControls">
+                    <param name="PlayerControlsOnUp" value="4" />
+                    <param name="PlayerControlsOnDown" value="1802" />
+                </include>
             </control>
 
         </control>
