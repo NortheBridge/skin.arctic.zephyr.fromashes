@@ -1,7 +1,42 @@
 [B]Arctic Zephyr: From Ashes Changelog[/B]
 
+[B]Arctic Zephyr: From Ashes Danvers "Beta 5 Preview Update" - Released November 13, 2016[/B]
+Danvers: 4.9.91-beta5 (4.9.91-beta5_danvers)
+
+ARCTIC ZEPHYR: FROM ASHES ANNIVERSARY EDITION (CODENAMED "DANVERS") IS PRE-RELEASE SOFTWARE DESIGNED FOR A PRE-RELEASE VERSION OF KODI.
+THERE IS NO GUARNTEE THAT ALL FEATURES WILL WORK. PLEASE LET US KNOW OF ANY ISSUES YOU RUN INTO. THIS SKIN IS NOW AVAILABLE IN THE 
+NORTHEBRIDGE BY DESIGN(R) REPOSITORY, EMBY BETA REPOSITORY, GITHUB, OR VIA DIRECT ZIP FILE DOWNLOAD ONLY.
+
+Addon Framework Update to Danvers 4.9.91
+Texture Package Update to Danvers 4.9.91
+Updated "About From Ashes" Information Screen
+Changelog Corrections
+Danvers Notification Update
+Added feature FlipMusicInfo
+Added Library View "InfoWall 2"
+Added Library View "Panel"
+Added Library View "Gallery"
+Added Music Library Views - "Wall Square," "Big Icons," and "Panel" to Music Library Views
+Added Colour Section "Indicators" in Skin Settings.
+Ability to Change Watched,UnWatched, Playing, and Resume Colour Indicators. 
+Indicator Was Added to all Library Views
+Changed Library Navigation to Include Videos, Music, Pictures, Programs, and Addons. 
+SideBlade Is Now Main navigation. Views Are Selected Next to SideBlade with the Corresponding Thumb View. 
+Fullscreen Effect
+Missing View Thumbs Plus New View Thumbs Were Added
+Added Plot Overlay Button to SideBlade With Ability to Enable/Disable
+Changed CuLyrics Display Window so Player Controls and Song Lyrics Display On Top of Music Visualization.
+Music Visualization - FlipMusicInfo Has the Option to Show Spinning DiscArt, and Border Box around Info 
+Bitrate Was Added to the Info
+NOTICE: To Use Feature Flip MusicInfo, CuLyrics Has to be Set to Manual.\
+Added the Ability to use Advance Launcher In Some Library Views
+Added FileManager Icon Box to Settings Page
+Changed Focus Highlight Colour to Match Text Banner
+Fixed Icon thumb scaling in DialogAddonInfo
+Fixed Icon scaling in some views
+
 [B]Arctic Zephyr: From Ashes Danvers "Beta 1 Preview Update" - Released September 28, 2016[/B]
-Danvers: 4.9.90-beta1 (4.2.90-beta1_danvers)
+Danvers: 4.9.90-beta1 (4.9.90-beta1_danvers)
 
 ARCTIC ZEPHYR: FROM ASHES ANNIVERSARY EDITION (CODENAMED "DANVERS") IS PRE-RELEASE SOFTWARE DESIGNED FOR A PRE-RELEASE VERSION OF KODI.
 THERE IS NO GUARNTEE THAT ALL FEATURES WILL WORK. PLEASE LET US KNOW OF ANY ISSUES YOU RUN INTO. THIS SKIN IS NOW AVAILABLE IN THE 

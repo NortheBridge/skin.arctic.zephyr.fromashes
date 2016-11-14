@@ -40,7 +40,8 @@
 					<info>ListItem.Thumb</info>
 					<bordertexture border="4">boxes/cdcover_mask_aa.png</bordertexture>
 					<bordersize>4</bordersize>
-					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+					
 				</control>
 				
 				<control type="image">
@@ -291,7 +292,7 @@
  				</control>
  				<control type="label">
  				    <left>5</left>
-					<top>10</top>
+					<top>150</top>
 					<height>30</height>
 					<width>308</width>
 					<align>center</align>
@@ -310,7 +311,7 @@
  				</control>
  				<control type="label">
  				    <left>360</left>
-					<top>10</top>
+					<top>150</top>
 					<height>30</height>
 					<width>308</width>
 					<align>center</align>
@@ -329,7 +330,7 @@
 				</control>
 				<control type="label">
  				   <left>708</left>
-					<top>10</top>
+					<top>150</top>
 					<height>30</height>
 					<width>308</width>
 					<align>center</align>
@@ -478,8 +479,9 @@
 					<width>250</width>
 					<textureradiofocus colordiffuse="$VAR[ColourHighlight2]">buttons/on.png</textureradiofocus>
                     <textureradionofocus colordiffuse="Dark2">buttons/off.png</textureradionofocus>
-                    <radioposx>180</radioposx>
-                    <include>DefSkinSettingMenuButton</include>
+					<textoffsetx>20</textoffsetx>
+                    <radioposx>190</radioposx>
+                    <include>DefSkinSettingRadioButton</include>
                     <label>24048</label>
                     <visible>Control.IsEnabled(13)</visible>
                 </control>

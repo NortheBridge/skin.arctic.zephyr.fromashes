@@ -5,7 +5,7 @@
     <onload>SetProperty(SkinInitStarted,1,home)</onload>
 	
 	<!-- Danvers Preview Notice -->
-	<onload>RunScript(script.skin.helper.service,action=dialogok,header=Danvers Preview (Beta 1),message=Welcome to the Arctic Zephyr: From Ashes Danvers Preview for Kodi Krypton! This is the first beta entry into the From Ashes Danvers lineup. Certain features may not be available or in Alpha condition subject to change during the Danvers Preview and may not represent the released version of From Ashes.)</onload>
+	<onload condition="!Skin.HasSetting(home.hidebeta.dialog)">RunScript(script.skin.helper.service,action=dialogok,header=Danvers Preview (Beta 5),message=Welcome to the Arctic Zephyr: From Ashes Danvers Preview for Kodi Krypton! This is the first official beta entry into the From Ashes Danvers lineup. Certain features may not be available or in Alpha condition subject to change during the Danvers Preview and may not represent the released version of From Ashes.)</onload>
     <controls>
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
