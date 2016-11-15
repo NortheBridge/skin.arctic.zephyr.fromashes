@@ -1,5 +1,10 @@
 [B]Arctic Zephyr: From Ashes Changelog[/B]
 
+[B]Arctic Zephyr: From Ashes "Dormer Last Call Update Hotfix #1" - Released November 15, 2016
+Dormer: 3.4.30 (3.4.30_dormer)
+Resolved Missing Texture Package
+Fix for Dormer Notification Crash
+
 [B]Arctic Zephyr: From Ashes "Dormer Last Call Update" - Released November 11, 2016
 Dormer: 3.4.20 (3.4.20_dormer)
 Added toggle button in SkinSettings>Extras - Trun of Dormer Notice.

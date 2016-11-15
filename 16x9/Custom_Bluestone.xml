@@ -55,7 +55,7 @@
 			<posy>290</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Build: [COLOR=$VAR[ColourHighlight]]dormer@7570e07[/COLOR]</label> <!-- Because Who Doesn't Like Margery Tyrell or Game of Thrones on HBO? Wait, You Can Read This? Easter Eggs! -->
+			<label>Build: [COLOR=$VAR[ColourHighlight]]dormer@ef7c892[/COLOR]</label> <!-- Because Who Doesn't Like Margery Tyrell or Game of Thrones on HBO? Wait, You Can Read This? Easter Eggs! -->
 		</control>
 		<!-- The Full Version is Determined By the Branch (i.e. x.y.zz_branchnameabbreviated) -->
 		<!-- Goodbye to Bluestone; Now "Dormer" and "Danvers" -->
@@ -88,7 +88,7 @@
 			<posy>350</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Build Type: [COLOR=$VAR[ColourHighlight]]Release, EoL[/COLOR]</label>
+			<label>Build Type: [COLOR=$VAR[ColourHighlight]]Release, EoL, HFX001[/COLOR]</label>
 		</control>
 	<control type="label">
 			<description>Sys_Name</description>
