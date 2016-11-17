@@ -43,16 +43,35 @@
     <widget label="31227">TopRatedTvShows</widget>
     <widget label="31228">OnAirTvShows</widget>
     <widget label="31229">AiringTodayTvShows</widget>
+			
+	<!-- Default Widgets -->
+	<widgetdefaultnode defaultID="movies" group="mainmenu" label="$ADDON[script.skin.helper.service 32169]" type="movies" path="plugin://script.skin.helper.service/?action=INPROGRESSANDRECOMMENDEDMOVIES&amp;reload=$INFO[Window(Home).Property(widgetreload)]" target="video">recommendedmovies</widgetdefaultnode>
+	<widgetdefaultnode defaultID="tvshows" group="mainmenu" label="$ADDON[script.skin.helper.service 32002]" type="episodes" path="plugin://script.skin.helper.service/?action=nextepisodes&amp;reload=$INFO[Window(Home).Property(widgetreload)]" target="video">nextepisodes</widgetdefaultnode>
+	<widgetdefaultnode defaultID="music" group="mainmenu" label="359" type="albums" path="plugin://script.skin.helper.service/?action=recentalbums&amp;limit=25&amp;reload=$INFO[Window(Home).Property(widgetreloadmusic)]" target="music">recentalbums</widgetdefaultnode>
+	<widgetdefaultnode defaultID="musicvideos" group="mainmenu" label="20390" type="musicvideos" path="plugin://script.skin.helper.service/?action=recentmusicvideos&amp;reload=$INFO[Window(Home).Property(widgetreload)]" target="video">recentmusicvideos</widgetdefaultnode>
+	<widgetdefaultnode defaultID="livetv" group="mainmenu" label="19017" type="pvr" path="plugin://script.skin.helper.service/?action=pvrrecordings&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]" target="pvr">tvrecordings</widgetdefaultnode>
+	<widgetdefaultnode defaultID="weather" group="mainmenu" label="8" type="static" path="$INCLUDE[WeatherWidget]" target="static">weather</widgetdefaultnode>
+	<widgetdefaultnode defaultID="settings" group="mainmenu" label="130" type="static" path="$INCLUDE[SystemInfoWidget]" target="static">systeminfo</widgetdefaultnode>
+    <widgetdefaultnode defaultID="plugin.video.flix2kodi" group="mainmenu" label="$ADDON[plugin.video.flix2kodi 30104]" type="tvshows" path="plugin://plugin.video.flix2kodi/?mode=list_videos&amp;thumb&amp;type=both&amp;url=list%3ff2065b3e-c16f-4d83-9e60-677fff40af13_38532425%26mylist&amp;widget=true&amp;reload=$INFO[Window(home).Property(widgetreload2)]" target="video">netflix_progress</widgetdefaultnode>
+    <widgetdefaultnode defaultID="netflix" group="mainmenu" label="$ADDON[plugin.video.flix2kodi 30104]" type="tvshows" path="plugin://plugin.video.flix2kodi/?mode=list_videos&amp;thumb&amp;type=both&amp;url=list%3fmylist&amp;widget=true&amp;reload=$INFO[Window(home).Property(widgetreload2)]" target="video">netflix_progress</widgetdefaultnode>
+	
 
-    <widgetdefaultnode defaultID="movies" group="mainmenu" label="Recommended" type="movies" path="plugin://script.skin.helper.service/?action=RECOMMENDEDMOVIES&amp;reload=$INFO[Window(Home).Property(widgetreload)]" target="video">recommendedmovies</widgetdefaultnode>
+    <!--<widgetdefaultnode defaultID="movies" group="mainmenu" label="Recommended" type="movies" path="plugin://script.skin.helper.service/?action=RECOMMENDEDMOVIES&amp;reload=$INFO[Window(Home).Property(widgetreload)]" target="video">recommendedmovies</widgetdefaultnode>
     <widgetdefaultnode defaultID="tvshows" group="mainmenu" label="Recommended" type="movies" path="plugin://service.library.data.provider?type=recommendedepisodes&amp;reload=$INFO[Window.Property(recommendedepisodes)]" target="video">recommendedepisodes</widgetdefaultnode>
     <widgetdefaultnode defaultID="music" group="mainmenu" label="Recommended" type="music" path="plugin://service.library.data.provider?type=recommendedalbums&amp;reload=$INFO[Window.Property(recommendedalbums)]" target="video">recommendedmusic</widgetdefaultnode>
     <widgetdefaultnode defaultID="videos" group="mainmenu" label="Recommended and Random" type="movies" path="plugin://service.library.data.provider?type=recommendedepisodes+recommendedmovies+randommovies&amp;reload=$INFO[Window.Property(recommendedepisodes)]$INFO[Window.Property(recommendedmovies)]$INFO[Window.Property(randommovies)]" target="video">moviesandepisodes</widgetdefaultnode>
-    <widgetdefaultnode defaultID="livetv" group="mainmenu" label="TV Channels" type="movies" path="pvr://channels/tv/All&amp;channels/" target="video">tvchannels</widgetdefaultnode>
+    <widgetdefaultnode defaultID="livetv" group="mainmenu" label="TV Channels" type="movies" path="pvr://channels/tv/All&amp;channels/" target="video">tvchannels</widgetdefaultnode>-->
 
     <!-- Additional Common Items -->
-    <shortcut label="31193" type="TVHub" grouping="common" icon="special://skin/extras/icons/tv.png">ActivateWindow(1102)</shortcut>
-    <shortcut label="31192" type="MovieHub" grouping="common" icon="special://skin/extras/icons/film.png">ActivateWindow(1101)</shortcut>
+	<shortcut label="Hub 1119" type="Hub 1119" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1119)</shortcut>
+    <shortcut label="Hub 1118" type="Hub 1118" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1118)</shortcut>
+    <shortcut label="Hub 1117" type="Hub 1117" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1117)</shortcut>
+    <shortcut label="Hub 1116" type="Hub 1116" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1116)</shortcut>
+    <shortcut label="Hub 1115" type="Hub 1115" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1115)</shortcut>
+    <shortcut label="Hub 1114" type="Hub 1114" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1114)</shortcut>
+    <shortcut label="Hub 1113" type="Hub 1113" grouping="common" icon="special://skin/extras/icons/addon.png">ActivateWindow(1113)</shortcut>
+    <shortcut label="31193" type="TVHub" grouping="common" icon="special://skin/extras/icons/tv.png">ActivateWindow(1112)</shortcut>
+    <shortcut label="31192" type="MovieHub" grouping="common" icon="special://skin/extras/icons/film.png">ActivateWindow(1111)</shortcut>
     <shortcut label="31212" type="themoviedb.org episodes" grouping="common" icon="special://skin/extras/icons/director.png">ActivateWindow(1105)</shortcut>
     <shortcut label="31208" type="themoviedb.org movies" grouping="common" icon="special://skin/extras/icons/director.png">ActivateWindow(1104)</shortcut>
     <shortcut label="Top250" type="top250" grouping="common" icon="special://skin/extras/icons/top250.png">RunScript(script.imdb250.view)</shortcut>
@@ -63,11 +82,11 @@
     <!-- Override Actions Because Im A Dummy Who Doesnt Know The Correct Window IDs To Use -->
     <override action="ActivateWindow(3201)">
         <condition>true</condition>
-        <action>ActivateWindow(1101)</action>
+        <action>ActivateWindow(1111)</action>
     </override>
     <override action="ActivateWindow(3202)">
         <condition>true</condition>
-        <action>ActivateWindow(1102)</action>
+        <action>ActivateWindow(1112)</action>
     </override>
     <override action="ActivateWindow(3204)">
         <condition>true</condition>
@@ -79,17 +98,17 @@
     </override>
     
     <!-- Browse for Backgrounds -->
+	<backgroundBrowse default="protocol://">True</backgroundBrowse>
     <background label="::PLAYLIST::">playlistBackground</background>
     <background label="smartshortcuts">||BROWSE||plugin://script.skin.helper.service/?action=backgrounds</background>
     <background label="smartshortcuts">||BROWSE||special://skin/extras/backgrounds</background>
-    <backgroundBrowse default="protocol://">True</backgroundBrowse>
 
     <backgrounddefault defaultID="movies">$INFO[Window(Home).Property(SkinHelper.AllMoviesBackground)]</backgrounddefault>
     <backgrounddefault defaultID="tvshows">$INFO[Window(Home).Property(SkinHelper.AllTvShowsBackground)]</backgrounddefault>
     <backgrounddefault defaultID="livetv">special://skin/extras/backgrounds/Channels.jpg</backgrounddefault>
     <backgrounddefault defaultID="music">$INFO[Window(Home).Property(SkinHelper.AllMusicBackground)]</backgrounddefault>
     <backgrounddefault defaultID="musicvideos">$INFO[Window(Home).Property(SkinHelper.AllMusicVideosBackground)]</backgrounddefault>
-    <backgrounddefault defaultID="weather">$INFO[Skin.String(weather.fanart)]$INFO[Window(Weather).Property(Current.FanartCode)]</backgrounddefault>
+    <backgrounddefault defaultID="weather">$INFO[Skin.String(WeatherFanArtPack.path)]$INFO[Window(Weather).Property(Current.FanartCode)]</backgrounddefault>
     <backgrounddefault defaultID="pictures">$INFO[Window(Home).Property(SkinHelper.PicturesBackground)]</backgrounddefault>
     <backgrounddefault defaultID="programs">special://skin/extras/backgrounds/Channels2.jpg</backgrounddefault>
     <backgrounddefault defaultID="videos">$INFO[Window(Home).Property(SkinHelper.GlobalFanartBackground)]</backgrounddefault>
@@ -398,4 +417,17 @@
     <thumbnail label="emby2.png">special://skin/extras/icons/emby2.png</thumbnail>
 
     <thumbnail label="smartshortcuts">||BROWSE||plugin://script.skin.helper.service/?action=backgrounds</thumbnail>
+	
+	<!-- Video Grouping -->
+    <video-groupings>
+        <node label="32040">
+            <content>playlist-video</content>
+        </node>
+        <node label="32010">
+            <shortcut label="1037" type="32014" icon="DefaultAddonVideo.png">ActivateWindow(Videos,Addons,return)</shortcut>
+            <content>addon-video</content>
+        </node>
+        <content>video</content>
+        
+    </video-groupings>
 </overrides>

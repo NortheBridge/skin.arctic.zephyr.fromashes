@@ -112,15 +112,6 @@
 					<altlabel>585</altlabel>
 					<include>DefContextButton2</include>
 				</control>
-				<control type="radiobutton" id="9009" description="Low List (50)">
-                    <radioposx>380</radioposx>
-			        <include>DefContextButton2</include>
-                    <align>left</align>
-                    <label>31214</label>
-                    <selected>Skin.HasSetting(50list.showplot)</selected>
-                    <onclick>Skin.ToggleSetting(50list.showplot)</onclick>
-                    <visible>Control.IsVisible(50) + !Skin.HasSetting(50list.low)</visible>
-                </control>
 				<control type="radiobutton" id="9012" description="Big List Double Pane (52)">
                     <radioposx>380</radioposx>
 			        <include>DefContextButton2</include>

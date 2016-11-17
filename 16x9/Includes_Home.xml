@@ -631,9 +631,9 @@
 					<right>40</right>
 					<top>132</top>
 					<height>127</height>
-					<font>Tiny</font>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<align>justify</align>
-					<autoscroll>false</autoscroll>
+					<autoscroll>true</autoscroll>
 					<textcolor>$VAR[WidgetPlotColour]</textcolor><!--replaced "Dark2" -->
 					<selectedcolor>$VAR[WidgetPlotColour]</selectedcolor><!--replaced "Dark2" -->
 					<shadowcolor>noop</shadowcolor>
@@ -645,7 +645,7 @@
 					<top>265</top>
 					<bottom>324</bottom>
 					<align>right</align>
-					<autoscroll>false</autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<textcolor>$VAR[WidgetSubLabelColour]</textcolor><!--replaced "Dark1" -->
 					<selectedcolor>$VAR[WidgetSubLabelColour]</selectedcolor><!--replaced "Dark1" -->
 					<label>$VAR[WidgetSubLabel]</label>
@@ -720,7 +720,7 @@
 					<height>127</height>
 					<font>Tiny</font>
 					<align>justify</align>
-					<autoscroll>false</autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<textcolor>$VAR[WidgetPlotColour]</textcolor><!--replaced "Dark2" -->
 					<selectedcolor>$VAR[WidgetPlotColour]</selectedcolor><!--replaced "Dark2" -->
 					<shadowcolor>noop</shadowcolor>
@@ -732,7 +732,7 @@
 					<top>265</top>
 					<bottom>324</bottom>
 					<align>right</align>
-					<autoscroll>false</autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<textcolor>$VAR[WidgetSubLabelColour]</textcolor><!--replaced "Dark1" -->
 					<selectedcolor>$VAR[WidgetSubLabelColour]</selectedcolor><!--replaced "Dark1" -->
 					<label>$VAR[WidgetSubLabel]</label>
@@ -1376,7 +1376,7 @@
 							<height>97</height>
 							<font>Tiny</font>
 							<align>justify</align>
-							<autoscroll>false</autoscroll>
+							<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 							<textcolor>$VAR[WidgetPlotColour]</textcolor><!--replaced "Dark2"-->
 							<selectedcolor>$VAR[WidgetPlotColour]</selectedcolor><!--replaced "Dark2"-->
 							<shadowcolor>noop</shadowcolor>
@@ -1388,7 +1388,7 @@
 							<top>85</top>
 							<height>40</height>
 							<align>right</align>
-							<autoscroll>false</autoscroll>
+							<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 							<textcolor>$VAR[WidgetSubLabelColour]</textcolor><!--replaced "Dark2"-->
 							<selectedcolor>$VAR[WidgetSubLabelColour]</selectedcolor><!--replaced "Dark2"-->
 							<label>$VAR[WidgetSubLabel]</label>
