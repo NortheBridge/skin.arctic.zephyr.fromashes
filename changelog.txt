@@ -1,5 +1,27 @@
 [B]Arctic Zephyr: From Ashes Changelog[/B]
 
+[B]Arctic Zephyr: From Ashes Danvers "Beta 6 Preview Thanksgiving Day Update" - Released December, 3, 2016
+Danvers: 4.9.92-beta6 (4.9.92-beta6_danvers)
+
+ARCTIC ZEPHYR: FROM ASHES ANNIVERSARY EDITION (CODENAMED "DANVERS") IS PRE-RELEASE SOFTWARE DESIGNED FOR A PRE-RELEASE VERSION OF KODI.
+THERE IS NO GUARNTEE THAT ALL FEATURES WILL WORK. PLEASE LET US KNOW OF ANY ISSUES YOU RUN INTO. THIS SKIN IS NOW AVAILABLE IN THE 
+NORTHEBRIDGE BY DESIGN(R) REPOSITORY, EMBY BETA REPOSITORY, GITHUB, OR VIA DIRECT ZIP FILE DOWNLOAD ONLY.
+
+Addon Framework Update to Danvers 4.9.92
+Texture Package Update to Danvers 4.9.92
+Resolved Issue: Missing Fonts
+Added new InfoWall View - Episodes
+Changed InfoWall to left/right plot block
+Fixed DialogContextMenu not displaying correctly
+Added Kodi Privacy Policy to SystemInfo Window
+Upgraded SmartPlaylist Editor to Kodi17 requirements
+Fixed Hubs in "override.xml"
+Removed Hubs Category in SkinSettings ( no longer needed )
+Fixed Home Widgets plot text not scrolling.
+Added Animated FanArt to "FlipMusicInfo" Visualization
+Added Gradient Background ( lower portion ) to "FlipMusicInfo" Visualization
+Minor Changes
+
 [B]Arctic Zephyr: From Ashes Danvers "Beta 5 Preview Update" - Released November 13, 2016[/B]
 Danvers: 4.9.91-beta5 (4.9.91-beta5_danvers)
 
