@@ -40,7 +40,7 @@
                 <posy>0</posy>
                 <width>600</width>
                 <height>680</height>
-                <texture colordiffuse="Panel" border="16">dialog/frame_Landscape-fo.png</texture>
+                <texture colordiffuse="Panel" border="16">dialog/frame_Landscape-fo.png</texture>-->
             </control>
 			<control type="image">
                 <posx>10</posx>
@@ -96,7 +96,7 @@
                 <posx>38</posx>
                 <posy>142</posy>
                 <width>540</width>
-                <height max="634">auto</height>
+                <height max="495">auto</height>
                 <itemgap>4</itemgap>
                 <control type="button" id="1000">
                     <description>Buttons</description>

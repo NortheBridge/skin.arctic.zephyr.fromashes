@@ -3,7 +3,7 @@
 <window id="6">
 	<defaultcontrol always="true">50</defaultcontrol>
 	<menucontrol>9000</menucontrol>
-	<views>50,550,54,53,51,55,56,57,58,59,155,156,157,159,52,500,503,512,514,513,515,520,555</views>
+	<views>50,550,54,53,51,55,56,555,57,58,59,155,156,157,159,52,500,503,512,514,513,515,520</views>
 	<onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onload condition="System.HasAddon(script.duration)">RunScript(script.duration,backend=True)</onload>
 	<controls>
@@ -19,9 +19,10 @@
 		<include>View_53_Poster</include>
 		<include>View_54_Banner</include>
 		<include>View_555_Wall_Episodes</include>
-		<include condition="Skin.HasSetting(55wall.showinfo)">View_55_Wall_Info</include>
+		<include>View_55_Wall</include>
+		<!--<include condition="Skin.HasSetting(55wall.showinfo)">View_55_Wall_Info</include>-->
 		<include condition="Skin.HasSetting(55wall.showposter)">View_55_Wall_Poster</include>
-		<include condition="!Skin.HasSetting(55wall.showinfo) + !Skin.HasSetting(55wall.showposter)">View_55_Wall</include>
+		<!--<include condition="!Skin.HasSetting(55wall.showinfo) + !Skin.HasSetting(55wall.showposter)">View_55_Wall</include>-->
 		<include condition="!Skin.HasSetting(56media.showinfo) + !Skin.HasSetting(56media.low)">View_56_MediaInfo</include>
 		<include condition="Skin.HasSetting(56media.showinfo) + !Skin.HasSetting(56media.low)">View_56_MediaInfo2</include>
 		<include condition="Skin.HasSetting(56media.low)">View_56_MediaInfo3</include>
@@ -39,7 +40,7 @@
 		<include>View_514_PosterShift</include>
 		<include>View_513_PosterRow</include>
 		<include>View_515_Netflix</include>
-        <include>View_520_Gallery</include>    
+        <include>View_520_Gallery</include> 
 		
 		<include>Furniture_Header</include>
 		<include>Furniture_NowPlaying</include>

@@ -163,19 +163,19 @@
 		    <!--Label NoFocus-->
 		            <control type="image">
 					    <posx>6</posx>
-					    <posy>22</posy>
-                        <width>196</width>
-                        <height>18</height>                       
-						<texture colordiffuse="CCBBBBBB" border="20">common/box.png</texture>
+					    <posy>6</posy>
+                        <width>248</width>
+                        <height>24</height>                       
+						<texture colordiffuse="CCBBBBBB" border="5">common/white.png</texture>
                     </control>
 		    <!--Label Text NoFocus-->			
                     <control type="label">
                        <height>10</height>
-                       <posy>24</posy>
-                       <width>205</width>
+                       <posy>10</posy>
+                       <width>248</width>
                        <align>center</align>
                        <font>Button</font>
-                       <textcolor>$VAR[ButtonTextColour]</textcolor>
+                       <textcolor>Panel</textcolor>
                        <label>$INFO[ListItem.Label]</label>
                     </control>
                 </itemlayout>
@@ -190,32 +190,33 @@
 					<control type="image">
                         <width>260</width>
                         <height>200</height>                       
-						<texture colordiffuse="$VAR[ButtonFocusColour]" border="30">buttons/dialoge_shadow.png</texture>
+						<texture colordiffuse="$VAR[ButtonFocusColour]" border="5">buttons/dialoge_shadow.png</texture>
                     </control>
 		    <!--Thumb Icon Focus-->			
 					<control type="image">
 					    <posy>12</posy>
                         <width>260</width>
                         <height>200</height>
-						<texture>$INFO[ListItem.Thumb]</texture>
+						<texture colordiffuse="Dark1">$INFO[ListItem.Thumb]</texture>
 						<aspectratio align="center">keep</aspectratio>
                     </control>
-		    <!--Label Focus-->			
-					<control type="image">
+		    <!--Label Focus-->
+			        <control type="image">
 					    <posx>6</posx>
-					    <posy>22</posy>
-                        <width>205</width>
-                        <height>18</height>                       
-						<texture colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texture>
+					    <posy>6</posy>
+                        <width>248</width>
+                        <height>24</height>                       
+						<texture colordiffuse="$VAR[ButtonFocusColour]" border="5">common/white.png</texture>
                     </control>
+
 		    <!--Label Text Focus-->			
                     <control type="label">
                         <height>10</height>
-                        <posy>24</posy>
-                        <width>205</width>
+                        <posy>10</posy>
+                        <width>248</width>
                         <align>center</align>
                         <font>Button</font>
-                        <textcolor>$VAR[ButtonFocusTextColour]</textcolor>
+                        <textcolor>Panel</textcolor>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                 </focusedlayout>

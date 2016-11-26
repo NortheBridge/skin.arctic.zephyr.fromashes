@@ -2,6 +2,7 @@
 	<defaultcontrol>30</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<defaultcontrol always="true">9100</defaultcontrol>
+
 	<controls>
 		<include>GlobalBackground</include>
 		<!--<include>SkinSettingsTopBar</include>-->
@@ -95,11 +96,11 @@
 						<include>DefSkinSettingMenuButton</include>
 						<label>31110</label>					
 					</control>
-					<control type="togglebutton" id="9105" description="Hub Items">
+					<!--<control type="togglebutton" id="9105" description="Hub Items">
 					    <onright>9502</onright>
 						<include>DefSkinSettingMenuButton</include>
 						<label>31178</label>
-					</control>
+					</control>-->
 					<control type="togglebutton" id="9106" description="Furniture">
 					    <onright>9602</onright>
 						<include>DefSkinSettingMenuButton</include>
@@ -688,15 +689,6 @@
 						<include>DefSkinSettingButton</include>
 						<label>$LOCALIZE[20342] [LOWERCASE]$LOCALIZE[31178][/LOWERCASE]</label>
 						<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=x$PARAM[hubid])</onclick>
-					</control>
-					<control type="button" id="9505" description="Select Movies Hub Header Text">
-						<visible>ControlGroup(9100).HasFocus(9105)</visible>
-						<include>DefSkinSettingButton</include>
-						<label>HUB Header Text</label>
-						<!--<label>$ADDON[script.skinshortcuts 32025]</label>-->
-						<label2>$INFO[Skin.String(HubHeaderText1111.label)]</label2>
-						<!--<onclick>Skin.ToggleSetting(Hub.HeaderText1111)</onclick>
-						<selected>Skin.HasSetting(SmartShortcuts.favorites)</selected>-->
 					</control>					
 					<control type="button" id="9506" description="Select TV Shows Hub Widget">
 						<visible>ControlGroup(9100).HasFocus(9105)</visible>

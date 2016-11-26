@@ -51,13 +51,19 @@
         <icon>special://skin/extras/icons/pictures.png</icon>
         <action>ActivateWindow(Pictures)</action>
     </shortcut>
-    <shortcut>
+    <!--<shortcut>
         <label>0</label>
         <label2>Common Shortcut</label2>
         <defaultID>programs</defaultID>
         <icon>special://skin/extras/icons/addons.png</icon>
         <action>ActivateWindow(Programs)</action>
-    </shortcut>
+    </shortcut>-->
+	<shortcut>
+		<label>$LOCALIZE[10040]</label>
+		<label2>Common Shortcut</label2>
+		<icon>special://skin/extras/icons/addons.png</icon>
+		<action>ActivateWindow(Programs,Addons,return)</action>
+	</shortcut>
     <shortcut>
         <label>10004</label>
         <label2>Common Shortcut</label2>
