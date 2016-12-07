@@ -2,7 +2,7 @@
 The Arctic Zephyr: From Ashes Skin designed for Emby and Kodi is a streamlined, clean, and minimalistic skin modification for Kodi Jarvis which provides a unique and easy to use user experience based on the Arctic Zephyr base skin created by Jurialmonkey. Arctic Zephyr: From Ashes has had a long legacy and is the next evolution of "Arctic Zephyr: Exploded."
 
 ## Quick Start
-![Shields IO Kodi 16](https://img.shields.io/badge/Kodi-16-blue.svg) ![Shields IO AZFA Branch](https://img.shields.io/badge/Arctic%20Zephyr%3A%20From%20Ashes-Dormer%20(3.4.30)-blue.svg) ![Shields IO Branch Status](https://img.shields.io/badge/Dormer%20GA-EoL-red.svg)
+![Shields IO Kodi 16](https://img.shields.io/badge/Kodi-16-blue.svg) ![Shields IO AZFA Branch](https://img.shields.io/badge/Arctic%20Zephyr%3A%20From%20Ashes-Dormer%20(3.4.60)-blue.svg) ![Shields IO Branch Status](https://img.shields.io/badge/Dormer%20GA-EoL-red.svg)
 
 Starting with the release of Arctic Zephyr: From Ashes (Danvers Preview), NortheBridge now provides a central location to help you quickly get started with and take advantage of the many features Arctic Zephyr: From Ashes has to offer. All information is available on the "Arctic Zephyr: From Ashes Quick Start" site.
 
@@ -14,7 +14,7 @@ NortheBridge's From Ashes Waypoint Quick Start Site: https://northebridge.com/wa
 ![Kodi logo](https://raw.githubusercontent.com/xbmc/xbmc-forum/master/xbmc/images/logo-sbs-black.png) ![Emby logo](http://emby.media/community/public/style_images/logoemby.png)
 
 ## Installation Instructions
-Please note that Arctic Zephyr: From Ashes (Dormer) is General Availability software for "Kodi 16 Jarvis," and is now classified as "Long Term Support" under the NortheBridge Software Lifecycle Policy available at https://northebridge.com/systems/lifecycle and will not recieve any new feature updates. It will however remain supported for bug fixes until the release of "Arctic Zephyr: From Ashes" (Danvers) Autumn 2016 Update for Krypton at which point all support on the Dormer Branch will cease.
+Please note that Arctic Zephyr: From Ashes (Dormer) is General Availability software for "Kodi 16 Jarvis," and is now classified as "End of Life" under the NortheBridge Software Lifecycle Policy available at https://northebridge.com/systems/lifecycle and will not recieve any new feature updates or support. We strongly recommend you to update to "Arctic Zephyr: From Ashes Danvers" for Kodi 17 Krypton.
 
 ### Requirements
 Kodi Krypton (v16) - https://kodi.tv/download/
@@ -25,7 +25,7 @@ Emby Beta Repository (RECOMENDED) - http://www.mb3admin.com/downloads/addons/xbm
 
 Once the requirements are met, simply download and install the Arctic Zephyr: From Ashes skin. There are currently three release channels available:
 
-###### NortheBridge's Enterprise CDN: https://northebridge.com/systems/oss/embykodi/fromashes
+###### NortheBridge's Enterprise CDN: https://northebridge.com/systems/oss/kodi/fromashes
 ###### Emby Repository
 ###### GitHub (for Advanced Users)
 
