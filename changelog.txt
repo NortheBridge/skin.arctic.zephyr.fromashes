@@ -1,5 +1,10 @@
 [B]Arctic Zephyr: From Ashes Changelog[/B]
 
+[B]Arctic Zephyr: From Ashes "Dormer End of Life Thanksgiving Day Update" - Released November 24, 2016
+Dormer: 3.4.60 (3.4.60_dormer)
+Resolved Issue Preventing Disabling Danvers Update Notification
+Added Power Menu Prompt: "Danvers Update Available"
+
 [B]Arctic Zephyr: From Ashes "Dormer Last Call Update Hotfix #1" - Released November 15, 2016
 Dormer: 3.4.30 (3.4.30_dormer)
 Resolved Missing Texture Package
