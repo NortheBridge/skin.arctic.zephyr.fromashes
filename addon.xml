@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
     id="skin.arctic.zephyr.fromashes"
-    version="3.4.30"
+    version="3.4.60"
     name="Arctic Zephyr: From Ashes"
     provider-name="NortheBridge">
     <requires>
@@ -37,7 +37,7 @@
         <platform>all</platform>
 		<license>GPL v3.0</license>
 		<forum>http://forum.kodi.tv/showthread.php?tid=257970</forum>
-		<website>https://northebridge.com/systems/oss/emby/fromashestheme</website>
+		<website>https://northebridge.com/systems/oss/kodi/fromashes</website>
 		<email>fromashesproject@northebridge.com</email>
 		<source>https://github.com/NortheBridge/skin.arctic.zephyr.fromashes</source>
     </extension>
