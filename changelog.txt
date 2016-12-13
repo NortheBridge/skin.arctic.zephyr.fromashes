@@ -1,5 +1,13 @@
 [B]Arctic Zephyr: From Ashes Changelog[/B]
 
+[B]Arctic Zephyr: From Ashes "Dormer End of Life Christmas Update" - Released December 14, 2016
+Dormer: 3.4.70 (3.4.70_dormer)
+Resolved Typographical Issues with the Dormer Startup Screen
+Updated README to Dormer FINAL
+
+THIS IS THE FINAL RELEASE OF ARCTIC ZEPHYR: FROM ASHES (DORMER) FOR KODI 16 JARVIS. SUPPORT CONTINUES WITH ARCTIC ZEPHYR: FROM ASHES
+DANVERS FOR KODI 17 KRYPTON. GET STARTED WITH AZ:FA DANVERS AT HTTPS://NORTHEBRIDGE.COM/WAYPOINT/FROMASHES/GETSTARTED/DANVERS
+
 [B]Arctic Zephyr: From Ashes "Dormer End of Life Thanksgiving Day Update" - Released November 24, 2016
 Dormer: 3.4.60 (3.4.60_dormer)
 Resolved Issue Preventing Disabling Danvers Update Notification
