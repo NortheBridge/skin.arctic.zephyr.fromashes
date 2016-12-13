@@ -4,7 +4,7 @@
     <defaultcontrol always="true">9315</defaultcontrol>
     <onload>SetProperty(SkinInitStarted,1,home)</onload>
     	<!-- Dormer End of Life Notice -->
-	<onload condition="!Skin.HasSetting(home.hidenotice.dialog)">RunScript(script.skin.helper.service,action=dialogok,header=From Ashes (Dormer) Notice,message=The From Ashes Project thanks you for using Arctic Zephyr From Ashes on Kodi Jarvis. The Dormer Branch is no longer maintained and we strongly encourage all users to update to Kodi Krypton and Arctic Zephyr From Ashes Danvers for future support and updates.)</onload>
+	<onload condition="!Skin.HasSetting(home.hidenotice.dialog)">RunScript(script.skin.helper.service,action=dialogok,header=From Ashes (Dormer) Notice,message=The From Ashes Project thanks you for using Arctic Zephyr From Ashes on Kodi Jarvis. The Dormer Branch is no longer maintained and we strongly encourage all users to update to Kodi Krypton and Arctic Zephyr From Ashes Danvers for future support and updates. To turn of this notification visit Settings. To update visit the Kodi site or NortheBridge site and use search keyword From Ashes.)</onload>
     <controls>
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
@@ -37,7 +37,7 @@
             <height>50%</height>
             <align>center</align>
             <top>30</top>
-            <label>[COLOR=$VAR[ColourHighlight]]Dormers[/COLOR] Preview ($INFO[System.AddonVersion(skin.arctic.zephyr.fromashes)])</label>
+            <label>[COLOR=$VAR[ColourHighlight]]Dormer ($INFO[System.AddonVersion(skin.arctic.zephyr.fromashes)])[/COLOR] for [COLOR=$VAR[ColourHighlight]]Kodi Jarvis[/COLOR]</label>
             <font>Tiny</font>
             <textcolor>Dark1</textcolor>
             <animation effect="fade" start="100" end="0" time="500" tween="quadratic">WindowClose</animation>
