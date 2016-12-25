@@ -1,12 +1,13 @@
 [B]Arctic Zephyr: From Ashes Changelog[/B]
 
-[B]Arctic Zephyr: From Ashes Danvers "Beta 6 Preview Thanksgiving Day Update" - Released December, 3, 2016
+[B]Arctic Zephyr: From Ashes Danvers "Beta 6 Preview Christmas Day Update" - Released December, 25, 2016
 Danvers: 4.9.92-beta6 (4.9.92-beta6_danvers)
 
 ARCTIC ZEPHYR: FROM ASHES ANNIVERSARY EDITION (CODENAMED "DANVERS") IS PRE-RELEASE SOFTWARE DESIGNED FOR A PRE-RELEASE VERSION OF KODI.
 THERE IS NO GUARNTEE THAT ALL FEATURES WILL WORK. PLEASE LET US KNOW OF ANY ISSUES YOU RUN INTO. THIS SKIN IS NOW AVAILABLE IN THE 
 NORTHEBRIDGE BY DESIGN(R) REPOSITORY, EMBY BETA REPOSITORY, GITHUB, OR VIA DIRECT ZIP FILE DOWNLOAD ONLY.
 
+AGPLv3 License Scheme(changed from LGPLv3)
 Addon Framework Update to Danvers 4.9.92
 Texture Package Update to Danvers 4.9.92
 Resolved Issue: Missing Fonts
