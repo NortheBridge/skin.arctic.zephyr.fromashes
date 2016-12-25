@@ -37,10 +37,17 @@
         <description lang="en">Arctic Zephyr: From Ashes is the second generation of the "Arctic Zephyr: Exploded" skin created by im85288 and badaas based on the third iteration of the Arctic skin originally created by jurialmunkey. Now curated by NortheBridge with co-authors Guardian Hope and minus0, Arctic continues to focuses on being simple, clean and minimalistic with a light spin.</description>
         <disclaimer>Arctic Zephyr: From Ashes (Danvers Preview) is compatible with Kodi 17 Krypton only. (Danvers Preview Beta 5)</disclaimer>
 		<platform>all</platform>
-		<license>LGPL v3.0</license>
+		<license>AGPL v3.0</license>
 		<forum>http://forum.kodi.tv/showthread.php?tid=257970</forum>
 		<website>https://northebridge.com/systems/oss/kodi/fromashes</website>
 		<email>fromashesproject@northebridge.com</email>
 		<source>https://github.com/NortheBridge/skin.arctic.zephyr.fromashes</source>
+			<assets>
+				<icon>icon.png</icon>
+				<fanart>fanart.jpg</fanart>
+			</assets>
+			<news>
+				Welcome to Arctic Zephyr: From Ashes Danvers (Preview) Beta 6, the  Christmas 2016 update to AZ:FA! To learn what's new visit https://northebridge.com/systems/oss/kodi/fromashes/danvers/whatsnew/v4/rel992b6
+			</news>
     </extension>
 </addon>
