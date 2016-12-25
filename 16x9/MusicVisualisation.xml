@@ -38,10 +38,11 @@
             <texture background="true">$INFO[Player.Art(fanart)]</texture>
             <visible>!System.HasAddon(script.artistslideshow) | Skin.HasSetting(ArtistSlideShow.Disabled)</visible>
             <visible>Skin.HasSetting(musicvis.fanartfallback)</visible>
+			<visible>!Skin.HasSetting(osd.flipinfo)</visible>
             <animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart)">Conditional</animation>
             <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
             <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
-        </control>-->
+        </control>
         <control type="multiimage">
             <aspectratio>scale</aspectratio>
             <include>Dimensions_Fullscreen</include>
@@ -51,6 +52,7 @@
             <loop>yes</loop>
             <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
             <visible>System.HasAddon(script.artistslideshow) + String.IsEqual(Skin.String(musicvis.background),artistslideshow)</visible>
+			<visible>!Skin.HasSetting(osd.flipinfo)</visible>
             <animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart) + Visualisation.Enabled">Conditional</animation>
             <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
             <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
@@ -58,6 +60,7 @@
 		<!--AlbumWall Visualisation-->
         <control type="group">
             <visible>String.IsEqual(Skin.String(musicvis.background),albumwall)</visible>
+			<visible>!Skin.HasSetting(osd.flipinfo)</visible>
             <control type="panel" id="9032">
                 <left>0</left>
                 <top>0</top>
@@ -218,8 +221,7 @@
                                     <width>64</width>
                                     <height>64</height>
                                     <colordiffuse>$VAR[ColourHighlight]</colordiffuse>
-                                    <texture>flags/$VAR[OSDMusicFlagstar1].png</texture>-->
-									<texture>$INFO[MusicPlayer.Rating,stars/,.png]</texture>
+                                    <texture>flags/$VAR[OSDMusicFlagstar1].png</texture>
                                 </control>
                                 <control type="image">
                                     <posx>-48</posx>
@@ -500,9 +502,17 @@
                 <aspectratio scalediffuse="false">stretch</aspectratio>
                 <fadetime>600</fadetime>
 				<texture background="true">$INFO[Player.Art(fanart)]</texture>
-				<animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
-				<animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
-            </control>			
+				<animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(Fanart.Animate)">Conditional</animation>
+				<animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(Fanart.Animate)">Conditional</animation>
+            </control>
+			<control type="image">
+			    <width>1920</width>
+			    <height>500</height>
+				<top>500</top>
+                <aspectratio scalediffuse="false">stretch</aspectratio>
+                <fadetime>600</fadetime>
+				<texture background="true" flipy="true" colordiffuse="White">views/diffuse_bottom.png</texture>
+            </control>
 		<!-- Music OSD info flip -->	
 		    <!--LEFT Panel--> 
             <control type="group">
@@ -752,8 +762,8 @@
                         <include>Animation.FadeIn</include>
                         <include>Animation.FadeOut</include>
                         <control id="8308" type="image">
-                            <width>300</width>
-                            <height>200</height>
+                            <width>400</width>
+                            <height>280</height>
                             <texture fallback="empty.png">$VAR[MusicPlayerClearLogo]</texture>
                             <aspectratio align="center" aligny="center">keep</aspectratio>
                         </control>
@@ -992,8 +1002,8 @@
                     <include>Animation.FadeIn</include>
                     <include>Animation.FadeOut</include>
                     <control type="image">
-                        <width>300</width>
-                        <height>200</height>
+                        <width>400</width>
+                        <height>280</height>
                         <texture fallback="empty.png">$VAR[MusicPlayerClearLogo]</texture>
                         <aspectratio align="center" aligny="center">keep</aspectratio>
                     </control>
@@ -1229,8 +1239,8 @@
                     <include>Animation.FadeIn</include>
                     <include>Animation.FadeOut</include>
                     <control type="image">
-                        <width>300</width>
-                        <height>200</height>
+                        <width>400</width>
+                        <height>280</height>
                         <texture fallback="empty.png">$VAR[MusicPlayerClearLogo]</texture>
                         <aspectratio align="center" aligny="center">keep</aspectratio>
                     </control>
