@@ -4,25 +4,25 @@
 	<fontset id="Default" unicode="true">
 		<font>
 			<name>symbolview</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>28</size>
 			<style />
 		</font>
 		<font>
 			<name>symbol</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>36</size>
 			<style />
 		</font>
 		<font>
 			<name>symbolbig</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>54</size>
 			<style />
 		</font>
 		<font>
 			<name>tinysymbol</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>20</size>
 			<style />
 		</font>
@@ -304,25 +304,25 @@
 	<fontset id="Large" unicode="true">
 		<font>
 			<name>symbolview</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>28</size>
 			<style />
 		</font>
 		<font>
 			<name>symbol</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>36</size>
 			<style />
 		</font>
 		<font>
 			<name>symbolbig</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>54</size>
 			<style />
 		</font>
 		<font>
 			<name>tinysymbol</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>20</size>
 			<style />
 		</font>
@@ -446,25 +446,25 @@
 	<fontset id="Arial" unicode="true">
 		<font>
 			<name>symbolview</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>28</size>
 			<style />
 		</font>
 		<font>
 			<name>symbol</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>36</size>
 			<style />
 		</font>
 		<font>
 			<name>symbolbig</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>54</size>
 			<style />
 		</font>
 		<font>
 			<name>tinysymbol</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>20</size>
 			<style />
 		</font>
@@ -580,25 +580,25 @@
 	<fontset id="Rexlia" unicode="true">
 		<font>
 			<name>symbolview</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>28</size>
 			<style />
 		</font>
 		<font>
 			<name>symbol</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>36</size>
 			<style />
 		</font>
 		<font>
 			<name>symbolbig</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>54</size>
 			<style />
 		</font>
 		<font>
 			<name>tinysymbol</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>20</size>
 			<style />
 		</font>
@@ -721,25 +721,25 @@
 	<fontset id="Plasmatic" unicode="true">
 		<font>
 			<name>symbolview</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>28</size>
 			<style />
 		</font>
 		<font>
 			<name>symbol</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>36</size>
 			<style />
 		</font>
 		<font>
 			<name>symbolbig</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>54</size>
 			<style />
 		</font>
 		<font>
 			<name>tinysymbol</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>20</size>
 			<style />
 		</font>
@@ -862,25 +862,25 @@
 	<fontset id="nk57" unicode="true">
 		<font>
 			<name>symbolview</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>28</size>
 			<style />
 		</font>
 		<font>
 			<name>symbol</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>36</size>
 			<style />
 		</font>
 		<font>
 			<name>symbolbig</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>54</size>
 			<style />
 		</font>
 		<font>
 			<name>tinysymbol</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>20</size>
 			<style />
 		</font>
@@ -1003,25 +1003,25 @@
 	<fontset id="Sui" unicode="true">
 		<font>
 			<name>symbolview</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>28</size>
 			<style />
 		</font>
 		<font>
 			<name>symbol</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>36</size>
 			<style />
 		</font>
 		<font>
 			<name>symbolbig</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>54</size>
 			<style />
 		</font>
 		<font>
 			<name>tinysymbol</name>
-			<filename>Segoe-Light.ttf</filename>
+			<filename>symbol.ttf</filename>
 			<size>20</size>
 			<style />
 		</font>
