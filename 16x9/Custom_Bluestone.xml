@@ -55,7 +55,7 @@
 			<posy>290</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Build: [COLOR=$VAR[ColourHighlight]]danvers@84995cb[/COLOR]</label> <!-- Say Hello to the Girl of Steel! Wait, You Can Read This? Easter Eggs! -->
+			<label>Build: [COLOR=$VAR[ColourHighlight]]danvers@be4c280[/COLOR]</label> <!-- Say Hello to the Girl of Steel! Wait, You Can Read This? Easter Eggs! -->
 		</control>
 		<!-- The Full Version is Determined By the Branch (i.e. x.y.zz_branchnameabbreviated) -->
 		<!-- Goodbye to Bluestone; Now "Dormer" and "Danvers" -->
@@ -152,7 +152,7 @@
 			<posy>290</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Addon Framework: [COLOR=$VAR[ColourHighlight]]4.9.91[/COLOR]</label>
+			<label>Addon Framework: [COLOR=$VAR[ColourHighlight]]4.9.92[/COLOR]</label>
 		</control>
 	<control type="label">
 			<description>Texture Package</description>
@@ -162,7 +162,7 @@
 			<posy>320</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Texture Package: [COLOR=$VAR[ColourHighlight]]4.9.91[/COLOR]</label>
+			<label>Texture Package: [COLOR=$VAR[ColourHighlight]]4.9.92[/COLOR]</label>
 		</control>
 		<!-- End Compatibility Checks -->
 		<!-- While others like to compare me to Person of Interest's Root... so yes, don't fail these checks. Could this be another Easter Egg Ms. Groves?-->

@@ -74,12 +74,16 @@
                 <textcolor>$VAR[DialogHeadersTextColour]</textcolor>
             </control>
 
-            <control type="spincontrolex" id="22">
+            <!--<control type="spincontrolex" id="22">-->
+			<control type="button" id="22">
                 <description>Set Playlist type</description>
-                <posx>35</posx>
+                <posx>48</posx>
                 <posy>115</posy>
                 <width>1110</width>
                 <label>467</label>
+				<height>60</height>
+				<textoffsetx>15</textoffsetx>
+                <aligny>center</aligny>
                 <onright>22</onright>
                 <onleft>22</onleft>
                 <onup>9001</onup>
@@ -91,7 +95,7 @@
             <control type="label">
                 <description>Name Label</description>
                 <posx>55</posx>
-                <posy>184</posy>
+                <posy>178</posy>
                 <width>1110</width>
                 <label>21433</label>
                 <textcolor>White</textcolor>
@@ -99,10 +103,10 @@
 
             <control type="edit" id="12">
                 <description>Name Button</description>
-                <posx>35</posx>
-                <posy>253</posy>
+                <posx>48</posx>
+                <posy>241</posy>
                 <width>1110</width>
-                <height>66</height>
+                <height>57</height>
                 <font>Small</font>
                 <align>left</align>
                 <aligny>center</aligny>
@@ -110,7 +114,7 @@
                 <focusedcolor>$VAR[ButtonFocusTextColour]</focusedcolor>
                 <selectedcolor>$VAR[ColourHighlight2]</selectedcolor>
                 <label>-</label>
-                <textoffsetx>30</textoffsetx>
+                <textoffsetx>15</textoffsetx>
                 <texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
                 <texturenofocus colordiffuse="$VAR[ButtonColour]" border="8">common/box.png</texturenofocus>
                 <pulseonselect>false</pulseonselect>
@@ -120,43 +124,49 @@
                 <ondown>10</ondown>
             </control>
 
-            <control type="label">
+            <!--<control type="label">-->
+			<control type="button">
                 <description>rules label</description>
                 <posx>55</posx>
-                <posy>322</posy>
+                <posy>304</posy>
                 <width>1110</width>
-                <align>left</align>
+				<height>60</height>
+                <textoffsetx>15</textoffsetx>
+                <aligny>center</aligny>
                 <label>21434</label>
                 <textcolor>White</textcolor>
+				<enable>no</enable>
+				<texturefocus />
             </control>
 
-            <control type="list" id="10">
+            <control type="panel" id="10">
                 <description>Rules List Control</description>
-                <posx>35</posx>
-                <posy>391</posy>
+                <posx>48</posx>
+                <posy>367</posy>
                 <width>840</width>
-                <height>207</height>
+                <height>189</height>
                 <onup>12</onup>
                 <onleft>9000</onleft>
                 <onright>9000</onright>
                 <ondown>16</ondown>
 
-                <itemlayout width="840" height="69">
+                <itemlayout width="840" height="63">
 
                     <control type="label">
                         <posx>30</posx>
                         <posy>0</posy>
                         <width>780</width>
+						<selectedcolor>$VAR[ButtonFocusColour]</selectedcolor>
                         <info>ListItem.Label</info>
                     </control>
                 </itemlayout>
 
-                <focusedlayout width="840" height="69">
+                <focusedlayout width="840" height="63">
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>840</width>
-                        <height>66</height>
+                        <height>60</height>
                         <texture border="5" colordiffuse="$VAR[ButtonFocusColour]">common/box.png</texture>
 						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(10)">Conditional</animation>
                     </control>
@@ -176,9 +186,12 @@
                 <control type="button" id="13">
                     <description>Add Rule Button</description>
                     <posx>890</posx>
-                    <posy>391</posy>
+                    <posy>367</posy>
                     <width>255</width>
+					<height>60</height>
                     <label>15019</label>
+					<textoffsetx>15</textoffsetx>
+                    <aligny>center</aligny>
                     <onup>17</onup>
                     <onleft>10</onleft>
                     <onright>10</onright>
@@ -191,8 +204,11 @@
                 <control type="button" id="14">
                     <description>Remove Rule Button</description>
                     <posx>890</posx>
-                    <posy>460</posy>
+                    <posy>430</posy>
                     <width>255</width>
+					<textoffsetx>15</textoffsetx>
+                    <aligny>center</aligny>
+					<height>60</height>
                     <label>1210</label>
                     <onup>13</onup>
                     <onleft>10</onleft>
@@ -206,8 +222,9 @@
                 <control type="button" id="15">
                     <description>Edit Rule Button</description>
                     <posx>890</posx>
-                    <posy>529</posy>
+                    <posy>493</posy>529
                     <width>255</width>
+					<height>60</height>
                     <label>21435</label>
                     <onup>14</onup>
                     <onleft>10</onleft>
@@ -223,17 +240,21 @@
             <control type="label">
                 <description>Name Label</description>
                 <posx>45</posx>
-                <posy>598</posy>
+                <posy>556</posy>
                 <width>1110</width>
                 <label>31325</label>
                 <textcolor>White</textcolor>
             </control>
 
-            <control type="spincontrolex" id="16">
-                <posx>35</posx>
-                <posy>667</posy>
+            <!--<control type="spincontrolex" id="16">-->
+			<control type="button" id="16">
+                <posx>48</posx>
+                <posy>619</posy>
                 <width>1110</width>
+				<height>60</height>
                 <label>21424</label>
+				<textoffsetx>15</textoffsetx>
+                <aligny>center</aligny>
                 <onright>16</onright>
                 <onleft>16</onleft>
                 <onup>10</onup>
@@ -242,10 +263,14 @@
 				<texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
             </control>
 
-            <control type="spincontrolex" id="17">
-                <posx>35</posx>
-                <posy>736</posy>
+            <!--<control type="spincontrolex" id="17">-->
+			<control type="button" id="17">
+                <posx>48</posx>
+                <posy>745</posy>
                 <width>1110</width>
+				<height>60</height>
+				<textoffsetx>15</textoffsetx>
+                <aligny>center</aligny>
                 <label>21427</label>
                 <onright>17</onright>
                 <onleft>17</onleft>
@@ -255,11 +280,15 @@
 				<texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
             </control>
 
-            <control type="spincontrolex" id="18">
-                <posx>35</posx>
-                <posy>805</posy>
+            <!--<control type="spincontrolex" id="18">-->
+			<control type="button" id="18">
+                <posx>48</posx>
+                <posy>808</posy>
                 <width>840</width>
+				<textoffsetx>15</textoffsetx>
+                <aligny>center</aligny>
                 <label>21429</label>
+				<height>60</height>
                 <onright>19</onright>
                 <onleft>19</onleft>
                 <onup>17</onup>
@@ -268,20 +297,57 @@
 				<texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
             </control>
 
-            <control type="togglebutton" id="19">
-                <posx>890</posx>
-                <posy>805</posy>
+            <!--<control type="togglebutton" id="19">-->
+			<control type="button" id="19">
+                <posx>894</posx>
+                <posy>808</posy>
                 <width>255</width>
-                <label>21431</label>
-                <altlabel>21430</altlabel>
-                <onright>18</onright>
+				<height>60</height>
+				<textoffsetx>15</textoffsetx>
+                <aligny>center</aligny>
+                <!--<label>21431</label>
+                <altlabel>21430</altlabel>-->
+				<label />
+                <onright>9001</onright>
                 <onleft>18</onleft>
                 <onup>17</onup>
-                <ondown>9001</ondown>
+                <ondown>24</ondown>
                 <texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
-                <alttexturefocus colordiffuse="$VAR[ButtonFocusColour]" border="5">common/box.png</alttexturefocus>
-				<alttexturenofocus colordiffuse="$VAR[ButtonColour]" border="5">common/box.png</alttexturenofocus>
+                <!--<alttexturefocus colordiffuse="$VAR[ButtonFocusColour]" border="5">common/box.png</alttexturefocus>
+				<alttexturenofocus colordiffuse="$VAR[ButtonColour]" border="5">common/box.png</alttexturenofocus>-->
+            </control>
+			<control type="button" id="23">
+				<posx>48</posx>
+				<posy>871</posy>
+				<width>840</width>
+				<height>60</height>
+				<textoffsetx>15</textoffsetx>
+                <aligny>center</aligny>
+				<label>21458</label>
+				<onright>24</onright>
+				<onleft>24</onleft>
+				<onup>18</onup>
+				<ondown>22</ondown>
+				<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
+			</control>
+			<control type="radiobutton" id="24">
+				<posx>894</posx>
+				<posy>871</posy>
+				<width>255</width>
+				<height>60</height>
+				<align>center</align>
+				<textoffsetx>15</textoffsetx>
+				<radiowidth />
+                <radioheight />
+				<label>21459</label>
+				<onright>9001</onright>
+				<onleft>23</onleft>
+				<onup>19</onup>
+				<ondown>22</ondown>
+				<texturefocus colordiffuse="$VAR[ButtonFocusColour]" border="20">common/box.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[ButtonColour]" border="20">common/box.png</texturenofocus>
             </control>
 
             <control type="group" id="9001">
@@ -289,8 +355,9 @@
                 <control type="button" id="20">
                     <description>Ok Button</description>
                     <posx>248</posx>
-                    <posy>904</posy>
+                    <posy>934</posy>
                     <width>300</width>
+					<height>60</height>
                     <label>186</label>
                     <onup>18</onup>
                     <onleft>21</onleft>
@@ -304,8 +371,9 @@
                 <control type="button" id="21">
                     <description>Cancel Button</description>
                     <posx>593</posx>
-                    <posy>904</posy>
+                    <posy>934</posy>
                     <width>300</width>
+					<height>60</height>
                     <label>222</label>
                     <onup>18</onup>
                     <onleft>20</onleft>

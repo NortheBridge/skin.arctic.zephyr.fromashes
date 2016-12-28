@@ -5,7 +5,7 @@
     <onload>SetProperty(SkinInitStarted,1,home)</onload>
 	
 	<!-- Danvers Preview Notice -->
-	<onload condition="!Skin.HasSetting(home.hidebeta.dialog)">RunScript(script.skin.helper.service,action=dialogok,header=Danvers Preview (Beta 5),message=Welcome to the Arctic Zephyr: From Ashes Danvers Preview for Kodi Krypton! This is the first official beta entry into the From Ashes Danvers lineup. Certain features may not be available or in Alpha condition subject to change during the Danvers Preview and may not represent the released version of From Ashes.)</onload>
+	<onload condition="!Skin.HasSetting(home.hidebeta.dialog)">RunScript(script.skin.helper.service,action=dialogok,header=Danvers Preview (Beta 6),message=Welcome to the Arctic Zephyr: From Ashes Danvers Preview for Kodi Krypton! Beta 6 of Danvers Preview is the last release for 2016. To learn more about Beta 6 visit NortheBridge and use keyword From Ashes or visit the Kodi and Emby forums.)</onload>
     <controls>
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
@@ -50,7 +50,7 @@
             <height>50%</height>
             <align>center</align>
             <bottom>30</bottom>
-            <label>[COLOR=$VAR[ColourHighlight]]Arctic Zephyr: From Ashes Anniversary Edition[/COLOR] (Kodi Krypton)</label>
+            <label>[COLOR=$VAR[ColourHighlight]]Arctic Zephyr: From Ashes Danvers[/COLOR] (Kodi Krypton)</label>
             <font>Tiny</font>
             <textcolor>Dark1</textcolor>
             <animation effect="fade" start="100" end="0" time="500" tween="quadratic">WindowClose</animation>

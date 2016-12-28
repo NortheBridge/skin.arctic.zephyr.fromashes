@@ -1496,14 +1496,13 @@
 			<visible>!Window.IsVisible(DialogVolumeBar.xml)</visible>
 			<visible>!Window.IsVisible(DialogKaiToast.xml)</visible>
 			<visible>!Window.IsVisible(DialogExtendedProgressBar.xml)</visible>
-			<include>Animation.FadeIn</include>
-			<include>Animation.FadeOut</include>
-			<visible>IsEmpty(Window(10025).Property(PlayingBackgroundMedia))</visible>
+			<include>Animation.FurnitureFadeInOut</include>
+			<visible>IsEmpty(Window(10025).Property(TvTunesIsAlive))</visible>
 			<visible>!Window.IsActive(DialogKaiToast.xml)</visible>
 			<visible>Player.HasMedia</visible>
 			<visible>!IsEmpty(Player.Duration) | Player.HasAudio</visible>
-			<visible>!ControlGroup(303).HasFocus()</visible>
-			<animation effect="slide" start="0" end="0,-250" time="150" condition="Control.HasFocus(301) + !Skin.HasSetting(home.vertical)">Conditional</animation>
+			<!--<visible>!ControlGroup(303).HasFocus()</visible>-->
+			<animation effect="slide" start="0" end="0,-250" time="150" condition="Control.HasFocus(301) + !Skin.HasSetting(home.classicwidgets) + !Skin.HasSetting(home.vertical)">Conditional</animation>
 			<top>70</top>
 			<right>62</right>
 			<orientation>horizontal</orientation>

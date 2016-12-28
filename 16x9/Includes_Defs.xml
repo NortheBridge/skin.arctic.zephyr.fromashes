@@ -1967,6 +1967,7 @@
 				<onback>50</onback>
 				<orientation>vertical</orientation>		
 		        <scrolltime tween="quadratic">400</scrolltime>
+		    <!--View_50_List-->		
                 <control type="button" id="3111">
 				    <width>413</width>
                     <include>DefContextButton2</include>
@@ -1974,6 +1975,7 @@
                     <onclick>Container.SetViewMode(50)</onclick>
 					<onclick>Close</onclick>
                 </control>
+		    <!--View_52_BigList-->		
 				<control type="button" id="3113">
 				    <width>413</width>
                     <include>DefContextButton2</include>
@@ -1982,14 +1984,16 @@
 					<onclick>Close</onclick>
                     <visible>!Window.IsActive(pictures)</visible>
                 </control>
+		    <!--View_55_Wall-->		
                 <control type="button" id="3116">
 				    <width>413</width>
                     <include>DefContextButton2</include>
-                    <label>InfoWall 1</label>
+                    <label>InfoWall</label>
                     <onclick>Container.SetViewMode(55)</onclick>
 					<onclick>Close</onclick>
                     <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)</visible>
                 </control>
+		    <!--View_159_InfoWall-->		
 				<control type="button" id="3129">
 				    <width>413</width>
                     <include>DefContextButton2</include>
@@ -1997,7 +2001,8 @@
                     <onclick>Container.SetViewMode(159)</onclick>
 					<onclick>Close</onclick>
                     <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)</visible>
-                </control>				
+                </control>	
+		    <!--View_56_MediaInfo-->		
 				<control type="button" id="3127">
 				    <width>413</width>
                     <include>DefContextButton2</include>
@@ -2006,6 +2011,7 @@
 					<onclick>Close</onclick>
                     <visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)] | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>
                 </control>
+		    <!--View_57_ExtraInfo-->		
 				<control type="button" id="31271">
 				    <width>413</width>
                     <include>DefContextButton2</include>
@@ -2014,6 +2020,7 @@
 					<onclick>Close</onclick>
                     <visible>Container.Content(musicvideos) | Container.Content(artists) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>
                 </control>
+		    <!--View_555_Wall_Episodes-->		
                 <control type="button" id="3126">
 				    <width>413</width>
                     <include>DefContextButton2</include>
@@ -2023,7 +2030,7 @@
                     <visible>Container.Content(episodes)</visible>
                 </control>
 				
-		<!--View_505_Wall_Square-->		
+		    <!--View_505_Wall_Square-->		
                <control type="button" id="3122">
 				    <width>413</width>
                     <include>DefContextButton2</include>
@@ -2032,7 +2039,7 @@
 					<onclick>Close</onclick>
                     <visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left) | Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos)</visible>
                 </control>
-				
+		    <!--View_503_Poster_Square-->		
                 <control type="button" id="3124">
 				    <width>413</width>
                     <include>DefContextButton2</include>
@@ -2041,6 +2048,7 @@
 					<onclick>Close</onclick>
                     <visible>Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums) | Window.IsActive(MyPrograms.xml) | Container.Content(addons)</visible>
                 </control>
+		    <!--View_53_Poster-->		
                 <control type="button" id="3114">
 				    <width>413</width>
                     <include>DefContextButton2</include>
@@ -2049,6 +2057,7 @@
 					<onclick>Close</onclick>
                     <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)</visible>
                 </control>
+		    <!--View_513_PosterRow-->		
                 <control type="button" id="31141">
 				    <width>413</width>
                     <include>DefContextButton2</include>
@@ -2057,6 +2066,7 @@
 					<onclick>Close</onclick>
                     <visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Window.IsActive(MyPrograms.xml) | Container.Content(addons)</visible>
                 </control>
+		    <!--View_514_PosterShift-->		
                 <control type="button" id="31142">
 				    <width>413</width>
                     <include>DefContextButton2</include>
@@ -2064,7 +2074,8 @@
                     <onclick>Container.SetViewMode(514)</onclick>
 					<onclick>Close</onclick>
                     <visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Window.IsActive(MyPrograms.xml) | Container.Content(addons)</visible>
-                </control>				
+                </control>
+		    <!--View_58_Cards-->		
                 <control type="button" id="3117">
 				    <width>413</width>
                     <include>DefContextButton2</include>
@@ -2081,6 +2092,7 @@
                     <onclick>Container.SetViewMode(57)</onclick>
                     <visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)] | Container.Content(actors) | Container.Content(sets) | Container.Content(seasons)</visible>
                 </control>-->
+		    <!--View_157_Panel-->		
 				<control type="button" id="3125">
 				    <width>413</width>
                     <include>DefContextButton2</include>
@@ -2089,6 +2101,7 @@
 					<onclick>Close</onclick>
                     <visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://)] | Container.Content(artists)</visible>
                 </control>
+		    <!--View_54_Banner-->		
                 <control type="button" id="3115">
 				    <width>413</width>
                     <include>DefContextButton2</include>
@@ -2097,6 +2110,7 @@
 					<onclick>Close</onclick>
                     <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(episodes) + !String.StartsWith(Container.FolderPath,plugin://)] | Container.Content(albums) | Container.Content(songs) | Window.IsActive(musicplaylist) | Container.Content(sets)</visible>
                 </control>
+		    <!--View_51_BigWide-->		
                 <control type="button" id="3112">
 				    <width>413</width>
                     <include>DefContextButton2</include>
@@ -2105,6 +2119,7 @@
 					<onclick>Close</onclick>
                     <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(artists) | Container.Content(sets)</visible>
                 </control>
+		    <!--View_59_BannerPlex-->		
                 <control type="button" id="31121">
 				    <width>413</width>
                     <include>DefContextButton2</include>
@@ -2113,14 +2128,16 @@
 					<onclick>Close</onclick>
                     <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
                 </control>
+		    <!--View_520_Gallery-->		
 				<control type="button" id="3118">
 				    <width>413</width>
                     <include>DefContextButton2</include>
                     <label>Gallery</label>
                     <onclick>Container.SetViewMode(520)</onclick>
 					<onclick>Close</onclick>
-                    <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets) | Window.IsActive(pictures)</visible>
+                    <visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)] Window.IsActive(pictures)</visible>
                 </control>
+		    <!--View_500_Thumbnails-->		
                 <control type="button" id="31181">
 				    <width>413</width>
                     <include>DefContextButton2</include>
@@ -2128,6 +2145,7 @@
                     <onclick>Container.SetViewMode(500)</onclick>
 					<onclick>Close</onclick>
                 </control>
+		    <!--View_155_EmbyWall-->		
 				<control type="button" id="31182">
 				    <width>413</width>
                     <include>DefContextButton2</include>
@@ -2136,6 +2154,7 @@
 					<onclick>Close</onclick>
 					<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes)</visible>
                 </control>
+		    <!--View_156_KodiWall-->		
 				<control type="button" id="3119">
 				    <width>413</width>
                     <include>DefContextButton2</include>
@@ -2144,6 +2163,7 @@
 					<onclick>Close</onclick>
 					<visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes)</visible>
                 </control>
+		    <!--View_515_Netflix-->		
 				<control type="button" id="31191">
 				    <width>413</width>
                     <include>DefContextButton2</include>
@@ -2453,14 +2473,14 @@
 	<include name="DefHomeRightSidePad">
 		<right>SidePad</right>
 	</include>
-	<variable name="DefTVHubWidget">
+	<!--<variable name="DefTVHubWidget">
 		<value condition="!IsEmpty(SKin.String(TVHubWidget))">$INFO[Skin.String(TVHubWidget)]</value>
 		<value>special://skin/extras/playlists/RandomEpisodes.xsp</value>
 	</variable>
 	<variable name="DefMovieHubWidget">
 		<value condition="!IsEmpty(Skin.String(MovieHubWidget))">$INFO[Skin.String(MovieHubWidget)]</value>
 		<value>special://skin/extras/playlists/RandomMovies.xsp</value>
-	</variable>
+	</variable>-->
 	<variable name="DefDirectorWindowContent">
 		<value condition="stringcompare(Window(1103).Property(content),1)">plugin://script.extendedinfo?info=studio&amp;&amp;studio=$INFO[Window(home).Property(ExtStudio)]</value>
 		<value condition="stringcompare(Window(1103).Property(content),2)">plugin://script.extendedinfo?info=similarmovies&amp;&amp;dbid=$INFO[Window(home).Property(ExtDBID)]</value>

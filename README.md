@@ -2,13 +2,13 @@
 The Arctic Zephyr: From Ashes Skin designed for Emby and Kodi is a streamlined, clean, and minimalistic skin modification for Kodi Krypton which provides a unique and easy to use user experience based on the Arctic Zephyr base skin created by Jurialmonkey. Arctic Zephyr: From Ashes has had a long legacy and is the next evolution of "Arctic Zephyr: Exploded."
 
 ## Quick Start
-![Shields IO Kodi 17](https://img.shields.io/badge/Kodi-17-blue.svg) ![Shields IO AZFA Branch](https://img.shields.io/badge/Arctic%20Zephyr%3A%20From%20Ashes-Danvers%20(4.9.91--beta)-blue.svg) ![Shields IO Branch Status](https://img.shields.io/badge/Danvers%20Preview-Beta%205-red.svg)
+![Shields IO Kodi 17](https://img.shields.io/badge/Kodi-17-blue.svg) ![Shields IO AZFA Branch](https://img.shields.io/badge/Arctic%20Zephyr%3A%20From%20Ashes-Danvers%20(4.9.92--beta)-blue.svg) ![Shields IO Branch Status](https://img.shields.io/badge/Danvers%20Preview-Beta%206-red.svg)
 
 Starting with the release of Arctic Zephyr: From Ashes (Danvers Preview), NortheBridge now provides a central location to help you quickly get started with and take advantage of the many features Arctic Zephyr: From Ashes has to offer. All information is available on the "Arctic Zephyr: From Ashes Official Website:"
 https://northebridge.com/systems/oss/kodi/fromashes (UNDER DEVELOPMENT!)
 
 NortheBridge also now provides the NortheBridge by Design(R) Repository for Kodi which allows you to access the Verizon Enterprise CDN Network to download Arctic Zephyr: From Ashes without having to install the skin from a zip file.
-Download the Repository: https://embycdn.northebridge.com/Victorious/repository.northebridge.by.design-1.0.0.zip
+Download the Repository: https://embycdn.northebridge.com/NatalieDormer/repository.northebridge.by.design-2.0.00.zip
 
 Just simply install the repository as you would any addon via zip file to start getting automatic updates and the fastest access to new features!
 
@@ -21,7 +21,7 @@ Please note that Arctic Zephyr: From Ashes (Danvers Preview) is pre-release soft
 ### Requirements
 Kodi Krypton (v17) - https://kodi.tv/download/
 
-NortheBridge by Design(R) Repository - https://embycdn.northebridge.com/Victorious/repository.northebridge.by.design-1.0.0.zip
+NortheBridge by Design(R) Repository - https://embycdn.northebridge.com/NatalieDormer/repository.northebridge.by.design-2.0.00.zip
 
 Emby Beta Repository (RECOMENDED; Included with NortheBridge by Design(R)) - http://www.mb3admin.com/downloads/addons/xbmb3c/kodi-beta-repo/repository.beta.emby.kodi-1.0.5.zip
 
