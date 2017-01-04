@@ -127,7 +127,7 @@
 					<align>center</align>
 					<include>DefSkinSettingMenuButton</include>
 					<label>Danvers Preview</label>
-					<onclick>RunScript(script.skin.helper.service,action=dialogok,header=From Ashes Danvers Preview,message=You are running Danvers Preview Alpha 9. For more information and to get the latest news about AZ:FA visit the Kodi or Emby forums or search for from ashes on NortheBridge.com)</onclick>
+					<onclick>RunScript(script.skin.helper.service,action=dialogok,header=From Ashes Danvers Preview,message=You are running Danvers Preview Beta 6 Patch Level 1. For more information and to get the latest news about AZ:FA visit the Kodi or Emby forums or search for from ashes on NortheBridge.com)</onclick>
 				</control>
 
                 <control type="button" id="3111">
