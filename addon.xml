@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
     id="skin.arctic.zephyr.fromashes.danvers"
-    version="4.9.92-beta6"
+    version="4.9.92-beta7"
     name="Arctic Zephyr: From Ashes Danvers (Preview)"
     provider-name="NortheBridge">
     <requires>
