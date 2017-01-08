@@ -1,6 +1,18 @@
 [B]Arctic Zephyr: From Ashes Changelog[/B]
 
-[B]Arctic Zephyr: From Ashes Danvers "Beta 6, Patch Level 1 Update" - Released December, 31, 2016
+[B]Arctic Zephyr: From Ashes Danvers "Beta 6, Patch Level 1 Update" - Released December, 31, 2016[/B]
+Danvers: 4.9.92-beta8 (4.9.92-beta8_danvers)
+
+ARCTIC ZEPHYR: FROM ASHES ANNIVERSARY EDITION (CODENAMED "DANVERS") IS PRE-RELEASE SOFTWARE DESIGNED FOR A PRE-RELEASE VERSION OF KODI.
+THERE IS NO GUARNTEE THAT ALL FEATURES WILL WORK. PLEASE LET US KNOW OF ANY ISSUES YOU RUN INTO. THIS SKIN IS NOW AVAILABLE IN THE 
+NORTHEBRIDGE BY DESIGN(R) REPOSITORY, EMBY BETA REPOSITORY, GITHUB, OR VIA DIRECT ZIP FILE DOWNLOAD ONLY.
+
+Addresses Critical Issue with Caitlin Snow (For Another Age) Framework Resulting In Kodi 17 Crash from Danvers Preview Beta 7
+Restores Additional Fonts Required by Arctic Zephyr: From Ashes
+Updated Startup Prompt
+Added Caitlin Snow (For Another Age) Window Call
+
+[B]Arctic Zephyr: From Ashes Danvers "Beta 6, Patch Level 1 Update" - Released December, 31, 2016[/B]
 Danvers: 4.9.92-beta7 (4.9.92-beta7_danvers)
 
 ARCTIC ZEPHYR: FROM ASHES ANNIVERSARY EDITION (CODENAMED "DANVERS") IS PRE-RELEASE SOFTWARE DESIGNED FOR A PRE-RELEASE VERSION OF KODI.
