@@ -88,7 +88,7 @@
 			<posy>350</posy>
 			<width>750</width>
 			<height>60</height>
-			<label>Build Type: [COLOR=$VAR[ColourHighlight]]Beta 6 Preview, Patch Level 1, Release[/COLOR]</label>
+			<label>Build Type: [COLOR=$VAR[ColourHighlight]]Beta 8 Preview, Release[/COLOR]</label>
 		</control>
 	<control type="label">
 			<description>Sys_Name</description>
