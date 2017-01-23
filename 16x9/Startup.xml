@@ -5,7 +5,8 @@
     <onload>SetProperty(SkinInitStarted,1,home)</onload>
 	
 	<!-- Danvers Preview Notice -->
-	<onload condition="!Skin.HasSetting(home.hidebeta.dialog)">RunScript(script.skin.helper.service,action=dialogok,header=Danvers Preview (Beta 9),message=Welcome to the Arctic Zephyr: From Ashes Danvers Preview Beta 9 is a critical update to Danvers Preview Beta 7 and 8. To learn more search for From Ashes on the Kodi forums or on NortheBridge.)</onload>
+	<onload condition="!Skin.HasSetting(home.hidebeta.dialog)">RunScript(script.skin.helper.service,action=dialogok,header=Danvers Preview (Beta 10),message=Welcome to the Arctic Zephyr: From Ashes Danvers Preview Beta 10 addresses installation issues with Beta 9. To learn more search for From Ashes on the Kodi forums or on NortheBridge.)</onload>
+	<!-- Danvers Preview Notice -->
     <controls>
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>

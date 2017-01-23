@@ -1,6 +1,23 @@
 [B]Arctic Zephyr: From Ashes Changelog[/B]
 
-[B]Arctic Zephyr: From Ashes Danvers "Beta 9 Preview Update" - Released December, 08, 2016[/B]
+[B]Arctic Zephyr: From Ashes Danvers "Beta 10 Preview Update" - Released January, 22, 2017[/B]
+Danvers: 4.9.92-beta10 (4.9.92-beta10_danvers)
+
+ARCTIC ZEPHYR: FROM ASHES DANVERS IS PRE-RELEASE SOFTWARE DESIGNED AND DEVELOPED FOR A PRE-RELEASE VERSION OF KODI, KODI 17 KRYPTON.
+THERE IS NO GUARNTEE THAT ALL FEATURES WILL WORK. PLEASE LET US KNOW OF ANY ISSUES YOU RUN INTO. THIS SKIN IS NOW AVAILABLE IN THE 
+NORTHEBRIDGE BY DESIGN(R) REPOSITORY, EMBY BETA REPOSITORY, GITHUB, OR VIA DIRECT ZIP FILE DOWNLOAD ONLY.
+
+Addresses Installation Issue Due to Danvers Preview Beta 9 Package
+Fixes Changelog
+Addon Framework 4.9.92 BETA 10
+Texture Package 4.9.92 BETA 10
+Updates README
+Changes to About From Ashes
+Resolves Issues with Missing Textures
+Updates Legacy About From Ashes Screen
+Updates From Ashes Prompts
+
+[B]Arctic Zephyr: From Ashes Danvers "Beta 9 Preview Update" - Released January, 08, 2017[/B]
 Danvers: 4.9.92-beta9 (4.9.92-beta9_danvers)
 
 ARCTIC ZEPHYR: FROM ASHES DANVERS IS PRE-RELEASE SOFTWARE DESIGNED AND DEVELOPED FOR A PRE-RELEASE VERSION OF KODI, KODI 17 KRYPTON.
