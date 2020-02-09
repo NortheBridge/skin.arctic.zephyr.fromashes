@@ -1,5 +1,10 @@
 [B]Arctic Zephyr: From Ashes Changelog[/B]
 
+[B]Arctic Zephyr: From Ashes "Dormer End of Life New Decade Update" - Released February 9, 2020
+Dormer: 3.4.80 (3.4.80_dormer)
+Removed Legacy Dormer Notice
+Final Release of 3.x Branch. Development Has Moved to the 20.x "Generations" Branch.
+
 [B]Arctic Zephyr: From Ashes "Dormer End of Life Christmas Update" - Released December 14, 2016
 Dormer: 3.4.70 (3.4.70_dormer)
 Resolved Typographical Issues with the Dormer Startup Screen
